@@ -78,7 +78,7 @@ const stats = {
 
 // Check if the build directory exists
 if (!fs.existsSync(CONFIG.distDir)) {
-  console.log(chalk.yellow('The build directory doesn't exist, start building...'))
+  console.log(chalk.yellow("The build directory doesn't exist, start building..."))
   try {
     execSync(CONFIG.buildCommand, { stdio: 'inherit' })
   } catch (error) {
@@ -163,7 +163,9 @@ async function analyze() {
 
     fs.writeFileSync(CONFIG.outputReport, JSON.stringify(report, null, 2))
     console.log(
-      chalk.green(`\nThe analysis report has been saved to: ${path.relative(process.cwd(), CONFIG.outputReport)}`)
+      chalk.green(
+        `\nThe analysis report has been saved to: ${path.relative(process.cwd(), CONFIG.outputReport)}`
+      )
     )
 
     // Provide optimization suggestions
@@ -326,7 +328,9 @@ function provideOptimizationTips(report) {
 
   // Check the performance score
   if (report.performance.score < 60) {
-    console.log(chalk.red('\nThe performance score is low, and the following issues need to be focused on:'))
+    console.log(
+      chalk.red('\nThe performance score is low, and the following issues need to be focused on:')
+    )
   }
 
   // Check the large JS file
