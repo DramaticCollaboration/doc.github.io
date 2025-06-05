@@ -1,7 +1,7 @@
 ---
 home: true
 title: Home
-heroImage: /images/logo.png
+heroImage: .vuepress/public/images/logo-dark.png
 heroAlt: VuePress Template Logo
 tagline: A modern VuePress documentation template
 actions:
@@ -34,7 +34,7 @@ footer: MIT Licensed | Copyright © 2024 [Your Name/Organization]
 
 This template contains the following main sections:
 
-- [Guide](/guide/) - How to use and customize this VuePress template.
+- [SyncETA](/guide/) - How to use and customize this VuePress template.
 - [Reference](/reference/) - Detailed explanation of VuePress configuration items and template structure.
 - [API Reference](/api/) - VuePress core API and plugin API (if your project needs it).
 - [Frequently Asked Questions](/faq/) - Issues you may encounter using this template and their solutions.

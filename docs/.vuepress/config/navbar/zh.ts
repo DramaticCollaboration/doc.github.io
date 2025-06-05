@@ -25,7 +25,7 @@ function generateZhNavbar(): any[] {
   const docsBaseDir = path.resolve(__dirname, '../../../') // 指向 docs 目录 (退三级)
 
   const dirMap = {
-    guide: 'Guide',
+    guide: 'SyncETA',
     reference: 'Reference', // 已重命名
     api: 'API Reference', // 添加 API 目录检查
     faq: 'FAQs',

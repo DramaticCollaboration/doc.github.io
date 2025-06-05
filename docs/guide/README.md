@@ -2,9 +2,10 @@
 title: Guide
 ---
 
-# Guide
+# SyncETA
 
-Welcome to the VuePress Template Guide! This guide will help you understand how to create an awesome documentation site using this template.
+Empasy의 SyncETA 솔루션 가이드에 오신것을 환영합니다!  
+이 가이드는 SyncETA 솔루션을 활용한 E2E 테스트 사용방법을 이해하는데 도움을 드립니다.
 
 ## introduce
 

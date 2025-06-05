@@ -16,7 +16,7 @@ When referencing static resources in a Markdown file, the path should start with
 For example:
 
 ```markdown
-![Logo](/images/logo.png)
+![Logo](.vuepress/public/images/logo-light.png)
 ```
 
 instead of:

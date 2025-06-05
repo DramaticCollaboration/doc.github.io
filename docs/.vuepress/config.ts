@@ -53,9 +53,8 @@ export default defineUserConfig({
   // ==================
   // Basic site configuration
   // ==================
-  lang: 'zh-CN', // Site language
-  title: 'VuePress Template', // Site title
-  description: 'A modern document template based on VuePress', // 站点描述 (用于 SEO)
+  lang: 'ko-KR', // Site language
+  description: 'A Empasy Solutions modern document', // 站点描述 (用于 SEO)
   head: head, // <head> Tag configuration, imported from ./config/head.js
 
   // ==================
@@ -74,7 +73,7 @@ export default defineUserConfig({
   // ==================
   theme: defaultTheme({
     // -- Basic configuration of the theme --
-    logo: '/images/logo.png', // Navigation bar logo
+    logo: '.vuepress/public/images/logo-dark.png', // Navigation bar logo
     repo: getRepoInfo(), // Repository link, automatically read from package.json
     docsDir: 'docs', // The directory of the source files of the document
 
