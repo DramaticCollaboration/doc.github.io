@@ -1,0 +1,34 @@
+/**
+ * Override the VuePress default theme's palette variables
+ * Reference: https://v2.vuepress.vuejs.org/zh/reference/default-theme/styles.html#Palette
+ */
+
+// For example:
+// $accentColor: #345;
+// $textColor: #678;
+
+/**
+ * Theme color variables
+ * Color variables used to override the default theme
+ */
+
+// color
+$accentColor: #3eaf7c; // Theme color
+$textColor: #2c3e50; // text color
+$borderColor: #eaecef; // border color
+$codeBgColor: #282c34; // Code block background color
+$arrowBgColor: #ccc; // Arrow background color
+$badgeTipColor: #42b983; // Tip badge background color
+$badgeWarningColor: #e7c000; // Warning badge background color
+$badgeErrorColor: #da5961; // Error badge background color
+
+// Layout
+$navbarHeight: 3.6rem; // navigation bar height
+$sidebarWidth: 20rem; // Sidebar width
+$contentWidth: 740px; // Content area width
+$homePageWidth: 960px; // Home page width
+
+// Responsive breakpoints
+$MQNarrow: 959px; // Narrow screen breakpoint
+$MQMobile: 719px; // Mobile breakpoint
+$MQMobileNarrow: 419px; // Narrow mobile breakpoint
