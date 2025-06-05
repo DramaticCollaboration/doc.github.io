@@ -1,0 +1,88 @@
+{
+  "name": "vuepress-template",
+  "version": "1.0.0",
+  "private": true,
+  "description": "一个基于 VuePress 的通用文档模板",
+  "keywords": [
+    "vuepress",
+    "vuepress-template"
+  ],
+  "license": "MIT",
+  "author": "Helian Labs",
+  "homepage": "https://github.com/helian-labs/vuepress-template#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/helian-labs/vuepress-template"
+  },
+  "bugs": {
+    "url": "https://github.com/helian-labs/vuepress-template/issues"
+  },
+  "type": "module",
+  "scripts": {
+    "predeploy": "pnpm run docs:build",
+    "deploy": "gh-pages -d docs/.vuepress/dist",
+    "docs:build": "vuepress build docs",
+    "docs:clean-dev": "vuepress dev docs --clean-cache",
+    "docs:dev": "vuepress dev docs",
+    "docs:update-package": "pnpm dlx vp-update",
+    "docs:deploy": "bash deploy.sh",
+    "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore",
+    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,css,scss,vue,html,md}\" --ignore-path .gitignore",
+    "new:page": "node scripts/new-page.js",
+    "new:component": "node scripts/create-component.js",
+    "validate:content": "node scripts/validate-content.js",
+    "analyze:build": "node scripts/analyze-build.js",
+    "validate": "pnpm validate:content",
+    "analyze": "pnpm analyze:build",
+    "check:docs": "node scripts/check-docs.js",
+    "prepare": "husky",
+    "test": "pnpm lint && pnpm validate"
+  },
+  "devDependencies": {
+    "@types/node": "^18.19.99",
+    "@typescript-eslint/eslint-plugin": "^8.32.0",
+    "@typescript-eslint/parser": "^8.32.0",
+    "@vuepress/bundler-vite": "2.0.0-rc.22",
+    "@vuepress/plugin-docsearch": "2.0.0-rc.102",
+    "@vuepress/plugin-medium-zoom": "2.0.0-rc.102",
+    "@vuepress/plugin-pwa": "2.0.0-rc.102",
+    "@vuepress/plugin-register-components": "2.0.0-rc.98",
+    "@vuepress/plugin-search": "2.0.0-rc.102",
+    "@vuepress/theme-default": "2.0.0-rc.102",
+    "chalk": "^4.1.2",
+    "eslint": "^8.57.1",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-define-config": "^2.1.0",
+    "eslint-import-resolver-typescript": "4.3.4",
+    "eslint-plugin-import": "2.31.0",
+    "eslint-plugin-node": "11.1.0",
+    "eslint-plugin-prettier": "5.2.6",
+    "eslint-plugin-vue": "^9.33.0",
+    "glob": "^10.4.5",
+    "gray-matter": "^4.0.3",
+    "husky": "9.1.7",
+    "lint-staged": "15.5.2",
+    "markdown-it-attrs": "^4.3.1",
+    "markdown-it-footnote": "^3.0.3",
+    "prettier": "^3.5.3",
+    "sass": "^1.87.0",
+    "typescript": "^5.8.3",
+    "vue": "^3.5.13",
+    "vue-eslint-parser": "^9.4.3",
+    "vuepress": "2.0.0-rc.22",
+    "gh-pages": "^6.3.0"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "pnpm": ">=8.0.0"
+  },
+  "lint-staged": {
+    "*.{vue,js,jsx,cjs,mjs,ts,tsx,cts,mts}": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "*.{json,css,scss,html,md}": [
+      "prettier --write"
+    ]
+  }
+}

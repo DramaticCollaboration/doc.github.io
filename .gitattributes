@@ -1,0 +1,106 @@
+# Auto detect text files and perform LF normalization
+* text=auto eol=lf
+
+# === Source Code Files ===
+*.js text diff=javascript
+*.jsx text diff=javascript
+*.ts text diff=typescript
+*.tsx text diff=typescript
+*.vue text
+*.css text diff=css
+*.scss text diff=css
+*.less text diff=css
+*.html text diff=html
+*.md text diff=markdown
+*.json text diff=json
+*.yaml text diff=yaml
+*.yml text diff=yaml
+*.sh text eol=lf
+*.py text
+*.xml text
+*.svg text
+*.graphql text
+*.gql text
+*.sql text
+*.lock text eol=lf
+
+# === Documentation ===
+*.txt text
+*.rst text
+*.adoc text
+*.asciidoc text
+*.tex text
+
+# === Configuration Files ===
+.editorconfig text
+.eslintrc* text
+.prettierrc* text
+.stylelintrc* text
+.babelrc* text
+*.config.js text
+*.config.ts text
+*.config.cjs text
+*.config.mjs text
+tsconfig.json text
+jsconfig.json text
+.gitattributes text
+.gitignore text
+.gitmodules text
+
+# === Binary Files ===
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+*.webp binary
+*.avif binary
+*.heic binary
+*.heif binary
+
+# === Font Files ===
+*.woff binary
+*.woff2 binary
+*.ttf binary
+*.eot binary
+*.otf binary
+*.ttc binary
+
+# === Media Files ===
+*.mp4 binary
+*.webm binary
+*.mov binary
+*.avi binary
+*.mp3 binary
+*.wav binary
+*.ogg binary
+*.flac binary
+
+# === Archive Files ===
+*.zip binary
+*.gz binary
+*.rar binary
+*.7z binary
+*.tar binary
+*.tgz binary
+*.tar.gz binary
+
+# === Lock Files ===
+package-lock.json text eol=lf
+pnpm-lock.yaml text eol=lf
+yarn.lock text eol=lf
+
+# === Generated Files ===
+*.min.js binary
+*.min.css binary
+*.bundle.js binary
+*.bundle.css binary
+*.d.ts text
+*.map text
+
+# === IDE and Editor Files ===
+.idea/* text
+.vscode/* text
+*.sublime-project text
+*.sublime-workspace text
+*.code-workspace text
