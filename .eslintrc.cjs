@@ -122,7 +122,7 @@ module.exports = defineConfig({
         math: 'always',
       },
     ],
-    'vue/component-name-in-template-casing': ['warn', 'PascalCase'], // 模板中组件名使用帕斯卡命名法（PascalCase）。
+    'vue/component-name-in-template-casing': ['warn', 'PascalCase'], // Template中组件名使用帕斯卡命名法（PascalCase）。
     'vue/component-definition-name-casing': ['warn', 'PascalCase'], // 组件定义时 name 属性使用帕斯卡命名法。
     'vue/no-multiple-template-root': 'off', // Vue 3 允许组件有多个根节点，故关闭。
     'vue/no-v-model-argument': 'off', // 允许在 v-model 上使用参数 (Vue 3 特性)。

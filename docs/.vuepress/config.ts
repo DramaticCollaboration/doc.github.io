@@ -4,18 +4,18 @@ import { viteBundler } from '@vuepress/bundler-vite'
 import { getDirname, path } from 'vuepress/utils'
 import fs from 'fs'
 
-// 导入拆分的配置模块
+// Import the split configuration module
 import { head } from './config/head.js'
 import { plugins } from './config/plugins.js'
 import { zh as zhNavbar } from './config/navbar/zh.js'
 import { zh as zhSidebar } from './config/sidebar/zh.js'
 
-// 获取当前文件的目录路径
+// Gets the directory path of the current file
 const __dirname = getDirname(import.meta.url)
 
 /**
- * 从 package.json 读取仓库链接
- * @returns {string} 仓库链接 URL
+ * 从 package.json Read the repository link
+ * @returns {string} Repository URL
  */
 function getRepoInfo(): string {
   try {
@@ -25,16 +25,16 @@ function getRepoInfo(): string {
     let repo = ''
 
     if (repoUrl) {
-      // 尝试从 git URL 中提取 HTTPS 链接
+      // Try extracting the HTTPS link from the git URL
       const match = repoUrl.match(/github\.com[\/:]([^\/]+\/[^\/\.]+)/)
       if (match && match[1]) {
         repo = `https://github.com/${match[1]}`
       } else {
-        // 如果不是 GitHub URL 或格式不匹配，直接使用原始 URL
+        // If it's not a GitHub URL or format mismatch, just use the original URL
         repo = repoUrl
       }
     } else {
-      // 如果 package.json 中没有，则使用默认值
+      // If it is not available in package.json, the default value is used
       repo = 'https://github.com/yourusername/vuepress-template'
       console.warn('Warning: repository.url not found in package.json. Using default repo URL.')
     }
@@ -42,127 +42,127 @@ function getRepoInfo(): string {
     return repo
   } catch (e) {
     console.error('Error reading package.json for repo info:', e)
-    // 出错时返回默认值
+    // Returns the default value when an error occurs
     return 'https://github.com/yourusername/vuepress-template'
   }
 }
 
-// 定义 VuePress 配置
+// Define the VuePress configuration
 // #region config-snippet
 export default defineUserConfig({
   // ==================
-  // 站点基础配置
+  // Basic site configuration
   // ==================
-  lang: 'zh-CN', // 站点语言
-  title: 'VuePress 模板', // 站点标题
-  description: '基于 VuePress 的现代化文档模板', // 站点描述 (用于 SEO)
-  head: head, // <head> 标签配置，导入自 ./config/head.js
+  lang: 'zh-CN', // Site language
+  title: 'VuePress Template', // Site title
+  description: 'A modern document template based on VuePress', // 站点描述 (用于 SEO)
+  head: head, // <head> Tag configuration, imported from ./config/head.js
 
   // ==================
-  // 构建工具配置
+  // Build the tool configuration
   // ==================
-  // 建议 PWA 插件设置为 false，避免 Service Worker 缓存所有资源
+  //It is recommended that the PWA plugin be set to false to avoid the service worker caching all resources
   shouldPrefetch: false,
-  // 使用 Vite 打包工具
+  // Use the Vite packaging tool
   bundler: viteBundler({
-    viteOptions: {}, // Vite 配置项
-    vuePluginOptions: {}, // @vitejs/plugin-vue 配置项
+    viteOptions: {}, // Vite Configuration items
+    vuePluginOptions: {}, // @vitejs/plugin-vue Configuration items
   }),
 
   // ==================
-  // 主题配置
+  // Theme configuration
   // ==================
   theme: defaultTheme({
-    // -- 主题基础配置 --
-    logo: '/images/logo.png', // 导航栏 Logo
-    repo: getRepoInfo(), // 仓库链接，自动从 package.json 读取
-    docsDir: 'docs', // 文档源文件目录
+    // -- Basic configuration of the theme --
+    logo: '/images/logo.png', // Navigation bar logo
+    repo: getRepoInfo(), // Repository link, automatically read from package.json
+    docsDir: 'docs', // The directory of the source files of the document
 
-    // -- 多语言支持 --
+    // -- Multi-language support --
     locales: {
-      // 中文语言配置
+      // Chinese language configuration
       '/': {
         // -- Base --
-        selectLanguageName: '简体中文',
-        selectLanguageText: '选择语言',
-        selectLanguageAriaLabel: '选择语言',
+        selectLanguageName: 'Korean',
+        selectLanguageText: 'Select a language',
+        selectLanguageAriaLabel: 'Select a language',
 
         // -- Navbar --
-        navbar: zhNavbar, // 导航栏配置，导入自 ./config/navbar/zh.js
+        navbar: zhNavbar, // Navigation bar configuration, imported from ./config/navbar/zh.js
 
         // -- Sidebar --
-        sidebar: zhSidebar, // 侧边栏配置，导入自 ./config/sidebar/zh.js
-        sidebarDepth: 2, // 侧边栏提取标题的深度
+        sidebar: zhSidebar, // Sidebar configuration, imported from ./config/sidebar/zh.js
+        sidebarDepth: 2, // The sidebar extracts the depth of the title
 
         // -- Page meta --
-        editLink: true, // 是否启用 编辑此页 链接
-        editLinkText: '在 GitHub 上编辑此页', // 编辑此页 链接文本
-        lastUpdated: true, // 是否启用 最后更新时间
-        lastUpdatedText: '上次更新', // 最后更新时间 文本
-        contributors: true, // 是否启用 贡献者列表
-        contributorsText: '贡献者', // 贡献者列表 文本
+        editLink: true, // Whether to enable the Edit this page link
+        editLinkText: 'Edit this page on GitHub', // Edit the link text on this page
+        lastUpdated: true, // Whether to enable Last Updated
+        lastUpdatedText: 'Last updated', // Last updated text
+        contributors: true, // Whether to enable the contributor list
+        contributorsText: 'Contributors', // List of contributors text
 
         // -- Custom Containers --
-        tip: '提示',
-        warning: '注意',
-        danger: '警告',
+        tip: 'Tips',
+        warning: 'Warning',
+        danger: 'Danger',
 
         // -- 404 Page --
-        notFound: ['页面未找到', '您访问的页面不存在'],
-        backToHome: '返回首页',
+        notFound: ['Page not found', 'The page you are visiting does not exist'],
+        backToHome: 'Return to the top page',
 
         // -- A11y --
         // TODO: Add A11y related locale config if needed
-        // openInNewWindow: '在新窗口打开',
-        // toggleColorMode: '切换颜色模式',
-        // toggleSidebar: '切换侧边栏',
+        // openInNewWindow: 'Opens in a new window',
+        // toggleColorMode: 'Toggle the color mode',
+        // toggleSidebar: 'Toggle the sidebar',
       },
-      // 可以在这里添加其他语言的配置，例如英文
+      // Configurations in other languages, such as English, can be added here
       // '/en/': {
       //   selectLanguageName: 'English',
-      //   ... (其他英文配置)
+      //   ... (Other English configurations)
       // }
     },
 
-    // -- 跨语言配置项 --
+    // -- Cross-language configuration items --
     // themePlugins: {
-    // 在这里配置默认主题提供的插件
-    // 例如：关闭 git 插件（如果已经在 locales 中启用了 lastUpdated 和 contributors）
+    // This is where you configure the plugins provided by the default theme
+    // For example: Turn off the git plugin (if lastUpdated and contributors are already enabled in locales)
     // git: false,
     // },
   }),
 
   // ==================
-  // Markdown 配置
+  // Markdown configuration
   // ==================
   markdown: {
     // -- Markdown Anchors --
     anchor: {
-      level: [1, 2, 3, 4, 5, 6], // 显示锚点的标题级别
-      // permalink: anchor.permalink.ariaHidden({ symbol: '#' }), // 自定义永久链接渲染
+      level: [1, 2, 3, 4, 5, 6], // Displays the title level of the anchor
+      // permalink: anchor.permalink.ariaHidden({ symbol: '#' }), // Custom permalink rendering
     },
     // -- Markdown Links --
     links: {
-      externalAttrs: { target: '_blank', rel: 'noopener noreferrer' }, // 外部链接默认添加 target 和 rel
+      externalAttrs: { target: '_blank', rel: 'noopener noreferrer' }, // External links add target and rel by default
     },
     // -- Code Blocks --
-    // importCode: { // 代码块导入功能
+    // importCode: { // Code block import function
     //   handleImportPath: (str) =>
     //     str.replace(/^@vuepress/, path.resolve(__dirname, '../../')),
     // },
   },
 
   // ==================
-  // 插件配置
+  // Plug-in configuration
   // ==================
-  plugins: plugins, // 插件配置，导入自 ./config/plugins.js
+  plugins: plugins, // Plug-in configuration, imported from ./config/plugins.js
 
   // ==================
-  // 其他配置
+  // Other configurations
   // ==================
   alias: {
-    // 定义路径别名
-    // 例如：覆盖主题组件
+    // Define path aliases
+    // For example: Override the Theme component
     // '@theme/HomeFooter.vue': path.resolve(__dirname, './components/layout/MyHomeFooter.vue'),
   },
 })

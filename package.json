@@ -2,7 +2,7 @@
   "name": "vuepress-template",
   "version": "1.0.0",
   "private": true,
-  "description": "一个基于 VuePress 的通用文档模板",
+  "description": "一个基于 VuePress 的通用文档Template",
   "keywords": [
     "vuepress",
     "vuepress-template"
