@@ -1,0 +1,994 @@
+<!doctype html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="generator" content="VuePress 2.0.0-rc.22" />
+    <style>
+      :root {
+        --vp-c-bg: #fff;
+      }
+
+      [data-theme='dark'] {
+        --vp-c-bg: #1b1b1f;
+      }
+
+      html,
+      body {
+        background-color: var(--vp-c-bg);
+      }
+    </style>
+    <script>
+      const useChoice = localStorage.getItem('vuepress-color-scheme')
+      const systemStatus =
+        'matchMedia' in window
+          ? window.matchMedia('(prefers-color-scheme: dark)').matches
+          : false
+
+      if (useChoice === 'light') {
+        document.documentElement.dataset.theme = 'light'
+      } else if (useChoice === 'dark' || systemStatus) {
+        document.documentElement.dataset.theme = 'dark'
+      }
+    </script>
+    <link rel="icon" href="/images/logo.png"><meta name="author" content="The VuePress Team"><meta name="keywords" content="vuepress, vue, Documentation, Blog"><meta name="theme-color" content="#3eaf7c"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black"><link rel="apple-touch-icon" href="/images/icons/apple-touch-icon.png"><link rel="mask-icon" href="/images/icons/safari-pinned-tab.svg" color="#3eaf7c"><meta name="msapplication-TileImage" content="/images/icons/mstile-150x150.png"><meta name="msapplication-TileColor" content="#3eaf7c"><meta name="application-name" content="VuePress Document templates"><meta name="mobile-web-app-capable" content="yes"><link rel="manifest" href="/manifest.webmanifest" crossorigin="use-credentials"><title>Form Control Usage Examples</title><meta name="description" content="The Empasy document">
+    <link rel="preload" href="/assets/style-BvRKiRGL.css" as="style"><link rel="stylesheet" href="/assets/style-BvRKiRGL.css">
+    <link rel="modulepreload" href="/assets/app-DGEuurYf.js"><link rel="modulepreload" href="/assets/form-control-usage-examples.html-BLwwPY_h.js">
+    
+  </head>
+  <body>
+    <div id="app"><!--[--><div class="vp-theme-container external-link-icon" vp-container><!--[--><header class="vp-navbar" vp-navbar><div class="vp-toggle-sidebar-button" title="toggle sidebar" aria-expanded="false" role="button" tabindex="0"><div class="icon" aria-hidden="true"><span></span><span></span><span></span></div></div><span><a class="route-link" href="/"><img class="vp-site-logo" src="/.vuepress/public/images/logo-dark.png" alt><!----></a></span><div class="vp-navbar-items-wrapper" style=""><!--[--><!--]--><nav class="vp-navbar-items vp-hide-mobile" aria-label="site navigation"><!--[--><div class="vp-navbar-item"><a class="route-link auto-link" href="/" aria-label="Homepage"><!--[--><!--[--><!--]--><!--]-->Homepage<!--[--><!--[--><!--]--><!--]--></a></div><div class="vp-navbar-item"><a class="route-link auto-link" href="/synceta/" aria-label="SyncETA"><!--[--><!--[--><!--]--><!--]-->SyncETA<!--[--><!--[--><!--]--><!--]--></a></div><div class="vp-navbar-item"><a class="route-link auto-link" href="/syncboot/" aria-label="SyncBoot"><!--[--><!--[--><!--]--><!--]-->SyncBoot<!--[--><!--[--><!--]--><!--]--></a></div><div class="vp-navbar-item"><a class="route-link auto-link" href="/synccms/" aria-label="SyncCms"><!--[--><!--[--><!--]--><!--]-->SyncCms<!--[--><!--[--><!--]--><!--]--></a></div><div class="vp-navbar-item"><a class="route-link route-link-active auto-link" href="/syncadmin/" aria-label="SyncAdmin"><!--[--><!--[--><!--]--><!--]-->SyncAdmin<!--[--><!--[--><!--]--><!--]--></a></div><div class="vp-navbar-item"><a class="auto-link external-link" href="https://github.com/yourusername/vuepress-template" aria-label="GitHub" rel="noopener noreferrer" target="_blank"><!--[--><!--[--><!--]--><!--]-->GitHub<!--[--><!--[--><!--]--><!--]--></a></div><!--]--></nav><!--[--><!--]--><button type="button" class="vp-toggle-color-mode-button" title="toggle color mode"><svg class="light-icon" viewbox="0 0 32 32" style=""><path d="M16 12.005a4 4 0 1 1-4 4a4.005 4.005 0 0 1 4-4m0-2a6 6 0 1 0 6 6a6 6 0 0 0-6-6z" fill="currentColor"></path><path d="M5.394 6.813l1.414-1.415l3.506 3.506L8.9 10.318z" fill="currentColor"></path><path d="M2 15.005h5v2H2z" fill="currentColor"></path><path d="M5.394 25.197L8.9 21.691l1.414 1.415l-3.506 3.505z" fill="currentColor"></path><path d="M15 25.005h2v5h-2z" fill="currentColor"></path><path d="M21.687 23.106l1.414-1.415l3.506 3.506l-1.414 1.414z" fill="currentColor"></path><path d="M25 15.005h5v2h-5z" fill="currentColor"></path><path d="M21.687 8.904l3.506-3.506l1.414 1.415l-3.506 3.505z" fill="currentColor"></path><path d="M15 2.005h2v5h-2z" fill="currentColor"></path></svg><svg class="dark-icon" viewbox="0 0 32 32" style="display:none;"><path d="M13.502 5.414a15.075 15.075 0 0 0 11.594 18.194a11.113 11.113 0 0 1-7.975 3.39c-.138 0-.278.005-.418 0a11.094 11.094 0 0 1-3.2-21.584M14.98 3a1.002 1.002 0 0 0-.175.016a13.096 13.096 0 0 0 1.825 25.981c.164.006.328 0 .49 0a13.072 13.072 0 0 0 10.703-5.555a1.01 1.01 0 0 0-.783-1.565A13.08 13.08 0 0 1 15.89 4.38A1.015 1.015 0 0 0 14.98 3z" fill="currentColor"></path></svg></button><form class="search-box" role="search"><input type="search" placeholder="Search for documents" autocomplete="off" spellcheck="false" value><!----></form></div></header><!--]--><div class="vp-sidebar-mask"></div><!--[--><aside class="vp-sidebar" vp-sidebar><nav class="vp-navbar-items" aria-label="site navigation"><!--[--><div class="vp-navbar-item"><a class="route-link auto-link" href="/" aria-label="Homepage"><!--[--><!--[--><!--]--><!--]-->Homepage<!--[--><!--[--><!--]--><!--]--></a></div><div class="vp-navbar-item"><a class="route-link auto-link" href="/synceta/" aria-label="SyncETA"><!--[--><!--[--><!--]--><!--]-->SyncETA<!--[--><!--[--><!--]--><!--]--></a></div><div class="vp-navbar-item"><a class="route-link auto-link" href="/syncboot/" aria-label="SyncBoot"><!--[--><!--[--><!--]--><!--]-->SyncBoot<!--[--><!--[--><!--]--><!--]--></a></div><div class="vp-navbar-item"><a class="route-link auto-link" href="/synccms/" aria-label="SyncCms"><!--[--><!--[--><!--]--><!--]-->SyncCms<!--[--><!--[--><!--]--><!--]--></a></div><div class="vp-navbar-item"><a class="route-link route-link-active auto-link" href="/syncadmin/" aria-label="SyncAdmin"><!--[--><!--[--><!--]--><!--]-->SyncAdmin<!--[--><!--[--><!--]--><!--]--></a></div><div class="vp-navbar-item"><a class="auto-link external-link" href="https://github.com/yourusername/vuepress-template" aria-label="GitHub" rel="noopener noreferrer" target="_blank"><!--[--><!--[--><!--]--><!--]-->GitHub<!--[--><!--[--><!--]--><!--]--></a></div><!--]--></nav><!--[--><!--]--><ul class="vp-sidebar-items"><!--[--><li><p tabindex="0" class="vp-sidebar-item vp-sidebar-heading collapsible">SyncAdmin <span class="right arrow"></span></p><ul style="display:none;" class="vp-sidebar-children"><!--[--><li><a class="route-link route-link-active auto-link vp-sidebar-item" href="/syncadmin/" aria-label="Summary"><!--[--><!--[--><!--]--><!--]-->Summary<!--[--><!--[--><!--]--><!--]--></a><!----></li><li><a class="route-link auto-link vp-sidebar-item" href="/syncadmin/Introduction.html" aria-label="Introduction"><!--[--><!--[--><!--]--><!--]-->Introduction<!--[--><!--[--><!--]--><!--]--></a><!----></li><!--]--></ul></li><!--]--></ul><!--[--><!--]--></aside><!--]--><!--[--><main class="vp-page"><!--[--><!--]--><div vp-content><!--[--><!--]--><div><h1 id="form-control-usage-examples" tabindex="-1"><a class="header-anchor" href="#form-control-usage-examples"><span>Form Control Usage Examples</span></a></h1><blockquote><p>The form has many built-in components, including text boxes, drop-down boxes, multiple-select boxes, radio buttons, etc., and supports custom extensions</p></blockquote><h2 id="ant-design-vue-comes-with-controls" tabindex="-1"><a class="header-anchor" href="#ant-design-vue-comes-with-controls"><span>Ant Design Vue comes with controls</span></a></h2><h3 id="_1-input-box" tabindex="-1"><a class="header-anchor" href="#_1-input-box"><span>1. Input box</span></a></h3><p>Page Effects</p><p>Code Sample</p><p><img src="https://lfs.k.topthink.com/lfs/306af7f5e8e256f627650b8a3e3b5107c5f09e9ce51b11b92b5ebac565468383.dat" alt=""></p><div class="language-text line-numbers-mode" data-highlighter="prismjs" data-ext="text"><pre><code><span class="line">const schemas: FormSchema[] = [</span>
+<span class="line">  {</span>
+<span class="line">    label: &#39;文本框&#39;,</span>
+<span class="line">    field: &#39;name&#39;,</span>
+<span class="line">    component:&#39;Input&#39;,</span>
+<span class="line">    //属性</span>
+<span class="line">    componentProps:{</span>
+<span class="line">      //前缀</span>
+<span class="line">      prefix:&#39;中文&#39;,</span>
+<span class="line">      //是否显示字数</span>
+<span class="line">      showCount: true</span>
+<span class="line">    }</span>
+<span class="line">  },</span>
+<span class="line">]</span>
+<span class="line"></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>copy</p><p><a href="https://www.antdv.com/components/input-cn/#api" target="_blank" rel="noopener noreferrer">Enter more properties</a></p><h3 id="_2-inputpassword-password-input-box" tabindex="-1"><a class="header-anchor" href="#_2-inputpassword-password-input-box"><span>2. InputPassword password input box</span></a></h3><p>Page Effects</p><p>Code Sample</p><p><img src="https://lfs.k.topthink.com/lfs/860c811a4e128787b73106d2cdb99e454f45df81b497d079821d0f528c5881ef.dat" alt=""></p><div class="language-text line-numbers-mode" data-highlighter="prismjs" data-ext="text"><pre><code><span class="line">const schemas: FormSchema[] = [</span>
+<span class="line">  {</span>
+<span class="line">    label: &#39;密码&#39;,</span>
+<span class="line">    field: &#39;password&#39;,</span>
+<span class="line">    component:&#39;InputPassword&#39;,</span>
+<span class="line">    //属性</span>
+<span class="line">    componentProps:{</span>
+<span class="line">      //是否显示切换按钮或者控制密码显隐</span>
+<span class="line">      visibilityToggle: true</span>
+<span class="line">    }</span>
+<span class="line">  },</span>
+<span class="line">]</span>
+<span class="line"></span>
+<span class="line"></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>copy</p><p>Except for controlling the password visibility, the rest is the same as <a href="https://www.antdv.com/components/input-cn/#api" target="_blank" rel="noopener noreferrer">the Input property</a></p><h3 id="_3-inputtextarea-text-field" tabindex="-1"><a class="header-anchor" href="#_3-inputtextarea-text-field"><span>3. InputTextArea text field</span></a></h3><p>Page Effects</p><p>Code Sample</p><p><img src="https://lfs.k.topthink.com/lfs/8a80f80510c8561b9da36eab19ef21037d7bec96f6268157ea1e27a0cfa6a785.dat" alt=""></p><div class="language-text line-numbers-mode" data-highlighter="prismjs" data-ext="text"><pre><code><span class="line">const schemas: FormSchema[] = [</span>
+<span class="line">    {</span>
+<span class="line">      label: &#39;文本域&#39;,</span>
+<span class="line">      field: &#39;textArea&#39;,</span>
+<span class="line">      component:&#39;InputTextArea&#39;,</span>
+<span class="line">      //属性</span>
+<span class="line">      componentProps:{</span>
+<span class="line">        //可以点击清除图标删除内容</span>
+<span class="line">        allowClear: true,</span>
+<span class="line">        //是否展示字数</span>
+<span class="line">        showCount: true,</span>
+<span class="line">        //自适应内容高度，可设置为 true | false 或对象：{ minRows: 2, maxRows: 6 }</span>
+<span class="line">        autoSize:{</span>
+<span class="line">          //最小显示行数</span>
+<span class="line">          minRows: 2,</span>
+<span class="line">          //最大显示行数</span>
+<span class="line">          maxRows: 3</span>
+<span class="line">        },</span>
+<span class="line">      }</span>
+<span class="line">    },</span>
+<span class="line">]</span>
+<span class="line"></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>copy</p><p><a href="https://www.antdv.com/components/input-cn/#textarea" target="_blank" rel="noopener noreferrer">Textarea Attributes</a></p><h3 id="_4-inputnumber-numeric-input-box" tabindex="-1"><a class="header-anchor" href="#_4-inputnumber-numeric-input-box"><span>4. InputNumber numeric input box</span></a></h3><p>Page Effects</p><p>Code Sample</p><p><img src="https://lfs.k.topthink.com/lfs/e50f54a0f0c93db0c261ed72038abb61f25f65d1855b76534bf364a3f42ad4c5.dat" alt=""></p><div class="language-text line-numbers-mode" data-highlighter="prismjs" data-ext="text"><pre><code><span class="line">const schemas: FormSchema[] = [</span>
+<span class="line">    {</span>
+<span class="line">      label: &#39;数值输入框&#39;,</span>
+<span class="line">      field: &#39;number&#39;,</span>
+<span class="line">      component:&#39;InputNumber&#39;,</span>
+<span class="line">      componentProps:{</span>
+<span class="line">        //带标签的 input，设置后置标签</span>
+<span class="line">        addonBefore:&#39;保留两位小数&#39;,</span>
+<span class="line">        //最大值</span>
+<span class="line">        max:100,</span>
+<span class="line">        //数值精度</span>
+<span class="line">        precision:2,</span>
+<span class="line">        //步数</span>
+<span class="line">        step: 0.1</span>
+<span class="line">      }</span>
+<span class="line">    },</span>
+<span class="line">]</span>
+<span class="line"></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>copy</p><p><a href="https://www.antdv.com/components/input-number-cn/#api" target="_blank" rel="noopener noreferrer">More properties of inputNumber</a></p><h3 id="_5-select-drop-down-box" tabindex="-1"><a class="header-anchor" href="#_5-select-drop-down-box"><span>5. Select drop-down box</span></a></h3><p>Page Effects</p><p>Code Sample</p><p><img src="https://lfs.k.topthink.com/lfs/be84cdbbd575b8a98c0bb2585d6cf95f973b4617eb17f02dd801aa2fa1d518f8.dat" alt=""></p><div class="language-text line-numbers-mode" data-highlighter="prismjs" data-ext="text"><pre><code><span class="line">const schemas: FormSchema[] = [</span>
+<span class="line">    {</span>
+<span class="line">      label: &#39;下拉框&#39;,</span>
+<span class="line">      field: &#39;jinputtype&#39;,</span>
+<span class="line">      component: &#39;Select&#39;,</span>
+<span class="line">      componentProps: {</span>
+<span class="line">        options: [</span>
+<span class="line">          { value: &#39;like&#39;, label: &#39;模糊（like）&#39; },</span>
+<span class="line">          { value: &#39;ne&#39;, label: &#39;不等于（ne）&#39; },</span>
+<span class="line">          { value: &#39;ge&#39;, label: &#39;大于等于（ge）&#39; },</span>
+<span class="line">          { value: &#39;le&#39;, label: &#39;小于等于（le)&#39; },</span>
+<span class="line">        ],</span>
+<span class="line">        //下拉多选</span>
+<span class="line">        mode:&#39;multiple&#39;,</span>
+<span class="line">        //配置是否可搜索</span>
+<span class="line">        showSearch: true</span>
+<span class="line">      },</span>
+<span class="line">    },</span>
+<span class="line">]</span>
+<span class="line"></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>copy</p><p><a href="https://www.antdv.com/components/select-cn/#api" target="_blank" rel="noopener noreferrer">Select more properties</a></p><h3 id="_6-treeselect-tree-drop-down-selection" tabindex="-1"><a class="header-anchor" href="#_6-treeselect-tree-drop-down-selection"><span>6.TreeSelect tree drop-down selection</span></a></h3><p>Page Effects</p><p>Code Sample</p><p><img src="https://lfs.k.topthink.com/lfs/2f3d37cd40013a730d95e2d04ab04306a082559533e87abd5f7b2be82efd1819.dat" alt=""></p><div class="language-text line-numbers-mode" data-highlighter="prismjs" data-ext="text"><pre><code><span class="line">const schemas: FormSchema[] = [</span>
+<span class="line">    {</span>
+<span class="line">      field: &#39;TreeSelect&#39;,</span>
+<span class="line">      label: &#39;下拉树&#39;,</span>
+<span class="line">      component: &#39;TreeSelect&#39;,</span>
+<span class="line">      componentProps: {</span>
+<span class="line">        //是否显示下拉框，默认false</span>
+<span class="line">        treeCheckable: true,</span>
+<span class="line">        //标题</span>
+<span class="line">        title:&#39;下拉树&#39;,</span>
+<span class="line">        //下拉树</span>
+<span class="line">        treeData:[</span>
+<span class="line">          {</span>
+<span class="line">            label: &#39;洗衣机&#39;,</span>
+<span class="line">            value: &#39;0&#39;,</span>
+<span class="line">            children: [</span>
+<span class="line">              {</span>
+<span class="line">                label: &#39;滚筒洗衣机&#39;,</span>
+<span class="line">                value: &#39;0-1&#39;,</span>
+<span class="line">              },</span>
+<span class="line">            ],</span>
+<span class="line">          },</span>
+<span class="line">          {</span>
+<span class="line">            label: &#39;电视机&#39;,</span>
+<span class="line">            value: &#39;1&#39;,</span>
+<span class="line">            children: [</span>
+<span class="line">              {</span>
+<span class="line">                label: &#39;平板电视&#39;,</span>
+<span class="line">                value: &#39;1-1&#39;,</span>
+<span class="line">                disabled: true,</span>
+<span class="line">              },</span>
+<span class="line">              {</span>
+<span class="line">                label: &#39;CRT电视机&#39;,</span>
+<span class="line">                value: &#39;1-2&#39;,</span>
+<span class="line">              },</span>
+<span class="line">              {</span>
+<span class="line">                label: &#39;投影电视&#39;,</span>
+<span class="line">                value: &#39;1-3&#39;,</span>
+<span class="line">              },</span>
+<span class="line">            ],</span>
+<span class="line">          },</span>
+<span class="line">        ]</span>
+<span class="line">      },</span>
+<span class="line">    },</span>
+<span class="line">]</span>
+<span class="line"></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>copy</p><p><a href="https://www.antdv.com/components/tree-select-cn/#api" target="_blank" rel="noopener noreferrer">TreeSelect More Properties</a></p><h3 id="_7-radiogroup" tabindex="-1"><a class="header-anchor" href="#_7-radiogroup"><span>7. RadioGroup</span></a></h3><p>Page Effects</p><p>Code Sample</p><p><img src="https://lfs.k.topthink.com/lfs/11d4e176de55659ea92ba094e2616b0f05ee3d86ef1f2aab51233c62b1ab97e3.dat" alt=""></p><div class="language-text line-numbers-mode" data-highlighter="prismjs" data-ext="text"><pre><code><span class="line">const schemas: FormSchema[] = [</span>
+<span class="line">    {</span>
+<span class="line">      label: &#39;单选框&#39;,</span>
+<span class="line">      field: &#39;radioSex&#39;,</span>
+<span class="line">      component: &#39;RadioGroup&#39;,</span>
+<span class="line">      componentProps: {</span>
+<span class="line">        //options里面由一个一个的radio组成,支持disabled</span>
+<span class="line">        options: [</span>
+<span class="line">          { label: &#39;男&#39;, value: 1 },</span>
+<span class="line">          { label: &#39;女&#39;, value: 0 },</span>
+<span class="line">        ],</span>
+<span class="line">      },</span>
+<span class="line">    }</span>
+<span class="line">]</span>
+<span class="line"></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>copy</p><p><a href="https://www.antdv.com/components/radio-cn/#radiogroup" target="_blank" rel="noopener noreferrer">RadioGroup More Properties</a></p><h3 id="_8-checkbox" tabindex="-1"><a class="header-anchor" href="#_8-checkbox"><span>8. Checkbox</span></a></h3><p>Page Effects</p><p>Code Sample</p><p><img src="https://lfs.k.topthink.com/lfs/2d9f0bc40546e312b2408b562e9f148fb2ea0332bc77e1e7a434b1e1097b2139.dat" alt=""></p><div class="language-text line-numbers-mode" data-highlighter="prismjs" data-ext="text"><pre><code><span class="line">const schemas: FormSchema[] = [</span>
+<span class="line">    {</span>
+<span class="line">      label: &#39;多选框&#39;,</span>
+<span class="line">      field: &#39;checkSex&#39;,</span>
+<span class="line">      component: &#39;Checkbox&#39;,</span>
+<span class="line">      componentProps: {</span>
+<span class="line">        //是否禁用,默认false</span>
+<span class="line">        disabled: false,</span>
+<span class="line">      },</span>
+<span class="line">    },</span>
+<span class="line">]</span>
+<span class="line"></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>copy</p><h3 id="_9-checkboxgroup" tabindex="-1"><a class="header-anchor" href="#_9-checkboxgroup"><span>9. CheckboxGroup</span></a></h3><p>Page Effects</p><p>Code Sample</p><p><img src="https://lfs.k.topthink.com/lfs/6234f505bd2b62436e1c7b13a6a1c49665fbf9dbba7839a79f7c2d2d91ab7caa.dat" alt=""></p><div class="language-text line-numbers-mode" data-highlighter="prismjs" data-ext="text"><pre><code><span class="line">const schemas: FormSchema[] = [</span>
+<span class="line">    {</span>
+<span class="line">      label: &#39;多选框组&#39;,</span>
+<span class="line">      field: &#39;checkSex&#39;,</span>
+<span class="line">      component: &#39;CheckboxGroup&#39;,</span>
+<span class="line">      componentProps: {</span>
+<span class="line">        //RadioGroup 下所有 input[type=&quot;radio&quot;] 的 name 属性</span>
+<span class="line">        name:&#39;爱好&#39;,</span>
+<span class="line">        //options支持disabled禁用</span>
+<span class="line">        options: [</span>
+<span class="line">          { label: &#39;运动&#39;, value: 0, disabled: true },</span>
+<span class="line">          { label: &#39;听音乐&#39;, value: 1 },</span>
+<span class="line">          { label: &#39;看书&#39;, value: 2 },</span>
+<span class="line">        ],</span>
+<span class="line">      },</span>
+<span class="line">      defaultValue:[2]</span>
+<span class="line">    }</span>
+<span class="line">]</span>
+<span class="line"></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>copy</p><h3 id="_10-cascader-selection" tabindex="-1"><a class="header-anchor" href="#_10-cascader-selection"><span>10. Cascader selection</span></a></h3><p>Page Effects</p><p>Code Sample</p><p><img src="https://lfs.k.topthink.com/lfs/51b2151162a80d1f42e24afe496298331cbfa298b03e62079732a5b0aaaf99ca.dat" alt=""></p><div class="language-text line-numbers-mode" data-highlighter="prismjs" data-ext="text"><pre><code><span class="line">const schemas: FormSchema[] = [</span>
+<span class="line">    {</span>
+<span class="line">      label: &#39;级联选择&#39;,</span>
+<span class="line">      field: &#39;cascade&#39;,</span>
+<span class="line">      component: &#39;Cascader&#39;,</span>
+<span class="line">      componentProps: {</span>
+<span class="line">        //最多显示多少个tag</span>
+<span class="line">        maxTagCount:2,</span>
+<span class="line">        //浮层预设位置</span>
+<span class="line">        placement: &#39;bottomRight&#39;,</span>
+<span class="line">        //在选择框中显示搜索框,默认false</span>
+<span class="line">        showSearch: true,</span>
+<span class="line">        options: [</span>
+<span class="line">          {</span>
+<span class="line">            label: &#39;北京&#39;,</span>
+<span class="line">            value: &#39;BeiJin&#39;,</span>
+<span class="line">            children: [</span>
+<span class="line">              {</span>
+<span class="line">                label: &#39;海淀区&#39;,</span>
+<span class="line">                value: &#39;HaiDian&#39;,</span>
+<span class="line">              },</span>
+<span class="line">            ],</span>
+<span class="line">          },</span>
+<span class="line">          {</span>
+<span class="line">            label: &#39;江苏省&#39;,</span>
+<span class="line">            value: &#39;JiangSu&#39;,</span>
+<span class="line">            children: [</span>
+<span class="line">              {</span>
+<span class="line">                label: &#39;南京&#39;,</span>
+<span class="line">                value: &#39;Nanjing&#39;,</span>
+<span class="line">                children: [</span>
+<span class="line">                  {</span>
+<span class="line">                    label: &#39;中华门&#39;,</span>
+<span class="line">                    value: &#39;ZhongHuaMen&#39;,</span>
+<span class="line">                  },</span>
+<span class="line">                ],</span>
+<span class="line">              },</span>
+<span class="line">            ],</span>
+<span class="line">          },</span>
+<span class="line">        ],</span>
+<span class="line">      },</span>
+<span class="line">    },</span>
+<span class="line">]</span>
+<span class="line"></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>copy</p><p><a href="https://www.antdv.com/components/cascader-cn/#api" target="_blank" rel="noopener noreferrer">Cascader More Properties</a></p><h3 id="_11-datepicker-date-selection-box" tabindex="-1"><a class="header-anchor" href="#_11-datepicker-date-selection-box"><span>11. DatePicker date selection box</span></a></h3><p>Page Effects</p><p>Code Sample</p><blockquote><p>Not available today</p></blockquote><p><img src="https://lfs.k.topthink.com/lfs/c74e7da78c87bfa1615ccb2ce73e11c1125a5589eaa0941748f86415181856fa.dat" alt=""></p><div class="language-text line-numbers-mode" data-highlighter="prismjs" data-ext="text"><pre><code><span class="line">import dayjs from &quot;dayjs&quot;;</span>
+<span class="line"></span>
+<span class="line">const schemas: FormSchema[] = [</span>
+<span class="line">    {</span>
+<span class="line">      label: &#39;日期选择&#39;,</span>
+<span class="line">      field: &#39;dateSelect&#39;,</span>
+<span class="line">      component: &#39;DatePicker&#39;,</span>
+<span class="line">      componentProps: {</span>
+<span class="line">        //日期格式化，页面上显示的值</span>
+<span class="line">        format:&#39;YYYY-MM-DD&#39;,</span>
+<span class="line">        //返回值格式化（绑定值的格式）</span>
+<span class="line">        valueFormat:&#39;YYYY-MM-DD&#39;,</span>
+<span class="line">        //是否显示今天按钮</span>
+<span class="line">        showToday:true,</span>
+<span class="line">        //不可选择日期</span>
+<span class="line">        disabledDate:(currentDate)=&gt;{</span>
+<span class="line">          let date = dayjs(currentDate).format(&#39;YYYY-MM-DD&#39;);</span>
+<span class="line">          let nowDate =  dayjs(new Date()).format(&#39;YYYY-MM-DD&#39;);</span>
+<span class="line">          //当天不可选择</span>
+<span class="line">          if(date == nowDate){</span>
+<span class="line">            return true;</span>
+<span class="line">          }</span>
+<span class="line">          return false;</span>
+<span class="line">        }</span>
+<span class="line">      },</span>
+<span class="line">    },</span>
+<span class="line">]</span>
+<span class="line"></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>copy</p><p><a href="https://www.antdv.com/components/date-picker-cn/#api" target="_blank" rel="noopener noreferrer">DatePicker More Properties</a></p><h3 id="_12-monthpicker-month-selection" tabindex="-1"><a class="header-anchor" href="#_12-monthpicker-month-selection"><span>12. MonthPicker month selection</span></a></h3><p>Page Effects</p><p>Code Sample</p><blockquote><p>The current month does not allow selection</p></blockquote><p><img src="https://lfs.k.topthink.com/lfs/58c14c59140c95b803efb4ad292ca4e4198c0aec91082f5086cce7044a26311d.dat" alt=""></p><div class="language-text line-numbers-mode" data-highlighter="prismjs" data-ext="text"><pre><code><span class="line">import dayjs from &quot;dayjs&quot;;</span>
+<span class="line"></span>
+<span class="line">const schemas: FormSchema[] = [</span>
+<span class="line">    {</span>
+<span class="line">      label: &#39;月份选择&#39;,</span>
+<span class="line">      field: &#39;monthSelect&#39;,</span>
+<span class="line">      component: &#39;MonthPicker&#39;,</span>
+<span class="line">      componentProps: {</span>
+<span class="line">        //不可选择日期</span>
+<span class="line">        disabledDate:(currentDate)=&gt;{</span>
+<span class="line">          let date = dayjs(currentDate).format(&#39;YYYY-MM&#39;);</span>
+<span class="line">          let nowDate =  dayjs(new Date()).format(&#39;YYYY-MM&#39;);</span>
+<span class="line">          //当天不可选择</span>
+<span class="line">          if(date == nowDate){</span>
+<span class="line">            return true;</span>
+<span class="line">          }</span>
+<span class="line">          return false;</span>
+<span class="line">        }</span>
+<span class="line">      },</span>
+<span class="line">    },</span>
+<span class="line">]</span>
+<span class="line"></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>copy</p><p><code>MonthPicker</code>The default date format is <code>YYYY-MM</code>, and it also supports <a href="https://www.antdv.com/components/date-picker-cn#api" target="_blank" rel="noopener noreferrer">DatePicker properties</a></p><h3 id="_13-weekpicker-week-selection" tabindex="-1"><a class="header-anchor" href="#_13-weekpicker-week-selection"><span>13. WeekPicker week selection</span></a></h3><p>Page Effects</p><p>Code Sample</p><p>You can only select the week number of the current month, from Monday to Sunday</p><p><img src="https://lfs.k.topthink.com/lfs/2a44967d8713ff12455e2b49e0d55bd7568fe909a38a2c55b68a3a358771b435.dat" alt=""></p><div class="language-text line-numbers-mode" data-highlighter="prismjs" data-ext="text"><pre><code><span class="line">const schemas: FormSchema[] = [</span>
+<span class="line">    {</span>
+<span class="line">      label: &#39;周选择&#39;,</span>
+<span class="line">      field: &#39;monthSelect&#39;,</span>
+<span class="line">      component: &#39;weekSelect&#39;,</span>
+<span class="line">      componentProps: {</span>
+<span class="line">        size:&#39;small&#39;,</span>
+<span class="line">      },</span>
+<span class="line">    },</span>
+<span class="line">]</span>
+<span class="line"></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>copy</p><p><a href="https://www.antdv.com/components/date-picker-cn/#api" target="_blank" rel="noopener noreferrer">Support DatePicker properties</a></p><h3 id="_14-timepicker-time-selection" tabindex="-1"><a class="header-anchor" href="#_14-timepicker-time-selection"><span>14. TimePicker time selection</span></a></h3><p>Page Effects</p><p>Code Sample</p><p><img src="https://lfs.k.topthink.com/lfs/3596f05a5d03f88607011d9ac732f6aa571662deda937fe3635cf721d6633d14.dat" alt=""></p><div class="language-text line-numbers-mode" data-highlighter="prismjs" data-ext="text"><pre><code><span class="line">const schemas: FormSchema[] = [</span>
+<span class="line">    {</span>
+<span class="line">      label: &#39;时间选择&#39;,</span>
+<span class="line">      field: &#39;timeSelect&#39;,</span>
+<span class="line">      component: &#39;TimePicker&#39;,</span>
+<span class="line">      componentProps: {</span>
+<span class="line">        size:&#39;default&#39;,</span>
+<span class="line">        //日期时间或者时间模式下是否显示此刻，不支持日期时间范围和时间范围</span>
+<span class="line">        showNow: true</span>
+<span class="line">      },</span>
+<span class="line">    },</span>
+<span class="line">]</span>
+<span class="line"></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>copy</p><p><a href="https://www.antdv.com/components/date-picker-cn/#api" target="_blank" rel="noopener noreferrer">Support DatePicker properties</a></p><h3 id="_15-rangepicker-date-and-time-range-selection" tabindex="-1"><a class="header-anchor" href="#_15-rangepicker-date-and-time-range-selection"><span>15. RangePicker date and time range selection</span></a></h3><p>Page Effects</p><p>Code Sample</p><p><img src="https://lfs.k.topthink.com/lfs/f781e3287ca8ea28c590aeb38888532ec583016f0ebad02ed9cde126bbbb6b26.dat" alt=""></p><div class="language-text line-numbers-mode" data-highlighter="prismjs" data-ext="text"><pre><code><span class="line">const schemas: FormSchema[] = [</span>
+<span class="line">    {</span>
+<span class="line">      label: &#39;日期时间范围&#39;,</span>
+<span class="line">      field: &#39;dateTimeRangeSelect&#39;,</span>
+<span class="line">      component: &#39;RangePicker&#39;,</span>
+<span class="line">      componentProps: {</span>
+<span class="line">        //是否显示时间</span>
+<span class="line">        showTime: true,</span>
+<span class="line">        //日期格式化</span>
+<span class="line">        format:&#39;YYYY/MM/DD HH:mm:ss&#39;,</span>
+<span class="line">        //范围文本描述用集合</span>
+<span class="line">        placeholder:[&#39;请选择开始日期时间&#39;,&#39;请选择结束日期时间&#39;]</span>
+<span class="line">      },</span>
+<span class="line">    },</span>
+<span class="line">]</span>
+<span class="line"></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>copy</p><p>default value</p><div class="language-text line-numbers-mode" data-highlighter="prismjs" data-ext="text"><pre><code><span class="line">defaultValue: [new Date(&quot;2024-03-21&quot;), new Date(&quot;2024-03-27&quot;)],</span>
+<span class="line"></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div></div></div><p>copy</p><p><a href="https://www.antdv.com/components/date-picker-cn/#api" target="_blank" rel="noopener noreferrer">Support DatePicker properties</a></p><h3 id="_16-rangedate-date-range-selection" tabindex="-1"><a class="header-anchor" href="#_16-rangedate-date-range-selection"><span>16. RangeDate date range selection</span></a></h3><p>Page Effects</p><p>Code Sample</p><p><img src="https://lfs.k.topthink.com/lfs/a3da5cd45c7beb0fd9e070915d44a5e4d2c916cf3fa6cc007e8a4c5dbd1cf223.dat" alt=""></p><div class="language-text line-numbers-mode" data-highlighter="prismjs" data-ext="text"><pre><code><span class="line">const schemas: FormSchema[] = [</span>
+<span class="line">    {</span>
+<span class="line">      label: &#39;日期范围&#39;,</span>
+<span class="line">      field: &#39;dateRangeSelect&#39;,</span>
+<span class="line">      component: &#39;RangeDate&#39;,</span>
+<span class="line">      componentProps: {</span>
+<span class="line">        //日期格式化</span>
+<span class="line">        format:&#39;YYYY/MM/DD&#39;,</span>
+<span class="line">        //范围文本描述用集合</span>
+<span class="line">        placeholder:[&#39;请选择开始日期&#39;,&#39;请选择结束日期&#39;]</span>
+<span class="line">      },</span>
+<span class="line">    },</span>
+<span class="line">]</span>
+<span class="line"></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>copy</p><p><a href="https://www.antdv.com/components/date-picker-cn/#api" target="_blank" rel="noopener noreferrer">Support DatePicker properties</a></p><h3 id="_17-rangetime-time-range-selection" tabindex="-1"><a class="header-anchor" href="#_17-rangetime-time-range-selection"><span>17. RangeTime time range selection</span></a></h3><p>Page Effects</p><p>Code Sample</p><p><img src="https://lfs.k.topthink.com/lfs/8d3305ace88263acb0c826e0c14c5d7e1281244a5a43041c3da85cf09449c413.dat" alt=""></p><div class="language-text line-numbers-mode" data-highlighter="prismjs" data-ext="text"><pre><code><span class="line">const schemas: FormSchema[] = [</span>
+<span class="line">    {</span>
+<span class="line">      label: &#39;时间范围&#39;,</span>
+<span class="line">      field: &#39;timeRangeSelect&#39;,</span>
+<span class="line">      component: &#39;RangeTime&#39;,</span>
+<span class="line">      componentProps: {</span>
+<span class="line">        //日期格式化</span>
+<span class="line">        format:&#39;HH/mm/ss&#39;,</span>
+<span class="line">        //范围文本描述用集合</span>
+<span class="line">        placeholder:[&#39;请选择开始时间&#39;,&#39;请选择结束时间&#39;],</span>
+<span class="line">      },</span>
+<span class="line">    },</span>
+<span class="line">]</span>
+<span class="line"></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>copy</p><p><a href="https://www.antdv.com/components/date-picker-cn/#api" target="_blank" rel="noopener noreferrer">Support DatePicker properties</a></p><h3 id="_18-switch" tabindex="-1"><a class="header-anchor" href="#_18-switch"><span>18. Switch</span></a></h3><p>Page Effects</p><p>Code Sample</p><p><img src="https://lfs.k.topthink.com/lfs/3c580c5fc20993ffa89df1010962586f51d330fe830ebe62b095c3ca4e2dcd59.dat" alt=""></p><div class="language-text line-numbers-mode" data-highlighter="prismjs" data-ext="text"><pre><code><span class="line">const schemas: FormSchema[] = [</span>
+<span class="line">    {</span>
+<span class="line">      label: &#39;开关&#39;,</span>
+<span class="line">      field: &#39;switch&#39;,</span>
+<span class="line">      component: &#39;Switch&#39;,</span>
+<span class="line">      componentProps: {</span>
+<span class="line">        //开关大小，可选值：default small</span>
+<span class="line">        size:&#39;default&#39;,</span>
+<span class="line">        //非选中时的内容</span>
+<span class="line">        unCheckedChildren:&#39;开启&#39;,</span>
+<span class="line">        //非选中时的值</span>
+<span class="line">        unCheckedValue:&#39;0&#39;,</span>
+<span class="line">        //选中时的内容</span>
+<span class="line">        checkedChildren:&#39;关闭&#39;,</span>
+<span class="line">        //选中时的值</span>
+<span class="line">        checkedValue:&#39;1&#39;,</span>
+<span class="line">        //是否禁用</span>
+<span class="line">        disabled: false</span>
+<span class="line">      },</span>
+<span class="line">    },</span>
+<span class="line">]</span>
+<span class="line"></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>copy</p><h3 id="_19-slider-sliding-input-bar" tabindex="-1"><a class="header-anchor" href="#_19-slider-sliding-input-bar"><span>19. Slider sliding input bar</span></a></h3><p>Page Effects</p><p>Code Sample</p><p><img src="https://lfs.k.topthink.com/lfs/e239eb2a1e7be515eb7a85aaa8f94181c08306b9795f8793083df57a54e6b5e8.dat" alt=""></p><div class="language-text line-numbers-mode" data-highlighter="prismjs" data-ext="text"><pre><code><span class="line">const schemas: FormSchema[] = [</span>
+<span class="line">    {</span>
+<span class="line">      label: &#39;滑动输入条&#39;,</span>
+<span class="line">      field: &#39;slider&#39;,</span>
+<span class="line">      component: &#39;Slider&#39;,</span>
+<span class="line">      componentProps: {</span>
+<span class="line">        //最小值</span>
+<span class="line">        min:-20,</span>
+<span class="line">        //最大值</span>
+<span class="line">        max:100,</span>
+<span class="line">        //是否为双滑块模式</span>
+<span class="line">        range: true,</span>
+<span class="line">        //刻度标记</span>
+<span class="line">        marks:{</span>
+<span class="line">          &#39;-20&#39;:&#39;-20°C&#39;,</span>
+<span class="line">          0: &#39;0°C&#39;,</span>
+<span class="line">          26: &#39;26°C&#39;,</span>
+<span class="line">          37: &#39;37°C&#39;,</span>
+<span class="line">          100: {</span>
+<span class="line">            style: {</span>
+<span class="line">              color: &#39;#f50&#39;,</span>
+<span class="line">            },</span>
+<span class="line">            label: &#39;100°C&#39;,</span>
+<span class="line">          },</span>
+<span class="line">        }</span>
+<span class="line">      },</span>
+<span class="line">    },</span>
+<span class="line">]</span>
+<span class="line"></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>copy</p><p><a href="https://www.antdv.com/components/slider-cn/#api" target="_blank" rel="noopener noreferrer">More Slider properties</a></p><h3 id="_20-rate" tabindex="-1"><a class="header-anchor" href="#_20-rate"><span>20. Rate</span></a></h3><p>Page Effects</p><p>Code Sample</p><p><img src="https://lfs.k.topthink.com/lfs/64dfe354408aebc05122f84b780e82d1e08d372cac0bc995eac99ad73f615d77.dat" alt=""></p><div class="language-text line-numbers-mode" data-highlighter="prismjs" data-ext="text"><pre><code><span class="line">const schemas: FormSchema[] = [</span>
+<span class="line">    {</span>
+<span class="line">      label: &#39;评分&#39;,</span>
+<span class="line">      field: &#39;rate&#39;,</span>
+<span class="line">      component: &#39;Rate&#39;,</span>
+<span class="line">      componentProps: {</span>
+<span class="line">        //是否允许半选</span>
+<span class="line">        allowHalf: true,</span>
+<span class="line">        //star 总数</span>
+<span class="line">        count: 5,</span>
+<span class="line">        //tooltip提示，有几颗星写几个</span>
+<span class="line">        tooltips:[&#39;非常差&#39;,&#39;较差&#39;,&#39;正常&#39;,&#39;很好&#39;,&#39;非很好&#39;]</span>
+<span class="line">      },</span>
+<span class="line">    },</span>
+<span class="line">]</span>
+<span class="line"></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>copy</p><p><a href="https://www.antdv.com/components/rate-cn/#api" target="_blank" rel="noopener noreferrer">RateMore properties</a></p><h3 id="_21-divider" tabindex="-1"><a class="header-anchor" href="#_21-divider"><span>21. Divider</span></a></h3><p>Page Effects</p><p>Code Sample</p><p><img src="https://lfs.k.topthink.com/lfs/8e610a87a71c565ec63c9d74b99289c9565e55ac2bd712abb462a7bd9b8c296d.dat" alt=""></p><div class="language-text line-numbers-mode" data-highlighter="prismjs" data-ext="text"><pre><code><span class="line">const schemas: FormSchema[] = [</span>
+<span class="line">    {</span>
+<span class="line">      label: &#39;分割线&#39;,</span>
+<span class="line">      field: &#39;divisionLine&#39;,</span>
+<span class="line">      component: &#39;Divider&#39;,</span>
+<span class="line">      componentProps: {</span>
+<span class="line">        //是否虚线</span>
+<span class="line">        dashed: false,</span>
+<span class="line">        //分割线标题的位置（left | right | center）</span>
+<span class="line">        orientation: &#39;center&#39;,</span>
+<span class="line">        //文字是否显示为普通正文样式</span>
+<span class="line">        plain:true,</span>
+<span class="line">        //水平还是垂直类型（horizontal | vertical）</span>
+<span class="line">        type:&#39;horizontal&#39;,</span>
+<span class="line">      },</span>
+<span class="line">    },</span>
+<span class="line">]</span>
+<span class="line"></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>copy</p><h2 id="sync-packaged-controls" tabindex="-1"><a class="header-anchor" href="#sync-packaged-controls"><span>SYNC packaged controls</span></a></h2><h3 id="_1-jdictselecttag-dictionary" tabindex="-1"><a class="header-anchor" href="#_1-jdictselecttag-dictionary"><span>1. JDictSelectTag dictionary</span></a></h3><p>Page Effects</p><p>Code Sample</p><p><img src="https://lfs.k.topthink.com/lfs/4ed14f012819d066df27df4e617237f6c70eb9f16e0610e8e093aee7bd551424.dat" alt=""></p><div class="language-text line-numbers-mode" data-highlighter="prismjs" data-ext="text"><pre><code><span class="line">const schemas: FormSchema[] = [</span>
+<span class="line">  {</span>
+<span class="line">    label: &#39;字典标签&#39;,</span>
+<span class="line">    field: &#39;dictTags&#39;,</span>
+<span class="line">    component: &#39;JDictSelectTag&#39;,</span>
+<span class="line">    componentProps: {</span>
+<span class="line">      //字典code配置，比如通过性别字典编码：sex，也可以使用demo,name,id 表名,名称,值的方式</span>
+<span class="line">      dictCode:&#39;sex&#39;,</span>
+<span class="line">      //支持radio(单选按钮)、radioButton(单选按钮 btn风格)、select(下拉框)</span>
+<span class="line">      type:&#39;radioButton&#39;</span>
+<span class="line">    },</span>
+<span class="line">  },</span>
+<span class="line">]</span>
+<span class="line"></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>copy</p><p><a href="https://help.jeecg.com/component/JDictSelectTag.html#%E7%BB%84%E4%BB%B6%E5%8F%82%E6%95%B0" target="_blank" rel="noopener noreferrer">JDictSelectTag More properties</a></p><h3 id="_2-jselectuser-user-selection" tabindex="-1"><a class="header-anchor" href="#_2-jselectuser-user-selection"><span>2. JSelectUser user selection</span></a></h3><p>Page Effects</p><p>Code Sample</p><p><img src="https://lfs.k.topthink.com/lfs/a49f916bf1d8c76e1ede0aabc13da32ec5c70c7fd2088e662a709a62d2fb9e0e.dat" alt=""></p><div class="language-text line-numbers-mode" data-highlighter="prismjs" data-ext="text"><pre><code><span class="line">const schemas: FormSchema[] = [</span>
+<span class="line">  {</span>
+<span class="line">    label: &#39;用户选择&#39;,</span>
+<span class="line">    field: &#39;user&#39;,</span>
+<span class="line">    component: &#39;JSelectUser&#39;,</span>
+<span class="line">    componentProps: {</span>
+<span class="line">      //取值字段配置,一般为主键字段</span>
+<span class="line">      rowKey: &#39;username&#39;,</span>
+<span class="line">      //显示字段配置</span>
+<span class="line">      labelKey: &#39;realname&#39;,</span>
+<span class="line">      //是否显示选择按钮</span>
+<span class="line">      showButton: false,</span>
+<span class="line">      //用户标题</span>
+<span class="line">      modalTitle: &#39;用户&#39;,</span>
+<span class="line">    },</span>
+<span class="line">  },</span>
+<span class="line">]</span>
+<span class="line"></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>copy</p><p><a href="https://help.jeecg.com/component/JSelectUser.html#%E5%8F%82%E6%95%B0%E5%AE%9A%E4%B9%89" target="_blank" rel="noopener noreferrer">JSelectUser More Properties</a></p><h3 id="_3-userselect" tabindex="-1"><a class="header-anchor" href="#_3-userselect"><span>3. UserSelect</span></a></h3><p>Page Effects</p><p>Code Sample</p><p><img src="https://lfs.k.topthink.com/lfs/ef2e0c411398f3ec31023e150fd105f0a0c7e76cb5518f5d472c41ef189f43fd.dat" alt=""></p><div class="language-text line-numbers-mode" data-highlighter="prismjs" data-ext="text"><pre><code><span class="line">const schemas: FormSchema[] = [</span>
+<span class="line">  {</span>
+<span class="line">    label: &#39;用户选择组件&#39;,</span>
+<span class="line">    field: &#39;userCusSelect&#39;,</span>
+<span class="line">    component: &#39;UserSelect&#39;,</span>
+<span class="line">    componentProps: {</span>
+<span class="line">      //是否多选</span>
+<span class="line">      multi: true,</span>
+<span class="line">      //从用户表中选择一列，其值作为该控件的存储值，默认id列</span>
+<span class="line">      store: &#39;id&#39;,</span>
+<span class="line">      //是否排除我自己(当前登录用户)</span>
+<span class="line">      izExcludeMy: false,</span>
+<span class="line">      //是否禁用</span>
+<span class="line">      disabled: false,</span>
+<span class="line">    },</span>
+<span class="line">  },</span>
+<span class="line">]</span>
+<span class="line"></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>copy</p><h3 id="_4-jselectuserbydept-selects-users-based-on-departments" tabindex="-1"><a class="header-anchor" href="#_4-jselectuserbydept-selects-users-based-on-departments"><span>4. JSelectUserByDept selects users based on departments</span></a></h3><p>Page Effects</p><p>Code Sample</p><p><img src="https://lfs.k.topthink.com/lfs/9df302dd3d3d9057dde1f5c215e2f8da28ec92bfb276a2593d5c9f6c4af3e861.dat" alt=""></p><div class="language-text line-numbers-mode" data-highlighter="prismjs" data-ext="text"><pre><code><span class="line">const schemas: FormSchema[] = [</span>
+<span class="line">  {</span>
+<span class="line">    label: &#39;根据部门选择用户组件&#39;,</span>
+<span class="line">    field: &#39;userByDept&#39;,</span>
+<span class="line">    component: &#39;JSelectUserByDept&#39;,</span>
+<span class="line">    componentProps: {</span>
+<span class="line">      //是否显示选择按钮</span>
+<span class="line">      showButton: true,</span>
+<span class="line">      //选择框标题</span>
+<span class="line">      modalTitle: &#39;部门用户选择&#39;</span>
+<span class="line">    },</span>
+<span class="line">  },</span>
+<span class="line">]</span>
+<span class="line"></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>copy</p><p><a href="https://help.jeecg.com/component/JSelectUserByDept.html#%E5%8F%82%E6%95%B0%E5%AE%9A%E4%B9%89" target="_blank" rel="noopener noreferrer">JSelectUserByDept More Properties</a></p><h3 id="_5-jselectdept-selects-the-department" tabindex="-1"><a class="header-anchor" href="#_5-jselectdept-selects-the-department"><span>5. JSelectDept selects the department</span></a></h3><p>Page Effects</p><p>Code Sample</p><p><img src="https://lfs.k.topthink.com/lfs/1039c949bd1b9b603b31591191ad0944e3cc527631cf31750a2f4948b2d6fb22.dat" alt=""></p><div class="language-text line-numbers-mode" data-highlighter="prismjs" data-ext="text"><pre><code><span class="line">const schemas: FormSchema[] = [</span>
+<span class="line">  {</span>
+<span class="line">    label: &#39;部门选择&#39;,</span>
+<span class="line">    field: &#39;dept&#39;,</span>
+<span class="line">    component: &#39;JSelectDept&#39;,</span>
+<span class="line">    componentProps: {</span>
+<span class="line">      //是否开启异步加载</span>
+<span class="line">      sync: false,</span>
+<span class="line">      //是否显示复选框</span>
+<span class="line">      checkable: true,</span>
+<span class="line">      //是否显示选择按钮</span>
+<span class="line">      showButton: false,</span>
+<span class="line">      //父子节点选中状态不再关联</span>
+<span class="line">      checkStrictly: true,</span>
+<span class="line">      //选择框标题</span>
+<span class="line">      modalTitle: &#39;部门选择&#39;,</span>
+<span class="line">    },</span>
+<span class="line">  },</span>
+<span class="line">]</span>
+<span class="line"></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>copy</p><p><a href="https://help.jeecg.com/component/JSelectDept.html#%E5%8F%82%E6%95%B0%E5%AE%9A%E4%B9%89" target="_blank" rel="noopener noreferrer">JSelectDept More Properties</a></p><h3 id="_6-jselectrole-role-selection" tabindex="-1"><a class="header-anchor" href="#_6-jselectrole-role-selection"><span>6. JSelectRole role selection</span></a></h3><p>Page Effects</p><p>Code Sample</p><p><img src="https://lfs.k.topthink.com/lfs/a6f229c444d756070b02763040e1f276bab6da59db76636fa46b6dd11e1dd528.dat" alt=""></p><div class="language-text line-numbers-mode" data-highlighter="prismjs" data-ext="text"><pre><code><span class="line">const schemas: FormSchema[] = [</span>
+<span class="line">  {</span>
+<span class="line">    label: &#39;角色选择&#39;,</span>
+<span class="line">    field: &#39;role&#39;,</span>
+<span class="line">    component: &#39;JSelectRole&#39;,</span>
+<span class="line">    componentProps: {</span>
+<span class="line">      //请求参数 如params:{&quot;code&quot;:&quot;001&quot;}</span>
+<span class="line">      params: {},</span>
+<span class="line">      //是否单选,默认false</span>
+<span class="line">      isRadioSelection: true,</span>
+<span class="line">      //角色标题</span>
+<span class="line">      modalTitle: &#39;角色&#39;,</span>
+<span class="line">    },</span>
+<span class="line">  },</span>
+<span class="line">]</span>
+<span class="line"></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>copy</p><p><a href="https://help.jeecg.com/component/JSelectRole.html#%E5%8F%82%E6%95%B0%E5%AE%9A%E4%B9%89" target="_blank" rel="noopener noreferrer">JSelectRole More Properties</a></p><h3 id="_7-roleselect" tabindex="-1"><a class="header-anchor" href="#_7-roleselect"><span>7. RoleSelect</span></a></h3><p>Page Effects</p><p>Code Sample</p><blockquote><p>Click the text box to pop up the role selection page</p></blockquote><p><img src="https://lfs.k.topthink.com/lfs/24c1194d3c64b2ae3026dd0b3cd74b8212f28df7de4677799b0af83d42e25bcc.dat" alt=""></p><div class="language-text line-numbers-mode" data-highlighter="prismjs" data-ext="text"><pre><code><span class="line">const schemas: FormSchema[] = [</span>
+<span class="line">  {</span>
+<span class="line">    label: &#39;选择角色组件&#39;,</span>
+<span class="line">    field: &#39;roleSelect&#39;,</span>
+<span class="line">    component: &#39;RoleSelect&#39;,</span>
+<span class="line">    componentProps: {</span>
+<span class="line">      //最大选择数量</span>
+<span class="line">      maxSelectCount: 3,</span>
+<span class="line">      //是否单选</span>
+<span class="line">      isRadioSelection: false</span>
+<span class="line">    },</span>
+<span class="line">  },</span>
+<span class="line">]</span>
+<span class="line"></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>copy</p><p><a href="https://help.jeecg.com/component/JSelectRole.html#%E5%8F%82%E6%95%B0%E5%AE%9A%E4%B9%89" target="_blank" rel="noopener noreferrer">roleSelectMore properties</a></p><h3 id="_8-jselectposition-position-selection" tabindex="-1"><a class="header-anchor" href="#_8-jselectposition-position-selection"><span>8. JSelectPosition position selection</span></a></h3><p>Page Effects</p><p>Code Sample</p><p><img src="https://lfs.k.topthink.com/lfs/61aebc34ca753abfed39290add55ea66d34cfac90d9e7b1887adf84d79fab1af.dat" alt=""></p><div class="language-text line-numbers-mode" data-highlighter="prismjs" data-ext="text"><pre><code><span class="line">const schemas: FormSchema[] = [</span>
+<span class="line">  {</span>
+<span class="line">    label: &#39;岗位选择&#39;,</span>
+<span class="line">    field: &#39;post&#39;,</span>
+<span class="line">    component: &#39;JSelectPosition&#39;,</span>
+<span class="line">    componentProps: {</span>
+<span class="line">      //是否右侧显示选中列表</span>
+<span class="line">      showSelected: true,</span>
+<span class="line">      //最大选择数量</span>
+<span class="line">      maxSelectCount: 1,</span>
+<span class="line">      //岗位标题</span>
+<span class="line">      modalTitle: &#39;岗位&#39;,</span>
+<span class="line">    },</span>
+<span class="line">  },</span>
+<span class="line">]</span>
+<span class="line"></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>copy</p><p><a href="https://help.jeecg.com/component/JSelectPosition.html#%E5%8F%82%E6%95%B0%E5%AE%9A%E4%B9%89" target="_blank" rel="noopener noreferrer">JSelectPosition More Properties</a></p><h3 id="_9-jimageupload-image-upload" tabindex="-1"><a class="header-anchor" href="#_9-jimageupload-image-upload"><span>9. JImageUpload image upload</span></a></h3><p>Page Effects</p><p>Code Sample</p><p><img src="https://lfs.k.topthink.com/lfs/de7692371e851c370d3e62a854c347dcbf54b655bcec2a4d303b874179f8093f.dat" alt=""></p><div class="language-text line-numbers-mode" data-highlighter="prismjs" data-ext="text"><pre><code><span class="line">const schemas: FormSchema[] = [</span>
+<span class="line">  {</span>
+<span class="line">    label: &#39;图片上传&#39;,</span>
+<span class="line">    field: &#39;uploadImage&#39;,</span>
+<span class="line">    component: &#39;JImageUpload&#39;,</span>
+<span class="line">    componentProps: {</span>
+<span class="line">      //按钮显示文字</span>
+<span class="line">      text:&#39;图片上传&#39;,</span>
+<span class="line">      //支持两种基本样式picture和picture-card</span>
+<span class="line">      listType:&#39;picture-card&#39;,</span>
+<span class="line">      //用于控制文件上传的业务路径,默认temp</span>
+<span class="line">      bizPath:&#39;temp&#39;,</span>
+<span class="line">      //是否禁用</span>
+<span class="line">      disabled:false,</span>
+<span class="line">      //最大上传数量</span>
+<span class="line">      fileMax:1,</span>
+<span class="line">    },</span>
+<span class="line">  },</span>
+<span class="line">]</span>
+<span class="line"></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>copy</p><h3 id="_10-jupload-upload-component" tabindex="-1"><a class="header-anchor" href="#_10-jupload-upload-component"><span>10. JUpload upload component</span></a></h3><p>Page Effects</p><p>Code Sample</p><blockquote><p>Upload up to two files</p></blockquote><p><img src="https://lfs.k.topthink.com/lfs/a103f4d8b4fbcb9d994f6ba4371feaeb60de57f8f324e2767876dd2d1d88eec7.dat" alt=""></p><div class="language-text line-numbers-mode" data-highlighter="prismjs" data-ext="text"><pre><code><span class="line">const schemas: FormSchema[] = [</span>
+<span class="line">  {</span>
+<span class="line">    label: &#39;文件上传&#39;,</span>
+<span class="line">    field: &#39;uploadFile&#39;,</span>
+<span class="line">    component: &#39;JUpload&#39;,</span>
+<span class="line">    componentProps: {</span>
+<span class="line">      //是否显示选择按钮</span>
+<span class="line">      text: &#39;文件上传&#39;,</span>
+<span class="line">      //最大上传数</span>
+<span class="line">      maxCount: 2,</span>
+<span class="line">      //是否显示下载按钮</span>
+<span class="line">      download: true,</span>
+<span class="line">    },</span>
+<span class="line">  },</span>
+<span class="line">]</span>
+<span class="line"></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>copy</p><p><a href="https://help.jeecg.com/component/JUpload.html#%E7%BB%84%E4%BB%B6%E5%8F%82%E6%95%B0" target="_blank" rel="noopener noreferrer">JUpload More Properties</a></p><h3 id="_11-radiobuttongroup" tabindex="-1"><a class="header-anchor" href="#_11-radiobuttongroup"><span>11. RadioButtonGroup</span></a></h3><p>Page Effects</p><p>Code Sample</p><p><img src="https://lfs.k.topthink.com/lfs/d6f5bf91fb41de506d4644b337303f2ea6a6c876351dbd1b145cb5f60b8cdf1d.dat" alt=""></p><div class="language-text line-numbers-mode" data-highlighter="prismjs" data-ext="text"><pre><code><span class="line">const schemas: FormSchema[] = [</span>
+<span class="line">    {</span>
+<span class="line">      label: &#39;RadioButtonGroup组件&#39;,</span>
+<span class="line">      field: &#39;status&#39;,</span>
+<span class="line">      component: &#39;RadioButtonGroup&#39;,</span>
+<span class="line">      componentProps: {</span>
+<span class="line">        options: [</span>
+<span class="line">          { label: &#39;有效&#39;, value: 1 },</span>
+<span class="line">          { label: &#39;无效&#39;, value: 0 },</span>
+<span class="line">        ],</span>
+<span class="line">      },</span>
+<span class="line">    }</span>
+<span class="line">]</span>
+<span class="line"></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>copy</p><h3 id="_12-apiradiogroup-remote-api-radio-box-group" tabindex="-1"><a class="header-anchor" href="#_12-apiradiogroup-remote-api-radio-box-group"><span>12. ApiRadioGroup Remote Api Radio Box Group</span></a></h3><p>Page Effects</p><p>Code Sample</p><p><img src="https://lfs.k.topthink.com/lfs/644cb72aa670318a402f6555316ca8bbd5b8149c3e2ef6f2c790810e1ad93151.dat" alt=""></p><div class="language-text line-numbers-mode" data-highlighter="prismjs" data-ext="text"><pre><code><span class="line">const schemas: FormSchema[] = [</span>
+<span class="line">  {</span>
+<span class="line">    label: &#39;远程Api单选框组&#39;,</span>
+<span class="line">    field: &#39;apiRadioGroup&#39;,</span>
+<span class="line">    component: &#39;ApiRadioGroup&#39;,</span>
+<span class="line">    componentProps:{</span>
+<span class="line">      //请求接口返回结果{ result:{ list: [ name: &#39;选项0&#39;,id: &#39;1&#39; ] }}</span>
+<span class="line">      api:()=&gt; defHttp.get({ url: &#39;/mock/select/getDemoOptions&#39; }),</span>
+<span class="line">      //请求参数</span>
+<span class="line">      params:{},</span>
+<span class="line">      //是否为按钮风格类型，默认false</span>
+<span class="line">      isBtn: false,</span>
+<span class="line">      //返回集合名称</span>
+<span class="line">      resultField: &#39;list&#39;,</span>
+<span class="line">      //标题字段名称</span>
+<span class="line">      labelField: &#39;name&#39;,</span>
+<span class="line">      //值字段名称</span>
+<span class="line">      valueField: &#39;id&#39;,</span>
+<span class="line">    }</span>
+<span class="line">  },</span>
+<span class="line">]</span>
+<span class="line"></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>copy</p><h3 id="_13-jselectmultiple-drop-down-multiple-selection" tabindex="-1"><a class="header-anchor" href="#_13-jselectmultiple-drop-down-multiple-selection"><span>13. JSelectMultiple drop-down multiple selection</span></a></h3><p>Page Effects</p><p>Code Sample</p><p><img src="https://lfs.k.topthink.com/lfs/accc461019128165dedaac9a7bd93e161f0067a7c86be373946a16c7594acb9a.dat" alt=""></p><div class="language-text line-numbers-mode" data-highlighter="prismjs" data-ext="text"><pre><code><span class="line">const schemas: FormSchema[] = [</span>
+<span class="line">  {</span>
+<span class="line">    label: &#39;下拉多选&#39;,</span>
+<span class="line">    field: &#39;selectMultiple&#39;,</span>
+<span class="line">    component: &#39;JSelectMultiple&#39;,</span>
+<span class="line">    componentProps: {</span>
+<span class="line">      //字典code配置，比如通过性别字典编码：sex，也可以使用demo,name,id 表名,名称,值的方式</span>
+<span class="line">      dictCode:&#39;company_rank&#39;,</span>
+<span class="line">      //是否只读</span>
+<span class="line">      readOnly:false,</span>
+<span class="line">    },</span>
+<span class="line">  },</span>
+<span class="line">]</span>
+<span class="line"></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>copy</p><p><a href="https://help.jeecg.com/component/JSelectMultiple.html#%E7%BB%84%E4%BB%B6%E5%8F%82%E6%95%B0" target="_blank" rel="noopener noreferrer">JSelectMultiple More Properties</a></p><h3 id="_14-jcheckbox-multiple-selection" tabindex="-1"><a class="header-anchor" href="#_14-jcheckbox-multiple-selection"><span>14. JCheckbox Multiple Selection</span></a></h3><p>Page Effects</p><p>Code Sample</p><p><img src="https://lfs.k.topthink.com/lfs/88fcf5a0a30090d70d1e7ccf3a094fb6a7e1ab65ce387461b86793b1a4e92a03.dat" alt=""></p><div class="language-text line-numbers-mode" data-highlighter="prismjs" data-ext="text"><pre><code><span class="line">const schemas: FormSchema[] = [</span>
+<span class="line">    {</span>
+<span class="line">      label: &#39;多选&#39;,</span>
+<span class="line">      field: &#39;multipleChoice&#39;,</span>
+<span class="line">      component: &#39;JCheckbox&#39;,</span>
+<span class="line">      componentProps:{</span>
+<span class="line">        //字典code配置，比如通过职位字典编码：company_rank，也可以使用demo,name,id 表名,名称,值的方式</span>
+<span class="line">        dictCode:&#39;company_rank&#39;,</span>
+<span class="line">        //是否禁用</span>
+<span class="line">        disabled: false,</span>
+<span class="line">        //没有字典code可以使用option来定义</span>
+<span class="line">        // options:[</span>
+<span class="line">        //   {label:&#39;CE0&#39;,value:&#39;1&#39;}</span>
+<span class="line">        // ]</span>
+<span class="line">      },</span>
+<span class="line">]</span>
+<span class="line"></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>copy</p><h3 id="_15-apiselectapi-drop-down-box" tabindex="-1"><a class="header-anchor" href="#_15-apiselectapi-drop-down-box"><span>15. ApiSelectApi drop-down box</span></a></h3><p>Page Effects</p><p>Code Sample</p><p><img src="https://lfs.k.topthink.com/lfs/75ccf093cdbf4573e829dee5bf65ab1b547fde10996ee3395457ad7fc29695a6.dat" alt=""></p><div class="language-text line-numbers-mode" data-highlighter="prismjs" data-ext="text"><pre><code><span class="line">const schemas: FormSchema[] = [</span>
+<span class="line">    {</span>
+<span class="line">      label: &#39;Api下拉选择,</span>
+<span class="line">      field: &#39;apiSelect&#39;,</span>
+<span class="line">      component: &#39;ApiSelect&#39;,</span>
+<span class="line">      componentProps: {</span>
+<span class="line">        //multiple: 多选；不填写为单选</span>
+<span class="line">        mode: &#39;multiple&#39;,</span>
+<span class="line">        //请求api,返回结果{ result: { records: [{&#39;id&#39;:&#39;1&#39;,name:&#39;scott&#39;},{&#39;id&#39;:&#39;2&#39;,name:&#39;小张&#39;}] }}</span>
+<span class="line">        api: ()=&gt; defHttp.get({ url: &#39;&#39; }),</span>
+<span class="line">        //数值转成String</span>
+<span class="line">        numberToString: false,</span>
+<span class="line">        //标题字段</span>
+<span class="line">        labelField: &#39;name&#39;,</span>
+<span class="line">        //值字段</span>
+<span class="line">        valueField: &#39;id&#39;,</span>
+<span class="line">        //请求参数</span>
+<span class="line">        params:{},</span>
+<span class="line">        //返回结果字段</span>
+<span class="line">        resultField:&#39;records&#39;</span>
+<span class="line">      },</span>
+<span class="line">    },</span>
+<span class="line">]</span>
+<span class="line"></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>copy</p><h3 id="_16-apitreeselect-remote-api-tree-drop-down-selection" tabindex="-1"><a class="header-anchor" href="#_16-apitreeselect-remote-api-tree-drop-down-selection"><span>16. ApiTreeSelect remote API tree drop-down selection</span></a></h3><p>Page Effects</p><p>Code Sample</p><p><img src="https://lfs.k.topthink.com/lfs/dd57c9450dcfa7fee208e768f1fcc55574ee8ec9ad1680571170196b88e86c1e.dat" alt=""></p><div class="language-text line-numbers-mode" data-highlighter="prismjs" data-ext="text"><pre><code><span class="line">const schemas: FormSchema[] = [</span>
+<span class="line">    {</span>
+<span class="line">      label: &#39;Api树选择&#39;,</span>
+<span class="line">      field: &#39;apiSelect&#39;,</span>
+<span class="line">      component: &#39;ApiTreeSelect&#39;,</span>
+<span class="line">      componentProps: {</span>
+<span class="line">        /* 请求api,返回结果,title：树名称，value：树的value值，children：子节点</span>
+<span class="line">         { result: { list: [{ title:&#39;选项0&#39;,value:&#39;0&#39;,key:&#39;0&#39;,</span>
+<span class="line">           children: [ {&quot;title&quot;: &quot;选项0-0&quot;,&quot;value&quot;: &quot;0-0&quot;,&quot;key&quot;: &quot;0-0&quot;},...]</span>
+<span class="line">           }, ...]</span>
+<span class="line">         }} */</span>
+<span class="line">        api: () =&gt; defHttp.get({ url: &#39;/mock/tree/getDemoOptions&#39; }),</span>
+<span class="line">        //请求参数</span>
+<span class="line">        params: {},</span>
+<span class="line">        //返回结果字段</span>
+<span class="line">        resultField: &#39;list&#39;,</span>
+<span class="line">      },</span>
+<span class="line">    },</span>
+<span class="line">]</span>
+<span class="line"></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>copy</p><h3 id="_17-jselectinput-can-input-drop-down-box" tabindex="-1"><a class="header-anchor" href="#_17-jselectinput-can-input-drop-down-box"><span>17. JSelectInput can input drop-down box</span></a></h3><p>Page Effects</p><p>Code Sample</p><p>You can enter text and select</p><p><img src="https://lfs.k.topthink.com/lfs/ab94f70bb3fc382d9604ab71dcb930605fbbee679a64fa65631dc11f3c50d8f8.dat" alt=""></p><p><img src="https://lfs.k.topthink.com/lfs/3d8956d7d42bd0f0e5f0a8cfee484cc59b5bf38b2ad272face43324c3237ba10.dat" alt=""></p><div class="language-text line-numbers-mode" data-highlighter="prismjs" data-ext="text"><pre><code><span class="line">const schemas: FormSchema[] = [</span>
+<span class="line">  {</span>
+<span class="line">    label: &#39;可输入下拉框&#39;,</span>
+<span class="line">    field: &#39;inputSelect&#39;,</span>
+<span class="line">    component: &#39;JSelectInput&#39;,</span>
+<span class="line">    componentProps: {</span>
+<span class="line">      options: [</span>
+<span class="line">        { label: &#39;Default&#39;, value: &#39;default&#39; },</span>
+<span class="line">        { label: &#39;IFrame&#39;, value: &#39;iframe&#39; },</span>
+<span class="line">      ],</span>
+<span class="line">      //是否为搜索模式</span>
+<span class="line">      showSearch: true,</span>
+<span class="line">      //是否禁用</span>
+<span class="line">      disabled: false</span>
+<span class="line">    },</span>
+<span class="line">  },</span>
+<span class="line">]</span>
+<span class="line"></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>copy</p><p><a href="https://www.antdv.com/components/select-cn/#api" target="_blank" rel="noopener noreferrer">For more properties, see Select</a></p><h3 id="_18-jsearchselect-dictionary-table-search" tabindex="-1"><a class="header-anchor" href="#_18-jsearchselect-dictionary-table-search"><span>18. JSearchSelect dictionary table search</span></a></h3><p>Page Effects</p><p>Code Sample</p><blockquote><p>Search after entering text in the input box</p></blockquote><p><img src="https://lfs.k.topthink.com/lfs/32fa7aa9b600b279dace4e4be74cedf3ef640a35b5d39cb099427f5befa0bf5e.dat" alt=""></p><div class="language-text line-numbers-mode" data-highlighter="prismjs" data-ext="text"><pre><code><span class="line">const schemas: FormSchema[] = [</span>
+<span class="line">  {</span>
+<span class="line">    label: &#39;字典表搜索&#39;,</span>
+<span class="line">    field: &#39;dictSearchSelect&#39;,</span>
+<span class="line">    component: &#39;JSearchSelect&#39;,</span>
+<span class="line">    componentProps: {</span>
+<span class="line">      //字典code配置，通过 demo,name,id 表名,名称,值的方式</span>
+<span class="line">      dict: &#39;demo,name,id&#39;,</span>
+<span class="line">      //是否异步加载</span>
+<span class="line">      async: true,</span>
+<span class="line">      //当async设置为true时有效，表示异步查询时，每次获取数据的数量，默认10</span>
+<span class="line">      pageSize:3</span>
+<span class="line">    },</span>
+<span class="line">  },</span>
+<span class="line">]</span>
+<span class="line"></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>copy</p><p><a href="https://help.jeecg.com/component/JSearchSelectTag.html#%E5%8F%82%E6%95%B0%E5%AE%9A%E4%B9%89" target="_blank" rel="noopener noreferrer">JSearchSelect More Properties</a></p><h3 id="_19-jtreeselect-drop-down-tree-selection" tabindex="-1"><a class="header-anchor" href="#_19-jtreeselect-drop-down-tree-selection"><span>19. JTreeSelect drop-down tree selection</span></a></h3><p>Page Effects</p><p>Code Sample</p><p><img src="https://lfs.k.topthink.com/lfs/af3ce242f8ec97869e6f2f78468aecd791cb5ec2c8463f837733b4281af2f25a.dat" alt=""></p><div class="language-text line-numbers-mode" data-highlighter="prismjs" data-ext="text"><pre><code><span class="line">const schemas: FormSchema[] = [</span>
+<span class="line">  {</span>
+<span class="line">    label: &#39;下拉树选择&#39;,</span>
+<span class="line">    field: &#39;treeCusSelect&#39;,</span>
+<span class="line">    component: &#39;JTreeSelect&#39;,</span>
+<span class="line">    componentProps: {</span>
+<span class="line">      //字典code配置，比如通过性别字典编码：sex，也可以使用sys_permission,name,id 表名,名称,值的方式</span>
+<span class="line">      dict: &#39;sys_permission,name,id&#39;,</span>
+<span class="line">      //父级id字段</span>
+<span class="line">      pidField: &#39;parent_id&#39;,</span>
+<span class="line">    },</span>
+<span class="line">  },</span>
+<span class="line">]</span>
+<span class="line"></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>copy</p><p><a href="https://help.jeecg.com/component/JTreeSelect.html#%E7%BB%84%E4%BB%B6%E5%8F%82%E6%95%B0" target="_blank" rel="noopener noreferrer">JTreeSelect More Properties</a></p><h3 id="_20-jcategoryselect-classification-dictionary-tree" tabindex="-1"><a class="header-anchor" href="#_20-jcategoryselect-classification-dictionary-tree"><span>20. JCategorySelect classification dictionary tree</span></a></h3><p>Page Effects</p><p>Code Sample</p><p><img src="https://lfs.k.topthink.com/lfs/13b3e45e5150806ccc37e429ce5a36c6829573ac76c10d4796f4f272638f80ec.dat" alt=""></p><div class="language-text line-numbers-mode" data-highlighter="prismjs" data-ext="text"><pre><code><span class="line">const schemas: FormSchema[] = [</span>
+<span class="line">  {</span>
+<span class="line">    label: &#39;分类字典树&#39;,</span>
+<span class="line">    field: &#39;dictTree&#39;,</span>
+<span class="line">    component: &#39;JCategorySelect&#39;,</span>
+<span class="line">    componentProps: {</span>
+<span class="line">      //占位内容</span>
+<span class="line">      placeholder:&#39;请选择分类字典树&#39;,</span>
+<span class="line">      //查询条件，如“{&#39;name&#39;:&#39;笔记本&#39;}”</span>
+<span class="line">      condition:&quot;&quot;,</span>
+<span class="line">      //是否多选</span>
+<span class="line">      multiple: false,</span>
+<span class="line">      //起始选择code，见配置的分类字典的类型编码</span>
+<span class="line">      pcode: &#39;A04&#39;,</span>
+<span class="line">      //父级id</span>
+<span class="line">      pid:&#39;&#39;,</span>
+<span class="line">      //返回key</span>
+<span class="line">      back:&#39;id&#39;,</span>
+<span class="line">    },</span>
+<span class="line">  },</span>
+<span class="line">]</span>
+<span class="line"></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>copy</p><h3 id="_21-jtreedict-classification-dictionary-tree-component" tabindex="-1"><a class="header-anchor" href="#_21-jtreedict-classification-dictionary-tree-component"><span>21. JTreeDict classification dictionary tree component</span></a></h3><p>Page Effects</p><p>Code Sample</p><p><img src="https://lfs.k.topthink.com/lfs/c60b2c0fdb933f59fa36e296e293220af35de4c02d083774120f786c0ec30f2c.dat" alt=""></p><div class="language-text line-numbers-mode" data-highlighter="prismjs" data-ext="text"><pre><code><span class="line">const schemas: FormSchema[] = [</span>
+<span class="line">  {</span>
+<span class="line">    label: &#39;分类字典树&#39;,</span>
+<span class="line">    field: &#39;treeDict&#39;,</span>
+<span class="line">    component: &#39;JTreeDict&#39;,</span>
+<span class="line">    componentProps:{</span>
+<span class="line">      //指定当前组件需要存储的字段 可选: id(主键)和code(编码)</span>
+<span class="line">      field:&#39;id&#39;,</span>
+<span class="line">      //是否为异步</span>
+<span class="line">      async: true,</span>
+<span class="line">      //是否禁用</span>
+<span class="line">      disabled: false,</span>
+<span class="line">      //指定一个节点的编码,加载该节点下的所有字典数据,若不指定，默认加载所有数据</span>
+<span class="line">      parentCode:&#39;A04&#39;</span>
+<span class="line">    },</span>
+<span class="line">  },</span>
+<span class="line">]</span>
+<span class="line"></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>copy</p><h3 id="_22-jpopup-pop-up-selection" tabindex="-1"><a class="header-anchor" href="#_22-jpopup-pop-up-selection"><span>22. JPopup pop-up selection</span></a></h3><p>Page Effects</p><p>Code Sample</p><p><img src="https://lfs.k.topthink.com/lfs/2f8f0fa8e4dc3fba75a5141cb664e8fb2ee126e4acf25ec9a241d7834dd832f5.dat" alt=""></p><div class="language-text line-numbers-mode" data-highlighter="prismjs" data-ext="text"><pre><code><span class="line">const schemas: FormSchema[] = [</span>
+<span class="line">  {</span>
+<span class="line">    label: &#39;popup&#39;,</span>
+<span class="line">    field: &#39;popup&#39;,</span>
+<span class="line">    component: &#39;JPopup&#39;,</span>
+<span class="line">    componentProps: ({ formActionType }) =&gt; {</span>
+<span class="line">      const {setFieldsValue} = formActionType;</span>
+<span class="line">      return{</span>
+<span class="line">        setFieldsValue:setFieldsValue,</span>
+<span class="line">        //online报表编码</span>
+<span class="line">        code:&quot;demo&quot;,</span>
+<span class="line">        //是否为多选</span>
+<span class="line">        multi:false,</span>
+<span class="line">        //字段配置</span>
+<span class="line">        fieldConfig: [</span>
+<span class="line">          { source: &#39;name&#39;, target: &#39;popup&#39; },</span>
+<span class="line">        ],</span>
+<span class="line">      }</span>
+<span class="line">    },</span>
+<span class="line">  },</span>
+<span class="line">]</span>
+<span class="line"></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>copy</p><p><a href="https://help.jeecg.com/component/JPopup.html#%E7%BB%84%E4%BB%B6%E5%8F%82%E6%95%B0" target="_blank" rel="noopener noreferrer">More properties of popup</a></p><h3 id="_23-jswitch" tabindex="-1"><a class="header-anchor" href="#_23-jswitch"><span>23. JSwitch</span></a></h3><p>Page Effects</p><p>Code Sample</p><p><img src="https://lfs.k.topthink.com/lfs/4cb226133b9bdd0fe4f4149cf91e60056dcf16443dee8ec6805c0e0250e5a269.dat" alt=""><br><img src="https://lfs.k.topthink.com/lfs/96da213f2e74c8f0575602749f0a0a631bb4142f08fe275d3486d4fabc410a7f.dat" alt=""></p><div class="language-text line-numbers-mode" data-highlighter="prismjs" data-ext="text"><pre><code><span class="line">const schemas: FormSchema[] = [</span>
+<span class="line">  {</span>
+<span class="line">    label: &#39;开关自定义&#39;,</span>
+<span class="line">    field: &#39;switch&#39;,</span>
+<span class="line">    component: &#39;JSwitch&#39;,</span>
+<span class="line">    componentProps:{</span>
+<span class="line">      //取值 options</span>
+<span class="line">      options:[&#39;Y&#39;,&#39;N&#39;],</span>
+<span class="line">      //文本option</span>
+<span class="line">      labelOptions:[&#39;是&#39;, &#39;否&#39;],</span>
+<span class="line">      //是否启用下拉</span>
+<span class="line">      query: true,</span>
+<span class="line">      //是否禁用</span>
+<span class="line">      disabled: false,</span>
+<span class="line">    },</span>
+<span class="line">  },</span>
+<span class="line">]</span>
+<span class="line"></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>copy</p><h3 id="_24-inputsearch-text-search-box" tabindex="-1"><a class="header-anchor" href="#_24-inputsearch-text-search-box"><span>24. InputSearch text search box</span></a></h3><p>Page Effects</p><p>Code Sample</p><p><img src="https://lfs.k.topthink.com/lfs/1ab72a2f7c806984c620affeb117a9435bcc0281b2fc22f0ae84e6da25ed66fa.dat" alt=""></p><div class="language-text line-numbers-mode" data-highlighter="prismjs" data-ext="text"><pre><code><span class="line">export const schemas: FormSchema[] = [</span>
+<span class="line">    {</span>
+<span class="line">      label: &#39;搜索框&#39;,</span>
+<span class="line">      field: &#39;searchBox&#39;,</span>
+<span class="line">      component:&#39;InputSearch&#39;,</span>
+<span class="line">      componentProps:{</span>
+<span class="line">        //搜索之后触发事件</span>
+<span class="line">        onSearch:(value:any)=&gt;{</span>
+<span class="line">          //搜索之后的逻辑处理</span>
+<span class="line">          console.log(value)</span>
+<span class="line">        }</span>
+<span class="line">      }</span>
+<span class="line">    },</span>
+<span class="line">]</span>
+<span class="line"></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>copy</p><p>Except for the event being triggered after the search, the rest is the same as <a href="https://www.antdv.com/components/input-cn/#api" target="_blank" rel="noopener noreferrer">the Input property</a></p><h3 id="_25-jeditor-rich-text" tabindex="-1"><a class="header-anchor" href="#_25-jeditor-rich-text"><span>25. JEditor Rich Text</span></a></h3><p>Page Effects</p><p>Code Sample</p><p><img src="https://lfs.k.topthink.com/lfs/2dad1b8761fd6785a8c0ea91b7c10f1cad8ec2c4377b7e39cf5e83224c25c275.dat" alt=""></p><div class="language-text line-numbers-mode" data-highlighter="prismjs" data-ext="text"><pre><code><span class="line">const schemas: FormSchema[] = [</span>
+<span class="line">  {</span>
+<span class="line">    label: &#39;富文本&#39;,</span>
+<span class="line">    field: &#39;editor&#39;,</span>
+<span class="line">    component: &#39;JEditor&#39;,</span>
+<span class="line">    componentProps: {</span>
+<span class="line">      //是否禁用</span>
+<span class="line">      disabled: false</span>
+<span class="line">    },</span>
+<span class="line">  },</span>
+<span class="line">]</span>
+<span class="line"></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>copy</p><h3 id="_26-jmarkdowneditor" tabindex="-1"><a class="header-anchor" href="#_26-jmarkdowneditor"><span>26. JMarkdownEditor</span></a></h3><p>Page Effects</p><p>Code Sample</p><p><img src="https://lfs.k.topthink.com/lfs/79ca1f8ca917bcc0c35484767b2f682f4055cfd177832d8c566c33bf27de89a6.dat" alt=""></p><div class="language-text line-numbers-mode" data-highlighter="prismjs" data-ext="text"><pre><code><span class="line">const schemas: FormSchema[] = [</span>
+<span class="line">  {</span>
+<span class="line">    label: &#39;markdown&#39;,</span>
+<span class="line">    field: &#39;markdown&#39;,</span>
+<span class="line">    component: &#39;JMarkdownEditor&#39;,</span>
+<span class="line">    componentProps: {</span>
+<span class="line">      //是否禁用</span>
+<span class="line">      disabled: false</span>
+<span class="line">    },</span>
+<span class="line">  },</span>
+<span class="line">]</span>
+<span class="line"></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>copy</p><h3 id="_27-jarealinkage-provincial-municipal-and-county-linkage" tabindex="-1"><a class="header-anchor" href="#_27-jarealinkage-provincial-municipal-and-county-linkage"><span>27. JAreaLinkage provincial, municipal and county linkage</span></a></h3><p>Page Effects</p><p>Code Sample</p><p><img src="https://lfs.k.topthink.com/lfs/051aa24fa0b7441874c9c9e855bd1d715590c93956a549554785b46d4e57c174.dat" alt=""></p><div class="language-text line-numbers-mode" data-highlighter="prismjs" data-ext="text"><pre><code><span class="line">const schemas: FormSchema[] = [</span>
+<span class="line">  {</span>
+<span class="line">    label: &#39;省市县联动&#39;,</span>
+<span class="line">    field: &#39;pwd&#39;,</span>
+<span class="line">    component: &#39;JAreaLinkage&#39;,</span>
+<span class="line">    componentProps: {</span>
+<span class="line">      //是否显示区县，默认true,否则只显示省</span>
+<span class="line">      showArea: true,</span>
+<span class="line">      //是否显示全部文本，默认false</span>
+<span class="line">      showAll: true,</span>
+<span class="line">    },</span>
+<span class="line">  },</span>
+<span class="line">]</span>
+<span class="line"></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>copy</p><h3 id="_28-jareaselect-provincial-municipal-and-county-linkage" tabindex="-1"><a class="header-anchor" href="#_28-jareaselect-provincial-municipal-and-county-linkage"><span>28. JAreaSelect provincial, municipal and county linkage</span></a></h3><p>Page Effects</p><p>Code Sample</p><p><img src="https://lfs.k.topthink.com/lfs/5c0ac407f6bd5a46e83f84cd2ade7f3f102ab0b7f96131b0c53a6c8bf6144c8c.dat" alt=""></p><div class="language-text line-numbers-mode" data-highlighter="prismjs" data-ext="text"><pre><code><span class="line">const schemas: FormSchema[] = [</span>
+<span class="line">  {</span>
+<span class="line">    label: &#39;省市县级联动&#39;,</span>
+<span class="line">    field: &#39;provinceArea&#39;,</span>
+<span class="line">    component: &#39;JAreaSelect&#39;,</span>
+<span class="line">    componentProps: {</span>
+<span class="line">      //级别 1 只显示省 2 省市 3 省市区</span>
+<span class="line">      level:3</span>
+<span class="line">    },</span>
+<span class="line">  },</span>
+<span class="line">]</span>
+<span class="line"></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>copy</p><h3 id="_29-jinputpop-multi-line-input-window" tabindex="-1"><a class="header-anchor" href="#_29-jinputpop-multi-line-input-window"><span>29. JInputPop multi-line input window</span></a></h3><p>Page Effects</p><p>Code Sample</p><p><img src="https://lfs.k.topthink.com/lfs/283fb3ca82bab1e90558679160d4e7ff83cdb3366074835790b9926a3045237d.dat" alt=""></p><div class="language-text line-numbers-mode" data-highlighter="prismjs" data-ext="text"><pre><code><span class="line">const schemas: FormSchema[] = [</span>
+<span class="line">  {</span>
+<span class="line">    label: &#39;分类字典树&#39;,</span>
+<span class="line">    field: &#39;treeDict&#39;,</span>
+<span class="line">    component: &#39;JTreeDict&#39;,</span>
+<span class="line">    componentProps:{</span>
+<span class="line">      //指定当前组件需要存储的字段 可选: id(主键)和code(编码)</span>
+<span class="line">      field:&#39;id&#39;,</span>
+<span class="line">      //是否为异步</span>
+<span class="line">      async: true,</span>
+<span class="line">      //是否禁用</span>
+<span class="line">      disabled: false,</span>
+<span class="line">      //指定一个节点的编码,加载该节点下的所有字典数据,若不指定，默认加载所有数据</span>
+<span class="line">      parentCode:&#39;A04&#39;</span>
+<span class="line">    },</span>
+<span class="line">  },</span>
+<span class="line">]</span>
+<span class="line"></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>copy</p><p><a href="https://help.jeecg.com/component/JInputPopup.html#%E7%BB%84%E4%BB%B6%E5%8F%82%E6%95%B0" target="_blank" rel="noopener noreferrer">JInputPop More Properties</a></p><h3 id="_30-strengthmeter-to-check-password-strength" tabindex="-1"><a class="header-anchor" href="#_30-strengthmeter-to-check-password-strength"><span>30. StrengthMeter to check password strength</span></a></h3><p>Page Effects</p><p>Code Sample</p><p><img src="https://lfs.k.topthink.com/lfs/f67c700f0bbdb3f92ec6b8448ffd09d1b86a6a5b88cebbb92be578a1a0752c56.dat" alt=""></p><div class="language-text line-numbers-mode" data-highlighter="prismjs" data-ext="text"><pre><code><span class="line">const schemas: FormSchema[] = [</span>
+<span class="line">    {</span>
+<span class="line">      label: &#39;校验密码强度&#39;,</span>
+<span class="line">      field: &#39;pwd&#39;,</span>
+<span class="line">      component: &#39;StrengthMeter&#39;,</span>
+<span class="line">      componentProps: {</span>
+<span class="line">        //是否显示密码文本框</span>
+<span class="line">        showInput: true,</span>
+<span class="line">        //是否禁用</span>
+<span class="line">        disabled: false,</span>
+<span class="line">      },</span>
+<span class="line">    },</span>
+<span class="line">]</span>
+<span class="line"></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>copy</p><h3 id="_31-jcodeeditor" tabindex="-1"><a class="header-anchor" href="#_31-jcodeeditor"><span>31. JCodeEditor</span></a></h3><p>Page Effects</p><p>Code Sample</p><p><img src="https://lfs.k.topthink.com/lfs/598d93074a5a1e14d0b01a524b050e7d534b8e8acc5b1b134500eaa4e78c35cc.dat" alt=""></p><div class="language-text line-numbers-mode" data-highlighter="prismjs" data-ext="text"><pre><code><span class="line">const schemas: FormSchema[] = [</span>
+<span class="line">  {</span>
+<span class="line">    label: &#39;代码编辑器组件&#39;,</span>
+<span class="line">    field: &#39;jCode&#39;,</span>
+<span class="line">    component: &#39;JCodeEditor&#39;,</span>
+<span class="line">    componentProps: {</span>
+<span class="line">      //高度，默认auto</span>
+<span class="line">      height:&#39;150px&#39;,</span>
+<span class="line">      //是否禁用</span>
+<span class="line">      disabled:false,</span>
+<span class="line">      //是否全屏</span>
+<span class="line">      fullScreen:false,</span>
+<span class="line">      //全屏之后的坐标</span>
+<span class="line">      zIndex: 999,</span>
+<span class="line">      //代码主题，目前只支持idea,可在组件自行扩展</span>
+<span class="line">      theme:&#39;idea&#39;,</span>
+<span class="line">      //代码提示</span>
+<span class="line">      keywords:[&#39;console&#39;],</span>
+<span class="line">      //语言如（javascript,vue,markdown）可在组件自行扩展</span>
+<span class="line">      language:&#39;javascript&#39;</span>
+<span class="line">    },</span>
+<span class="line">  },</span>
+<span class="line">]</span>
+<span class="line"></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>copy</p><h3 id="_32-jeasycron-timing-expression-selection" tabindex="-1"><a class="header-anchor" href="#_32-jeasycron-timing-expression-selection"><span>32. JEasyCron timing expression selection</span></a></h3><p>Page Effects</p><p>Code Sample</p><p><img src="https://lfs.k.topthink.com/lfs/e965d9a0168d08403e028fb2abe5919e8847d4efadc690dc85077192ae0e0459.dat" alt=""></p><div class="language-text line-numbers-mode" data-highlighter="prismjs" data-ext="text"><pre><code><span class="line">const schemas: FormSchema[] = [</span>
+<span class="line">  {</span>
+<span class="line">    label: &#39;定时表达式选择&#39;,</span>
+<span class="line">    field: &#39;timing&#39;,</span>
+<span class="line">    component: &#39;JEasyCron&#39;,</span>
+<span class="line">    componentProps:{</span>
+<span class="line">      //是否隐藏参数秒和年设置，如果隐藏，那么参数秒和年将会全部忽略掉。</span>
+<span class="line">      hideSecond: false,</span>
+<span class="line">      //是否隐藏参数年设置，如果隐藏，那么参数年将会全部忽略掉</span>
+<span class="line">      hideYear: false,</span>
+<span class="line">      //是否禁用</span>
+<span class="line">      disabled: false,</span>
+<span class="line">      //获取预览执行时间列表的函数，格式为：remote (cron值, time时间戳, cb回调函数)</span>
+<span class="line">      remote:(cron,time,cb)=&gt;{}</span>
+<span class="line">    },</span>
+<span class="line">  },</span>
+<span class="line">]</span>
+<span class="line"></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>copy</p><h3 id="_34-jrangenumber-numerical-range-input-box" tabindex="-1"><a class="header-anchor" href="#_34-jrangenumber-numerical-range-input-box"><span>34. JRangeNumber numerical range input box</span></a></h3><p>Page Effects</p><p>Code Sample</p><p><img src="https://lfs.k.topthink.com/lfs/9894c515915f922fbfc58947384ea707a84c33f5f4dd4e83ba1077f6f499cad2.dat" alt=""></p><div class="language-text line-numbers-mode" data-highlighter="prismjs" data-ext="text"><pre><code><span class="line">const schemas: FormSchema[] = [</span>
+<span class="line">  {</span>
+<span class="line">    label: &#39;数值范围输入框&#39;,</span>
+<span class="line">    field: &#39;rangeNumber&#39;,</span>
+<span class="line">    component: &#39;JRangeNumber&#39;,</span>
+<span class="line">  },</span>
+<span class="line">]</span>
+<span class="line"></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>copy</p><h3 id="_35-inputcountdown-verification-code-component" tabindex="-1"><a class="header-anchor" href="#_35-inputcountdown-verification-code-component"><span>35. InputCountDown verification code component</span></a></h3><p>Page Effects</p><p>Code Sample</p><blockquote><p>Effect when SMS verification code is not sent</p></blockquote><p><img src="https://lfs.k.topthink.com/lfs/b2298831f4e7e9e85428555c3c396e09cbe2f553b932ee3f43fbaaf9c2a68a99.dat" alt=""></p><blockquote><p>Effect of sending SMS verification code</p></blockquote><p><img src="https://lfs.k.topthink.com/lfs/89ff90d95c3addade45f4f1d4aa90c40e979d3eda36c9fb0fc3843ef18af558f.dat" alt=""></p><div class="language-text line-numbers-mode" data-highlighter="prismjs" data-ext="text"><pre><code><span class="line">export const schemas: FormSchema[] = [</span>
+<span class="line">  {</span>
+<span class="line">    label: &#39;验证码&#39;,</span>
+<span class="line">    field: &#39;code&#39;,</span>
+<span class="line">    component: &#39;InputCountDown&#39;,</span>
+<span class="line">    componentProps: {</span>
+<span class="line">      //&#39;default&#39;: 默认, &#39;large&#39;: 最大, &#39;small&#39;: 最小</span>
+<span class="line">      size:&#39;default&#39;,</span>
+<span class="line">      //倒计时</span>
+<span class="line">      count: 120,</span>
+<span class="line">    },</span>
+<span class="line">  },</span>
+<span class="line"></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>copy</p><h2 id="precautions" tabindex="-1"><a class="header-anchor" href="#precautions"><span>Precautions</span></a></h2><h3 id="_1-invalid-properties" tabindex="-1"><a class="header-anchor" href="#_1-invalid-properties"><span>1. Invalid properties</span></a></h3><blockquote><p><code>componentProps</code>The corresponding <code>value</code>attributes and <code>defaultValue</code>properties in are not effective</p></blockquote><p><code>defaultValue</code>Need to be filled in with <code>componentProps</code>the same level</p><div class="language-text line-numbers-mode" data-highlighter="prismjs" data-ext="text"><pre><code><span class="line">const schemas: FormSchema[] = [</span>
+<span class="line">  {</span>
+<span class="line">    label: &#39;姓名&#39;,</span>
+<span class="line">    field: &#39;name&#39;,</span>
+<span class="line">    component:&#39;Input&#39;,</span>
+<span class="line">    componentProps:{</span>
+<span class="line">      prefix:&#39;中文&#39;,</span>
+<span class="line">      showCount: true</span>
+<span class="line">    },</span>
+<span class="line">    defaultValue:&#39;张三&#39;</span>
+<span class="line">  },</span>
+<span class="line">]</span>
+<span class="line"></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>copy</p></div><!--[--><!--]--></div><footer class="vp-page-meta"><div class="vp-meta-item edit-link"><a class="auto-link external-link label" href="https://github.com/yourusername/vuepress-template/edit/main/docs/syncadmin/ui-component-library/basic-form/form-control-usage-examples.md" aria-label="Edit this page on GitHub" rel="noopener noreferrer" target="_blank"><!--[--><!--[--><svg class="edit-icon" viewbox="0 0 1024 1024"><g fill="currentColor"><path d="M430.818 653.65a60.46 60.46 0 0 1-50.96-93.281l71.69-114.012 7.773-10.365L816.038 80.138A60.46 60.46 0 0 1 859.225 62a60.46 60.46 0 0 1 43.186 18.138l43.186 43.186a60.46 60.46 0 0 1 0 86.373L588.879 565.55l-8.637 8.637-117.466 68.234a60.46 60.46 0 0 1-31.958 11.229z"></path><path d="M728.802 962H252.891A190.883 190.883 0 0 1 62.008 771.98V296.934a190.883 190.883 0 0 1 190.883-192.61h267.754a60.46 60.46 0 0 1 0 120.92H252.891a69.962 69.962 0 0 0-69.098 69.099V771.98a69.962 69.962 0 0 0 69.098 69.098h475.911A69.962 69.962 0 0 0 797.9 771.98V503.363a60.46 60.46 0 1 1 120.922 0V771.98A190.883 190.883 0 0 1 728.802 962z"></path></g></svg><!--]--><!--]-->Edit this page on GitHub<!--[--><!--[--><!--]--><!--]--></a></div><div class="vp-meta-item git-info"><div class="vp-meta-item last-updated"><span class="meta-item-label">Last updated: </span><time class="meta-item-info" datetime="2025-06-06T03:07:21.000Z" data-allow-mismatch>25. 6. 6. 오후 12:07</time></div><div class="vp-meta-item contributors"><span class="meta-item-label">Contributors: </span><span class="meta-item-info"><!--[--><!--[--><span class="contributor" title="email: poh@empasy.com">poh</span><!----><!--]--><!--]--></span></div></div></footer><!----><!--[--><!--]--></main><!--]--></div><!--[--><!----><!----><!--]--><!--]--></div>
+    <script type="module" src="/assets/app-DGEuurYf.js" defer></script>
+  </body>
+</html>

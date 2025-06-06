@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="generator" content="VuePress 2.0.0-rc.22" />
+    <style>
+      :root {
+        --vp-c-bg: #fff;
+      }
+
+      [data-theme='dark'] {
+        --vp-c-bg: #1b1b1f;
+      }
+
+      html,
+      body {
+        background-color: var(--vp-c-bg);
+      }
+    </style>
+    <script>
+      const useChoice = localStorage.getItem('vuepress-color-scheme')
+      const systemStatus =
+        'matchMedia' in window
+          ? window.matchMedia('(prefers-color-scheme: dark)').matches
+          : false
+
+      if (useChoice === 'light') {
+        document.documentElement.dataset.theme = 'light'
+      } else if (useChoice === 'dark' || systemStatus) {
+        document.documentElement.dataset.theme = 'dark'
+      }
+    </script>
+    <link rel="icon" href="/images/logo.png"><meta name="author" content="The VuePress Team"><meta name="keywords" content="vuepress, vue, Documentation, Blog"><meta name="theme-color" content="#3eaf7c"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black"><link rel="apple-touch-icon" href="/images/icons/apple-touch-icon.png"><link rel="mask-icon" href="/images/icons/safari-pinned-tab.svg" color="#3eaf7c"><meta name="msapplication-TileImage" content="/images/icons/mstile-150x150.png"><meta name="msapplication-TileColor" content="#3eaf7c"><meta name="application-name" content="VuePress Document templates"><meta name="mobile-web-app-capable" content="yes"><link rel="manifest" href="/manifest.webmanifest" crossorigin="use-credentials"><title>SuperQuery</title><meta name="description" content="The Empasy document">
+    <link rel="preload" href="/assets/style-BvRKiRGL.css" as="style"><link rel="stylesheet" href="/assets/style-BvRKiRGL.css">
+    <link rel="modulepreload" href="/assets/app-DGEuurYf.js"><link rel="modulepreload" href="/assets/super-query.html-DPfauYed.js">
+    
+  </head>
+  <body>
+    <div id="app"><!--[--><div class="vp-theme-container external-link-icon" vp-container><!--[--><header class="vp-navbar" vp-navbar><div class="vp-toggle-sidebar-button" title="toggle sidebar" aria-expanded="false" role="button" tabindex="0"><div class="icon" aria-hidden="true"><span></span><span></span><span></span></div></div><span><a class="route-link" href="/"><img class="vp-site-logo" src="/.vuepress/public/images/logo-dark.png" alt><!----></a></span><div class="vp-navbar-items-wrapper" style=""><!--[--><!--]--><nav class="vp-navbar-items vp-hide-mobile" aria-label="site navigation"><!--[--><div class="vp-navbar-item"><a class="route-link auto-link" href="/" aria-label="Homepage"><!--[--><!--[--><!--]--><!--]-->Homepage<!--[--><!--[--><!--]--><!--]--></a></div><div class="vp-navbar-item"><a class="route-link auto-link" href="/synceta/" aria-label="SyncETA"><!--[--><!--[--><!--]--><!--]-->SyncETA<!--[--><!--[--><!--]--><!--]--></a></div><div class="vp-navbar-item"><a class="route-link auto-link" href="/syncboot/" aria-label="SyncBoot"><!--[--><!--[--><!--]--><!--]-->SyncBoot<!--[--><!--[--><!--]--><!--]--></a></div><div class="vp-navbar-item"><a class="route-link auto-link" href="/synccms/" aria-label="SyncCms"><!--[--><!--[--><!--]--><!--]-->SyncCms<!--[--><!--[--><!--]--><!--]--></a></div><div class="vp-navbar-item"><a class="route-link route-link-active auto-link" href="/syncadmin/" aria-label="SyncAdmin"><!--[--><!--[--><!--]--><!--]-->SyncAdmin<!--[--><!--[--><!--]--><!--]--></a></div><div class="vp-navbar-item"><a class="auto-link external-link" href="https://github.com/yourusername/vuepress-template" aria-label="GitHub" rel="noopener noreferrer" target="_blank"><!--[--><!--[--><!--]--><!--]-->GitHub<!--[--><!--[--><!--]--><!--]--></a></div><!--]--></nav><!--[--><!--]--><button type="button" class="vp-toggle-color-mode-button" title="toggle color mode"><svg class="light-icon" viewbox="0 0 32 32" style=""><path d="M16 12.005a4 4 0 1 1-4 4a4.005 4.005 0 0 1 4-4m0-2a6 6 0 1 0 6 6a6 6 0 0 0-6-6z" fill="currentColor"></path><path d="M5.394 6.813l1.414-1.415l3.506 3.506L8.9 10.318z" fill="currentColor"></path><path d="M2 15.005h5v2H2z" fill="currentColor"></path><path d="M5.394 25.197L8.9 21.691l1.414 1.415l-3.506 3.505z" fill="currentColor"></path><path d="M15 25.005h2v5h-2z" fill="currentColor"></path><path d="M21.687 23.106l1.414-1.415l3.506 3.506l-1.414 1.414z" fill="currentColor"></path><path d="M25 15.005h5v2h-5z" fill="currentColor"></path><path d="M21.687 8.904l3.506-3.506l1.414 1.415l-3.506 3.505z" fill="currentColor"></path><path d="M15 2.005h2v5h-2z" fill="currentColor"></path></svg><svg class="dark-icon" viewbox="0 0 32 32" style="display:none;"><path d="M13.502 5.414a15.075 15.075 0 0 0 11.594 18.194a11.113 11.113 0 0 1-7.975 3.39c-.138 0-.278.005-.418 0a11.094 11.094 0 0 1-3.2-21.584M14.98 3a1.002 1.002 0 0 0-.175.016a13.096 13.096 0 0 0 1.825 25.981c.164.006.328 0 .49 0a13.072 13.072 0 0 0 10.703-5.555a1.01 1.01 0 0 0-.783-1.565A13.08 13.08 0 0 1 15.89 4.38A1.015 1.015 0 0 0 14.98 3z" fill="currentColor"></path></svg></button><form class="search-box" role="search"><input type="search" placeholder="Search for documents" autocomplete="off" spellcheck="false" value><!----></form></div></header><!--]--><div class="vp-sidebar-mask"></div><!--[--><aside class="vp-sidebar" vp-sidebar><nav class="vp-navbar-items" aria-label="site navigation"><!--[--><div class="vp-navbar-item"><a class="route-link auto-link" href="/" aria-label="Homepage"><!--[--><!--[--><!--]--><!--]-->Homepage<!--[--><!--[--><!--]--><!--]--></a></div><div class="vp-navbar-item"><a class="route-link auto-link" href="/synceta/" aria-label="SyncETA"><!--[--><!--[--><!--]--><!--]-->SyncETA<!--[--><!--[--><!--]--><!--]--></a></div><div class="vp-navbar-item"><a class="route-link auto-link" href="/syncboot/" aria-label="SyncBoot"><!--[--><!--[--><!--]--><!--]-->SyncBoot<!--[--><!--[--><!--]--><!--]--></a></div><div class="vp-navbar-item"><a class="route-link auto-link" href="/synccms/" aria-label="SyncCms"><!--[--><!--[--><!--]--><!--]-->SyncCms<!--[--><!--[--><!--]--><!--]--></a></div><div class="vp-navbar-item"><a class="route-link route-link-active auto-link" href="/syncadmin/" aria-label="SyncAdmin"><!--[--><!--[--><!--]--><!--]-->SyncAdmin<!--[--><!--[--><!--]--><!--]--></a></div><div class="vp-navbar-item"><a class="auto-link external-link" href="https://github.com/yourusername/vuepress-template" aria-label="GitHub" rel="noopener noreferrer" target="_blank"><!--[--><!--[--><!--]--><!--]-->GitHub<!--[--><!--[--><!--]--><!--]--></a></div><!--]--></nav><!--[--><!--]--><ul class="vp-sidebar-items"><!--[--><li><p tabindex="0" class="vp-sidebar-item vp-sidebar-heading collapsible">SyncAdmin <span class="right arrow"></span></p><ul style="display:none;" class="vp-sidebar-children"><!--[--><li><a class="route-link route-link-active auto-link vp-sidebar-item" href="/syncadmin/" aria-label="Summary"><!--[--><!--[--><!--]--><!--]-->Summary<!--[--><!--[--><!--]--><!--]--></a><!----></li><li><a class="route-link auto-link vp-sidebar-item" href="/syncadmin/Introduction.html" aria-label="Introduction"><!--[--><!--[--><!--]--><!--]-->Introduction<!--[--><!--[--><!--]--><!--]--></a><!----></li><!--]--></ul></li><!--]--></ul><!--[--><!--]--></aside><!--]--><!--[--><main class="vp-page"><!--[--><!--]--><div vp-content><!--[--><!--]--><div><h1 id="superquery" tabindex="-1"><a class="header-anchor" href="#superquery"><span>SuperQuery</span></a></h1><blockquote><p>SuperQuery is used for advanced query buttons of customized lists. SuperQuery has been registered globally and does not need to be introduced separately.</p></blockquote><h1 id="how-to-use" tabindex="-1"><a class="header-anchor" href="#how-to-use"><span>How to use</span></a></h1><h2 id="_1-form-json-usage" tabindex="-1"><a class="header-anchor" href="#_1-form-json-usage"><span>1. Form JSON Usage</span></a></h2><div class="language-text line-numbers-mode" data-highlighter="prismjs" data-ext="text"><pre><code><span class="line">{</span>
+<span class="line">  field: &#39;superQuery&#39;,</span>
+<span class="line">  component: &#39;Input&#39;,</span>
+<span class="line">  label: &#39;高级查询&#39;,</span>
+<span class="line">  helpMessage: [&#39;插槽模式&#39;],</span>
+<span class="line">  slot: &#39;superQuery&#39;,</span>
+<span class="line">  colProps: { span: 12 },</span>
+<span class="line">},</span>
+<span class="line"></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>copy</p><h2 id="_2-native-usage" tabindex="-1"><a class="header-anchor" href="#_2-native-usage"><span>2. Native Usage</span></a></h2><div class="language-text line-numbers-mode" data-highlighter="prismjs" data-ext="text"><pre><code><span class="line">&lt;super-query :config=&quot;superQueryConfig&quot; @search=&quot;handleSuperQuery&quot;/&gt;</span>
+<span class="line">&lt;!-- xxx省略其他代码 --&gt;</span>
+<span class="line"></span>
+<span class="line">&lt;script lang=&quot;ts&quot;&gt;</span>
+<span class="line"></span>
+<span class="line">// 高级查询配置</span>
+<span class="line">const superQueryConfig = reactive({</span>
+<span class="line">  name:{ title: &quot;名称&quot;, view: &quot;text&quot;, type: &quot;string&quot;, order: 1 },</span>
+<span class="line">  sex:{ title: &quot;性别&quot;, view: &quot;list&quot;, type: &quot;string&quot;, enum: [{value: &#39;1&#39;, title: &#39;男&#39;}, {value: &#39;2&#39;, title: &#39;女&#39;}], order: 6 },</span>
+<span class="line">  subTable:{</span>
+<span class="line">    title: &quot;子表&quot;,</span>
+<span class="line">    view: &quot;table&quot;,</span>
+<span class="line">    fields:{</span>
+<span class="line">      name:{ title: &quot;名称2&quot;, view: &quot;text&quot;, type: &quot;string&quot;, order: 1 },</span>
+<span class="line">    }</span>
+<span class="line">  }</span>
+<span class="line">})</span>
+<span class="line">//执行查询</span>
+<span class="line">function handleSuperQuery(params) {</span>
+<span class="line">  Object.keys(params).map(k=&gt;{</span>
+<span class="line">    queryParam[k] = params[k]</span>
+<span class="line">  });</span>
+<span class="line">  searchQuery();</span>
+<span class="line">}</span>
+<span class="line">//xxx省略其他代码</span>
+<span class="line">&lt;/script&gt;</span>
+<span class="line"></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>copy</p><h2 id="_3-customize-the-query-condition-data-saved-in-storage" tabindex="-1"><a class="header-anchor" href="#_3-customize-the-query-condition-data-saved-in-storage"><span>3. Customize the query condition data saved in storage</span></a></h2><div class="language-text line-numbers-mode" data-highlighter="prismjs" data-ext="text"><pre><code><span class="line">&lt;super-query :config=&quot;superQueryConfig&quot; @search=&quot;handleSuperQuery&quot; :isCustomSave=&quot;true&quot; :saveSearchData=&quot;saveSearchData&quot; :save=&quot;handleSuperQuerySave&quot;/&gt;</span>
+<span class="line"></span>
+<span class="line">&lt;script lang=&quot;ts&quot;&gt;</span>
+<span class="line">    const superQueryConfig = {</span>
+<span class="line">        name:{ title: &quot;名称&quot;, view: &quot;text&quot;, type: &quot;string&quot;, order: 1 },</span>
+<span class="line">        birthday:{ title: &quot;生日&quot;, view: &quot;date&quot;, type: &quot;string&quot;, order: 2 },</span>
+<span class="line">        age:{ title: &quot;年龄&quot;, view: &quot;number&quot;, type: &quot;number&quot;, order: 4 },</span>
+<span class="line">        sex:{ title: &quot;性别&quot;, view: &quot;list&quot;, type: &quot;string&quot;, dictCode: &quot;sex&quot;, order: 5 },</span>
+<span class="line">        bpmStatus:{ title: &quot;流程状态&quot;, view: &quot;list_multi&quot;, type: &quot;string&quot;,  dictCode: &quot;bpm_status&quot;, order: 6 },</span>
+<span class="line">      }</span>
+<span class="line">      function handleSuperQuery(value, model, field){</span>
+<span class="line">        if(value){</span>
+<span class="line">          let str = decodeURI(value.superQueryParams)</span>
+<span class="line">          console.log(str)</span>
+<span class="line">        }</span>
+<span class="line">      }</span>
+<span class="line">      const saveSearchData = ref([</span>
+<span class="line">        {</span>
+<span class="line">          content: &#39;[{&quot;field&quot;:&quot;age&quot;,&quot;rule&quot;:&quot;eq&quot;,&quot;val&quot;:14}]&#39;,</span>
+<span class="line">          title: &#39;豆蔻年华&#39;,</span>
+<span class="line">          type: &#39;and&#39;,</span>
+<span class="line">        },</span>
+<span class="line">        {</span>
+<span class="line">          content: &#39;[{&quot;field&quot;:&quot;name&quot;,&quot;rule&quot;:&quot;eq&quot;,&quot;val&quot;:&quot;张三&quot;}]&#39;,</span>
+<span class="line">          title: &#39;项目经理&#39;,</span>
+<span class="line">          type: &#39;and&#39;,</span>
+<span class="line">        },</span>
+<span class="line">      ]);</span>
+<span class="line">      const handleSuperQuerySave = (data) =&gt; {</span>
+<span class="line">        // 高级查询保存后的信息</span>
+<span class="line">        return new Promise&lt;void&gt;((resolve, reject) =&gt; {</span>
+<span class="line">          // 模拟接口</span>
+<span class="line">          setTimeout(() =&gt; {</span>
+<span class="line">            if (Math.random() &gt; 0.5) {</span>
+<span class="line">              console.log(&#39;接口成功~&#39;);</span>
+<span class="line">              saveSearchData.value = data;</span>
+<span class="line">              resolve();</span>
+<span class="line">            } else {</span>
+<span class="line">              console.log(&#39;接口失败~&#39;);</span>
+<span class="line">              reject();</span>
+<span class="line">            }</span>
+<span class="line">          }, 1e3);</span>
+<span class="line">        });</span>
+<span class="line">      }</span>
+<span class="line">&lt;/script&gt;</span>
+<span class="line"></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>copy</p><h1 id="configuration-instructions" tabindex="-1"><a class="header-anchor" href="#configuration-instructions"><span>Configuration instructions</span></a></h1><table><thead><tr><th>parameter</th><th>Required?</th><th>type</th><th>describe</th></tr></thead><tbody><tr><td>config</td><td>yes</td><td>Object</td><td>Refer to the following superQueryConfig configuration</td></tr><tr><td>search</td><td>no</td><td>event</td><td></td></tr><tr><td>isCustomSave</td><td>no</td><td>Boolean</td><td>Whether to implement storage of saved query condition data by yourself (default: false. <code>v3.6.4+</code>)</td></tr><tr><td>saveSearchData</td><td>no</td><td>Array</td><td>Saved query condition data (Required when isCustomSave is true. <code>v3.6.4+</code>)</td></tr><tr><td>save</td><td>no</td><td>Function</td><td>This function is executed when the query conditions are saved or deleted (required when isCustomSave is true. This function needs to return a Promise object. <code>v3.6.4+</code>)</td></tr></tbody></table><h3 id="_1-superqueryconfig-configuration" tabindex="-1"><a class="header-anchor" href="#_1-superqueryconfig-configuration"><span>1.superQueryConfig configuration</span></a></h3><blockquote><p>Syntax: Field name:{field configuration information}</p></blockquote><table><thead><tr><th>Attributes</th><th>describe</th></tr></thead><tbody><tr><td>title</td><td>Title/Field Description</td></tr><tr><td>view</td><td>Field display type</td></tr><tr><td>type</td><td>Field data type, date and time string</td></tr><tr><td>order</td><td>Field Order</td></tr><tr><td>For other configurations, refer to the following examples</td><td></td></tr></tbody></table><h3 id="_2-configuration-example" tabindex="-1"><a class="header-anchor" href="#_2-configuration-example"><span>2. Configuration Example</span></a></h3><ul><li><p>Text box:<br><code>name:{ title: &quot;名称&quot;, view: &quot;text&quot;, type: &quot;string&quot;, order: 1 }</code></p></li><li><p>Drop-down box (can only pass enum):</p><div class="language-text line-numbers-mode" data-highlighter="prismjs" data-ext="text"><pre><code><span class="line">sex:{ title: &quot;性别&quot;, view: &quot;list&quot;, type: &quot;string&quot;, enum: [{value: &#39;1&#39;, title: &#39;男&#39;},{value: &#39;2&#39;, title: &#39;女&#39;}], order: 2 },</span>
+<span class="line"></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div></div></div><p>copy</p></li><li><p>Drop-down multiple-select box (you can set the data dictionary and configure the table):</p><div class="language-text line-numbers-mode" data-highlighter="prismjs" data-ext="text"><pre><code><span class="line">sports:{ title: &quot;下拉多选&quot;, view: &quot;list_multi&quot;, type: &quot;string&quot;,dictCode: &quot;sports&quot;, order: 3 },</span>
+<span class="line"></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div></div></div><p>copy</p><div class="language-text line-numbers-mode" data-highlighter="prismjs" data-ext="text"><pre><code><span class="line">dictTable: &quot;sys_user&quot;, dictCode: &quot;username&quot;, dictText: &quot;realname&quot;, order: 3 },userSelect:{ title: &quot;下拉多选2&quot;, view: &quot;list_multi&quot;, type: &quot;string&quot;,`</span>
+<span class="line"></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div></div></div><p>copy</p></li><li><p>Drop-down search box (can only configure tables):</p><div class="language-text line-numbers-mode" data-highlighter="prismjs" data-ext="text"><pre><code><span class="line">userSearch:{ title: &quot;下拉搜索&quot;, view: &quot;sel_search&quot;, type: &quot;string&quot;, dictTable: &quot;sys_user&quot;, dictCode: &quot;username&quot;, dictText: &quot;realname&quot;, order: 4 },</span>
+<span class="line"></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div></div></div><p>copy</p></li><li><p>Date box:<br><code>birthday:{ title: &quot;生日&quot;, view: &quot;date&quot;, type: &quot;string&quot;, order: 5 },</code></p></li><li><p>Time Frame:<br><code>createTime:{ title: &quot;创建时间&quot;, view: &quot;datetime&quot;, type: &quot;string&quot;, order: 6 },</code></p></li><li><p>Number box:<br><code>age:{ title: &quot;年龄&quot;, view: &quot;number&quot;, type: &quot;number&quot;, order: 7 },</code></p></li><li><p>Classification Tree:<br><code>catTree: { title: &#39;分类树&#39;, order: 16, view: &#39;cat_tree&#39;, type: &#39;string&#39;, pcode: &#39;B01&#39; },</code></p></li><li><p>Custom Tree:</p><div class="language-text line-numbers-mode" data-highlighter="prismjs" data-ext="text"><pre><code><span class="line"> customTree: { title: &#39;自定义树&#39;, order: 15, view: &#39;sel_tree&#39;, type: &#39;string&#39;, dict: &#39;t_tree,name,id&#39;, pidValue: &#39;0&#39; },</span>
+<span class="line"></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div></div></div><p>copy</p></li></ul><div class="language-text line-numbers-mode" data-highlighter="prismjs" data-ext="text"><pre><code><span class="line">* 用户选择：</span>
+<span class="line"> `userSelect2:{ title: &quot;选择用户&quot;, view: &quot;sel_user&quot;, type: &quot;string&quot;, order: 9 },`</span>
+<span class="line">* 部门选择：</span>
+<span class="line"> `departSelect:{ title: &quot;选择部门&quot;, view: &quot;sel_depart&quot;, type: &quot;string&quot;, order: 10 },`</span>
+<span class="line">* 省市区：</span>
+<span class="line"> `pca:{ title: &quot;省市区&quot;, view: &quot;pca&quot;, type: &quot;string&quot;, order: 12 },`</span>
+<span class="line">* popup：</span>
+<span class="line"></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>copy</p><p>popup:{ title: &quot;popup&quot;, view: &quot;popup&quot;, type: &quot;string&quot;, order: 11, code: &quot;report_user&quot;, destFields: &quot;popup&quot;, orgFields: &quot;realname&quot;, popupMulti: true },</p><div class="language-text line-numbers-mode" data-highlighter="prismjs" data-ext="text"><pre><code><span class="line"></span>
+<span class="line">### 3.从表字段配置说明：</span>
+<span class="line"></span>
+<span class="line"></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>copy</p><p>From table name: {<br> title: &quot;Table description&quot;,<br> view: &quot;table&quot;,<br> fields:{<br> field configuration<br> }<br> }<br> For example:<br> subTable:{<br> title: &quot;Subtable&quot;,<br> view: &quot;table&quot;,<br> fields:{<br> name:{ title: &quot;Name 2&quot;, view: &quot;text&quot;, type: &quot;string&quot;, order: 1 },<br> }<br> }</p><div class="language-text line-numbers-mode" data-highlighter="prismjs" data-ext="text"><pre><code><span class="line"></span>
+<span class="line">### 4.查询触发传值</span>
+<span class="line"></span>
+<span class="line">![](../images/screenshot_1657108874245.png)</span>
+<span class="line"></span>
+<span class="line">* 如果是单表：field只传递字段名</span>
+<span class="line">* 如果有从表，field会传递`从表名,字段名`</span>
+<span class="line">* 此处仅前端实现了从表的逻辑，后台默认不处理从表的信息，需要用户自行处理。</span>
+<span class="line"></span>
+<span class="line">&gt; [warning] 如果界面查询无效果，那应该是后端报错了，请检查字段配置是否正确。</span>
+<span class="line"></span>
+<span class="line"></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>copy</p></div><!--[--><!--]--></div><footer class="vp-page-meta"><div class="vp-meta-item edit-link"><a class="auto-link external-link label" href="https://github.com/yourusername/vuepress-template/edit/main/docs/syncadmin/ui-component-library/super-query.md" aria-label="Edit this page on GitHub" rel="noopener noreferrer" target="_blank"><!--[--><!--[--><svg class="edit-icon" viewbox="0 0 1024 1024"><g fill="currentColor"><path d="M430.818 653.65a60.46 60.46 0 0 1-50.96-93.281l71.69-114.012 7.773-10.365L816.038 80.138A60.46 60.46 0 0 1 859.225 62a60.46 60.46 0 0 1 43.186 18.138l43.186 43.186a60.46 60.46 0 0 1 0 86.373L588.879 565.55l-8.637 8.637-117.466 68.234a60.46 60.46 0 0 1-31.958 11.229z"></path><path d="M728.802 962H252.891A190.883 190.883 0 0 1 62.008 771.98V296.934a190.883 190.883 0 0 1 190.883-192.61h267.754a60.46 60.46 0 0 1 0 120.92H252.891a69.962 69.962 0 0 0-69.098 69.099V771.98a69.962 69.962 0 0 0 69.098 69.098h475.911A69.962 69.962 0 0 0 797.9 771.98V503.363a60.46 60.46 0 1 1 120.922 0V771.98A190.883 190.883 0 0 1 728.802 962z"></path></g></svg><!--]--><!--]-->Edit this page on GitHub<!--[--><!--[--><!--]--><!--]--></a></div><div class="vp-meta-item git-info"><div class="vp-meta-item last-updated"><span class="meta-item-label">Last updated: </span><time class="meta-item-info" datetime="2025-06-06T03:07:21.000Z" data-allow-mismatch>25. 6. 6. 오후 12:07</time></div><div class="vp-meta-item contributors"><span class="meta-item-label">Contributors: </span><span class="meta-item-info"><!--[--><!--[--><span class="contributor" title="email: poh@empasy.com">poh</span><!----><!--]--><!--]--></span></div></div></footer><!----><!--[--><!--]--></main><!--]--></div><!--[--><!----><!----><!--]--><!--]--></div>
+    <script type="module" src="/assets/app-DGEuurYf.js" defer></script>
+  </body>
+</html>

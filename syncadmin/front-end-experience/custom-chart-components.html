@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="generator" content="VuePress 2.0.0-rc.22" />
+    <style>
+      :root {
+        --vp-c-bg: #fff;
+      }
+
+      [data-theme='dark'] {
+        --vp-c-bg: #1b1b1f;
+      }
+
+      html,
+      body {
+        background-color: var(--vp-c-bg);
+      }
+    </style>
+    <script>
+      const useChoice = localStorage.getItem('vuepress-color-scheme')
+      const systemStatus =
+        'matchMedia' in window
+          ? window.matchMedia('(prefers-color-scheme: dark)').matches
+          : false
+
+      if (useChoice === 'light') {
+        document.documentElement.dataset.theme = 'light'
+      } else if (useChoice === 'dark' || systemStatus) {
+        document.documentElement.dataset.theme = 'dark'
+      }
+    </script>
+    <link rel="icon" href="/images/logo.png"><meta name="author" content="The VuePress Team"><meta name="keywords" content="vuepress, vue, Documentation, Blog"><meta name="theme-color" content="#3eaf7c"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black"><link rel="apple-touch-icon" href="/images/icons/apple-touch-icon.png"><link rel="mask-icon" href="/images/icons/safari-pinned-tab.svg" color="#3eaf7c"><meta name="msapplication-TileImage" content="/images/icons/mstile-150x150.png"><meta name="msapplication-TileColor" content="#3eaf7c"><meta name="application-name" content="VuePress Document templates"><meta name="mobile-web-app-capable" content="yes"><link rel="manifest" href="/manifest.webmanifest" crossorigin="use-credentials"><title>Custom chart components</title><meta name="description" content="The Empasy document">
+    <link rel="preload" href="/assets/style-BvRKiRGL.css" as="style"><link rel="stylesheet" href="/assets/style-BvRKiRGL.css">
+    <link rel="modulepreload" href="/assets/app-DGEuurYf.js"><link rel="modulepreload" href="/assets/custom-chart-components.html-BXV7jc6Q.js">
+    
+  </head>
+  <body>
+    <div id="app"><!--[--><div class="vp-theme-container external-link-icon" vp-container><!--[--><header class="vp-navbar" vp-navbar><div class="vp-toggle-sidebar-button" title="toggle sidebar" aria-expanded="false" role="button" tabindex="0"><div class="icon" aria-hidden="true"><span></span><span></span><span></span></div></div><span><a class="route-link" href="/"><img class="vp-site-logo" src="/.vuepress/public/images/logo-dark.png" alt><!----></a></span><div class="vp-navbar-items-wrapper" style=""><!--[--><!--]--><nav class="vp-navbar-items vp-hide-mobile" aria-label="site navigation"><!--[--><div class="vp-navbar-item"><a class="route-link auto-link" href="/" aria-label="Homepage"><!--[--><!--[--><!--]--><!--]-->Homepage<!--[--><!--[--><!--]--><!--]--></a></div><div class="vp-navbar-item"><a class="route-link auto-link" href="/synceta/" aria-label="SyncETA"><!--[--><!--[--><!--]--><!--]-->SyncETA<!--[--><!--[--><!--]--><!--]--></a></div><div class="vp-navbar-item"><a class="route-link auto-link" href="/syncboot/" aria-label="SyncBoot"><!--[--><!--[--><!--]--><!--]-->SyncBoot<!--[--><!--[--><!--]--><!--]--></a></div><div class="vp-navbar-item"><a class="route-link auto-link" href="/synccms/" aria-label="SyncCms"><!--[--><!--[--><!--]--><!--]-->SyncCms<!--[--><!--[--><!--]--><!--]--></a></div><div class="vp-navbar-item"><a class="route-link route-link-active auto-link" href="/syncadmin/" aria-label="SyncAdmin"><!--[--><!--[--><!--]--><!--]-->SyncAdmin<!--[--><!--[--><!--]--><!--]--></a></div><div class="vp-navbar-item"><a class="auto-link external-link" href="https://github.com/yourusername/vuepress-template" aria-label="GitHub" rel="noopener noreferrer" target="_blank"><!--[--><!--[--><!--]--><!--]-->GitHub<!--[--><!--[--><!--]--><!--]--></a></div><!--]--></nav><!--[--><!--]--><button type="button" class="vp-toggle-color-mode-button" title="toggle color mode"><svg class="light-icon" viewbox="0 0 32 32" style=""><path d="M16 12.005a4 4 0 1 1-4 4a4.005 4.005 0 0 1 4-4m0-2a6 6 0 1 0 6 6a6 6 0 0 0-6-6z" fill="currentColor"></path><path d="M5.394 6.813l1.414-1.415l3.506 3.506L8.9 10.318z" fill="currentColor"></path><path d="M2 15.005h5v2H2z" fill="currentColor"></path><path d="M5.394 25.197L8.9 21.691l1.414 1.415l-3.506 3.505z" fill="currentColor"></path><path d="M15 25.005h2v5h-2z" fill="currentColor"></path><path d="M21.687 23.106l1.414-1.415l3.506 3.506l-1.414 1.414z" fill="currentColor"></path><path d="M25 15.005h5v2h-5z" fill="currentColor"></path><path d="M21.687 8.904l3.506-3.506l1.414 1.415l-3.506 3.505z" fill="currentColor"></path><path d="M15 2.005h2v5h-2z" fill="currentColor"></path></svg><svg class="dark-icon" viewbox="0 0 32 32" style="display:none;"><path d="M13.502 5.414a15.075 15.075 0 0 0 11.594 18.194a11.113 11.113 0 0 1-7.975 3.39c-.138 0-.278.005-.418 0a11.094 11.094 0 0 1-3.2-21.584M14.98 3a1.002 1.002 0 0 0-.175.016a13.096 13.096 0 0 0 1.825 25.981c.164.006.328 0 .49 0a13.072 13.072 0 0 0 10.703-5.555a1.01 1.01 0 0 0-.783-1.565A13.08 13.08 0 0 1 15.89 4.38A1.015 1.015 0 0 0 14.98 3z" fill="currentColor"></path></svg></button><form class="search-box" role="search"><input type="search" placeholder="Search for documents" autocomplete="off" spellcheck="false" value><!----></form></div></header><!--]--><div class="vp-sidebar-mask"></div><!--[--><aside class="vp-sidebar" vp-sidebar><nav class="vp-navbar-items" aria-label="site navigation"><!--[--><div class="vp-navbar-item"><a class="route-link auto-link" href="/" aria-label="Homepage"><!--[--><!--[--><!--]--><!--]-->Homepage<!--[--><!--[--><!--]--><!--]--></a></div><div class="vp-navbar-item"><a class="route-link auto-link" href="/synceta/" aria-label="SyncETA"><!--[--><!--[--><!--]--><!--]-->SyncETA<!--[--><!--[--><!--]--><!--]--></a></div><div class="vp-navbar-item"><a class="route-link auto-link" href="/syncboot/" aria-label="SyncBoot"><!--[--><!--[--><!--]--><!--]-->SyncBoot<!--[--><!--[--><!--]--><!--]--></a></div><div class="vp-navbar-item"><a class="route-link auto-link" href="/synccms/" aria-label="SyncCms"><!--[--><!--[--><!--]--><!--]-->SyncCms<!--[--><!--[--><!--]--><!--]--></a></div><div class="vp-navbar-item"><a class="route-link route-link-active auto-link" href="/syncadmin/" aria-label="SyncAdmin"><!--[--><!--[--><!--]--><!--]-->SyncAdmin<!--[--><!--[--><!--]--><!--]--></a></div><div class="vp-navbar-item"><a class="auto-link external-link" href="https://github.com/yourusername/vuepress-template" aria-label="GitHub" rel="noopener noreferrer" target="_blank"><!--[--><!--[--><!--]--><!--]-->GitHub<!--[--><!--[--><!--]--><!--]--></a></div><!--]--></nav><!--[--><!--]--><ul class="vp-sidebar-items"><!--[--><li><p tabindex="0" class="vp-sidebar-item vp-sidebar-heading collapsible">SyncAdmin <span class="right arrow"></span></p><ul style="display:none;" class="vp-sidebar-children"><!--[--><li><a class="route-link route-link-active auto-link vp-sidebar-item" href="/syncadmin/" aria-label="Summary"><!--[--><!--[--><!--]--><!--]-->Summary<!--[--><!--[--><!--]--><!--]--></a><!----></li><li><a class="route-link auto-link vp-sidebar-item" href="/syncadmin/Introduction.html" aria-label="Introduction"><!--[--><!--[--><!--]--><!--]-->Introduction<!--[--><!--[--><!--]--><!--]--></a><!----></li><!--]--></ul></li><!--]--></ul><!--[--><!--]--></aside><!--]--><!--[--><main class="vp-page"><!--[--><!--]--><div vp-content><!--[--><!--]--><div><h1 id="custom-chart-components" tabindex="-1"><a class="header-anchor" href="#custom-chart-components"><span>Custom chart components</span></a></h1><h2 id="bar-chart" tabindex="-1"><a class="header-anchor" href="#bar-chart"><span>Bar Chart</span></a></h2><p><img src="https://lfs.k.topthink.com/lfs/fb10ba89638d862267b0c13c4fc77008b7cd58aa2e580302b83988959e7bda6f.dat" alt=""></p><h5 id="citation" tabindex="-1"><a class="header-anchor" href="#citation"><span>Citation</span></a></h5><div class="language-text line-numbers-mode" data-highlighter="prismjs" data-ext="text"><pre><code><span class="line">import Bar from &#39;/@/components/chart/Bar.vue&#39;;</span>
+<span class="line"></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div></div></div><p>copy</p><h5 id="parameter-list" tabindex="-1"><a class="header-anchor" href="#parameter-list"><span>parameter list</span></a></h5><table><thead><tr><th>parameter name</th><th>type</th><th>Required</th><th>illustrate</th></tr></thead><tbody><tr><td>chartData</td><td>array</td><td>✔️</td><td>Chart data source</td></tr><tr><td>option</td><td>object</td><td></td><td>Configuration items for charts</td></tr><tr><td>width</td><td>string</td><td></td><td>Chart Width</td></tr><tr><td>height</td><td>string</td><td></td><td>Chart Height</td></tr></tbody></table><h5 id="chartdata-example" tabindex="-1"><a class="header-anchor" href="#chartdata-example"><span>chartData Example</span></a></h5><div class="language-text line-numbers-mode" data-highlighter="prismjs" data-ext="text"><pre><code><span class="line">[</span>
+<span class="line">    {</span>
+<span class="line">        &quot;name&quot;: &quot;1月&quot;,</span>
+<span class="line">        &quot;value&quot;: 320</span>
+<span class="line">    },</span>
+<span class="line">    {</span>
+<span class="line">        &quot;name&quot;: &quot;2月&quot;,</span>
+<span class="line">        &quot;value&quot;: 457</span>
+<span class="line">    },</span>
+<span class="line">    {</span>
+<span class="line">        &quot;name&quot;: &quot;3月&quot;,</span>
+<span class="line">        &quot;value&quot;: 182</span>
+<span class="line">    }</span>
+<span class="line">]</span>
+<span class="line"></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>copy</p><h5 id="code-sample" tabindex="-1"><a class="header-anchor" href="#code-sample"><span>Code Sample</span></a></h5><div class="language-text line-numbers-mode" data-highlighter="prismjs" data-ext="text"><pre><code><span class="line">&lt;template&gt;</span>
+<span class="line">     &lt;Bar :chartData=&quot;chartData&quot;&gt;&lt;/Bar&gt;</span>
+<span class="line">&lt;/template&gt;</span>
+<span class="line"></span>
+<span class="line">&lt;script lang=&quot;ts&quot; setup&gt;</span>
+<span class="line">    import Bar from &#39;/@/components/chart/Bar.vue&#39;;</span>
+<span class="line">    const chartData = [</span>
+<span class="line">         {</span>
+<span class="line">             &quot;name&quot;: &quot;1月&quot;,</span>
+<span class="line">             &quot;value&quot;: 320</span>
+<span class="line">         },</span>
+<span class="line">         {</span>
+<span class="line">             &quot;name&quot;: &quot;2月&quot;,</span>
+<span class="line">             &quot;value&quot;: 457</span>
+<span class="line">         },</span>
+<span class="line">         {</span>
+<span class="line">             &quot;name&quot;: &quot;3月&quot;,</span>
+<span class="line">             &quot;value&quot;: 182</span>
+<span class="line">         }</span>
+<span class="line">     ]</span>
+<span class="line">&lt;/script&gt;</span>
+<span class="line"></span>
+<span class="line">&lt;style&gt;&lt;/style&gt;</span>
+<span class="line"></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>copy</p><h2 id="multi-column-bar-chart" tabindex="-1"><a class="header-anchor" href="#multi-column-bar-chart"><span>Multi-column bar chart</span></a></h2><p><img src="https://lfs.k.topthink.com/lfs/fdc126e252a71f5bd9cfea9fb55a6ac1bbeef1d4bd913b53a475914617929cbb.dat" alt=""></p><h5 id="citation-1" tabindex="-1"><a class="header-anchor" href="#citation-1"><span>Citation</span></a></h5><div class="language-text line-numbers-mode" data-highlighter="prismjs" data-ext="text"><pre><code><span class="line">import BarMulti from &#39;/@/components/chart/BarMulti.vue&#39;;</span>
+<span class="line"></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div></div></div><p>copy</p><h5 id="parameter-list-1" tabindex="-1"><a class="header-anchor" href="#parameter-list-1"><span>parameter list</span></a></h5><table><thead><tr><th>parameter name</th><th>type</th><th>Required</th><th>illustrate</th></tr></thead><tbody><tr><td>chartData</td><td>array</td><td>✔️</td><td>Chart data source</td></tr><tr><td>option</td><td>object</td><td></td><td>Configuration items for charts</td></tr><tr><td>width</td><td>string</td><td></td><td>Chart Width</td></tr><tr><td>height</td><td>string</td><td></td><td>Chart Height</td></tr></tbody></table><h5 id="chartdata-example-1" tabindex="-1"><a class="header-anchor" href="#chartdata-example-1"><span>chartData Example</span></a></h5><div class="language-text line-numbers-mode" data-highlighter="prismjs" data-ext="text"><pre><code><span class="line">[</span>
+<span class="line">     {</span>
+<span class="line">         &quot;name&quot;: &quot;1月&quot;,</span>
+<span class="line">         &quot;value&quot;: 320,</span>
+<span class="line">         &quot;type&quot;: &quot;2021&quot;</span>
+<span class="line">     },</span>
+<span class="line">     {</span>
+<span class="line">         &quot;name&quot;: &quot;2月&quot;,</span>
+<span class="line">         &quot;value&quot;: 457,</span>
+<span class="line">         &quot;type&quot;: &quot;2021&quot;</span>
+<span class="line">     },</span>
+<span class="line">     {</span>
+<span class="line">         &quot;name&quot;: &quot;3月&quot;,</span>
+<span class="line">         &quot;value&quot;: 182,</span>
+<span class="line">         &quot;type&quot;: &quot;2021&quot;</span>
+<span class="line">     },</span>
+<span class="line">     {</span>
+<span class="line">          &quot;name&quot;: &quot;1月&quot;,</span>
+<span class="line">          &quot;value&quot;: 240,</span>
+<span class="line">          &quot;type&quot;: &quot;2022&quot;</span>
+<span class="line">      },</span>
+<span class="line">      {</span>
+<span class="line">          &quot;name&quot;: &quot;2月&quot;,</span>
+<span class="line">          &quot;value&quot;: 357,</span>
+<span class="line">          &quot;type&quot;: &quot;2022&quot;</span>
+<span class="line">      },</span>
+<span class="line">      {</span>
+<span class="line">          &quot;name&quot;: &quot;3月&quot;,</span>
+<span class="line">          &quot;value&quot;: 456,</span>
+<span class="line">          &quot;type&quot;: &quot;2022&quot;</span>
+<span class="line">      }</span>
+<span class="line"> ]</span>
+<span class="line"></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>copy</p><h2 id="mini-bar-chart" tabindex="-1"><a class="header-anchor" href="#mini-bar-chart"><span>Mini Bar Chart</span></a></h2><p>Same as column chart, just modify the configuration</p><h2 id="area-chart" tabindex="-1"><a class="header-anchor" href="#area-chart"><span>Area chart</span></a></h2><p><img src="https://lfs.k.topthink.com/lfs/8931527e74d00e51b7ffe24a7975cd88b4aa3a71c537005b93a02783ae4b37ac.dat" alt=""></p><h5 id="citation-2" tabindex="-1"><a class="header-anchor" href="#citation-2"><span>Citation</span></a></h5><div class="language-text line-numbers-mode" data-highlighter="prismjs" data-ext="text"><pre><code><span class="line">import Line from &#39;/@/components/chart/Line.vue&#39;;</span>
+<span class="line"></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div></div></div><p>copy</p><h5 id="parameter-list-2" tabindex="-1"><a class="header-anchor" href="#parameter-list-2"><span>parameter list</span></a></h5><table><thead><tr><th>parameter name</th><th>type</th><th>Required</th><th>illustrate</th></tr></thead><tbody><tr><td>chartData</td><td>array</td><td>✔️</td><td>Chart data source</td></tr><tr><td>option</td><td>object</td><td></td><td>Configuration items for charts</td></tr><tr><td>width</td><td>string</td><td></td><td>Chart Width</td></tr><tr><td>height</td><td>string</td><td></td><td>Chart Height</td></tr></tbody></table><h5 id="chartdata-example-2" tabindex="-1"><a class="header-anchor" href="#chartdata-example-2"><span>chartData Example</span></a></h5><div class="language-text line-numbers-mode" data-highlighter="prismjs" data-ext="text"><pre><code><span class="line">[</span>
+<span class="line">    {</span>
+<span class="line">     &quot;name&quot;: &quot;1月&quot;,</span>
+<span class="line">     &quot;value&quot;: 320</span>
+<span class="line">     },</span>
+<span class="line">    {</span>
+<span class="line">     &quot;name&quot;: &quot;2月&quot;,</span>
+<span class="line">     &quot;value&quot;: 457</span>
+<span class="line">    },</span>
+<span class="line">    {</span>
+<span class="line">     &quot;name&quot;: &quot;3月&quot;,</span>
+<span class="line">     &quot;value&quot;: 182</span>
+<span class="line">    }</span>
+<span class="line">]</span>
+<span class="line"></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>copy</p><h2 id="multi-line-line-chart" tabindex="-1"><a class="header-anchor" href="#multi-line-line-chart"><span>Multi-line line chart</span></a></h2><p><img src="https://lfs.k.topthink.com/lfs/489dc83de838fbe2c4b70b0ecfdee83a747aa5bb570742d9f405117f4ddd23d6.dat" alt=""></p><h5 id="citation-3" tabindex="-1"><a class="header-anchor" href="#citation-3"><span>Citation</span></a></h5><div class="language-text line-numbers-mode" data-highlighter="prismjs" data-ext="text"><pre><code><span class="line">import LineMulti from &#39;/@/components/chart/LineMulti.vue&#39;;</span>
+<span class="line"></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div></div></div><p>copy</p><h5 id="parameter-list-3" tabindex="-1"><a class="header-anchor" href="#parameter-list-3"><span>parameter list</span></a></h5><table><thead><tr><th>parameter name</th><th>type</th><th>Required</th><th>illustrate</th></tr></thead><tbody><tr><td>chartData</td><td>array</td><td>✔️</td><td>Chart data source</td></tr><tr><td>option</td><td>object</td><td></td><td>Configuration items for charts</td></tr><tr><td>width</td><td>string</td><td></td><td>Chart Width</td></tr><tr><td>height</td><td>string</td><td></td><td>Chart Height</td></tr></tbody></table><h5 id="chartdata-example-3" tabindex="-1"><a class="header-anchor" href="#chartdata-example-3"><span>chartData Example</span></a></h5><p>Same column chart</p><h2 id="pie-chart" tabindex="-1"><a class="header-anchor" href="#pie-chart"><span>pie chart</span></a></h2><p><img src="https://lfs.k.topthink.com/lfs/b14cd91673104d1491f121ee95b864c1f121073a950d144392599860c0754f1c.dat" alt=""></p><h5 id="citation-4" tabindex="-1"><a class="header-anchor" href="#citation-4"><span>Citation</span></a></h5><div class="language-text line-numbers-mode" data-highlighter="prismjs" data-ext="text"><pre><code><span class="line">import Pie from &#39;/@/components/chart/Pie&#39;</span>
+<span class="line"></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div></div></div><p>copy</p><h5 id="parameter-list-4" tabindex="-1"><a class="header-anchor" href="#parameter-list-4"><span>parameter list</span></a></h5><table><thead><tr><th>parameter name</th><th>type</th><th>Required</th><th>illustrate</th></tr></thead><tbody><tr><td>chartData</td><td>array</td><td>✔️</td><td>Chart data source</td></tr><tr><td>option</td><td>object</td><td></td><td>Configuration items for charts</td></tr><tr><td>width</td><td>string</td><td></td><td>Chart Width</td></tr><tr><td>height</td><td>string</td><td></td><td>Chart Height</td></tr></tbody></table><h5 id="chartdata-example-4" tabindex="-1"><a class="header-anchor" href="#chartdata-example-4"><span>chartData Example</span></a></h5><div class="language-text line-numbers-mode" data-highlighter="prismjs" data-ext="text"><pre><code><span class="line">[</span>
+<span class="line">    { &quot;name&quot;: &quot;一月&quot;, &quot;value&quot;: 40 },</span>
+<span class="line">    { &quot;name&quot;: &quot;二月&quot;, &quot;value&quot;: 21 },</span>
+<span class="line">    { &quot;name&quot;: &quot;三月&quot;, &quot;value&quot;: 17 },</span>
+<span class="line">    { &quot;name&quot;: &quot;四月&quot;, &quot;value&quot;: 13 },</span>
+<span class="line">    { &quot;name&quot;: &quot;五月&quot;, &quot;value&quot;: 9 }</span>
+<span class="line">]</span>
+<span class="line"></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>copy</p><h2 id="radar-chart" tabindex="-1"><a class="header-anchor" href="#radar-chart"><span>Radar chart</span></a></h2><p><img src="https://lfs.k.topthink.com/lfs/c3d98e9be83fd9621f3cc89d19e9d18b435c6d7048b61079a777d821be7fced7.dat" alt=""></p><h5 id="citation-5" tabindex="-1"><a class="header-anchor" href="#citation-5"><span>Citation</span></a></h5><div class="language-text line-numbers-mode" data-highlighter="prismjs" data-ext="text"><pre><code><span class="line">import Radar from &#39;/@/components/chart/Radar&#39;</span>
+<span class="line"></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div></div></div><p>copy</p><h5 id="parameter-list-5" tabindex="-1"><a class="header-anchor" href="#parameter-list-5"><span>parameter list</span></a></h5><table><thead><tr><th>parameter name</th><th>type</th><th>Required</th><th>illustrate</th></tr></thead><tbody><tr><td>chartData</td><td>array</td><td>✔️</td><td>Chart data source</td></tr><tr><td>width</td><td>number</td><td></td><td>Chart Width</td></tr><tr><td>height</td><td>number</td><td></td><td>Chart Height</td></tr><tr><td>option</td><td>object</td><td></td><td>Configuration items</td></tr></tbody></table><h5 id="chartdata-example-5" tabindex="-1"><a class="header-anchor" href="#chartdata-example-5"><span>chartData Example</span></a></h5><div class="language-text line-numbers-mode" data-highlighter="prismjs" data-ext="text"><pre><code><span class="line">[</span>
+<span class="line">{ value: 75, name: &#39;政治&#39;,type:&#39;文综&#39;,max:100 },</span>
+<span class="line">{ value: 65, name: &#39;历史&#39;,type:&#39;文综&#39;,max:100 },</span>
+<span class="line">{ value: 55, name: &#39;地理&#39;,type:&#39;文综&#39;,max:100 },</span>
+<span class="line">{ value: 74, name: &#39;化学&#39;,type:&#39;文综&#39;,max:100 },</span>
+<span class="line">{ value: 38, name: &#39;物理&#39;,type:&#39;文综&#39;,max:100 },</span>
+<span class="line">{ value: 88, name: &#39;生物&#39;,type:&#39;文综&#39;,max:100 },</span>
+<span class="line">]</span>
+<span class="line"></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>copy</p><h2 id="dash-board" tabindex="-1"><a class="header-anchor" href="#dash-board"><span>dash board</span></a></h2><p><img src="https://lfs.k.topthink.com/lfs/869edcb74196b578f565dc43689019a83a8454a01c98127823ff827a577c345e.dat" alt=""></p><h5 id="citation-6" tabindex="-1"><a class="header-anchor" href="#citation-6"><span>Citation</span></a></h5><div class="language-text line-numbers-mode" data-highlighter="prismjs" data-ext="text"><pre><code><span class="line">import Gauge from &#39;/@/components/chart/Gauge&#39;</span>
+<span class="line"></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div></div></div><p>copy</p><h5 id="parameter-list-6" tabindex="-1"><a class="header-anchor" href="#parameter-list-6"><span>parameter list</span></a></h5><table><thead><tr><th>parameter name</th><th>type</th><th>Required</th><th>illustrate</th></tr></thead><tbody><tr><td>chartData</td><td>array</td><td>✔️</td><td>Chart data source</td></tr><tr><td>option</td><td>object</td><td></td><td>Configuration items for charts</td></tr><tr><td>width</td><td>string</td><td></td><td>Chart Width</td></tr><tr><td>height</td><td>string</td><td></td><td>Chart Height</td></tr></tbody></table><h5 id="chartdata-example-6" tabindex="-1"><a class="header-anchor" href="#chartdata-example-6"><span>chartData Example</span></a></h5><div class="language-text line-numbers-mode" data-highlighter="prismjs" data-ext="text"><pre><code><span class="line">{</span>
+<span class="line">name:&#39;出勤率&#39;,</span>
+<span class="line">value:70</span>
+<span class="line">}</span>
+<span class="line"></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>copy</p><h2 id="ranking-list" tabindex="-1"><a class="header-anchor" href="#ranking-list"><span>Ranking List</span></a></h2><p><img src="https://lfs.k.topthink.com/lfs/da9636a03894f4cf3956b0e68bbe6212e5496d9e4acce0b333af2fb2eda0ab7d.dat" alt=""></p><h5 id="citation-7" tabindex="-1"><a class="header-anchor" href="#citation-7"><span>Citation</span></a></h5><div class="language-text line-numbers-mode" data-highlighter="prismjs" data-ext="text"><pre><code><span class="line">import RankList from &#39;@/components/chart/RankList&#39;</span>
+<span class="line"></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div></div></div><p>copy</p><h5 id="parameter-list-7" tabindex="-1"><a class="header-anchor" href="#parameter-list-7"><span>parameter list</span></a></h5><table><thead><tr><th>parameter name</th><th>type</th><th>Required</th><th>illustrate</th></tr></thead><tbody><tr><td>title</td><td>string</td><td></td><td>Chart title</td></tr><tr><td>list</td><td>array</td><td></td><td>Ranking list data</td></tr><tr><td>height</td><td>number</td><td></td><td>Chart height, default adaptive height</td></tr></tbody></table><h5 id="list-example" tabindex="-1"><a class="header-anchor" href="#list-example"><span>list example</span></a></h5><div class="language-text line-numbers-mode" data-highlighter="prismjs" data-ext="text"><pre><code><span class="line">[</span>
+<span class="line">    { &quot;name&quot;: &quot;北京朝阳 1 号店&quot;, &quot;total&quot;: 1981 },</span>
+<span class="line">    { &quot;name&quot;: &quot;北京朝阳 2 号店&quot;, &quot;total&quot;: 1359 },</span>
+<span class="line">    { &quot;name&quot;: &quot;北京朝阳 3 号店&quot;, &quot;total&quot;: 1354 },</span>
+<span class="line">    { &quot;name&quot;: &quot;北京朝阳 4 号店&quot;, &quot;total&quot;: 263 },</span>
+<span class="line">    { &quot;name&quot;: &quot;北京朝阳 5 号店&quot;, &quot;total&quot;: 446 },</span>
+<span class="line">    { &quot;name&quot;: &quot;北京朝阳 6 号店&quot;, &quot;total&quot;: 796 }</span>
+<span class="line">]</span>
+<span class="line"></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>copy</p></div><!--[--><!--]--></div><footer class="vp-page-meta"><div class="vp-meta-item edit-link"><a class="auto-link external-link label" href="https://github.com/yourusername/vuepress-template/edit/main/docs/syncadmin/front-end-experience/custom-chart-components.md" aria-label="Edit this page on GitHub" rel="noopener noreferrer" target="_blank"><!--[--><!--[--><svg class="edit-icon" viewbox="0 0 1024 1024"><g fill="currentColor"><path d="M430.818 653.65a60.46 60.46 0 0 1-50.96-93.281l71.69-114.012 7.773-10.365L816.038 80.138A60.46 60.46 0 0 1 859.225 62a60.46 60.46 0 0 1 43.186 18.138l43.186 43.186a60.46 60.46 0 0 1 0 86.373L588.879 565.55l-8.637 8.637-117.466 68.234a60.46 60.46 0 0 1-31.958 11.229z"></path><path d="M728.802 962H252.891A190.883 190.883 0 0 1 62.008 771.98V296.934a190.883 190.883 0 0 1 190.883-192.61h267.754a60.46 60.46 0 0 1 0 120.92H252.891a69.962 69.962 0 0 0-69.098 69.099V771.98a69.962 69.962 0 0 0 69.098 69.098h475.911A69.962 69.962 0 0 0 797.9 771.98V503.363a60.46 60.46 0 1 1 120.922 0V771.98A190.883 190.883 0 0 1 728.802 962z"></path></g></svg><!--]--><!--]-->Edit this page on GitHub<!--[--><!--[--><!--]--><!--]--></a></div><div class="vp-meta-item git-info"><div class="vp-meta-item last-updated"><span class="meta-item-label">Last updated: </span><time class="meta-item-info" datetime="2025-06-06T03:07:21.000Z" data-allow-mismatch>25. 6. 6. 오후 12:07</time></div><div class="vp-meta-item contributors"><span class="meta-item-label">Contributors: </span><span class="meta-item-info"><!--[--><!--[--><span class="contributor" title="email: poh@empasy.com">poh</span><!----><!--]--><!--]--></span></div></div></footer><!----><!--[--><!--]--></main><!--]--></div><!--[--><!----><!----><!--]--><!--]--></div>
+    <script type="module" src="/assets/app-DGEuurYf.js" defer></script>
+  </body>
+</html>

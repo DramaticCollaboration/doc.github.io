@@ -1,0 +1,17 @@
+import{_ as a,c as e,a as s,o as n}from"./app-DGEuurYf.js";const l={};function d(o,t){return n(),e("div",null,t[0]||(t[0]=[s(`<h1 id="flowchart" tabindex="-1"><a class="header-anchor" href="#flowchart"><span>FlowChart</span></a></h1><p>Flowchart component, <code>didi/LogicFlow</code>a simple package based on . For detailed configuration, please refer to the document <a href="http://logic-flow.org/guide/start.html" target="_blank" rel="noopener noreferrer">FlowChart</a></p><h2 id="usage" tabindex="-1"><a class="header-anchor" href="#usage"><span>Usage</span></a></h2><div class="language-text line-numbers-mode" data-highlighter="prismjs" data-ext="text"><pre><code><span class="line">&lt;template&gt;</span>
+<span class="line">  &lt;FlowChart :data=&quot;demoData&quot; /&gt;</span>
+<span class="line">&lt;/template&gt;</span>
+<span class="line"></span>
+<span class="line">&lt;script lang=&quot;ts&quot;&gt;</span>
+<span class="line">  import { FlowChart } from &#39;/@/components/FlowChart&#39;;</span>
+<span class="line">  import { PageWrapper } from &#39;/@/components/Page&#39;;</span>
+<span class="line"></span>
+<span class="line">  import demoData from &#39;./dataTurbo.json&#39;;</span>
+<span class="line">  export default {</span>
+<span class="line">    components: { FlowChart, PageWrapper },</span>
+<span class="line">    setup() {</span>
+<span class="line">      return { demoData };</span>
+<span class="line">    },</span>
+<span class="line">  };</span>
+<span class="line">&lt;/script&gt;</span>
+<span class="line"></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>copy</p><h2 id="props" tabindex="-1"><a class="header-anchor" href="#props"><span>Props</span></a></h2><table><thead><tr><th>Attributes</th><th>type</th><th>default value</th><th>Optional Values</th><th>illustrate</th></tr></thead><tbody><tr><td>flowOptions</td><td><code>object</code></td><td>-</td><td>-</td><td>FlowCharts Configuration Items</td></tr><tr><td>data</td><td><code>object</code></td><td>-</td><td>-</td><td>Process data</td></tr><tr><td>toolbar</td><td><code>boolean</code></td><td><code>true</code></td><td>-</td><td>Whether to display the toolbar</td></tr><tr><td>patternItems</td><td><code>[]</code></td><td>-</td><td>-</td><td>Drag list data on the left</td></tr></tbody></table>`,7)]))}const i=a(l,[["render",d]]),c=JSON.parse('{"path":"/syncadmin/ui-component-library/more-basic-components/flow-chart.html","title":"FlowChart","lang":"ko-KR","frontmatter":{"order":13},"git":{"updatedTime":1749179241000,"contributors":[{"name":"poh","username":"poh","email":"poh@empasy.com","commits":1,"url":"https://github.com/poh"}],"changelog":[{"hash":"a96cbbf1f6c96d0e9d6bafa4174131f10429b849","time":1749179241000,"email":"poh@empasy.com","author":"poh","message":"sync 제품군 추가"}]},"filePathRelative":"syncadmin/ui-component-library/more-basic-components/flow-chart.md"}');export{i as comp,c as data};

@@ -1,0 +1,12 @@
+import{_ as a,c as n,a as s,o as i}from"./app-DGEuurYf.js";const c={};function o(t,e){return i(),n("div",null,e[0]||(e[0]=[s(`<h1 id="nacos-configuration-to-achieve-dynamic-refresh" tabindex="-1"><a class="header-anchor" href="#nacos-configuration-to-achieve-dynamic-refresh"><span>nacos configuration to achieve dynamic refresh</span></a></h1><p>The following are examples of usage:</p><div class="language-text line-numbers-mode" data-highlighter="prismjs" data-ext="text"><pre><code><span class="line">@RefreshScope</span>
+<span class="line">@Slf4j</span>
+<span class="line">@Component</span>
+<span class="line">@DependsOn({&quot;gatewayRoutersConfiguration&quot;})</span>
+<span class="line">public class DynamicRouteLoader implements ApplicationEventPublisherAware {</span>
+<span class="line">    /**</span>
+<span class="line">     * 路由配置方式：database，yml，nacos</span>
+<span class="line">     */</span>
+<span class="line">    @Value(&quot;\${jeecg.route.config.data-type:database}&quot;)</span>
+<span class="line">    public  String DATA_TYPE;</span>
+<span class="line">}</span>
+<span class="line"></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>copy</p><p>The core is to add the @RefreshScope annotation to the class that needs to be dynamically refreshed, so that when I modify the data-type in nacos, I<br> can dynamically switch the routing loading mode to achieve the purpose of not restarting the service</p>`,5)]))}const r=a(c,[["render",o]]),p=JSON.parse('{"path":"/syncboot/microservice/practical-skills/nacos-configuration-to-achieve-dynamic-refresh.html","title":"nacos configuration to achieve dynamic refresh","lang":"ko-KR","frontmatter":{"order":8},"git":{"updatedTime":1749179241000,"contributors":[{"name":"poh","username":"poh","email":"poh@empasy.com","commits":1,"url":"https://github.com/poh"}],"changelog":[{"hash":"a96cbbf1f6c96d0e9d6bafa4174131f10429b849","time":1749179241000,"email":"poh@empasy.com","author":"poh","message":"sync 제품군 추가"}]},"filePathRelative":"syncboot/microservice/practical-skills/nacos-configuration-to-achieve-dynamic-refresh.md"}');export{r as comp,p as data};
