@@ -24,8 +24,7 @@ order: 7
 
 copy
 
-The reference configuration is as follows:  
-![](/images/f2c827f8e51a19185e246cbf2f1f4d893aa592aacc779aa68da6520368e25656.png)
+The reference configuration is as follows:
 
 2\. Delete the plugin spring-boot-maven-plugin in the pom.xml file and  
 configure the following deletion
@@ -46,21 +45,15 @@ copy
 3\. Comment out the ServerEndpointExporter registration method  
 path of WebSocketConfig:`jeecg-boot-base/jeecg-boot-base-core/org.jeecg.config.WebSocketConfig`
 
-![](/images/e5f32fa8b3b4afede906b5440e38e87f783b74f3f26c54e5f9b8ce694dd4ee70.png)
-
 4\. Modify the configuration file application-prod.yml
 
 - a. Modify database connection
 - b. Modify cache redis configuration
-- c. Modify the upload attachment configuration  
-  ![](/images/image_1687780527525.png)
-- d. Switch to production mode packaging  
-  ![](/images/78d33015f60e37d29e116c5e556f126bcdf086302efb8c9546c8339c07bb7135.png)
+- c. Modify the upload attachment configuration
+- d. Switch to production mode packaging
 
 First execute the install operation of jeecg-boot-parent  
-![](/images/dc385a6c882ebb0205dd7cac03967cd7e73d37ee2ef082bba79bae476076a046.png)  
-Then maven package war package  
-![](/images/e71dd8947a0b76ae8793ae40dd7e4e39d0fe6934eb65427ecbcce6f53c35ab2b.png)
+Then maven package war package
 
 ### 2\. Deploy the background project jeecg-boot to tomcat
 
@@ -91,8 +84,6 @@ copy
 
 - 2\. Build and package  
   Use the build command to package the project
-
-![](/images/a026d0cf82b29f8009bfc791b61ffde147537b86df32988ef73ddfb1c96159ac.png)
 
 After the build is completed, a dist directory will be generated.
 
@@ -167,5 +158,3 @@ copy
 
 Access the project through `http://你的前端域名`, and the following page will appear, indicating success.  
 Account/password: admin/123456
-
-![](/images/image_1681396415192.png)

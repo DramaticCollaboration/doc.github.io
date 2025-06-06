@@ -4,19 +4,17 @@ order: 2
 
 # Directive and Method
 
-![](/cms/directive-and-method/001.png "logo") www.publiccms.com
-
-**PublicCMS**
+**SyncCMS**
 
 Directive and Method Manual
 
-[1 Introduction to PublicCMS 3]()
+[1 Introduction to SyncCMS 3]()
 
 [1.1 Profile 3]()
 
 [1.2 License Agreement 3]()
 
-[1.3 Access to PublicCMS 4]()
+[1.3 Access to SyncCMS 4]()
 
 [2 Template directive and method overview 4]()
 
@@ -58,28 +56,28 @@ Directive and Method Manual
 
 [5.2 Commercial technical support 104]()
 
-1. # <a name="_toc466562193"></a><a name="_toc466562780"></a><a name="_toc466563155"></a><a name="_toc466563476"></a><a name="_toc483039311"></a><a name="_toc22743461"></a><a name="_toc127369289"></a><a name="_toc127627962"></a>Introduction to PublicCMS
+1. # <a name="_toc466562193"></a><a name="_toc466562780"></a><a name="_toc466563155"></a><a name="_toc466563476"></a><a name="_toc483039311"></a><a name="_toc22743461"></a><a name="_toc127369289"></a><a name="_toc127627962"></a>Introduction to SyncCMS
    1. ## <a name="_toc127369290"></a><a name="_toc127627963"></a>Profile
-      PublicCMS is designed based on the latest 2023 Java technology with open source code and structure friendly to SEO. PublicCMS can operate/manage hundreds of thousands of data and PV easily. PublicCMS has been accepted and used by many famous companies and enterprises, and it owns 0.0005% of the total websites of the world. We provide free version and technical support , and we believe PublicCMS will be a good choice for great data website construction and big enterprise projects.
+      SyncCMS is designed based on the latest 2023 Java technology with open source code and structure friendly to SEO. SyncCMS can operate/manage hundreds of thousands of data and PV easily. SyncCMS has been accepted and used by many famous companies and enterprises, and it owns 0.0005% of the total websites of the world. We provide free version and technical support , and we believe SyncCMS will be a good choice for great data website construction and big enterprise projects.
 
-- PublicCMS is suitable for both dynamic website and static website;
-- PublicCMS can support multi-site creation, with totally separate data and templates for each website.
+- SyncCMS is suitable for both dynamic website and static website;
+- SyncCMS can support multi-site creation, with totally separate data and templates for each website.
 
 1. ## <a name="_toc22743463"></a><a name="_toc127369291"></a><a name="_toc127627964"></a>License Agreement
 
-| <p>1. Authorized rights</p><p>&emsp;1.1. Modify ,Copy and share PublicCMS and its source code;</p><p>&emsp;1.2. Get free authorization document based on prerequisite agreement, and use PublicCMS in non-business conditions ( for individual user only);</p><p>&emsp;1.3. Application of PublicCMS in business usage is allowed for at most 3 months. webpages developed must be marked with “Powered by PublicCMS”. The PublicCMS logo and license agreement must appear in an obvious position of the website.</p><p>&emsp;1.4. Application of PublicCMS in business usage should be authorized by the owner of the software by buying the authorization document. The company authorized should be the final user of the PublicCMS.</p><p>&emsp;1.5. Licensed users can Modify ,Copy and spread PublicCMS and its source code ;</p><p>&emsp;1.6. The license agreement applies only to the current version of the PublicCMS, earlier versions have their own license agreement;</p><p>2. Copyright</p><p>&emsp;2.1. The copyright of the software belongs to the official owner of the PublicCMS;</p><p>3. Disclaimer (of warranty)</p><p>&emsp;3.1. PublicCMS and its affiliated documents are provided with no responsibilities for any possible risk, and can not provide any warranties; </p><p>&emsp;3.2. Before using PublicCMS, one should fully understand it and assume its possible risks. We won`t provide any technical support or usage warranty, and are not responsible for any risks caused by using PublicCMS unless you have bought the technology support service. </p><p></p> |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| <p>1. Authorized rights</p><p>&emsp;1.1. Modify ,Copy and share SyncCMS and its source code;</p><p>&emsp;1.2. Get free authorization document based on prerequisite agreement, and use SyncCMS in non-business conditions ( for individual user only);</p><p>&emsp;1.3. Application of SyncCMS in business usage is allowed for at most 3 months. webpages developed must be marked with “Powered by SyncCMS”. The SyncCMS logo and license agreement must appear in an obvious position of the website.</p><p>&emsp;1.4. Application of SyncCMS in business usage should be authorized by the owner of the software by buying the authorization document. The company authorized should be the final user of the SyncCMS.</p><p>&emsp;1.5. Licensed users can Modify ,Copy and spread SyncCMS and its source code ;</p><p>&emsp;1.6. The license agreement applies only to the current version of the SyncCMS, earlier versions have their own license agreement;</p><p>2. Copyright</p><p>&emsp;2.1. The copyright of the software belongs to the official owner of the SyncCMS;</p><p>3. Disclaimer (of warranty)</p><p>&emsp;3.1. SyncCMS and its affiliated documents are provided with no responsibilities for any possible risk, and can not provide any warranties; </p><p>&emsp;3.2. Before using SyncCMS, one should fully understand it and assume its possible risks. We won`t provide any technical support or usage warranty, and are not responsible for any risks caused by using SyncCMS unless you have bought the technology support service. </p><p></p> |
+| ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 
-1. ## <a name="_toc483039313"></a><a name="_toc22743464"></a><a name="_toc127369292"></a><a name="_toc127627965"></a>Access to PublicCMS
+1. ## <a name="_toc483039313"></a><a name="_toc22743464"></a><a name="_toc127369292"></a><a name="_toc127627965"></a>Access to SyncCMS
    Executable file download:
 
-[https://www.publiccms.com/download.html]()
+[https://www.SyncCMS.com/download.html]()
 
-PublicCMS source code download:
+SyncCMS source code download:
 
-`	`GITEE: <https://gitee.com/sanluan/PublicCMS>
+`	`GITEE: <https://gitee.com/sanluan/SyncCMS>
 
-`	`GITHUB: [https://github.com/sanluan/PublicCMS]()
+`	`GITHUB: [https://github.com/sanluan/SyncCMS]()
 
 1. # <a name="_toc127627966"></a>**Template directive and method overview**
    1. ## <a name="_toc127627967"></a>Directive usage
@@ -95,7 +93,7 @@ There are four main types of directive in the template:
 Most of the directive and method support http interface access, but , requests to some sensitive data with interface permission protection need to carry the appToken parameter.
 
 1. ## <a name="_toc127627968"></a>Method usage
-   Method is a lightweight extension to a template that accepts zero or multiple parameters and returns a single piece of data. Method is also a special data model template, which is used for user data processing and extension field acquisition in PublicCMS. Most of the methods in the template can be invoked by js , json interfaces ,or other systems.
+   Method is a lightweight extension to a template that accepts zero or multiple parameters and returns a single piece of data. Method is also a special data model template, which is used for user data processing and extension field acquisition in SyncCMS. Most of the methods in the template can be invoked by js , json interfaces ,or other systems.
 1. ## <a name="_toc127627969"></a>Authorization to third party’s application access to interface
 
 - Create an application; Select the interfaces allowed to be accessed and set the Token validity period
@@ -104,7 +102,7 @@ Most of the directive and method support http interface access, but , requests t
 - Use appToken to request protective interfaces to get the data
 
 1. # <a name="_toc127627970"></a>**Template directive**
-   CMS data directive is a kind of extension of FreeMarker, which is encapsulated and extended in PublicCMS.
+   CMS data directive is a kind of extension of FreeMarker, which is encapsulated and extended in SyncCMS.
 1. ## <a name="_toc127627971"></a>General data structure
    page property list
 
@@ -2543,7 +2541,7 @@ Use Example
 Return Result
 
 - page: [PageHandler]()
-- page.list: list type Query result entity list com.publiccms.entities.sys.SysDeptCategory
+- page.list: list type Query result entity list com.SyncCMS.entities.sys.SysDeptCategory
 
 Use Example
 
@@ -2600,9 +2598,9 @@ Use Example
 Use Example
 
 ```
-<@sys.domain id='www.publiccms.com'>${object.name}</@sys.domaing>
+<@sys.domain id='www.SyncCMS.com'>${object.name}</@sys.domaing>
 
-<@sys.domain ids='www.publiccms.com,www.sanluan.com'><#list map as k,v>${k}:${v.name}<#sep>,</#list></@sys.domain>
+<@sys.domain ids='www.SyncCMS.com,www.sanluan.com'><#list map as k,v>${k}:${v.name}<#sep>,</#list></@sys.domain>
 
 <script>
 
@@ -5380,13 +5378,13 @@ Return Result
 Use Example
 
 ```
-${getPage('https://www.publiccms.com/introduction/index\_3.html',2)}
+${getPage('https://www.SyncCMS.com/introduction/index\_3.html',2)}
 
-${getPage('https://search.publiccms.com/?word=cms',2,'pageIndex')}
+${getPage('https://search.SyncCMS.com/?word=cms',2,'pageIndex')}
 
 <script>
 
-$.getJSON('${site.dynamicPath}api/method/getHash?parameters=https://www.publiccms.com/introduction/index\_3.html&parameters=2', function(data){
+$.getJSON('${site.dynamicPath}api/method/getHash?parameters=https://www.SyncCMS.com/introduction/index\_3.html&parameters=2', function(data){
 
 console.log(data);
 
@@ -5577,11 +5575,11 @@ Return Result
 Use Example
 
 ```
-${getTextFromHtml('<a href="http://www.publiccms.com/">publiccms</a>')}
+${getTextFromHtml('<a href="http://www.SyncCMS.com/">SyncCMS</a>')}
 
 <script>
 
-$.getJSON('${site.dynamicPath}api/method/getTextFromHtml?parameters=<a href="http://www.publiccms.com/">publiccms</a>', function(data){
+$.getJSON('${site.dynamicPath}api/method/getTextFromHtml?parameters=<a href="http://www.SyncCMS.com/">SyncCMS</a>', function(data){
 
 console.log(data);
 
@@ -5656,7 +5654,7 @@ ${getXml('<xml><data>value</data></xml>').xml.data}
 
 1. # <a name="_toc127369304"></a><a name="_toc127627983"></a>**Technical support**
    1. ## <a name="_toc127369305"></a><a name="_toc127627984"></a>**Free technical support**
-      PublicCMS official website: [https://www.publiccms.com/]()
+      SyncCMS official website: [https://www.SyncCMS.com/]()
 
 QQ communication group: [Group one 191381542]() , [Group two 481589563]() , [Group three 638756883]() , [Group four 930992232]()
 

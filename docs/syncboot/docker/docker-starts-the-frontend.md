@@ -27,8 +27,6 @@ copy
 
 You can use the tool [SwitchHosts](https://download.csdn.net/download/zhangdaiscott/88918530) to quickly configure the host.
 
-![](/images/2d67421b7badd2e7c7dda0aeef28b677fa69d6059d1b4c88f7fd566ee5a8cae8.png)
-
 ### 3\. Configure the backend domain name (can be ignored)
 
 Enter the front-end project
@@ -90,7 +88,6 @@ copy
 > If you cannot get the verification code, please change the host in the background to the real IP address, and do not use 127.0.0.1.  
 > Refer to the figure below, and restart the front-end docker after changing it.
 
-![](/images/9a56f70648b1a25b1a55083e5794448496f7b306bafa967b16b7baef008edc2a.png)  
 After restarting, refresh the page to get the verification code.
 
 ---

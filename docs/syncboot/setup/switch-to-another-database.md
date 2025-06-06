@@ -9,10 +9,9 @@ order: 4
 ## Important Prerequisites
 
 `3.6.2+`The automatic database upgrade mechanism is added in the version. By default , it only supports MySQL 5.7 and MySQL 8. Therefore `flyway`, you must turn off the flyway configuration when switching to other databases.  
-`application-dev.yml``spring.flyway.enabled=false`  
-![](/images/6944889e888652985feba75ed63b6986560cce67407399205785f50d1157923f.dat)  
-If you don't change it, you will get an error.  
-![](/images/036aee0d166ba9981f1389bcb7c6ee7f6fa236899fadf64ff710ef623c33332d.dat)
+`application-dev.yml``spring.flyway.enabled=false`
+
+If you don't change it, you will get an error.
 
 ## 1\. Oracle Data
 
@@ -104,7 +103,6 @@ copy
 
 ### 2.4 After starting sqlserver, if the console keeps scrolling as shown below
 
-![](/images/screenshot_1609379950094.png)  
 Modifiable configuration files
 
 ```
@@ -113,8 +111,6 @@ web-stat-filter:
 ```
 
 copy
-
-![](/images/4c376238724de1f5d4487f4a3067bea6717b4a33930124c5211a68472778f51f.dat)
 
 ### 2.5 SQL Server failed to start, reporting an error: "variant" data type is not supported
 
@@ -130,10 +126,9 @@ The problem can be solved by changing the sqlserver version, replacing sqljdbc4 
 
 copy
 
-Error message:  
-![](/images/screenshot_1640592024420.png)  
-Modify the dependent jar package:  
-![](/images/e561e6d4bfc2a65fccccb784f4c67d56e5c2670584210ae28a08ff1204af9a63.dat)
+Error message:
+
+Modify the dependent jar package:
 
 ## 3\. postgresql database
 
@@ -232,8 +227,6 @@ jpa:
 
 copy
 
-![](/images/cdfdac98d4b074cdfeba3a03d3b2b618ce12c4c5fd75eba578045dced5e8ba05.dat)
-
 - If springboot is upgraded to 2.6+, you also need to modify the quartz configuration
 
 ```
@@ -252,8 +245,6 @@ driverClassName: dm.jdbc.driver.DmDriver
 ```
 
 copy
-
-![](/images/e3cfec1dae8679ee7d6c9d0fa8eb7d3d3731e79ff5872a15d4b797bc3c226da8.dat)
 
 ## 5\. Renmin University of China Jincang Database
 
@@ -285,8 +276,6 @@ jpa:
 
 copy
 
-![](/images/f80bd665b6e1aa43b4c883b06ca0d55f20250a8f8e9e86e1238ce77987abf124.dat)
-
 - If springboot is upgraded to 2.6+, you also need to modify the quartz configuration
 
 ```
@@ -316,8 +305,6 @@ driver-class-name: com.kingbase8.Driver
 
 copy
 
-![](/images/7e9ded77f7c5d3f92a6009b38d80c484aeaa1a768d6ead3d486b3d4eaeaa435c.dat)
-
 ## 6\. TIDB Database
 
 ### 6.1 Add TIDB driver and modify pom.xml
@@ -343,8 +330,6 @@ driver-class-name: com.mysql.cj.jdbc.Driver
 ```
 
 copy
-
-![](/images/50b7e78c6c9aead96f17845151e8f987413a4b2cc9556685d7fb85c938af09c4.dat)
 
 > For more information, see [Integrate TiDB with SyncBoot.](../SyncBoot-Use-TiDB.html)
 

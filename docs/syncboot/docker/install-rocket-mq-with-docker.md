@@ -78,7 +78,3 @@ docker-compose down
 copy
 
 #### 4\. Access the RocketMQ management interface
-
-![](/images/b9f15bcd01c3d39e080defa483dd8923c44b9a39d6771316c8c92a802cb99728.png)
-
-![](/images/9306d7c03f57678a0b8ce7a02857ed6c8d9d04fe73509ecfe129b5a3c39917b7.png)

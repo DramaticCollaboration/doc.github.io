@@ -4,8 +4,7 @@ order: 8
 
 # MongoDB 설정
 
-- MongoDB yml configuration  
-  ![](/images/35dc2a6f27106c9c5f19df5c3abbe63e87fa35787d6fad823689173656f55b1d.png)
+- MongoDB yml configuration
 
 ```
 spring:

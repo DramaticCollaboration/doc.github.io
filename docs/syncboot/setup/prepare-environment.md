@@ -28,5 +28,3 @@ Development environment needs to be installed`JDK8+（支持17）、Maven、Redi
 
 - [Video on building a development environment from scratch](https://www.bilibili.com/video/BV1F4421X7MG)
 - All software is packaged and organized here, [and can be downloaded at once](https://pan.baidu.com/s/1knnPfc59LvybVuyTflEfqQ?pwd=gdkw)
-
-![](/images/844797e41b403f2fb0551deb030aeac82a01e590d65245f549e02d6bbda98e1e.png)

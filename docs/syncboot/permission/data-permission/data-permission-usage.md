@@ -22,20 +22,15 @@ The specific steps based on annotations `@PermissionData(pageComponent="system/U
 
 ### 1\. Configure page menu
 
-![](/images/9e3c9d0ec1da0591c6167390238846e6f42d22a16c7cb5f08694b8ff1835eaeb.png)
-
 ### 2\. Annotate JAVA methods
 
-Add annotations to the request method. `@PermissionData(pageComponent="system/UserList")`The value of the parameter pageComponent should be consistent with the front-end component value of the menu.  
-![](/images/719f86eb0751950165c2e26ddca8d9719cb38abba66a30d08dbd1d1b4a31ce96.png)
+Add annotations to the request method. `@PermissionData(pageComponent="system/UserList")`The value of the parameter pageComponent should be consistent with the front-end component value of the menu.
 
 ### 3\. Configure data permissions for the menu
 
-Find the page menu where you need to configure permissions. This is the user management menu. Configure data rules directly on this menu.  
-![](/images/3a746e1c127f3eb82a10cb5b6c794c3ca5de7dad96f19d1820379549e8537f36.png)
+Find the page menu where you need to configure permissions. This is the user management menu. Configure data rules directly on this menu.
 
-Data permission configuration (only view users with male gender)  
-![](/images/bb91e8f51de95b17356455b5de823f96333db0da8261191a98fd187de36ca329.png)
+Data permission configuration (only view users with male gender)
 
 #### Rule field configuration instructions
 
@@ -54,12 +49,9 @@ Reference document: [Permission configuration custom SQL](dessql.html)
 
 ### 4\. Role Authorization
 
-![](/images/7ca69aa95b078b18223562140253c774bb6223b8a48384c63ef802f3d48a63c3.png)
-
 ### 5\. Test permissions
 
-Log out and log in again, access the user management interface and find that the data has been filtered. Only male data is seen, indicating that the permission is effective!  
-![](/images/a998820b413a79e7ff72ab2628f2db003bc15406d65de34187e92373eae3c8c5.png)
+Log out and log in again, access the user management interface and find that the data has been filtered. Only male data is seen, indicating that the permission is effective!
 
 If you want to isolate data based on the login person or the login person's department, [refer to the Data Permission Rules section.](readme.html)
 

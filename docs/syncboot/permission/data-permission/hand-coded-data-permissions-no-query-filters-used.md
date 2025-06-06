@@ -6,14 +6,11 @@ order: 9
 
 > Preface: The existing list data permissions require calling the QueryGenerator.initQueryWrapper method in the backend list request, otherwise the configured permissions cannot take effect. Therefore, this section describes how to manually obtain data permissions, not through the above method, but by processing it externally.
 
-Prepare the case: `权限配置细节不作赘述，请查看相关文档`( )
+Prepare the case: `The details of permission configuration will not be detailed, please refer to the relevant documentation`( )
 
-- View the menu Common Cases --> Single Table Model Example. When there is no permission, the data is as follows:  
-  ![](/images/screenshot_1568888100896.png)
-- Configure a data permission rule as shown below and authorize  
-  ![](/images/6260ab26294158e76d85c27ec2aacb27dcc2e8f75c2c5615fba1f821f5949904.png)
-- The filtered data is as follows:  
-  ![](/images/a16561405d0325cd3e4527e319b7f59e568ec936bad08e13b45340f5ea34b5e4.png)
+- View the menu Common Cases --> Single Table Model Example. When there is no permission, the data is as follows:
+- Configure a data permission rule as shown below and authorize
+- The filtered data is as follows:
 
 Implementation plan:  
 1\. Convert data permission rules into SQL, and the program can get this SQL and splice it into the XML of mybatis

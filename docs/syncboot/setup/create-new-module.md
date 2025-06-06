@@ -30,5 +30,3 @@ Note: `-DarchetypeVersion=2.0`The version number is fixed and does not need to b
 Generated POM structure
 
 ## Use IDEA to create a module
-
-<video src="/online8.mp4" width="100%"  controls></video>

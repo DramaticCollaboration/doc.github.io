@@ -40,8 +40,7 @@ pnpm run build
 
 copy
 
-- Packaging success  
-  ![](/images/e44dd26ade1a08b65c4b21d2d0fab744f9c2ffad638b679a6e311e396ea2a7cb.png)
+- Packaging success
 
 ## 2\. Deploy the front end through nginx
 
@@ -94,8 +93,6 @@ copy
 Put the dist content `/srv/www/project`in the directory of the server.  
 `/srv/www/project`Customization is allowed, but it needs to be consistent with the configuration in nginx.
 
-![](/images/344f37370c9de169ea627ab319e715feab068d621723f463611fa8926def725c.png)
-
 ## 4\. Modify the background configuration after compilation
 
 ```
@@ -103,8 +100,6 @@ dist\_app.config.js
 ```
 
 copy
-
-![](/images/d619482053f0da9e04cc3b62d5973170a5d5c8ba9a219b89c3e8eb4f623de822.png)
 
 ## 5\. Other Techniques
 

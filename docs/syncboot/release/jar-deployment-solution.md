@@ -10,8 +10,6 @@ order: 3
 
 > Recommended general server configuration: 4 cores + 8G memory + 50G hard disk. Of course, the higher the configuration, the better, and you `2核/4GB`can also run it to save costs;
 
-![](/images/0f4b17b85f681aeccc0ef2e98c1c06b212802453dc973eae63092fa72f2e89db.png)
-
 ## Formal environment deployment
 
 > - Backend services run as JAR
@@ -23,17 +21,11 @@ order: 3
 
 > Modify database connection, cache redis, upload attachments and other configurations
 
-![](/images/image_1687780472229.png)
-
 - 2\. Switch Maven to production mode
 
-![](/images/cc83eeaeae887419bf58dde5eb93d5b266c9ad1d8af9f5664358c54ca7d0b014.png)
+- 3\. Packaging through jeecg-boot-parent
 
-- 3\. Packaging through jeecg-boot-parent  
-  ![](/images/6cb202b500ab0a4cb2998ab219be3344499c7bd41820e136f2a7d294ab5d244b.png)
-
-- 4\. Get `jeecg-system-start-{版本号}.jar`the package  
-  ![](/images/2f6223dba4f38a0965255597ec413430ee94daa2224b67de888ec41de498bba1.png)
+- 4\. Get `jeecg-system-start-{版本号}.jar`the package
 
 ### 2\. Start the backend through JAR
 
@@ -104,13 +96,11 @@ copy
 #### 3.2 Front-end dist location description
 
 Put the dist content `/srv/www/project`in the directory of the server.  
-`/srv/www/project`Customization is allowed, but it needs to be consistent with the configuration in nginx.  
-![](/images/77383b7c78c604df3ed97e97035a43d80620d3c63b6ddde292ccfb08a36361e3.png)
+`/srv/www/project`Customization is allowed, but it needs to be consistent with the configuration in nginx.
 
 ### 4\. Access the application
 
-Access the project via: [http://your domain name](#!) , the following page will appear, use the account/password: admin/123456 to log in successfully  
-![](/images/image_1681395890291.png)
+Access the project via: [http://your domain name](#!) , the following page will appear, use the account/password: admin/123456 to log in successfully
 
 ### 5\. Backend configuration of independent API domain name (nginx mapping)
 

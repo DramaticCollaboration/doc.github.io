@@ -18,8 +18,7 @@ Method 1: Set **the system environment variable** : SPRING_AMQP_DESERIALIZATION_
 **IntelliJ IDEA:**
 
 1.  Edit Run Settings
-2.  Click More Options, check Environment Variables, and fill in`SPRING_AMQP_DESERIALIZATION_TRUST_ALL=true`  
-    ![](/images/7e9eb404503ea17a7ca0977c0e5772789eaba50d5d32ab62a850fb999edb9c0e.png)
+2.  Click More Options, check Environment Variables, and fill in`SPRING_AMQP_DESERIALIZATION_TRUST_ALL=true`
 
 Method 2 (recommended): Use `Jackson2JsonMessageConverter`message conversion classes instead `simple`.
 

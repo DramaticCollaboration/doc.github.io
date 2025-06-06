@@ -3222,9 +3222,10 @@ register 用于注册 useTable，如果需要使用`useTable`提供的 api，必
 
 ### Methods
 
-| 方法名                | 类型                                                        | 说明                                                                                                                                                                                                                                             |
+```
+| Method name                | Type                                                        | description                                                                                                                                                                                                                                             |
 | --------------------- | ----------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| setProps              | (props: Partial<BasicTableProps>) => void                   | 用于设置表格参数                                                                                                                                                                                                                                 |
+| setProps              | (props: Partial<BasicTableProps>) => void                   | Used to set table parameters                                                                                                                                                                                                                                 |
 | reload                | (opt?: FetchParams) => Promise<void>                        | 刷新表格                                                                                                                                                                                                                                         |
 | redoHeight            | () => void                                                  | 重新计算表格高度                                                                                                                                                                                                                                 |
 | setLoading            | (loading: boolean) => void                                  | 设置表格 loading 状态                                                                                                                                                                                                                            |
@@ -3249,6 +3250,7 @@ register 用于注册 useTable，如果需要使用`useTable`提供的 api，必
 | **getForm**           | () => FormActionType                                        | If the search area is enabled, you can use this function to get the form object function to operate                                                                                                                                              |
 | expandAll             | () => void                                                  | Expand the tree table                                                                                                                                                                                                                            |
 | collapseAll           | () => void                                                  | Collapse Tree Table                                                                                                                                                                                                                              |
+```
 
 ## Global Configuration
 

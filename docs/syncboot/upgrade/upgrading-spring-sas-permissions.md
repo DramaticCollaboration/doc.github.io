@@ -10,8 +10,6 @@ order: 4
 
 - The Spring team officially announced that **Spring Security OAuth will no longer be maintained** and the project will not be iterated any further.
 
-![](/images/52ef49bfad5e54855339b606a598bdcc362667b424487e22daf883fba0375443.png)
-
 - Currently, the OAuth2 authorization server in the Spring ecosystem is **Spring Authorization Server** , which is now available **for production use.**
 - As the latest permission scheme for SpringBoot 3.0, the SyncBoot springboot3_sas branch has completed the work of replacing Shiro with Spring Authorization Server.
 

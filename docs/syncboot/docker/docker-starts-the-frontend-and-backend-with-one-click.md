@@ -23,8 +23,6 @@ copy
 Modify the database and redis connections in application-dev.yml  
 to `jeecg-boot-mysql`and`jeecg-boot-redis`
 
-![](/images/335c815c5c7b8d084c00b8de32d9b980be89d23dd8e2c8495adbf58823daa09b.png)
-
 ### 3\. Compile the background project
 
 Enter the backstage
@@ -76,8 +74,7 @@ copy
 
 ### 6\. Start the image container group
 
-Enter the SyncBoot root path  
-![](/images/c27f77c8b095df558b004b67894ea6a89c588891b230cb529d417cc8c24f136c.png)
+Enter the SyncBoot root path
 
 Execute docker command
 
@@ -87,13 +84,10 @@ docker-compose up -d
 
 copy
 
-Docker group started successfully  
-![](/images/a0c59b8105f591bd2bf4b79e390bf667340e5f35a3fec38a9b74c1561109488f.png)
+Docker group started successfully
 
 ### 7\. Accessing the system
 
 > Wait for 1 minute, after the MySQL data is initialized, access the system
 
 - [http://localhost:80](http://localhost:80)
-
-![](/images/34b4250333e185e51cfe772286bde21bbb9e5e277834880e20c95077768095f2.png)

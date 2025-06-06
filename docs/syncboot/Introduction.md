@@ -78,11 +78,7 @@ The business process is implemented by workflow and task interface is extended f
 
 ### Microservice architecture diagram
 
-![Microservice architecture diagram](/images/jeecgboot_springcloud2022.png "Enter image title here")
-
 ## System architecture diagram
-
-![](/images/screenshot_1662547398792.png)
 
 ---
 
@@ -90,40 +86,12 @@ The business process is implemented by workflow and task interface is extended f
 
 ### PC
 
-![](/images/image_1687778397612.png)  
-![](/images/image_1687778435846.png)  
-![](/images/image_1687778476447.png)  
-![](/images/image_1687778512836.png)  
-![](/images/image_1687778582144.png)
-
 ### Online API documentation
-
-![](/images/image_1687778702243.png)  
-![](/images/image_1687778737438.png)
 
 ### Reports
 
-![](/images/image_1687778780458.png)  
-![](/images/up-fa52b44445db281c51d3f267dce7450d21b.gif)
-
-![](/images/image_1687779705768.png)  
-![](/images/image_1687779725144.png)
-
 ### process
-
-![](/images/image_1687779807541.png)  
-![](/images/image_1687779857971.png)  
-![](https://lfs.k.topthink.com/lfs/82c575a274841844ad43a81679b4c2d01bb3a88111c663e994517fa1ae7ed5d6.dat)  
-![](/images/image_1687780016598.png)
 
 ### Mobile terminal
 
-![](/images/image_1687780240854.png)  
-![](/images/image_1687780264274.png)
-
 ### PAD end
-
-![](/images/image_1687780285230.png)  
-![](/images/image_1687780328101.png)  
-![](/images/image_1687780342778.png)  
-![](/images/image_1687780373126.png)

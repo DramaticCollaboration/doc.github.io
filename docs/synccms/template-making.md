@@ -4,19 +4,17 @@ order: 4
 
 # Template Making
 
-![](/cms/template-making/001.png "logo") www.publiccms.com
-
 **Public CMS**
 
 Template Making Manual
 
-[1 Introduction to PublicCMS 4](#_toc127370731)
+[1 Introduction to SyncCMS 4](#_toc127370731)
 
 [1.1 Profile 4](#_toc127370732)
 
 [1.2 License Agreement 4](#_toc127370733)
 
-[1.3 Access to PublicCMS 5](#_toc127370734)
+[1.3 Access to SyncCMS 5](#_toc127370734)
 
 [2 Template Usage 5](#_toc127370735)
 
@@ -104,28 +102,28 @@ Template Making Manual
 
 [7.2 Commercial Technical Support 53](#_toc127370777)
 
-1. # <a name="_toc122374956"></a><a name="_toc127370731"></a>**Introduction to PublicCMS**
+1. # <a name="_toc122374956"></a><a name="_toc127370731"></a>**Introduction to SyncCMS**
    1. ## <a name="_toc122374957"></a><a name="_toc127370732"></a>**Profile**
-      PublicCMS is designed based on the latest 2023 Java technology with open source code and structure friendly to SEO. PublicCMS can operate/manage hundreds of thousands of data and PV easily. PublicCMS has been accepted and used by many famous companies and enterprises, and it owns 0.0005% of the total websites of the world. We provide free version and technical support , and we believe PublicCMS will be a good choice for great data website construction and big enterprise projects.
+      SyncCMS is designed based on the latest 2023 Java technology with open source code and structure friendly to SEO. SyncCMS can operate/manage hundreds of thousands of data and PV easily. SyncCMS has been accepted and used by many famous companies and enterprises, and it owns 0.0005% of the total websites of the world. We provide free version and technical support , and we believe SyncCMS will be a good choice for great data website construction and big enterprise projects.
 
-- PublicCMS is suitable for both dynamic website and static website;
-- PublicCMS can support multi-site creation, with totally separate data and templates for each website.
+- SyncCMS is suitable for both dynamic website and static website;
+- SyncCMS can support multi-site creation, with totally separate data and templates for each website.
 
 1. ## <a name="_toc22743463"></a><a name="_toc122374958"></a><a name="_toc127370733"></a>**License Agreement**
 
-| <p>1. Authorized rights</p><p>&emsp;1.1. Modify ,Copy and share PublicCMS and its source code;</p><p>&emsp;1.2. Get free authorization document based on prerequisite agreement, and use PublicCMS in non-business conditions ( for individual user only);</p><p>&emsp;1.3. Application of PublicCMS in business usage is allowed for at most 3 months. webpages developed must be marked with “Powered by PublicCMS”. The PublicCMS logo and license agreement must appear in an obvious position of the website.</p><p>&emsp;1.4. Application of PublicCMS in business usage should be authorized by the owner of the software by buying the authorization document. The company authorized should be the final user of the PublicCMS.</p><p>&emsp;1.5. Licensed users can Modify ,Copy and spread PublicCMS and its source code ;</p><p>&emsp;1.6. The license agreement applies only to the current version of the PublicCMS, earlier versions have their own license agreement;</p><p>2. Copyright</p><p>&emsp;2.1. The copyright of the software belongs to the official owner of the PublicCMS;</p><p>3. Disclaimer (of warranty)</p><p>&emsp;3.1. PublicCMS and its affiliated documents are provided with no responsibilities for any possible risk, and can not provide any warranties; </p><p>&emsp;3.2. Before using PublicCMS, one should fully understand it and assume its possible risks. We won`t provide any technical support or usage warranty, and are not responsible for any risks caused by using PublicCMS unless you have bought the technology support service. </p><p></p> |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| <p>1. Authorized rights</p><p>&emsp;1.1. Modify ,Copy and share SyncCMS and its source code;</p><p>&emsp;1.2. Get free authorization document based on prerequisite agreement, and use SyncCMS in non-business conditions ( for individual user only);</p><p>&emsp;1.3. Application of SyncCMS in business usage is allowed for at most 3 months. webpages developed must be marked with “Powered by SyncCMS”. The SyncCMS logo and license agreement must appear in an obvious position of the website.</p><p>&emsp;1.4. Application of SyncCMS in business usage should be authorized by the owner of the software by buying the authorization document. The company authorized should be the final user of the SyncCMS.</p><p>&emsp;1.5. Licensed users can Modify ,Copy and spread SyncCMS and its source code ;</p><p>&emsp;1.6. The license agreement applies only to the current version of the SyncCMS, earlier versions have their own license agreement;</p><p>2. Copyright</p><p>&emsp;2.1. The copyright of the software belongs to the official owner of the SyncCMS;</p><p>3. Disclaimer (of warranty)</p><p>&emsp;3.1. SyncCMS and its affiliated documents are provided with no responsibilities for any possible risk, and can not provide any warranties; </p><p>&emsp;3.2. Before using SyncCMS, one should fully understand it and assume its possible risks. We won`t provide any technical support or usage warranty, and are not responsible for any risks caused by using SyncCMS unless you have bought the technology support service. </p><p></p> |
+| ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 
-1. ## <a name="_toc483039313"></a><a name="_toc22743464"></a><a name="_toc122374959"></a><a name="_toc127370734"></a>**Access to PublicCMS**
+1. ## <a name="_toc483039313"></a><a name="_toc22743464"></a><a name="_toc122374959"></a><a name="_toc127370734"></a>**Access to SyncCMS**
    Executable file download:
 
-<https://www.publiccms.com/download.html>
+<https://www.SyncCMS.com/download.html>
 
-PublicCMS source code download:
+SyncCMS source code download:
 
-`	`GITEE: <https://gitee.com/sanluan/PublicCMS>
+`	`GITEE: <https://gitee.com/sanluan/SyncCMS>
 
-`	`GITHUB: <https://github.com/sanluan/PublicCMS>
+`	`GITHUB: <https://github.com/sanluan/SyncCMS>
 
 1. # <a name="_toc127370735"></a>**Template Usage**
    1. ## <a name="_toc127370736"></a>**Overview**
@@ -146,21 +144,17 @@ PublicCMS source code download:
 Such pages are not paginated except for display, and may display a portion of systematic content, such as the latest articles. This type of content usually uses instructions to fetch data directly and present it. There may also be one or more fragmented content, such as the focus map in the home page, the comments section in Contact us, and so on. This kind of fragmented contents usually uses the way of page fragments to achieve the management of these contents.
 
 1. ### **Dynamic access**
+
    To use ordinary template in a dynamic way, you need to set the background template metadata to allow dynamic access.
 
-![](/cms/template-making/002.png)
-
 1. ### **Static**
-   To make an ordinary page template static, enable static in the background template metadata and set the publishing path to the required access path.
 
-![](/cms/template-making/003.png)
+   To make an ordinary page template static, enable static in the background template metadata and set the publishing path to the required access path.
 
 1. ### **Dynamic template parameter transfer and use**
    Dynamic template parameter passing is simple. It is similar to dynamic parameter passing in other technologies. As long as you request the template, you add "? Parameter name = parameter value & Parameter name 2= Parameter value 2".
 
-Due to security requirements and cache control requirements, publiccms’s platform site templates need to set acceptable parameters in template metadata.
-
-![](/cms/template-making/004.png)
+Due to security requirements and cache control requirements, SyncCMS’s platform site templates need to set acceptable parameters in template metadata.
 
 Parameter types can be text, number, multiline text, content, category, and user.
 
@@ -178,11 +172,7 @@ The alias is the name of the variable in the template. If the parameter is null,
 
 After the array is checked, the variable will exist as an array in the template. You can pass multiple parameters with the same name to pass multiple variables.
 
-![](/cms/template-making/005.png)
-
 For example, the dynamic template content.html metadata setting allows dynamic access:
-
-![](/cms/template-making/006.png)
 
 Dynamic request address:
 
@@ -207,11 +197,7 @@ tagIds is the result of converting the url transfer parameter tagIds into an arr
 1. ### **Extended field**
    <a name="_hlk118125489"></a>Template metadata can be extended in template metadata.
 
-![](/cms/template-making/007.png)
-
 When editing the template, you can click on Template Properties-> Extend the field in the Template Help. Modify the code logic to use these extension fields in an appropriate manner, where all extension field types are stored in string format.
-
-![](/cms/template-making/008.png)
 
 For example, the extention field name ：title
 
@@ -219,8 +205,6 @@ For example, the extention field name ：title
 | :------------------------------ |
 
 Select this page in Page->Page management for maintainance
-
-![](/cms/template-making/009.png)
 
 1. ## <a name="_toc466562180"></a><a name="_toc466562767"></a><a name="_toc466563142"></a><a name="_toc466563463"></a><a name="_toc127370738"></a>**Category page template**
 
@@ -231,22 +215,16 @@ Select this page in Page->Page management for maintainance
 
 When the category page template is used in dynamic mode, it needs to be set to allow dynamic access in the background template metadata and set acceptable parameters. The category id should be passed to this parameter when the template is used in other templates.
 
-![](/cms/template-making/010.png)
-
 And clear the static template in the category Settings. Set the access path of the category page to the template path above. The parameter name is the acceptable parameter name above, and the value is ${category.id}.
 
 The corresponding dynamic address to the template metadata confugration above: category/category.html?id=${category.id}
 
 or REST style address：category/category/${category.id}
 
-![](/cms/template-making/011.png)
-
 1. ### **Static**
    You do not need to select Enable statics for template metadata
 
-![](/cms/template-making/012.png)
-
-To staticize Category page template, you need to set up a static template for category management in the background, and configurate static style Category page accessing path. The configurated template will be used to generate static page for category when the categories are saved, the categories home page is generated in batches, the categories page is generated, and the task plan is generated. ![](/cms/template-making/013.png)
+To staticize Category page template, you need to set up a static template for category management in the background, and configurate static style Category page accessing path. The configurated template will be used to generate static page for category when the categories are saved, the categories home page is generated in batches, the categories page is generated, and the task plan is generated.
 
 1. ### **Dynamic Paging**
    Dynamic paging needs to pass paging parameter name in the third parameter of getPage function.
@@ -269,8 +247,6 @@ To staticize Category page template, you need to set up a static template for ca
 
 Modify or add category type in the Develop -> Configuration management-->Category type.
 
-![](/cms/template-making/014.png)
-
 Edit category template, and use extension field. All extended field types are stored in string format.
 
 ```
@@ -280,26 +256,16 @@ Edit category template, and use extension field. All extended field types are st
 
 Then in Category Management, add the category selection to add the category type you just created.
 
-![](/cms/template-making/015.png)
-
 You can also change an already created category to this category type. Then double-click the blank area or click the Modify category button to enter the category editing page.
 
-![](/cms/template-making/016.png)
-
 Then you can start to edit the properties you just added.
-
-![](/cms/template-making/017.png)
 
 1. ### **Content contribution**
    You can set the content contribution function of Category open to allow users submitting content data without logging in the background. The content contribution function requires users to log in the website.
 
 First of all , set up category management to allow contribution.
 
-![](/cms/template-making/018.png)
-
 To obtain contribution code in category management or in Template help->Contribution form.
-
-![](/cms/template-making/019.png)
 
 You can paste the contribution code to any dynamic template. You can select “log in necessary” to set up the metadata of the template . The title is required in the contribution field. Use js or css to control style and interaction.
 
@@ -312,24 +278,16 @@ You can paste the contribution code to any dynamic template. You can select “l
 
 Set up to allow dynamic access in the background template metadata and set acceptable parameters. The category id should be passed to this parameter when the template is used in other templates.
 
-![](/cms/template-making/020.png)
-
 Select the conresponding template in category and clear up the static template . Set the access path of the content page to the template path above. The parameter name is the acceptable parameter name above, and the value is ${content.id}.
 
 The corresponding dynamic address to the template metadata confugration above is: content.html?id=${content.id}
 
 or REST style address：content/${content.id}
 
-![](/cms/template-making/021.png)
-
 1. ### **Static**
    You don’t need to select “enable static” for content template metadata setting.
 
-![](/cms/template-making/022.png)
-
 To staticize content page template, you need to set up publishable content model for category management in the background(Select “Show Advanced Options” next to “Save” button in the upper right corner to display the TAB page) , select static template for the publishable content model and configurate static style content page accessing path. The configurated template will be used to generate static page for content when the contents are saved, the contents are generated in batches, and the task plan is generated.
-
-![](/cms/template-making/023.png)
 
 1. ### <a name="_toc466562181"></a><a name="_toc466562768"></a><a name="_toc466563143"></a><a name="_toc466563464"></a>**Numbers of clicks update**
    Content clicks are usually updated in the content page using js.
@@ -353,11 +311,7 @@ To staticize content page template, you need to set up publishable content model
 
 Modify or add content model in the Development -> configuration management-->Content model management.
 
-![](/cms/template-making/024.png)
-
 Or modify or add category in Content->Category management( Switch to the publishable Content Model management TAB and check the content that is allowed to be published).
-
-![](/cms/template-making/025.png)
 
 Edit content template, and use extension field. All extended field types are stored in string format.
 
@@ -369,47 +323,32 @@ Edit content template, and use extension field. All extended field types are sto
 You can maintain those extented fields in corresponding content maintainance page.
 
 1. ## <a name="_toc127370740"></a>**Task plan script**
-   Task plan script is used in Public CMS task plan and data operations are performed under ordinary directives and task plan special directives and is scheduled by a task schedule, such as a periodic generation in a static site.
 
-![](/cms/template-making/026.png)
+   Task plan script is used in Public CMS task plan and data operations are performed under ordinary directives and task plan special directives and is scheduled by a task schedule, such as a periodic generation in a static site.
 
 1. ## <a name="_toc127370741"></a>**Template Fragements**
    Template fragments are the freemarker template engine's template reuse solution. There are two ways to use template fragments: include and import.
 
 Template fragment inclusion is the extraction of a template statement into a separate file that can be included by different templates. You can reuse a portion of the template, reducing the total amount of code and the amount of work required to modify the repetitive content. The variables in the template context above can be used directly in the included template fragment.
 
-![](/cms/template-making/027.png)
-
 When you import a template, you need to name it a namespace, and when you use a variable or function or directive definition in the template, you need to take the namespace with you. The import method can effectively avoid contamination of context variable names.
-
-![](/cms/template-making/028.png)
-
-![](/cms/template-making/029.png)
 
 More files and documents about namespaces:
 
 <http://www.kerneler.com/freemarker2.3.23/dgui_misc_namespace.html>
 
 1. ## <a name="_toc127370742"></a>**Page Fragements**
+
    Page fragments are introduced by Public CMS in product design. Each page fragment is a complete page, which is parsed into text (such as html) and then embedded in the page that references it. When it renders, you can't get the variable of the template that references it. After SSI is enabled, page fragments can be generated periodically through the task plan. The page fragment reference in the template will print only one ssi directive, which will be dynamically included by services such as nginx when requesting html. This can greatly improve the speed of template rendering.
 
-![](/cms/template-making/030.png)
-
 1. ### **Recommended bits**
+
    Page fragments can also be bound to an extensible data list by setting the number of valid data in the metadata. Page fragments bound with data are generally referred to as recommendation bits, such as focus map, friendship link, editing recommended articles, etc., which can be realized by using recommendation bits. Developers can develop less background management functions, because fragmented data display and maintenance can be realized by adding page fragments in the background .
-
-![](/cms/template-making/031.png)
-
-![](/cms/template-making/032.png)
 
 1. ### **Extended field**
    You can manage the page fragment metadata extended fields in editing page fragment metadata under Development-> Page fragment management template .
 
-![](/cms/template-making/033.png)
-
 Click the template properties ( in the Template Help) -> The extension fields to edit the page fragment template,, and modify the code logic to use these extension fields in an appropriate manner. All extended field types are stored in string format.
-
-![](/cms/template-making/034.png)
 
 For example: extended field encoding slogin
 
@@ -420,12 +359,8 @@ For example: extended field encoding slogin
 
 Select this Page fragment in Page ->Page fragment management for maintenance .
 
-![](/cms/template-making/035.png)
-
 1. ### **Extended Field for Recommended Bits**
    When editing page fragment metadate in Development -> Page fragment template, you can manage the extended field for recommended bits ( This parameter is displayed only when the number of data bars is greater than 0).
-
-![](/cms/template-making/036.png)
 
 Edit page fragment template, and use the extended fields, and all extended field types are stored in sting format.
 
@@ -436,31 +371,23 @@ Edit page fragment template, and use the extended fields, and all extended field
 
 Select this page fragment in Page->Page fragment management to modify the recommended bit data.
 
-![](/cms/template-making/037.png)
-
 1. ### **Recommended bit contribution**
    When editing page fragment template metadate in Development -> Page fragment template, you can manage the recommended bit contribution.
 
 Check to allow contributions, and decide whether to check to allow anonymous contributions according to the actual needs . You can also set the front desk maintenance personnel, and these users don’t need to log in the background management of the contribution data for audit, revocation audit, delete and other management operations.
 
-![](/cms/template-making/038.png)
-
 Obtain contribution code and front desk maintenance function code in Template help->Contribution form.
-
-![](/cms/template-making/039.png)
 
 Paste it into any template. If anonymous contributions are not allowed, you need to use dynamic template for contributions, and this dynamic template can be set you need to log in to set the metadata, the title of the contribution field is required, and use js or css for style and interactive control with the form.
 
-![](/cms/template-making/040.png)
-
 1. # <a name="_toc127370743"></a>**Template language**
    1. ## <a name="_toc127370744"></a>**Profile/Overview**
-      PublicCMS uses the FreeMarker template engine to render the templates, and this template has perfect data processing, logical judgment function. It uses a simple, proprietary language. The PublicCMS program stores and queries data, and then the template displays the prepared data.
+      SyncCMS uses the FreeMarker template engine to render the templates, and this template has perfect data processing, logical judgment function. It uses a simple, proprietary language. The SyncCMS program stores and queries data, and then the template displays the prepared data.
 
-PublicCMS extends the data instructions and functions of FreeMarker.
+SyncCMS extends the data instructions and functions of FreeMarker.
 
 1. ## <a name="_toc127370745"></a>**Template Syntax**
-   Template syntax is the part of a template that is parsed by the template engine. Identifying template syntax helps you understand the operating mechanism and working principle of PublicCMS.
+   Template syntax is the part of a template that is parsed by the template engine. Identifying template syntax helps you understand the operating mechanism and working principle of SyncCMS.
 
 A template (= FTL program) is a mix of the following sections:
 
@@ -722,59 +649,48 @@ For example :
 
 For example:
 
-| <p>We set “id” as an acceptable parameter in one of the template metadata.</p><p>![](/cms/template-making/041.png)</p><p>We can use ${id} to output the value of the parameter in template. If this ”id” is the content ID, we can use <@\_content id=id>${object.title}</@\_content> to get the corresponding content for the id and output the title of the content.</p> |
-| :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| <p>We set “id” as an acceptable parameter in one of the template metadata.</p><p></p><p>We can use ${id} to output the value of the parameter in template. If this ”id” is the content ID, we can use <@\_content id=id>${object.title}</@\_content> to get the corresponding content for the id and output the title of the content.</p> |
+| :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 
 1. ## <a name="_toc127370762"></a>**Site Configuration Data**
    Under Development->Configuration management-> Site configuration management, you can manage the extend field of system configuration items, add or modify configurations.
 
-![](/cms/template-making/042.png)
-
 On the Template Edit page, click to use these site configure properties under Template Help.
-
-![](/cms/template-making/043.png)
 
 Under Maintenance->Site Configuration, you can maintain the extension fields of system configuration and user-defined configuration extension fields.
 
-![](/cms/template-making/044.png)
-
 1. # <a name="_toc483039326"></a><a name="_toc126684032"></a><a name="_toc127370763"></a>**Multiple sites and multiple domain names**
-   Each set of PublicCMS services can support simultaneous access to more than 30,000 sites. Each site can have multiple domain names
+   Each set of SyncCMS services can support simultaneous access to more than 30,000 sites. Each site can have multiple domain names
 1. ## <a name="_toc126684033"></a><a name="_toc127370764"></a>**Multiple sites**
    Each site can not be affacted by another, and users, templates and files are independent.
 1. ### **Site management**
-   PublicCMS distinguishs different sites by site configuration and domain name information. If there isn’t corresponding domain name ,the corresponding site of “cms.defaultSiteId” in the configuration file” cms.properties” will be visited instead. So do not delete the site ,otherwise your visiting will be error .
+   SyncCMS distinguishs different sites by site configuration and domain name information. If there isn’t corresponding domain name ,the corresponding site of “cms.defaultSiteId” in the configuration file” cms.properties” will be visited instead. So do not delete the site ,otherwise your visiting will be error .
 
 The administrative rights for the multiple sites management are based on the site corresponding to “cms.masterSiteIds” in “cms.properties”. There should be at least one site that has site management.
 
 1. ### **Distinguishing Sites**
+
    If you can not identify which site you are accessing when managing multiple sites , it may misunderstanding and human error may occur. The site you are visiting can be identified by the title of the background login page or the site name above the username entry box. If the actual visit does not meet expectations, you can adjust the “background site -> site Maintenance -> Domain name management” to adjust the corresponding relations between domain names and sites.
 
-![](/cms/template-making/045.png)
-
 1. ### **Creating new site**
-   At a site with site administration rights，click “site maintanance ->add site”. The domain name should be a domain name or ip that can access the server where the PublicCMS resides. Fill in the dynamic site address, static site address based on the actual situation.
+   At a site with site administration rights，click “site maintanance ->add site”. The domain name should be a domain name or ip that can access the server where the SyncCMS resides. Fill in the dynamic site address, static site address based on the actual situation.
 
 After saving the above steps, enter the dynamic address of the new site in the browser. The access to the new site should be 404, because the new site has nothing. Add” /admin/” to the dynamic address to visit the background, using the user name and password of the new site to log in.
 
 For example：
 
 1. when we are developing locally , start the project and visit http://localhost:8080/ to access the project's default site, and access to the background of http://localhost:8080/admin/ access to the background.
-1. Click the manu site->site management->add site, fill in the information and save. The domain name could be” localhost,127.0.0.1,dev.publiccms.com” or its subdomain and ip. Here let’s take’ site2.dev.publiccms.com” for example.
-1. Visite”http://site2.dev.publiccms.com/admin/”，you can see the new site background, and you are free to modify and customize the new site.
+1. Click the manu site->site management->add site, fill in the information and save. The domain name could be” localhost,127.0.0.1,dev.SyncCMS.com” or its subdomain and ip. Here let’s take’ site2.dev.SyncCMS.com” for example.
+1. Visite”http://site2.dev.SyncCMS.com/admin/”，you can see the new site background, and you are free to modify and customize the new site.
 
 Cms provides a quick configuration approach. The defaut static configuration button and default dynamic configuration can automatically generate site configuration according to the domain name of the current background you are accessing.
 
-Before creating a new site, access the background using the expected domain name of the new site, click defaut configuration “ http://site2.dev.publiccms.com:8080/ admin/”.
+Before creating a new site, access the background using the expected domain name of the new site, click defaut configuration “ http://site2.dev.SyncCMS.com:8080/ admin/”.
 
 1. ### **Child site**
    The child site will share the content model and data dictionary of the parent site
 
-![](/cms/template-making/046.png)
-
 When the site group option is selected in the primary site domain name, the site directory of the subsite is valid. The access path of all subsites is the parent site path + subsite directory
-
-![](/cms/template-making/047.png)
 
 In this case, parentSite can be used to obtain information about the parent site in all sub-site templates, and all api interfaces should also be specified: ${site.dynamicPath}api\_path?currentSiteId=${site.id}&otherParameters=values
 
@@ -785,39 +701,27 @@ In this case, parentSite can be used to obtain information about the parent site
 
 For example:
 
-![](/cms/template-making/048.png)
-
-Accessing PublicCMS through “search.publiccms.com”, you are access the template under the search directory; Accessing PublicCMS through “cms.publiccms.com”, you are access the template under the member directory;
-
-![](/cms/template-making/049.png)
+Accessing SyncCMS through “search.SyncCMS.com”, you are access the template under the search directory; Accessing SyncCMS through “cms.SyncCMS.com”, you are access the template under the member directory;
 
 1. ### ` `**Possible Errors caused by binding a domain name to the root directory**
    Suppose the dynamic site address in the site peoperty ueses the domain names bound to the root directory, minor errors could be caused and should be adjusted according to the situation. Such errors can only happen while operating in the background and won’t affect the other functions, so the management people should pay attention.
 
 For example
 
-![](/cms/template-making/050.png)
+The dynamic page view button in page management points to the wrong url.
 
-The dynamic page view button in page management points to the wrong url. ![](/cms/template-making/051.png)
-
-In the page fragment data selection, the dynamic page url here does not go to the page you selected. ![](/cms/template-making/052.png)
+In the page fragment data selection, the dynamic page url here does not go to the page you selected.
 
 1. # <a name="_toc127370766"></a>**Feature Application**
    1. ## <a name="_toc127370767"></a>**Template Examples**
       `	`The template sample provides concise implementations of various requirement scenarios.
 
-![](/cms/template-making/053.png)
-
 `	`Expand the template example, and you can see examples of multi-language home page and switching, category page, content page, comment page, search page, login page, registration page, voting page, and sitemap.
-
-![](/cms/template-making/054.png)
 
 Click on these examples and then click the Save button to get a simple, directly accessible page (content page, category page dynamic templates require url parameters; Static templates need to be statically configured and published in the category before they can be accessed.
 
 1. ## <a name="_toc127370768"></a>**Template Help**
    `	`Template help is an effective template editing aid provided by the template editing page, including output variables; Common instructions and methods; Configuration parameters; Submission form
-
-![](/cms/template-making/055.png)
 
 The output variables include: metadata extension parameter of the current template, static page data attribute, site attribute, global site extension attribute, etc
 
@@ -830,11 +734,7 @@ The submission form includes: the content submission form of the category that a
 1. ## <a name="_toc127370769"></a>**Searching and Replacing Templates in Batches**
    Enter the search content in the template content search box and click the "Search" button
 
-![](/cms/template-making/056.png)
-
 `	`View the search results, modify the replacement content, uncheck the results that do not need to be replaced as required, and click the "Replace" button to batch replace the search results
-
-![](/cms/template-making/057.png)
 
 `	`Batch search and replacement can improve the template making speed
 
@@ -945,19 +845,16 @@ Common language item
       `	`Click Add or click existing area to modify, and fill in the name. If the area displays different layout modules for different category pages, you can choose to bind category types. If the visual area binds a category type, when the visual region is invoked , the category id parameter for that category type should be passed
 
 1. ### **Visual layout management**
+
    `	`Click Add or click the existing area to modify, fill in the name, modify the layout related html, click the "Insert Position" button in the appropriate location, Insert the code ”<#-- position -->”. When the page is rendered, this code will be replaced by the visual module reference code corresponding to the location; To modify the style, click and Insert CSS selector in front of these stylesheets and prefix them with the code "/\* selecter \*/". This code under Page -> Page visualization is replaced with a specific stylesheet prefix to ensure that the style affects only the portion of the visualization area layout that the staff sees.
 
-![](/cms/template-making/058.png)
-
 1. ### **Visual Module Management**
+
    `	`Click Add or click the existing area to modify, fill in the name, upload the cover image, and select the corresponding page fragment; Cover image only display effect when preview the module under Page->Page visual configuration . When the Copy check box option is checked, the visualization module copies one piece of the page each time it is used in a different visualization area.
 
-![](/cms/template-making/059.png)
-
 1. ### **Visual area configuration**
-   `	`Select the visual area for maintenance, first drag the layout in the blank visual area, then drag the module to a different area of the layout; It can also adjust the existing layout and module sequence of the visualization area. Click the button of the maintenance function of the existing module for data maintenance
 
-![](/cms/template-making/060.png)
+   `	`Select the visual area for maintenance, first drag the layout in the blank visual area, then drag the module to a different area of the layout; It can also adjust the existing layout and module sequence of the visualization area. Click the button of the maintenance function of the existing module for data maintenance
 
 1. ## <a name="_toc127370773"></a>**Quick Maintenance**
    1. ### **Quick maintenance driver code**
@@ -1012,9 +909,8 @@ The values of data-diy and data-diy-itemsupport:
 | **user**                     | Edit user                  | User id                    |
 
 1. ### **Quick maintenance**
-   `	`Click to enter the website quick maintenance mode. When you visit different pages in this window, the upper menu will be dynamically numbered. You can also use the mouse to row over the maintainable elements of the webpage, and the corresponding menu will pop up. Click the menu item to quickly manage the relevant data or content of the website
 
-![](/cms/template-making/061.png)
+   `	`Click to enter the website quick maintenance mode. When you visit different pages in this window, the upper menu will be dynamically numbered. You can also use the mouse to row over the maintainable elements of the webpage, and the corresponding menu will pop up. Click the menu item to quickly manage the relevant data or content of the website
 
 1. ## <a name="_toc127370774"></a>**Website Access Statistics**
    `	`Website access statistics support needs to define itemString (content page, category page and other pages with corresponding data items), introduce js, and call statistical code
@@ -1026,7 +922,7 @@ The values of data-diy and data-diy-itemsupport:
 
 1. # <a name="_toc118798938"></a><a name="_toc127370775"></a>**Technical support**
    1. ## <a name="_toc118193161"></a><a name="_toc118798939"></a><a name="_toc127370776"></a>**Free Technical Support**
-      Public CMS official website：<https://www.publiccms.com/>
+      Public CMS official website：<https://www.SyncCMS.com/>
 
 QQ communication group：[191381542](https://shang.qq.com/wpa/qunwpa?idkey=8a633f84fb2475068182d3c447319977faca6a14dc3acf8017a160d65962a175) , [481589563](https://shang.qq.com/wpa/qunwpa?idkey=c5bd272056925b95dc9b1449050926edb79eb328b00eaaa9024e358ab94891c8) , [638756883](https://shang.qq.com/wpa/qunwpa?idkey=0ed046f258b0dcb1e6c295e1633f8532bf0d38a65ca1d35f820badaaea44ce41)
 

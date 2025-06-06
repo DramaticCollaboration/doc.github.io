@@ -45,8 +45,6 @@ copy
 
 You can use the tool [SwitchHosts](https://download.csdn.net/download/zhangdaiscott/88918530) to quickly configure the host.
 
-![](/images/66177181fe90cec362a7b5b7468ca138673e1b04a8f2ed4563e8104b277448ce.png)
-
 ### 3\. Compile the background project
 
 Enter the jeecg-boot root directory
@@ -65,8 +63,7 @@ mvn clean install -Pdev,SpringCloud
 
 copy
 
-See the execution succeeded  
-![](https://upload.jeecg.com/jeecg/help/jeecgback/images/screenshot_1659773260743.png)
+See the execution succeeded
 
 ### 4\. Create mysql and redis containers
 
@@ -86,9 +83,7 @@ docker-compose -f docker-compose-base.yml up -d
 
 copy
 
-Container generation results  
-![](/images/dee8dbf154853683e72a78c7889602b273b90cc83988b4a071f0580220cad878.png)  
-![](/images/a95870734dfea5ed6b877982696927aa8e1e0bc98194a7f75613242e1eea0ae4.png)
+Container generation results
 
 ### 5\. Create a microservice module container group
 
@@ -100,8 +95,7 @@ docker-compose up -d
 
 copy
 
-Container generation results:  
-![](/images/295fe2d4c62f1be5d49b46d6cfeecf28ebd16b781f619f72c52104049cb8b047.png)
+Container generation results:
 
 ### 6\. Access the gateway interface address
 
@@ -109,8 +103,7 @@ Wait for 1 minute until all services are started and access the following addres
 
 [http://localhost:9999](http://localhost:9999)
 
-Seeing the swagger interface document indicates that the microservice has been successfully started  
-![](/images/19cbf44e760be20aeae233a20e5ecd7fbec308d749cf20a7d68c055c766d151d.png)
+Seeing the swagger interface document indicates that the microservice has been successfully started
 
 Other service addresses:
 

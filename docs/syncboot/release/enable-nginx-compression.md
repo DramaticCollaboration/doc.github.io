@@ -20,7 +20,6 @@ Add the following snippet to http in nginx.conf
 
 copy
 
-Reference image:  
-![](/images/759ca3b6f4cbf4a3b4aeb3db9e01f44b8198fdb8fc23248b47c30d19857951f4.png)
+Reference image:
 
 Reference link: [https://github.com/zhangdaiscott/jeecg-boot/issues/88](https://github.com/zhangdaiscott/jeecg-boot/issues/88)

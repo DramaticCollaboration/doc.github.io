@@ -51,5 +51,4 @@ for example: creator, creation time, and creator's department. With these standa
 #### 3\. Organization postal code rules
 
 SYNC organization supports unlimited levels, and the superior-subordinate relationship is realized through organization coding. The organization coding rule is similar to the postal code method, see the figure below;  
-Postal code rule advantages: Postal code rule, fixed rules for superior-subordinate coding, easy to locate subordinates and superiors;  
-![](/images/image_1687780598115.png)
+Postal code rule advantages: Postal code rule, fixed rules for superior-subordinate coding, easy to locate subordinates and superiors;

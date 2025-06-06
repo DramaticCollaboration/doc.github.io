@@ -42,8 +42,6 @@ copy
 
 Modify `application-dev.yml`the database connection and redis connection, and change the connection to host mode
 
-![](/images/335c815c5c7b8d084c00b8de32d9b980be89d23dd8e2c8495adbf58823daa09b.png)
-
 ### 4\. Enter the root directory of the jeecg-boot project and execute the Maven packaging command
 
 Enter the project
@@ -68,16 +66,14 @@ docker-compose up -d
 
 copy
 
-The generated mirror group effect:  
-![](/images/36b09b7b645de7f5ea7524c89533c4828e75dd8ff623f7da9a7c64804e5c8b89.png)
+The generated mirror group effect:
 
 ### 6\. Access the backend interface address
 
 > Please wait for one minute until the Docker container is started and visit the following link
 
 [http://jeecg-boot-system:8080/jeecg-boot/doc.html](http://jeecg-boot-system:8080/jeecg-boot/doc.html)  
-See the following interface document, indicating that the background startup is successful  
-![](/images/4566e5ce6097ad5dbabe1559669709decff94a04b43c15501a63fb541f7853b9.png)
+See the following interface document, indicating that the background startup is successful
 
 ## Additional Documentation
 

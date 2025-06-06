@@ -37,8 +37,6 @@ copy
 
 You can use the tool [SwitchHosts](https://download.csdn.net/download/zhangdaiscott/88918530) to quickly configure the host.
 
-![](/images/66177181fe90cec362a7b5b7468ca138673e1b04a8f2ed4563e8104b277448ce.png)
-
 ### 3\. Compile the background project
 
 Enter the jeecg-boot root directory
@@ -57,8 +55,7 @@ mvn clean install -Pdev,SpringCloud
 
 copy
 
-See the execution succeeded  
-![](https://upload.jeecg.com/jeecg/help/jeecgback/images/screenshot_1659773260743.png)
+See the execution succeeded
 
 ### 5\. Create a microservice container group
 
@@ -78,9 +75,7 @@ docker-compose up -d
 
 copy
 
-Container generation results:  
-![](/images/295fe2d4c62f1be5d49b46d6cfeecf28ebd16b781f619f72c52104049cb8b047.png)  
-![](/images/a95870734dfea5ed6b877982696927aa8e1e0bc98194a7f75613242e1eea0ae4.png)
+Container generation results:
 
 ### 6\. Access the gateway address
 
@@ -88,5 +83,4 @@ Wait for 1 and a half minutes until all services are started and access the gate
 
 [http://localhost:9999](http://localhost:9999)
 
-Seeing the swagger interface document indicates that the microservice has been successfully started  
-![](/images/e919552879062467da3adc3f3efc4bf82efd09010ff97d88dae67cecbd53c232.png)
+Seeing the swagger interface document indicates that the microservice has been successfully started

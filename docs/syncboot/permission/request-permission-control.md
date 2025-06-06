@@ -27,16 +27,12 @@ copy
 
 > Go to the background menu management page to configure the access permission identifier (select button type). The configuration method is the same as the button permission, that is, the same authorization identifier can control both background requests and foreground button display control.
 
-- a. Open the system menu  
-  ![](/images/c3cdcd3a623601107cad9ce844bcf3cd6b1ec90c84c401ac1f878b8e5819eebf.png)
-
-- b. Find the corresponding list and add subordinate button permissions  
-  ![](/images/b9b0e30f89f35981043e93603695ea15b93935e43d29691053e871315ea77360.png)
+- a. Open the system menu
+- b. Find the corresponding list and add subordinate button permissions
 
 ### 3\. Assign permissions to roles
 
-> Enter the role management to authorize access rights (after authorization, log out and log in again to access the request)  
-> ![](/images/be34218cd3affe4dc4eea8fac0ba5332952e3bf0f5ad0182e03986234cf7a717.png)
+> Enter the role management to authorize access rights (after authorization, log out and log in again to access the request)
 
 ### 4\. Logout Access Request
 

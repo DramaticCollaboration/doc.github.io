@@ -8,10 +8,8 @@ order: 5
 
 ### Configuration class:
 
-`org.jeecg.config.firewall.interceptor.enums.LowCodeUrlsEnum`  
-![](/images/494b38ad85b7785e48c35fc12e3cd526cc502b66f853f67f2e1e134bed70a25b.png)
+`org.jeecg.config.firewall.interceptor.enums.LowCodeUrlsEnum`
 
 ### Configuration instructions:
 
-After the request address is added `LowCodeUrlsEnum`, the request will be prohibited from access in Low Code > Release Mode.  
-![](/images/8d373dc2c521c345146b92c811c3847125f0ee14c186adc8fde31540ce84099e.png)
+After the request address is added `LowCodeUrlsEnum`, the request will be prohibited from access in Low Code > Release Mode.

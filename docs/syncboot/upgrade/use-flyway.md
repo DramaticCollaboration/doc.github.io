@@ -41,8 +41,7 @@ copy
 
 ### 2\. Insert the SQL script according to the script naming specification and start the project
 
-Create a sql file for the changed SQL script according to the script naming specification (described below), place it in the flyway/sql/mysql directory (configurable), and start the project; after the project is started, the system will automatically create the flyway_schema_history table, execute the SQL change script, and insert the script execution record into the table.  
-![](/images/88c3682e614c9804c16593f31c2113fbfb8b9d076a556ac437934c13d47bda99.png)
+Create a sql file for the changed SQL script according to the script naming specification (described below), place it in the flyway/sql/mysql directory (configurable), and start the project; after the project is started, the system will automatically create the flyway_schema_history table, execute the SQL change script, and insert the script execution record into the table.
 
 #### Script naming
 
@@ -74,8 +73,6 @@ copy
 
 The flyway currently introduced in the project is version 7.15.0, which supports MYSQL5.7 and above
 
-![](/images/3680eac5880b8c530104448c6363d6edc76b17aa6e1e25829cfe16c449946e2e.png)
-
 If you need to support MySQL 5.6, you can downgrade to version 5.2.1
 
 ```
@@ -89,5 +86,4 @@ If you need to support MySQL 5.6, you can downgrade to version 5.2.1
 copy
 
 - Error: Caused by: java.sql.SQLException: sql injection violation, dbType mysql, druid-version 1.2.19, comment not allow:  
-  Solution:  
-  ![](/images/8a2735ac30e2c1dc885751b84ba0eb40f59a97ca8c7af041e5c887a824308c4c.png)
+  Solution:

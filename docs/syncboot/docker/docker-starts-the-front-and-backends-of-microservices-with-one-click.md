@@ -83,8 +83,7 @@ copy
 
 ### 6\. Start the image container group
 
-Enter the SyncBoot root path  
-![](/images/cf1642b251072e6055891ec92f26d8bdf8dd763d93a0e47bed464db2e1006f73.png)
+Enter the SyncBoot root path
 
 Execute docker command
 
@@ -94,13 +93,10 @@ docker-compose -f docker-compose-cloud.yml up -d
 
 copy
 
-Docker group started successfully  
-![](/images/114d4ef6ccca04c8e8cf0146c742a2b55c8c254ed6edaf006f1b7832532d34fd.png)
+Docker group started successfully
 
 ### 7\. Accessing the system
 
 > Wait for 1 minute, after the MySQL data is initialized, access the system
 
 - [http://localhost:80](http://localhost:80)
-
-![](/images/34b4250333e185e51cfe772286bde21bbb9e5e277834880e20c95077768095f2.png)
