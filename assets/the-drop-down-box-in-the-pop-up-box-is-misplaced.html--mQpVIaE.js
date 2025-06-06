@@ -1,0 +1,14 @@
+import{_ as n,c as s,a,o as i}from"./app-CJlkTddN.js";const o={};function p(t,e){return i(),s("div",null,e[0]||(e[0]=[a(`<h1 id="the-drop-down-box-in-the-pop-up-box-is-misplaced" tabindex="-1"><a class="header-anchor" href="#the-drop-down-box-in-the-pop-up-box-is-misplaced"><span>The drop-down box in the pop-up box is misplaced</span></a></h1><p>How to deal with the misalignment of the drop-down box in the pop-up box, as shown below<br><img src="https://lfs.k.topthink.com/lfs/5fa2998e93adf83e0f1e551b7845df4386ab27fcc3983c3f54064c5d59164e5e.dat" alt=""><br> Processing method, use<br> getPopupContainer: (node) =&gt; document.body<br> or<br> getPopupContainer: (node) =&gt; node.parentNode</p><div class="language-text line-numbers-mode" data-highlighter="prismjs" data-ext="text"><pre><code><span class="line">{</span>
+<span class="line">  field: &#39;ruleConditions&#39;,</span>
+<span class="line">  label: &#39;条件规则&#39;,</span>
+<span class="line">  required: true,</span>
+<span class="line">  component: &#39;ApiSelect&#39;,</span>
+<span class="line">  componentProps: {</span>
+<span class="line">    api: ajaxGetDictItems,</span>
+<span class="line">    params:{code:&#39;rule_conditions&#39;},</span>
+<span class="line">    labelField: &#39;text&#39;,</span>
+<span class="line">    valueField: &#39;value&#39;,</span>
+<span class="line">    getPopupContainer: (node) =&gt; document.body,</span>
+<span class="line">  },</span>
+<span class="line">},</span>
+<span class="line"></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>copy</p><p>The effect after use is as follows<br><img src="https://lfs.k.topthink.com/lfs/583ab156fc97f7e54ad359c5b56b2da9616e6588b8645112de418f047a0c8391.dat" alt=""></p>`,5)]))}const d=n(o,[["render",p]]),c=JSON.parse('{"path":"/syncadmin/front-end-experience/front-end-tips/the-drop-down-box-in-the-pop-up-box-is-misplaced.html","title":"The drop-down box in the pop-up box is misplaced","lang":"ko-KR","frontmatter":{"order":4},"git":{"updatedTime":1749179241000,"contributors":[{"name":"poh","username":"poh","email":"poh@empasy.com","commits":1,"url":"https://github.com/poh"}],"changelog":[{"hash":"a96cbbf1f6c96d0e9d6bafa4174131f10429b849","time":1749179241000,"email":"poh@empasy.com","author":"poh","message":"sync 제품군 추가"}]},"filePathRelative":"syncadmin/front-end-experience/front-end-tips/the-drop-down-box-in-the-pop-up-box-is-misplaced.md"}');export{d as comp,c as data};
