@@ -10,7 +10,7 @@
   "scripts": {
     "predeploy": "pnpm run docs:build",
     "deploy": "gh-pages -d docs/.vuepress/dist",
-    "docs:build": "vuepress build docs",
+    "docs:build": "vuepress build docs && cp CNAME docs/.vuepress/dist/",
     "docs:clean-dev": "vuepress dev docs --clean-cache",
     "docs:dev": "vuepress dev docs",
     "docs:update-package": "pnpm dlx vp-update",
