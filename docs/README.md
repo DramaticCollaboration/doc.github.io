@@ -30,16 +30,11 @@ features:
 footer: MIT Licensed | Copyright © 2024 [Your Name/Organization]
 ---
 
-## Document Content
+## 엠파시 문서
 
-This template contains the following main sections:
+아래 문서들 포함합니다
 
-- [SyncETA](/guide/) - How to use and customize this VuePress template.
-- [Reference](/reference/) - Detailed explanation of VuePress configuration items and template structure.
-- [API Reference](/api/) - VuePress core API and plugin API (if your project needs it).
-- [Frequently Asked Questions](/faq/) - Issues you may encounter using this template and their solutions.
-
-## Quick Links
-
-- [GitHub repository](https://github.com/vuepress/vuepress-next)
-- [VuePress official documentation](https://v2.vuepress.vuejs.org/zh/)
+- [SyncETA](/synceta/) - SyncCMS
+- [SyncCMS](/synccms/) - Detailed explanation of VuePress configuration items and template structure.
+- [SyncBoot](/syncboot/) - VuePress core API and plugin API (if your project needs it).
+- [SyncAdmin](/syncamdin/) - Issues you may encounter using this template and their solutions.

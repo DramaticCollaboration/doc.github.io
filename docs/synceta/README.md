@@ -4,35 +4,21 @@ title: Guide
 
 # SyncETA
 
-Empasy의 SyncETA 솔루션 가이드에 오신것을 환영합니다!  
-이 가이드는 SyncETA 솔루션을 활용한 E2E 테스트 사용방법을 이해하는데 도움을 드립니다.
+웹 자동화 테스트를 지원하는 통합 테스트 자동화 플랫폼입니다.
+Selenium 기반의 엔진 위에 구축되어 있으며, 사용자 친화적인 IDE를 통해 테스트 생성부터 실행, 보고까지 전 과정을 효율적으로 관리할 수 있습니다.
+다양한 애플리케이션의 자동화 테스트를 하나의 플랫폼에서 수행할 수 있는 강력한 도구입니다.
+사용자 친화적인 인터페이스와 다양한 기능을 통해 테스트 효율성을 높이며, DevOps 환경과의 통합을 통해 전체 소프트웨어 개발 주기의 품질을 향상시킬 수 있습니다.
 
-## introduce
+## 🔧 주요 기능
 
-VuePress is a Markdown-centric static website generator. Its design concept is optimized for technical documentation.
+1. 다양한 테스트 지원: 다양한 웹사이트의 자동화 테스트를 지원합니다.
+1. 이중 인터페이스: 스크립트 기반(Groovy/Java)과 키워드 기반의 수동 모드를 모두 제공하여 초보자와 전문가 모두에게 적합합니다.
+1. 자동화 도구: 테스트 녹화(Record), 객체 스파이(Object Spy), 디버깅, 데이터 기반 테스트 등 다양한 자동화 기능을 제공합니다.
+1. 통합 관리: 테스트 케이스, 테스트 스위트, 테스트 실행 결과를 체계적으로 관리할 수 있습니다.
+1. CI/CD 통합: Jenkins, Azure DevOps, Git, Slack 등 다양한 도구와의 통합을 지원하여 DevOps 환경에 적합합니다.
 
-## Why choose VuePress?
+## 💡 장점
 
-- **Simplicity first**: A Markdown-centric project structure helps you focus on writing with minimal configuration.
-- **Vue driver**: Enjoy the development experience of Vue + webpack. You can use Vue components in Markdown, and you can use Vue to develop custom themes.
-- **High performance**: Pre-rendering generates static HTML for each page, and each page will run as a SPA when it is loaded.
-- **Theme**: A default theme is provided out of the box. You can also pick a community theme or create your own.
-- **Plugins**: Flexible plugin API allows plugins to provide many plug-and-play functions for your site.
-
-## Features
-
-- Responsive layout
-- Optional themes
-- Support custom plugins
-- Support PWA
-- Support Markdown enhancement
-- More...
-
-## Next step
-
-Read on to learn the basic concepts and usage of VuePress:
-
-- [Introduction](./introduction.md)
-- [Getting Started](./getting-started.md)
-
-For more help, see the [VuePress official documentation](https://v2.vuepress.vuejs.org/zh/)
+1. 사용자 친화성: 코딩 경험이 적은 사용자도 쉽게 접근할 수 있는 인터페이스를 제공합니다.
+1. 다양한 테스트 유형 지원: 하나의 도구로 다양한 애플리케이션의 테스트를 수행할 수 있어 효율적입니다.
+1. 무료 사용 가능: 기본 기능은 무료로 제공되며, 필요에 따라 유료 버전으로 확장할 수 있습니다.
