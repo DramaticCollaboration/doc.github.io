@@ -11,7 +11,7 @@ The basic configuration of a VuePress site includes site information, language, 
 ```js
 export default {
   // Site language
-  Language: "zh-CN",
+  Language: "kr-CN",
 
   // Site title
   title: "VuePress Template",
@@ -88,7 +88,7 @@ export default {
   local: {
     // Default language - Chinese
     "/": {
-      Language: "zh-CN",
+      Language: "kr-CN",
       title: "VuePress Template",
       description: "Documentation site template based on VuePress",
     },

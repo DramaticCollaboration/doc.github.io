@@ -6,11 +6,11 @@ heroAlt: VuePress Template Logo
 tagline: A modern VuePress documentation template
 actions:
   - text: Getting Started
-    link: /guide/introduction.md # points to the introduction page
+    link: /synceta/introduction.md # points to the introduction page
     type: primary
 
-  - text: View guide
-    link: /guide/ # points to the guide homepage
+  - text: View synceta
+    link: /synceta/ # points to the synceta homepage
     type: secondary
 
 features:

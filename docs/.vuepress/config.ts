@@ -7,8 +7,8 @@ import fs from 'fs'
 // Import the split configuration module
 import { head } from './config/head.js'
 import { plugins } from './config/plugins.js'
-import { zh as zhNavbar } from './config/navbar/zh.js'
-import { zh as zhSidebar } from './config/sidebar/zh.js'
+import { kr as krNavbar } from './config/navbar/kr.js'
+import { kr as krSidebar } from './config/sidebar/kr.js'
 
 // Gets the directory path of the current file
 const __dirname = getDirname(import.meta.url)
@@ -54,7 +54,7 @@ export default defineUserConfig({
   // Basic site configuration
   // ==================
   lang: 'ko-KR', // Site language
-  description: 'A Empasy Solutions modern document', // 站点描述 (用于 SEO)
+  description: 'The Empasy document', // Site description (for SEO)
   head: head, // <head> Tag configuration, imported from ./config/head.js
 
   // ==================
@@ -87,10 +87,10 @@ export default defineUserConfig({
         selectLanguageAriaLabel: 'Select a language',
 
         // -- Navbar --
-        navbar: zhNavbar, // Navigation bar configuration, imported from ./config/navbar/zh.js
+        navbar: krNavbar, // Navigation bar configuration, imported from ./config/navbar/kr.js
 
         // -- Sidebar --
-        sidebar: zhSidebar, // Sidebar configuration, imported from ./config/sidebar/zh.js
+        sidebar: krSidebar, // Sidebar configuration, imported from ./config/sidebar/kr.js
         sidebarDepth: 2, // The sidebar extracts the depth of the title
 
         // -- Page meta --

@@ -49,11 +49,11 @@ theme: defaultTheme({
       children: [
         {
           text: "Introduction",
-          link: "/guide/introduction.html",
+          link: "/synceta/introduction.html",
         },
         {
           text: "Get started quickly",
-          link: "/guide/getting-started.html",
+          link: "/synceta/getting-started.html",
         },
       ],
     },
@@ -105,8 +105,8 @@ The simplest configuration is to provide an array of links:
 theme: defaultTheme({
   sidebar: [
     "/", // front page
-    "/guide/", // Guide home page
-    "/guide/introduction", // Introduction page
+    "/synceta/", // Guide home page
+    "/synceta/introduction", // Introduction page
   ],
 })
 ```
@@ -121,7 +121,7 @@ theme: defaultTheme({
     {
       text: "Guide",
       collapsible: true, // collapsible
-      children: ["/guide/", "/guide/introduction", "/guide/getting-started"],
+      children: ["/synceta/", "/synceta/introduction", "/synceta/getting-started"],
     },
     {
       text: "Configuration",
@@ -142,7 +142,7 @@ theme: defaultTheme({
     "/guide/": [
       {
         text: "Guide",
-        children: ["/guide/", "/guide/introduction", "/guide/getting-started"],
+        children: ["/synceta/", "/synceta/introduction", "/synceta/getting-started"],
       },
     ],
     "/config/": [
@@ -228,7 +228,7 @@ To configure multi-language support:
 export default {
   local: {
     "/": {
-      Language: "zh-CN",
+      Language: "kr-CN",
       title: "VuePress Template",
       description: "Documentation site template based on VuePress",
     },
@@ -243,7 +243,7 @@ export default {
       "/": {
         navbar: [
           { text: "Home", link: "/" },
-          { text: "Guide", link: "/guide/" },
+          { text: "Guide", link: "/synceta/" },
         ],
         sidebar: {
           "/guide/": [
@@ -259,7 +259,7 @@ export default {
       "/in/": {
         navbar: [
           { text: "Home", link: "/en/" },
-          { text: "Guide", link: "/en/guide/" },
+          { text: "Guide", link: "/en/synceta/" },
         ],
         sidebar: {
           "/a/guide/": [

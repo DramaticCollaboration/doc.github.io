@@ -3,20 +3,9 @@
   "version": "1.0.0",
   "private": true,
   "description": "Empasy VuePress Solution Doc Template",
-  "keywords": [
-    "vuepress",
-    "vuepress-template"
-  ],
   "license": "MIT",
   "author": "Helian Labs",
-  "homepage": "https://github.com/helian-labs/vuepress-template#readme",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/helian-labs/vuepress-template"
-  },
-  "bugs": {
-    "url": "https://github.com/helian-labs/vuepress-template/issues"
-  },
+  "homepage": "https://empasy.com",
   "type": "module",
   "scripts": {
     "predeploy": "pnpm run docs:build",
@@ -25,7 +14,6 @@
     "docs:clean-dev": "vuepress dev docs --clean-cache",
     "docs:dev": "vuepress dev docs",
     "docs:update-package": "pnpm dlx vp-update",
-    "docs:deploy": "bash deploy.sh",
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore",
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,css,scss,vue,html,md}\" --ignore-path .gitignore",
     "new:page": "node scripts/new-page.js",

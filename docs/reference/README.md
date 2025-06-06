@@ -24,7 +24,7 @@ import { viteBundler } from "@vuepress/bundler-vite"
 
 export default defineUserConfig({
   // Site configuration
-  lang: "zh-CN",
+  lang: "kr-CN",
   title: "VuePress Template",
   description: "Documentation site template based on VuePress",
   head: [
@@ -46,14 +46,14 @@ export default defineUserConfig({
     docsDir: "docs",
     navbar: [
       { text: "Home", link: "/" },
-      { text: "Guide", link: "/guide/" },
+      { text: "Guide", link: "/synceta/" },
       { text: "Configuration", link: "/config/" },
     ],
     sidebar: {
       "/guide/": [
         {
           text: "Guide",
-          children: ["/guide/README.md", "/guide/introduction.md", "/guide/getting-started.md"],
+          children: ["/synceta/README.md", "/synceta/introduction.md", "/synceta/getting-started.md"],
         },
       ],
       "/config/": [

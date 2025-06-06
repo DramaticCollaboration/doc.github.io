@@ -1,13 +1,13 @@
 # .github/ISSUE_TEMPLATE/config.yml
 
-# 是否允许创建完全空白的 Issue
+# Whether or not to allow the creation of a completely blank issue
 blank_issues_enabled: false
 
-# 在用户点击 "New issue" 时显示的外部链接
+# An external link that appears when a user clicks on "New issue".
 contact_links:
-  - name: 📖 文档
-    url: https://github.com/helian-labs/vuepress-template#readme
-    about: 请先查阅文档，您的问题可能已经有了答案。
-  - name: 🤔 问题与讨论
-    url: https://github.com/helian-labs/vuepress-template/issues
-    about: 如有问题或想法需要讨论，请创建一个新的 Issue。
+  - name: Documentation
+    url: https://doc.empasy.com
+    about: Please consult the documentation first, your question may already have an answer.
+  - name: 🤔 Questions & Discussions
+    url: https://github.com/orgs/DramaticCollaboration/
+    about: If you have a question or idea to discuss, please create a new issue.
