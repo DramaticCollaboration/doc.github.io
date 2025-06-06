@@ -1,0 +1,26 @@
+import{_ as t,c as s,a as n,o as a}from"./app-QFoJTndn.js";const l={};function d(i,e){return a(),s("div",null,e[0]||(e[0]=[n(`<h1 id="jselectmultiple-drop-down-multiple-selections-✔" tabindex="-1"><a class="header-anchor" href="#jselectmultiple-drop-down-multiple-selections-✔"><span>JSelectMultiple drop-down multiple selections ✔</span></a></h1><p>JSelectMultiple dictionary drop-down multiple selection.</p><h2 id="component-parameters" tabindex="-1"><a class="header-anchor" href="#component-parameters"><span>Component Parameters</span></a></h2><table><thead><tr><th>parameter</th><th>type</th><th>Required</th><th>default value</th><th>illustrate</th></tr></thead><tbody><tr><td>value(v-model)</td><td>string / array</td><td></td><td>&#39;&#39;</td><td></td></tr><tr><td>placeholder</td><td>string</td><td></td><td>&#39;please choose&#39;</td><td>Placeholder echo</td></tr><tr><td>readOnly</td><td>bool</td><td></td><td>false</td><td>Read-only</td></tr><tr><td>options</td><td>array</td><td></td><td></td><td>Multiple options. If the dictCode parameter is not provided, you can set this parameter to load multiple options.</td></tr><tr><td>splitter</td><td>string</td><td></td><td>&#39;,&#39;</td><td>Option separator, comma by default</td></tr><tr><td>popContainer</td><td>string</td><td></td><td></td><td>The CSS selector corresponding to the parent node, used internally to <code>document.querySelector</code>select the parent node. If set <code>.pnode</code>, it will find the node with class pnode and render the drop-down box</td></tr><tr><td>dictCode</td><td>string</td><td></td><td></td><td>Dictionary encoding</td></tr><tr><td>disabled</td><td>bool</td><td></td><td></td><td>Disable</td></tr><tr><td>triggerChange</td><td>Boolean</td><td>true</td><td>Loading changes</td><td></td></tr></tbody></table><h2 id="show-results" tabindex="-1"><a class="header-anchor" href="#show-results"><span>Show results</span></a></h2><p><img src="https://lfs.k.topthink.com/lfs/7bdf77f66339aee874fc3950d03e602e4e0b919152685434d45f83cda9d2f4ff.dat" alt=""></p><h2 id="usage-examples" tabindex="-1"><a class="header-anchor" href="#usage-examples"><span>Usage Examples</span></a></h2><div class="language-text line-numbers-mode" data-highlighter="prismjs" data-ext="text"><pre><code><span class="line">const schemas: FormSchema[] = [</span>
+<span class="line">    {</span>
+<span class="line">        field: &#39;jsm&#39;,</span>
+<span class="line">        component: &#39;JSelectMultiple&#39;,</span>
+<span class="line">        label: &#39;字典下拉多选&#39;,</span>
+<span class="line">        helpMessage: [&#39;component模式&#39;],、</span>
+<span class="line">        componentProps: {</span>
+<span class="line">            dictCode: &#39;sex&#39;,</span>
+<span class="line">            triggerChange:true</span>
+<span class="line">        },</span>
+<span class="line">    },</span>
+<span class="line">    {</span>
+<span class="line">        field: &#39;jsm1&#39;,</span>
+<span class="line">        component: &#39;JSelectMultiple&#39;,</span>
+<span class="line">        label: &#39;字典下拉多选&#39;,</span>
+<span class="line">        helpMessage: [&#39;component模式&#39;],</span>
+<span class="line">        componentProps: {</span>
+<span class="line">            options: [</span>
+<span class="line">                {label:&#39;一年级&#39;,value:&#39;1&#39;},</span>
+<span class="line">                {label:&#39;二年级&#39;,value:&#39;2&#39;},</span>
+<span class="line">                {label:&#39;三年级&#39;,value:&#39;3&#39;}</span>
+<span class="line">            ]</span>
+<span class="line">        }</span>
+<span class="line">    }</span>
+<span class="line">]</span>
+<span class="line"></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>copy</p>`,9)]))}const r=t(l,[["render",d]]),o=JSON.parse('{"path":"/syncadmin/ui-component-library/jselect-multiple-drop-down-multiple-selections.html","title":"JSelectMultiple drop-down multiple selections ✔","lang":"ko-KR","frontmatter":{"order":15},"git":{"updatedTime":1749179241000,"contributors":[{"name":"poh","username":"poh","email":"poh@empasy.com","commits":1,"url":"https://github.com/poh"}],"changelog":[{"hash":"a96cbbf1f6c96d0e9d6bafa4174131f10429b849","time":1749179241000,"email":"poh@empasy.com","author":"poh","message":"sync 제품군 추가"}]},"filePathRelative":"syncadmin/ui-component-library/jselect-multiple-drop-down-multiple-selections.md"}');export{r as comp,o as data};
