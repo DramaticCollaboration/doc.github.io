@@ -5,13 +5,13 @@ on:
     branches:
       - main
 
-# 设置 GITHUB_TOKEN 的权限，以便部署到 GitHub Pages
+# Set permissions for GITHUB_TOKEN to deploy to GitHub Pages
 permissions:
   contents: read
   pages: write
   id-token: write
 
-# 只允许一个并发部署，取消正在运行的工作流/作业（如果新的推送发生）
+# Allow only one concurrent deployment, cancel running workflows/jobs (if new push happens)
 concurrency:
   group: "pages"
   cancel-in-progress: true
@@ -29,12 +29,12 @@ jobs:
       - name: Setup pnpm
         uses: pnpm/action-setup@v3
         with:
-          version: 10 # 确保与 CI 步骤一致
+          version: 10 # Ensure consistency with CI steps
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '22' # 确保与 CI 步骤一致
+          node-version: '22' # Ensure consistency with CI steps
           cache: 'pnpm'
 
       - name: Install dependencies
@@ -42,8 +42,8 @@ jobs:
 
       - name: Build
         run: pnpm docs:build
-        # 如果你的构建输出目录不是 docs/.vuepress/dist
-        # 请修改下面的 actions/upload-pages-artifact 步骤中的 path
+        # If your build output directory is not docs/.vuepress/dist
+        # Please modify the path in the actions/upload-pages-artifact step below
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
@@ -51,7 +51,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          # 指定构建输出的目录
+          # Specify the build output directory
           path: 'docs/.vuepress/dist'
 
       - name: Deploy to GitHub Pages
