@@ -20,16 +20,16 @@ jobs:
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
     steps:
-      - uses: pnpm/action-setup@v4
+      - uses: actions/checkout@v3
       - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v3
+        uses: pnpm/action-setup@v4
         with:
-          version: 10
           node-version: ${{ matrix.node-version }}
-      - run: pnpm install
+          version: 10
+      - run: pnpm i
       - run: pnpm run build
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v4
         with:
-          github_token: ${{ secrets.GIT_TOKEN }}1
+          github_token: ${{ secrets.GIT_TOKEN }}
           publish_dir: ./docs/.vuepress/dist
