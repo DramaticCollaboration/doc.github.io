@@ -73,7 +73,7 @@ export default defineUserConfig({
   // ==================
   theme: defaultTheme({
     // -- Basic configuration of the theme --
-    logo: '.vuepress/public/images/logo-dark.png', // Navigation bar logo
+    logo: '/images/logo-dark.png', // Navigation bar logo
     repo: getRepoInfo(), // Repository link, automatically read from package.json
     docsDir: 'docs', // The directory of the source files of the document
 
