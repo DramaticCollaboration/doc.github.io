@@ -121,7 +121,7 @@ export default {
         {
           text: "Advanced",
           collapsible: false,
-          children: ["/synceta/adding-content.md", "/synceta/components.md", "/synceta/styling.md"],
+          children: ["/synceta/project.md", "/synceta/components.md", "/synceta/styling.md"],
         },
       ],
 

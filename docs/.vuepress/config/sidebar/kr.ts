@@ -1,6 +1,7 @@
 // import type { SidebarConfig } from '@vuepress/theme-default' // 类型推断困难，暂时注释
 import { getDirname, path } from 'vuepress/utils'
 import fs from 'fs'
+import matter from 'gray-matter' // gray-matter 패키지 추가
 
 const __dirname = getDirname(import.meta.url)
 
@@ -43,20 +44,36 @@ function generateZhSidebar(): any {
     const dirPath = path.resolve(docsBaseDir, dir)
     // Skip directories that don't exist
     if (!fs.existsSync(dirPath)) continue
-
-    // Read all Markdown files in the directory (excluding README.md)
-    const files = fs
+    const fileList = fs
       .readdirSync(dirPath)
       .filter(file => file.endsWith('.md') && file !== 'README.md')
-      .sort((a, b) => a.localeCompare(b)) // Sort alphabetically
-      .map(file => {
-        const name = file.replace('.md', '')
-        // Convert filename to object format { text: 'title', link: '/path/filename' }
-        return {
-          text: formatFilenameAsTitle(name), // Use helper functions to generate titles
-          link: `/${dir}/${name}`,
-        }
-      })
+    const filesWithMeta = fileList.map(file => {
+      const filePath = path.resolve(dirPath, file)
+      const fileContent = fs.readFileSync(filePath, 'utf-8')
+      const { data: frontmatter } = matter(fileContent)
+      const name = file.replace('.md', '')
+
+      return {
+        file,
+        name,
+        // frontmatter에서 title과 sort 속성 가져오기
+        title: frontmatter.title || formatFilenameAsTitle(name),
+        sort: frontmatter.sort || 999, // sort가 없으면 높은 값(999) 설정
+        link: `/${dir}/${name}`,
+      }
+    })
+    filesWithMeta.sort((a, b) => {
+      // 숫자 값으로 정렬
+      return a.sort - b.sort
+    })
+
+    // 정렬된 파일 정보로 링크 객체 생성
+    const files = filesWithMeta.map(fileInfo => {
+      return {
+        text: fileInfo.title, // frontmatter에서 가져온 title 사용
+        link: fileInfo.link,
+      }
+    })
 
     // Create an array of sidebar children with the link for README.md first
     const children = [
