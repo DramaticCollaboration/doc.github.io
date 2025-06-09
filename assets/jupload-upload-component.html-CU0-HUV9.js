@@ -1,0 +1,35 @@
+import{_ as t,c as n,a,o as s}from"./app-CGhJnnYK.js";const d={};function l(i,e){return s(),n("div",null,e[0]||(e[0]=[a(`<h1 id="jupload-upload-component-✔" tabindex="-1"><a class="header-anchor" href="#jupload-upload-component-✔"><span>JUpload upload component ✔</span></a></h1><p>The JUpload component can upload files and images.</p><h2 id="component-parameters" tabindex="-1"><a class="header-anchor" href="#component-parameters"><span>Component Parameters</span></a></h2><table><thead><tr><th>parameter</th><th>type</th><th>Required</th><th>default value</th><th>illustrate</th></tr></thead><tbody><tr><td>value(v-model)</td><td>string / array</td><td></td><td>&#39;&#39;</td><td></td></tr><tr><td>text</td><td>string</td><td></td><td>&#39;Upload&#39;</td><td>Button display text</td></tr><tr><td>fileType</td><td>string</td><td></td><td>&#39;all&#39;</td><td>Define the type of uploaded file. Optional values: all, image. If image is passed, only images can be uploaded.</td></tr><tr><td>bizPath</td><td>string</td><td></td><td>&#39;temp&#39;</td><td>Used to control the business path of file upload</td></tr><tr><td>returnUrl</td><td>bool</td><td></td><td>true</td><td>Whether to return the file URL. true: only return the file URL, multiple URLs are separated by commas; false: return json type. {fileName:&quot;1.doc&quot;,filePath:&quot;/temp/1.doc&quot;,fileSize:200}</td></tr><tr><td>multiple</td><td>bool</td><td></td><td>true</td><td>Is it possible to select multiple items?</td></tr><tr><td>maxCount</td><td>int</td><td></td><td>0</td><td>Maximum number of uploads, set to 0 for unlimited</td></tr><tr><td>buttonVisible</td><td>bool</td><td></td><td>true</td><td>Whether to display the upload button (only valid in all mode)</td></tr><tr><td>mover</td><td>bool</td><td></td><td>true</td><td>Whether to display left and right movement buttons</td></tr><tr><td>download</td><td>bool</td><td></td><td>true</td><td>Whether to display the download button</td></tr><tr><td>removeConfirm</td><td>bool</td><td></td><td>false</td><td>Whether to confirm twice when deleting</td></tr><tr><td>disabled</td><td>bool</td><td></td><td>false</td><td>Disable</td></tr><tr><td>beforeUpload</td><td>function</td><td></td><td></td><td>Pre-upload method, returns a promise object</td></tr></tbody></table><blockquote><p>For more parameters, see: <a href="https://2x.antdv.com/components/upload-cn/#API" target="_blank" rel="noopener noreferrer">Upload</a></p></blockquote><p><img src="https://lfs.k.topthink.com/lfs/9c03ddca3b9b03e7f3840a70b3f548064f9c45a299b91c11019450dcb2068526.dat" alt=""></p><h2 id="show-results" tabindex="-1"><a class="header-anchor" href="#show-results"><span>Show results</span></a></h2><p><img src="https://lfs.k.topthink.com/lfs/44587abad32bcfc8329c137074fb24598243b57bc8de962908f9b64e632f2f46.dat" alt=""></p><h2 id="usage-examples" tabindex="-1"><a class="header-anchor" href="#usage-examples"><span>Usage Examples</span></a></h2><div class="language-text line-numbers-mode" data-highlighter="prismjs" data-ext="text"><pre><code><span class="line">const schemas: FormSchema[] = [</span>
+<span class="line">  {</span>
+<span class="line">    field: &#39;uploadFile&#39;,</span>
+<span class="line">    component: &#39;JUpload&#39;,</span>
+<span class="line">    helpMessage: &#39;无限制上传&#39;,</span>
+<span class="line">    label: &#39;上传文件&#39;,</span>
+<span class="line">  },</span>
+<span class="line">  {</span>
+<span class="line">    field: &#39;uploadFileMax&#39;,</span>
+<span class="line">    component: &#39;JUpload&#39;,</span>
+<span class="line">    helpMessage: &#39;最多上传3个文件&#39;,</span>
+<span class="line">    label: &#39;上传文件（3）&#39;,</span>
+<span class="line">    componentProps: { maxCount: 3 },</span>
+<span class="line">  },</span>
+<span class="line">  {</span>
+<span class="line">    field: &#39;uploadImage&#39;,</span>
+<span class="line">    component: &#39;JUpload&#39;,</span>
+<span class="line">    label: &#39;上传图片&#39;,</span>
+<span class="line">    helpMessage: &#39;无限制上传&#39;,</span>
+<span class="line">    componentProps: {</span>
+<span class="line">      fileType: UploadTypeEnum.image,</span>
+<span class="line">    },</span>
+<span class="line">  },</span>
+<span class="line">  {</span>
+<span class="line">    field: &#39;uploadImageMax&#39;,</span>
+<span class="line">    component: &#39;JUpload&#39;,</span>
+<span class="line">    label: &#39;上传图片（1）&#39;,</span>
+<span class="line">    helpMessage: &#39;最多上传1张图片&#39;,</span>
+<span class="line">    componentProps: {</span>
+<span class="line">      fileType: UploadTypeEnum.image,</span>
+<span class="line">      maxCount: 1,</span>
+<span class="line">    },</span>
+<span class="line">  },</span>
+<span class="line">]</span>
+<span class="line"></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>copy</p>`,11)]))}const o=t(d,[["render",l]]),r=JSON.parse('{"path":"/syncadmin/ui-component-library/jupload-upload-component.html","title":"JUpload upload component ✔","lang":"ko-KR","frontmatter":{"order":19},"git":{"updatedTime":1749510018000,"contributors":[{"name":"poh","username":"poh","email":"poh@empasy.com","commits":1,"url":"https://github.com/poh"}],"changelog":[{"hash":"b5c965c32dfeaa81de62133194782387bf36abfc","time":1749510018000,"email":"poh@empasy.com","author":"poh","message":"로고 표시 오류 수정"}]},"filePathRelative":"syncadmin/ui-component-library/jupload-upload-component.md"}');export{o as comp,r as data};
