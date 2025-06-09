@@ -1,9 +1,9 @@
 ---
 home: true
 title: Home
-heroImage: .vuepress/public/images/logo-dark.png
-heroAlt: VuePress Template Logo
-tagline: A modern VuePress documentation template
+heroImage: /images/logo-dark.png
+heroAlt: Empasy Documentation
+tagline: 엠파시 개발자 가이트및 제품 소개
 actions:
   - text: Getting Started
     link: /synceta/introduction.md # points to the introduction page
