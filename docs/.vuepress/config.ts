@@ -35,7 +35,7 @@ function getRepoInfo(): string {
       }
     } else {
       // If it is not available in package.json, the default value is used
-      repo = 'https://github.com/yourusername/vuepress-template'
+      repo = 'https://github.com/DramaticCollaboration/'
       console.warn('Warning: repository.url not found in package.json. Using default repo URL.')
     }
 
@@ -43,7 +43,7 @@ function getRepoInfo(): string {
   } catch (e) {
     console.error('Error reading package.json for repo info:', e)
     // Returns the default value when an error occurs
-    return 'https://github.com/yourusername/vuepress-template'
+    return 'https://github.com/DramaticCollaboration/'
   }
 }
 
@@ -74,6 +74,7 @@ export default defineUserConfig({
   theme: defaultTheme({
     // -- Basic configuration of the theme --
     logo: '/images/logo-dark.png', // Navigation bar logo
+    logoDark: '/images/logo-light.png',
     repo: getRepoInfo(), // Repository link, automatically read from package.json
     docsDir: 'docs', // The directory of the source files of the document
 
