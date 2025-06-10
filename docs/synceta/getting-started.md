@@ -158,7 +158,7 @@ If you need to deploy to a custom domain name, please create a file named `CNAME
 
 Now that you know the basics of using VuePress, you can continue to explore more advanced features and templates:
 
-- **Configuration**: Learn how to configure the [navigation bar and sidebar](./configuration.md) (page to be created).
+- **Configuration**: Learn how to configure the [navigation bar and sidebar](./dataset) (page to be created).
 - **Content**: Learn how to [add a new documentation page](./project) (page to be created), and how to use the [content validation script](./content-validation.md).
 - **Components**: Explore how to [use custom components](./components.md) in Markdown and how to [create new components](./components.md#Create a new component) (requires updating components.md).
 - **Styling**: Learn how to [customize the site style](./styling.md) (page to be created).
