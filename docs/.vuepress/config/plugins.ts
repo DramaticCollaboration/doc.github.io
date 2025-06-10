@@ -4,6 +4,7 @@ import { registerComponentsPlugin } from '@vuepress/plugin-register-components'
 import { mediumZoomPlugin } from '@vuepress/plugin-medium-zoom'
 import { pwaPlugin } from '@vuepress/plugin-pwa'
 import { searchPlugin } from '@vuepress/plugin-search'
+import { googleTagManagerPlugin } from '@vuepress/plugin-google-tag-manager'
 // import { docsearchPlugin } from '@vuepress/plugin-docsearch' // 如果需要 Algolia 搜索，取消注释并配置
 
 const __dirname = getDirname(import.meta.url)
@@ -18,6 +19,9 @@ const __dirname = getDirname(import.meta.url)
  * @see https://v2.vuepress.vuejs.org/zh/reference/plugin/docsearch.html
  */
 export const plugins: PluginConfig = [
+  googleTagManagerPlugin({
+    id: 'G-0BFBDMZDZ8',
+  }),
   /**
    * Automatically register Vue components in the '.vuepress/components' directory
    */
