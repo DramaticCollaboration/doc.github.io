@@ -25,6 +25,30 @@ h2 {
     border-color: var(--c-brand);
   }
 }
+.hint-container.tip table {
+  background-color: #f0f8ff; // 테이블 배경색 변경
+
+  th {
+    background-color: #3a8c6d; // 헤더 배경색 (짙은 초록색)
+    color: white; // 헤더 텍스트 색상
+    padding: 8px;
+    border: 1px solid #dddfd4;
+  }
+
+  td {
+    background-color: #f1f7f2; // 셀 배경색 (매우 연한 초록색)
+    padding: 8px;
+    border: 1px solid #dddfd4;
+  }
+
+  tr:nth-child(even) td {
+    background-color: #e8f3ea; // 짝수 행 배경색 (약간 더 진한 초록색)
+  }
+
+  tr:hover td {
+    background-color: #d3e9d7; // 호버 시 배경색
+  }
+}
 
 // Custom link style
 a.custom-link {
