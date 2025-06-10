@@ -95,12 +95,12 @@ export default defineUserConfig({
         sidebarDepth: 2, // The sidebar extracts the depth of the title
 
         // -- Page meta --
-        editLink: true, // Whether to enable the Edit this page link
-        editLinkText: 'Edit this page on GitHub', // Edit the link text on this page
+        // editLink: true, // Whether to enable the Edit this page link
+        // editLinkText: 'Edit this page on GitHub', // Edit the link text on this page
         lastUpdated: true, // Whether to enable Last Updated
-        lastUpdatedText: 'Last updated', // Last updated text
+        lastUpdatedText: '수정일', // Last updated text
         contributors: true, // Whether to enable the contributor list
-        contributorsText: 'Contributors', // List of contributors text
+        contributorsText: '작성자', // List of contributors text
 
         // -- Custom Containers --
         tip: 'Tips',
