@@ -7,11 +7,14 @@ import type { HeadConfig } from 'vuepress'
  */
 export const head: HeadConfig[] = [
   // Site icon
-  ['link', { rel: 'icon', href: '/images/logo.png' }],
+  ['link', { rel: 'icon', href: '/images/favicon.ico' }],
 
   // SEO-related
-  ['meta', { name: 'author', content: 'The VuePress Team' }], // 作者信息
-  ['meta', { name: 'keywords', content: 'vuepress, vue, Documentation, Blog' }], // 关键词
+  ['meta', { name: 'author', content: '엠파시' }], // 作者信息
+  [
+    'meta',
+    { name: 'keywords', content: '엠파시, Sync Series, SyncCms, SyncBoot, SyncApim, SyncEta' },
+  ], //
 
   // PWA-related
   ['meta', { name: 'theme-color', content: '#3eaf7c' }], // Accent color
@@ -37,4 +40,14 @@ export const head: HeadConfig[] = [
 
   // Add other ones that are needed <head> tags eg Google Analytics Etc
   // ['script', { src: 'https://example.com/script.js' }],
+  // Import the corresponding link
+  ['link', { rel: 'preconnect', href: 'https://fonts.googleapis.com' }],
+  ['link', { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: '' }],
+  [
+    'link',
+    {
+      href: 'https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap',
+      rel: 'stylesheet',
+    },
+  ],
 ]
