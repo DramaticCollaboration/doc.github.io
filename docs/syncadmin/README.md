@@ -26,31 +26,3 @@ Vben Admin은 Vue 3 기반의 관리 시스템 개발을 위한 강력한 템플
 1. 기업 내부 시스템: ERP, CRM, 인사 관리 등 다양한 기업용 백오피스 시스템 구축에 적합합니다.
 1. 관리자 대시보드: 데이터 시각화, 통계 분석 등을 위한 관리자용 대시보드 개발에 활용됩니다.
 1. 학습 및 교육용: Vue 3, Vite, TypeScript 등의 최신 기술 학습을 위한 참고 자료로 활용됩니다.
-
-## 📚 시작하기
-
-1. 프로젝트 클론:
-
-```shell
-git clone https://github.com/vbenjs/vue-vben-admin.git
-```
-
-1. 의존성 설치:
-
-```shell
-cd vue-vben-admin
-npm install
-
-```
-
-1. 개발 서버 실행:
-
-```shell
-npm run dev
-```
-
-1. 빌드:
-
-```shell
-npm run build
-```
