@@ -29,6 +29,7 @@ function generateKrNavbar(): any[] {
     syncboot: 'SyncBoot',
     synccms: 'SyncCms',
     syncadmin: 'SyncAdmin',
+    syncapim: 'SyncApim',
   }
 
   for (const [dir, text] of Object.entries(dirMap)) {
