@@ -57,7 +57,7 @@ export default defineUserConfig({
   lang: 'ko-KR', // Site language
   description: 'The Empasy document', // Site description (for SEO)
   head: head, // <head> Tag configuration, imported from ./config/head.js
-  base: '',
+  // base: '',  //pdf생성할때만 base uncomment
   // ==================
   // Build the tool configuration
   // ==================
