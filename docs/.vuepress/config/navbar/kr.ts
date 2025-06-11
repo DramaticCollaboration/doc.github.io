@@ -14,7 +14,7 @@ type NavbarConfigItem = any
  * @returns {NavbarConfigItem[]} Returns the generated navigation bar configuration array
  */
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
-function generateZhNavbar(): any[] {
+function generateKrNavbar(): any[] {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const navbar: any[] = [
     // Always include a link to the homepage
@@ -55,4 +55,4 @@ function generateZhNavbar(): any[] {
   return navbar
 }
 
-export const kr = generateZhNavbar()
+export const kr = generateKrNavbar()

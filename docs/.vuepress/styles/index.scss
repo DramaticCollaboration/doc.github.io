@@ -92,3 +92,17 @@ table {
     }
   }
 }
+
+@media print {
+  .vp-navbar,
+  .vp-sidebar,
+  .vp-sidebar-mask,
+  .vp-page-nav,
+  .vp-page .vp-page-meta,
+  .vp-page-info {
+    display: none;
+  }
+  .vp-page {
+    padding-left: inherit;
+  }
+}

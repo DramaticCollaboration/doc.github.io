@@ -315,9 +315,12 @@ async function createNewComponent() {
     // Check if the file already exists
     if (fs.existsSync(filePath)) {
       const overwrite = await new Promise(resolve => {
-        rl.question('The component already exists, do you want to overwrite it? (y/n): ', answer => {
-          resolve(answer.trim().toLowerCase() === 'y')
-        })
+        rl.question(
+          'The component already exists, do you want to overwrite it? (y/n): ',
+          answer => {
+            resolve(answer.trim().toLowerCase() === 'y')
+          }
+        )
       })
 
       if (!overwrite) {

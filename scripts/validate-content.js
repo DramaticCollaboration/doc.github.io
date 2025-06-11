@@ -79,7 +79,7 @@ const SPELLING_CORRECTIONS = {
 
 // Chinese spelling errors and correction suggestions
 const CHINESE_SPELLING_CORRECTIONS = {
-  Refresh cache: 'Refresh cache',
+  RefreshCache: 'Refresh cache',
   Uninstall: 'Uninstall',
   Installation: 'Install',
   frame: 'frame',

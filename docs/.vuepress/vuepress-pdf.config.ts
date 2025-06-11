@@ -1,4 +1,5 @@
 import { defineUserConfig } from '@condorhero/vuepress-plugin-export-pdf-v2'
+import { sep, resolve } from 'path'
 
 const headerTemplate = `<div style="margin-top: -0.4cm; height: 70%; width: 100%; display: flex; justify-content: center; align-items: center; color: lightgray; border-bottom: solid lightgray 1px; font-size: 10px;">
   <span class="title"></span>
@@ -29,8 +30,39 @@ const routeOrder = [
 
 const isWin = process.platform === 'win32'
 
+function normalizePath(dir) {
+  if (!dir) return ''
+
+  // 1. 시작 부분의 '/' 또는 '\' 제거
+  // 2. 경로 구분자를 현재 OS에 맞게 변환
+  return dir
+    .replace(/^[/\\]+/, '')
+    .split(/[/\\]+/)
+    .join(sep)
+}
+
+function isPathSame(path1, path2) {
+  if (!path1 || !path2) return false
+
+  // 1. 두 경로 모두 정규화
+  const normalizedPath1 = normalizePath(path1)
+  const normalizedPath2 = normalizePath(path2)
+
+  // 2. 절대 경로로 변환 (선택적)
+  const absolutePath1 = resolve(normalizedPath1)
+  const absolutePath2 = resolve(normalizedPath2)
+
+  // 3. 대소문자 구분 없이 비교 (Windows의 경우)
+  if (process.platform === 'win32') {
+    return absolutePath1.toLowerCase() === absolutePath2.toLowerCase()
+  }
+
+  // Unix 계열은 대소문자 구분
+  return absolutePath1 === absolutePath2
+}
+
 export default defineUserConfig({
-  debug: true,
+  pdfOutlines: false,
   pdfOptions: {
     format: 'A4',
     displayHeaderFooter: true,
@@ -44,24 +76,13 @@ export default defineUserConfig({
     },
   },
   sorter: (pageA, pageB) => {
-    console.log('페이지 정보')
-
     const aIndex = routeOrder.findIndex(route => {
-      const newRoute = isWin ? route.replaceAll('/', '\\') : route
-      const newPath = isWin ? pageA.path.replaceAll('/', '\\').replaceAll('\\\\', '\\') : route
-      console.log(newRoute + ':' + newPath)
-      return newRoute === newPath
+      return isPathSame(route, pageA.path)
     })
     const bIndex = routeOrder.findIndex(route => {
-      const newRoute = isWin ? route.replaceAll('/', '\\') : route
-      const newPath = isWin ? pageB.path.replaceAll('/', '\\').replaceAll('\\\\', '\\') : route
-      console.log(newRoute + ':' + newPath)
-      return newRoute === newPath
+      return isPathSame(route, pageB.path)
     })
-    //console.log(pageA.path)
-    //console.log(pageB.path)
-    console.log('aIndex ' + aIndex)
-    console.log('bIndex ' + bIndex)
+    console.log(pageA.path + ':' + pageB.path + ':' + aIndex + ':' + bIndex)
     return aIndex - bIndex
   },
   urlOrigin: 'https://doc.empasy.com',

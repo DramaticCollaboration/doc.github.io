@@ -57,7 +57,7 @@ export default defineUserConfig({
   lang: 'ko-KR', // Site language
   description: 'The Empasy document', // Site description (for SEO)
   head: head, // <head> Tag configuration, imported from ./config/head.js
-
+  base: '',
   // ==================
   // Build the tool configuration
   // ==================
@@ -78,10 +78,9 @@ export default defineUserConfig({
     logoDark: '/images/logo-light.png',
     repo: getRepoInfo(), // Repository link, automatically read from package.json
     docsDir: 'docs', // The directory of the source files of the document
-    // editLink: false,
     // -- Multi-language support --
     locales: {
-      // Chinese language configuration
+      // Korean language configuration
       '/': {
         // -- Base --
         selectLanguageName: 'Korean',
