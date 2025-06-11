@@ -3,16 +3,28 @@ home: true
 title: Home
 heroImage: /images/logo-dark.png
 heroImageDark: /images/logo-light.png
-heroAlt: Empasy Documentation
-tagline: 엠파시 개발자 가이트및 제품 소개
+heroAlt: 엠파시 제품 가이드 🎯
+tagline: 엠파시 제품 가이드 🎯
 actions:
-  - text: Getting Started
-    link: /synceta/introduction.md # points to the introduction page
+  - text: SyncAdmin
+    link: /syncadmin/
     type: primary
 
-  - text: View synceta
-    link: /synceta/ # points to the synceta homepage
-    type: secondary
+  - text: SyncCms
+    link: /synccms/
+    type: primary
+
+  - text: SyncBoot
+    link: /syncboot/
+    type: primary
+
+  - text: SyncApim
+    link: /syncapim/
+    type: primary
+
+  - text: SyncEta
+    link: /synceta/
+    type: primary
 
 features:
   - title: 비즈니스 민첩성 및 변화 대응 최적화
@@ -107,7 +119,7 @@ footer: Copyright © 2025 Empasy
 1. 장점: "빨리 바꾸다 보면 아무래도 오류 가능성이 높아지죠. SyncEta가 바로 그 부분을 딱 해결해 줍니다.", "쉽게 말해서 사용자가 웹사이트 쓰는 행동을 자동으로 스크립트로 만들어서 자동으로 테스트 실행하는 거예요.", "사용자의 친화적인 개발 환경, IDE를 제공해서 테스트 만드는 것부터 실행하고 결과 보고까지 이걸 아주 효율적으로 관리할 수 있게 해주고요.", "특히 중요한 건 CI/CD 그러니까 지속적 통합, 지속적 배포 도구랑 연동이 된다는 점입니다. 개발자가 코드 바꾸면 자동으로 테스트하고 배포까지 쭉 연결해주니까 소프트웨어 변경 사항을 정말 빠르고 안정적으로 반영할 수 있게 되는 거죠." 사용자 친화성 (코딩 경험 적은 사용자도 용이), 다양한 테스트 유형 지원, 초기 비용 절감 및 유지보수 비용 최소화, 효율적인 리소스 관리, 협업 강화, 속도 향상 및 테스트 확장성 확보, 지속 가능한 품질 관리, 고객 만족도 향상. 코드 없이 손쉽고 빠른 웹 테스트 자동화 환경 제공.
 1. 활용 사례: 자동화 테스트를 통한 시장 출시 시간 단축, CI/CD 및 외부 시스템 통합, 테스트 품질 및 신뢰성 강화, 테스트 관리 및 실행 효율성 향상.
 
-### Sync APIM: API 플랫폼
+### Sync APIM: API 관리 플랫폼
 
 1. 개요: API를 통한 가치 창출 및 디지털 혁신을 선도하는 API 관리 플랫폼입니다. "Customization in its DNA"를 강조하며 고객 맞춤형 솔루션을 제공합니다.
 1. 주요 특징:안정성: 고가용성 및 안정적인 운영 환경 보장.
@@ -137,8 +149,12 @@ footer: Copyright © 2025 Empasy
 1. 삼성DS 브랜드 데스크 사이트 구축 (SyncCMS)
 1. KT ESG 포탈 사이트 구축 (SyncCMS)
 1. LX하우시스 해외 글로벌 웹사이트 구축 및 유지보수 (SyncCMS)
-1. SK매직 e-카달로그 시스템 구축
+1. SK매직 e-카달로그 시스템 구축(SyncCMS)
 1. 천재교육 T셀파 리뉴얼 구축 (SyncCMS)
+1. 비상교육 AIDT (SyncEta)
+1. LG전자 포털 (SyncEta)
+1. 현대자동차 로그 수집 (SyncEta)
+1. 펜타시큐리티 (SyncApim)
 
 ## 결론
 

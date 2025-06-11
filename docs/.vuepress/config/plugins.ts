@@ -5,7 +5,8 @@ import { mediumZoomPlugin } from '@vuepress/plugin-medium-zoom'
 import { pwaPlugin } from '@vuepress/plugin-pwa'
 import { searchPlugin } from '@vuepress/plugin-search'
 import { googleTagManagerPlugin } from '@vuepress/plugin-google-tag-manager'
-// import { docsearchPlugin } from '@vuepress/plugin-docsearch' // 如果需要 Algolia 搜索，取消注释并配置
+
+// import { docsearchPlugin } from '@vuepress/plugin-docsearch' // If you need an Algolia search, uncomment and configure
 
 const __dirname = getDirname(import.meta.url)
 

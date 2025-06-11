@@ -1,6 +1,6 @@
 ---
-title: Account
-sort: 1
+title: 계정 생성
+sort: 2
 ---
 
 # 계정

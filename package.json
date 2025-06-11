@@ -2,15 +2,22 @@
   "name": "vuepress-template",
   "version": "1.0.0",
   "private": true,
-  "description": "Empasy VuePress Solution Doc Template",
+  "description": "Empasy VuePress Solution Doc",
   "license": "MIT",
   "author": "Helian Labs",
   "homepage": "https://empasy.com",
   "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DramaticCollaboration/doc.github.io.git"
+  },
+  "bugs": {
+    "url": "https://github.com/DramaticCollaboration/doc.github.io/issues"
+  },
   "scripts": {
     "predeploy": "pnpm run docs:build",
     "deploy": "gh-pages -d docs/.vuepress/dist",
-    "docs:build": "vuepress build docs &&  cpy CNAME docs/.vuepress/dist/",
+    "docs:build": "vuepress build docs && pnpm run docs:pdf && cpy CNAME docs/.vuepress/dist/",
     "docs:clean-dev": "vuepress dev docs --clean-cache",
     "docs:dev": "vuepress dev docs",
     "docs:update-package": "pnpm dlx vp-update",
@@ -24,7 +31,14 @@
     "analyze": "pnpm analyze:build",
     "check:docs": "node scripts/check-docs.js",
     "prepare": "husky",
-    "test": "pnpm lint && pnpm validate"
+    "test": "pnpm lint && pnpm validate",
+    "docs:pdf": "pnpm run docs:pdf:all && pnpm run docs:pdf:synccms && pnpm run docs:pdf:syncadmin && pnpm run docs:pdf:syncapim && pnpm run docs:pdf:syncboot && pnpm run docs:pdf:synceta && pnpm run docs:pdf:all",
+    "docs:pdf:all": "press-export-pdf export docs --outFile docs/.vuepress/dist/pdf/empasy_v1.0.pdf",
+    "docs:pdf:synccms": "press-export-pdf export docs/synccms --config docs/.vuepress/config.ts --outFile docs/.vuepress/dist/pdf/synccms_manual_v1.0.pdf",
+    "docs:pdf:syncadmin": "press-export-pdf export docs/syncadmin --config docs/.vuepress/config.ts --outFile docs/.vuepress/dist/pdf/syncadmin_manual_v1.0.pdf",
+    "docs:pdf:syncapim": "press-export-pdf export docs/syncapim --config docs/.vuepress/config.ts --outFile docs/.vuepress/dist/pdf/syncapim_manual_v1.0.pdf",
+    "docs:pdf:syncboot": "press-export-pdf export docs/syncboot --config docs/.vuepress/config.ts --outFile docs/.vuepress/dist/pdf/syncboot_manual_v1.0.pdf",
+    "docs:pdf:synceta": "press-export-pdf export docs/synceta --config docs/.vuepress/config.ts --outFile docs/.vuepress/dist/pdf/synceta_manual_v1.0.pdf"
   },
   "devDependencies": {
     "@types/node": "^18.19.99",
@@ -58,9 +72,10 @@
     "typescript": "^5.8.3",
     "vue": "^3.5.13",
     "vue-eslint-parser": "^9.4.3",
-    "vuepress": "2.0.0-rc.22",
+    "vuepress": "2.0.0-rc.23",
     "cpy-cli": "^5.0.0",
-    "@vuepress/plugin-google-tag-manager": "^2.0.0-rc.28"
+    "@vuepress/plugin-google-tag-manager": "^2.0.0-rc.28",
+    "@condorhero/vuepress-plugin-export-pdf-v2": "^3.0.3"
   },
   "engines": {
     "node": ">=18.0.0",

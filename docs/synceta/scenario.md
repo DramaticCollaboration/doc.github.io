@@ -1,6 +1,6 @@
 ---
-title: Scenario
-sort: 3
+title: 시나리오
+sort: 4
 ---
 
 # 시나리오

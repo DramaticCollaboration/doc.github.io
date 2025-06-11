@@ -1,5 +1,6 @@
 ---
 title: Guide
+sort: 1
 ---
 
 # SyncETA

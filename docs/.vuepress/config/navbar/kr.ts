@@ -4,7 +4,7 @@ import fs from 'fs'
 
 const __dirname = getDirname(import.meta.url)
 
-// 定义可能的导航项类型 (类型推断困难，使用 any)
+// Define possible navigation item types (type inference is difficult, use any)
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 type NavbarConfigItem = any
 
@@ -18,7 +18,7 @@ function generateZhNavbar(): any[] {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const navbar: any[] = [
     // Always include a link to the homepage
-    { text: 'Homepage', link: '/' },
+    { text: '홈', link: '/' },
   ]
 
   // Check for the presence of each primary directory (adjust the path to fit the new config directory structure)
@@ -38,6 +38,19 @@ function generateZhNavbar(): any[] {
       navbar.push({ text, link: `/${dir}/` })
     }
   }
+
+  navbar.push({
+    text: '엠파시',
+    link: 'https://www.empasy.com',
+    target: '_blank',
+    rel: 'noopener noreferrer', // Recommended for security
+  })
+  navbar.push({
+    text: '다운로드',
+    link: 'pdf/empasy_v1.0.pdf',
+    target: '_blank',
+    rel: 'noopener noreferrer', // Recommended for security
+  })
 
   return navbar
 }

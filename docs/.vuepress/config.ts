@@ -53,6 +53,7 @@ export default defineUserConfig({
   // ==================
   // Basic site configuration
   // ==================
+  title: '살아 있는 소프트웨어는 엠파시가 만듭니다',
   lang: 'ko-KR', // Site language
   description: 'The Empasy document', // Site description (for SEO)
   head: head, // <head> Tag configuration, imported from ./config/head.js
@@ -77,7 +78,7 @@ export default defineUserConfig({
     logoDark: '/images/logo-light.png',
     repo: getRepoInfo(), // Repository link, automatically read from package.json
     docsDir: 'docs', // The directory of the source files of the document
-
+    // editLink: false,
     // -- Multi-language support --
     locales: {
       // Chinese language configuration
@@ -95,7 +96,7 @@ export default defineUserConfig({
         sidebarDepth: 2, // The sidebar extracts the depth of the title
 
         // -- Page meta --
-        // editLink: true, // Whether to enable the Edit this page link
+        editLink: false, // Whether to enable the Edit this page link
         // editLinkText: 'Edit this page on GitHub', // Edit the link text on this page
         lastUpdated: true, // Whether to enable Last Updated
         lastUpdatedText: '수정일', // Last updated text

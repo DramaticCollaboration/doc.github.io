@@ -1,5 +1,5 @@
 ---
-title: Collection
+title: 컬랙션
 sort: 6
 ---
 

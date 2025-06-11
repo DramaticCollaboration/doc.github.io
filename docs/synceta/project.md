@@ -1,6 +1,6 @@
 ---
-title: Project
-sort: 2
+title: 프로젝트
+sort: 3
 ---
 
 # 프로젝트
