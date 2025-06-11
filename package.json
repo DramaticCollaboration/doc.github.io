@@ -32,7 +32,7 @@
     "check:docs": "node scripts/check-docs.js",
     "prepare": "husky",
     "test": "pnpm lint && pnpm validate",
-    "docs:pdf": "press-export-pdf export docs --debug --outFile docs/pdf/empasy_v1.0.pdf",
+    "docs:pdf": "press-export-pdf export docs --debug --outFile docs/pdf/empasy_guide_v1.8.pdf",
     "generate-licenses": "node scripts/generate-license-notice.js"
   },
   "devDependencies": {

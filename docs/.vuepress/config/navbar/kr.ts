@@ -41,7 +41,7 @@ function generateKrNavbar(): any[] {
 
   navbar.push({
     text: 'PDF 다운로드',
-    link: 'https://www.empasy.com/assets/pdf/empasy_guide_v1.3.pdf',
+    link: 'https://www.empasy.com/assets/pdf/empasy_guide_v1.8.pdf',
     target: '_blank',
     rel: 'noopener noreferrer', // Recommended for security
   })
