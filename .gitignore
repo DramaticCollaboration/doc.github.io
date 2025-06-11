@@ -134,3 +134,8 @@ common/temp/
 common/rush/
 # lerna
 lerna-debug.log*
+/docs/syncadmin/.vuepress/
+/docs/syncapim/.vuepress/
+/docs/syncboot/.vuepress/
+/docs/synccms/.vuepress/
+/docs/synceta/.vuepress/

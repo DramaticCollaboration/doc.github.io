@@ -8,7 +8,29 @@ const footerTemplate = `<div style="margin-bottom: -0.4cm; height: 70%; width: 1
   <span style="margin-left: 15px;" class="url"></span>
 </div>`
 
+const routeOrder = [
+  '/',
+  '/syncadmin/',
+  '/syncadmin/index.html/',
+  '/synccms/',
+  '/synccms/index.html/',
+  '/syncboot/',
+  '/syncboot/index.html/',
+  '/syncapim/',
+  '/syncapim/index.html/',
+  '/synceta/',
+  '/synceta/index.html/',
+  '/synceta/account.html/',
+  '/synceta/project.html/',
+  '/synceta/scenario.html/',
+  '/synceta/dataset.html/',
+  '/synceta/collection.html/',
+]
+
+const isWin = process.platform === 'win32'
+
 export default defineUserConfig({
+  debug: true,
   pdfOptions: {
     format: 'A4',
     displayHeaderFooter: true,
@@ -22,10 +44,25 @@ export default defineUserConfig({
     },
   },
   sorter: (pageA, pageB) => {
-    console.log('AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA')
-    console.log(JSON.stringify(pageA))
-    console.log(JSON.stringify(pageB))
-    return 0
+    console.log('페이지 정보')
+
+    const aIndex = routeOrder.findIndex(route => {
+      const newRoute = isWin ? route.replaceAll('/', '\\') : route
+      const newPath = isWin ? pageA.path.replaceAll('/', '\\').replaceAll('\\\\', '\\') : route
+      console.log(newRoute + ':' + newPath)
+      return newRoute === newPath
+    })
+    const bIndex = routeOrder.findIndex(route => {
+      const newRoute = isWin ? route.replaceAll('/', '\\') : route
+      const newPath = isWin ? pageB.path.replaceAll('/', '\\').replaceAll('\\\\', '\\') : route
+      console.log(newRoute + ':' + newPath)
+      return newRoute === newPath
+    })
+    //console.log(pageA.path)
+    //console.log(pageB.path)
+    console.log('aIndex ' + aIndex)
+    console.log('bIndex ' + bIndex)
+    return aIndex - bIndex
   },
   urlOrigin: 'https://doc.empasy.com',
 })

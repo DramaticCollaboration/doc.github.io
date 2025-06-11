@@ -24,7 +24,7 @@ function formatFilenameAsTitle(filename: string): string {
  * @returns {any} Return the generated sidebar configuration object (type inference difficult, use any)
  */
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
-function generateZhSidebar(): any {
+function generateKrSidebar(): any {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const sidebar: any = {}
   // Calculate the absolute path to the docs directory
@@ -77,7 +77,7 @@ function generateZhSidebar(): any {
 
     // Create an array of sidebar children with the link for README.md first
     const children = [
-      { text: 'Summary', link: `/${dir}/` }, // README.md Link (text customizable)
+      { text: '요약', link: `/${dir}/` }, // README.md Link (text customizable)
       ...files, // Other Markdown files link objects
     ]
 
@@ -95,4 +95,4 @@ function generateZhSidebar(): any {
 }
 
 // Export the generated Chinese sidebar configuration
-export const kr = generateZhSidebar()
+export const kr = generateKrSidebar()

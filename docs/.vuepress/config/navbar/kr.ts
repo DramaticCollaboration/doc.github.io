@@ -47,7 +47,7 @@ function generateZhNavbar(): any[] {
   })
   navbar.push({
     text: '다운로드',
-    link: 'pdf/empasy_v1.0.pdf',
+    link: './pdf/empasy_v1.0.pdf',
     target: '_blank',
     rel: 'noopener noreferrer', // Recommended for security
   })
