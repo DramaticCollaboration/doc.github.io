@@ -74,8 +74,8 @@ export default defineUserConfig({
   // ==================
   theme: defaultTheme({
     // -- Basic configuration of the theme --
-    logo: '/images/logo-dark.png', // Navigation bar logo
-    logoDark: '/images/logo-light.png',
+    logo: '/images/empasy-logo.svg', // Navigation bar logo
+    logoDark: '/images/empasy-logo_white.svg',
     repo: getRepoInfo(), // Repository link, automatically read from package.json
     docsDir: 'docs', // The directory of the source files of the document
     // -- Multi-language support --

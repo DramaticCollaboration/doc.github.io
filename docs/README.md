@@ -1,8 +1,8 @@
 ---
 home: true
 title: Home
-heroImage: /images/logo-dark.png
-heroImageDark: /images/logo-light.png
+heroImage: /images/empasy-logo.svg
+heroImageDark: /images/empasy-logo_white.svg
 heroAlt: 엠파시 제품 가이드 🎯
 tagline: 엠파시 제품 가이드 🎯
 actions:
