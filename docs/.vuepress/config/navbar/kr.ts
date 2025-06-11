@@ -40,14 +40,15 @@ function generateKrNavbar(): any[] {
   }
 
   navbar.push({
-    text: '엠파시',
-    link: 'https://www.empasy.com',
+    text: 'PDF 다운로드',
+    link: './pdf/empasy_v1.0.pdf',
     target: '_blank',
     rel: 'noopener noreferrer', // Recommended for security
   })
+
   navbar.push({
-    text: '다운로드',
-    link: './pdf/empasy_v1.0.pdf',
+    text: '엠파시',
+    link: 'https://www.empasy.com',
     target: '_blank',
     rel: 'noopener noreferrer', // Recommended for security
   })
