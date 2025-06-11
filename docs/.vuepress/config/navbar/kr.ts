@@ -25,11 +25,11 @@ function generateKrNavbar(): any[] {
   const docsBaseDir = path.resolve(__dirname, '../../../') // 指向 docs 目录 (退三级)
 
   const dirMap = {
-    synceta: 'SyncETA',
     syncboot: 'SyncBoot',
     syncadmin: 'SyncAdmin',
     synccms: 'SyncCms',
     syncapim: 'SyncApim',
+    synceta: 'SyncETA',
   }
 
   for (const [dir, text] of Object.entries(dirMap)) {
