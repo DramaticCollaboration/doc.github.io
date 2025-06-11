@@ -27,8 +27,8 @@ function generateKrNavbar(): any[] {
   const dirMap = {
     synceta: 'SyncETA',
     syncboot: 'SyncBoot',
-    synccms: 'SyncCms',
     syncadmin: 'SyncAdmin',
+    synccms: 'SyncCms',
     syncapim: 'SyncApim',
   }
 
