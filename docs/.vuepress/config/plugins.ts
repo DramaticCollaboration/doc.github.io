@@ -21,7 +21,7 @@ const __dirname = getDirname(import.meta.url)
  */
 export const plugins: PluginConfig = [
   googleTagManagerPlugin({
-    id: 'G-0BFBDMZDZ8',
+    id: 'GTM-KPMTVVXN',
   }),
   /**
    * Automatically register Vue components in the '.vuepress/components' directory
