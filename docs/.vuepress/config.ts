@@ -18,33 +18,7 @@ const __dirname = getDirname(import.meta.url)
  * @returns {string} Repository URL
  */
 function getRepoInfo(): string {
-  try {
-    const packageJsonPath = path.resolve(__dirname, '../../package.json')
-    const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, 'utf8'))
-    const repoUrl = packageJson.repository?.url || ''
-    let repo = ''
-
-    if (repoUrl) {
-      // Try extracting the HTTPS link from the git URL
-      const match = repoUrl.match(/github\.com[\/:]([^\/]+\/[^\/\.]+)/)
-      if (match && match[1]) {
-        repo = `https://github.com/${match[1]}`
-      } else {
-        // If it's not a GitHub URL or format mismatch, just use the original URL
-        repo = repoUrl
-      }
-    } else {
-      // If it is not available in package.json, the default value is used
-      repo = 'https://github.com/DramaticCollaboration/'
-      console.warn('Warning: repository.url not found in package.json. Using default repo URL.')
-    }
-
-    return repo
-  } catch (e) {
-    console.error('Error reading package.json for repo info:', e)
-    // Returns the default value when an error occurs
-    return 'https://github.com/DramaticCollaboration/'
-  }
+  return 'https://github.com/DramaticCollaboration/'
 }
 
 // Define the VuePress configuration
