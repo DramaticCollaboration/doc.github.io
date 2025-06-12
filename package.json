@@ -70,6 +70,7 @@
     "vuepress": "2.0.0-rc.23",
     "cpy-cli": "^5.0.0",
     "@vuepress/plugin-google-tag-manager": "^2.0.0-rc.28",
+    "@vuepress/plugin-google-analytics": "^1.9.10",
     "@condorhero/vuepress-plugin-export-pdf-v2": "^3.0.3",
     "license-checker-rseidelsohn": "^4.4.2",
     "handlebars": "^4.7.8",

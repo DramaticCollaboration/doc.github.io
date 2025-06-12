@@ -5,6 +5,8 @@ import { mediumZoomPlugin } from '@vuepress/plugin-medium-zoom'
 import { pwaPlugin } from '@vuepress/plugin-pwa'
 import { searchPlugin } from '@vuepress/plugin-search'
 import { googleTagManagerPlugin } from '@vuepress/plugin-google-tag-manager'
+// @ts-ignore
+import { googleAnalyticsPlugin } from '@vuepress/plugin-google-analytics'
 
 // import { docsearchPlugin } from '@vuepress/plugin-docsearch' // If you need an Algolia search, uncomment and configure
 
@@ -22,6 +24,9 @@ const __dirname = getDirname(import.meta.url)
 export const plugins: PluginConfig = [
   googleTagManagerPlugin({
     id: 'GTM-KPMTVVXN',
+  }),
+  googleAnalyticsPlugin({
+    id: 'G-0BFBDMZDZ8',
   }),
   /**
    * Automatically register Vue components in the '.vuepress/components' directory
