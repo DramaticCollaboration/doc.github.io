@@ -53,14 +53,6 @@ export const head: HeadConfig[] = [
   [
     'script',
     {},
-    `<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-4QQGMW5P45"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-4QQGMW5P45');
-</script>`,
+    "<script async src=\"https://www.googletagmanager.com/gtag/js?id=G-4QQGMW5P45\"></script>\n<script>\n  window.dataLayer = window.dataLayer || [];\n  function gtag(){dataLayer.push(arguments);}\n  gtag('js', new Date());\n\n  gtag('config', 'G-4QQGMW5P45');\n</script>",
   ],
 ]
