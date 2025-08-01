@@ -20,7 +20,14 @@ export const head: HeadConfig[] = [
   ['meta', { name: 'theme-color', content: '#3eaf7c' }], // Accent color
   ['meta', { name: 'apple-mobile-web-app-capable', content: 'yes' }], // iOS Safari Fullscreen
   ['meta', { name: 'apple-mobile-web-app-status-bar-style', content: 'black' }], // iOS Safari Status bar style
+
+  [
+    'meta',
+    { name: 'naver-site-verification', content: '3102a764f7ad54fe27ab3083cd0a7b0f647be4c7' },
+  ],
+
   ['link', { rel: 'apple-touch-icon', href: '/images/icons/apple-touch-icon.png' }], // Apple Touch Icon
+
   [
     'link',
     {
