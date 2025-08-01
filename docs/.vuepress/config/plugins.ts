@@ -4,6 +4,7 @@ import { registerComponentsPlugin } from '@vuepress/plugin-register-components'
 import { mediumZoomPlugin } from '@vuepress/plugin-medium-zoom'
 import { pwaPlugin } from '@vuepress/plugin-pwa'
 import { searchPlugin } from '@vuepress/plugin-search'
+import { sitemapPlugin } from 'vuepress-plugin-sitemap2'
 
 // import { docsearchPlugin } from '@vuepress/plugin-docsearch' // If you need an Algolia search, uncomment and configure
 
@@ -49,9 +50,9 @@ export const plugins: PluginConfig = [
     manifest: {
       // Web App Manifest configuration
       // @see https://developer.mozilla.org/zh-CN/docs/Web/Manifest
-      name: 'VuePress Document templates',
-      short_name: 'VuePressDoc',
-      description: 'VuePress-based document site templates',
+      name: 'Empasy',
+      short_name: 'Empasy 문서',
+      description: '엠파시 문서 사이트입니다',
       theme_color: '#3eaf7c',
       background_color: '#ffffff',
       icons: [
@@ -82,6 +83,14 @@ export const plugins: PluginConfig = [
     isSearchable: page => page.path !== '/', // Exclude the homepage from being searched
     // getExtraFields: (page) => [], // Additional search field
     // hotKeys: ['s', '/'], // Activate the hotkey for the search box
+  }),
+
+  /**
+   * Sitemap Plugin
+   */
+  sitemapPlugin({
+    hostname: 'https://doc.empasy.com', // Replace with your website domain
+    excludeUrls: ['/404.html'], // Pages you want to exclude from the sitemap
   }),
 
   /**
