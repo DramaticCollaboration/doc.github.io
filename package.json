@@ -72,6 +72,7 @@
     "@vuepress/plugin-google-tag-manager": "^2.0.0-rc.28",
     "@vuepress/plugin-google-analytics": "^2.0.0-rc.107",
     "@condorhero/vuepress-plugin-export-pdf-v2": "^3.0.3",
+    "vuepress-plugin-sitemap2": "^2.0.0-rc.16",
     "license-checker-rseidelsohn": "^4.4.2",
     "handlebars": "^4.7.8",
     "puppeteer": "^24.10.0"
