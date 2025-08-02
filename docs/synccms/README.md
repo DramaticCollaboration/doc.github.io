@@ -1,4 +1,11 @@
 ---
+title: 고개객 요구사항 지향 CMS | SyncCMS
+description: 개발자와 기업이 웹사이트와 관리 시스템을 쉽고 효율적으로 구축하고, 마케터나 운영 담당자와 같은 비전문가도 콘텐츠를 체계적으로 관리
+meta:
+  - name: keywords
+    content: Headless CMS, Headful CMS,  모듈화된 구조, 사용자 친화적 인터페이스, 템플릿 지원, 다중 사이트 및 다국어 지원
+  - property: og:image
+    content: https://doc.empasy.com/images/empasy-logo.svg
 order: 1
 dir:
   order: 2
