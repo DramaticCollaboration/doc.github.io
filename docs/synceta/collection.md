@@ -1,5 +1,5 @@
 ---
-title: AI 테스트 자동화 | 컬랙션 | SyncETA
+title: 컬랙션
 description: AI 테스트 자동화 방법과 최신 도구를 비교해보세요. 머신러닝 기반 자동화 테스트로 QA 효율성을 높이는 방법을 알아봅니다.
 meta:
   - name: keywords
