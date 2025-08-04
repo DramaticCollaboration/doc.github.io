@@ -1,5 +1,5 @@
 ---
-title: 계정 생성
+title: 계정
 description: AI 테스트 자동화 방법과 최신 도구를 비교해보세요. 머신러닝 기반 자동화 테스트로 QA 효율성을 높이는 방법을 알아봅니다.
 meta:
   - name: keywords
@@ -7,25 +7,29 @@ meta:
   - property: og:image
     content: https://doc.empasy.com/images/empasy-logo.svg
 
-sort: 2
+sort: 3
 ---
 
 # 계정
 
 ## 회원가입
 
-메일 인증을 위한 실 사용 메일을 입력하여 메일로 받은 인증코드를 입력하여 인증 후 회원가입을 진행합니다.
+1. SyncETA 솔루션 시작 화면 하단의 '계정을 생성할까요?'를 클릭합니다.
 
-![image](./image/account.png)
+![image](./image/account/1click_join.png)
 
-## 로그인
+2. 계정 정보 입력후 이메일 인증을 진행하시면 회원가입이 완료됩니다.
 
-SyncETA 솔루션에 접속한 후 Id / Password 작성 후 로그인 합니다.
+![image](./image/account/2send_auth.png)
 
-![image](./image/login.png)
+## 프로필 설정
 
-## 유저 등록
+1. 회원가입 후 첫 로그인 시 프로필 정보를 설정합니다.
 
-프로필 사진 설정(필수x) 및 테스터 이름 중복 확인 후 유저정보를 등록 합니다.
+![image](./image/account/3set_profile.png)
 
-![image](./image/addUser.png)
+## 계정 설정
+
+1. 우측 상단의 '프로필' -> '사용자 설정'을 클릭하여 계정 정보를 변경할 수 있습니다.
+
+![image](./image/account/4edit_profile.png)

@@ -6,7 +6,7 @@ meta:
     content: AI 기반 테스트 자동화, 머신러닝 테스트 자동화, 테스트 케이스 자동 생성, AI QA 도구, 자동화 테스트 솔루션, AI를 활용한 테스트 자동화 방법
   - property: og:image
     content: https://doc.empasy.com/images/empasy-logo.svg
-sort: 1
+sort: 2
 ---
 
 # SyncETA
