@@ -13,7 +13,7 @@ head:
       content: SyncAdmin은 Vue 3, Vite, TypeScript 기반 오픈소스 관리 시스템 템플릿으로, 중대형 백오피스 및 관리자 대시보드 개발 속도를 혁신적으로 향상시킵니다. 다국어 지원, 세분화된 권한 관리, 유연한 테마 커스터마이징, Mock 서버 내장 등 풍부한 기능과 재사용 가능한 컴포넌트를 제공하여 기업용 시스템 구축의 효율성과 민첩성을 극대화합니다. ERP, CRM, 인사 관리 시스템 및 데이터 시각화 대시보드 구축에 이상적인 솔루션입니다.
   - - meta
     - property: og:image
-      content: https://doc.empasy.com/images/empasy-logo.svg
+      content: https://doc.empasy.com/images/favicon.png
   - - meta
     - property: og:url
       content: https://doc.empasy.com/syncadmin/

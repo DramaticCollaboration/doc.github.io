@@ -13,7 +13,7 @@ head:
       content: SyncCMS는 최신 Java 기술 기반으로 설계되어 높은 안정성과 확장성을 제공하며, SEO 친화적인 구조를 통해 웹사이트의 검색 노출을 효과적으로 향상시킵니다
   - - meta
     - property: og:image
-      content: https://doc.empasy.com/images/empasy-logo.svg
+      content: https://doc.empasy.com/images/favicon.png
   - - meta
     - property: og:url
       content: https://doc.empasy.com/synccms /

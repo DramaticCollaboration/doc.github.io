@@ -18,7 +18,7 @@ head:
       content: 엠파시는 SyncBoot, SyncAdmin, SyncCMS, SyncEta로 구성된 Sync Series를 통해 기업의 디지털 혁신과 비즈니스 민첩성을 극대화합니다. MSA 기반 백엔드, 프론트엔드, CMS, AI 테스트 자동화로 개발 속도를 높이고 품질을 보장하며 유지보수 비용을 절감하세요.
   - - meta
     - property: og:image
-      content: https://doc.empasy.com/images/empasy-logo.svg
+      content: https://doc.empasy.com/images/favicon.png
   - - meta
     - property: og:url
       content: https://doc.empasy.com/

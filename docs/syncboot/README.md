@@ -13,7 +13,7 @@ head:
       content: SyncBoot는 Java 기반 오픈소스 마이크로서비스 아키텍처(MSA) 빠른 개발 플랫폼입니다. 기업용 애플리케이션의 신속한 개발, 배포, 안정적인 운영을 위한 E2E 솔루션을 제공하며, CI/CD, 모니터링, API 관리, 강력한 보안을 통해 비즈니스 민첩성과 효율성을 극대화합니다.
   - - meta
     - property: og:image
-      content: https://doc.empasy.com/images/empasy-logo.svg
+      content: https://doc.empasy.com/images/favicon.png
   - - meta
     - property: og:url
       content: https://doc.empasy.com/syncboot/
