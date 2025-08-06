@@ -17,7 +17,7 @@ head:
   - - meta
     - property: og:url
       content: https://doc.empasy.com/synceta/
-sort: 7
+sort: 700
 ---
 
 # 데이터셋

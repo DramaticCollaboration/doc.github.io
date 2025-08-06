@@ -17,7 +17,7 @@ head:
   - - meta
     - property: og:url
       content: https://doc.empasy.com/synceta/
-sort: 5
+sort: 500
 ---
 
 # 시나리오

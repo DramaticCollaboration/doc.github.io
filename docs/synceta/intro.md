@@ -17,7 +17,7 @@ head:
   - - meta
     - property: og:url
       content: https://doc.empasy.com/synceta/
-sort: 1
+sort: 100
 ---
 
 # SyncETA

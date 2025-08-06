@@ -17,7 +17,7 @@ head:
   - - meta
     - property: og:url
       content: https://doc.empasy.com/synceta/
-sort: 6
+sort: 600
 ---
 
 # 콜렉션
