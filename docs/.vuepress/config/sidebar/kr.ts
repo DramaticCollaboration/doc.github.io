@@ -77,7 +77,7 @@ function generateKrSidebar(): any {
 
     // Create an array of sidebar children with the link for README.md first
     const children = [
-      { text: '요약', link: `/${dir}/` }, // README.md Link (text customizable)
+      //{ text: '기능설명', link: `/${dir}/` }, // README.md Link (text customizable)
       ...files, // Other Markdown files link objects
     ]
 

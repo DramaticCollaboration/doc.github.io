@@ -6,7 +6,7 @@ meta:
     content: AI 테스트 자동화, 코드리스 자동화, QA 자동화, 소프트웨어 테스트, 테스트 시나리오 생성, 코드리스 테스트, 자연어 테스트, 테스트 자동화 도구, 테스트 자동화 플랫폼, 테스트 효율화, Playwright , Selenium , QAOps, TestOps, Shift-Left 테스트, Shift‑Right 테스트
   - property: og:image
     content: https://doc.empasy.com/images/empasy-logo.svg
-sort: 5
+sort: 7
 ---
 
 # 데이터셋
