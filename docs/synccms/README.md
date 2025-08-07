@@ -1,11 +1,22 @@
 ---
 title: 고개객 요구사항 지향 CMS | SyncCMS
-description: 개발자와 기업이 웹사이트와 관리 시스템을 쉽고 효율적으로 구축하고, 마케터나 운영 담당자와 같은 비전문가도 콘텐츠를 체계적으로 관리
-meta:
-  - name: keywords
-    content: SyncCMS, CMS, 콘텐츠 관리 시스템, SEO 최적화,  웹사이트 구축, Java 기반, 오픈소스, 템플릿, 다국어 지원, 사용자 친화적 UI, 확장성, Headless CMS, Headful CMS,  모듈화된 구조, 사용자 친화적 인터페이스, 템플릿 지원, 다중 사이트 및 다국어 지원
-  - property: og:image
-    content: https://doc.empasy.com/images/empasy-logo.svg
+description: SyncCMS는 최신 Java 기술 기반으로 설계되어 높은 안정성과 확장성을 제공하며, SEO 친화적인 구조를 통해 웹사이트의 검색 노출을 효과적으로 향상시킵니다
+head:
+  - - meta
+    - name: keywords
+      content: SyncCMS, CMS, 콘텐츠 관리 시스템, SEO 최적화,  웹사이트 구축, Java 기반, 오픈소스, 템플릿, 다국어 지원, 사용자 친화적 UI, 확장성, 헤드리스,  클라우드 기반 CMS, 모바일 CMS, Headless CMS, Headful CMS, 모듈화 콘텐츠 시스템, 사용자 친화적 인터페이스, 템플릿 지원, 다중 사이트 및 다국어 지원, 개인화
+  - - meta
+    - property: og:title
+      content: 고개객 요구사항 지향 CMS | SyncCMS
+  - - meta
+    - property: og:description
+      content: SyncCMS는 최신 Java 기술 기반으로 설계되어 높은 안정성과 확장성을 제공하며, SEO 친화적인 구조를 통해 웹사이트의 검색 노출을 효과적으로 향상시킵니다
+  - - meta
+    - property: og:image
+      content: https://doc.empasy.com/images/favicon.png
+  - - meta
+    - property: og:url
+      content: https://doc.empasy.com/synccms /
 order: 1
 dir:
   order: 2
