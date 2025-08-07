@@ -1,5 +1,5 @@
 ---
-title: 시나리오
+title: 시나리오 / 생성
 description: AI 기반 테스트 자동화로 QA 시간을 80% 절감하세요. 코드 없는 테스트 생성, 자연어 시나리오 작성, 다양한 플랫폼 지원으로 QA의 새로운 기준을 제시합니다.
 head:
   - - meta
@@ -25,7 +25,7 @@ sort: 500
 SyncETA를 사용하여 복잡한 테스트 코드 작성 없이 실제 UI를 통해 테스트 케이스를 생성하고  
 관리할 수 있습니다.
 
-## 테스트 시나리오 예시
+## 시나리오란
 
 #### **_'시나리오'_** 는 아래와 같은 기능 테스트 단위를 위미합니다.
 
@@ -107,7 +107,7 @@ SyncETA를 사용하여 복잡한 테스트 코드 작성 없이 실제 UI를 �
 3. 브라우저에서 허용 이벤트가 발생하면, 이벤트가 발생한 요소의 Dom 정보를 수집합니다.
 4. 테스트를 완료하면 녹화 종료 버튼을 클릭한 후 시나리오명과 설명을 작성합니다.
 
-<iframe width="100%" height="400" src="https://youtu.be/vrd4gT8A10Q" frameborder="0" allowfullscreen allow="autoplay; encrypted-media"></iframe>
+<iframe width="100%" height="400" src="https://www.youtube.com/embed/vrd4gT8A10Q" frameborder="0" allowfullscreen allow="autoplay; encrypted-media"></iframe>
 
 ## 부가 기능
 
