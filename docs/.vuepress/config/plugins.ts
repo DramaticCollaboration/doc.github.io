@@ -7,7 +7,6 @@ import { searchPlugin } from '@vuepress/plugin-search'
 import { sitemapPlugin } from 'vuepress-plugin-sitemap2'
 import { mermaidWrapperPlugin } from 'vuepress-plugin-mermaid-wrapper'
 
-
 // import { docsearchPlugin } from '@vuepress/plugin-docsearch' // If you need an Algolia search, uncomment and configure
 
 const __dirname = getDirname(import.meta.url)
