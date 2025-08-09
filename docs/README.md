@@ -43,6 +43,10 @@ actions:
     link: /synceta/
     type: primary
 
+  - text: 스크럼반
+    link: /agile/
+    type: primary
+
 features:
   - title: 비즈니스 민첩성 및 변화 대응 최적화
     details: 빠르게 변하는 비즈니스 환경에 맞춰 소프트웨어 변경을 신속하게 지원하며, 이를 통해 기업의 민첩성을 높이고 경쟁력을 유지하도록 돕습니다. Sync Series는 개발부터 테스트까지 속도와 유연성에 초점을 맞춥니다
@@ -69,6 +73,7 @@ footer: Copyright © 2025 Empasy
 - [SyncAdmin](/syncamdin/) - Vue 3, Vite, TypeScript 기반의 오픈소스 관리 시스템 템플릿으로, 재사용 가능한 컴포넌트와 빠른 개발 환경을 제공하여 중대형 백오피스 개발 생산성을 극대화하고 변화하는 요구사항에 신속하게 대응할 수 있도록 지원
 - [SyncApim](/syncapim/) - 종합적이고 안정적인 API 관리와 **뛰어난 맞춤화(Customization in its DNA)**를 통해 기업이 API를 통한 디지털 혁신을 가속화하고 비즈니스 경쟁력을 강화하도록 돕는 강력한 플랫폼
 - [SyncETA](/synceta/) - 코딩 없이 누구나 쉽게 자동화 테스트를 구축하고 CI/CD 환경에 통합하여 비즈니스 변화에 신속하고 안정적으로 대응하도록 돕는 통합 테스트 자동화 플랫폼
+- [Agile](/agile/) - Agile의 혁신을 위해 스크럼과 칸반을 혼합한(스크럼반(Scrumban)) 엠파시 개발 방법론
 
 ## 개요
 

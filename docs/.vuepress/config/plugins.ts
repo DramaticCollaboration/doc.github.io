@@ -5,6 +5,8 @@ import { mediumZoomPlugin } from '@vuepress/plugin-medium-zoom'
 import { pwaPlugin } from '@vuepress/plugin-pwa'
 import { searchPlugin } from '@vuepress/plugin-search'
 import { sitemapPlugin } from 'vuepress-plugin-sitemap2'
+import { mermaidWrapperPlugin } from 'vuepress-plugin-mermaid-wrapper'
+
 
 // import { docsearchPlugin } from '@vuepress/plugin-docsearch' // If you need an Algolia search, uncomment and configure
 
@@ -93,6 +95,9 @@ export const plugins: PluginConfig = [
     excludeUrls: ['/404.html'], // Pages you want to exclude from the sitemap
   }),
 
+  mermaidWrapperPlugin({
+    /* options */
+  }),
   /**
    * Optionally, use Algolia DocSearch instead of built-in search
    * You need to request and configure the service in Algolia

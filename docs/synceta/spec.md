@@ -1,5 +1,5 @@
 ---
-title: SyncETA 기능 사양서
+title: 기능 사양서
 description: AI 테스트 자동화 방법과 최신 도구를 비교해보세요. 머신러닝 기반 자동화 테스트로 QA 효율성을 높이는 방법을 알아봅니다.
 head:
   - - meta

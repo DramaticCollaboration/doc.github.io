@@ -1,5 +1,5 @@
 ---
-title: SyncETA AI 통한 성능 개성 사양서
+title: AI 사양서
 description: AI 테스트 자동화 방법과 최신 도구를 비교해보세요. 머신러닝 기반 자동화 테스트로 QA 효율성을 높이는 방법을 알아봅니다.
 head:
   - - meta
