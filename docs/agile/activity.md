@@ -20,8 +20,6 @@ head:
 sort: 400
 ---
 
----
-
 # 스크럼반 단계별 Activity 가이드
 
 | 단계                                      | 주요 Activity                                                                       | 상세 설명                                                                                                                                                                                                         |
