@@ -37,6 +37,7 @@ function generateKrSidebar(): any {
     syncboot: 'SyncBoot',
     synccms: 'SyncCms',
     syncadmin: 'SyncAdmin',
+    agile: '애자일',
   }
 
   // Iterate through the dirMap to generate a sidebar configuration for each directory that exists

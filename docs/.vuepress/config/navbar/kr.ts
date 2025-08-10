@@ -41,6 +41,11 @@ function generateKrNavbar(): any[] {
   }
 
   navbar.push({
+    text: '애자일',
+    link: '/agile/',
+  })
+
+  navbar.push({
     text: 'PDF 다운로드',
     link: 'https://www.empasy.com/assets/pdf/empasy_guide_v1.8.pdf',
     target: '_blank',
