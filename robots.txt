@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Sitemap: https://doc.empasy.com/sitemap.xml
+
+Sitemap: https://doc.empasy.com/sitemap.xml
