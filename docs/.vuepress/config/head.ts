@@ -57,9 +57,10 @@ export const head: HeadConfig[] = [
       rel: 'stylesheet',
     },
   ],
+  ['script', { src: 'https://www.googletagmanager.com/gtag/js?id=G-6BNPM5TX7C', async: true }],
   [
     'script',
     {},
-    "<script async src=\"https://www.googletagmanager.com/gtag/js?id=G-6BNPM5TX7C\"></script>\n<script>\n  window.dataLayer = window.dataLayer || [];\n  function gtag(){dataLayer.push(arguments);}\n  gtag('js', new Date());\n\n  gtag('config', 'G-6BNPM5TX7C');\n</script>",
+    ` window.dataLayer = window.dataLayer || [];\n  function gtag(){dataLayer.push(arguments);}\n  gtag('js', new Date());\n\n  gtag('config', 'G-6BNPM5TX7C'); `,
   ],
 ]
