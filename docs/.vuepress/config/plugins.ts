@@ -99,7 +99,7 @@ export const plugins: PluginConfig = [
     /* options */
   }),
   googleTagManagerPlugin({
-    id: 'GTM-M5BB63X5', // Replace with your actual GTM Container ID
+    id: 'GTM-KPMTVVXN', // Replace with your actual GTM Container ID
   }),
   /**
    * Optionally, use Algolia DocSearch instead of built-in search
