@@ -17,7 +17,7 @@ head:
   - - meta
     - property: og:url
       content: https://doc.empasy.com/synceta/
-sort: 200
+sort: 1000
 ---
 
 SyncETA에 대한 용어 사전은 아래와 같습니다.

@@ -17,7 +17,7 @@ head:
   - - meta
     - property: og:url
       content: https://doc.empasy.com/synceta/
-sort: 110
+sort: 2000
 ---
 
 # SyncETA 하드웨어 및 소프트웨어 상세 사양서

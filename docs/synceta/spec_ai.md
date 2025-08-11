@@ -17,7 +17,7 @@ head:
   - - meta
     - property: og:url
       content: https://doc.empasy.com/synceta/
-sort: 120
+sort: 3000
 ---
 
 # SyncETA 테스트케이스 생성 및 학습 모듈 상세 사양서
