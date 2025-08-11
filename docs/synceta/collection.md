@@ -24,8 +24,7 @@ sort: 600
 
 ## 콜렉션의 기능
 
-콜렉션은 여러 시나리오를 선택하여 한 번에 실행할 수 있도록 구성하는 기능입니다.
-하나의 시나리오를 다양한 환경에서 직렬 또는 병렬로 실행할 수 있으며, 여러 시나리오를 모아 하나의 대형 시나리오처럼 실행할 수 있는 SyncETA의 강력한 기능 중 하나입니다.
+#### 여러 시나리오를 직 병렬로 실행
 
 ::: tip 콜렉션 주요 기능
 **1. 크로스 브라우징 테스트**
@@ -39,13 +38,14 @@ sort: 600
 
 ## 콜렉션 생성
 
-시나리오를 선택한 후 다양한 옵션을 부여하고 조합함으로써, 더욱 강력하고 유연한 테스트 케이스를 생성할 수 있습니다.  
-콜렉션은 순차대로 실행되며 드래그, 혹은 우측 상단 버튼을 클릭하여 이동/삭제 가능합니다
+#### 콜렉션 메뉴로 이동
 
-1. 콜렉션 선택하기
-   ![image](./image/collection-select.png)
+![image](./image/collection/newcollection.png)
 
----
+#### 시나리오 선택
 
-2. 선택한 시나리오 옵션 설정하기.
-   ![image](./image/collection.png)
+![image](./image/collection/collection2.png)
+
+## 콜렉션 실행
+
+<iframe width="100%" height="400" src="https://www.youtube.com/embed/dsb0XpGy7A0" frameborder="0" allowfullscreen allow="autoplay; encrypted-media"></iframe>
