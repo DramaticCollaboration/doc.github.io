@@ -46,6 +46,7 @@
     "@vuepress/plugin-register-components": "2.0.0-rc.98",
     "@vuepress/plugin-search": "2.0.0-rc.102",
     "@vuepress/theme-default": "2.0.0-rc.102",
+    "@vuepress/plugin-google-tag-manager": "^2.0.0-rc.28",
     "vuepress-plugin-mermaid-wrapper": "1.21.0",
     "chalk": "^4.1.2",
     "eslint": "^8.57.1",

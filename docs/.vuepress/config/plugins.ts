@@ -6,6 +6,7 @@ import { pwaPlugin } from '@vuepress/plugin-pwa'
 import { searchPlugin } from '@vuepress/plugin-search'
 import { sitemapPlugin } from 'vuepress-plugin-sitemap2'
 import { mermaidWrapperPlugin } from 'vuepress-plugin-mermaid-wrapper'
+import { googleTagManagerPlugin } from '@vuepress/plugin-google-tag-manager'
 
 // import { docsearchPlugin } from '@vuepress/plugin-docsearch' // If you need an Algolia search, uncomment and configure
 
@@ -96,6 +97,9 @@ export const plugins: PluginConfig = [
 
   mermaidWrapperPlugin({
     /* options */
+  }),
+  googleTagManagerPlugin({
+    id: 'GTM-M5BB63X5', // Replace with your actual GTM Container ID
   }),
   /**
    * Optionally, use Algolia DocSearch instead of built-in search
