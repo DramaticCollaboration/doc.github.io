@@ -17,7 +17,7 @@ head:
   - - meta
     - property: og:url
       content: https://doc.empasy.com/synceta/
-sort: 100
+sort: 1
 ---
 
 SyncETA에 대해 홈페이지에 게시하기 적합한 상세 소개 내용을 만들어 드리겠습니다.
