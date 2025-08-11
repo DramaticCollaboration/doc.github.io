@@ -219,3 +219,16 @@ SyncETA를 사용하여 복잡한 테스트 코드 작성 없이 실제 UI를 �
   :::
 
 <iframe width="100%" height="400" src="https://www.youtube.com/embed/HLiDmgK7Yto" frameborder="0" allowfullscreen allow="autoplay; encrypted-media"></iframe>
+
+#### [ 복사 ]
+
+::: info
+
+- 시나리오 복사
+- 1. 시나리오 복사 클릭
+- 2. 복사된 시나리오가 저장될 프로젝트 선택
+- 3. 복사 시나리오의 이름, 설명 작성
+- 4. 시나리오 내의 값에서 수정이 필요한 값 일괄 수정  
+     ex) 도메인 등
+     :::
+     ![프로젝트 생성하기](./image/scenario/copy.png)

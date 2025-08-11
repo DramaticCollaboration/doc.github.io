@@ -24,7 +24,9 @@ sort: 8
 
 ## 테스트 결과
 
-준비중..
+#### 시나리오 실행 결과 및 SSL인증서 만료일이 표시됩니다.
+
+![image](./image/dashboard/dashboard.png)
 
 ## 수집 정보
 
