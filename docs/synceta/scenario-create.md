@@ -210,3 +210,12 @@ SyncETA를 사용하여 복잡한 테스트 코드 작성 없이 실제 UI를 �
   :::
 
 ![프로젝트 생성하기](./image/scenario/active.png)
+
+#### [ 중간 녹화 ]
+
+::: info
+
+- 원하는 부분부터 추가로 녹화가 가능합니다.
+  :::
+
+<iframe width="100%" height="400" src="https://www.youtube.com/embed/HLiDmgK7Yto" frameborder="0" allowfullscreen allow="autoplay; encrypted-media"></iframe>
