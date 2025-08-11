@@ -109,6 +109,55 @@ SyncETA를 사용하여 복잡한 테스트 코드 작성 없이 실제 UI를 �
 
 <iframe width="100%" height="400" src="https://www.youtube.com/embed/vrd4gT8A10Q" frameborder="0" allowfullscreen allow="autoplay; encrypted-media"></iframe>
 
+#### 10. 여러개의 탭 녹화
+
+::: info
+
+- 새 탭을 연 후 녹화할 url로 이동합니다.
+- url 이동 레코드를 직접 이동 레코드로 설정합니다.(우클릭)
+:::
+<iframe width="100%" height="400" src="https://www.youtube.com/embed/8e5dqQvxMQM" frameborder="0" allowfullscreen allow="autoplay; encrypted-media"></iframe>
+
+## 대기 레코드
+
+#### 대기시간이 필요한 레코드 우클릭 -> 조건 레코드 추가 -> 대기 조건 추가
+
+![프로젝트 생성하기](./image/scenario/delay_1.png)
+
+#### 대기 유형: 시간대기 선택
+
+![프로젝트 생성하기](./image/scenario/delay_2.png)
+
+#### (탭 인덱스는 자동으로 설정됩니다.) 대기 시간: 1000 = 1초
+
+::: info
+
+- 시간 대기 레코드는 설정한 시간만큼 레코드 실행 간에 강제적으로 딜레이를 부여합니다.
+- 화면에 요소들이 로딩되는 시간을 고려하여 설정해주세요.
+:::
+<iframe width="100%" height="400" src="https://www.youtube.com/embed/XwzE1Qzl_58" frameborder="0" allowfullscreen allow="autoplay; encrypted-media"></iframe>
+
+## 검증 레코드
+
+#### 요소 노출 검증
+
+::: info
+
+- 1. 특정 요소가 화면에 노출되고 있는지 확인(값 검증 X)
+- 2. 요소의 특정한 값이 노출되고 있는지 확인(값 검증 O)
+     :::
+
+<iframe width="100%" height="400" src="https://www.youtube.com/embed/kAnZnuy6k78" frameborder="0" allowfullscreen allow="autoplay; encrypted-media"></iframe>
+
+#### AI 검증
+
+::: info
+
+- 현재 화면을 캡쳐하여 AI로 화면 검증
+  :::
+
+![프로젝트 생성하기](./image/scenario/valid.png)
+
 ## 부가 기능
 
 #### [ 코멘트 ]
