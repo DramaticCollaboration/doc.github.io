@@ -34,7 +34,17 @@ sort: 700
 변수와 행을 자유롭게 추가 및 삭제할 수 있으며, 시나리오에서 미리 설정한 변수 값을 불러오는 기능을 제공하며,
 Excel 파일로 미리 생성된 데이터를 가져올 수 있고, 변수 설정 후 AI를 활용하여 목업 데이터를 자동으로 생성할 수 있습니다.
 
-![image](./image/dataset.png)
+::: info
+
+- 시트를 우클릭하세요
+  :::
+  ![image](./image/dataset/dataset.png)
+
+## 엑셀로 생성하기
+
+#### 엑셀 form [다운로드](./image/dataset/dataset_form.xlsx)
+
+![image](./image/dataset/exel.png)
 
 ## AI를 활용한 자동 생성
 
@@ -44,3 +54,7 @@ Excel 파일로 미리 생성된 데이터를 가져올 수 있고, 변수 설�
   ![image](./image/dataset_loading.png)
 - 데이터 생성 후 화면
   ![image](./image/dataset_ai.png)
+
+## 데이터셋 적용
+
+<iframe width="100%" height="400" src="https://www.youtube.com/embed/d2RU8aabXIQ" frameborder="0" allowfullscreen allow="autoplay; encrypted-media"></iframe>
