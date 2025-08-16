@@ -72,3 +72,10 @@ sort: 200
 - 푸쉬 알림 설정
   :::
   ![프로필 수정폼](./image/account/update_profile_form.png)
+
+## 개발중인 기능
+
+::: info
+
+- 계정 삭제
+  :::
