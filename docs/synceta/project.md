@@ -65,7 +65,7 @@ SyncETA를 통해 여러 **_'단위 테스트'_** 와 **_'통합 테스트'_** �
 위 3가지 방법으로 프로젝트 생성 화면으로 이동할 수 있습니다.  
 프로젝트 프로필 이미지, 프로젝트명, 프로젝트 설명을 입력하여 프로젝트를 생성합니다.
 :::
-![프로젝트 대시보드에서 생성하기](./image/project/create_project.png)
+![프로젝트 생성 폼](./image/project/create_project.png)
 
 ## 프로젝트 목록
 
@@ -74,11 +74,61 @@ SyncETA를 통해 여러 **_'단위 테스트'_** 와 **_'통합 테스트'_** �
 ::: info
 우측 상단의 **_'프로젝트 닫기'_** 버튼을 클릭하여 현재 속해있는 프로젝트 목록을 확인할 수 있습니다.
 :::
-![프로젝트 대시보드에서 생성하기](./image/project/goto_project_list.png)
+![프로젝트 목록 이동](./image/project/goto_project_list.png)
 
 #### 2. 프로젝트 목록 조회
 
 ::: info
 내가 속한 프로젝트 목록을 확인할 수 있습니다.
 :::
-![프로젝트 대시보드에서 생성하기](./image/project/project_list_org.png)
+![프로젝트 목록](./image/project/project_list_org.png)
+
+## 역할 / 권한 설정
+
+::: info
+프로젝트별로 역할(role)을 생성하고 권한을 부여할 수 있습니다.
+:::
+
+#### 1. 역할 생성
+
+::: info
+역할 생성 화면으로 이동
+:::
+![역할 생성으로 이동](./image/project/new_role.png)
+
+#### 2. 권한 설정
+
+::: info
+역할에 부여할 권한을 설정합니다.
+:::
+![역할 생성](./image/project/role_setting.png)
+
+## 멤버 관리
+
+::: info
+프로젝트에 멤버를 초대하고 작업 권한을 부여합니다.
+:::
+
+#### 1. 멤버 초대
+
+::: info
+멤버 초대 화면으로 이동
+:::
+![멤버 초대 화면으로 이동](./image/project/new_member.png)
+
+#### 2. 멤버 초대
+
+::: info
+프로젝트에 초대할 멤버를 선택합니다.
+:::
+![멤버 초대](./image/project/vite_member.png)
+
+#### 3. 권한 부여
+
+::: info
+초대한 멤버에게 권한을 부여합니다.
+
+- 해당 권한은 프로젝트 내에서만 유효합니다.  
+  ex) A 프로젝트에서 관리자 권한인 유저가 B 프로젝트에서 테스터(예시)권한일 수 있음.
+  :::
+  ![멤버 초대](./image/project/set_role_to_member.png)
