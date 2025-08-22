@@ -17,7 +17,7 @@ head:
   - - meta
     - property: og:url
       content: https://doc.empasy.com/agile/glossaryOfTerms.html
-sort: 500
+sort: 1000
 ---
 
 ## 📚 스크럼반 용어 사전
