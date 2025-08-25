@@ -74,6 +74,7 @@ footer: Copyright © 2025 Empasy
 - [SyncApim](/syncapim/) - 종합적이고 안정적인 API 관리와 **뛰어난 맞춤화(Customization in its DNA)**를 통해 기업이 API를 통한 디지털 혁신을 가속화하고 비즈니스 경쟁력을 강화하도록 돕는 강력한 플랫폼
 - [SyncETA](/synceta/) - 코딩 없이 누구나 쉽게 자동화 테스트를 구축하고 CI/CD 환경에 통합하여 비즈니스 변화에 신속하고 안정적으로 대응하도록 돕는 통합 테스트 자동화 플랫폼
 - [Agile](/agile/) - Agile의 혁신을 위해 스크럼과 칸반을 혼합한(스크럼반(Scrumban)) 엠파시 개발 방법론
+- [Study](/study/) - 엠파시 공부방
 
 ## 개요
 
