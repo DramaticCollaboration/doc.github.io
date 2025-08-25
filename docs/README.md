@@ -46,6 +46,9 @@ actions:
   - text: 스크럼반
     link: /agile/
     type: primary
+  - text: 공부방
+    link: /study/
+    type: primary
 
 features:
   - title: 비즈니스 민첩성 및 변화 대응 최적화
