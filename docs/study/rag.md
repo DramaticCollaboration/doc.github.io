@@ -1,5 +1,5 @@
 ---
-title: 공부 한것들을 적어 보아요 | RAG
+title: RAG
 description: 공부 한것들을 공유하는 페이지입니다.
 head:
   - - meta
