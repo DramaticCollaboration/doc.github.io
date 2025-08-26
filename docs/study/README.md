@@ -24,7 +24,7 @@ sort: 200
 
 <div align="center">
 
-![Study Party](https://media.giphy.com/media/Lpv9c4iZd0UOc/giphy.gif)
+![Study Party](https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExaWNza2p5ZTgxd2FuOWM4bW1lcnl0NWx1bjVjbGs4dG41dTF3N2tpbyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/fhAwk4DnqNgw8/giphy.gif)
 
 ## "가르치는 만큼 더 깊이 이해한다"
 
@@ -45,7 +45,7 @@ D --> A
 
 <div align="center">
 
-![Growth](https://media.giphy.com/media/duNowzaVjeznDuWNFx/giphy.gif)
+![Growth](https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExMjEzZHlvZ3BjeHkydHMwcno3N3B3ajg4am5uNHhmbXU1cGVqdHA1ZSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/m7YYGSBBkDM9VUbcte/giphy.gif)
 
 **함께 배우고, 함께 성장해요!**  
 여러분의 학습 여정도 응원합니다 ✨
