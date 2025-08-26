@@ -35,15 +35,15 @@ sort: 200
 
 ## 🎯 학습 사이클
 
-```mermaid
-graph LR
-A[배움] --> B[정리]
-B --> C[실천]
-C --> D[공유]
-D --> A
-```
-
 <div align="center">
+
+```mermaid
+  graph LR
+  A[배움] --> B[정리]
+  B --> C[실천]
+  C --> D[공유]
+  D --> A
+```
 
 ![Growth](https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExMjEzZHlvZ3BjeHkydHMwcno3N3B3ajg4am5uNHhmbXU1cGVqdHA1ZSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/m7YYGSBBkDM9VUbcte/giphy.gif)
 
