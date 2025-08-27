@@ -1,6 +1,6 @@
 ---
-title: 작업 로그
-description: "기억은 금방 사라지지만, 로그는 영원하다!" 🎯 우리 팀의 재미있고 자유로운 작업 기록 공간
+title: 리눅스 electron 디버깅 Crash
+description: 기억은 금방 사라지지만, 로그는 영원하다! 🎯 우리 팀의 재미있고 자유로운 작업 기록 공간
 head:
   - - meta
     - name: keywords
@@ -17,7 +17,7 @@ head:
   - - meta
     - property: og:url
       content: https://doc.empasy.com/study/
-sort: 300
+sort: 400
 ---
 
 # Linux에서 디버그중에 어플이 갑자기 죽는 "ENOSPC: System limit for number of file watchers reached" 오류

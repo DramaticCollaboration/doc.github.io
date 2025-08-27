@@ -1,6 +1,6 @@
 ---
 title: electron 디버깅
-description: "기억은 금방 사라지지만, 로그는 영원하다!" 🎯 우리 팀의 재미있고 자유로운 작업 기록 공간
+description: 기억은 금방 사라지지만, 로그는 영원하다! 🎯 우리 팀의 재미있고 자유로운 작업 기록 공간
 head:
   - - meta
     - name: keywords
@@ -17,7 +17,7 @@ head:
   - - meta
     - property: og:url
       content: https://doc.empasy.com/study/
-sort: 400
+sort: 300
 ---
 
 # Intellij에서 electron 디버깅

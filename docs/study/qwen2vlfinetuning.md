@@ -10,7 +10,7 @@ head:
       content: 📚 두뇌 저장소 - 재미있는 공부 기록 놀이터
   - - meta
     - property: og:description
-      content: "까먹지 말고 재밌게 저장하자!" 🎯 공부한 내용을 자유롭게 기록하는 즐거운 지식 저장소
+      content: 까먹지 말고 재밌게 저장하자! 🎯 공부한 내용을 자유롭게 기록하는 즐거운 지식 저장소
   - - meta
     - property: og:image
       content: https://doc.empasy.com/images/favicon.png
