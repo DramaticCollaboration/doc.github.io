@@ -17,7 +17,7 @@ head:
   - - meta
     - property: og:url
       content: https://doc.empasy.com/agile/glossaryOfTerms.html
-sort: 1000
+sort: 2000
 ---
 
 # 스토리 포인트 가이드: 애자일 팀을 위한 작업 추정 방법
