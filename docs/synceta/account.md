@@ -17,7 +17,7 @@ head:
   - - meta
     - property: og:url
       content: https://doc.empasy.com/synceta/
-sort: 200
+sort: 7
 ---
 
 # 계정

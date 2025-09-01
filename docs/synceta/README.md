@@ -49,7 +49,7 @@ SyncETA는 다음의 주요 모듈들을 통해 문제를 해결하고 혁신적
 
 2.  **TestCase Generator (Mistral LLM 기반 자연어 테스트케이스 자동 생성 모듈)**:
 
-- 레코딩된 시나리오(JSON)를 **Mistral 7B 또는 Mixtral 오픈소스 LLM이 분석하여 Step, Input, Expected Result 등을 포함하는 자연어 기반의 엑셀 테스트케이스로 변환**합니다.
+- 레코딩된 시나리오(JSON)를 **Mistral 7B 또는 Mistral 오픈소스 LLM이 분석하여 Step, Input, Expected Result 등을 포함하는 자연어 기반의 엑셀 테스트케이스로 변환**합니다.
 - 이 과정에서 사내 용어 및 UI 요소에 대한 컨텍스트 학습과 QA 기준에 맞춘 포맷 커스터마이징이 지원됩니다.
 - 재사용 가능한 템플릿 형태로 제공될 수 있습니다.
 
