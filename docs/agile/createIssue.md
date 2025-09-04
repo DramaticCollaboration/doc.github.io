@@ -17,7 +17,7 @@ head:
   - - meta
     - property: og:url
       content: https://doc.empasy.com/agile/createIssue.html
-      sort: 7000
+sort: 7000
 ---
 
 # 프롬프트
