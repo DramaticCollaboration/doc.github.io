@@ -7,7 +7,7 @@ head:
       content: 애자일 방법론,XP(eXtreme Programming),Scrum,Kanban,Scrumban,소프트웨어 개발 프로세스,Agile 통합 가이드,애자일 실천 방법,소프트웨어 품질 향상,프로젝트 관리
   - - meta
     - property: og:title
-      content: XP, Scrum, Kanban 비교와 실무 적용 전략
+      content: AI 시대 개발자 역할: XP, Scrum, Kanban 통합 가이드 | 애자일 방법론 비교
   - - meta
     - property: og:description
       content: XP, Scrum, Kanban의 차이점과 관계를 한눈에 이해하고, 실무에서 세 가지 애자일 방법론을 통합하여 적용하는 상세 가이드를 제공합니다. 단계별 체크리스트와 다이어그램으로 프로젝트 관리와 소프트웨어 품질 향상을 쉽게 구현할 수 있습니다.
