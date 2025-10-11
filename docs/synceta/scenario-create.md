@@ -4,7 +4,7 @@ description: AI 기반 테스트 자동화로 QA 시간을 80% 절감하세요. 
 head:
   - - meta
     - name: keywords
-      content: 테스팅 생성형 AI, Playwright, Selenium, 실시간 품질 피드백, 무중단 테스트, AI 기반 테스트 자동화, 지속적 테스트, Continuous Testing, QAOps, TestOps, Codeless, Low-Code, 자기 치유 테스트, Self-healing,  AI 테스트 자동화, 코드리스 자동화, QA 자동화, 소프트웨어 테스트, 테스트 시나리오 생성, 코드리스 테스트, 자연어 테스트, 테스트 자동화 도구, 테스트 자동화 플랫폼, 테스트 효율화, Playwright , Selenium , QAOps, TestOps, Shift-Left 테스트, Shift‑Right 테스트
+      content: 테스트 자동화, 테스팅 생성형 AI, Playwright, Selenium, 실시간 품질 피드백, 무중단 테스트, AI 기반 테스트 자동화, 지속적 테스트, Continuous Testing, QAOps, TestOps, Codeless, Low-Code, 자기 치유 테스트, Self-healing,  AI 테스트 자동화, 코드리스 자동화, QA 자동화, 소프트웨어 테스트, 테스트 시나리오 생성, 코드리스 테스트, 자연어 테스트, 테스트 자동화 도구, 테스트 자동화 플랫폼, 테스트 효율화, Playwright , Selenium , QAOps, TestOps, Shift-Left 테스트, Shift‑Right 테스트
   - - meta
     - property: og:title
       content: AI 테스트 자동화 | SyncETA
