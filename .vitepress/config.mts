@@ -113,8 +113,7 @@ new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     siteTitle: "살아 있는 소프트웨어는 엠파시가 만듭니다",
-    logo: '/images/empasy-logo.svg', // Navigation bar logo
-    logoDark: '/images/empasy-logo_white.svg',
+    logo: { light: '/images/logo.svg', dark: '/images/logo-dark.svg' }, // Navigation bar logo
 
     nav: [
       { text: "홈", link: "/" },
