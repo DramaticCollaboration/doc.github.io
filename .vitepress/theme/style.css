@@ -171,6 +171,10 @@ img {
     background-color: var(--color-nav-background) !important;
 }
 
+.has-sidebar.VPNavBarTitle > a > span  {
+    display: none !important;
+}
+
 .VPSidebar .curtain {
     background-color: var(--color-nav-sidebar-background) !important;
 }
