@@ -119,6 +119,12 @@ new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
       {link: "synccms", text: 'SyncCms'},
       {link: "syncadmin", text: 'SyncAdmin'},
       {link: "agile", text: '애자일'},
+      {
+        text: '엠파시',
+        link: 'https://www.empasy.com',
+        target: '_blank',
+        rel: 'noopener noreferrer', // Recommended for security
+      }
     ],
 
     sidebar: {
