@@ -86,8 +86,12 @@ new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
  'https://www.googletagmanager.com/gtm.js?id=' + i + dl;f.parentNode.insertBefore(j,f);
 })(window,document,'script','dataLayer','GTM-KPMTVVXN');`,
     ],
+    [
+      'script',
+      {},
+      `navigator.serviceWorker.getRegistrations().then(registrations => {      for (const registration of registrations) {         registration.unregister();       }     }); `,
+    ],
   ],
-
   sitemap: {
     hostname: 'https://doc.empasy.com/',
     transformItems: (items) => {
