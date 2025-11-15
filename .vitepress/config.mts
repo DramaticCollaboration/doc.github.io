@@ -118,6 +118,7 @@ new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
     nav: [
       { text: "홈", link: "/" },
       {link: "synceta", text: 'SyncETA'},
+      {link: "synccrawl", text: 'SyncCrawl'},
       {link: "syncboot", text: 'SyncBoot'},
       {link: "synccms", text: 'SyncCms'},
       {link: "syncadmin", text: 'SyncAdmin'},

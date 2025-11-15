@@ -7,6 +7,14 @@ hero:
     text: "Boon to business by agility."
     tagline: "'변화에 최적화된 솔루션', Sync Series로 비즈니스 민첩성(Agility)을 극대화합니다."
     actions:
+      - text: SyncEta
+        link: /synceta/
+        type: primary
+
+      - text: SyncCrawl
+        link: /synccrawl/
+        type: primary
+
       - text: SyncCms
         link: /synccms/
         type: primary
@@ -21,10 +29,6 @@ hero:
     
       - text: SyncApim
         link: /syncapim/
-        type: primary
-    
-      - text: SyncEta
-        link: /synceta/
         type: primary
     
       - text: 스크럼반
@@ -80,11 +84,12 @@ footer: Copyright © 2025 Empasy
 
 아래 문서들 포함합니다
 
+- [SyncETA](/synceta/) - 코딩 없이 누구나 쉽게 자동화 테스트를 구축하고 CI/CD 환경에 통합하여 비즈니스 변화에 신속하고 안정적으로 대응하도록 돕는 통합 테스트 자동화 플랫폼
+- [SyncCrawl](/synccrawl/) - 자연어 명령으로 웹 데이터를 수집하고 RAG 지식 기반 구축. 웹 구조 변경에 자동 대응하여 운영 효율성을 극대화하며, LLM 환각 없는 정확하고 신뢰도 높은 답변을 제공하는 지능형 통합 크롤링 솔루션
 - [SyncCMS](/synccms/) - 비즈니스 변화에 맞춰 웹사이트를 빠르게 발전시키고, 비전문가도 쉽게 콘텐츠를 관리하며 유연하게 기능을 확장할 수 있는 효율적인 콘텐츠 관리 플랫폼
 - [SyncBoot](/syncboot/) - 오픈소스 마이크로서비스 기반의 빠른 개발 및 효율적인 운영 환경을 제공하여, 기업이 빠르게 변화하는 비즈니스 환경에 민첩하게 대응하고 경쟁 우위를 확보하도록 돕는 플랫폼
 - [SyncAdmin](/syncadmin/) - Vue 3, Vite, TypeScript 기반의 오픈소스 관리 시스템 템플릿으로, 재사용 가능한 컴포넌트와 빠른 개발 환경을 제공하여 중대형 백오피스 개발 생산성을 극대화하고 변화하는 요구사항에 신속하게 대응할 수 있도록 지원
 - [SyncApim](/syncapim/) - 종합적이고 안정적인 API 관리와 **뛰어난 맞춤화(Customization in its DNA)**를 통해 기업이 API를 통한 디지털 혁신을 가속화하고 비즈니스 경쟁력을 강화하도록 돕는 강력한 플랫폼
-- [SyncETA](/synceta/) - 코딩 없이 누구나 쉽게 자동화 테스트를 구축하고 CI/CD 환경에 통합하여 비즈니스 변화에 신속하고 안정적으로 대응하도록 돕는 통합 테스트 자동화 플랫폼
 - [Agile](/agile/) - Agile의 혁신을 위해 스크럼과 칸반을 혼합한(스크럼반(Scrumban)) 엠파시 개발 방법론
 - [Study](/study/) - 엠파시 공부방
 

@@ -16,7 +16,7 @@ head:
       content: https://doc.empasy.com/images/favicon.png
   - - meta
     - property: og:url
-      content: https://doc.empasy.com/synccms /
+      content: https://doc.empasy.com/synccms/
 order: 1
 dir:
   order: 2
