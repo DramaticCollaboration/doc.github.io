@@ -64,14 +64,6 @@ sort: 8
 
 ![image](./image/dashboard/move_video.png)
 
-#### 레코드의 중요도를 설정합니다.
-
-::: info
-
-- 해당 레코드의 실행 실패가 이후 레코드에 어떤 영향을 미치는지를 고려하여 중요도를 설정해주세요
-  :::
-
-![image](./image/dashboard/weight.png)
 
 #### 테스트 결과에 코멘트를 작성할 수 있습니다.
 
