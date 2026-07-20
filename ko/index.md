@@ -7,46 +7,17 @@ hero:
     text: "Boon to business by agility."
     tagline: "'변화에 최적화된 솔루션', Sync Series로 비즈니스 민첩성(Agility)을 극대화합니다."
     actions:
-      - text: SyncEta
-        link: /synceta/
+      - text: 시작하기
+        link: /syncverse/
         type: primary
-
-      - text: SyncCrawl
-        link: /synccrawl/
-        type: primary
-
-      - text: SyncCms
-        link: /synccms/
-        type: primary
-    
-      - text: SyncBoot
-        link: /syncboot/
-        type: primary
-    
-      - text: SyncAdmin
-        link: /syncadmin/
-        type: primary
-    
-      - text: SyncApim
-        link: /syncapim/
-        type: primary
-    
-      - text: 스크럼반
-        link: /agile/
-        type: primary
-    
-      - text: 공부방
-        link: /study/
-        type: primary
-    
-      - text: 작업 로그
-        link: /logs/
-        type: primary
+      - text: 모든 제품 보기
+        link: '#sync-series-제품군'
+        type: secondary
 
 head:
   - - meta
     - name: keywords
-      content: 테스트 자동화, 엠파시, Empasy, Sync Series, SyncBoot, SyncAdmin, SyncCMS, SyncEta, 마이크로서비스 아키텍처, MSA, 소프트웨어 개발, 솔루션, 디지털 혁신, 비즈니스 민첩성, 개발 플랫폼, 백엔드, 프론트엔드, 콘텐츠 관리 시스템, CMS, AI 테스트, 자동화 테스트, QA, 품질 보증, CI/CD, DevOps, 웹사이트 구축, 시스템 통합, SI, ITO, 맞춤형 솔루션, Java, Vue.js, Vue 3, Vite, TypeScript, Freemarker, Selenium
+      content: 테스트 자동화, 엠파시, Empasy, Sync Series, SyncVerse, SyncInsight, AI 오케스트레이션, 멀티 에이전트, AI 관제, SyncBoot, SyncAdmin, SyncCMS, SyncEta, 마이크로서비스 아키텍처, MSA, 소프트웨어 개발, 솔루션, 디지털 혁신, 비즈니스 민첩성, 개발 플랫폼, 백엔드, 프론트엔드, 콘텐츠 관리 시스템, CMS, AI 테스트, 자동화 테스트, QA, 품질 보증, CI/CD, DevOps, 웹사이트 구축, 시스템 통합, SI, ITO, 맞춤형 솔루션, Java, Vue.js, Vue 3, Vite, TypeScript, Freemarker, Selenium
   - - meta
     - property: og:title
       content: "엠파시 Sync Series: 디지털 혁신을 위한 MSA 기반 솔루션 | 개발, CMS, AI 테스트 자동화"
@@ -90,6 +61,8 @@ footer: Copyright © 2025 Empasy
 - [SyncBoot](/syncboot/) - 오픈소스 마이크로서비스 기반의 빠른 개발 및 효율적인 운영 환경을 제공하여, 기업이 빠르게 변화하는 비즈니스 환경에 민첩하게 대응하고 경쟁 우위를 확보하도록 돕는 플랫폼
 - [SyncAdmin](/syncadmin/) - Vue 3, Vite, TypeScript 기반의 오픈소스 관리 시스템 템플릿으로, 재사용 가능한 컴포넌트와 빠른 개발 환경을 제공하여 중대형 백오피스 개발 생산성을 극대화하고 변화하는 요구사항에 신속하게 대응할 수 있도록 지원
 - [SyncApim](/syncapim/) - 종합적이고 안정적인 API 관리와 **뛰어난 맞춤화(Customization in its DNA)**를 통해 기업이 API를 통한 디지털 혁신을 가속화하고 비즈니스 경쟁력을 강화하도록 돕는 강력한 플랫폼
+- [SyncVerse](/syncverse/) - 여러 특화된 AI 에이전트들이 유기적으로 협업하여 시스템 인프라와 비즈니스 로직을 자율적으로 관리하는 LLM 네이티브(LLM-Native) 중앙 오케스트레이션 플랫폼
+- [SyncInsight](/syncinsight/) - 에이전트 생태계 전반의 방대한 데이터를 실시간으로 수집 및 분석하고, 자연어 질의(NLQ)를 통해 비즈니스 인사이트를 직관적으로 도출하는 AI 기반 지능형 관제 센터
 - [Agile](/agile/) - Agile의 혁신을 위해 스크럼과 칸반을 혼합한(스크럼반(Scrumban)) 엠파시 개발 방법론
 - [Study](/study/) - 엠파시 공부방
 
@@ -174,6 +147,18 @@ footer: Copyright © 2025 Empasy
 1. 동적 테스트 CHAINING: 조건에 따른 연쇄적 시나리오 실행.
 1. 장점: "빨리 바꾸다 보면 아무래도 오류 가능성이 높아지죠. SyncEta가 바로 그 부분을 딱 해결해 줍니다.", "쉽게 말해서 사용자가 웹사이트 쓰는 행동을 자동으로 스크립트로 만들어서 자동으로 테스트 실행하는 거예요.", "사용자의 친화적인 개발 환경, IDE를 제공해서 테스트 만드는 것부터 실행하고 결과 보고까지 이걸 아주 효율적으로 관리할 수 있게 해주고요.", "특히 중요한 건 CI/CD 그러니까 지속적 통합, 지속적 배포 도구랑 연동이 된다는 점입니다. 개발자가 코드 바꾸면 자동으로 테스트하고 배포까지 쭉 연결해주니까 소프트웨어 변경 사항을 정말 빠르고 안정적으로 반영할 수 있게 되는 거죠." 사용자 친화성 (코딩 경험 적은 사용자도 용이), 다양한 테스트 유형 지원, 초기 비용 절감 및 유지보수 비용 최소화, 효율적인 리소스 관리, 협업 강화, 속도 향상 및 테스트 확장성 확보, 지속 가능한 품질 관리, 고객 만족도 향상. 코드 없이 손쉽고 빠른 웹 테스트 자동화 환경 제공.
 1. 활용 사례: 자동화 테스트를 통한 시장 출시 시간 단축, CI/CD 및 외부 시스템 통합, 테스트 품질 및 신뢰성 강화, 테스트 관리 및 실행 효율성 향상.
+
+### SyncVerse: 인텔리전트 멀티 에이전트 오케스트레이션
+
+1. 개요: 개별적으로 동작하는 소프트웨어 모듈을 하나의 유기적인 AI 생태계로 연결하는 중앙 제어 플랫폼입니다.
+2. 주요 특징: LLM 중심 시스템 운영, Agent-to-Agent(A2A) 통신망 구축, 자연어 기반 대화형 운영 통제 지원.
+3. 장점: 개발자가 인프라 확장에서 벗어나 의사결정에 집중할 수 있도록 에이전트가 주도적으로 시스템 변경사항을 제안 및 실행하며, 프라이빗 AI 환경에서 기업 보안을 완벽히 유지합니다.
+
+### SyncInsight: AI 기반 지능형 데이터 관제 센터
+
+1. 개요: 시스템 내외부에 산재된 데이터를 통합 수집하고 AI가 실시간으로 분석하여 비즈니스 의사결정을 돕는 관제 플랫폼입니다.
+2. 주요 특징: 실시간 데이터 스트리밍 분석, 이상 징후 자율 탐지(Anomaly Detection), 자연어 질의(NLQ) 기반 맞춤형 차트 생성.
+3. 장점: 복잡한 쿼리나 대시보드 설계 지식 없이도 일상적인 질문만으로 인사이트를 얻을 수 있으며, AI가 문제 상황에 대한 최적의 해결 액션을 선제적으로 제안합니다.
 
 ## 엠파시의 사업 분야 및 경쟁력
 

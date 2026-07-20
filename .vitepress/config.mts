@@ -117,12 +117,27 @@ new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
 
     nav: [
       { text: "홈", link: "/" },
-      {link: "synceta", text: 'SyncETA'},
-      {link: "synccrawl", text: 'SyncCrawl'},
-      {link: "syncboot", text: 'SyncBoot'},
-      {link: "synccms", text: 'SyncCms'},
-      {link: "syncadmin", text: 'SyncAdmin'},
-      {link: "agile", text: '애자일'},
+      {
+        text: 'Sync Series',
+        items: [
+          { link: "/syncverse/", text: 'SyncVerse' },
+          { link: "/syncinsight/", text: 'SyncInsight' },
+          { link: "/synceta/", text: 'SyncETA' },
+          { link: "/synccrawl/", text: 'SyncCrawl' },
+          { link: "/syncboot/", text: 'SyncBoot' },
+          { link: "/synccms/", text: 'SyncCMS' },
+          { link: "/syncadmin/", text: 'SyncAdmin' },
+          { link: "/syncapim/", text: 'SyncAPIM' }
+        ]
+      },
+      {
+        text: '리소스',
+        items: [
+          { link: "/agile/", text: '애자일(스크럼반)' },
+          { link: "/study/", text: '공부방' },
+          { link: "/logs/", text: '작업 로그' }
+        ]
+      },
       {
         text: '엠파시',
         link: 'https://www.empasy.com',
