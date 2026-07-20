@@ -110,6 +110,17 @@ new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
       return url.toLowerCase().includes('dataset_form.xlsx')
     }
   ],
+  transformPageData(pageData) {
+    const canonicalUrl = `https://empasy.io/docs/${pageData.relativePath}`
+      .replace(/index\.md$/, '')
+      .replace(/\.md$/, '.html')
+    
+    pageData.frontmatter.head ??= []
+    pageData.frontmatter.head.push([
+      'link',
+      { rel: 'canonical', href: canonicalUrl }
+    ])
+  },
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     siteTitle: "살아 있는 소프트웨어는 엠파시가 만듭니다",
