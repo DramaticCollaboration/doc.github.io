@@ -1,45 +1,83 @@
 ---
-title: 기간계 연계 & 스냅샷 롤백 거버넌스
-description: 사내 그룹웨어 전자결재 승인선, ERP 데이터 실시간 연동 및 오배포 시 원클릭 스냅샷 롤백 기술을 안내합니다.
+title: 기간계 연계 및 스냅샷 롤백 거버넌스 | SyncCMS
+description: 사내 그룹웨어 전자결재 승인선 연계, ERP 데이터 실시간 동기화 및 장애 발생 시 스냅샷 기반 3단계 무중단 롤백 메커니즘을 설명합니다.
+head:
+  - - meta
+    - name: keywords
+      content: 기간계 연동, 전자결재 연동, 스냅샷 롤백, ERP 연계, 무중단 배포, 감사 로그, Audit Log, 데이터 무결성
+  - - meta
+    - property: og:title
+      content: 기간계 연계 및 스냅샷 롤백 거버넌스 | SyncCMS
+  - - meta
+    - property: og:description
+      content: 사내 전자결재 승인선 연계 및 스냅샷 기반 3단계 무중단 롤백 거버넌스
 sort: 5
 ---
 
-# 기간계 연계 & 스냅샷 롤백 거버넌스
+# 기간계 연계 및 스냅샷 롤백 거버넌스
 
-SyncCMS는 사내 기존 기간계 시스템(그룹웨어 전자결재, ERP, 사내 SSO)과 유기적으로 결합되며, 긴급 장애 발생 시 **스냅샷 기반 원클릭 즉시 무중단 롤백**을 보장합니다.
+SyncCMS는 기업의 사내 그룹웨어 전자결재, ERP, SSO와 안전하게 연동되며, 긴급 장애 발생 시 **스냅샷 기반의 3단계 무중단 롤백**을 통해 운영 안정성을 보장합니다.
 
 ---
 
-## 사내 기간계 3단계 안전 연동 파이프라인
+## 3단계 배포 승인 파이프라인
 
 ```mermaid
 graph LR
-    A[1. 사전 정책 점검] --> B[2. 전자결재 자동 기안]
-    B --> C[3. ERP 동기화 & 다채널 배포]
+    A["1. 사전 정책 점검<br/>(Pre-flight Check)"] --> B["2. 전자결재 자동 기안<br/>(Approval Workflow)"]
+    B --> C["3. 동기화 및 전 채널 배포<br/>(Publish & Purge)"]
 
-    A -.->|PII 및 컴플라이언스 검증| A
-    B -.->|그룹웨어 결재선 승인 대기| B
-    C -.->|웹/앱 배포 & CDN Purge| C
+    A -.->|PII 및 금칙어 검증| A
+    B -.->|사내 결재선 승인 대기| B
+    C -.->|ERP 연동 및 CDN Purge| C
 ```
 
-1. **1단계: 사전 정책 점검 (Pre-Flight Check)**
-   - 기안 상신 전 표시광고법 위반 여부 및 PII 노출 여부를 자동 검증합니다.
-2. **2단계: 그룹웨어 전자결재 자동 기안 (Approval Workflow)**
-   - 사내 결재 양식 규격에 맞춰 기안 문서를 자동 생성하고 준법감시인/부서장 승인선으로 전달합니다.
-3. **3단계: 기간계 ERP 동기화 & 배포 (Publishing & Sync)**
-   - 최종 승인 웹훅을 수신하는 즉시 ERP 프로모션 DB와 동기화하고 전세계 엣지 CDN 캐시를 무효화(Purge)합니다.
+1. **사전 정책 점검 (Pre-flight Check)**
+   - 콘텐츠 배포 요청 시 PII 노출 여부, 표시광고법 위반 가능성, 깨진 링크(Broken Link)를 자동 검사합니다.
+2. **전자결재 자동 기안 (Approval Workflow)**
+   - 사내 그룹웨어 API 규격에 맞추어 기안 양식과 변경 diff를 자동 생성하고 준법감시인 및 부서장 승인선으로 전달합니다.
+3. **동기화 및 전 채널 배포 (Publish & Purge)**
+   - 승인 웹훅이 수신되면 대상 RDBMS 트랜잭션을 커밋하고, ERP 프로모션 마스터와 동기화한 뒤 분산 캐시와 엣지 CDN을 갱신합니다.
 
 ---
 
-## 스냅샷 기반 3단계 분산 무결성 롤백
+## 스냅샷 기반 3단계 무중단 롤백
 
-오배포나 잘못된 콘텐츠 게시 사고가 발생했을 때, 단 한 번의 클릭으로 이전 정상 시점 스냅샷으로 무중단 롤백합니다:
+잘못된 콘텐츠 게시나 시스템 오류 발생 시, 1클릭으로 이전 정상 버전의 스냅샷으로 무중단 복구합니다.
 
 ```
-[1단계] RDBMS 스냅샷 복구  ➔  트랜잭션 무결성 검증 및 이전 정상 데이터 복원
-[2단계] Redis 분산 캐시 무효화 ➔  연결된 모든 백엔드 서버 캐시 키 일괄 갱신
-[3단계] 전세계 엣지 CDN 퍼지   ➔  Cloudflare/CloudFront/Akamai 캐시 즉시 무효화
+[1단계: RDBMS 스냅샷 복구]
+ └── DB 트랜잭션 내에서 지정된 snapshot_id의 상태로 데이터 레코드 복원
+
+[2단계: Redis 분산 캐시 갱신]
+ └── 연결된 모든 API 서버의 로컬/분산 캐시 키 일괄 무효화 및 신규 데이터 적재
+
+[3단계: 전 채널 엣지 CDN Purge]
+ └── Cloudflare / CloudFront / Akamai 등의 엣지 캐시 무효화 API 일괄 호출
 ```
 
-- **안전성**: 분산 트랜잭션 락을 통해 데이터 유실이나 뷰 불일치(View Desync)를 누출 방지합니다.
-- **감사 추적성**: 누가, 언제, 어떤 사유로 롤백했는지 전자금융감독규정 준수 감사 리포트를 자동 생성합니다.
+---
+
+## 감사 로그 (Audit Log) 데이터베이스 스키마
+
+전자금융감독규정 및 사내 감사 대응을 위해 모든 변경 이력을 영구 보존합니다.
+
+```sql
+CREATE TABLE sys_cms_audit_log (
+    audit_id        BIGSERIAL PRIMARY KEY,
+    site_key        VARCHAR(50) NOT NULL,
+    content_id      VARCHAR(100) NOT NULL,
+    action_type     VARCHAR(30) NOT NULL,    -- CREATE, UPDATE, APPROVE, PUBLISH, ROLLBACK
+    actor_id        VARCHAR(50) NOT NULL,    -- 사용자 계정 ID
+    actor_ip        VARCHAR(45) NOT NULL,    -- 접속 IP
+    previous_state  JSONB,                   -- 변경 전 스냅샷 (JSONB)
+    current_state   JSONB,                   -- 변경 후 스냅샷 (JSONB)
+    diff_summary    TEXT,                    -- 변경 요약
+    approval_doc_no VARCHAR(100),            -- 사내 전자결재 문서번호
+    created_at      TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP NOT NULL
+);
+
+-- 고속 조회를 위한 인덱스 구성
+CREATE INDEX idx_cms_audit_content ON sys_cms_audit_log(site_key, content_id);
+CREATE INDEX idx_cms_audit_created ON sys_cms_audit_log(created_at DESC);
+```

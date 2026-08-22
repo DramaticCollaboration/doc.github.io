@@ -1,60 +1,57 @@
 ---
-title: 데이타셋
-description: AI 기반 테스트 자동화로 QA 시간을 80% 절감하세요. 코드 없는 테스트 생성, 자연어 시나리오 작성, 다양한 플랫폼 지원으로 QA의 새로운 기준을 제시합니다.
+title: "데이터셋 관리 및 파라미터화 (Data-Driven Testing)"
+description: "Key-Value 테이블 및 Excel 파일을 활용하여 테스트 입력값을 동적으로 치환하고 대량 파라미터 테스트를 수행하는 SyncETA 데이터셋 관리 가이드입니다."
 head:
   - - meta
     - name: keywords
-      content: 테스트 자동화, 테스팅 생성형 AI, Playwright, Selenium, 실시간 품질 피드백, 무중단 테스트, AI 기반 테스트 자동화, 지속적 테스트, Continuous Testing, QAOps, TestOps, Codeless, Low-Code, 자기 치유 테스트, Self-healing,  AI 테스트 자동화, 코드리스 자동화, QA 자동화, 소프트웨어 테스트, 테스트 시나리오 생성, 코드리스 테스트, 자연어 테스트, 테스트 자동화 도구, 테스트 자동화 플랫폼, 테스트 효율화, Playwright , Selenium , QAOps, TestOps, Shift-Left 테스트, Shift‑Right 테스트
+      content: SyncETA, 데이터셋, 데이터 주도 테스트, Data-Driven Testing, Excel 연동, 변수 치환, 목업 데이터
   - - meta
     - property: og:title
-      content: AI 테스트 자동화 | SyncETA
+      content: "데이터셋 관리 및 파라미터화 | SyncETA"
   - - meta
     - property: og:description
-      content: AI 기반 테스트 자동화로 QA 시간을 80% 절감하세요. 코드 없는 테스트 생성, 자연어 시나리오 작성, 다양한 플랫폼 지원으로 QA의 새로운 기준을 제시합니다.
-  - - meta
-    - property: og:image
-      content: https://doc.empasy.com/images/favicon.png
-  - - meta
-    - property: og:url
-      content: https://doc.empasy.com/synceta/
+      content: "Excel 및 Key-Value 테이블 기반으로 테스트 시나리오에 동적 입력 데이터를 주입하는 가이드입니다."
 sort: 700
 ---
 
-# 데이터셋
+# 데이터셋 관리 및 파라미터화 (Data-Driven Testing)
 
-## 데이터셋은?
+**'데이터셋(Dataset)'**은 테스트 시나리오에 하드코딩된 입력값을 외부 데이터 테이블의 변수와 동적으로 매핑하여, 하나의 시나리오를 수많은 입력 조합(경계값, 예외값, 다국어 텍스트)으로 반복 검증할 수 있도록 지원하는 기능입니다.
 
-데이터셋은 Key-Value 구조로 미리 생성된 목업 데이터를 시나리오에 설정된 변수와 자동으로 매핑해주는 역할을 합니다.
-미리 정의한 변수를 기반으로 목업 데이터를 생성할 수 있으며, AI를 활용하여 변수에 적합한 데이터를 자동으로 생성해줍니다.
+---
 
-## 데이터셋 생성하기
+## 1. 데이터셋 구조 및 특징
 
-데이터셋은 Excel 시트와 유사한 구조로 설계되어 있어, 사용자에게 친숙하고 쉽게 생성 및 관리할 수 있습니다.
+- **스프레드시트 형식 UI**: 행(Row)과 열(Column) 기반의 친숙한 테이블 인터페이스로 테스트 파라미터를 관리합니다.
+- **Excel 파일 Import/Export**: 대량의 기존 테스트 데이터를 엑셀 시트 형식으로 손쉽게 업로드하거나 다운로드할 수 있습니다.
+- **동적 변수 바인딩**: 시나리오 레코드에서 `{{username}}`, `{{search_keyword}}` 형태로 변수를 지정하면 실행 시 데이터셋의 해당 열 값이 순차적으로 주입됩니다.
 
-변수와 행을 자유롭게 추가 및 삭제할 수 있으며, 시나리오에서 미리 설정한 변수 값을 불러오는 기능을 제공하며,
-Excel 파일로 미리 생성된 데이터를 가져올 수 있고, 변수 설정 후 AI를 활용하여 목업 데이터를 자동으로 생성할 수 있습니다.
+---
 
-::: info
+## 2. 데이터셋 생성 및 관리 방법
 
-- 시트를 우클릭하세요
-  :::
-  ![image](./image/dataset/dataset.png)
+### 직접 테이블 편집
+데이터셋 관리 화면에서 열(변수명)과 행(테스트 데이터 세트)을 자유롭게 추가/수정/삭제할 수 있습니다.
 
-## 엑셀로 생성하기
+![데이터셋 시트 화면](./image/dataset/dataset.png)
 
-#### 엑셀 form [다운로드](./image/dataset/dataset_form.xlsx)
+### Excel 파일을 통한 일괄 업로드
+기본 제공되는 템플릿 양식을 다운로드하여 데이터를 작성한 후 일괄 업로드할 수 있습니다.
 
-![image](./image/dataset/exel.png)
+- **템플릿 파일 다운로드**: [dataset_form.xlsx](./image/dataset/dataset_form.xlsx)
 
-## AI를 활용한 자동 생성
+![엑셀 업로드 화면](./image/dataset/exel.png)
 
-변수 설정 후 'AI로 데이터 자동채우기'를 클릭하면, AI가 변수에 맞는 목업 데이터를 자동으로 생성해줍니다.
+### 데이터 생성 보조 기능
+변수 속성(이름, 이메일, 전화번호 등)에 맞추어 유효한 형태의 테스트 샘플 데이터를 보조 생성할 수 있습니다.
 
-- 로딩
-  ![image](./image/dataset_loading.png)
-- 데이터 생성 후 화면
-  ![image](./image/dataset_ai.png)
+![데이터 생성 로딩](./image/dataset_loading.png)
+![데이터 생성 완료](./image/dataset_ai.png)
 
-## 데이터셋 적용
+---
+
+## 3. 시나리오에 데이터셋 적용 및 실행
+
+시나리오 실행 옵션에서 생성된 데이터셋을 지정하면, 데이터셋의 각 행(Row)별로 독립된 테스트 케이스가 순차 또는 병렬로 실행됩니다.
 
 <iframe width="100%" height="400" src="https://www.youtube.com/embed/d2RU8aabXIQ" frameborder="0" allowfullscreen allow="autoplay; encrypted-media"></iframe>
