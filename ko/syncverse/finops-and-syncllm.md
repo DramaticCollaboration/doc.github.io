@@ -1,5 +1,6 @@
 ---
 title: "SyncLLM 게이트웨이 & FinOps 비용 최적화"
+sidebarTitle: "LLM 게이트웨이"
 description: "다양한 상용 및 오픈소스 LLM API 호출을 단일 게이트웨이로 통합하고, 시맨틱 캐싱과 지능형 모델 라우팅을 통해 엔터프라이즈 AI 토큰 비용을 절감하는 FinOps 메커니즘을 소개합니다."
 head:
   - - meta

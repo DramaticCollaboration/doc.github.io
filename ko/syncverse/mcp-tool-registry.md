@@ -1,5 +1,6 @@
 ---
 title: "MCP 도구 레지스트리 및 RBAC 권한 관리"
+sidebarTitle: "MCP 도구 레지스트리"
 description: "표준 Model Context Protocol(MCP) 기반의 Tool, Resource, Prompt 카탈로그 관리, JSON Schema 유효성 검증, 도구별 RBAC 세분화 실행 권한 및 OpenAPI 자동 변환 기능을 설명합니다."
 head:
   - - meta

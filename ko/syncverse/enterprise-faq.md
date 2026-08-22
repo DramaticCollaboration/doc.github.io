@@ -1,5 +1,6 @@
 ---
 title: "엔터프라이즈 도입 FAQ 및 프라이빗 AI 보안"
+sidebarTitle: "도입 FAQ"
 description: "SyncVerse 도입을 검토 중인 엔터프라이즈 고객을 위한 자주 묻는 질문(FAQ), 사내 폐쇄망 온프레미스 프라이빗 AI 구축 방안, 기존 CI/CD 및 Git 시스템 연동 가이드입니다."
 head:
   - - meta

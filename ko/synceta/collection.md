@@ -1,51 +1,48 @@
 ---
-title: 컬랙션
-description: AI 기반 테스트 자동화로 QA 시간을 80% 절감하세요. 코드 없는 테스트 생성, 자연어 시나리오 작성, 다양한 플랫폼 지원으로 QA의 새로운 기준을 제시합니다.
+title: "컬렉션 관리 및 일괄 실행"
+description: "여러 개의 단위 시나리오를 묶어 순차 또는 병렬로 일괄 실행하는 SyncETA 컬렉션 구성 가이드입니다."
 head:
   - - meta
     - name: keywords
-      content: 테스트 자동화, 테스팅 생성형 AI, Playwright, Selenium, 실시간 품질 피드백, 무중단 테스트, AI 기반 테스트 자동화, 지속적 테스트, Continuous Testing, QAOps, TestOps, Codeless, Low-Code, 자기 치유 테스트, Self-healing,  AI 테스트 자동화, 코드리스 자동화, QA 자동화, 소프트웨어 테스트, 테스트 시나리오 생성, 코드리스 테스트, 자연어 테스트, 테스트 자동화 도구, 테스트 자동화 플랫폼, 테스트 효율화, Playwright , Selenium , QAOps, TestOps, Shift-Left 테스트, Shift‑Right 테스트
+      content: SyncETA, 컬렉션, 일괄 실행, 크로스 브라우징, 시나리오 묶음 실행, 테스트 스위트
   - - meta
     - property: og:title
-      content: AI 테스트 자동화 | SyncETA
+      content: "컬렉션 관리 및 일괄 실행 | SyncETA"
   - - meta
     - property: og:description
-      content: AI 기반 테스트 자동화로 QA 시간을 80% 절감하세요. 코드 없는 테스트 생성, 자연어 시나리오 작성, 다양한 플랫폼 지원으로 QA의 새로운 기준을 제시합니다.
-  - - meta
-    - property: og:image
-      content: https://doc.empasy.com/images/favicon.png
-  - - meta
-    - property: og:url
-      content: https://doc.empasy.com/synceta/
-sort: 600
+      content: "단위 시나리오들을 그룹화하여 순차 또는 병렬로 실행하는 컬렉션 관리 가이드입니다."
+sort: 500
 ---
 
-# 콜렉션
+# 컬렉션 관리 및 일괄 실행
 
-## 콜렉션의 기능
+**'컬렉션(Collection)'**은 연관된 복수의 테스트 시나리오를 그룹화하여 하나의 테스트 스위트(Test Suite) 단위로 관리하고 일괄 실행하는 기능입니다.
 
-#### 여러 시나리오를 직 병렬로 실행
+---
 
-::: tip 콜렉션 주요 기능
-**1. 크로스 브라우징 테스트**
+## 1. 컬렉션의 주요 용도
 
-- 다양한 브라우저 환경에서 동시에 테스트를 수행하여, 웹사이트가 Chrome, Safari, Edge 등 여러 브라우저에서 일관되게 동작하는지 확인할 수 있습니다
+- **엔드투엔드 시나리오 일괄 순차 실행**: 로그인 ➔ 상품 탐색 ➔ 주문 결제 ➔ 주문 취소와 같은 개별 시나리오를 연속해서 순차적으로 검증합니다.
+- **다중 브라우저 동시 병렬 실행**: 동일한 시나리오 세트를 Chrome, Firefox, Edge 등 여러 브라우저 환경에서 동시에 병렬 구동하여 크로스 브라우징 호환성을 점검합니다.
 
-**2. 순차적 시나리오 실행**
+---
 
-- 여러 테스트 시나리오를 통합 관리하고, 실행 순서를 최적화하여 테스트 효율성을 극대화할 수 있습니다.
-  :::
+## 2. 컬렉션 생성 절차
 
-## 콜렉션 생성
+### 1단계: 컬렉션 메뉴 이동 및 신규 생성
+좌측 메뉴의 **'컬렉션'**으로 이동한 후 우측 상단의 **'새로운 컬렉션'** 버튼을 클릭합니다.
 
-#### 콜렉션 메뉴로 이동
+![컬렉션 생성 메뉴](./image/collection/newcollection.png)
 
-![image](./image/collection/newcollection.png)
+### 2단계: 포함할 시나리오 및 실행 순서 선택
+컬렉션에 포함할 시나리오 목록을 체크하고, 드래그 앤 드롭을 통해 실행 순서를 구성합니다.
 
-#### 시나리오 선택
+![시나리오 선택 및 순서 지정](./image/collection/collection2.png)
 
-![image](./image/collection/collection2.png)
+---
 
-## 콜렉션 실행
+## 3. 컬렉션 실행 및 결과 집계
+
+컬렉션 실행 시 각 시나리오별 통과/실패 상태가 실시간으로 집계되며, 전체 컬렉션 실행 완료 후 종합 결과 리포트가 대시보드에 기록됩니다.
 
 <iframe width="100%" height="400" src="https://www.youtube.com/embed/dsb0XpGy7A0" frameborder="0" allowfullscreen allow="autoplay; encrypted-media"></iframe>

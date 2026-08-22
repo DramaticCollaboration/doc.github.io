@@ -1,75 +1,116 @@
 ---
-title: AI 기반 테스트 자동화 | SyncETA
-description: 대규모 언어 모델(LLM)을 활용한 자동화된 테스트 시나리오 생성과 실시간 검증을 통해 QA 프로세스를 효율화합니다. 자연어 기반 테스트 설계로 누구나 쉽게 접근할 수 있습니다.
+title: "SyncETA: 자율 회귀 테스트 및 자가 치유 플랫폼"
+description: "웹 브라우저 인터랙션 녹화, Playwright 기반 분산 병렬 실행, Vision AI 시각적 회귀 검증 및 선택자 자가 치유(Self-Healing)를 제공하는 엔터프라이즈 테스트 자동화 솔루션입니다."
 head:
   - - meta
     - name: keywords
-      content: 테스트 자동화, AI 테스트, 테스팅 생성형 AI, Playwright, Selenium, LLM QA, 실시간 품질 피드백, 자동 테스트 생성, 코드리스 자동화, QA 자동화, 소프트웨어 테스트
+      content: SyncETA, 테스트 자동화, 회귀 테스트, Playwright, MCP, Model Context Protocol, Visual Regression, Self-Healing, CI/CD, 엔터프라이즈 QA
   - - meta
     - property: og:title
-      content: AI 테스트 자동화 | SyncETA
+      content: "SyncETA: 자율 회귀 테스트 및 자가 치유 플랫폼"
   - - meta
     - property: og:description
-      content: 대규모 언어 모델(LLM)을 활용한 자동화된 테스트 시나리오 생성과 실시간 검증을 통해 QA 프로세스를 효율화합니다.
+      content: "웹 동작 녹화, Playwright MCP 실행, Vision AI 시각 검증 및 자가 치유 파이프라인을 지원합니다."
   - - meta
     - property: og:image
       content: https://doc.empasy.com/images/favicon.png
   - - meta
     - property: og:url
       content: https://doc.empasy.com/synceta/
-sort: 1
+sort: 10
 ---
 
-# 🚀 SyncETA: AI 중심의 지능형 테스트 자동화 플랫폼
+# SyncETA: 자율 회귀 테스트 및 자가 치유 플랫폼
 
-**자연어 처리 기반 테스트 케이스 생성 및 브라우저 자동 실행 시스템**
+SyncETA는 웹 애플리케이션의 사용자 인터랙션을 기록하고, Model Context Protocol(MCP) 표준 인터페이스를 통해 테스트를 자동 실행하며, 시각적 변형 감지 및 선택자 자가 치유(Self-Healing)를 지원하는 엔터프라이즈 QA 플랫폼입니다.
 
-SyncETA는 대규모 언어 모델(LLM)을 심층적으로 활용하여 소프트웨어 검증 과정을 자동화하는 테스트 플랫폼입니다. 사용자의 웹 브라우저 동작을 기록하고, AI가 이를 분석하여 사람이 읽고 수정할 수 있는 자연어 형태의 테스트 케이스로 변환합니다. 생성된 시나리오는 Playwright MCP와 연동되어 멀티 브라우저 환경에서 자동 실행되며, 이 과정에서 QA의 피드백이 AI 모델 학습에 지속적으로 반영되는 선순환 구조를 제공합니다.
+---
 
-## [제품 소개 보기](https://synceta.empasy.com/)
+## 4대 핵심 기능 영역
 
-## 💡 SyncETA가 해결하는 테스트 환경의 한계
+```mermaid
+graph LR
+    A[SyncETA 4대 핵심 영역] --> B[1. 사용자 행동 녹화 및 정규화]
+    A --> C[2. Playwright MCP 분산 실행]
+    A --> D[3. Vision AI 시각적 회귀 검증]
+    A --> E[4. 자가 치유 및 오케스트레이션]
 
-기존 테스트 자동화 시스템은 스크립트 유지보수의 어려움과 코딩 지식의 필요성으로 인해 진입 장벽이 존재했습니다:
+    B -.-> B1[Selenium 기반 이벤트/DOM 추출 및 YAML/JSON 변환]
+    C -.-> C1[Chrome, Firefox, Edge 멀티 브라우저 병렬 구동]
+    D -.-> D1[레이아웃 붕괴, 요소 가림 현상 인지 검출]
+    E -.-> E1[Broken Selector 탐지 및 SyncVerse 승인 연동]
+```
 
-- **높은 유지보수 비용**: UI가 변경될 때마다 자동화 스크립트를 수동으로 수정해야 하는 부담이 큽니다.
-- **수작업 의존성**: 테스트 케이스 설계가 사람의 직관에 의존하여 누락이 발생하거나 일관성을 유지하기 어렵습니다.
-- **기술적 진입 장벽**: 테스트 스크립트 작성에 프로그래밍 지식이 필요해 QA 팀과 비개발 직군의 활용이 제한적입니다.
+1. **사용자 행동 녹화 및 시나리오 정규화 (Recording & Normalization)**:
+   - 실제 브라우저 조작(클릭, 입력, 페이지 이동, 탭 전환)을 실시간으로 수집합니다.
+   - 수집된 이벤트는 XPath, CSS Selector, DOM 계층 구조와 함께 표준 JSON/YAML 포맷으로 정규화됩니다.
 
-SyncETA는 AI를 통해 이러한 구조적 문제를 해결하여, 스크립트 작성 없이도 자연어 기반으로 테스트 시나리오를 구성하고 실행할 수 있는 환경을 제공합니다.
+2. **Playwright MCP 기반 분산 테스트 실행 (Test Execution)**:
+   - Model Context Protocol(MCP) 표준 도구를 통해 멀티 브라우저(Chromium, Firefox, WebKit) 환경에서 테스트를 병렬 실행합니다.
+   - 테스트 실행 중 오류 발생 시 실패 시점의 DOM 스냅샷, 콘솔 로그, 비디오 녹화본을 수집합니다.
 
-## 🛠️ SyncETA의 핵심 AI 기술 및 작동 방식
+3. **Vision AI 기반 시각적 회귀 검증 (Visual Regression AI)**:
+   - 단순 픽셀 비교의 한계를 넘어, 비전 모델을 통해 컴포넌트 겹침 현상, 텍스트 잘림, 레이아웃 깨짐을 검출합니다.
+   - 동적 렌더링 영역에 대한 마스킹(Ignored Regions) 설정을 지원합니다.
 
-SyncETA는 사용자 행동 기록, AI 기반 케이스 생성, 테스트 실행, 품질 개선 피드백 등 4단계의 핵심 모듈을 유기적으로 연동합니다.
+4. **선택자 자가 치유 및 관제탑 연동 (Self-Healing & Governance)**:
+   - UI 변경으로 인해 기존 식별자가 깨질 경우, 화면 구조를 분석하여 최적의 대체 선택자를 산출합니다.
+   - 임의로 코드를 변경하지 않고, SyncVerse 관제탑 및 QA 엔지니어의 승인(Human-in-the-Loop)을 거쳐 테스트 자산을 갱신합니다.
 
-### 1. 사용자 동작 레코딩 (SyncETA Recorder)
-- 사용자의 브라우저 조작(클릭, 입력, 페이지 이동 등)을 백그라운드에서 실시간으로 캡처합니다.
-- 추출된 동작은 URL, 선택자(XPath, ID, Class) 등과 함께 구조화된 데이터(JSON/YAML)로 저장되며, 직관적인 UI를 통해 누구나 쉽게 기록 프로세스를 제어할 수 있습니다.
+---
 
-### 2. LLM 기반 테스트 케이스 자동 생성 (TestCase Generator)
-- **AI 분석**: 저장된 시나리오 데이터를 오픈소스 LLM(Mistral 등)이 분석하여 테스트의 목적과 단계를 이해합니다.
-- **자연어 변환**: 분석된 결과를 바탕으로 Step, Input, Expected Result가 포함된 자연어 형태의 엑셀 테스트 케이스를 자동 생성합니다. 
-- 이 과정에서 AI는 사내 도메인 용어와 UI 패턴을 컨텍스트로 활용하여 팀의 QA 기준에 맞는 형태로 결과를 조정합니다.
+## 5단계 엔드투엔드 테스트 파이프라인
 
-### 3. 지능형 테스트 실행 (Test Executor)
-- **코드리스 실행**: 생성된 테스트 케이스는 Playwright MCP를 통해 스크립트 작성 과정 없이 멀티 브라우저에서 자동 병렬 실행됩니다.
-- **자연어 직접 실행 지원**: 녹화된 데이터가 없더라도, QA가 기존에 보유한 엑셀 형태의 자연어 시나리오를 AI가 직접 해석하고 실행할 수 있습니다.
-- 테스트 실패 시 에러 발생 지점의 스크린샷과 화면 녹화 영상을 제공하여 원인 분석을 지원합니다.
+```mermaid
+sequenceDiagram
+    autonumber
+    actor QA as QA 엔지니어 / 테스터
+    participant REC as SyncETA Recorder
+    participant MCP as Playwright MCP Server
+    participant VIS as Vision AI Engine
+    participant CTL as 관제탑 (SyncVerse / CI/CD)
 
-### 4. 지속적인 AI 학습 루프 (QA Feedback Loop)
-- QA 엔지니어가 AI가 생성한 테스트 케이스를 리뷰하고 수정한 데이터는 다시 LLM의 학습 데이터(Fine-tuning/RAG)로 활용됩니다.
-- 이 피드백 루프를 통해 시간이 지날수록 AI의 테스트 케이스 생성 품질과 도메인 이해도가 프로젝트 환경에 맞게 최적화됩니다.
+    QA->>REC: 웹 조작 녹화 (클릭/입력)
+    REC->>CTL: 정규화된 시나리오(JSON/YAML) 등록
+    CTL->>MCP: run_playwright (테스트 병렬 실행)
+    MCP-->>VIS: 실행 스크린샷 및 DOM 전달
+    alt 정상 통과
+        VIS-->>CTL: 시각 검증 통과 (Pass)
+    else UI 변경 / 선택자 오류 감지
+        VIS-->>CTL: 결함 리포트 + 대체 선택자 제안
+        CTL->>QA: 변경 승인 요청 (Human-in-the-Loop)
+    end
+```
 
-## ✨ 주요 관리 및 검증 기능
+---
 
-- **데이터 목업(Mockup) 자동 생성**: 시나리오 실행 시 필요한 다양한 형태의 테스트 데이터 세트를 AI를 통해 자동 생성하여 검증 커버리지를 넓힙니다.
-- **동적 시나리오 체이닝**: 단순한 순차 실행을 넘어, 이전 단계의 검증 결과에 따라 다음 시나리오의 흐름을 동적으로 결정하는 워크플로우를 제공합니다.
-- **AI 화면 검증**: 단순 요소 확인을 넘어 각 이벤트 단계마다 화면 캡처 이미지를 AI가 분석하여 UI 레이아웃의 의도치 않은 변화를 감지합니다.
-- **CI/CD 파이프라인 연동**: 기존 개발 및 배포 환경(Jenkins, Azure DevOps 등)에 연동되어 지속적 테스트(Continuous Testing) 환경을 구성할 수 있습니다.
+## 도입 시 기대 효과
 
-## 🎯 도입 시 기대 효과
+- **테스트 스크립트 유지보수 공수 절감**: UI 변경 시 발생하는 스크립트 깨짐 현상을 자가 치유 파이프라인을 통해 신속하게 보정합니다.
+- **크로스 브라우징 검증 시간 단축**: Playwright MCP 기반 병렬 실행을 통해 회귀 테스트 전체 소요 시간을 단축합니다.
+- **정밀한 시각적 무결성 확보**: 픽셀 노이즈에 영향을 받지 않는 Vision AI 검증으로 릴리즈 전 레이아웃 오류를 사전에 차단합니다.
+- **표준 프로토콜 호환**: HTTP SSE 기반 MCP 인터페이스를 제공하여 사내 CI/CD(Jenkins, GitHub Actions) 및 AI 오케스트레이터와 유기적으로 연동됩니다.
 
-- **시간 효율화**: 수작업으로 작성하던 시나리오를 AI가 대체하여 전체 테스트 설계 시간을 현저히 줄일 수 있습니다.
-- **리소스 재분배**: 반복적인 테스트 작업에서 벗어나 QA 인력이 더 복잡하고 예외적인 품질 검증에 집중할 수 있게 됩니다.
-- **학습 곡선 최소화**: 개발 지식이 없는 사용자도 자연어를 통해 엔터프라이즈 수준의 테스트 자동화 환경을 운영할 수 있습니다.
-- **안정적인 커버리지 확장**: AI가 제안하는 엣지 케이스와 테스트 파생을 통해 전체 시스템의 안정성 검증 범위를 넓혀줍니다.
+---
+
+## 문서 목차
+
+### 1. 개요 및 시스템 아키텍처
+- [시스템 아키텍처 및 파이프라인](./architecture) - 4계층 아키텍처 및 컴포넌트 통신 구조
+- [5분 퀵스타트 가이드](./quickstart) - 로컬 컨테이너 구동 및 첫 테스트 실행
+
+### 2. 실무 사용자 가이드
+- [계정 및 워크스페이스 관리](./account) - 회원가입, 프로필 설정 및 환경 관리
+- [프로젝트 관리](./project) - 프로젝트 생성, 역할/권한(RBAC) 및 멤버 초대
+- [시나리오 녹화 및 에디터](./scenario-create) - 브라우저 녹화, 대기 조건, 검증 조건, 복구 스크립트
+- [시나리오 실행 옵션](./scenario-run) - 크로스 브라우저, 멀티 해상도, 백그라운드 병렬 실행 및 스케줄러
+- [컬렉션 관리](./collection) - 복수 시나리오 일괄 순차/병렬 실행 구성
+- [스토리 워크플로우](./story) - 플로우차트 기반 시나리오 조건부 분기 및 동적 Chaining
+- [데이터셋 관리](./dataset) - Excel 연동, 입력값 치환(Data-Driven Testing), 경계값 데이터 세트
+- [대시보드 및 결과 분석](./dashboard) - 실행 통계, 콘솔 에러 수집, 실패 시점 DOM 스냅샷 및 녹화 영상 분석
+
+### 3. 고급 연동 및 엔터프라이즈
+- [시각적 회귀 및 자가 치유](./self-healing-and-vision) - Vision AI 레이아웃 검증 및 선택자 보정 절차
+- [MCP 프로토콜 및 CI/CD 연동](./mcp-and-cicd) - HTTP SSE 표준 Tool Schema 및 파이프라인 연동 규격
+- [엔터프라이즈 보안 및 온프레미스](./enterprise-security) - 로컬 LLM 연동, 사내 망분리 지원, 데이터 마스킹
+- [기술 용어 사전](./glossary) - Record, Scenario, Collection, Story, MCP 등 용어 정의

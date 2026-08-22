@@ -1,5 +1,6 @@
 ---
 title: "엔터프라이즈 HITL 거버넌스 및 승인 콘솔"
+sidebarTitle: "HITL 승인"
 description: "AI의 자율성을 보장하면서도 기업 시스템의 안정성을 확보하기 위한 Human-In-The-Loop(HITL) 아키텍트 승인 콘솔, DDL 검증 게이트, 2단계 인증 및 비상 킬스위치(Kill-Switch)를 설명합니다."
 head:
   - - meta
