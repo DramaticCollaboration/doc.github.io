@@ -1,5 +1,6 @@
 ---
 title: "자가치유 파이프라인 (Self-Healing Pipeline)"
+sidebarTitle: "자가 치유"
 description: "SyncETA의 무인 QA 테스트에서 결함이 발견되었을 때, 클러스터 서버 로그를 수집·분석하고 코딩 에이전트가 코드를 자동으로 수정하여 검증하는 자가치유(Self-Healing) 루프를 설명합니다."
 head:
   - - meta

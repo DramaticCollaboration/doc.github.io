@@ -1,5 +1,6 @@
 ---
 title: "Saga 분산 트랜잭션 & 전사 감사 추적"
+sidebarTitle: "분산 트랜잭션"
 description: "다중 에이전트와 마이크로서비스에 걸친 복합 작업의 원자성을 보장하는 Saga 분산 트랜잭션 오케스트레이션 및 보상 롤백, 전사 A2A 통신 전수 감사 추적(Audit Trail) 시스템을 설명합니다."
 head:
   - - meta

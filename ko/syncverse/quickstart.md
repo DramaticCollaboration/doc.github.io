@@ -1,5 +1,6 @@
 ---
 title: "5분 빠른 시작 가이드 (Quickstart)"
+sidebarTitle: "빠른 시작"
 description: "로컬 환경에서 Docker Compose를 통해 SyncVerse 중앙 제어 서버를 구동하고, 첫 번째 MCP 에이전트를 연결하여 자연어 지시를 실행하는 실습 가이드입니다."
 head:
   - - meta

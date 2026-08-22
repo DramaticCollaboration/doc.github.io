@@ -187,6 +187,12 @@ img {
     transition: all 0.16s cubic-bezier(0.4, 0, 0.2, 1) !important;
 }
 
+.VPSidebarItem .text {
+    white-space: nowrap !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+}
+
 .VPSidebarItem .link:hover {
     background-color: var(--vp-c-default-soft) !important;
     color: var(--vp-c-text-1) !important;

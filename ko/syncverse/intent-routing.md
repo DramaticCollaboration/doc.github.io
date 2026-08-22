@@ -1,5 +1,6 @@
 ---
 title: "인텐트 라우팅 엔진 (Intent Routing Engine)"
+sidebarTitle: "인텐트 라우팅"
 description: "현업 담당자의 자연어 요구사항을 실시간 분석하여 운영(CRUD), 코드 수정(Code Fix), 신규 기능 개발(New Feature), QA 검증 등으로 분류하고 최적의 에이전트로 라우팅하는 핵심 제어 엔진입니다."
 head:
   - - meta

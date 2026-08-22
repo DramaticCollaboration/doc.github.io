@@ -1,5 +1,6 @@
 ---
 title: "SyncVerse 개요: 멀티 에이전트 자율 운영 오케스트레이션 생태계"
+sidebarTitle: "개요"
 description: "SyncVerse는 도메인별 AI 에이전트들이 표준 MCP 기반의 Agent-to-Agent(A2A) 통신을 통해 협업하며 소프트웨어 생애주기(AI DLC) 전반을 자율적으로 관리하는 중앙 제어 플랫폼입니다."
 head:
   - - meta
