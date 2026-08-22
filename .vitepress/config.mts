@@ -1,11 +1,13 @@
 import { defineConfig } from "vitepress";
+import { withMermaid } from "vitepress-plugin-mermaid";
 
 import { generateKrSidebar } from "./sitebar";
 
 const GITHUB_URL = "https://github.com/DramaticCollaboration/";
 
 // https://vitepress.dev/reference/site-config
-export default defineConfig({
+export default withMermaid(
+  defineConfig({
   base: process.env.BASE_URL || "/",
   lang: "ko-KR",
   title: "살아 있는 소프트웨어는 엠파시가 만듭니다",
@@ -219,4 +221,5 @@ new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
       lazyLoading: true,
     },
   },
-});
+}));
+
