@@ -18,5 +18,11 @@
     "gray-matter": "^4.0.3",
     "cpy-cli": "^6.0.0",
     "vitepress-export-pdf": "^1.0.0"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "esbuild",
+      "puppeteer"
+    ]
   }
 }

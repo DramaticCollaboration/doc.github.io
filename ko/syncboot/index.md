@@ -1,67 +1,94 @@
 ---
-title: "SyncBoot: 지능형 백엔드 구축을 위한 자율형 디지털 에이전트 프레임워크"
-description: 자연어로 데이터베이스를 조작하고 서버 상태를 자가 모니터링하는 AI 기반 엔터프라이즈 백엔드 플랫폼입니다. MCP 연동을 통해 복잡한 시스템 운영과 복구 프로세스를 자동화합니다.
+title: "SyncBoot: 디지털 백엔드 프레임워크 개요"
+description: "도메인 데이터 운영과 스키마 관리를 지원하는 엔터프라이즈 백엔드 플랫폼입니다. Spring Boot 3, LangChain4j, MCP 연동을 통해 시스템 운영과 API 개발을 지원합니다."
 head:
   - - meta
     - name: keywords
-      content: SyncBoot, Java 기반, AI 에이전트, 디지털 엔지니어, 마이크로서비스 (MSA), 빠른 개발, 오픈소스, 기업용 애플리케이션, Model Context Protocol, MCP, 자가 치유(Self-Healing), 서버 상태 인지, 자연어 DB 제어, 무상태 아키텍처, Spring Boot, Spring Cloud, CI/CD
+      content: SyncBoot, Java, Spring Boot 3, LangChain4j, AI Agent, Model Context Protocol, MCP, 로우코드, 엔터프라이즈 백엔드, 3-File SQL, RBAC, 멀티테넌트
   - - meta
     - property: og:title
-      content: "SyncBoot: 지능형 백엔드 구축을 위한 자율형 디지털 에이전트 프레임워크"
+      content: "SyncBoot: 디지털 백엔드 프레임워크 개요"
   - - meta
     - property: og:description
-      content: 자연어로 데이터베이스를 조작하고 서버 상태를 자가 모니터링하는 AI 기반 엔터프라이즈 백엔드 플랫폼입니다.
+      content: 도메인 데이터 운영과 스키마 관리를 지원하는 엔터프라이즈 백엔드 플랫폼입니다.
   - - meta
     - property: og:image
       content: https://doc.empasy.com/images/favicon.png
   - - meta
     - property: og:url
       content: https://doc.empasy.com/syncboot/
-order: 1
-dir:
-  order: 1
 ---
 
-# SyncBoot: 디지털 엔지니어 기반의 지능형 백엔드 프레임워크
+# SyncBoot: 디지털 백엔드 프레임워크 개요
 
-SyncBoot는 단순한 API 개발 프레임워크를 넘어, 시스템 스스로 비즈니스 상태를 인지하고 운영하는 **'자율적인 디지털 엔지니어(Digital Engineer Agent)'**로 진화한 차세대 Java 기반 엔터프라이즈 플랫폼입니다.
+SyncBoot는 비즈니스 도메인 맥락을 인지하여 데이터베이스 운영과 API 개발을 지원하는 Java 기반 엔터프라이즈 백엔드 플랫폼입니다.
 
-마이크로서비스 아키텍처(MSA)를 근간으로 하여, AI 에이전트 생태계와의 실시간 통신을 통해 시스템 제어, 데이터 운영, 오류 탐지 및 복구를 자동화합니다.
+Spring Boot 3, LangChain4j, Model Context Protocol (MCP) 표준을 기반으로 설계되었으며, 데이터 CRUD, 스키마 관리, 풀스택 코드 생성, 분산 로그 진단 기능을 제공합니다.
 
 ---
 
-## 1. SyncBoot 핵심 AI 에이전트 역량
+## 4대 핵심 기능 영역
 
-전통적인 시스템과 달리, SyncBoot는 사용자나 외부 시스템의 자연어 명령을 해석하여 백엔드 인프라를 스스로 관리할 수 있는 역량을 갖추고 있습니다.
+```mermaid
+graph LR
+    A[SyncBoot 4대 핵심 영역] --> B[1. 도메인 CRUD 운영]
+    A --> C[2. 3-File 스키마 관리]
+    A --> D[3. 풀스택 코드 생성기]
+    A --> E[4. 엔터프라이즈 IAM & 멀티테넌트]
 
-### I. 자연어 기반의 도메인 데이터 운영
-- 사용자가 복잡한 SQL을 작성할 필요 없이 자연어로 요구사항을 전달하면, 에이전트가 이를 분석하여 권한 내에서 데이터베이스 조작(CRUD) 및 도메인 로직을 수행합니다.
-- 데이터 스키마 변경 등 시스템에 중대한 영향을 미치는 작업의 경우, AI가 먼저 변경 사항을 제안(Propose)하고 관리자의 승인을 받는 안전 장치를 통해 안정성을 확보합니다.
+    B -.-> B1[자연어 질의 및 트랜잭션 처리]
+    C -.-> C1[init / domain / sample 분리 및 사전 승인]
+    D -.-> D1[Spring Boot + Vue3 코드 생성]
+    E -.-> E1[Row-Level 격리 및 컬럼 데이터 마스킹]
+```
 
-### II. 맥락 인지(Context-Aware) 모니터링 및 자가 진단
-- 분산 시스템 환경에서 자신이 구동 중인 시스템의 목적과 비즈니스 헬스(Health) 상태를 지속적으로 인지하고 모니터링합니다.
-- 에러 발생 시, 흩어져 있는 다중 인스턴스의 로그를 즉시 수집하고 상관관계를 분석하여 중앙 통합 제어 시스템(SyncVerse)으로 전달해 복구 시간을 수 분 이내로 줄여줍니다.
+1. **도메인 CRUD 운영 및 쿼리 실행 (Domain Operations)**:
+   - 자연어 질의 및 표준 MCP 도구를 통해 도메인 데이터를 조회하고 조작할 수 있도록 지원합니다.
+   - 인가된 트랜잭션 경계 내에서 데이터를 안전하게 처리합니다.
 
-### III. 에이전트 간 협업을 위한 MCP (Model Context Protocol) 지원
-- AI 에이전트들이 시스템 자원에 접근할 수 있도록 **HTTP SSE(Server-Sent Events)** 기반의 원격 MCP 서버 인터페이스를 기본 내장하고 있습니다.
-- `read_database_schema`, `manage_database_catalog`, `fetch_server_logs` 등의 도구를 통해 다른 에이전트 시스템과 원활하게 연동됩니다.
+2. **스키마 설계 및 3-File DDL 표준 (Schema Governance)**:
+   - 요구사항에 맞춰 3-File SQL(`init.sql`, `<domain>.sql`, `sample.sql`) 구조를 구성합니다.
+   - 스키마 변경 시 영향도를 사전에 분석하고 관리자의 사전 승인(Human-in-the-Loop)을 거쳐 데이터베이스에 반영합니다.
+
+3. **로우코드 풀스택 API & UI 생성기 (Low-Code Fullstack)**:
+   - 데이터베이스 엔티티 메타데이터를 기반으로 Controller, Service, Mapper, DTO 및 Ant Design Vue 3 화면 코드를 생성합니다.
+
+4. **멀티테넌트 및 RBAC 보안 (Enterprise Security)**:
+   - 테넌트 데이터 격리(독립 DB 및 공유 DB 방식 지원), 컬럼 단위 동적 데이터 마스킹, 행 단위(Row-Level) 권한 필터링을 지원합니다.
 
 ---
 
-## 2. 대규모 분산 환경을 위한 엔터프라이즈 아키텍처
+## 5대 백엔드 워커 역할 체계
 
-AI의 자율성을 뒷받침하기 위해 견고한 분산 시스템 아키텍처를 적용했습니다.
+SyncBoot는 도메인 관리, 보안, 배치, 프로토콜 연동 역할을 모듈별로 나누어 운영합니다.
 
-### 무상태성(Stateless) 및 안전한 트랜잭션 (Saga 패턴)
-모든 에이전트 작업은 고유의 작업 식별자(`task_id`)를 기반으로 단기 맥락은 메모리 저장소(Redis)에, 장기 이력은 데이터베이스에 보관하여 무상태를 유지합니다. 복잡한 다중 연계 작업 중 오류가 발생할 경우, `revert_data_state`와 같은 보상 트랜잭션 도구를 활용해 즉시 이전 상태로 안전하게 롤백합니다.
-
-### 강력한 보안과 동적 접근 제어 (AuthZ)
-외부 AI 모델(LLM)을 통해 유입되는 제어 명령에 대해, JWT 토큰의 역할(role) 클레임을 검증하여 허용된 데이터베이스 스키마와 시스템 자원에만 접근하도록 엄격히 통제합니다.
+| 역할 명칭 | 주요 담당 업무 | 실행 방식 |
+| :--- | :--- | :--- |
+| **Domain Operator** | 도메인 데이터 모델 기반 CRUD 및 비즈니스 쿼리 처리 | 자율 처리 |
+| **Schema Architect** | 3-File 표준 DDL 설계, ERD 다이어그램 생성 및 변경 영향도 분석 | 제안 후 개발자 승인 |
+| **Security IAM** | RBAC 역할/메뉴 매핑, 행 단위 데이터 필터링, 민감정보 마스킹 감시 | 상시 정책 적용 |
+| **MCP Dispatcher** | 외부 시스템 및 오케스트레이터와의 A2A 통신을 위한 표준 Tool/Resource 제공 | HTTP SSE 프로토콜 |
+| **Batch Orchestrator**| 대용량 데이터 처리 및 주기적 Quartz/Spring Batch 작업 분산 스케줄링 | 스케줄러 기반 실행 |
 
 ---
 
-## 3. 플랫폼 도입의 기대 효과
+## 도입 시 기대 효과
 
-- **운영 프로세스 단순화**: 개발자와 DBA의 개입 없이 자연어 명령만으로 일상적인 데이터 운영 및 시스템 제어가 가능해집니다.
-- **장애 복구 시간(MTTR) 단축**: 실시간 로그 수집 및 자가 진단 파이프라인을 통해 서비스 중단 시 원인 분석부터 대응까지의 시간을 대폭 줄일 수 있습니다.
-- **점진적 전환**: 기존 모놀리식 시스템에서 AI 자율 운영이 가능한 클라우드 네이티브 MSA로의 부드러운 전환을 돕습니다.
+- **백엔드 개발 공수 절감**: 반복적인 CRUD API 작성과 관리자 UI 화면 구현 시간을 단축합니다.
+- **안정적인 DB 마이그레이션**: 변경 영향도 사전 분석과 승인 콘솔을 통해 스키마 변경 시의 오류 위험을 낮춥니다.
+- **로그 수집 및 분석 시간 단축**: 분산 서버의 최근 에러 로그를 수집하여 원인 파악을 돕습니다.
+- **표준 프레임워크 준수**: Spring Boot 3, LangChain4j, OpenAPI 3.0, Model Context Protocol(MCP) 사양을 준수합니다.
+
+---
+
+## 문서 목차
+
+- [5분 퀵스타트 가이드](./quickstart) - Docker Compose를 이용한 로컬 환경 실행
+- [시스템 아키텍처 및 모듈 구성](./architecture) - 4계층 아키텍처 및 워커 체계
+- [지능형 스키마 스튜디오](./schema-studio) - 3-File DB 표준 및 DDL 승인 절차
+- [로우코드 풀스택 생성기](./lowcode-generator) - 백엔드 API 및 Vue 3 UI 코드 생성
+- [멀티테넌트 및 RBAC 보안](./enterprise-security) - Row-level 보안 및 데이터 마스킹
+- [배치 및 작업 스케줄러](./batch-and-scheduler) - Spring Batch 및 Quartz 작업 관리
+- [LangChain4j 및 MCP 연동](./mcp-and-ai) - Model Context Protocol 도구 사양
+- [프로덕션 배포 및 벤치마크](./production-guide) - 컨테이너 배포 및 성능 지표
+- [H2 임베디드 데이터베이스 설정](./h2) - 로컬 개발 및 단위 테스트 환경 설정

@@ -1,13 +1,13 @@
 ---
-title: AI 기반 자연어 웹 크롤링 및 RAG 지식 구축 플랫폼 | SyncCrawl
-description: 자연어 명령으로 웹 데이터를 수집하고 RAG 지식 기반을 구축합니다. 구조 변경에 유연하게 대응하며, 신뢰도 높은 질의응답을 제공하는 지능형 웹 수집 솔루션입니다.
+title: 자연어 기반 웹 크롤링 및 RAG 지식 구축 플랫폼 | SyncCrawl
+description: 자연어 명령으로 웹 데이터를 수집하고 RAG 지식 기반을 구축합니다. 구조 변경에 유연하게 대응하며, 신뢰도 높은 질의응답을 제공하는 웹 수집 솔루션입니다.
 head:
   - - meta
     - name: keywords
       content: 웹 크롤링 솔루션, 지능형 크롤링, 크롤링 자동화, 통합 크롤링 시스템, 웹 데이터 수집, B2B 지식 솔루션, 리서치 자동화, RAG (검색 증강 생성), LLM 환각 방지, 시맨틱 검색, 맥락 기반 질의응답, AI 에이전트, 벡터 저장소 연동, 임베딩 생성, 한국어 최적화, 자연어 명령 크롤링, 적응형 크롤링, 동적 웹 크롤링, LangChain4j, Playwright MCP
   - - meta
     - property: og:title
-      content: AI 기반 자연어 웹 크롤링 및 RAG 지식 구축 플랫폼 | SyncCrawl
+      content: 자연어 기반 웹 크롤링 및 RAG 지식 구축 플랫폼 | SyncCrawl
   - - meta
     - property: og:description
       content: 자연어 명령으로 웹 데이터를 수집하고 RAG 지식 기반을 구축합니다.
@@ -17,55 +17,63 @@ head:
   - - meta
     - property: og:url
       content: https://doc.empasy.com/synccrawl/
-order: 1
-dir:
-  order: 2
+sort: 1
 ---
 
-# SyncCrawl™: AI 에이전트 기반 지능형 크롤링 플랫폼
+# SyncCrawl™: 웹 크롤링 및 RAG 지식 구축 플랫폼
 
-SyncCrawl™은 단순한 데이터 수집을 넘어, 자연어 처리(NLP)와 RAG(검색 증강 생성) 기술을 결합하여 지식 자산을 구축하는 차세대 웹 크롤링 솔루션입니다.
+SyncCrawl™은 데이터 수집과 자연어 처리(NLP), **Playwright MCP 기반 브라우저 자동화**, 그리고 **RAG(검색 증강 생성) 지식 파이프라인**을 연계한 기업용 웹 수집 플랫폼입니다.
 
-사용자의 언어로 작성된 복잡한 데이터 수집 명령을 AI 에이전트가 이해하고 실행하며, 수집된 데이터를 기업의 RAG 지식 저장소로 변환하여 할루시네이션(환각) 없는 정확한 질의응답 시스템을 구축할 수 있도록 돕습니다.
-
----
-
-## 1. 지능형 파이프라인 아키텍처
-
-SyncCrawl은 데이터 수집부터 RAG 구축까지 전 과정을 AI 에이전트 주도하에 유기적으로 연결합니다.
-
-| 단계 | 상세 설명 | 기술 요소 |
-| :--- | :--- | :--- |
-| **자연어 명령 해석** | 사용자의 요청(예: "최신 뉴스 5개 수집 및 요약")을 **LangChain4j 에이전트**가 분석하여 필요한 작업을 계획하고 도구(Tool) 호출을 준비합니다. | LangChain4j Agent, Tool |
-| **지능형 크롤링 실행** | 에이전트가 계획에 따라 웹 자동화 도구인 **Playwright MCP**를 제어합니다. 복잡한 웹 페이지 구조에서도 AI가 필요한 요소를 파악하고 상호작용합니다. | Playwright MCP |
-| **지식 데이터 처리** | 수집된 HTML 및 텍스트 데이터를 RAG 구성 요소를 활용해 의미 있는 단위(Chunk)로 나누고, 벡터 데이터베이스에 저장하기 위해 임베딩합니다. | DocumentSplitter, EmbeddingModel |
-| **맥락 기반 질의응답** | 질문 입력 시 벡터 저장소에서 가장 유사한 문서를 찾아 LLM의 프롬프트에 주입하여, 실제 수집된 데이터에 기반한 정확하고 신뢰성 높은 답변을 생성합니다. | Retriever, LLM |
+수집 대상 웹사이트의 UI 및 DOM 구조가 변경되었을 때 맥락을 분석하여 셀렉터를 재구성(Self-Healing)하며, 수집된 비정형 웹 데이터를 정제·임베딩하여 기업 내 벡터 지식 저장소로 변환합니다.
 
 ---
 
-## 2. 주요 AI 기능 및 활용 영역
+## 주요 기능 및 구성
 
-SyncCrawl은 기업의 데이터 수집과 활용 과정을 지능화하는 세 가지 핵심 영역을 제공합니다.
+웹사이트 개편에 따른 수집 파이프라인 중단 문제를 줄이고, 수집 데이터의 벡터 인덱싱 과정을 일원화합니다.
 
-### I. 자율형 웹 수집 및 적응 (Intelligent Crawling)
-1. **자연어 기반 명령**: 코딩이나 스크립트 작성 없이 사용자의 일상 언어만으로 복잡한 크롤링 파이프라인을 동작시킬 수 있습니다.
-2. **동적 웹 요소 상호작용**: AI 에이전트와 Playwright의 결합으로 로그인, 클릭, 스크롤 등 사람과 같은 웹 브라우저 상호작용을 자동화합니다.
-3. **적응형 선택자(Selector) 복구**: 대상 웹사이트의 UI나 구조가 변경되더라도, AI가 페이지의 맥락을 분석하여 데이터를 추출할 대체 요소를 스스로 찾아냅니다. 잦은 사이트 개편으로 인한 스크립트 수정 작업을 줄여줍니다.
+```mermaid
+graph LR
+    A[자연어 수집 지시<br/>Natural Language] --> B[에이전트 오케스트레이션<br/>LangChain4j + MCP]
+    B --> C[웹 브라우징<br/>Playwright Self-Healing]
+    C --> D[정제 및 분할<br/>Document Pipeline]
+    D --> E[지식베이스 연동<br/>Vector DB / RAG QA]
+```
 
-### II. RAG 지식 기반 구축 (Knowledge Base)
-1. **맥락 유지 분할 및 한국어 최적화**: 수집된 방대한 데이터를 문맥이 끊기지 않도록 영리하게 분리하며, 한국어에 특화된 임베딩 모델을 지원하여 검색 정확도를 높입니다.
-2. **범용 벡터 저장소(Vector DB) 연동**: FAISS, Qdrant, Weaviate 등 다양한 벡터 데이터베이스와 유연하게 연결되어 영구적인 지식 저장소를 구축합니다.
+### 1. 적응형 크롤링 (Self-Healing Crawling)
+- **자연어 명령 해석**: "주요 기관 공지사항 최근 10건 및 본문 내용 수집"과 같은 비즈니스 질의 형태로 크롤링 작업을 등록합니다.
+- **적응형 셀렉터 복구**: 사이트 개편으로 CSS/XPath 셀렉터가 변경되어도 DOM 구조와 텍스트 문맥을 분석하여 데이터를 재탐색합니다.
 
-### III. 시스템 모니터링 및 대화형 관리
-1. **대화형 설정 환경**: 챗봇 형태의 UI를 통해 크롤링 규칙을 설정할 수 있으며, 사용자의 대화 맥락을 기억하여 연속적인 작업 지시가 가능합니다.
-2. **크로스 플랫폼 UI**: Quasar 프레임워크 기반으로 데스크톱, 웹 환경 모두에서 일관된 대시보드와 크롤링 설정 UI를 제공합니다.
+### 2. RAG 지식 파이프라인 (Knowledge Base)
+- **문맥 보존 분할**: HTML 태그 구조를 파싱하여 문맥을 유지한 채 시맨틱 청크(Chunk)로 분할합니다.
+- **다국어 및 한국어 임베딩**: 한국어 및 업무 도메인 용어 처리에 적합한 임베딩 모델을 지원합니다.
+- **벡터 데이터베이스 연동**: PGVector, Milvus, Qdrant, Weaviate 등 주요 벡터 데이터베이스와 연동하여 실시간 인덱싱을 지원합니다.
+
+### 3. 분산 런타임 및 보안 구성 (Production Architecture)
+- **분산 마이크로서비스**: `Server`, `Agent`, `Scenario-Agent`, `Console` 4개 독립 컨테이너로 구성되어 대규모 수집 작업의 확장을 지원합니다.
+- **SSRF 방어 메커니즘**: 내부 네트워크 접근 및 비인가 리다이렉트를 검증하는 URL 검증기(`BrowserNavigateUrlValidator`)를 내장하고 있습니다.
+- **폐쇄망(Air-Gapped) 지원**: 외부 인터넷 연결이 제한된 온프레미스 환경에서도 사내 Private LLM(vLLM, Ollama)과 연동하여 동작합니다.
 
 ---
 
-## 3. SyncCrawl 도입 가치
+## 기술 사양 요약
 
-SyncCrawl은 엔터프라이즈 환경에서의 데이터 수집 패러다임을 변화시킵니다.
+| 구분 | 지원 기술 및 사양 |
+| :--- | :--- |
+| **코어 백엔드** | Java 21, Spring Boot 3.5, LangChain4j, Flyway |
+| **브라우저 자동화** | Playwright MCP, Headless Chromium, 분산 Worker |
+| **스토리지 및 캐시** | PostgreSQL, Redis, MinIO / S3 오브젝트 스토리지 |
+| **벡터 데이터베이스** | PGVector, Milvus, Qdrant, Weaviate |
+| **운영 콘솔** | Vue 3, Vite, TypeScript, Quasar Design System |
+| **배포 인프라** | Docker Multi-Arch (amd64/arm64), Kubernetes(AKS), Air-Gapped Runner |
 
-- **비개발자 접근성**: 크롤링 스크립트 개발에 의존하지 않고, 기획자나 마케터 등 실무자가 직접 자연어로 필요한 데이터를 수집할 수 있습니다.
-- **유지보수 비용 감소**: 타겟 웹사이트의 디자인 변경 시 자동 적응 시스템이 대응하여 코드 수정에 들어가는 개발 리소스를 아껴줍니다.
-- **신뢰할 수 있는 RAG 기반 답변**: 외부 LLM의 부정확한 답변(Hallucination)에 의존하지 않고, 기업이 직접 수집한 검증된 데이터를 바탕으로 답변을 제공합니다.
+---
+
+## 세부 문서 안내
+
+- [시스템 아키텍처 & Clean Architecture](./architecture.md): 4계층 분산 아키텍처와 컴포넌트별 상호작용
+- [적응형 크롤링 & AI 자율 복구 엔진](./adaptive-crawling-engine.md): Playwright MCP 연동 및 셀렉터 복구 동작 원리
+- [RAG 지식 구축 & 벡터 저장소 연동](./rag-knowledge-pipeline.md): 데이터 정제, 청킹, 임베딩 및 Vector DB 파이프라인
+- [엔터프라이즈 보안 & 폐쇄망 거버넌스](./enterprise-security-governance.md): SSRF 차단, Air-Gapped 배포 및 RBAC 감사 추적
+- [REST API & MCP Tool 레퍼런스](./api-reference.md): 작업 제어, 쿼리, 결과 조회를 위한 API 명세
+- [엔터프라이즈 FAQ & 도입 가이드](./enterprise-faq.md): 사이트 차단 대응, 스케일링 및 주요 질의응답
