@@ -1,58 +1,53 @@
 ---
-title: 공부 한것들을 적어 보아요
-description: 까먹지 말고 재밌게 저장하자! 🎯 공부한 내용을 자유롭게 기록하는 즐거운 지식 저장소
+title: "엔지니어링 연구 아카이브 (Study)"
+description: "SyncSeries 핵심 기술 스택인 Playwright, Vision-LLM, MCP, 하이브리드 RAG, 고성능 Java 런타임에 대한 심층 기술 연구 및 아키텍처 분석 자료집입니다."
 head:
   - - meta
     - name: keywords
-      content: 공부기록, 학습일기, 지식저장소, 공부로그, 학습관리, 공부노트, 지식정리, 공부방법, 학습저장, 기억보조
+      content: 기술연구, Playwright CDP, Vision-LLM, 자가치유 알고리즘, MCP 오케스트레이션, 하이브리드 RAG, 가상 스레드, AgentScope, 엠파시
   - - meta
     - property: og:title
-      content: 📚 두뇌 저장소 - 재미있는 공부 기록 놀이터
+      content: "엔지니어링 연구 아카이브 | 엠파시(Empasy)"
   - - meta
     - property: og:description
-      content: 까먹지 말고 재밌게 저장하자! 🎯 공부한 내용을 자유롭게 기록하는 즐거운 지식 저장소
+      content: "실전 엔지니어링 문제 해결을 위한 심층 기술 분석 및 아키텍처 연구 자료입니다."
   - - meta
     - property: og:image
       content: https://doc.empasy.com/images/favicon.png
   - - meta
     - property: og:url
       content: https://doc.empasy.com/study/
-sort: 200
+sort: 1
 ---
 
-# 📚 나만의 지식 놀이터 🎪
+# 엔지니어링 연구 아카이브 (Study)
 
-<div align="center">
-
-![Study Party](https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExaWNza2p5ZTgxd2FuOWM4bW1lcnl0NWx1bjVjbGs4dG41dTF3N2tpbyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/fhAwk4DnqNgw8/giphy.gif)
-
-## "가르치는 만큼 더 깊이 이해한다"
-
-**"배운 것을 나누면 기쁨이 두 배!"**  
-공부한 다양한 지식들과 깨달음을 재미있게 공유하는 공간입니다 🎯
-
-</div>
-
-## 🎯 학습 사이클
-
-<div align="center">
-
-```mermaid
-  graph LR
-  A[배움] --> B[정리]
-  B --> C[실천]
-  C --> D[공유]
-  D --> A
-```
-
-![Growth](https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExMjEzZHlvZ3BjeHkydHMwcno3N3B3ajg4am5uNHhmbXU1cGVqdHA1ZSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/m7YYGSBBkDM9VUbcte/giphy.gif)
-
-**함께 배우고, 함께 성장해요!**  
-여러분의 학습 여정도 응원합니다 ✨
-
-</div>
+본 공간은 엠파시 SyncSeries(SyncEta, SyncVerse, SyncBoot, SyncCrawl 등) 제품군의 기반이 되는 핵심 기술 스택에 대해, 구현 원리와 성능 벤치마크, 아키텍처 설계 패턴을 심층 연구하여 기록하는 기술 아카이브입니다.
 
 ---
 
-> **💡 마지막 팁:** 배운 것을 정리하고 공유하는 습관이  
-> **가장 강력한 학습 무기**가 될 거예요! 함께해요 🚀
+## 핵심 연구 주제 분류
+
+### 1. 웹 브라우저 자동화 & QA 엔지니어링
+- **[Playwright 및 CDP 기반 시각적 회귀 분석과 DOM 동기화](./playwright-cdp-visual-regression)**: Chrome DevTools Protocol을 활용한 렌더링 프레임 캡처 및 네트워크 유휴 상태 동기화 기법 분석.
+- **[Vision-LLM 기반 UI 요소 바운딩 박스 추론 및 자가 치유(Self-Healing) 알고리즘](./vision-llm-self-healing-algorithm)**: 화면 시각적 문맥과 좌표를 활용하여 클래스명 변경에 대응하는 회귀 테스트 복구 파이프라인.
+
+### 2. 분산 에이전트 & 프로토콜
+- **[Model Context Protocol(MCP) JSON-RPC 사양 분석과 도구 오케스트레이션](./mcp-jsonrpc-agent-orchestration)**: Claude/Playwright 표준 도구 인터페이스와 엔터프라이즈 보안 게이트웨이 설계 패턴.
+- **[Java 21 가상 스레드와 AgentScope 기반 비동기 메시징 성능 분석](./springboot-virtual-threads-agentscope)**: Spring Boot 환경에서 블로킹 I/O 극복과 수만 단위 동시 에이전트 통신 처리 벤치마크.
+
+### 3. AI 모델 & 지식 파이프라인
+- **[엔터프라이즈 RAG 아키텍처: Sparse + Dense 하이브리드 검색과 Cross-Encoder 리랭킹](./hybrid-rag-dense-sparse-reranking)**: 도메인 특화 검색 정밀도 향상을 위한 BM25와 임베딩 벡터 결합 파이프라인.
+- **[Qwen2-VL 멀티모달 모델 파인튜닝 실무](./qwen2vlfinetuning)**: 한국어 웹 UI 화면 컴포넌트 인식을 위한 데이터셋 구성 및 LoRA 튜닝.
+- **[LLM 파인튜닝 후 성능 저하 원인 및 해결책 분석](./LLM%20파인튜닝%20후%20성능%20저하%20원인%20및%20해결책%20분석)**: Catastrophic Forgetting 방지 및 정렬 데이터 보정 연구.
+- **[RAG 기반 지식 검색 파이프라인 구축](./rag)**: 비정형 데이터 청킹 및 메타데이터 필터링 전략.
+
+---
+
+## 연구 방법론 및 검증 기준
+
+엠파시 엔지니어링 팀은 모든 기술 연구에서 다음 원칙을 준수합니다:
+1. **코드 레벨 실증**: 이론적 모델에 그치지 않고 실제 실행 가능한 프로토타입 또는 벤치마크 코드를 작성하여 성능을 검증합니다.
+2. **정량적 데이터 제시**: 레이턴시, 메모리 점유율, 처리량(Throughput), 실패율 등 수치화된 지표를 기반으로 기술 채택 여부를 결정합니다.
+3. **상용 안정성 검토**: 네트워크 단절, 스레드 고갈, DOM 지연 렌더링 등 에지 케이스에 대한 방어 로직을 포함합니다.
+

@@ -47,7 +47,7 @@ features:
   - icon:
       svg: '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 11 3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>'
     title: SyncETA (AI E2E 테스트 자동화)
-    details: 코드리스 GUI 테스트 및 AI Vision 자가치유 파이프라인으로 무인 CI/CD 회귀 검증을 완결하는 테스트 플랫폼
+    details: 코드리스 GUI 테스트 및 AI Vision 자가치유 파이프라인 제공. 1분 만에 설치 가능한 데스크톱 앱(v0.0.33) 배포 중
     link: /synceta/
     linkText: SyncETA 문서 바로가기 →
   - icon:

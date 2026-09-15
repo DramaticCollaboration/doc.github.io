@@ -11,7 +11,7 @@ export default withMermaid(
   base: process.env.BASE_URL || "/",
   lang: "ko-KR",
   title: "살아 있는 소프트웨어는 엠파시가 만듭니다",
-  description: "Empathic Synergy (공감 시너지)를 통해 고객을 이해하고 지지하며 함께 목표를 달성합니다.",
+  description: "엠파시 Sync Series 공식 기술 문서 - AI 에이전트 기반 UI 테스트 자동화(SyncETA), 마이크로서비스 프레임워크(SyncBoot), 콘텐츠 관리(SyncCMS) 및 전사 관제탑(SyncVerse) 통합 가이드",
 
   rewrites: {
     "ko/:rest*": ":rest*",
@@ -149,9 +149,15 @@ new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
         text: '리소스',
         items: [
           { link: "/agile/", text: '애자일(스크럼반)' },
-          { link: "/study/", text: '공부방' },
-          { link: "/logs/", text: '작업 로그' }
+          { link: "/study/", text: '공부방 (연구소)' },
+          { link: "/logs/", text: '작업 로그 (일지)' }
         ]
+      },
+      {
+        text: 'SyncETA 다운로드',
+        link: 'https://empasy.io/ko/download_eta.html',
+        target: '_blank',
+        rel: 'noopener noreferrer',
       },
       {
         text: '엠파시 홈',

@@ -158,6 +158,38 @@ const MODULE_CATEGORY_RULES: Record<string, Array<{ group: string; match: (name:
       match: (name) => ['security-and-pii', 'enterprise-faq'].includes(name),
     },
   ],
+  study: [
+    {
+      group: '연구소 개요',
+      match: (name) => ['index'].includes(name),
+    },
+    {
+      group: '브라우저 & QA 엔지니어링',
+      match: (name) => ['playwright-cdp-visual-regression', 'vision-llm-self-healing-algorithm'].includes(name),
+    },
+    {
+      group: '분산 에이전트 & 런타임',
+      match: (name) => ['mcp-jsonrpc-agent-orchestration', 'springboot-virtual-threads-agentscope'].includes(name),
+    },
+    {
+      group: 'AI 모델 & 지식 파이프라인',
+      match: (name) => ['hybrid-rag-dense-sparse-reranking', 'qwen2vlfinetuning', 'LLM 파인튜닝 후 성능 저하 원인 및 해결책 분석', 'rag'].includes(name),
+    },
+  ],
+  logs: [
+    {
+      group: '일지 개요',
+      match: (name) => ['index'].includes(name),
+    },
+    {
+      group: 'SyncEta 트러블슈팅',
+      match: (name) => ['20260210_electron_webview_memory_leak', '20260218_playwright_dynamic_timeout_stabilization', '20260310_desktop_codesign_notarization_pipeline', '20250827_debugCrash', '20250827_electronDebug'].includes(name),
+    },
+    {
+      group: 'SyncVerse & SyncBoot 아키텍처',
+      match: (name) => ['20260225_redis_redlock_sse_saga_orchestration', '20260302_mybatis_metaobject_tenant_context_fix'].includes(name),
+    },
+  ],
 }
 
 // Concise 1-line standard sidebar titles
@@ -278,10 +310,25 @@ const DEFAULT_SIDEBAR_SHORT_TITLES: Record<string, Record<string, string>> = {
     index: '개요',
   },
   study: {
-    index: '개요',
+    index: '연구소 개요',
+    'playwright-cdp-visual-regression': 'Playwright & CDP 동기화',
+    'vision-llm-self-healing-algorithm': 'Vision-LLM 자가치유 알고리즘',
+    'mcp-jsonrpc-agent-orchestration': 'MCP 도구 오케스트레이션',
+    'hybrid-rag-dense-sparse-reranking': '하이브리드 RAG & 리랭킹',
+    'springboot-virtual-threads-agentscope': '가상 스레드 & AgentScope',
+    qwen2vlfinetuning: 'Qwen2-VL 파인튜닝',
+    'LLM 파인튜닝 후 성능 저하 원인 및 해결책 분석': '파인튜닝 성능 저하 분석',
+    rag: 'RAG 지식 파이프라인',
   },
   logs: {
-    index: '개요',
+    index: '작업 일지 개요',
+    '20260210_electron_webview_memory_leak': '[SyncEta] Electron 메모리 누수',
+    '20260218_playwright_dynamic_timeout_stabilization': '[SyncEta] Playwright 타임아웃 안정화',
+    '20260225_redis_redlock_sse_saga_orchestration': '[SyncVerse] Redis Redlock 동기화',
+    '20260302_mybatis_metaobject_tenant_context_fix': '[SyncBoot] 멀티테넌트 컨텍스트 픽스',
+    '20260310_desktop_codesign_notarization_pipeline': '[SyncEta] 코드 서명 & 공증 파이프라인',
+    '20250827_debugCrash': '디버그 크래시 분석',
+    '20250827_electronDebug': 'Electron 디버깅 일지',
   },
 }
 

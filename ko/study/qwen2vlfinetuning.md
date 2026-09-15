@@ -1,28 +1,28 @@
----
-title: Qwen2 VL Fine-Tuning
-description: Qwen2 VL 모델 FIne-Tuning
+﻿---
+title: Qwen2-VL 비전 파인튜닝 가이드
+description: Qwen2-VL 비전 언어 모델의 LoRA 파인튜닝 및 UI 요소 인식 최적화 절차
 head:
   - - meta
     - name: keywords
-      content: 공부기록, 학습일기, 지식저장소, 공부로그, 학습관리, 공부노트, 지식정리, 공부방법, 학습저장, 기억보조
+      content: Qwen2-VL, 비전 파인튜닝, Vision-LLM, LoRA, UI 테스트 자동화, 엠파시, Empasy
   - - meta
     - property: og:title
-      content: 📚 두뇌 저장소 - 재미있는 공부 기록 놀이터
+      content: Qwen2-VL 비전 파인튜닝 가이드 | 엠파시 기술 연구 아카이브
   - - meta
     - property: og:description
-      content: 까먹지 말고 재밌게 저장하자! 🎯 공부한 내용을 자유롭게 기록하는 즐거운 지식 저장소
+      content: Qwen2-VL 비전 언어 모델의 LoRA 파인튜닝 및 웹 컴포넌트 인식 정확도 향상 가이드
   - - meta
     - property: og:image
       content: https://doc.empasy.com/images/favicon.png
   - - meta
     - property: og:url
-      content: https://doc.empasy.com/study/
+      content: https://doc.empasy.com/study/qwen2vlfinetuning.html
 sort: 400
 ---
 
-# Qwen2-VL 파인튜닝 가이드 by LLM
+# Qwen2-VL 파인튜닝 가이드
 
-## 🎯 파인튜닝 전 준비사항
+## 1. 파인튜닝 전 준비사항
 
 ### 1. **환경 설정**
 
@@ -305,7 +305,7 @@ def save_dataset(dataset, output_path):
         json.dump(dataset, f, ensure_ascii=False, indent=2)
 ```
 
-## 🚀 학습 스크립트 예제
+##  학습 스크립트 예제
 
 ```bash
 #!/bin/bash
@@ -363,7 +363,7 @@ print(f"Answer: {result['answer']}")
 print(f"Confidence: {result['score']:.4f}")
 ```
 
-## ⚡ 최적화 팁
+##  최적화 팁
 
 ### 1. **메모리 최적화**
 
@@ -399,7 +399,7 @@ scheduler = get_cosine_schedule_with_warmup(
 )
 ```
 
-## 🎯 특정 태스크 파인튜닝 예제
+##  특정 태스크 파인튜닝 예제
 
 ### 1. **이미지 캡셔닝**
 
@@ -466,3 +466,4 @@ training_args = TrainingArguments(
     max_grad_norm=1.0,  # 그래디언트 클리핑
 )
 ```
+
