@@ -31,7 +31,7 @@ const MODULE_CATEGORY_RULES: Record<string, Array<{ group: string; match: (name:
     },
     {
       group: '엔터프라이즈 거버넌스',
-      match: (name) => ['hitl-governance'].includes(name),
+      match: (name) => ['hitl-governance', 'security-and-compliance', 'changelog'].includes(name),
     },
   ],
   syncverse: [
@@ -168,6 +168,8 @@ const DEFAULT_SIDEBAR_SHORT_TITLES: Record<string, Record<string, string>> = {
     'agentscope-guide': 'AgentScope 가이드',
     'e2e-workflow': 'E2E 연동 시나리오',
     'hitl-governance': 'HITL & Saga 거버넌스',
+    'security-and-compliance': '보안 백서 & 컴플라이언스',
+    changelog: '릴리스 노트 (Changelog)',
   },
   syncllm: {
     index: '개요',
