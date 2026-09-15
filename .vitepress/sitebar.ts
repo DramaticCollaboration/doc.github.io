@@ -20,6 +20,20 @@ interface FileMeta {
 
 // Predefined module category mapping for intuitive structural hierarchy
 const MODULE_CATEGORY_RULES: Record<string, Array<{ group: string; match: (name: string, file: string, sort: number) => boolean }>> = {
+  ecosystem: [
+    {
+      group: '생태계 아키텍처',
+      match: (name) => ['index', 'mcp-protocol'].includes(name),
+    },
+    {
+      group: '개발 & 표준',
+      match: (name) => ['agentscope-guide', 'e2e-workflow'].includes(name),
+    },
+    {
+      group: '엔터프라이즈 거버넌스',
+      match: (name) => ['hitl-governance'].includes(name),
+    },
+  ],
   syncverse: [
     {
       group: '시작하기',
@@ -41,7 +55,11 @@ const MODULE_CATEGORY_RULES: Record<string, Array<{ group: string; match: (name:
     },
     {
       group: '핵심 기능 & 개발',
-      match: (name) => ['schema-studio', 'lowcode-generator', 'batch-and-scheduler', 'mcp-and-ai'].includes(name),
+      match: (name) => ['schema-studio', 'lowcode-generator', 'batch-and-scheduler', 'mcp-and-ai', 'agentscope-integration'].includes(name),
+    },
+    {
+      group: '아키텍처 & 패턴',
+      match: (name) => ['saga-pattern', 'ddd-clean-architecture'].includes(name),
     },
     {
       group: '운영 & 보안',
@@ -55,7 +73,7 @@ const MODULE_CATEGORY_RULES: Record<string, Array<{ group: string; match: (name:
     },
     {
       group: '개발 & 연동',
-      match: (name) => ['live-sdk-guide', 'onpremise-ai-security'].includes(name),
+      match: (name) => ['live-sdk-guide', 'onpremise-ai-security', 'ai-content-workflow'].includes(name),
     },
     {
       group: '거버넌스 & API',
@@ -69,7 +87,7 @@ const MODULE_CATEGORY_RULES: Record<string, Array<{ group: string; match: (name:
     },
     {
       group: '크롤링 & RAG',
-      match: (name) => ['adaptive-crawling-engine', 'rag-knowledge-pipeline'].includes(name),
+      match: (name) => ['adaptive-crawling-engine', 'rag-knowledge-pipeline', 'anti-bot-and-scaling'].includes(name),
     },
     {
       group: '보안 & API',
@@ -83,11 +101,11 @@ const MODULE_CATEGORY_RULES: Record<string, Array<{ group: string; match: (name:
     },
     {
       group: '리서치 & 분석',
-      match: (name) => ['deep-research', 'nl2sql-and-data'].includes(name),
+      match: (name) => ['deep-research', 'nl2sql-and-data', 'roundtable-debate'].includes(name),
     },
     {
-      group: '거버넌스 & 보안',
-      match: (name) => ['action-approval', 'finops-and-security'].includes(name),
+      group: '도구 & 거버넌스',
+      match: (name) => ['mcp-tool-reference', 'action-approval', 'finops-and-security', 'enterprise-faq'].includes(name),
     },
   ],
   synceta: [
@@ -122,10 +140,45 @@ const MODULE_CATEGORY_RULES: Record<string, Array<{ group: string; match: (name:
       match: (name) => ['storyPointGuide', 'xp_scrum_kanban', 'glossaryOfTerms'].includes(name),
     },
   ],
+  syncllm: [
+    {
+      group: '시작하기',
+      match: (name) => ['index', 'quickstart', 'architecture'].includes(name),
+    },
+    {
+      group: '핵심 엔진',
+      match: (name) => ['routing-and-gateway', 'finops-and-cache'].includes(name),
+    },
+    {
+      group: '개발 & API',
+      match: (name) => ['api-reference'].includes(name),
+    },
+    {
+      group: '보안 & 거버넌스',
+      match: (name) => ['security-and-pii', 'enterprise-faq'].includes(name),
+    },
+  ],
 }
 
 // Concise 1-line standard sidebar titles
 const DEFAULT_SIDEBAR_SHORT_TITLES: Record<string, Record<string, string>> = {
+  ecosystem: {
+    index: '생태계 개요',
+    'mcp-protocol': 'MCP 프로토콜',
+    'agentscope-guide': 'AgentScope 가이드',
+    'e2e-workflow': 'E2E 연동 시나리오',
+    'hitl-governance': 'HITL & Saga 거버넌스',
+  },
+  syncllm: {
+    index: '개요',
+    quickstart: '빠른 시작',
+    architecture: '시스템 아키텍처',
+    'routing-and-gateway': '지능형 모델 라우팅',
+    'finops-and-cache': 'FinOps & 시맨틱 캐시',
+    'security-and-pii': '보안 & PII 마스킹',
+    'api-reference': 'API 레퍼런스',
+    'enterprise-faq': '도입 FAQ',
+  },
   syncverse: {
     index: '개요',
     architecture: '시스템 아키텍처',
@@ -146,6 +199,9 @@ const DEFAULT_SIDEBAR_SHORT_TITLES: Record<string, Record<string, string>> = {
     'lowcode-generator': '로우코드 생성기',
     'batch-and-scheduler': '배치 & 스케줄러',
     'mcp-and-ai': 'MCP & AI 연동',
+    'agentscope-integration': 'AgentScope 연동 실무',
+    'saga-pattern': 'Saga 분산 트랜잭션',
+    'ddd-clean-architecture': 'DDD & 클린 아키텍처',
     'enterprise-security': '보안 & 멀티테넌시',
     'production-guide': '운영 배포 가이드',
     h2: '인메모리 H2 모드',
@@ -155,6 +211,7 @@ const DEFAULT_SIDEBAR_SHORT_TITLES: Record<string, Record<string, string>> = {
     architecture: '시스템 아키텍처',
     'live-sdk-guide': 'Live SDK 연동',
     'onpremise-ai-security': '온프레미스 AI 보안',
+    'ai-content-workflow': 'AI 콘텐츠 워크플로우',
     'integration-governance': '거버넌스 & 권한',
     'api-reference': 'API 레퍼런스',
     'enterprise-faq': '도입 FAQ',
@@ -164,6 +221,7 @@ const DEFAULT_SIDEBAR_SHORT_TITLES: Record<string, Record<string, string>> = {
     architecture: '시스템 아키텍처',
     'adaptive-crawling-engine': '적응형 크롤링',
     'rag-knowledge-pipeline': 'RAG 지식 파이프라인',
+    'anti-bot-and-scaling': '안티봇 & 분산 스케일링',
     'enterprise-security-governance': '보안 및 거버넌스',
     'api-reference': 'API 레퍼런스',
     'enterprise-faq': '도입 FAQ',
@@ -174,8 +232,11 @@ const DEFAULT_SIDEBAR_SHORT_TITLES: Record<string, Record<string, string>> = {
     quickstart: '빠른 시작',
     'deep-research': '딥 리서치',
     'nl2sql-and-data': 'NL2SQL 데이터 분석',
+    'roundtable-debate': '라운드테이블 토론',
+    'mcp-tool-reference': 'MCP 도구 레퍼런스',
     'action-approval': '실행 승인 (HITL)',
     'finops-and-security': 'FinOps & 보안',
+    'enterprise-faq': '도입 FAQ',
   },
   synceta: {
     index: '개요',

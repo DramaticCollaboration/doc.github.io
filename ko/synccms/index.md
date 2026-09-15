@@ -1,16 +1,16 @@
 ---
-title: 엔터프라이즈 하이브리드 헤드리스 CMS | SyncCMS
-description: Spring Boot 3와 Vue 3/Nuxt 3 기반의 하이브리드 헤드리스 CMS로, 프론트엔드 인라인 편집(Sync-Live-SDK)과 사내 폐쇄망 AI(LangChain4j)를 지원합니다.
+title: AI 친화적 차세대 엔터프라이즈 CMS | SyncCMS
+description: SyncCMS는 HTML Head 메타 거버넌스, Schema.org JSON-LD 자동화, AI 검색(AEO/GEO) 최적화가 결합된 차세대 엔터프라이즈 하이브리드 헤드리스 CMS입니다.
 head:
   - - meta
     - name: keywords
-      content: SyncCMS, CMS, 헤드리스 CMS, 하이브리드 헤드리스, Sync-Live-SDK, 사내 AI, LangChain4j, 온프레미스 LLM, Spring Boot 3, Vue 3, Nuxt 3, 전자결재 연동, 스냅샷 롤백
+      content: SyncCMS, CMS, 메타 관리, SEO, AEO, GEO, JSON-LD, OG 태그, Lottie, 헤드리스 CMS, Spring Boot 3, Vue 3
   - - meta
     - property: og:title
-      content: 엔터프라이즈 하이브리드 헤드리스 CMS | SyncCMS
+      content: HTML Head 메타 거버넌스 & AI 검색(AEO/GEO) 최적화 | SyncCMS
   - - meta
     - property: og:description
-      content: 프론트엔드 인라인 편집과 사내 폐쇄망 AI를 지원하는 엔터프라이즈 하이브리드 헤드리스 콘텐츠 관리 시스템
+      content: 하드코딩 메타 탈피 · AI 검색 인용 극대화 · Spring Boot 표준 프레임워크 기반 자산화
   - - meta
     - property: og:image
       content: https://doc.empasy.com/images/favicon.png
@@ -20,102 +20,49 @@ head:
 sort: 1
 ---
 
-# SyncCMS: 엔터프라이즈 하이브리드 헤드리스 CMS
+# SyncCMS: 엔터프라이즈 AI 하이브리드 헤드리스 CMS
 
-**SyncCMS**는 웹 포털, 모바일 앱, 사내 인트라넷 등 기업의 디지털 접점 콘텐츠를 단일 허브에서 통합 관리하는 **엔터프라이즈 하이브리드 헤드리스 콘텐츠 관리 시스템(Content Management System)**입니다.
+**SyncCMS**는 대고객 웹 포털, 모바일 앱 등 기업의 모든 디지털 접점에서 **HTML Head 메타 정보의 동적 중앙 관리와 차세대 AI 검색(AEO/GEO) 최적화를 제공하는 엔터프라이즈 하이브리드 헤드리스 CMS**입니다.
 
-백엔드(Spring Boot 3 REST API)와 프론트엔드(Vue 3 / Nuxt 3)의 명확한 관심사 분리(Separation of Concerns)를 구현하고, 프론트엔드 화면에서 즉시 수정 가능한 **Sync-Live-SDK**와 사내 폐쇄망 AI 오케스트레이션(**LangChain4j**)을 표준 제공합니다. 주요 비즈니스 소스코드와 표준 DDL을 전면 공개하여 고객사의 영구적인 IT 자산으로 내재화할 수 있도록 지원합니다.
+외산 SaaS의 폐쇄성과 데이터 유출 위험, 국산 레거시 CMS의 노후화된 아키텍처를 극복하고, **Java Spring Boot 3 표준 프레임워크 소스코드를 전면 공개하여 구축된 시스템 전체가 고객사의 영구적인 디지털 소프트웨어 자산으로 내재화**됩니다.
 
 ---
 
-## 핵심 아키텍처 특징
+## SyncCMS 3대 핵심 차별화 가치
 
 ```mermaid
 graph LR
-    A[SyncCMS Enterprise Hub] --> B[1. 하이브리드 헤드리스 구조]
-    A --> C[2. 사내 폐쇄망 AI 및 보안]
-    A --> D[3. 기술 독립성 및 자산 내재화]
+    A[SyncCMS Enterprise Hub] --> B[1. HTML Head 메타 동적 거버넌스]
+    A --> C[2. AEO · GEO · SEO 검색 최적화]
+    A --> D[3. Spring Boot 표준 & 기술 주권]
 
-    B --> B1["Headless REST API + Sync-Live-SDK 인라인 편집"]
-    C --> C1["LangChain4j 기반 온프레미스 LLM & PII 실시간 마스킹"]
-    D --> D1["Spring Boot 3 표준 소스 및 DB DDL 100% 공개"]
+    B --> B1["하드코딩 탈피 / OG 태그 & Canonical 즉시 제어 / Lottie 자산 관리"]
+    C --> C1["Schema.org JSON-LD 자동 생성 / AI 답변엔진 인용 마크업 표준"]
+    D --> D1["주요 소스 전면 공개 / 추가 라이선스료 0원 / 안정적 M/M 기술지원"]
 ```
 
-### 1. 하이브리드 헤드리스 (Hybrid Headless)
-- **API-First 아키텍처**: React, Vue, Next.js, Nuxt, iOS, Android 등 다양한 클라이언트에 표준 JSON REST API로 콘텐츠를 제공합니다.
-- **Sync-Live-SDK**: 백오피스에 별도 접속하지 않고도 실제 운영 화면에서 텍스트와 이미지를 직접 선택하여 인라인 수정할 수 있는 프론트엔드 SDK를 지원합니다.
-- **동적 컴포넌트 렌더링**: PostgreSQL의 `JSONB` 컬럼을 활용하여 UI 레이아웃 및 블록 구조를 유연하게 저장하고 프론트엔드에서 서버 사이드 렌더링(SSR)합니다.
+### 1. HTML Head 메타 동적 거버넌스
+- **하드코딩 완전 탈피**: 개발 배포 없이 백오피스에서 각 페이지별 Title, Description, OpenGraph(OG) 태그, Canonical URL을 마케터가 직접 설정 및 실시간 동기화합니다.
+- **다채널 SNS 메타 프리뷰**: 카카오톡, 페이스북, X(트위터) 공유 썸네일 및 카피를 실시간 시뮬레이션합니다.
+- **Lottie & 멀티 포맷 미디어 스트리밍**: Lottie 애니메이션 JSON, WebP, 멀티미디어 자산을 REST API로 안정적으로 서빙합니다.
 
-### 2. 사내 폐쇄망 AI 및 PII 보안 거버넌스
-- **온프레미스 LLM 연동**: 외부 인터넷 통신 없이 사내 인프라(vLLM / Ollama)에 구축된 오픈 가중치 모델(Llama-3, EXAONE, Solar 등)을 LangChain4j를 통해 직접 연동합니다.
-- **개인정보(PII) 실시간 비식별화**: 주민등록번호, 계좌번호, 카드번호, 휴대전화번호를 정규식 및 패턴 필터로 실시간 마스킹 처리합니다.
-- **표시광고법 및 표준 용어 검증**: 법적 리스크가 있는 과장 표현 및 사내 금칙어를 초안 작성 단계에서 사전 스크리닝합니다.
+### 2. AEO · GEO · SEO 검색 최적화
+- **Schema.org JSON-LD 자동 생성**: 검색엔진(SEO) 및 AI 답변엔진(AEO)이 즉시 이해할 수 있는 구조화 데이터 스크립트를 CMS가 헤더에 자동 렌더링합니다.
+- **생성형 AI(GEO) 인용 표준**: 제목-요약-H1~H3 계층-명확한 출처/작성자/검증일자 포맷을 제공하여 ChatGPT, Perplexity 등 AI 답변 인용을 극대화합니다.
+- **선별적 점진 적용 (Phased Rollout)**: 전체 사이트 일괄 개편 부담 없이, 핵심 랜딩/이벤트 페이지부터 선별하여 단계별로 AI 최적화를 적용합니다.
 
-### 3. 기술 독립성 및 영구 자산화
-- **비즈니스 소스코드 공개**: Spring Boot 3 코어 Controller, Service 로직 및 RDBMS DDL 스키마를 투명하게 제공하여 고객사 자체 커스터마이징이 가능합니다.
-- **단일 도입 라이선스**: API 호출량이나 사용자 수 증가에 따른 추가 과금 체계가 존재하지 않습니다.
-- **엔터프라이즈 시스템 결합**: 사내 그룹웨어 전자결재 승인선, 기간계 ERP, 사내 SSO(OAuth2/SAML/JWT)와 유기적으로 결합할 수 있습니다.
+### 3. Java Spring Boot 프레임워크 & 라이선스 0원
+- **자바 표준 프레임워크 전면 공개**: 비즈니스 Controller 소스 및 DB DDL 전체를 투명하게 제공하여 사내 개발팀의 자유로운 확장을 보장합니다.
+- **추가 솔루션 라이선스 비용 0원**: SI 구축비에 솔루션이 포함되어 트래픽/유저수 증가에 따른 추가 과금이 없습니다.
+- **안정적인 전문 기술지원 (M/M)**: AI 모델 업데이트 및 검색 알고리즘 변화에 지속 대응하는 체계적인 유지보수 파트너십을 제공합니다.
 
 ---
 
-## CMS 아키텍처 비교표
+## 📚 공식 기술 문서 가이드 목차
 
-| 비교 항목 | 글로벌 SaaS Headless (Contentful 등) | 국내 레거시 구축형 CMS | SyncCMS 엔터프라이즈 |
-| :--- | :--- | :--- | :--- |
-| **아키텍처 형태** | API-Only Headless (클라우드 종속) | 모놀리식 구축형 (JSP/전자정부 레거시) | **하이브리드 헤드리스 (API + Live SDK)** |
-| **사내 폐쇄망(망분리) 지원** | 미지원 (해외 멀티테넌트 SaaS) | 지원 (온프레미스 설치) | **지원 (온프레미스 / 폐쇄망 완벽 지원)** |
-| **AI 연동 엔진** | 유료 퍼블릭 AI API (종량 과금) | 미지원 또는 단순 규칙 엔진 | **LangChain4j 기반 온프레미스 LLM 연동** |
-| **실시간 화면 수정** | 복잡한 설정 필요 / 제한적 | 미지원 (백오피스 분리 작업) | **Sync-Live-SDK 기반 화면 내 직접 수정** |
-| **비즈니스 소스코드** | 미제공 (블랙박스 API) | 미제공 (바이너리 납품 형태) | **주요 비즈니스 소스 및 DDL 전면 공개** |
-| **장애 복구 방식** | 수작업 스토리지 백업 복원 | DB 수작업 복구 (수시간 소요) | **스냅샷 기반 3단계 무중단 롤백** |
-| **라이선스 모델** | 트래픽/유저수 비례 종량제 | 영구 라이선스 + 연간 유지보수료 | **영구 자산화 (추가 라이선스료 없음)** |
-
----
-
-## 로컬 개발 환경 빠른 시작 (Quick Start)
-
-로컬 개발 환경(JDK 17+, Node.js 20+, pnpm, Docker)에서 SyncCMS를 3단계로 구동할 수 있습니다.
-
-### 1단계: PostgreSQL 데이터베이스 실행
-```bash
-# Docker Compose를 이용한 로컬 PostgreSQL 기동
-docker compose up -d postgres
-
-# DB 기동 후 스키마 및 초기 데이터 적재 (data/synccms/synccms.sql 실행)
-```
-
-### 2단계: 백엔드 API 서버 실행 (Spring Boot 3)
-```bash
-cd backend
-mvn clean install -DskipTests
-mvn spring-boot:run
-# 기본 API 엔드포인트: http://localhost:8080
-```
-
-### 3단계: 관리자 콘솔 및 사용자 웹 실행 (Vue 3 / Nuxt 3)
-```bash
-# 관리자 프론트엔드 (SyncCMS Admin)
-cd frontend/admin
-pnpm install
-pnpm dev
-# 관리자 콘솔: http://localhost:5666
-
-# 사용자 웹 프론트엔드 (Nuxt 3)
-cd frontend/web
-pnpm install
-pnpm dev
-# 사용자 웹: http://localhost:3000
-```
-
----
-
-## 공식 기술 문서 목차
-
-SyncCMS의 상세 기술 명세와 구현 가이드는 아래 문서를 참조하십시오:
-
-1. [시스템 아키텍처 (Architecture)](/synccms/architecture): Clean Architecture 4계층 및 기술 스택 상세
-2. [Sync-Live-SDK 연동 가이드 (Live SDK)](/synccms/live-sdk-guide): 프론트엔드 스크립트 임베딩 및 인라인 편집 바인딩
-3. [사내 폐쇄망 AI 및 보안 컴플라이언스 (AI & Security)](/synccms/onpremise-ai-security): 온프레미스 LLM 연동 설정 및 PII 비식별화
-4. [기간계 연계 및 스냅샷 롤백 거버넌스 (Governance)](/synccms/integration-governance): 전자결재 승인선 연계 및 3단계 스냅샷 롤백
-5. [헤드리스 REST API 레퍼런스 (API Reference)](/synccms/api-reference): REST API 규격, JSON 스키마 및 cURL 예제
-6. [엔터프라이즈 운영 및 기술 FAQ (FAQ)](/synccms/enterprise-faq): 인프라 권장 사양, JSONB 인덱싱 튜닝 및 기술 지원 안내
+1. [시스템 아키텍처 (Architecture)](/synccms/architecture) : Clean Architecture 4계층 및 Spring Boot 3 기술 스택
+2. [Sync-Live-SDK 연동 가이드 (Live SDK)](/synccms/live-sdk-guide) : 프론트엔드 1줄 스크립트 임베딩 및 인라인 편집
+3. [사내 폐쇄망 AI & PII 보안 (AI & Security)](/synccms/onpremise-ai-security) : 온프레미스 LLM 연동 및 개인정보 보호
+4. [기간계 연계 & 롤백 거버넌스 (Governance)](/synccms/integration-governance) : 전자결재/ERP 연계 및 스냅샷 롤백
+5. [헤드리스 REST API 레퍼런스 (API Reference)](/synccms/api-reference) : REST API 규격 및 JSON 스키마
+6. [엔터프라이즈 FAQ & 기술 백서 (FAQ)](/synccms/enterprise-faq) : 자주 묻는 질문 및 1:1 아키텍처 진단 신청

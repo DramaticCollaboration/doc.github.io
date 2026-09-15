@@ -29,7 +29,7 @@ export default withMermaid(
     ['meta', { name: 'author', content: '엠파시' }], // 作者信息
     [
       'meta',
-      { name: 'keywords', content: '엠파시, Sync Series, SyncCms, SyncBoot, SyncApim, SyncEta' },
+      { name: 'keywords', content: '엠파시, Empasy, Sync Series, SyncVerse, SyncInsight, SyncETA, SyncCrawl, SyncBoot, SyncCMS, SyncLLM, AI 에이전트, AI 오케스트레이션, FinOps' },
     ], //
 
     // PWA-related
@@ -130,17 +130,19 @@ new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
 
     nav: [
       { text: "홈", link: "/" },
+      { text: "AI 생태계", link: "/ecosystem/" },
       {
         text: 'Sync Series',
         items: [
-          { link: "/syncverse/", text: 'SyncVerse' },
-          { link: "/syncinsight/", text: 'SyncInsight' },
-          { link: "/synceta/", text: 'SyncETA' },
-          { link: "/synccrawl/", text: 'SyncCrawl' },
-          { link: "/syncboot/", text: 'SyncBoot' },
-          { link: "/synccms/", text: 'SyncCMS' },
-          { link: "/syncadmin/", text: 'SyncAdmin' },
-          { link: "/syncapim/", text: 'SyncAPIM' }
+          { link: "/syncverse/", text: 'SyncVerse (통합 관제탑)' },
+          { link: "/syncinsight/", text: 'SyncInsight (의사결정 분석)' },
+          { link: "/synceta/", text: 'SyncETA (자동화 테스트)' },
+          { link: "/synccrawl/", text: 'SyncCrawl (적응형 크롤러)' },
+          { link: "/syncboot/", text: 'SyncBoot (MSA 백엔드)' },
+          { link: "/synccms/", text: 'SyncCMS (콘텐츠 관리)' },
+          { link: "/syncllm/", text: 'SyncLLM (AI 게이트웨이 & FinOps)' },
+          { link: "/syncadmin/", text: '[아카이브] SyncAdmin' },
+          { link: "/syncapim/", text: '[아카이브] SyncAPIM' }
         ]
       },
       {
@@ -160,10 +162,12 @@ new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
     ],
 
     sidebar: {
+        '/ecosystem/': generateKrSidebar('ecosystem'),
         '/syncverse/': generateKrSidebar('syncverse'),
         '/syncinsight/': generateKrSidebar('syncinsight'),
         '/synccrawl/': generateKrSidebar('synccrawl'),
         '/synccms/': generateKrSidebar('synccms'),
+        '/syncllm/': generateKrSidebar('syncllm'),
         '/synceta/': generateKrSidebar('synceta'),
         '/syncboot/': generateKrSidebar('syncboot'),
         '/syncadmin/': generateKrSidebar('syncadmin'),
