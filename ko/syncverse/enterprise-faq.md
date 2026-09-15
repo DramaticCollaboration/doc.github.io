@@ -75,5 +75,5 @@ flowchart LR
 ## 4. 라이선스 및 기술 지원
 
 SyncVerse는 오픈소스 커뮤니티 에디션과 기업용 엔터프라이즈 에디션을 제공합니다.
-- **도입 문의 및 PoC 지원**: `contact@empasy.com`
+- **도입 문의 및 PoC 지원**: `poh@empasy.com`
 - **공식 기술 지원 포털**: [https://doc.empasy.com](https://doc.empasy.com)
