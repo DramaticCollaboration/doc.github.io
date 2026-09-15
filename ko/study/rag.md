@@ -1,26 +1,26 @@
 ---
-title: RAG
-description: 까먹지 말고 재밌게 저장하자! 🎯 공부한 내용을 자유롭게 기록하는 즐거운 지식 저장소
+title: RAG 아키텍처 및 파이프라인 구축 가이드
+description: 검색 증강 생성(Retrieval-Augmented Generation)의 핵심 개념과 파이프라인 구축 단계
 head:
   - - meta
     - name: keywords
-      content: 공부기록, 학습일기, 지식저장소, 공부로그, 학습관리, 공부노트, 지식정리, 공부방법, 학습저장, 기억보조
+      content: RAG, 검색증강생성, Retrieval Augmented Generation, 벡터 검색, LLM 파이프라인, 엠파시, Empasy
   - - meta
     - property: og:title
-      content: 📚 두뇌 저장소 - 재미있는 공부 기록 놀이터
+      content: RAG 아키텍처 및 파이프라인 구축 가이드 | 엠파시 기술 연구 아카이브
   - - meta
     - property: og:description
-      content: 까먹지 말고 재밌게 저장하자! 🎯 공부한 내용을 자유롭게 기록하는 즐거운 지식 저장소
+      content: 검색 증강 생성(RAG)의 기본 원리, 청킹 및 임베딩, 벡터 데이터베이스 연동 및 답변 생성 파이프라인 가이드
   - - meta
     - property: og:image
       content: https://doc.empasy.com/images/favicon.png
   - - meta
     - property: og:url
-      content: https://doc.empasy.com/study/
+      content: https://doc.empasy.com/study/rag.html
 sort: 300
 ---
 
-## **RAG(랙) 구축 완벽 가이드: 초보자를 위한 친절한 설명서**
+## **RAG(검색 증강 생성) 아키텍처 및 파이프라인 구축 가이드**
 
 ### **목차**
 
@@ -39,7 +39,7 @@ sort: 300
 - **`R`(Retrieval - 검색)**: 방대한 문서 더미에서 **질문과 관련된 정보를 찾아오는** 단계
 - **`AG`(Augmented Generation - 향상된 생성)**: 찾아온 정보를 바탕으로 **LLM이 정확한 답변을 생성하는** 단계
 
-#### **🛎️ 쉬운 비유: 열심히 하는 비서님**
+#### ** 쉬운 비유: 열심히 하는 비서님**
 
 여러분에게 **`A`** 와 **`B`** , 두 명의 비서가 있다고 상상해보세요.
 
@@ -176,7 +176,7 @@ flowchart TD
 
 RAG(Retrieval-Augmented Generation)는 **정보 검색(Retrieval)** 과 **답변 생성(Generation)** 을 결합한 기술로, 대형 언어 모델(LLM)이 외부 지식 소스를 활용하여 더 정확하고 신뢰할 수 있는 답변을 생성할 수 있게 합니다.
 
-### 🎯 쉬운 비유: 도서관 사서
+###  쉬운 비유: 도서관 사서
 
 - **일반 LLM**: 백과사전을 통째로 외운 천재 (但, 최신 정보 없고 가끔 틀림)
 - **RAG LLM**: 도서관에서 관련 자료 찾아와 참고하며 답변하는 사서 (정확하고 최신 정보 제공)
@@ -187,10 +187,10 @@ RAG(Retrieval-Augmented Generation)는 **정보 검색(Retrieval)** 과 **답변
 
 | 문제점              | 일반 LLM                | RAG 적용 시         |
 | ------------------- | ----------------------- | ------------------- |
-| 최신 정보 부족      | ❌ 학습 데이터에만 의존 | ✅ 실시간 정보 활용 |
-| 망상(Hallucination) | ❌ 가끔 지어냄          | ✅ 근거 자료 기반   |
-| 내부 정보 활용      | ❌ 불가능               | ✅ 가능             |
-| 투명성 부족         | ❌ 답변 근거 불명확     | ✅ 출처 명시 가능   |
+| 최신 정보 부족      | [실패]  학습 데이터에만 의존 | [완료]  실시간 정보 활용 |
+| 망상(Hallucination) | [실패]  가끔 지어냄          | [완료]  근거 자료 기반   |
+| 내부 정보 활용      | [실패]  불가능               | [완료]  가능             |
+| 투명성 부족         | [실패]  답변 근거 불명확     | [완료]  출처 명시 가능   |
 
 ---
 
@@ -411,3 +411,4 @@ spring.ai.openai.embedding.model=text-embedding-ada-002
 2. **성능 최적화**: 임베딩 캐싱, 비동기 처리
 3. **정확도 향상**: 다양한 검색 알고리즘, 재순위화
 4. **보안 강화**: 접근 제어, 데이터 암호화
+

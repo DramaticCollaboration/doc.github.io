@@ -1,6 +1,6 @@
----
+﻿---
 title: 리눅스 electron 디버깅 Crash
-description: 기억은 금방 사라지지만, 로그는 영원하다! 🎯 우리 팀의 재미있고 자유로운 작업 기록 공간
+description: 기억은 금방 사라지지만, 로그는 영원하다!  우리 팀의 재미있고 자유로운 작업 기록 공간
 head:
   - - meta
     - name: keywords
@@ -60,3 +60,4 @@ CHOKIDAR_USEPOLLING=1 CHOKIDAR_INTERVAL=800 yarn dev:debug
 ```
 
 - 자주 쓸 거면 Run/Debug 구성의 Environment variables에 CHOKIDAR_USEPOLLING=1, CHOKIDAR_INTERVAL=800 추가
+

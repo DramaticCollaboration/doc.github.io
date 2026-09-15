@@ -124,3 +124,5 @@ sequenceDiagram
 - **[AgentScope Java 표준 가이드](/ecosystem/agentscope-guide)**: Spring Boot 백엔드 에이전트 개발 표준
 - **[엔드투엔드 워크플로우 실무](/ecosystem/e2e-workflow)**: 실제 시나리오 기반 협업 과정 확인
 - **[HITL 거버넌스 & Saga](/ecosystem/hitl-governance)**: 관리자 안전 승인 및 분산 롤백 메커니즘
+- **[보안 백서 및 컴플라이언스](/ecosystem/security-and-compliance)**: 제로 데이터 보존(Zero Retention) 및 망분리 보안
+- **[릴리스 노트 & 변경 이력](/ecosystem/changelog)**: 버전별 기능 업데이트 및 아키텍처 결정 기록(ADR)
