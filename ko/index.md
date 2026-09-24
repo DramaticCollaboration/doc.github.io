@@ -17,13 +17,13 @@ hero:
 head:
   - - meta
     - name: keywords
-      content: 엠파시, Empasy, Sync Series, SyncVerse, SyncInsight, SyncETA, SyncCrawl, SyncBoot, SyncCMS, SyncLLM, AI 오케스트레이션, 멀티 에이전트, AI 관제, FinOps, 마이크로서비스 아키텍처, MSA, 소프트웨어 개발, 솔루션, 디지털 혁신, 비즈니스 민첩성, 개발 플랫폼, 백엔드, 프론트엔드, 콘텐츠 관리 시스템, CMS, 자동화 테스트, QA, 품질 보증, CI/CD, DevOps, Java, Spring Boot, Vue 3, TypeScript
+      content: 엠파시, Empasy, Sync Series, SyncVerse, SyncInsight, SyncETA, SyncCrawl, SyncBoot, SyncCMS, SyncShop, SyncLLM, AI 오케스트레이션, 멀티 에이전트, AI 관제, FinOps, 마이크로서비스 아키텍처, MSA, Headless Commerce, 소프트웨어 개발, 솔루션, 디지털 혁신, 비즈니스 민첩성, 개발 플랫폼, 백엔드, 프론트엔드, 콘텐츠 관리 시스템, CMS, 자동화 테스트, QA, 품질 보증, CI/CD, DevOps, Java, Spring Boot, Vue 3, TypeScript
   - - meta
     - property: og:title
       content: "엠파시 Sync Series: 디지털 혁신을 위한 자율 운영 AI 에이전트 생태계"
   - - meta
     - property: og:description
-      content: "엠파시는 SyncVerse, SyncInsight, SyncETA, SyncCrawl, SyncBoot, SyncCMS, SyncLLM으로 구성된 Sync Series를 통해 비즈니스 민첩성과 AI 자율 운영을 지원합니다."
+      content: "엠파시는 SyncVerse, SyncInsight, SyncETA, SyncCrawl, SyncBoot, SyncCMS, SyncShop, SyncLLM으로 구성된 Sync Series를 통해 비즈니스 민첩성과 AI 자율 운영을 지원합니다."
   - - meta
     - property: og:image
       content: https://doc.empasy.com/images/favicon.png
@@ -63,6 +63,12 @@ features:
     link: /synccms/
     linkText: SyncCMS 문서 바로가기 →
   - icon:
+      svg: '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>'
+    title: SyncShop (Headless 이커머스)
+    details: 옴니채널 상거래 관리, 다이내믹 프라이싱, 실시간 재고 잠금 및 자율 커머스 에이전트 스웜 솔루션
+    link: /syncshop/
+    linkText: SyncShop 문서 바로가기 →
+  - icon:
       svg: '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/><path d="M3 12c0 1.66 4 3 9 3s9-1.34 9-3"/></svg>'
     title: SyncCrawl (적응형 크롤링 & RAG)
     details: 웹 구조 변경에 자율 대응하고 실시간 지식 파이프라인을 구축하여 고신뢰 RAG 답변을 제공하는 수집 엔진
@@ -88,6 +94,8 @@ footer: Copyright © 2026 Empasy Inc. All rights reserved.
 | **AgentScope Java 가이드** | Spring Boot 백엔드 AgentScope Java(io.agentscope) 연동 표준 | [AgentScope 가이드 →](/ecosystem/agentscope-guide) |
 | **E2E 연동 시나리오** | 기획부터 스키마/API 생성, CMS 배포, E2E 회귀 테스트 실무 | [E2E 시나리오 →](/ecosystem/e2e-workflow) |
 | **HITL & Saga 거버넌스** | 3단계 관리자 승인 게이트 및 분산 보상 트랜잭션 롤백 원리 | [HITL & Saga →](/ecosystem/hitl-governance) |
+| **공유 모듈 & SDK** | 8대 공통 비즈니스 모듈(sync-module-*) 및 AI 코딩 엔지니어링 SDK | [공유 모듈 & SDK →](/ecosystem/shared-modules-and-sdk) |
+| **Zero-Mock 품질 하네스** | Mock 전면 금지, RFC 7807 표준 에러 처리 및 4-Cycle 검증 체계 | [품질 하네스 →](/ecosystem/zero-mock-harness) |
 
 ### 핵심 플래그십 AI 에이전트
 | 솔루션 | 주요 역할 및 핵심 가치 | 문서 링크 |
@@ -98,6 +106,7 @@ footer: Copyright © 2026 Empasy Inc. All rights reserved.
 | **SyncCrawl** | 적응형 자율 크롤링 & RAG 지식 기반 파이프라인 | [SyncCrawl 시작하기 →](/synccrawl/) |
 | **SyncBoot** | Java / Spring Boot 기반 고속 MSA 개발 플랫폼 & 로우코드 | [SyncBoot 시작하기 →](/syncboot/) |
 | **SyncCMS** | 직관적인 콘텐츠 관리, Live SDK & 온프레미스 AI 보안 CMS | [SyncCMS 시작하기 →](/synccms/) |
+| **SyncShop** | Headless 옴니채널 상거래, 다이내믹 프라이싱 & 커머스 에이전트 스웜 | [SyncShop 시작하기 →](/syncshop/) |
 | **SyncLLM** | 엔터프라이즈 AI 게이트웨이, FinOps 비용 통제 & PII 마스킹 | [SyncLLM 시작하기 →](/syncllm/) |
 
 ### 아카이브 및 개발 리소스
@@ -157,6 +166,11 @@ footer: Copyright © 2026 Empasy Inc. All rights reserved.
 * **개요**: 마케터와 운영자의 직관적인 콘텐츠 퍼블리싱과 개발자의 유연한 확장을 동시에 지원하는 Spring Boot 기반 CMS입니다.
 * **핵심 기능**: FreeMarker 템플릿 엔진 기반 고속 렌더링, Live SDK 연동, 템플릿 기반 I18n 글로벌 다국어 자동 동기화, 온프레미스 AI 보안 가드레일.
 * **도입 효과**: 벤더 종속성을 탈피하여 엔터프라이즈 요구사항에 맞춘 유연한 사이트 구축 및 대규모 트래픽 처리를 안정적으로 지원합니다.
+
+### SyncShop: Headless 옴니채널 상거래 및 자율 운영 에이전트
+* **개요**: 프론트엔드 표현층과 백엔드 상거래 로직을 분리하여 웹, 모바일, 키오스크 등 모든 고객 접점에 신속히 대응하는 차세대 Headless eCommerce 플랫폼입니다.
+* **핵심 기능**: 다계층 카탈로그 및 동적 SKU 재고 잠금(Inventory Lock), 지능형 쿠폰 및 플래시딜 타임세일 엔진, 실시간 DB 기반 다이내믹 프라이싱 및 무손실 스냅샷 롤백(`shop_batch_price_update`), 3단계 에이전트 스웜(Pricing Optimizer, Margin Safeguard, Executor).
+* **도입 효과**: 옴니채널 출시 속도를 대폭 단축하고, 마진 안전가드 기반 무인 다이내믹 프라이싱으로 상거래 운영 공수와 마진 누수를 방지합니다.
 
 ### SyncLLM: 엔터프라이즈 AI 게이트웨이 & FinOps 비용 최적화
 * **개요**: 사내 분산된 멀티 LLM API 호출을 단일 진입점으로 통합 제어하고 토큰 비용을 체계적으로 최적화하는 게이트웨이입니다.

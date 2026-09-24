@@ -27,11 +27,25 @@ const MODULE_CATEGORY_RULES: Record<string, Array<{ group: string; match: (name:
     },
     {
       group: '개발 & 표준',
-      match: (name) => ['agentscope-guide', 'e2e-workflow'].includes(name),
+      match: (name) => ['agentscope-guide', 'e2e-workflow', 'shared-modules-and-sdk'].includes(name),
     },
     {
       group: '엔터프라이즈 거버넌스',
-      match: (name) => ['hitl-governance', 'security-and-compliance', 'changelog'].includes(name),
+      match: (name) => ['hitl-governance', 'security-and-compliance', 'zero-mock-harness', 'changelog'].includes(name),
+    },
+  ],
+  syncshop: [
+    {
+      group: '시작하기',
+      match: (name) => ['index', 'architecture'].includes(name),
+    },
+    {
+      group: '커머스 핵심 운영',
+      match: (name) => ['catalog-and-order', 'promotion-and-marketing'].includes(name),
+    },
+    {
+      group: '에이전트 & 거버넌스',
+      match: (name) => ['mcp-and-agent', 'enterprise-faq'].includes(name),
     },
   ],
   syncverse: [
@@ -201,7 +215,17 @@ const DEFAULT_SIDEBAR_SHORT_TITLES: Record<string, Record<string, string>> = {
     'e2e-workflow': 'E2E 연동 시나리오',
     'hitl-governance': 'HITL & Saga 거버넌스',
     'security-and-compliance': '보안 백서 & 컴플라이언스',
+    'shared-modules-and-sdk': '공유 모듈 & SDK',
+    'zero-mock-harness': 'Zero-Mock 품질 하네스',
     changelog: '릴리스 노트 (Changelog)',
+  },
+  syncshop: {
+    index: '개요',
+    architecture: '시스템 아키텍처',
+    'catalog-and-order': '상품 및 주문 관리',
+    'promotion-and-marketing': '프로모션 및 마케팅',
+    'mcp-and-agent': 'MCP 도구 & A2A 연동',
+    'enterprise-faq': '도입 FAQ',
   },
   syncllm: {
     index: '개요',

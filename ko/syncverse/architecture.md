@@ -155,9 +155,42 @@ SyncVerse는 엔터프라이즈 환경의 대규모 트래픽과 무중단 운�
 
 | 계층 | 기술 스택 | 도입 목적 |
 | :--- | :--- | :--- |
-| **Backend Core** | Java 17+, Spring Boot 3.x | 엔터프라이즈 런타임, 트랜잭션 관리 |
-| **AI Framework** | **LangChain4j** (`langchain4j-spring-boot-starter`) | 전사 표준 AI 프레임워크, LLM 도구 연동, RAG 체인 |
+| **Backend Core** | Java 21, Spring Boot 3.3 | 엔터프라이즈 런타임, 가상 스레드(Virtual Threads), 트랜잭션 관리 |
+| **AI Framework** | **AgentScope Java** (`io.agentscope:agentscope-harness`) | 전사 표준 AI 프레임워크, 멀티 에이전트 협업 MsgHub, ReActAgent 자율 Tool 실행 |
 | **Frontend UI** | Vue 3, TypeScript, Vite, **Vue Flow** | 노드-엣지 토폴로지 시각화, 관제 대시보드 |
 | **State & Cache** | Redis 7.x (Cluster) | 에이전트 실시간 상태 공유, 시맨틱 캐싱, 분산 락 |
 | **Database** | PostgreSQL 15+ / MySQL 8.x | RDBMS 데이터 정합성, JSONB 감사 로그 영속화 |
 | **Infrastructure** | Docker, Kubernetes, GitHub Actions | 컨테이너 기반 격리 실행, CI/CD 배포 파이프라인 |
+
+---
+
+## 4. Admin 서버 및 MCP 서버 역할 분리 (0ms 부팅 지연 보장)
+
+SyncSeries 산하 모든 서브프로젝트는 관리자 화면을 담당하는 Admin 서버와 에이전트 협업 도구를 제공하는 MCP 서버의 책임을 엄격히 분리하여 운영합니다.
+
+```mermaid
+graph TD
+    subgraph AdminRuntime ["Admin 서버 (sync-*-admin)"]
+        UI["관리자 화면 API 서빙"]
+        Auth["인증/인가 및 사용자 관리"]
+        Block["self-registration.enabled: false\n(중앙 등록 시도 차단)"]
+    end
+
+    subgraph McpRuntime ["MCP 서버 (sync-*-mcp-server)"]
+        ToolRegistry["도구 레지스트리 (JSON-RPC)"]
+        AsyncReg["비동기 자기 등록 클라이언트\n(CompletableFuture.runAsync)"]
+        Timeout["3초 Connect/Read 타임아웃"]
+    end
+
+    subgraph CenterTower ["SyncVerse 중앙 관제탑"]
+        RegEndpoint["POST /api/agents/register"]
+    end
+
+    AsyncReg -.->|오프라인 시에도 부팅 지연 0ms 보장| RegEndpoint
+```
+
+1. **Admin 서버의 SyncVerse 의존성 원천 차단**:
+   * 각 서비스의 Admin 서버는 화면 렌더링 및 비즈니스 REST API 제공에 집중하며, `self-registration.enabled: false` 설정을 통해 불필요한 관제탑 등록 시도를 차단합니다.
+2. **MCP 서버의 비동기 자기 등록 및 타임아웃**:
+   * MCP 서버 기동 시 `AgentSelfRegistrationClient`가 `CompletableFuture.runAsync` 백그라운드 스레드로 등록을 진행합니다.
+   * `SimpleClientHttpRequestFactory` 기반 3초 연결/읽기 타임아웃을 강제하여 SyncVerse 관제탑이 다운되거나 미구동 상태인 경우에도 메인 프로세스가 멈추지 않고 0ms 지연으로 즉각 기동됩니다.

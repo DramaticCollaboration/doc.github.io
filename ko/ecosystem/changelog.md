@@ -10,6 +10,42 @@ SyncSeries의 버전별 주요 업데이트, 보안 패치, 성능 개선 및 �
 
 ---
 
+## [v2.6.0] - 2026-09-24
+
+### 주요 신규 기능 및 거버넌스 개편
+* **SyncVerse 작업 승인(Governance) 관제탑 전면 개편**:
+  * 신규 대분류 `작업 승인`(`/governance`) 신설: 승인 대기(HITL 결재), 요구 명세(스펙 스튜디오), 코드 검토(브랜치/PR), 스키마 관리(DB 거버넌스), 코드 점검(품질 감사) 5대 전용 뷰 완비.
+  * 12개 에이전트 메뉴를 인프라 중심 6개로 압축 슬림화하고 2~5자 단축 실무 용어 통일.
+* **Admin/MCP 서버 역할 분리 및 비동기 부팅 0ms 지연 안정화**:
+  * Admin 서버의 불필요한 SyncVerse 자동 등록을 차단(`self-registration.enabled: false`)하여 UI 기동 독립성 확보.
+  * MCP 서버 전용 `AgentSelfRegistrationClient`의 비동기(`runAsync`) 및 3초 타임아웃 강제로 중앙 관제탑 오프라인 시에도 기동 0ms 지연 보장.
+* **Zero-Mock 및 4-Cycle 품질 검증 프로토콜 전사 정립**:
+  * 16개 서브프로젝트 전역에서 Mock/Stub 데이터 완전 박멸 (`verify-zero-mock.ps1` 100% 통과).
+  * 가짜 정상(Fake Normalcy) 상태 위장 원천 금지 및 RFC 7807 Problem Details 표준 에러 체계 일원화.
+* **SyncCMS 저작도구 및 웹 컴포넌트 고도화**:
+  * Tiptap 섀도우 에디터 다중 디바이스(Desktop, Tablet, Mobile) 반응형 프리뷰 탑재.
+  * 실시간 인라인 SEO 분석 패널(`SeoAnalysisPanel.vue`) 및 커맨드 팔레트(`CommandPaletteModal.vue`) 지원.
+
+---
+
+## [v2.5.0] - 2026-06-15
+
+### 주요 신규 기능
+* **SyncShop 이커머스 자율 운영 솔루션 공식 출시**:
+  * Headless eCommerce 분리 아키텍처(PMS, OMS, SMS, UMS) 및 모바일 앱 런칭.
+  * 실시간 DB 연동 다이내믹 프라이싱 및 무손실 스냅샷 롤백(`shop_batch_price_update`) 엔진.
+  * 3단계 상거래 에이전트 스웜(Pricing Optimizer, Margin Safeguard, Executor) 탑재.
+* **전사 8대 공통 비즈니스 모듈(`sync-module-*`) 및 SyncSdk 구축**:
+  * `sync-core`: Java 21 가상 스레드(Virtual Threads) 환경 Carrier Pinning 방지(`ReentrantLock`).
+  * `sync-module-ai`: `AgentScope Java` (`io.agentscope:agentscope-harness`) 전사 표준 AI 프레임워크 일원화.
+  * `sync-module-deploy`: Jenkins, GitHub Actions, ArgoCD 파이프라인 연동 및 K8s Pod 관제.
+  * `sync-module-issue`: 유니버설 이슈 트래커(GitHub, GitLab, Jira, Linear, Redmine) 및 포트폴리오 칸반 보드.
+  * `sync-module-rag`: Tri-Hybrid RAG 지식 검색 허브(Dense+Sparse+Reranker) 및 인시던트 런북.
+  * `sync-module-notification`, `sync-module-nl2sql`, `sync-module-audit` 통합 패키징.
+  * `SyncSdk`: Antigravity/OpenSwe SWE 에이전트 SDK 연동 및 Mock-Free 프로덕션 보장.
+
+---
+
 ## [v2.4.0] - 2026-03-01
 
 ### 주요 신규 기능
