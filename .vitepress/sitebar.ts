@@ -142,7 +142,7 @@ const MODULE_CATEGORY_RULES: Record<string, Array<{ group: string; match: (name:
   ],
   agile: [
     {
-      group: 'AI-SDLC 방법론 & 실전 플레이북',
+      group: 'SyncVerse AI 개발 방법론',
       match: (name) => [
         'ai-driven-development',
         'ai-sdlc-01-requirements',
@@ -326,13 +326,13 @@ const DEFAULT_SIDEBAR_SHORT_TITLES: Record<string, Record<string, string>> = {
     glossary: '용어 사전',
   },
   agile: {
-    'ai-driven-development': 'AI 개발 방법론 개요',
-    'ai-sdlc-01-requirements': '01. 기획 & 요구사항 플레이북',
-    'ai-sdlc-02-architecture': '02. 스펙 아키텍처 플레이북',
-    'ai-sdlc-03-implementation': '03. AI 페어 코딩 플레이북',
-    'ai-sdlc-04-testing': '04. 테스트 & 자가치유 플레이북',
-    'ai-sdlc-05-review-deploy': '05. PR 리뷰 & 배포 플레이북',
-    'ai-sdlc-prompt-recipes': '프롬프트 레시피북 (치트시트)',
+    'ai-driven-development': '개발 방법론 개요',
+    'ai-sdlc-01-requirements': '01. 기획 및 요구사항 가이드',
+    'ai-sdlc-02-architecture': '02. 명세 우선 아키텍처 가이드',
+    'ai-sdlc-03-implementation': '03. AI 협업 코딩 가이드',
+    'ai-sdlc-04-testing': '04. 테스트 및 자동 수정 가이드',
+    'ai-sdlc-05-review-deploy': '05. 코드 검토 및 배포 가이드',
+    'ai-sdlc-prompt-recipes': '상황별 프롬프트 모음집',
     index: '개요 (스크럼반)',
     guide: '애자일 가이드',
     activity: '스프린트 활동',
