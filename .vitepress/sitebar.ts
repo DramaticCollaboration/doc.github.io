@@ -142,6 +142,18 @@ const MODULE_CATEGORY_RULES: Record<string, Array<{ group: string; match: (name:
   ],
   agile: [
     {
+      group: 'AI-SDLC 방법론 & 실전 플레이북',
+      match: (name) => [
+        'ai-driven-development',
+        'ai-sdlc-01-requirements',
+        'ai-sdlc-02-architecture',
+        'ai-sdlc-03-implementation',
+        'ai-sdlc-04-testing',
+        'ai-sdlc-05-review-deploy',
+        'ai-sdlc-prompt-recipes',
+      ].includes(name),
+    },
+    {
       group: '애자일 프로세스',
       match: (name) => ['index', 'guide', 'activity', 'checklistAndProcedure', 'dailyScrum'].includes(name),
     },
@@ -314,7 +326,14 @@ const DEFAULT_SIDEBAR_SHORT_TITLES: Record<string, Record<string, string>> = {
     glossary: '용어 사전',
   },
   agile: {
-    index: '개요',
+    'ai-driven-development': 'AI 개발 방법론 개요',
+    'ai-sdlc-01-requirements': '01. 기획 & 요구사항 플레이북',
+    'ai-sdlc-02-architecture': '02. 스펙 아키텍처 플레이북',
+    'ai-sdlc-03-implementation': '03. AI 페어 코딩 플레이북',
+    'ai-sdlc-04-testing': '04. 테스트 & 자가치유 플레이북',
+    'ai-sdlc-05-review-deploy': '05. PR 리뷰 & 배포 플레이북',
+    'ai-sdlc-prompt-recipes': '프롬프트 레시피북 (치트시트)',
+    index: '개요 (스크럼반)',
     guide: '애자일 가이드',
     activity: '스프린트 활동',
     checklistAndProcedure: '체크리스트 & 절차',
