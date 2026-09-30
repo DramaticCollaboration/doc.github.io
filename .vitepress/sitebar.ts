@@ -144,6 +144,10 @@ const MODULE_CATEGORY_RULES: Record<string, Array<{ group: string; match: (name:
     {
       group: 'SyncVerse AI 개발 방법론',
       match: (name) => [
+        'enterprise-project-lifecycle',
+        'enterprise-action-items-guide',
+        'enterprise-business-documents',
+        'presales-ai-playbook',
         'ai-driven-development',
         'ai-sdlc-01-requirements',
         'ai-sdlc-02-architecture',
@@ -326,6 +330,9 @@ const DEFAULT_SIDEBAR_SHORT_TITLES: Record<string, Record<string, string>> = {
     glossary: '용어 사전',
   },
   agile: {
+    'enterprise-project-lifecycle': '사업 전 주기 운영 방법론',
+    'enterprise-action-items-guide': '단계별 실행 가이드 (SOP)',
+    'presales-ai-playbook': '영업 지원 및 제안 가이드',
     'ai-driven-development': '개발 방법론 개요',
     'ai-sdlc-01-requirements': '01. 기획 및 요구사항 가이드',
     'ai-sdlc-02-architecture': '02. 명세 우선 아키텍처 가이드',

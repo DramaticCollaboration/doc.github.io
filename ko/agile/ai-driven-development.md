@@ -26,6 +26,9 @@ sort: 100
 
 ::: tip 실전 단계별 가이드 바로가기
 프로젝트 진행 시 필요한 단계의 실전 가이드와 프롬프트 예시를 바로 확인하실 수 있습니다:
+* **[사업 전 주기 운영 방법론 (RFP to Go-Live)](./enterprise-project-lifecycle.md)**: 제안부터 오픈까지 엔드투엔드 조직 운영
+* **[단계별 실행 항목 및 실무 실행 가이드 (SOP)](./enterprise-action-items-guide.md)**: 단계별 구체적 Action Item 및 절차
+* **[영업 지원 및 제안 단계 실무 가이드 (Pre-sales)](./presales-ai-playbook.md)**: RFP 분석, PoC 데모 제작, 공수 산정
 * **[01단계: 기획 및 요구사항 구체화 가이드](./ai-sdlc-01-requirements.md)** (기획자 / PO용)
 * **[02단계: 명세 우선 아키텍처 및 DDL/API 설계 가이드](./ai-sdlc-02-architecture.md)** (아키텍트 / 리드 개발자용)
 * **[03단계: AI 협업 코딩 및 자율 구현 가이드](./ai-sdlc-03-implementation.md)** (개발자용)
