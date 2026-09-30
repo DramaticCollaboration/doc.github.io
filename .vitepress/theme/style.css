@@ -141,8 +141,34 @@ img {
     background-color: var(--color-nav-background) !important;
 }
 
+/* Navbar Title & Slogan responsive design */
+.VPNavBarTitle > a > span {
+    font-size: 13.5px !important;
+    font-weight: 500 !important;
+    color: var(--vp-c-text-2) !important;
+    letter-spacing: -0.01em !important;
+    margin-left: 6px !important;
+}
+
+@media (max-width: 1360px) {
+    .VPNavBarTitle > a > span {
+        display: none !important;
+    }
+}
+
 .has-sidebar.VPNavBarTitle > a > span  {
     display: none !important;
+}
+
+/* Navbar Menu item spacing & layout polish */
+.VPNavBarMenuLink, .VPNavBarMenuGroup .button {
+    font-size: 13.5px !important;
+    padding: 0 10px !important;
+    font-weight: 500 !important;
+}
+
+.VPNavBar .content-body {
+    column-gap: 2px !important;
 }
 
 .VPSidebar .curtain {

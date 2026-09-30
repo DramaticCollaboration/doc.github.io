@@ -10,6 +10,9 @@ hero:
       - text: 시작하기
         link: /syncverse/
         type: primary
+      - text: 엠파시 사업 및 개발 방법론
+        link: /agile/enterprise-project-lifecycle
+        type: primary
       - text: 모든 제품 보기
         link: '#sync-series-제품군'
         type: secondary
@@ -32,6 +35,12 @@ head:
       content: https://doc.empasy.com/
 
 features:
+  - icon:
+      svg: '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1-2.5-2.5Z"/><path d="M6 6h10"/><path d="M6 10h10"/></svg>'
+    title: 엠파시 사업 및 개발 방법론
+    details: RFP 접수, 사전영업, 계약, 아키텍처 설계, 협업 구현, 4단계 검증, 최종 검수, 12대 표준 서식에 이르는 사업 전 주기 운영 가이드
+    link: /agile/enterprise-project-lifecycle
+    linkText: 방법론 및 표준 서식 바로가기 →
   - icon:
       svg: '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><circle cx="19" cy="5" r="2"/><circle cx="5" cy="19" r="2"/><circle cx="19" cy="19" r="2"/><circle cx="5" cy="5" r="2"/><path d="m7 7 3 3"/><path d="m14 14 3 3"/><path d="m14 10 3-3"/><path d="m7 17 3-3"/></svg>'
     title: SyncVerse (AI 오케스트레이션)

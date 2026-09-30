@@ -142,11 +142,12 @@ const MODULE_CATEGORY_RULES: Record<string, Array<{ group: string; match: (name:
   ],
   agile: [
     {
-      group: 'SyncVerse AI 개발 방법론',
+      group: '엠파시 사업 및 개발 방법론',
       match: (name) => [
         'enterprise-project-lifecycle',
         'enterprise-action-items-guide',
         'enterprise-business-documents',
+        'enterprise-document-templates',
         'presales-ai-playbook',
         'ai-driven-development',
         'ai-sdlc-01-requirements',

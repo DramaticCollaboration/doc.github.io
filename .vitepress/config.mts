@@ -107,9 +107,8 @@ new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
     }
   },
   ignoreDeadLinks: [
-    // custom function, ignore all links include "ignore"
     (url) => {
-      return url.toLowerCase().includes('dataset_form.xlsx')
+      return url.toLowerCase().includes('dataset_form.xlsx') || url.includes('/templates/')
     }
   ],
   transformPageData(pageData) {
@@ -130,9 +129,10 @@ new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
 
     nav: [
       { text: "홈", link: "/" },
-      { text: "AI 생태계", link: "/ecosystem/" },
+      { text: "AI 생태계", link: "/ecosystem/", activeMatch: "^/ecosystem/" },
       {
         text: 'Sync Series',
+        activeMatch: "^/(syncverse|syncinsight|synceta|synccrawl|syncboot|synccms|syncshop|syncllm|syncadmin|syncapim)/",
         items: [
           { link: "/syncverse/", text: 'SyncVerse (통합 관제탑)' },
           { link: "/syncinsight/", text: 'SyncInsight (의사결정 분석)' },
@@ -147,24 +147,36 @@ new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
         ]
       },
       {
-        text: '리소스',
+        text: '사업·개발 방법론',
+        activeMatch: "^/agile/",
         items: [
-          { link: "/agile/", text: '애자일(스크럼반)' },
-          { link: "/study/", text: '공부방 (연구소)' },
-          { link: "/logs/", text: '작업 로그 (일지)' }
+          { link: "/agile/enterprise-project-lifecycle", text: '사업 전 주기 방법론 (Lifecycle)' },
+          { link: "/agile/enterprise-document-templates", text: '표준 문서 양식 센터 (35종 서식)' },
+          { link: "/agile/enterprise-business-documents", text: '표준 산출물 관리 가이드 (Docs SOP)' },
+          { link: "/agile/enterprise-action-items-guide", text: '단계별 실행 가이드 (Action Items)' },
+          { link: "/agile/presales-ai-playbook", text: '영업 지원 & 제안 플레이북 (Pre-sales)' },
+          { link: "/agile/", text: '애자일 & 스크럼반 체계 (Agile)' }
         ]
       },
       {
-        text: 'SyncETA 다운로드',
-        link: 'https://empasy.io/ko/download_eta.html',
-        target: '_blank',
-        rel: 'noopener noreferrer',
-      },
-      {
-        text: '엠파시 홈',
-        link: 'https://empasy.io',
-        target: '_blank',
-        rel: 'noopener noreferrer', // Recommended for security
+        text: '리소스',
+        activeMatch: "^/(study|logs)/",
+        items: [
+          { link: "/study/", text: '공부방 (R&D 연구소)' },
+          { link: "/logs/", text: '작업 로그 (일지)' },
+          {
+            text: 'SyncETA 다운로드',
+            link: 'https://empasy.io/ko/download_eta.html',
+            target: '_blank',
+            rel: 'noopener noreferrer',
+          },
+          {
+            text: '엠파시 공식 홈',
+            link: 'https://empasy.io',
+            target: '_blank',
+            rel: 'noopener noreferrer',
+          }
+        ]
       }
     ],
 
@@ -238,6 +250,25 @@ new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
     image: {
       // false by default; Set to true to enable lazy loading for all images.
       lazyLoading: true,
+    },
+  },
+  vite: {
+    optimizeDeps: {
+      include: [
+        "mermaid",
+        "dayjs",
+        "@braintree/sanitize-url",
+        "cytoscape",
+        "cytoscape-cose-bilkent",
+      ],
+    },
+    resolve: {
+      alias: [
+        {
+          find: /^dayjs$/,
+          replacement: "dayjs/esm/index.js",
+        },
+      ],
     },
   },
 }));

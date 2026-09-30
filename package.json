@@ -11,8 +11,13 @@
     "vue": "^3.5.22"
   },
   "devDependencies": {
+    "@braintree/sanitize-url": "^7.1.2",
     "@types/node": "^24.7.0",
     "cpy-cli": "^6.0.0",
+    "cytoscape": "^3.34.3",
+    "cytoscape-cose-bilkent": "^4.1.0",
+    "dayjs": "1.11.23",
+    "debug": "^4.4.3",
     "gray-matter": "^4.0.3",
     "mermaid": "^11.17.0",
     "prettier": "^3.6.2",

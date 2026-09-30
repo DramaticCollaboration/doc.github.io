@@ -1,13 +1,13 @@
 ---
-title: 영업 지원 및 제안 단계 실무 가이드 (Pre-sales Playbook)
+title: 엠파시 사전영업 및 제안 단계 실무 가이드 (Pre-sales Playbook)
 description: 입찰 타당성 심의(Go/No-Go), RFP 분석, 기술 제안서 작성, PoC 시연 데모, 제안 PT 질의응답 방어, 객관적 공수 산정까지 영업 조직을 효율적으로 지원하는 실무 가이드입니다.
 head:
   - - meta
     - name: keywords
-      content: Pre-sales, 프리세일즈, Go No-Go, RFP 분석, 기술 제안서, 제안 발표, PT Q&A 방어, PoC, 공수 산정, TCO, 영업 지원, SyncVerse
+      content: Pre-sales, 프리세일즈, Go No-Go, RFP 분석, 기술 제안서, 제안 발표, PT Q&A 방어, PoC, 공수 산정, TCO, 영업 지원, 엠파시, Empasy
   - - meta
     - property: og:title
-      content: 영업 지원 및 제안 단계 실무 가이드 (Pre-sales Playbook)
+      content: 엠파시 사전영업 및 제안 단계 실무 가이드 (Pre-sales Playbook)
   - - meta
     - property: og:description
       content: 입찰 심의부터 기술 제안, 데모 제작, PT 방어까지 수주 경쟁력을 극대화하는 실무 가이드
@@ -17,17 +17,17 @@ head:
   - - meta
     - property: og:url
       content: https://doc.empasy.com/agile/presales-ai-playbook.html
-sort: 91
+sort: 94
 ---
 
-# 영업 지원 및 제안 단계 실무 가이드 (Pre-sales Playbook)
+# 엠파시 사전영업 및 제안 단계 실무 가이드 (Pre-sales Playbook)
 
-> **개요:** 본 가이드는 고객사의 제안요청서(RFP)가 접수되었을 때, 개발 및 기술지원 조직이 영업 조직을 신속히 뒷받침하여 **입찰 타당성 심의(Go/No-Go), RFP 요구사항 분석, 기술 제안서 초안 작성, 영업 데모용 프로토타입(PoC) 제작, 제안 발표(PT) Q&A 방어, 객관적 공수 및 총 소유 비용(TCO) 산정**을 체계적으로 수행하기 위한 실무 지침서입니다.
+> **개요:** 본 가이드는 고객사의 제안요청서(RFP)가 접수되었을 때, 개발 및 기술지원 조직이 영업 조직을 신속히 뒷받침하여 **비밀유지협약(NDA) 체결, 입찰 타당성 심의(Go/No-Go), RFP 요구사항 분석, 기술 제안서 작성, 영업 데모용 프로토타입(PoC) 제작, 제안 발표(PT) Q&A 방어, 공식 견적 및 원가 산정**을 체계적으로 수행하기 위한 실무 지침서입니다.
 
 ::: tip 관련 상위 및 실무 가이드
-* **[사업 전 주기 표준 문서 체계 및 납품·관리 실무 가이드](./enterprise-business-documents.md)**: 계약, 행정, 설계, 검수, 대금 청구 문서 표준
-* **[RFP 수주부터 오픈까지 사업 전 주기 운영 방법론](./enterprise-project-lifecycle.md)**: 전체 사업 생애주기 프로세스
-* **[단계별 실행 항목 및 실무 실행 가이드 (SOP)](./enterprise-action-items-guide.md)**: 단계별 구체적 Action Item 및 절차
+* **[엠파시 사업 및 개발 방법론 개요](./enterprise-project-lifecycle.md)**: 사업 전 주기 6단계 라이프사이클 총괄
+* **[엠파시 사업 전 주기 표준 문서 체계 및 납품·관리 실무 가이드](./enterprise-business-documents.md)**: 계약, 행정, 설계, 검수, 대금 청구 문서 표준
+* **[엠파시 단계별 실행 항목 및 실무 실행 가이드 (SOP)](./enterprise-action-items-guide.md)**: 단계별 구체적 Action Item 및 절차
 * **[상황별 실전 프롬프트 모음집](./ai-sdlc-prompt-recipes.md)**: 실무 단계별 즉시 복사 템플릿
 :::
 

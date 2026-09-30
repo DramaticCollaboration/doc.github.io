@@ -1,13 +1,13 @@
 ---
-title: 사업 전 주기 단계별 실행 항목(Action Items) 및 실무 실행 가이드 (SOP)
+title: 엠파시 단계별 실행 항목(Action Items) 및 실무 실행 가이드 (SOP)
 description: RFP 분석부터 제안, 착수, 아키텍처 설계, 구현, 4단계 검증, 배포 및 인수인계에 이르는 사업 전 주기 단계별 구체적인 Action Item과 실무 실행 절차(SOP)를 제공합니다.
 head:
   - - meta
     - name: keywords
-      content: Action Item, 실무 실행 가이드, SOP, Go No-Go, RFP 분석, 기술 제안서, WBS, DDL, OpenAPI, 자가 치유, UAT, 인수인계, SyncVerse
+      content: Action Item, 실무 실행 가이드, SOP, Go No-Go, RFP 분석, 기술 제안서, WBS, DDL, OpenAPI, 자가 치유, UAT, 인수인계, 엠파시, Empasy
   - - meta
     - property: og:title
-      content: 사업 전 주기 단계별 실행 항목(Action Items) 및 실무 실행 가이드 (SOP)
+      content: 엠파시 단계별 실행 항목(Action Items) 및 실무 실행 가이드 (SOP)
   - - meta
     - property: og:description
       content: 프로젝트 단계마다 실무자가 바로 열어서 따라 할 수 있는 구체적인 실행 절차 지침서
@@ -17,16 +17,17 @@ head:
   - - meta
     - property: og:url
       content: https://doc.empasy.com/agile/enterprise-action-items-guide.html
-sort: 92
+sort: 91
 ---
 
-# 사업 전 주기 단계별 실행 항목(Action Items) 및 실무 실행 가이드 (SOP)
+# 엠파시 단계별 실행 항목(Action Items) 및 실무 실행 가이드 (SOP)
 
 > **개요:** 본 가이드는 영업 제안부터 프로젝트 오픈까지 **각 단계에서 담당자가 '무엇을(Action Item)', '어떤 도구를 사용하여', '어떤 순서로 실행하고', '어떻게 합격 여부를 판정하는지'**를 구체적으로 규정한 실무 표준 운영 절차(SOP: Standard Operating Procedures)입니다.
 
 ::: tip 관련 상위 및 실무 가이드 바로가기
-* **[사업 전 주기 표준 문서 체계 및 납품·관리 실무 가이드](./enterprise-business-documents.md)**: 계약, 행정, 설계, 검수, 대금 청구 문서 표준
-* **[사업 전 주기 운영 방법론 개요 (RFP to Go-Live)](./enterprise-project-lifecycle.md)**: 전 주기 운영 및 조직 협업 가이드
+* **[사업 표준 문서 양식 통합 다운로드 센터](./enterprise-document-templates.md)**: Word, PPT, Excel, Markdown 35종 템플릿 및 일괄 ZIP 다운로드
+* **[엠파시 사업 및 개발 방법론 개요 (RFP to Go-Live)](./enterprise-project-lifecycle.md)**: 전 주기 운영 및 조직 협업 가이드
+* **[엠파시 사업 전 주기 표준 문서 체계 및 납품·관리 실무 가이드](./enterprise-business-documents.md)**: 계약, 행정, 설계, 검수, 대금 청구 문서 표준
 * **[영업 지원 및 제안 단계 실무 가이드 (Pre-sales)](./presales-ai-playbook.md)**: RFP 분석, 제안서 작성, PoC 데모 제작, 공수 산정
 * **[개발 생명주기 개요 (AI-SDLC)](./ai-driven-development.md)**: 5단계 개발 프로세스 상세
 * **[상황별 실전 프롬프트 모음집 (치트시트)](./ai-sdlc-prompt-recipes.md)**: 실무 단계별 즉시 복사 템플릿
