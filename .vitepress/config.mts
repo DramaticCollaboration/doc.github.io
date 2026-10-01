@@ -147,15 +147,29 @@ new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
         ]
       },
       {
-        text: '사업·개발 방법론',
+        text: '사업 및 개발 방법론',
+        activeMatch: "^/methodology/",
+        items: [
+          { link: "/methodology/", text: '방법론 종합 포털 (Overview)' },
+          { link: "/methodology/enterprise-project-lifecycle", text: '사업 전 주기 총괄 (Lifecycle)' },
+          { link: "/methodology/enterprise-document-templates", text: '표준 문서 양식 다운로드 (122종)' },
+          { link: "/methodology/enterprise-business-documents", text: '사업 표준 산출물 관리 (SOP)' },
+          { link: "/methodology/enterprise-action-items-guide", text: '단계별 실행 가이드 (Action Items)' },
+          { link: "/methodology/presales-ai-playbook", text: '사전영업 & 제안 플레이북' },
+          { link: "/methodology/ai-driven-development", text: 'AI 개발 생명주기 (AI-SDLC)' }
+        ]
+      },
+      {
+        text: '애자일',
         activeMatch: "^/agile/",
         items: [
-          { link: "/agile/enterprise-project-lifecycle", text: '사업 전 주기 방법론 (Lifecycle)' },
-          { link: "/agile/enterprise-document-templates", text: '표준 문서 양식 센터 (35종 서식)' },
-          { link: "/agile/enterprise-business-documents", text: '표준 산출물 관리 가이드 (Docs SOP)' },
-          { link: "/agile/enterprise-action-items-guide", text: '단계별 실행 가이드 (Action Items)' },
-          { link: "/agile/presales-ai-playbook", text: '영업 지원 & 제안 플레이북 (Pre-sales)' },
-          { link: "/agile/", text: '애자일 & 스크럼반 체계 (Agile)' }
+          { link: "/agile/", text: '애자일 공학 포털 (Overview)' },
+          { link: "/agile/scrumban", text: '스크럼반 운영 체계' },
+          { link: "/agile/gitFlow", text: 'Git Flow 브랜치 전략' },
+          { link: "/agile/gitCommitLog", text: 'Git 커밋 로그 컨벤션' },
+          { link: "/agile/dailyScrum", text: '데일리 스크럼 가이드' },
+          { link: "/agile/createIssue", text: '이슈 생성 및 관리 원칙' },
+          { link: "/agile/xp_scrum_kanban", text: '방법론 비교 & 용어사전' }
         ]
       },
       {
@@ -181,6 +195,8 @@ new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
     ],
 
     sidebar: {
+        '/methodology/': generateKrSidebar('methodology'),
+        '/agile/': generateKrSidebar('agile'),
         '/ecosystem/': generateKrSidebar('ecosystem'),
         '/syncverse/': generateKrSidebar('syncverse'),
         '/syncinsight/': generateKrSidebar('syncinsight'),
@@ -192,7 +208,6 @@ new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
         '/syncboot/': generateKrSidebar('syncboot'),
         '/syncadmin/': generateKrSidebar('syncadmin'),
         '/syncapim/': generateKrSidebar('syncapim'),
-        '/agile/': generateKrSidebar('agile'),
         '/logs/': generateKrSidebar('logs'),
         '/study/': generateKrSidebar('study'),
     },

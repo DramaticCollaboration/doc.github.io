@@ -140,15 +140,21 @@ const MODULE_CATEGORY_RULES: Record<string, Array<{ group: string; match: (name:
       match: (name) => ['self-healing-and-vision', 'mcp-and-cicd', 'account', 'enterprise-security', 'glossary'].includes(name),
     },
   ],
-  agile: [
+  methodology: [
     {
-      group: '엠파시 사업 및 개발 방법론',
+      group: '사업 및 프로젝트 관리',
       match: (name) => [
+        'index',
         'enterprise-project-lifecycle',
         'enterprise-action-items-guide',
         'enterprise-business-documents',
         'enterprise-document-templates',
         'presales-ai-playbook',
+      ].includes(name),
+    },
+    {
+      group: 'AI 개발 생명주기 (AI-SDLC)',
+      match: (name) => [
         'ai-driven-development',
         'ai-sdlc-01-requirements',
         'ai-sdlc-02-architecture',
@@ -158,17 +164,19 @@ const MODULE_CATEGORY_RULES: Record<string, Array<{ group: string; match: (name:
         'ai-sdlc-prompt-recipes',
       ].includes(name),
     },
+  ],
+  agile: [
     {
-      group: '애자일 프로세스',
-      match: (name) => ['index', 'guide', 'activity', 'checklistAndProcedure', 'dailyScrum'].includes(name),
+      group: '애자일 & 스크럼반 운영',
+      match: (name) => ['index', 'scrumban', 'guide', 'activity', 'dailyScrum', 'storyPointGuide', 'checklistAndProcedure'].includes(name),
     },
     {
-      group: '개발 워크플로우',
+      group: '개발 공학 & 형상관리',
       match: (name) => ['gitFlow', 'gitCommitLog', 'createIssue', 'PrinciplesForIssueUsage'].includes(name),
     },
     {
-      group: '산정 & 프레임워크',
-      match: (name) => ['storyPointGuide', 'xp_scrum_kanban', 'glossaryOfTerms'].includes(name),
+      group: '프레임워크 & 용어',
+      match: (name) => ['xp_scrum_kanban', 'glossaryOfTerms'].includes(name),
     },
   ],
   syncllm: [
@@ -529,7 +537,8 @@ function formatFilenameAsTitle(filename: string): string {
     synceta: 'SyncETA',
     syncadmin: 'SyncAdmin',
     syncapim: 'SyncAPIM',
-    agile: 'Agile',
+    methodology: '사업 및 개발 방법론',
+    agile: '애자일',
     study: 'Study',
     logs: 'Logs',
   }
