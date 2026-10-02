@@ -179,6 +179,18 @@ new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
           { link: "/study/", text: '공부방 (R&D 연구소)' },
           { link: "/logs/", text: '작업 로그 (일지)' },
           {
+            text: '💼 SyncSeries 사업 제안서 (PDF, 8P)',
+            link: '/downloads/SyncSeries_Business_Proposal_v1.0.pdf',
+            target: '_blank',
+            rel: 'noopener noreferrer',
+          },
+          {
+            text: '📑 SyncSeries 솔루션 브로셔 (PDF, 4P)',
+            link: '/downloads/SyncSeries_Brochure_v1.0.pdf',
+            target: '_blank',
+            rel: 'noopener noreferrer',
+          },
+          {
             text: 'SyncETA 다운로드',
             link: 'https://empasy.io/ko/download_eta.html',
             target: '_blank',

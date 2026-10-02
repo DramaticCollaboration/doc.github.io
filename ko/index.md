@@ -10,9 +10,15 @@ hero:
       - text: 시작하기
         link: /syncverse/
         type: primary
+      - text: 💼 사업 제안서 (PDF)
+        link: /downloads/SyncSeries_Business_Proposal_v1.0.pdf
+        type: primary
+      - text: 📑 솔루션 브로셔 (PDF)
+        link: /downloads/SyncSeries_Brochure_v1.0.pdf
+        type: secondary
       - text: 엠파시 사업 및 개발 방법론
         link: /methodology/
-        type: primary
+        type: secondary
       - text: 모든 제품 보기
         link: '#sync-series-제품군'
         type: secondary
