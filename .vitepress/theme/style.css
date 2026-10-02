@@ -52,6 +52,8 @@ img {
     --vp-font-family-mono:
         "JetBrains Mono", ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas, Liberation Mono,
         monospace, var(--vp-font-family-base);
+
+    --vp-sidebar-width: 300px;
 }
 
 .dark {
@@ -214,9 +216,10 @@ img {
 }
 
 .VPSidebarItem .text {
-    white-space: nowrap !important;
-    overflow: hidden !important;
-    text-overflow: ellipsis !important;
+    line-height: 1.45 !important;
+    word-break: keep-all !important;
+    overflow-wrap: break-word !important;
+    white-space: normal !important;
 }
 
 .VPSidebarItem .link:hover {

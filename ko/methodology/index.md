@@ -17,7 +17,7 @@ head:
   - - meta
     - property: og:url
       content: https://doc.empasy.com/methodology/
-sort: 90
+sort: 80
 ---
 
 # 엠파시 사업 및 개발 방법론 종합 포털
