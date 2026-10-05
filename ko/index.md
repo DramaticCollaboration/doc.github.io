@@ -4,7 +4,7 @@ layout: home
 
 hero:
     name: "엠파시 제품 가이드"
-    text: "Boon to business by agility."
+    text: "살아 있는 소프트웨어는 엠파시가 만듭니다"
     tagline: "'변화에 최적화된 솔루션', Sync Series로 비즈니스 민첩성(Agility)을 극대화합니다."
     actions:
       - text: 시작하기

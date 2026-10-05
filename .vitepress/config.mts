@@ -124,16 +124,16 @@ new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
   },
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
-    siteTitle: "살아 있는 소프트웨어는 엠파시가 만듭니다",
+    siteTitle: "Docs",
     logo: { light: '/images/logo.svg', dark: '/images/logo-dark.svg' }, // Navigation bar logo
 
     nav: [
       { text: "홈", link: "/" },
-      { text: "AI 생태계", link: "/ecosystem/", activeMatch: "^/ecosystem/" },
       {
-        text: 'Sync Series',
-        activeMatch: "^/(syncverse|syncinsight|synceta|synccrawl|syncboot|synccms|syncshop|syncllm|syncadmin|syncapim)/",
+        text: '제품군 (Sync Series)',
+        activeMatch: "^/(ecosystem|syncverse|syncinsight|synceta|synccrawl|syncboot|synccms|syncshop|syncllm|syncadmin|syncapim)/",
         items: [
+          { link: "/ecosystem/", text: 'AI 에이전트 생태계 개요' },
           { link: "/syncverse/", text: 'SyncVerse (통합 관제탑)' },
           { link: "/syncinsight/", text: 'SyncInsight (의사결정 분석)' },
           { link: "/synceta/", text: 'SyncETA (자동화 테스트)' },
@@ -146,14 +146,20 @@ new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
           { link: "/syncapim/", text: '[아카이브] SyncAPIM' }
         ]
       },
-      { text: "원천기술 & 특허", link: "/patents/", activeMatch: "^/patents/" },
-      { text: "인프라 & 보안", link: "/infra/", activeMatch: "^/infra/" },
-      { text: "개발자 센터", link: "/sdk/", activeMatch: "^/sdk/" },
-      { text: "운영 가이드", link: "/guide/", activeMatch: "^/guide/" },
       {
-        text: '방법론 & 애자일',
-        activeMatch: "^/(methodology|agile)/",
+        text: '기술 & 아키텍처',
+        activeMatch: "^/(patents|infra)/",
         items: [
+          { link: "/patents/", text: '원천기술 & 특허 (Patents)' },
+          { link: "/infra/", text: '인프라 & 엔터프라이즈 보안 (Infra & Security)' }
+        ]
+      },
+      {
+        text: '개발 & 운영',
+        activeMatch: "^/(sdk|guide|methodology|agile)/",
+        items: [
+          { link: "/sdk/", text: '개발자 센터 (Live SDK)' },
+          { link: "/guide/", text: '운영 가이드 (Operations)' },
           { link: "/methodology/", text: '사업 방법론 종합 포털' },
           { link: "/methodology/enterprise-project-lifecycle", text: '사업 전 주기 총괄 (Lifecycle)' },
           { link: "/methodology/enterprise-document-templates", text: '표준 문서 양식 (122종)' },
