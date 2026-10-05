@@ -15,7 +15,7 @@ SyncSeries의 모든 에이전트는 Anthropic의 오픈 표준인 **Model Conte
 
 ---
 
-## 2. 메시지 봉투 구조 (Message Envelope)
+## 2. 메시지 엔벨로프 규격 (Message Envelope)
 
 모든 MCP 통신은 JSON-RPC 2.0 표준을 엄격히 준수합니다.
 

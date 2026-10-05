@@ -11,7 +11,7 @@ description: 시스템 안전성을 보장하는 Human-in-the-Loop(HITL) 3단계
 ## 1. 엔터프라이즈 안전 원칙
 
 자율 운영 AI 생태계에서 가장 경계해야 할 위험은 **예측하지 못한 부작용(Side Effect)과 데이터 오염**입니다.  
-SyncSeries는 자율성을 극대화하되 위험성을 완벽히 통제하기 위해 **3단계 HITL 안전 등급(Safety Tiers)**과 **Saga 보상 트랜잭션 패턴**을 전사 표준으로 운영합니다.
+SyncSeries는 자율성을 극대화하되 위험성을 체계적으로 통제하기 위해 **3단계 HITL 안전 등급(Safety Tiers)**과 **Saga 보상 트랜잭션 패턴**을 전사 표준으로 운영합니다.
 
 ---
 
@@ -33,7 +33,7 @@ flowchart TD
 
 | 등급 | 위험 수준 | 대상 작업 예시 | 승인 정책 |
 |:---|:---|:---|:---|
-| **Tier 1 (Safe)** | 무해 (Read-Only) | 통계 조회, 로그 검색, What-If 시뮬레이션, RAG 문서 탐색 | **완전 자율 실행** (0초 대기) |
+| **Tier 1 (Safe)** | 무해 (Read-Only) | 통계 조회, 로그 검색, What-If 시뮬레이션, RAG 문서 탐색 | **대기 없는 즉시 자율 실행 (Zero-Wait)** |
 | **Tier 2 (Low Risk)** | 경미 (Soft Mutation) | 스테이징 콘텐츠 등록, 개발 서버 브랜치 생성, 임시 파일 정리 | **사후 통보** (Slack/알림 센터) |
 | **Tier 3 (High Risk)** | 파괴적 (Hard Mutation) | DB DDL 마이그레이션, 회원 권한 승격, 결제/할인 정책 변경 | **사전 관리자 승인 필수** (HITL Gate) |
 
@@ -67,7 +67,7 @@ sequenceDiagram
     SV->>SB: Comp 1: DB 스키마 롤백 마이그레이션 (C1)
     SB-->>SV: 롤백 완료
     
-    Note over SV: 데이터 정합성 100% 보존 완료
+    Note over SV: Saga 보상 트랜잭션을 통한 최종 데이터 일관성(Eventual Consistency) 확보
 ```
 
 ### 3.1 멱등성(Idempotency) 보장

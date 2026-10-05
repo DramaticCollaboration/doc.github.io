@@ -55,7 +55,7 @@ public class SchemaEngineeringAgent {
 
         ReActAgent agent = ReActAgent.builder()
                 .name("SyncBoot-SchemaEngineer")
-                .sysPrompt("당신은 엔터프라이즈급 DDD 데이터베이스 스키마 및 Spring Boot 엔티티를 전문 설계하는 엔지니어링 에이전트입니다.")
+                .sysPrompt("엔터프라이즈급 DDD 데이터베이스 스키마 및 Spring Boot 엔티티를 전문 설계하는 엔지니어링 에이전트입니다.")
                 .toolBox(schemaToolBox)
                 .memory(agentMemory)
                 .maxIterations(5)

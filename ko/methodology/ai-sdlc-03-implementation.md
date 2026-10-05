@@ -124,7 +124,7 @@ AI에게 프로젝트 전체를 제한 없이 수정하도록 맡기면 의도�
 ```markdown
 # 프로젝트 루트의 .cursorrules 파일에 설정하여 기본 코딩 규칙을 자동 안내합니다:
 
-당신은 프로젝트의 개발 표준을 준수하는 에이전트입니다.
+본 에이전트는 프로젝트의 개발 표준을 엄격히 준수하는 엔지니어링 에이전트입니다.
 아래 코딩 규칙을 지켜주세요:
 1. Java:
    - DTO, Entity, Service에 Lombok을 적용합니다 (@Getter, @Builder, @RequiredArgsConstructor).

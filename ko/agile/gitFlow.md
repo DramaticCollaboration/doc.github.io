@@ -20,7 +20,7 @@ head:
 sort: 4000
 ---
 
-# 🚀 Git Flow 가이드
+# Git Flow 가이드
 
 ## 1. Git Flow란?
 

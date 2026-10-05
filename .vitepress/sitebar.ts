@@ -100,12 +100,16 @@ const MODULE_CATEGORY_RULES: Record<string, Array<{ group: string; match: (name:
       match: (name) => ['index', 'architecture'].includes(name),
     },
     {
-      group: '크롤링 & RAG',
-      match: (name) => ['adaptive-crawling-engine', 'rag-knowledge-pipeline', 'anti-bot-and-scaling'].includes(name),
+      group: '수집 엔진 & 콘솔',
+      match: (name) => ['adaptive-crawling-engine', 'smart-crawling-console', 'distributed-agent-topology'].includes(name),
     },
     {
-      group: '보안 & API',
-      match: (name) => ['enterprise-security-governance', 'api-reference', 'enterprise-faq'].includes(name),
+      group: '런타임 안정성 & 보안',
+      match: (name) => ['session-arbitration', 'abac-data-security', 'anti-bot-and-scaling', 'enterprise-security-governance'].includes(name),
+    },
+    {
+      group: 'RAG 지식 & API',
+      match: (name) => ['rag-knowledge-pipeline', 'api-reference', 'enterprise-faq'].includes(name),
     },
   ],
   syncinsight: [
@@ -128,15 +132,15 @@ const MODULE_CATEGORY_RULES: Record<string, Array<{ group: string; match: (name:
       match: (name) => ['index', 'quickstart', 'architecture'].includes(name),
     },
     {
-      group: '테스트 & 시나리오',
-      match: (name) => ['project', 'story', 'scenario-create', 'scenario-run'].includes(name),
+      group: '웹 테스트 & 시나리오',
+      match: (name) => ['project', 'story', 'scenario-create', 'scenario-run', 'dataset', 'collection', 'dashboard'].includes(name),
     },
     {
-      group: '데이터 & 대시보드',
-      match: (name) => ['dataset', 'collection', 'dashboard'].includes(name),
+      group: '모바일 테스트 엔지니어링',
+      match: (name) => ['mobile-testing-architecture', 'mobile-dual-engine', 'mobile-live-mirroring', 'device-farm-scheduler'].includes(name),
     },
     {
-      group: 'AI 자동화 & 보안',
+      group: 'AI 자동화 & 거버넌스',
       match: (name) => ['self-healing-and-vision', 'mcp-and-cicd', 'account', 'enterprise-security', 'glossary'].includes(name),
     },
   ],
@@ -229,6 +233,58 @@ const MODULE_CATEGORY_RULES: Record<string, Array<{ group: string; match: (name:
       match: (name) => ['20260225_redis_redlock_sse_saga_orchestration', '20260302_mybatis_metaobject_tenant_context_fix'].includes(name),
     },
   ],
+  patents: [
+    {
+      group: '특허 체계',
+      match: (name) => ['index'].includes(name),
+    },
+    {
+      group: '등록 완료 특허',
+      match: (name) => ['registered-web-action-recording'].includes(name),
+    },
+    {
+      group: '출원 준비 특허 (우선심사)',
+      match: (name) => ['04-semantic-dom-self-healing', '07-four-stage-wizard-build', '21-mobile-gesture-nlp', '22-a2a-telemetry-circuit'].includes(name),
+    },
+  ],
+  infra: [
+    {
+      group: '인프라 아키텍처',
+      match: (name) => ['index'].includes(name),
+    },
+    {
+      group: '폐쇄망 & AI 보안',
+      match: (name) => ['onpremise-llm-gpu', 'ai-safety-guardrails'].includes(name),
+    },
+    {
+      group: '운영 & 고가용성',
+      match: (name) => ['k8s-gitops-pipeline', 'disaster-recovery'].includes(name),
+    },
+  ],
+  sdk: [
+    {
+      group: '시작하기',
+      match: (name) => ['index'].includes(name),
+    },
+    {
+      group: '개발 & 인터페이스',
+      match: (name) => ['custom-mcp-tool', 'sync-sdk-reference'].includes(name),
+    },
+    {
+      group: '품질 검증',
+      match: (name) => ['zero-mock-testing'].includes(name),
+    },
+  ],
+  guide: [
+    {
+      group: '운영 개요',
+      match: (name) => ['index'].includes(name),
+    },
+    {
+      group: '실무 거버넌스',
+      match: (name) => ['hitl-approval-operations', 'finops-budget-operations'].includes(name),
+    },
+  ],
 }
 
 // Concise 1-line standard sidebar titles
@@ -303,6 +359,10 @@ const DEFAULT_SIDEBAR_SHORT_TITLES: Record<string, Record<string, string>> = {
     index: '개요',
     architecture: '시스템 아키텍처',
     'adaptive-crawling-engine': '적응형 크롤링',
+    'smart-crawling-console': '스마트 크롤링 콘솔',
+    'distributed-agent-topology': '분산 에이전트 토폴로지',
+    'session-arbitration': '세션 중재 & 안정성',
+    'abac-data-security': 'ABAC 데이터 보안',
     'rag-knowledge-pipeline': 'RAG 지식 파이프라인',
     'anti-bot-and-scaling': '안티봇 & 분산 스케일링',
     'enterprise-security-governance': '보안 및 거버넌스',
@@ -332,6 +392,10 @@ const DEFAULT_SIDEBAR_SHORT_TITLES: Record<string, Record<string, string>> = {
     dataset: '데이터셋 관리',
     collection: '컬렉션 관리',
     dashboard: '품질 대시보드',
+    'mobile-testing-architecture': '모바일 E2E 아키텍처',
+    'mobile-dual-engine': '듀얼 자동화 엔진 명세',
+    'mobile-live-mirroring': '초저지연 미러링 & 캡처',
+    'device-farm-scheduler': '디바이스 팜 스케줄러',
     'self-healing-and-vision': '자가 치유 & 비전',
     'mcp-and-cicd': 'MCP & CI/CD',
     account: '계정 및 권한',
@@ -394,6 +458,32 @@ const DEFAULT_SIDEBAR_SHORT_TITLES: Record<string, Record<string, string>> = {
     '20260310_desktop_codesign_notarization_pipeline': '[SyncEta] 코드 서명 & 공증 파이프라인',
     '20250827_debugCrash': '디버그 크래시 분석',
     '20250827_electronDebug': 'Electron 디버깅 일지',
+  },
+  patents: {
+    index: '특허 체계 개요',
+    'registered-web-action-recording': '[등록특허] 웹 레코딩 & 자연어 QA',
+    '04-semantic-dom-self-healing': '[04호] 크롤링 셀렉터 자가치유',
+    '07-four-stage-wizard-build': '[07호] 4단계 위저드 & 빌드 치유',
+    '21-mobile-gesture-nlp': '[21호] 모바일 제스처 & 자연어 QA',
+    '22-a2a-telemetry-circuit': '[22호] A2A 서킷 브레이커',
+  },
+  infra: {
+    index: '인프라 개요',
+    'onpremise-llm-gpu': '온프레미스 GPU 서빙',
+    'ai-safety-guardrails': 'AI 보안 & 가드레일',
+    'k8s-gitops-pipeline': 'K8s & GitOps 파이프라인',
+    'disaster-recovery': '재해 복구 & DR',
+  },
+  sdk: {
+    index: '개발자 센터 개요',
+    'custom-mcp-tool': '커스텀 MCP 도구 개발',
+    'sync-sdk-reference': 'Sync SDK 레퍼런스',
+    'zero-mock-testing': 'Zero-Mock 테스트 하네스',
+  },
+  guide: {
+    index: '운영 가이드 개요',
+    'hitl-approval-operations': '다단계 결재 & 감사',
+    'finops-budget-operations': 'FinOps 예산 & 비용 관리',
   },
 }
 

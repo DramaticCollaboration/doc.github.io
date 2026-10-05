@@ -49,7 +49,7 @@ pip install git+https://github.com/QwenLM/Qwen2-VL.git
   - LoRA Fine-tuning: 24GB+ (RTX 4090)
   - QLoRA: 16GB+ (V100 16GB)
 
-## 📊 데이터셋 형식
+## 데이터셋 형식
 
 ### 1. **표준 데이터 형식**
 
@@ -399,7 +399,7 @@ scheduler = get_cosine_schedule_with_warmup(
 )
 ```
 
-##  특정 태스크 파인튜닝 예제
+## 특정 태스크 파인튜닝 예제
 
 ### 1. **이미지 캡셔닝**
 
@@ -436,7 +436,7 @@ def prepare_vqa_data(questions_file, annotations_file, image_dir):
     return vqa_dataset
 ```
 
-## 📊 모니터링 및 로깅
+## 모니터링 및 로깅
 
 ```python
 # wandb 연동
@@ -452,7 +452,7 @@ training_args = TrainingArguments(
 )
 ```
 
-## 🛠️ 문제 해결
+## 문제 해결
 
 ### **Common Issues:**
 

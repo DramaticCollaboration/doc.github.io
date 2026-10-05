@@ -83,7 +83,7 @@ public class AutonomousEntityBuilderService {
 
         ReActAgent agent = ReActAgent.builder()
                 .name("SyncBoot-DomainEngineer")
-                .sysPrompt("당신은 Spring Boot 3.x, Java 21, JPA 기반 엔터프라이즈 마이크로서비스를 설계하는 수석 아키텍트입니다. " +
+                .sysPrompt("Spring Boot 3.x, Java 21, JPA 기반 엔터프라이즈 마이크로서비스를 전문 설계하는 수석 아키텍트 에이전트입니다. " +
                            "모든 Entity와 DTO는 반드시 Project Lombok 애너테이션(@Getter, @Builder, @NoArgsConstructor, @AllArgsConstructor)을 적용해야 합니다.")
                 .toolBox(engineeringToolBox)
                 .maxIterations(4)

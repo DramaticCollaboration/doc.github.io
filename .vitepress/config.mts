@@ -146,30 +146,21 @@ new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
           { link: "/syncapim/", text: '[아카이브] SyncAPIM' }
         ]
       },
+      { text: "원천기술 & 특허", link: "/patents/", activeMatch: "^/patents/" },
+      { text: "인프라 & 보안", link: "/infra/", activeMatch: "^/infra/" },
+      { text: "개발자 센터", link: "/sdk/", activeMatch: "^/sdk/" },
+      { text: "운영 가이드", link: "/guide/", activeMatch: "^/guide/" },
       {
-        text: '사업 및 개발 방법론',
-        activeMatch: "^/methodology/",
+        text: '방법론 & 애자일',
+        activeMatch: "^/(methodology|agile)/",
         items: [
-          { link: "/methodology/", text: '방법론 종합 포털 (Overview)' },
+          { link: "/methodology/", text: '사업 방법론 종합 포털' },
           { link: "/methodology/enterprise-project-lifecycle", text: '사업 전 주기 총괄 (Lifecycle)' },
-          { link: "/methodology/enterprise-document-templates", text: '표준 문서 양식 다운로드 (122종)' },
-          { link: "/methodology/enterprise-business-documents", text: '사업 표준 산출물 관리 (SOP)' },
-          { link: "/methodology/enterprise-action-items-guide", text: '단계별 실행 가이드 (Action Items)' },
-          { link: "/methodology/presales-ai-playbook", text: '사전영업 & 제안 플레이북' },
-          { link: "/methodology/ai-driven-development", text: 'AI 개발 생명주기 (AI-SDLC)' }
-        ]
-      },
-      {
-        text: '애자일',
-        activeMatch: "^/agile/",
-        items: [
-          { link: "/agile/", text: '애자일 공학 포털 (Overview)' },
+          { link: "/methodology/enterprise-document-templates", text: '표준 문서 양식 (122종)' },
+          { link: "/methodology/ai-driven-development", text: 'AI 개발 생명주기 (AI-SDLC)' },
+          { link: "/agile/", text: '애자일 공학 포털' },
           { link: "/agile/scrumban", text: '스크럼반 운영 체계' },
-          { link: "/agile/gitFlow", text: 'Git Flow 브랜치 전략' },
-          { link: "/agile/gitCommitLog", text: 'Git 커밋 로그 컨벤션' },
-          { link: "/agile/dailyScrum", text: '데일리 스크럼 가이드' },
-          { link: "/agile/createIssue", text: '이슈 생성 및 관리 원칙' },
-          { link: "/agile/xp_scrum_kanban", text: '방법론 비교 & 용어사전' }
+          { link: "/agile/gitFlow", text: 'Git Flow 브랜치 전략' }
         ]
       },
       {
@@ -179,13 +170,13 @@ new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
           { link: "/study/", text: '공부방 (R&D 연구소)' },
           { link: "/logs/", text: '작업 로그 (일지)' },
           {
-            text: '💼 SyncSeries 사업 제안서 (PDF, 8P)',
+            text: 'SyncSeries 사업 제안서 (PDF)',
             link: '/downloads/SyncSeries_Business_Proposal_v1.0.pdf',
             target: '_blank',
             rel: 'noopener noreferrer',
           },
           {
-            text: '📑 SyncSeries 솔루션 브로셔 (PDF, 4P)',
+            text: 'SyncSeries 솔루션 브로셔 (PDF)',
             link: '/downloads/SyncSeries_Brochure_v1.0.pdf',
             target: '_blank',
             rel: 'noopener noreferrer',
@@ -207,6 +198,10 @@ new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
     ],
 
     sidebar: {
+        '/patents/': generateKrSidebar('patents'),
+        '/infra/': generateKrSidebar('infra'),
+        '/sdk/': generateKrSidebar('sdk'),
+        '/guide/': generateKrSidebar('guide'),
         '/methodology/': generateKrSidebar('methodology'),
         '/agile/': generateKrSidebar('agile'),
         '/ecosystem/': generateKrSidebar('ecosystem'),

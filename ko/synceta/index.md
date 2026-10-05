@@ -114,8 +114,18 @@ sequenceDiagram
 - [데이터셋 관리](./dataset) - Excel 연동, 입력값 치환(Data-Driven Testing), 경계값 데이터 세트
 - [대시보드 및 결과 분석](./dashboard) - 실행 통계, 콘솔 에러 수집, 실패 시점 DOM 스냅샷 및 녹화 영상 분석
 
-### 3. 고급 연동 및 엔터프라이즈
+### 3. 모바일 테스트 엔지니어링
+- [모바일 E2E 시스템 아키텍처](./mobile-testing-architecture) - Android & iOS 실기기 캡처 및 회귀 테스트 전체 아키텍처
+- [듀얼 자동화 엔진 명세](./mobile-dual-engine) - Playwright Android 및 Appium 3.7+ 듀얼 엔진 구조
+- [초저지연 미러링 & 캡처](./mobile-live-mirroring) - Direct MJPEG 60 FPS 화면 스트리밍 및 비동기 듀얼-트랙 캡처
+- [디바이스 팜 스케줄러](./device-farm-scheduler) - Redis 분산 락 기반 무인 야간 배치 및 시각적 회귀 검증
+
+### 4. 고급 연동 및 엔터프라이즈
 - [시각적 회귀 및 자가 치유](./self-healing-and-vision) - Vision AI 레이아웃 검증 및 선택자 보정 절차
 - [MCP 프로토콜 및 CI/CD 연동](./mcp-and-cicd) - HTTP SSE 표준 Tool Schema 및 파이프라인 연동 규격
 - [엔터프라이즈 보안 및 온프레미스](./enterprise-security) - 로컬 LLM 연동, 사내 망분리 지원, 데이터 마스킹
 - [기술 용어 사전](./glossary) - Record, Scenario, Collection, Story, MCP 등 용어 정의
+
+### 5. 핵심 원천 특허
+- [대한민국 등록 특허 제10-2025-0125736호](../patents/registered-web-action-recording) - 웹 브라우저 동작 레코딩 기반 AI 자연어 테스트케이스 자동화
+- [출원 준비 특허 제21호](../patents/21-mobile-gesture-nlp) - 모바일 제스처 분석 및 자연어 테스트 자동화 시스템

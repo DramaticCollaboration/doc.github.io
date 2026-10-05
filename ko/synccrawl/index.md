@@ -69,11 +69,16 @@ graph LR
 
 ---
 
-## 세부 문서 안내
-
 - [시스템 아키텍처 & Clean Architecture](./architecture.md): 4계층 분산 아키텍처와 컴포넌트별 상호작용
 - [적응형 크롤링 & AI 자율 복구 엔진](./adaptive-crawling-engine.md): Playwright MCP 연동 및 셀렉터 복구 동작 원리
+- [스마트 크롤링 콘솔 가이드](./smart-crawling-console.md): Vue 3 + Vite 기반 운영 콘솔 아키텍처 및 실시간 세션 관제
+- [3계층 분산 에이전트 토폴로지](./distributed-agent-topology.md): 서버, 브라우저 워커, AI 추론 워커 구성 및 쿠버네티스 배포
+- [동시 세션 중재 및 안정성 가이드](./session-arbitration.md): 다중 로그인 세션 충돌 방지 및 백색 화면 오탐 제거
+- [속성 기반 접근 제어 (ABAC) & 데이터 보안](./abac-data-security.md): 주체/자원/환경 3단계 정책 평가 및 토큰 감사 체계
 - [RAG 지식 구축 & 벡터 저장소 연동](./rag-knowledge-pipeline.md): 데이터 정제, 청킹, 임베딩 및 Vector DB 파이프라인
 - [엔터프라이즈 보안 & 폐쇄망 거버넌스](./enterprise-security-governance.md): SSRF 차단, Air-Gapped 배포 및 RBAC 감사 추적
 - [REST API & MCP Tool 레퍼런스](./api-reference.md): 작업 제어, 쿼리, 결과 조회를 위한 API 명세
 - [엔터프라이즈 FAQ & 도입 가이드](./enterprise-faq.md): 사이트 차단 대응, 스케일링 및 주요 질의응답
+
+### 핵심 원천 특허
+- [출원 준비 특허 제04호](../patents/04-semantic-dom-self-healing.md): 시맨틱 DOM 추론 및 비전 기반 웹 크롤링 셀렉터 자가치유 기술 백서

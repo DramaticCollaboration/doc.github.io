@@ -74,7 +74,7 @@ sequenceDiagram
 
 ## 3. Human-in-the-Loop 거버넌스
 
-SyncETA는 AI가 테스트 코드를 임의로 변조하여 발생할 수 있는 거짓 양성(False Positive)을 원천 차단하기 위해 **관리자 승인 거버넌스**를 준수합니다.
+SyncETA는 AI가 테스트 코드를 임의로 변조하여 발생할 수 있는 거짓 양성(False Positive) 발생을 방지하기 위해 **관리자 승인 거버넌스**를 준수합니다.
 
 - **자가 치유 제안 큐(Healing Queue)**: 변경된 UI 요소와 제안된 대체 XPath/Selector를 관리자 화면에 나열합니다.
 - **Before/After 비교 뷰**: 이전 선택자가 가리키던 UI와 현재 제안된 UI를 스크린샷으로 대조하여 검토자가 1클릭으로 승인하거나 거절할 수 있습니다.
