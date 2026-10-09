@@ -5,22 +5,16 @@ layout: home
 hero:
     name: "엠파시 제품 가이드"
     text: "살아 있는 소프트웨어는 엠파시가 만듭니다"
-    tagline: "'변화에 최적화된 솔루션', Sync Series로 비즈니스 개발과 운영을 유연하고 빠르게 지원합니다."
+    tagline: "'변화에 최적화된 솔루션', Sync Series로 시스템 연동과 비즈니스 운영을 유연하고 빠르게 지원합니다."
     actions:
-      - text: 시작하기
+      - text: 빠른 시작
         link: /syncverse/
         type: primary
-      - text: 사업 소개서 (PDF)
-        link: /downloads/SyncSeries_Business_Proposal_v1.0.pdf
-        type: primary
-      - text: 솔루션 안내서 (PDF)
-        link: /downloads/SyncSeries_Brochure_v1.0.pdf
-        type: secondary
-      - text: 프로젝트 방법론
-        link: /methodology/
-        type: secondary
-      - text: 전체 제품 보기
+      - text: 솔루션 둘러보기
         link: '#sync-series-제품군'
+        type: secondary
+      - text: 개발자 센터
+        link: /sdk/
         type: secondary
 
 head:
@@ -42,99 +36,75 @@ head:
 
 features:
   - icon:
-      svg: '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1-2.5-2.5Z"/><path d="M6 6h10"/><path d="M6 10h10"/></svg>'
-    title: 프로젝트 방법론
-    details: RFP 접수, 사전영업, 계약, 아키텍처 설계, 협업 구현, 검증, 최종 검수 및 표준 서식에 이르는 사업 전 주기 운영 가이드
-    link: /methodology/
-    linkText: 방법론 및 표준 서식 바로가기 →
+      svg: '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>'
+    title: 플랫폼 연동 구조 (Ecosystem)
+    details: 표준 MCP 프로토콜 기반 서비스 간 연동 규격 및 전사 3-Layer 아키텍처
+    link: /ecosystem/
+    linkText: 문서 보기 →
   - icon:
       svg: '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><circle cx="19" cy="5" r="2"/><circle cx="5" cy="19" r="2"/><circle cx="19" cy="19" r="2"/><circle cx="5" cy="5" r="2"/><path d="m7 7 3 3"/><path d="m14 14 3 3"/><path d="m14 10 3-3"/><path d="m7 17 3-3"/></svg>'
     title: SyncVerse (통합 관제 센터)
     details: 분산된 도메인 서비스들이 표준 MCP로 연동되어 시스템 운영을 자동화하고 통합 관제하는 중앙 플랫폼
     link: /syncverse/
-    linkText: SyncVerse 문서 바로가기 →
+    linkText: 문서 보기 →
   - icon:
       svg: '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>'
     title: SyncInsight (데이터 분석 및 모니터링)
     details: 시스템 데이터를 실시간 수집·분석하고 자연어 질의로 업무 지표를 도출하는 분석 센터
     link: /syncinsight/
-    linkText: SyncInsight 문서 바로가기 →
+    linkText: 문서 보기 →
   - icon:
       svg: '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 11 3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>'
     title: SyncETA (테스트 자동화)
     details: 코드리스 GUI 테스트 및 Vision 기반 화면 자가치유 파이프라인 제공. 데스크톱 앱(v0.0.33) 배포 중
     link: /synceta/
-    linkText: SyncETA 문서 바로가기 →
+    linkText: 문서 보기 →
   - icon:
       svg: '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>'
     title: SyncBoot (백엔드 프레임워크)
     details: Spring Boot 기반 클린 아키텍처 및 도메인 모델 생성 도구를 제공하는 개발 플랫폼
     link: /syncboot/
-    linkText: SyncBoot 문서 바로가기 →
+    linkText: 문서 보기 →
   - icon:
       svg: '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M3 9h18"/><path d="M9 21V9"/></svg>'
     title: SyncCMS (콘텐츠 관리 시스템)
     details: 비전문가도 편리하게 콘텐츠를 관리하고 Live SDK와 보안 환경을 통해 확장하는 콘텐츠 관리 시스템
     link: /synccms/
-    linkText: SyncCMS 문서 바로가기 →
+    linkText: 문서 보기 →
   - icon:
       svg: '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>'
     title: SyncShop (이커머스 운영 솔루션)
     details: 옴니채널 상거래 관리, 다이내믹 프라이싱, 실시간 재고 관리 및 주문 처리 솔루션
     link: /syncshop/
-    linkText: SyncShop 문서 바로가기 →
+    linkText: 문서 보기 →
   - icon:
       svg: '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/><path d="M3 12c0 1.66 4 3 9 3s9-1.34 9-3"/></svg>'
     title: SyncCrawl (적응형 웹 수집 엔진)
     details: 웹 구조 변경에 유연하게 대응하고 실시간 지식 파이프라인을 구축하여 고신뢰 RAG 답변을 지원하는 수집 엔진
     link: /synccrawl/
-    linkText: SyncCrawl 문서 바로가기 →
+    linkText: 문서 보기 →
   - icon:
       svg: '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="16" height="16" x="4" y="4" rx="2"/><rect width="6" height="6" x="9" y="9" rx="1"/><path d="M15 2v2"/><path d="M15 20v2"/><path d="M2 15h2"/><path d="M2 9h2"/><path d="M20 15h2"/><path d="M20 9h2"/><path d="M9 2v2"/><path d="M9 20v2"/></svg>'
     title: SyncLLM (AI 모델 게이트웨이 & FinOps)
     details: 모델 지능형 라우팅, 실시간 토큰 비용 통제(FinOps), 시맨틱 캐싱 및 엔터프라이즈 PII 마스킹 통합 게이트웨이
     link: /syncllm/
-    linkText: SyncLLM 문서 바로가기 →
+    linkText: 문서 보기 →
 
 footer: Copyright © 2026 Empasy Inc. All rights reserved.
 ---
 
-## 엠파시 Sync Series 문서 바로가기
+## 핵심 안내 및 리소스 바로가기
 
-### 플랫폼 연동 구조 및 표준
-| 가이드 | 주요 역할 및 핵심 내용 | 문서 링크 |
+### 프로젝트 방법론 및 엔지니어링 표준
+| 구분 | 주요 내용 및 특징 | 문서 링크 |
 |:---|:---|:---|
-| **생태계 아키텍처** | 3-Layer 전사 아키텍처, 서비스 간 협업 비전 및 라이프사이클 | [생태계 개요 →](/ecosystem/) |
-| **표준 MCP 프로토콜** | Model Context Protocol JSON-RPC 도구 호출 규격 및 에러 표준 | [MCP 프로토콜 →](/ecosystem/mcp-protocol) |
-| **AgentScope Java 가이드** | Spring Boot 백엔드 AgentScope Java 연동 표준 | [AgentScope 가이드 →](/ecosystem/agentscope-guide) |
-| **연동 시나리오** | 기획부터 스키마/API 생성, CMS 배포, E2E 회귀 테스트 실무 | [연동 시나리오 →](/ecosystem/e2e-workflow) |
-| **승인 및 트랜잭션 관리** | 3단계 관리자 승인 게이트 및 분산 보상 트랜잭션 롤백 원리 | [승인 거버넌스 →](/ecosystem/hitl-governance) |
-| **공유 모듈 & SDK** | 공통 비즈니스 모듈(sync-module-*) 및 개발 도구 SDK | [공유 모듈 & SDK →](/ecosystem/shared-modules-and-sdk) |
-| **실환경 테스트 기준** | 실제 DB/인프라 연동 검증 원칙 및 품질 확인 체계 | [품질 하네스 →](/ecosystem/zero-mock-harness) |
+| **사업 전 주기 방법론** | 제안부터 최종 검수까지 6단계 라이프사이클 및 단계별 실행 절차 | [방법론 개요 →](/methodology/) |
+| **표준 산출물 양식** | 요구사항정의서, WBS, 테스트시나리오 등 실무 서식 양식 다운로드 | [표준 산출물 양식 →](/methodology/enterprise-document-templates) |
+| **AI 개발 주기 (AI-SDLC)** | 명세 우선 아키텍처 설계부터 4단계 자가치유 검증까지의 AI 협업 절차 | [AI-SDLC 가이드 →](/methodology/ai-driven-development) |
+| **애자일 및 Git Flow** | 스크럼반(Scrumban) 운영, Git 브랜치 전략, 일일 스크럼 실무 프로세스 | [애자일 가이드 →](/agile/) |
+| **공식 소개 자료 (PDF)** | SyncSeries 솔루션 소개서 및 제안서 다운로드 | [사업 소개서](/downloads/SyncSeries_Business_Proposal_v1.0.pdf) · [솔루션 안내서](/downloads/SyncSeries_Brochure_v1.0.pdf) |
 
-### 핵심 도메인 솔루션
-| 솔루션 | 주요 역할 및 핵심 가치 | 문서 링크 |
-|:---|:---|:---|
-| **SyncVerse** | 분산 서비스 협업 및 중앙 관제 센터 | [SyncVerse 시작하기 →](/syncverse/) |
-| **SyncInsight** | 리서치, 실시간 스트리밍 분석 및 자연어 데이터 질의 | [SyncInsight 시작하기 →](/syncinsight/) |
-| **SyncETA** | 무인 CI/CD 회귀 검증 및 Vision 기반 E2E 테스트 자동화 | [SyncETA 시작하기 →](/synceta/) |
-| **SyncCrawl** | 적응형 웹 크롤링 및 RAG 지식 기반 파이프라인 | [SyncCrawl 시작하기 →](/synccrawl/) |
-| **SyncBoot** | Java / Spring Boot 기반 고속 MSA 개발 플랫폼 | [SyncBoot 시작하기 →](/syncboot/) |
-| **SyncCMS** | 직관적인 콘텐츠 관리, Live SDK 및 온프레미스 보안 CMS | [SyncCMS 시작하기 →](/synccms/) |
-| **SyncShop** | Headless 옴니채널 상거래 및 커머스 운영 자동화 | [SyncShop 시작하기 →](/syncshop/) |
-| **SyncLLM** | AI 게이트웨이, FinOps 비용 통제 및 PII 마스킹 | [SyncLLM 시작하기 →](/syncllm/) |
-
-### 방법론 및 개발 리소스
-| 도구 / 리소스 | 주요 역할 및 내용 | 문서 링크 |
-|:---|:---|:---|
-| **프로젝트 방법론** | 제안부터 최종 검수까지 6단계 라이프사이클, 표준 산출물 양식, AI-SDLC | [방법론 가이드 →](/methodology/) |
-| **애자일 (Agile)** | 스크럼반(Scrumban), Git Flow, 일일 스크럼 등 실무 협업 프로세스 | [애자일 가이드 →](/agile/) |
-| **SyncAdmin** | Vue 3, Vite & TypeScript 기반 엔터프라이즈 관리 시스템 템플릿 | [SyncAdmin 시작하기 →](/syncadmin/) |
-| **SyncAPIM** | 엔터프라이즈 API 라이프사이클 통합 관리 & 보안 게이트웨이 | [SyncAPIM 시작하기 →](/syncapim/) |
-| **Study & Logs** | AI 파인튜닝, RAG 연구 및 개발 디버깅 작업 기록 | [Study](/study/) · [Logs](/logs/) |
-| **SyncAdmin** | Vue 3, Vite & TypeScript 기반 엔터프라이즈 관리 시스템 템플릿 | [SyncAdmin 시작하기 →](/syncadmin/) |
-| **SyncAPIM** | 엔터프라이즈 API 라이프사이클 통합 관리 & 보안 게이트웨이 | [SyncAPIM 시작하기 →](/syncapim/) |
-| **Study & Logs** | AI 파인튜닝, RAG 연구 및 개발 디버깅 작업 기록 | [Study](/study/) · [Logs](/logs/) |
+---
 
 ## 개요
 
