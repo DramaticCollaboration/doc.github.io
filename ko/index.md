@@ -11,7 +11,7 @@ hero:
         link: /syncverse/
         type: primary
       - text: 솔루션 둘러보기
-        link: '#sync-series-제품군'
+        link: '#solutions'
         type: secondary
       - text: 개발자 센터
         link: /sdk/
@@ -93,6 +93,8 @@ features:
 footer: Copyright © 2026 Empasy Inc. All rights reserved.
 ---
 
+<div id="solutions"></div>
+
 ## 핵심 안내 및 리소스 바로가기
 
 ### 프로젝트 방법론 및 엔지니어링 표준
@@ -122,7 +124,7 @@ footer: Copyright © 2026 Empasy Inc. All rights reserved.
 
 ---
 
-## Sync Series 제품군
+## Sync Series 솔루션 라인업 {#solutions-detail}
 
 엠파시의 Sync Series는 소프트웨어 수명 주기 전반에 걸쳐 속도, 품질, 유연성을 지원하는 엔터프라이즈 AI 에이전트 및 프레임워크 라인업입니다.
 
