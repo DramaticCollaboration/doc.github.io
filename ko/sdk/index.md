@@ -19,8 +19,20 @@ flowchart LR
     Dev["사내 개발자 소스코드"] --> SDK["Sync SDK (Java / TS)"]
     SDK --> Agent["AgentScope ReAct 에이전트"]
     Agent <--> |표준 MCP 프로토콜| Tools["사내 비즈니스 도구 (DB, REST API)"]
-    Agent <--> |A2A 메시징| SyncVerse["SyncVerse 관제탑"]
+    Agent <--> |A2A 메시징| SyncVerse["SyncVerse 관제 센터"]
 ```
+
+### 핵심 개발 트랙 및 표준 문서 안내
+
+개발자 센터의 실습 가이드 외에, 전사 표준 규격 및 공통 모듈 문서는 아래 링크에서 확인할 수 있습니다:
+
+| 구분 | 주요 내용 | 문서 링크 |
+|:---|:---|:---|
+| **AgentScope Java 표준** | Spring Boot 환경에서 에이전트 협업 및 ReAct 구성 규칙 | [AgentScope 가이드 →](/ecosystem/agentscope-guide) |
+| **표준 MCP 규격** | Model Context Protocol 도구 호출 사양 및 에러 처리 표준 | [MCP 프로토콜 규격 →](/ecosystem/mcp-protocol) |
+| **공통 비즈니스 모듈** | 8대 공통 모듈(`sync-module-*`) 및 SDK 기본 설계 | [공유 모듈 & SDK →](/ecosystem/shared-modules-and-sdk) |
+| **품질 검증 원칙** | 실제 인프라 연동 기반 4-Cycle 품질 검증 프로토콜 | [품질 하네스 원칙 →](/ecosystem/zero-mock-harness) |
+| **운영 및 승인 관리** | 현업 승인(HITL) 및 토큰 예산 관리 콘솔 운영 가이드 | [운영 가이드 →](/guide/) |
 
 ---
 
@@ -120,6 +132,6 @@ public class SupportAgentController {
 
 ## 3. 개발자 가이드 목차
 
-- **사내 시스템 연동 커스텀 MCP 도구 개발**: 사내 REST API 및 RDB 쿼리를 표준 JSON-RPC 도구로 패키징하는 실무 튜토리얼.
-- **Sync SDK 인터페이스 명세**: `com.empasy.sync.sdk` 패키지의 주요 클래스 및 에러 처리 표준.
-- **Zero-Mock 테스트 환경 구성**: Mock 객체 없이 실제 컨테이너 환경에서 에이전트의 도구 호출 및 동작을 검증하는 가이드.
+- **[사내 시스템 연동 커스텀 도구 개발 (MCP)](./custom-mcp-tool)**: 사내 REST API 및 RDB 쿼리를 표준 JSON-RPC 도구로 패키징하는 실무 튜토리얼.
+- **[Sync SDK 인터페이스 명세](./sync-sdk-reference)**: `com.empasy.sync.sdk` 패키지의 주요 클래스 및 에러 처리 표준.
+- **[실환경 기반 테스트 가이드 (Zero-Mock)](./zero-mock-testing)**: Mock 객체 없이 실제 컨테이너 환경에서 에이전트의 도구 호출 및 동작을 검증하는 가이드.

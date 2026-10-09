@@ -203,20 +203,20 @@ const MODULE_CATEGORY_RULES: Record<string, Array<{ group: string; match: (name:
   ],
   study: [
     {
-      group: '연구소 개요',
+      group: '연구 자료 개요',
       match: (name) => ['index'].includes(name),
     },
     {
-      group: '브라우저 & QA 엔지니어링',
+      group: '브라우저 자동화 & 테스트',
       match: (name) => ['playwright-cdp-visual-regression', 'vision-llm-self-healing-algorithm'].includes(name),
     },
     {
-      group: '분산 에이전트 & 런타임',
+      group: '분산 환경 및 런타임',
       match: (name) => ['mcp-jsonrpc-agent-orchestration', 'springboot-virtual-threads-agentscope'].includes(name),
     },
     {
-      group: 'AI 모델 & 지식 파이프라인',
-      match: (name) => ['hybrid-rag-dense-sparse-reranking', 'qwen2vlfinetuning', 'LLM 파인튜닝 후 성능 저하 원인 및 해결책 분석', 'rag'].includes(name),
+      group: 'AI 모델 및 지식 검색 (RAG)',
+      match: (name) => ['rag', 'hybrid-rag-dense-sparse-reranking', 'qwen2vlfinetuning', 'llm-finetuning-degradation-analysis'].includes(name),
     },
   ],
   logs: [
@@ -263,25 +263,25 @@ const MODULE_CATEGORY_RULES: Record<string, Array<{ group: string; match: (name:
   ],
   sdk: [
     {
-      group: '시작하기',
+      group: '시작 가이드',
       match: (name) => ['index'].includes(name),
     },
     {
-      group: '개발 & 인터페이스',
+      group: '도구 개발 및 연동',
       match: (name) => ['custom-mcp-tool', 'sync-sdk-reference'].includes(name),
     },
     {
-      group: '품질 검증',
+      group: '테스트 및 품질 검증',
       match: (name) => ['zero-mock-testing'].includes(name),
     },
   ],
   guide: [
     {
-      group: '운영 개요',
+      group: '운영 안내',
       match: (name) => ['index'].includes(name),
     },
     {
-      group: '실무 거버넌스',
+      group: '승인 및 비용 관리',
       match: (name) => ['hitl-approval-operations', 'finops-budget-operations'].includes(name),
     },
   ],
@@ -439,15 +439,15 @@ const DEFAULT_SIDEBAR_SHORT_TITLES: Record<string, Record<string, string>> = {
     index: '개요',
   },
   study: {
-    index: '연구소 개요',
+    index: '연구 자료 개요',
     'playwright-cdp-visual-regression': 'Playwright & CDP 동기화',
     'vision-llm-self-healing-algorithm': 'Vision-LLM 자가치유 알고리즘',
     'mcp-jsonrpc-agent-orchestration': 'MCP 도구 오케스트레이션',
     'hybrid-rag-dense-sparse-reranking': '하이브리드 RAG & 리랭킹',
     'springboot-virtual-threads-agentscope': '가상 스레드 & AgentScope',
     qwen2vlfinetuning: 'Qwen2-VL 파인튜닝',
-    'LLM 파인튜닝 후 성능 저하 원인 및 해결책 분석': '파인튜닝 성능 저하 분석',
-    rag: 'RAG 지식 파이프라인',
+    'llm-finetuning-degradation-analysis': '파인튜닝 성능 저하 분석',
+    rag: 'RAG 파이프라인 기초',
   },
   logs: {
     index: '작업 일지 개요',

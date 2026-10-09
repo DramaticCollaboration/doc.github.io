@@ -39,7 +39,7 @@ sort: 1
 ### 3. AI 모델 & 지식 파이프라인
 - **[엔터프라이즈 RAG 아키텍처: Sparse + Dense 하이브리드 검색과 Cross-Encoder 리랭킹](./hybrid-rag-dense-sparse-reranking)**: 도메인 특화 검색 정밀도 향상을 위한 BM25와 임베딩 벡터 결합 파이프라인.
 - **[Qwen2-VL 멀티모달 모델 파인튜닝 실무](./qwen2vlfinetuning)**: 한국어 웹 UI 화면 컴포넌트 인식을 위한 데이터셋 구성 및 LoRA 튜닝.
-- **[LLM 파인튜닝 후 성능 저하 원인 및 해결책 분석](./LLM%20파인튜닝%20후%20성능%20저하%20원인%20및%20해결책%20분석)**: Catastrophic Forgetting 방지 및 정렬 데이터 보정 연구.
+- **[LLM 파인튜닝 후 성능 저하 원인 및 해결책 분석](./llm-finetuning-degradation-analysis)**: Catastrophic Forgetting 방지 및 정렬 데이터 보정 연구.
 - **[RAG 기반 지식 검색 파이프라인 구축](./rag)**: 비정형 데이터 청킹 및 메타데이터 필터링 전략.
 
 ---

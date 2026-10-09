@@ -8,17 +8,21 @@ description: 가짜 객체(Mock)를 배제하고 Testcontainers 실환경에서 
 
 # Zero-Mock 테스트 환경 구성 및 에이전트 검증
 
+::: tip 관련 정책 문서
+전사 4-Cycle 품질 검증 프로토콜과 자동화 감사 규칙은 [Zero-Mock 엔터프라이즈 품질 검증 기준](/ecosystem/zero-mock-harness) 문서에서 확인할 수 있습니다.
+:::
+
 ## 1. Zero-Mock 테스트 원칙 및 배경
 
-전통적인 단위 테스트에서 널리 쓰이는 가짜 객체(Mockito의 `when(...).thenReturn(...)` 등)는 인공지능 에이전트 시스템 검증에서 심각한 결함을 유발합니다:
+전통적인 단위 테스트에서 널리 쓰이는 가짜 객체(Mockito의 `when(...).thenReturn(...)` 등)는 인공지능 에이전트 시스템 검증에서 다음과 같은 한계가 있습니다:
 
 1. **가짜 정상(Fake Fallback) 은폐**:
-   - 실제 데이터베이스 제약 조건(Foreign Key, Unique Key, PostgreSQL 17 pgvector 인덱스 등)이나 네트워크 지연을 Mock 객체는 시뮬레이션하지 못하므로, 테스트는 통과하지만 운영 환경에서 즉각 크래시가 발생하는 위험이 상존합니다.
-2. **비결정적 AI 동작 검증 부재**:
-   - 에이전트가 생성한 동적 SQL 질의나 JSON 파라미터가 실제 데이터베이스 드라이버나 타깃 API에서 정상 파싱되는지 여부는 실제 인프라와의 통신 없이는 판별할 수 없습니다.
+   - 실제 데이터베이스 제약 조건(Foreign Key, Unique Key, PostgreSQL 17 pgvector 인덱스 등)이나 네트워크 지연을 Mock 객체는 시뮬레이션하지 못하므로, 테스트는 통과하지만 운영 환경에서 오류가 발생할 수 있습니다.
+2. **비결정적 AI 동작 검증 한계**:
+   - 에이전트가 생성한 동적 SQL 질의나 JSON 파라미터가 실제 데이터베이스 드라이버나 타깃 API에서 정상 파싱되는지 여부는 실제 인프라와의 통신 없이는 정확히 판별하기 어렵습니다.
 
-따라서 SyncSeries는 **Zero-Mock 원칙**을 강제합니다:
-> *"모든 에이전트 및 도구 테스트는 가짜 Mock 객체를 일체 사용하지 않으며, Docker 기반 Testcontainers로 구동된 실제 PostgreSQL 17, Redis, MinIO 인프라 상에서 실측 검증한다."*
+따라서 SyncSeries는 **Zero-Mock 원칙**을 기본 방침으로 적용합니다:
+> *"에이전트 및 도구 테스트는 가짜 Mock 객체 대신 Docker 기반 Testcontainers로 구동된 실제 PostgreSQL 17, Redis, MinIO 인프라 상에서 실측 검증하는 것을 권장합니다."*
 
 ```mermaid
 flowchart LR
