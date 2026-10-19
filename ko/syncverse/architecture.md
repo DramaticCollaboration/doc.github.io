@@ -5,7 +5,7 @@ description: "SyncVerse의 L1(도메인 워커), L2(중앙 관제탑), L3(전사
 head:
   - - meta
     - name: keywords
-      content: SyncVerse, 멀티 에이전트 아키텍처, 3-Layer, Swarm, A2A, MCP, JSON-RPC, LangChain4j, Vue Flow, 분산 오케스트레이션
+      content: SyncVerse, 멀티 에이전트 아키텍처, 3-Layer, Swarm, A2A, MCP, JSON-RPC, AgentScope Java, Vue Flow, 분산 오케스트레이션
   - - meta
     - property: og:title
       content: "SyncVerse: 3-Layer 멀티 에이전트 아키텍처 및 A2A 통신"

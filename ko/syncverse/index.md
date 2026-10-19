@@ -71,7 +71,7 @@ SyncVerse는 소프트웨어 생애주기(AI DLC, AI Development Life Cycle) 운
 | :--- | :--- | :--- |
 | **01. 자연어 의도 분류 및 라우팅** | 현업의 자연어 지시가 '운영(CRUD)'인지 '개발(소스수정)'인지 실시간 판별 | Intent Routing Classifier, 도메인 컨텍스트 RAG 주입 |
 | **02. Multi-Agent Swarm 조율** | 표준 MCP(Model Context Protocol) 기반으로 하위 워커 에이전트 간 작업 체인 총괄 | A2A JSON-RPC 프로토콜, Vue Flow 인터랙티브 토폴로지 |
-| **03. SDK 자율 코딩 디스패치** | 소스코드 수정이 필요한 경우 전문 코딩 에이전트를 호출하여 작업 브랜치에 코드 생성 | Google Antigravity SDK, LangChain4j, Git Worktree 격리 |
+| **03. SDK 자율 코딩 디스패치** | 소스코드 수정이 필요한 경우 전문 코딩 에이전트를 호출하여 작업 브랜치에 코드 생성 | Google Antigravity SDK, AgentScope Java (`io.agentscope:agentscope-harness`), Git Worktree 격리 |
 | **04. 무인 CI/CD & 자가치유 복구** | 빌드/테스트 오류 발생 시 클러스터 로그를 수집하여 코드를 스스로 수정하고 재배포 | SyncETA E2E 리그레션 분석, Saga 분산 보상 롤백 |
 
 ---

@@ -29,7 +29,7 @@ SyncCrawl은 타깃 요소 추출 실패 시 다음과 같은 단계로 복구 �
 sequenceDiagram
     participant Worker as smart-crawling-agent
     participant Browser as Playwright MCP
-    participant AI as LangChain4j Self-Healing Engine
+    participant AI as AgentScope Java Self-Healing Engine
     participant DB as Selector Cache / History
 
     Worker->>Browser: 1. 기존 캐시된 셀렉터로 데이터 추출 시도

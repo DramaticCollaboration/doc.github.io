@@ -32,7 +32,7 @@ SyncCMS는 바이너리 납품 방식의 블랙박스 소프트웨어가 아닙�
 
 ### Q3. 외부 인터넷이 완전 차단된 사내 폐쇄망에서도 AI 기능을 사용할 수 있나요?
 **A. 사내 온프레미스 인프라를 통해 완전하게 지원됩니다.**  
-사내 GPU 서버에 vLLM 또는 Ollama를 구성하고 오픈 가중치 모델(Llama-3, EXAONE, Solar 등)을 배포한 후, LangChain4j를 통해 백엔드와 연동합니다. 외부 네트워크로의 데이터 유출 없이 AI 초안 생성, PII 비식별화, RAG 지식 검색을 수행할 수 있습니다.
+사내 GPU 서버에 vLLM 또는 Ollama를 구성하고 오픈 가중치 모델(Llama-3, EXAONE, Solar 등)을 배포한 후, AgentScope Java (`io.agentscope:agentscope-harness`)를 통해 백엔드와 연동합니다. 외부 네트워크로의 데이터 유출 없이 AI 초안 생성, PII 비식별화, RAG 지식 검색을 수행할 수 있습니다.
 
 ### Q4. 기존 사내 그룹웨어 전자결재 및 기간계 ERP와 어떻게 연동하나요?
 **A. 표준 웹훅(Webhook) 및 다중 DB 트랜잭션을 통해 연계됩니다.**  

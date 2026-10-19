@@ -4,7 +4,7 @@ description: 자연어 명령으로 웹 데이터를 수집하고 RAG 지식 기
 head:
   - - meta
     - name: keywords
-      content: 웹 크롤링 솔루션, 지능형 크롤링, 크롤링 자동화, 통합 크롤링 시스템, 웹 데이터 수집, B2B 지식 솔루션, 리서치 자동화, RAG (검색 증강 생성), LLM 환각 방지, 시맨틱 검색, 맥락 기반 질의응답, AI 에이전트, 벡터 저장소 연동, 임베딩 생성, 한국어 최적화, 자연어 명령 크롤링, 적응형 크롤링, 동적 웹 크롤링, LangChain4j, Playwright MCP
+      content: 웹 크롤링 솔루션, 지능형 크롤링, 크롤링 자동화, 통합 크롤링 시스템, 웹 데이터 수집, B2B 지식 솔루션, 리서치 자동화, RAG (검색 증강 생성), LLM 환각 방지, 시맨틱 검색, 맥락 기반 질의응답, AI 에이전트, 벡터 저장소 연동, 임베딩 생성, 한국어 최적화, 자연어 명령 크롤링, 적응형 크롤링, 동적 웹 크롤링, AgentScope Java, Playwright MCP
   - - meta
     - property: og:title
       content: 자연어 기반 웹 크롤링 및 RAG 지식 구축 플랫폼 | SyncCrawl
@@ -34,7 +34,7 @@ SyncCrawl™은 데이터 수집과 자연어 처리(NLP), **Playwright MCP 기�
 
 ```mermaid
 graph LR
-    A[자연어 수집 지시<br/>Natural Language] --> B[에이전트 오케스트레이션<br/>LangChain4j + MCP]
+    A[자연어 수집 지시<br/>Natural Language] --> B[에이전트 오케스트레이션<br/>AgentScope Java + MCP]
     B --> C[웹 브라우징<br/>Playwright Self-Healing]
     C --> D[정제 및 분할<br/>Document Pipeline]
     D --> E[지식베이스 연동<br/>Vector DB / RAG QA]
@@ -60,7 +60,7 @@ graph LR
 
 | 구분 | 지원 기술 및 사양 |
 | :--- | :--- |
-| **코어 백엔드** | Java 21, Spring Boot 3.5, LangChain4j, Flyway |
+| **코어 백엔드** | Java 21, Spring Boot 3.5, AgentScope Java (`io.agentscope:agentscope-harness`), Flyway |
 | **브라우저 자동화** | Playwright MCP, Headless Chromium, 분산 Worker |
 | **스토리지 및 캐시** | PostgreSQL, Redis, MinIO / S3 오브젝트 스토리지 |
 | **벡터 데이터베이스** | PGVector, Milvus, Qdrant, Weaviate |

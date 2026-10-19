@@ -1,6 +1,6 @@
 ---
 title: 시스템 아키텍처 & Clean Architecture
-description: SyncCrawl의 분산 에이전트 Clean Architecture 4계층 구조와 Spring Boot 3.5, LangChain4j, Playwright MCP, Vector DB 기술 스택을 설명합니다.
+description: SyncCrawl의 분산 에이전트 Clean Architecture 4계층 구조와 Spring Boot 3.5, AgentScope Java, Playwright MCP, Vector DB 기술 스택을 설명합니다.
 sort: 2
 ---
 
@@ -25,7 +25,7 @@ graph TD
         GW[REST API Controller / Rate Limiter]
         AUTH[RBAC 인증 / 토큰 무결성 검증]
         SCHED[Quartz 분산 크롤링 스케줄러]
-        LC4J[LangChain4j AI 오케스트레이션 엔진]
+        AS[AgentScope Java AI 오케스트레이션 엔진]
         QUEUE[Redisson 분산 작업 큐 / 핸드오프]
     end
 
@@ -47,14 +47,14 @@ graph TD
 
     UI1 & UI2 & UI3 & UI4 --> GW
     GW --> AUTH
-    AUTH --> LC4J & SCHED
-    LC4J & SCHED --> QUEUE
+    AUTH --> AS & SCHED
+    AS & SCHED --> QUEUE
     QUEUE --> AGENT1 & AGENT2
     AGENT1 & AGENT2 --> MCP_PLAY
     MCP_PLAY --> SSRF
     SSRF --> POOL
     AGENT1 & AGENT2 --> RDB & STORAGE
-    LC4J --> VEC & LLM
+    AS --> VEC & LLM
     QUEUE --> CACHE
 ```
 
@@ -66,7 +66,7 @@ SyncCrawl은 무중단 배포와 독립적 스케일아웃을 위해 4개의 분
 
 | 컨테이너 이미지 | 기술 스택 | 핵심 역할 및 기능 |
 | :--- | :--- | :--- |
-| **`smart-crawling-server`** | Java 21, Spring Boot 3.5, LangChain4j, Flyway | API 엔드포인트 제공, 수집 작업 스케줄링(Quartz), AI 작업 계획 수립, RAG 벡터 인덱싱 오케스트레이션 |
+| **`smart-crawling-server`** | Java 21, Spring Boot 3.5, AgentScope Java (`io.agentscope:agentscope-harness`), Flyway | API 엔드포인트 제공, 수집 작업 스케줄링(Quartz), AI 작업 계획 수립, RAG 벡터 인덱싱 오케스트레이션 |
 | **`smart-crawling-agent`** | Java 21, Playwright Java, MCP SDK | 정규 웹 수집 작업 실행, DOM 파싱, 데이터 추출, HTML 스냅샷 저장 |
 | **`smart-crawling-scenario-agent`** | Java 21, Node.js/Playwright MCP, Chromium | 로그인, 다단계 폼 입력, 무한 스크롤, SPA 상호작용 등 복합 시나리오 실행 |
 | **`smart-crawling-console`** | Vue 3, TypeScript, Vite, Quasar | 수집 작업 모니터링, 자연어 시나리오 빌더 UI, 수집 데이터 검증 및 RAG 질의응답 테스트 콘솔 |
@@ -76,11 +76,11 @@ SyncCrawl은 무중단 배포와 독립적 스케일아웃을 위해 4개의 분
 ## 계층별 상세 설계
 
 ### 1. 화면 및 시나리오 제어 계층 (Presentation Layer)
-- **자연어 시나리오 빌더**: 사용자가 자연어로 수집 목표를 입력하면 백엔드 LangChain4j 에이전트와 대화형으로 상호작용하여 시나리오 스텝을 자동 생성합니다.
+- **자연어 시나리오 빌더**: 사용자가 자연어로 수집 목표를 입력하면 백엔드 AgentScope Java 에이전트와 대화형으로 상호작용하여 시나리오 스텝을 자동 생성합니다.
 - **실시간 실행 모니터링**: WebSocket 및 SSE(Server-Sent Events)를 통해 브라우저 실행 스크린샷과 단계별 로그를 실시간으로 중계합니다.
 
 ### 2. 오케스트레이션 및 스케줄링 계층 (Orchestration Layer)
-- **LangChain4j AI 엔진**: 사용자 질의와 타깃 페이지 구조를 분석하고 적절한 크롤링 도구(Playwright Tool)를 동적으로 바인딩합니다.
+- **AgentScope Java AI 엔진 (`io.agentscope:agentscope-harness`)**: 사용자 질의와 타깃 페이지 구조를 분석하고 적절한 크롤링 도구(Playwright Tool)를 동적으로 바인딩합니다.
 - **Quartz 분산 스케줄러**: 다수의 주기적 크롤링 배치를 데이터베이스 클러스터링 기반으로 분산 실행합니다.
 - **Redisson 분산 큐 & 락**: 다중 워커 노드 간의 작업 분배(Handoff) 및 동시성 제어를 담당합니다.
 

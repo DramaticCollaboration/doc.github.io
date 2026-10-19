@@ -1,12 +1,12 @@
 ---
-title: LangChain4j & Model Context Protocol (MCP) 연동
-description: LangChain4j 프레임워크와 Model Context Protocol(MCP) HTTP SSE 엔드포인트를 통한 도구 제공 및 시스템 연동 방식을 설명합니다.
+title: AgentScope Java & Model Context Protocol (MCP) 연동
+description: AgentScope Java(io.agentscope:agentscope-harness) 프레임워크와 Model Context Protocol(MCP) HTTP SSE 엔드포인트를 통한 도구 제공 및 시스템 연동 방식을 설명합니다.
 sort: 7
 ---
 
-# LangChain4j & Model Context Protocol (MCP) 연동
+# AgentScope Java & Model Context Protocol (MCP) 연동
 
-SyncBoot는 표준 AI 프레임워크인 **LangChain4j**와 **Model Context Protocol (MCP)** 인터페이스를 내장하여 외부 오케스트레이터 및 클라이언트와의 연동을 지원합니다.
+SyncBoot는 전사 표준 AI 프레임워크인 **AgentScope Java (`io.agentscope:agentscope-harness`)**와 **Model Context Protocol (MCP)** 인터페이스를 내장하여 외부 오케스트레이터 및 에이전트와의 A2A 연동을 지원합니다.
 
 ---
 
@@ -42,27 +42,32 @@ sequenceDiagram
 
 ---
 
-## Java 백엔드 MCP 도구 선언 예시 (LangChain4j)
+## Java 백엔드 MCP 도구 선언 예시 (AgentScope Java)
 
 ```java
+package com.empasy.sync.boot.mcp;
+
+import io.agentscope.core.tool.Tool;
+import io.agentscope.core.tool.ToolParam;
+import lombok.RequiredArgsConstructor;
+import org.springframework.stereotype.Component;
+
 @Component
+@RequiredArgsConstructor
 public class SyncBootMcpTools {
 
-    @Autowired
-    private SchemaService schemaService;
+    private final SchemaService schemaService;
+    private final LogInspectorService logInspectorService;
 
-    @Autowired
-    private LogInspectorService logInspectorService;
-
-    @Tool("지정된 도메인 테이블의 DDL 및 컬럼 명세를 조회합니다.")
+    @Tool(description = "지정된 도메인 테이블의 DDL 및 컬럼 명세를 조회합니다.")
     public TableMetaDTO readSchema(
-            @P("조회할 테이블 물리명 (예: TB_ORDER)") String tableName) {
+            @ToolParam(description = "조회할 테이블 물리명 (예: tb_order)") String tableName) {
         return schemaService.getTableMetadata(tableName);
     }
 
-    @Tool("분석을 위해 최근 서버 에러 로그를 수집합니다.")
+    @Tool(description = "분석을 위해 최근 서버 에러 로그를 수집합니다.")
     public String fetchServerLogs(
-            @P("가져올 로그 라인 수 (기본 100)") int lines) {
+            @ToolParam(description = "가져올 로그 라인 수 (기본 100)") int lines) {
         return logInspectorService.getRecentErrorLogs(lines);
     }
 }

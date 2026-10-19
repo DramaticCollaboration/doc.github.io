@@ -102,5 +102,5 @@ SyncSeries의 버전별 주요 업데이트, 보안 패치, 성능 개선 및 �
 * **SyncSeries 전사 3-Layer 아키텍처 상용 릴리스**:
   * Layer 1: 거버넌스 및 자율 협업 계층 (SyncVerse, SyncInsight)
   * Layer 2: 도메인 특화 자율 에이전트 계층 (SyncEta, SyncBoot, SyncCMS, SyncCrawl, SyncLLM)
-  * Layer 3: 플랫폼 공통 인프라 계층 (DB 3-File 구조, MCP JSON-RPC 버스)
+  * Layer 3: 플랫폼 공통 인프라 계층 (6-File SQL (db/00_extensions.sql ~ 05_sample_dev.sql) 구조, MCP JSON-RPC 버스)
 * **엔터프라이즈 온프레미스(Air-Gapped) 폐쇄망 배포 팩 최초 출하**.

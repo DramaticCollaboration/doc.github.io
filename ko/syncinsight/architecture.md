@@ -5,7 +5,7 @@ description: "SyncInsight의 3-Layer 분산 아키텍처, PgVector 기반 RAG �
 head:
   - - meta
     - name: keywords
-      content: SyncInsight Architecture, 시스템 설계, 3-Layer Architecture, PgVector, RAG 파이프라인, MCP, Model Context Protocol, Spring Boot, LangChain4j, PostgreSQL, 분산 아키텍처
+      content: SyncInsight Architecture, 시스템 설계, 3-Layer Architecture, PgVector, RAG 파이프라인, MCP, Model Context Protocol, Spring Boot, AgentScope Java, PostgreSQL, 분산 아키텍처
   - - meta
     - property: og:title
       content: "SyncInsight 시스템 아키텍처 및 MCP 연동 | Empasy"
@@ -44,7 +44,7 @@ flowchart TD
         JOB_QUEUE["비동기 작업 큐 (ThreadPool / Redis)"]
     end
 
-    subgraph Core_Engine_Tier ["3. 분석 및 실행 계층 (LangChain4j)"]
+    subgraph Core_Engine_Tier ["3. 분석 및 실행 계층 (AgentScope Java)"]
         AGGREGATOR["멀티소스 데이터 집계 모듈"]
         RAG_PIPELINE["PgVector 기반 임베딩 및 검색"]
         DEBATE_ORCH["에이전트 토론 오케스트레이터"]

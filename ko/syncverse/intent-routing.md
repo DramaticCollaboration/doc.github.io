@@ -5,7 +5,7 @@ description: "현업 담당자의 자연어 요구사항을 실시간 분석하�
 head:
   - - meta
     - name: keywords
-      content: SyncVerse, 인텐트 라우팅, 의도 분석, Task Decomposition, Intent Classifier, LangChain4j, RAG 컨텍스트, Confidence Score
+      content: SyncVerse, 인텐트 라우팅, 의도 분석, Task Decomposition, Intent Classifier, AgentScope Java, RAG 컨텍스트, Confidence Score
   - - meta
     - property: og:title
       content: "SyncVerse: 인텐트 라우팅 엔진 (Intent Routing Engine)"
@@ -27,7 +27,7 @@ SyncVerse는 시스템 안정성을 위해 **데이터 운영 작업**과 **소�
 
 ```mermaid
 flowchart TD
-    Prompt["자연어 사용자 지시 입력"] --> Classifier{"Intent Classifier\n(LangChain4j Router)"}
+    Prompt["자연어 사용자 지시 입력"] --> Classifier{"Intent Classifier\n(AgentScope Java Router)"}
 
     Classifier -->|"운영 데이터 변경 (신뢰도 >= 0.85)"| Ops["운영(CRUD) 경로\nSyncBoot / SyncCMS 워커"]
     Classifier -->|"소스코드/DDL 수정 (신뢰도 >= 0.85)"| Dev["개발(Code) 경로\nSyncSDK 코딩 에이전트"]
@@ -80,22 +80,27 @@ flowchart LR
 정확한 의도 분류 및 코드 수정을 위해, 시스템은 사내 프로젝트의 아키텍처 명세서, DB 스키마 DDL, 도메인 용어집(Glossary)을 프롬프트에 결합(Prompt Augmentation)하여 모델에 전달합니다.
 
 ```java
-// SyncVerse 내부 IntentRouterService (LangChain4j 기반)
+// SyncVerse 내부 IntentRouterService (AgentScope Java 기반)
 @Service
+@RequiredArgsConstructor
 public class IntentRouterService {
 
-    private final ChatLanguageModel chatModel;
+    private final ChatModel chatModel;
     private final ProjectContextRetriever contextRetriever;
 
     public RoutingResult route(String userPrompt, Long projectId) {
         // 1. 사내 프로젝트 컨텍스트 및 DB 스키마 RAG 검색
         String domainContext = contextRetriever.retrieveContext(projectId, userPrompt);
 
-        // 2. 구조화된 프롬프트 생성
-        Prompt prompt = IntentPromptTemplate.create(userPrompt, domainContext);
+        // 2. 구조화된 프롬프트 생성 및 AgentScope Java ReActAgent 추론
+        ReActAgent routerAgent = ReActAgent.builder()
+                .name("IntentRouter")
+                .sysPrompt(IntentPromptTemplate.createSystemPrompt(domainContext))
+                .model(chatModel)
+                .build();
 
-        // 3. LLM 라우터 추론 및 구조화된 JSON 결과 반환
-        return chatModel.generate(prompt, RoutingResult.class);
+        Msg response = routerAgent.call(Msg.builder().role(MsgRole.USER).textContent(userPrompt).build()).block();
+        return RoutingResult.fromJson(response.getTextContent());
     }
 }
 ```

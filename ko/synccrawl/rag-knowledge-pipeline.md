@@ -32,7 +32,7 @@ graph LR
     subgraph "4. RAG 검색 & 생성"
         USER[엔터프라이즈 QA 질의] --> RET[하이브리드 리트리버<br/>Dense + BM25]
         VDB --> RET
-        RET --> LLM[LangChain4j RAG 엔진]
+        RET --> LLM[AgentScope Java RAG 엔진]
         LLM --> ANS[근거 기반 응답 생성]
     end
 ```
@@ -51,7 +51,7 @@ graph LR
 - **오버랩 설정**: 청크 간 적정 오버랩(예: 100~200 토큰)을 유지하여 문맥 단절을 방지합니다.
 
 ### 3. 임베딩 모델 지원
-LangChain4j 프레임워크와의 표준 인터페이스를 통해 다양한 임베딩 모델을 교체하여 적용할 수 있습니다.
+AgentScope Java (`io.agentscope:agentscope-harness`) 프레임워크와의 표준 인터페이스를 통해 다양한 임베딩 모델을 교체하여 적용할 수 있습니다.
 
 | 모델 구분 | 지원 임베딩 모델 | 주요 특징 및 적합 환경 |
 | :--- | :--- | :--- |
@@ -66,16 +66,13 @@ LangChain4j 프레임워크와의 표준 인터페이스를 통해 다양한 임
 SyncCrawl은 기업의 인프라 환경에 맞춰 다양한 Vector DB 드라이버를 제공합니다.
 
 ```java
-// LangChain4j 기반 Vector DB 연동 예시 (Spring Boot Bean 설정)
+// AgentScope Java + PostgreSQL 17 pgvector 기반 Vector DB 연동 예시
 @Bean
-public EmbeddingStore<TextSegment> embeddingStore(PgVectorProperties properties) {
-    return PgVectorEmbeddingStore.builder()
-            .host(properties.getHost())
-            .port(properties.getPort())
-            .database(properties.getDatabase())
-            .user(properties.getUsername())
-            .password(properties.getPassword())
-            .table("synccrawl_knowledge_vectors")
+public PgVectorKnowledgeStore knowledgeStore(JdbcTemplate jdbcTemplate, EmbeddingClient embeddingClient) {
+    return PgVectorKnowledgeStore.builder()
+            .jdbcTemplate(jdbcTemplate)
+            .embeddingClient(embeddingClient)
+            .tableName("synccrawl_knowledge_vectors")
             .dimension(1024) // BGE-M3 기준
             .build();
 }

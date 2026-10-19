@@ -59,7 +59,7 @@ DB_NAME=syncinsight
 DB_USER=syncinsight
 DB_PASSWORD=syncinsight_secret
 
-# AI Engine (LangChain4j)
+# AI Engine (AgentScope Java - io.agentscope:agentscope-harness)
 OPENAI_API_KEY=sk-proj-your-api-key-here
 LLM_MODEL_NAME=gpt-4o
 ```

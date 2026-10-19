@@ -1,4 +1,6 @@
 {
+  "name": "@empasy/sync-docs",
+  "private": true,
   "scripts": {
     "docs:dev": "vitepress dev",
     "docs:build": "vitepress build && cpy CNAME .vitepress/dist/",

@@ -1,16 +1,16 @@
 ---
 title: 사내 폐쇄망 AI 및 PII 보안 컴플라이언스 | SyncCMS
-description: 외부 인터넷 차단망에서도 동작하는 LangChain4j 기반 사내 온프레미스 LLM 연동 설정과 개인정보(PII) 실시간 비식별화 기술을 설명합니다.
+description: 외부 인터넷 차단망에서도 동작하는 AgentScope Java 기반 사내 온프레미스 LLM 연동 설정과 개인정보(PII) 실시간 비식별화 기술을 설명합니다.
 head:
   - - meta
     - name: keywords
-      content: 사내 폐쇄망 AI, 온프레미스 LLM, LangChain4j, PII 마스킹, 비식별화, 망분리 규정, Spring Boot 3, vLLM, Ollama, 표시광고법
+      content: 사내 폐쇄망 AI, 온프레미스 LLM, AgentScope Java, PII 마스킹, 비식별화, 망분리 규정, Spring Boot 3, vLLM, Ollama, 표시광고법
   - - meta
     - property: og:title
       content: 사내 폐쇄망 AI 및 PII 보안 컴플라이언스 | SyncCMS
   - - meta
     - property: og:description
-      content: 망분리 환경을 위한 LangChain4j 온프레미스 AI 연동 및 개인정보 비식별화 보안 규격
+      content: 망분리 환경을 위한 AgentScope Java 온프레미스 AI 연동 및 개인정보 비식별화 보안 규격
 sort: 4
 ---
 
@@ -27,7 +27,7 @@ graph TD
     subgraph "사내 폐쇄망 인프라 (외부 인터넷 100% 차단)"
         CMS["SyncCMS 백엔드 (Spring Boot 3)"]
         INTERCEPTOR["PII 마스킹 인터셉터"]
-        LC4J["LangChain4j 오케스트레이터"]
+        AS["AgentScope Java 오케스트레이터"]
         LLM["사내 AI 추론 서버 (vLLM / Ollama)"]
         MODEL[("오픈 가중치 모델 (Llama-3 / EXAONE / Solar)")]
         VEC[("사내 지식베이스 (PGVector)")]
@@ -36,61 +36,58 @@ graph TD
     EXT["외부 퍼블릭 AI API (OpenAI / Claude)"] -.->|네트워크 통신 전면 차단| CMS
 
     CMS --> INTERCEPTOR
-    INTERCEPTOR -->|비식별화된 프롬프트| LC4J
-    LC4J --> LLM
+    INTERCEPTOR -->|비식별화된 프롬프트| AS
+    AS --> LLM
     LLM --> MODEL
-    LC4J --> VEC
+    AS --> VEC
 ```
 
 ---
 
-## 1. LangChain4j 기반 온프레미스 AI 설정
+## 1. AgentScope Java (`io.agentscope:agentscope-harness`) 기반 온프레미스 AI 설정
 
-Spring Boot 백엔드에서 사내 GPU 서버의 vLLM 또는 Ollama 엔드포인트를 표준 `ChatLanguageModel` 빈(Bean)으로 구성합니다.
+Spring Boot 백엔드에서 사내 GPU 서버의 vLLM 또는 Ollama 엔드포인트를 표준 AgentScope `ChatModel` 빈(Bean)으로 구성합니다.
 
 ### `application.yml` 설정 예시
 ```yaml
-langchain4j:
+agentscope:
   open-ai:
     chat-model:
       base-url: http://internal-vllm-cluster.local:8000/v1
-      api-key: none  # 사내망 내부 통신 시 필요에 따라 토큰 지정
+      api-key: ${INTERNAL_LLM_API_KEY:internal-key}
       model-name: meta-llama/Llama-3-70b-Instruct
       temperature: 0.2
       timeout: PT60S
-      max-retries: 2
 ```
 
 ### Java Configuration 예시
 ```java
-package com.empasy.synccms.config;
+package com.empasy.sync.cms.config;
 
-import dev.langchain4j.model.chat.ChatLanguageModel;
-import dev.langchain4j.model.openai.OpenAiChatModel;
+import io.agentscope.core.model.ChatModel;
+import io.agentscope.core.model.OpenAIChatModel;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
-import java.time.Duration;
-
 @Configuration
 public class AiModelConfiguration {
 
-    @Value("${langchain4j.open-ai.chat-model.base-url}")
+    @Value("${agentscope.open-ai.chat-model.base-url}")
     private String baseUrl;
 
-    @Value("${langchain4j.open-ai.chat-model.model-name}")
+    @Value("${agentscope.open-ai.chat-model.model-name}")
     private String modelName;
 
+    @Value("${agentscope.open-ai.chat-model.api-key}")
+    private String apiKey;
+
     @Bean
-    public ChatLanguageModel onPremiseChatModel() {
-        return OpenAiChatModel.builder()
+    public ChatModel onPremiseChatModel() {
+        return OpenAIChatModel.builder()
                 .baseUrl(baseUrl)
-                .apiKey("internal-key")
+                .apiKey(apiKey)
                 .modelName(modelName)
-                .temperature(0.2)
-                .timeout(Duration.ofSeconds(60))
-                .maxRetries(2)
                 .build();
     }
 }

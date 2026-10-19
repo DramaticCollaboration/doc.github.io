@@ -44,7 +44,7 @@ cp .env.example .env
 
 # .env 파일에서 LLM API 키 설정 (또는 로컬 Ollama 사용)
 # OPENAI_API_KEY=sk-...
-# LANGCHAIN4J_MODEL_NAME=gpt-4o-mini
+# AGENTSCOPE_MODEL_NAME=gpt-4o-mini
 
 # 3. 전체 인프라 및 제어 서버 컨테이너 실행
 docker compose -f docker-compose-local.yml up -d

@@ -34,7 +34,7 @@ docker-compose -f docker-compose-local.yml up -d
 ```
 
 > [!NOTE]
-> 최초 실행 시 데이터베이스 초기화 스크립트(`01. init.sql`, `02. syncboot.sql`, `03. sample.sql`)가 순차적으로 적용되며, 약 30~60초 후 각 컨테이너가 정상 구동 상태로 전환됩니다.
+> 최초 실행 시 데이터베이스 초기화 6-File SQL 스크립트(`db/00_extensions.sql ~ 05_sample_dev.sql`)가 순차적으로 적용되며, 약 30~60초 후 각 컨테이너가 정상 구동 상태로 전환됩니다.
 
 ---
 
@@ -61,7 +61,7 @@ curl -X GET http://localhost:8080/actuator/health
 {
   "status": "UP",
   "components": {
-    "db": { "status": "UP", "details": { "database": "MySQL", "validationQuery": "isValid()" } },
+    "db": { "status": "UP", "details": { "database": "PostgreSQL", "validationQuery": "isValid()" } },
     "redis": { "status": "UP", "details": { "version": "7.2.4" } },
     "diskSpace": { "status": "UP" }
   }
@@ -96,5 +96,5 @@ curl -X GET http://localhost:8080/mcp/tools
 ## 관련 문서
 
 - [시스템 아키텍처 및 모듈 구성](./architecture)
-- [지능형 스키마 스튜디오 & 3-File DB 표준](./schema-studio)
+- [지능형 스키마 스튜디오 & 6-File DB 표준](./schema-studio)
 - [로우코드 풀스택 생성기](./lowcode-generator)

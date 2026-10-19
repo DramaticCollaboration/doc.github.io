@@ -29,15 +29,15 @@ graph TD
 
     subgraph "3. 코어 및 에이전트 계층 (Core & AI Layer)"
         AGENT1[Domain Operator - CRUD 처리]
-        AGENT2[Schema Architect - 3-File DDL 설계]
+        AGENT2[Schema Architect - 6-File DDL 설계]
         AGENT3[Security IAM - 권한 검증 및 감사]
         AGENT4[MCP Dispatcher - A2A SSE 통신]
         AGENT5[Batch Orchestrator - 분산 스케줄러]
-        LC4J[LangChain4j 표준 AI 프레임워크]
+        AS[AgentScope Java 표준 AI 프레임워크]
     end
 
     subgraph "4. 영속성 및 인프라 계층 (Persistence & Infra Layer)"
-        RDB[(RDBMS - MySQL 8.0 / PostgreSQL / Oracle)]
+        RDB[(PostgreSQL 17 + pgvector)]
         REDIS[(Redis 7 - 세션 캐시, 분산 락, Saga 상태)]
         BATCH[(Quartz & Spring Batch 대용량 처리)]
         LOGS[(분산 인스턴스 서버 로그)]
@@ -46,7 +46,7 @@ graph TD
     UI1 & UI2 & UI3 --> GW
     GW --> JWT & RBAC & MASK
     JWT & RBAC --> AGENT1 & AGENT2 & AGENT3 & AGENT4 & AGENT5
-    AGENT1 & AGENT2 & AGENT3 & AGENT4 & AGENT5 <--> LC4J
+    AGENT1 & AGENT2 & AGENT3 & AGENT4 & AGENT5 <--> AS
     AGENT1 --> RDB
     AGENT2 --> RDB
     AGENT3 --> REDIS
@@ -63,7 +63,7 @@ graph TD
 - **제어 정책**: 소스코드나 DB 스키마 DDL을 직접 변경하지 않으며, 정의된 API 및 매퍼 범위 내에서만 동작합니다.
 
 ### 2. Schema Architect (스키마 설계)
-- **주요 역할**: 도메인 요구사항을 분석하여 3-File 표준 DDL을 작성하고 ERD 구조를 도출합니다.
+- **주요 역할**: 도메인 요구사항을 분석하여 6-File 표준 SQL(`db/00_extensions.sql ~ 05_sample_dev.sql`)을 작성하고 ERD 구조를 도출합니다.
 - **제어 정책**: 스키마 삭제나 타입 축소 등 영향도가 높은 변경을 사전에 감지하고, 개발자의 승인(HITL) 후에만 DDL을 반영합니다.
 
 ### 3. Security IAM (RBAC 권한 및 테넌트 격리)
@@ -84,9 +84,9 @@ graph TD
 
 | 구분 | 기술 요소 | 버전 및 상세 |
 | :--- | :--- | :--- |
-| **Backend Core** | Java, Spring Boot 3 | Java 17/21, Spring Boot 3.2.x |
-| **AI Framework** | LangChain4j | langchain4j-spring-boot-starter v0.35 이상 |
-| **ORM / Data** | MyBatis-Plus, Spring Data JPA | HikariCP, MySQL 8.0, PostgreSQL |
+| **Backend Core** | Java, Spring Boot 3 | Java 21+, Spring Boot 3.4.x |
+| **AI Framework** | AgentScope Java | `io.agentscope:agentscope-harness` |
+| **ORM / Data** | MyBatis-Plus, Spring Data JPA | HikariCP, PostgreSQL 17 (pgvector) |
 | **Protocol** | Model Context Protocol (MCP) | HTTP SSE / JSON-RPC 2.0 |
 | **Frontend UI** | Vue 3, Vite, TypeScript | Ant Design Vue 4.x, Pinia, Vue Router |
 | **Batch / Cache** | Spring Batch, Quartz, Redis | Redis 7.x, Lettuce |
