@@ -1,11 +1,12 @@
 ---
 # https://vitepress.dev/reference/default-theme-home-page
 layout: home
+title: "Sync Series 공식 기술 문서 및 개발자 가이드"
 
 hero:
-    name: "엠파시 제품 가이드"
-    text: "살아 있는 소프트웨어는 엠파시가 만듭니다"
-    tagline: "'변화에 최적화된 솔루션', Sync Series로 시스템 연동과 비즈니스 운영을 유연하고 빠르게 지원합니다."
+    name: "엠파시 기술 문서 (Empasy Docs)"
+    text: "Sync Series 아키텍처 및 개발 가이드"
+    tagline: "AI 에이전트 자율 운영 생태계 Sync Series의 설치, 아키텍처, API/MCP 연동 및 운영 매뉴얼을 안내합니다."
     actions:
       - text: 빠른 시작
         link: /syncverse/
@@ -16,17 +17,20 @@ hero:
       - text: 개발자 센터
         link: /sdk/
         type: secondary
+      - text: 공식 홈페이지 (empasy.io) ↗
+        link: https://empasy.io/
+        type: alt
 
 head:
   - - meta
     - name: keywords
-      content: 엠파시, Empasy, Sync Series, SyncVerse, SyncInsight, SyncETA, SyncCrawl, SyncBoot, SyncCMS, SyncShop, SyncLLM, AI 오케스트레이션, 멀티 에이전트, AI 관제, FinOps, 마이크로서비스 아키텍처, MSA, Headless Commerce, 소프트웨어 개발, 솔루션, 디지털 혁신, 비즈니스 민첩성, 개발 플랫폼, 백엔드, 프론트엔드, 콘텐츠 관리 시스템, CMS, 자동화 테스트, QA, 품질 보증, CI/CD, DevOps, Java, Spring Boot, Vue 3, TypeScript
+      content: 엠파시 기술 문서, Empasy Docs, Sync Series 매뉴얼, SyncVerse 가이드, SyncInsight, SyncETA, SyncCrawl, SyncBoot, SyncCMS, SyncShop, SyncLLM, MCP API 명세, 개발자 문서
   - - meta
     - property: og:title
-      content: "엠파시 Sync Series: 비즈니스 민첩성과 안정적 운영을 위한 AI 에이전트 생태계"
+      content: "엠파시 기술 문서 (Empasy Docs) - Sync Series 공식 아키텍처 및 개발 가이드"
   - - meta
     - property: og:description
-      content: "엠파시는 SyncVerse, SyncInsight, SyncETA, SyncCrawl, SyncBoot, SyncCMS, SyncShop, SyncLLM으로 구성된 Sync Series를 통해 시스템 연동과 운영 자동화를 지원합니다."
+      content: "엠파시 Sync Series(SyncVerse, SyncInsight, SyncETA, SyncCrawl, SyncBoot, SyncCMS, SyncShop, SyncLLM) 공식 기술 문서 및 개발자 가이드 포털입니다."
   - - meta
     - property: og:image
       content: https://doc.empasy.com/images/favicon.png
@@ -109,6 +113,8 @@ footer: Copyright © 2026 Empasy Inc. All rights reserved.
 ---
 
 ## 개요
+
+> 💡 **공식 홈페이지 안내**: 본 사이트(`doc.empasy.com`)는 **Sync Series 기술 문서 및 개발자 가이드 포털**입니다. 기업 소개, 솔루션 도입 문의 및 데스크톱 앱 다운로드는 **[엠파시 공식 홈페이지 (https://empasy.io)](https://empasy.io/)**를 방문해 주시기 바랍니다.
 
 엠파시(Empasy)는 **"Empathic Synergy (공감 시너지)"**라는 핵심 가치를 바탕으로 빠르게 변화하는 비즈니스 환경에 민첩하게 대응하기 위한 차세대 소프트웨어 및 AI 에이전트 솔루션을 제공하는 기업입니다. 솔루션 기반의 SI(시스템 통합) 및 엔터프라이즈 DX 사업을 선도하며, **"변화에 최적화된 솔루션(Boon to Business by Agility)"**을 최고 가치로 내세우는 **Sync Series** 제품군을 통해 기업의 비즈니스 민첩성과 자율 운영을 지원합니다.
 

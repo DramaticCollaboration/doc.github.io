@@ -10,8 +10,9 @@ export default withMermaid(
   defineConfig({
   base: process.env.BASE_URL || "/",
   lang: "ko-KR",
-  title: "살아 있는 소프트웨어는 엠파시가 만듭니다",
-  description: "엠파시 Sync Series 공식 기술 문서 - AI 에이전트 기반 UI 테스트 자동화(SyncETA), 마이크로서비스 프레임워크(SyncBoot), 콘텐츠 관리(SyncCMS) 및 전사 관제탑(SyncVerse) 통합 가이드",
+  title: "Empasy Docs (엠파시 기술 문서)",
+  titleTemplate: ":title | Empasy Docs (엠파시 기술 문서)",
+  description: "엠파시(Empasy) Sync Series 공식 기술 문서 포털 - SyncVerse, SyncETA, SyncBoot, SyncCMS, SyncShop, SyncInsight, SyncCrawl, SyncLLM 아키텍처 및 개발 가이드",
 
   rewrites: {
     "ko/:rest*": ":rest*",
@@ -87,6 +88,26 @@ new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
  'https://www.googletagmanager.com/gtm.js?id=' + i + dl;f.parentNode.insertBefore(j,f);
 })(window,document,'script','dataLayer','GTM-KPMTVVXN');`,
+    ],
+    [
+      'script',
+      { type: 'application/ld+json' },
+      JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "Empasy Docs (엠파시 기술 문서)",
+        "url": "https://doc.empasy.com/",
+        "isPartOf": {
+          "@type": "WebSite",
+          "name": "엠파시 (Empasy) 공식 홈페이지",
+          "url": "https://empasy.io/"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "주식회사 엠파시 (Empasy)",
+          "url": "https://empasy.io/"
+        }
+      }),
     ],
     [
       'script',
@@ -273,14 +294,15 @@ new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
               },
               {
                 text: '엠파시 공식 홈페이지',
-                link: 'https://empasy.io',
+                link: 'https://empasy.io/',
                 target: '_blank',
-                rel: 'noopener noreferrer',
+                rel: 'noopener',
               }
             ]
           }
         ]
-      }
+      },
+      { text: "공식 홈페이지 (empasy.io)", link: "https://empasy.io/", target: "_blank", rel: "noopener" }
     ],
 
     sidebar: {
