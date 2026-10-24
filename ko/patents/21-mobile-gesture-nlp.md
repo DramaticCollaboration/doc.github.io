@@ -84,7 +84,7 @@ flowchart TD
 - **테스트케이스 작성 시간**: 기존 코드 스크립트 작성 대비 자연어 변환을 통해 작성 소요 시간 **약 78% 단축**.
 
 ### 코드베이스 구현 위치 (Grounding)
-- `today-care/senior-app` 및 `SyncETA/Server/src/main/java/com/empasy/sync/eta/service/MobileAgentService.java`: 모바일 에이전트 제어기
+- `SyncETA/Server/src/main/java/com/empasy/sync/eta/service/MobileAgentService.java`: 모바일 에이전트 제어기
 - `SyncETA/Server/src/main/java/com/empasy/sync/eta/service/MobileTcParserService.java`: 자연어 테스트케이스 파서 및 생성기
 - `SyncETA/Server/src/main/java/com/empasy/sync/eta/service/RemoteAdbService.java`: 원격 Android ADB 파이프라인
 - `SyncETA/Server/src/main/java/com/empasy/sync/eta/service/RemoteIosService.java`: 원격 iOS WebDriverAgent 연동기

@@ -17,6 +17,12 @@ hero:
       - text: 개발자 센터
         link: /sdk/
         type: secondary
+      - text: 소개서·제안서 PDF
+        link: /proposals/
+        type: secondary
+      - text: 통합 데모 포털 (sync.empasy.io)
+        link: https://sync.empasy.io
+        theme: alt
       - text: 공식 홈페이지 (empasy.io) ↗
         link: https://empasy.io/
         type: alt
@@ -24,13 +30,13 @@ hero:
 head:
   - - meta
     - name: keywords
-      content: 엠파시 기술 문서, Empasy Docs, Sync Series 매뉴얼, SyncVerse 가이드, SyncInsight, SyncETA, SyncCrawl, SyncBoot, SyncCMS, SyncShop, SyncLLM, MCP API 명세, 개발자 문서
+      content: 엠파시 기술 문서, Empasy Docs, Sync Series 매뉴얼, SyncVerse 가이드, SyncInsight, SyncETA, SyncCrawl, SyncBoot, SyncCMS, SyncShop, SyncOps, SyncLLM, MCP API 명세, 개발자 문서
   - - meta
     - property: og:title
       content: "엠파시 기술 문서 (Empasy Docs) - Sync Series 공식 아키텍처 및 개발 가이드"
   - - meta
     - property: og:description
-      content: "엠파시 Sync Series(SyncVerse, SyncInsight, SyncETA, SyncCrawl, SyncBoot, SyncCMS, SyncShop, SyncLLM) 공식 기술 문서 및 개발자 가이드 포털입니다."
+      content: "엠파시 Sync Series(SyncVerse, SyncInsight, SyncETA, SyncCrawl, SyncBoot, SyncCMS, SyncShop, SyncOps, SyncLLM) 공식 기술 문서 및 개발자 가이드 포털입니다."
   - - meta
     - property: og:image
       content: https://doc.empasy.com/images/favicon.png
@@ -42,13 +48,13 @@ features:
   - icon:
       svg: '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>'
     title: 플랫폼 연동 구조 (Ecosystem)
-    details: 표준 MCP 프로토콜 기반 서비스 간 연동 규격 및 전사 3-Layer 아키텍처
+    details: 표준 MCP 프로토콜 기반 서비스 간 연동 규격 및 전사 4-Tier 자율 에이전트 연합 아키텍처
     link: /ecosystem/
     linkText: 문서 보기 →
   - icon:
       svg: '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><circle cx="19" cy="5" r="2"/><circle cx="5" cy="19" r="2"/><circle cx="19" cy="19" r="2"/><circle cx="5" cy="5" r="2"/><path d="m7 7 3 3"/><path d="m14 14 3 3"/><path d="m14 10 3-3"/><path d="m7 17 3-3"/></svg>'
     title: SyncVerse (통합 관제 센터)
-    details: 분산된 도메인 서비스들이 표준 MCP로 연동되어 시스템 운영을 자동화하고 통합 관제하는 중앙 플랫폼
+    details: 4-Tier 자율 에이전트 연합 아키텍처 기반 도메인 에이전트들을 표준 MCP로 통합 제어하는 중앙 관제 플랫폼
     link: /syncverse/
     linkText: 문서 보기 →
   - icon:
@@ -60,7 +66,7 @@ features:
   - icon:
       svg: '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 11 3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>'
     title: SyncETA (테스트 자동화)
-    details: 코드리스 GUI 테스트 및 Vision 기반 화면 자가치유 파이프라인 제공. 데스크톱 앱(v0.0.33) 배포 중
+    details: 코드리스 GUI 테스트 및 Vision 기반 화면 자가치유 파이프라인 제공. 데스크톱 앱(v0.0.44) 배포 중
     link: /synceta/
     linkText: 문서 보기 →
   - icon:
@@ -72,7 +78,7 @@ features:
   - icon:
       svg: '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M3 9h18"/><path d="M9 21V9"/></svg>'
     title: SyncCMS (콘텐츠 관리 시스템)
-    details: 비전문가도 편리하게 콘텐츠를 관리하고 Live SDK와 보안 환경을 통해 확장하는 콘텐츠 관리 시스템
+    details: Nuxt 3 SSR 및 Copywriter-SEO-Publisher 멀티에이전트 스웜 기반 하이브리드 헤드리스 CMS
     link: /synccms/
     linkText: 문서 보기 →
   - icon:
@@ -80,6 +86,12 @@ features:
     title: SyncShop (이커머스 운영 솔루션)
     details: 옴니채널 상거래 관리, 다이내믹 프라이싱, 실시간 재고 관리 및 주문 처리 솔루션
     link: /syncshop/
+    linkText: 문서 보기 →
+  - icon:
+      svg: '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="14" x="2" y="7" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>'
+    title: SyncOps (SI 사업운영 및 손익 관제)
+    details: 듀얼단가 실시간 프로젝트 손익, KOSA 기술등급 M/M 매트릭스, 4대 보증보험·하도급법 감시 및 SHA-256 전자연구노트 플랫폼
+    link: /syncops/
     linkText: 문서 보기 →
   - icon:
       svg: '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/><path d="M3 12c0 1.66 4 3 9 3s9-1.34 9-3"/></svg>'
@@ -108,7 +120,7 @@ footer: Copyright © 2026 Empasy Inc. All rights reserved.
 | **표준 산출물 양식** | 요구사항정의서, WBS, 테스트시나리오 등 실무 서식 양식 다운로드 | [표준 산출물 양식 →](/methodology/enterprise-document-templates) |
 | **AI 개발 주기 (AI-SDLC)** | 명세 우선 아키텍처 설계부터 4단계 자가치유 검증까지의 AI 협업 절차 | [AI-SDLC 가이드 →](/methodology/ai-driven-development) |
 | **애자일 및 Git Flow** | 스크럼반(Scrumban) 운영, Git 브랜치 전략, 일일 스크럼 실무 프로세스 | [애자일 가이드 →](/agile/) |
-| **공식 소개 자료 (PDF)** | SyncSeries 솔루션 소개서 및 제안서 다운로드 | [사업 소개서](/downloads/SyncSeries_Business_Proposal_v1.0.pdf) · [솔루션 안내서](/downloads/SyncSeries_Brochure_v1.0.pdf) |
+| **제품별 소개서·도입제안서 (PDF)** | 통합 제안서 및 12개 전 제품군(SyncVerse~SyncCrawl) 개별 8p 제안서 다운로드 | [전체 제안서 다운로드 센터 →](/proposals/) · [통합 제안서 PDF](/downloads/proposals/SyncSeries_Master_Proposal.pdf) |
 
 ---
 
@@ -159,15 +171,20 @@ footer: Copyright © 2026 Empasy Inc. All rights reserved.
 * **핵심 기능**: Schema Studio 로우코드 생성기(DDL, 엔티티, CRUD REST API 자동 생성), Saga 패턴 기반 분산 보상 트랜잭션 관리, Sentinel/Seata/SkyWalking 풀스택 통합.
 * **도입 효과**: 기초 CRUD 및 권한 관리 구축 공수를 줄여 비즈니스 핵심 도메인 로직 구현에 집중할 수 있는 환경을 제공합니다.
 
-### SyncCMS: 개발 지향형 차세대 콘텐츠 관리 시스템
-* **개요**: 마케터와 운영자의 직관적인 콘텐츠 퍼블리싱과 개발자의 유연한 확장을 동시에 지원하는 Spring Boot 기반 CMS입니다.
-* **핵심 기능**: FreeMarker 템플릿 엔진 기반 고속 렌더링, Live SDK 연동, 템플릿 기반 I18n 글로벌 다국어 자동 동기화, 온프레미스 AI 보안 가드레일.
-* **도입 효과**: 벤더 종속성을 탈피하여 엔터프라이즈 요구사항에 맞춘 유연한 사이트 구축 및 대규모 트래픽 처리를 안정적으로 지원합니다.
+### SyncCMS: Nuxt 3 SSR 및 멀티에이전트 스웜 기반 하이브리드 헤드리스 CMS
+* **개요**: 마케터와 운영자의 직관적인 콘텐츠 퍼블리싱과 개발자의 유연한 확장을 동시에 지원하는 Nuxt 3 SSR 및 Copywriter-SEO-Publisher 멀티에이전트 스웜 기반 하이브리드 헤드리스 CMS입니다.
+* **핵심 기능**: Nuxt 3 SSR 고속 렌더링, Copywriter-SEO-Publisher 3단계 에이전트 스웜(`CmsSwarmWorkflowService`), AEO/GEO 웹 품질 감사, Live SDK 인라인 편집 연동, 온프레미스 AI 보안 가드레일.
+* **도입 효과**: 벤더 종속성을 탈피하여 엔터프라이즈 요구사항에 맞춘 유연한 사이트 구축 및 AI 검색엔진(AEO/GEO) 인용 최적화를 안정적으로 지원합니다.
 
 ### SyncShop: Headless 옴니채널 상거래 및 자율 운영 에이전트
 * **개요**: 프론트엔드 표현층과 백엔드 상거래 로직을 분리하여 웹, 모바일, 키오스크 등 모든 고객 접점에 신속히 대응하는 차세대 Headless eCommerce 플랫폼입니다.
 * **핵심 기능**: 다계층 카탈로그 및 동적 SKU 재고 잠금(Inventory Lock), 지능형 쿠폰 및 플래시딜 타임세일 엔진, 실시간 DB 기반 다이내믹 프라이싱 및 무손실 스냅샷 롤백(`shop_batch_price_update`), 3단계 에이전트 스웜(Pricing Optimizer, Margin Safeguard, Executor).
 * **도입 효과**: 옴니채널 출시 속도를 대폭 단축하고, 마진 안전가드 기반 무인 다이내믹 프라이싱으로 상거래 운영 공수와 마진 누수를 방지합니다.
+
+### SyncOps: 한국형 SI/솔루션 사업운영 & 듀얼단가 손익·보증·연구노트 관제 플랫폼
+* **개요**: 수주형 SI 및 SW 솔루션 기업의 계약단가 대 실투입원가 듀얼 손익, KOSA 기술등급 인력 매트릭스, 4대 보증보험, 하도급법 지급기일 감시 및 조특법 전자연구노트를 통합 관리하는 사업운영(PSA/PMO) 에이전트입니다.
+* **핵심 기능**: 발주처 계약단가 vs 실투입원가 듀얼단가 실시간 손익 관제, KOSA 기술등급 및 월별 M/M 가동률 매트릭스, 4대 이행보증보험 만기 추적, 하도급법 15일/60일 지급기일 및 지연이자 자동 산출, 조특법 SHA-256 시점인증 전자연구노트.
+* **도입 효과**: 프로젝트 종료 전 실시간 공헌이익을 투명하게 파악하고, 하도급법·보증보험·R&D 세액공제 감사 리스크를 선제적으로 차단합니다.
 
 ### SyncLLM: 엔터프라이즈 AI 게이트웨이 & FinOps 비용 최적화
 * **개요**: 사내 분산된 멀티 LLM API 호출을 단일 진입점으로 통합 제어하고 토큰 비용을 체계적으로 최적화하는 게이트웨이입니다.

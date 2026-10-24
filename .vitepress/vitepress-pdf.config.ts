@@ -1,7 +1,7 @@
 import type { DefaultTheme } from 'vitepress'
 import { defineUserConfig } from 'vitepress-export-pdf'
 
-import userConfig from './config.mjs'
+import userConfig from './config.mts'
 
 function extractLinksFromConfig(config: DefaultTheme.Config) {
   const links: string[] = []

@@ -21,6 +21,8 @@ head:
 
 # SyncBoot: 디지털 백엔드 프레임워크 개요
 
+> 📄 **제품 소개서 겸 도입 제안서 다운로드**: [SyncBoot_Proposal.pdf (8p)](/downloads/proposals/SyncBoot_Proposal.pdf){target="_blank" download="SyncBoot_Proposal.pdf"} · [전체 제품군 제안서 모음](/proposals/)
+
 SyncBoot는 비즈니스 도메인 맥락을 인지하여 데이터베이스 운영과 API 개발을 지원하는 Java 기반 엔터프라이즈 백엔드 플랫폼입니다.
 
 Spring Boot 3, AgentScope Java (`io.agentscope:agentscope-harness`), Model Context Protocol (MCP) 표준을 기반으로 설계되었으며, 데이터 CRUD, 스키마 관리, 풀스택 코드 생성, 분산 로그 진단 기능을 제공합니다.

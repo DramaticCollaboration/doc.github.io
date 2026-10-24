@@ -12,7 +12,7 @@ export default withMermaid(
   lang: "ko-KR",
   title: "Empasy Docs (엠파시 기술 문서)",
   titleTemplate: ":title | Empasy Docs (엠파시 기술 문서)",
-  description: "엠파시(Empasy) Sync Series 공식 기술 문서 포털 - SyncVerse, SyncETA, SyncBoot, SyncCMS, SyncShop, SyncInsight, SyncCrawl, SyncLLM 아키텍처 및 개발 가이드",
+  description: "엠파시(Empasy) Sync Series 공식 기술 문서 포털 - SyncVerse, SyncETA, SyncBoot, SyncCMS, SyncShop, SyncOps, SyncInsight, SyncCrawl, SyncLLM 아키텍처 및 개발 가이드",
 
   rewrites: {
     "ko/:rest*": ":rest*",
@@ -30,7 +30,7 @@ export default withMermaid(
     ['meta', { name: 'author', content: '엠파시' }], // 작성자 정보
     [
       'meta',
-      { name: 'keywords', content: '엠파시, Empasy, Sync Series, SyncVerse, SyncInsight, SyncETA, SyncCrawl, SyncBoot, SyncCMS, SyncLLM, AI 에이전트, AI 오케스트레이션, FinOps' },
+      { name: 'keywords', content: '엠파시, Empasy, Sync Series, SyncVerse, SyncInsight, SyncETA, SyncCrawl, SyncBoot, SyncCMS, SyncShop, SyncOps, SyncLLM, AI 에이전트, AI 오케스트레이션, FinOps' },
     ], //
 
     // PWA-related
@@ -43,23 +43,7 @@ export default withMermaid(
       { name: 'naver-site-verification', content: '3102a764f7ad54fe27ab3083cd0a7b0f647be4c7' },
     ],
 
-    ['link', { rel: 'apple-touch-icon', href: '/images/icons/apple-touch-icon.png' }], // Apple Touch Icon
-
-    [
-      'link',
-      {
-        rel: 'mask-icon',
-        href: '/images/icons/safari-pinned-tab.svg',
-        color: '#3eaf7c',
-      },
-    ], // Safari Pinned Tab Icon
-    [
-      'meta',
-      {
-        name: 'msapplication-TileImage',
-        content: '/images/icons/mstile-150x150.png',
-      },
-    ], // Windows Tile Icon
+    ['link', { rel: 'apple-touch-icon', href: '/images/favicon.png' }], // Apple Touch Icon
     ['meta', { name: 'msapplication-TileColor', content: '#3eaf7c' }], // Windows Tile 배경색
 
     // Add other ones that are needed <head> tags eg Google Analytics Etc
@@ -133,9 +117,11 @@ new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
     }
   ],
   transformPageData(pageData) {
-    const canonicalUrl = `https://doc.empasy.com/${pageData.relativePath}`
-      .replace(/index\.md$/, '')
-      .replace(/\.md$/, '.html')
+    const cleanPath = pageData.relativePath
+      .replace(/^ko\//, '')
+      .replace(/(^|\/)index\.md$/, '$1')
+      .replace(/\.md$/, '')
+    const canonicalUrl = `https://doc.empasy.com/${cleanPath}`
     
     pageData.frontmatter.head ??= []
     pageData.frontmatter.head.push([
@@ -152,7 +138,7 @@ new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
       { text: "홈", link: "/" },
       {
         text: '제품 안내 (Sync Series)',
-        activeMatch: "^/(syncverse|syncinsight|synceta|synccrawl|syncboot|synccms|syncshop|syncllm|syncadmin|syncapim)/",
+        activeMatch: "^/(syncverse|syncinsight|synceta|synccrawl|syncboot|synccms|syncshop|syncops|syncllm|syncadmin|syncapim)/",
         items: [
           {
             text: '관제 및 테스트',
@@ -167,6 +153,7 @@ new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
             items: [
               { link: "/syncshop/", text: 'SyncShop (이커머스 운영)' },
               { link: "/synccms/", text: 'SyncCMS (콘텐츠 관리)' },
+              { link: "/syncops/", text: 'SyncOps (SI 사업운영 및 손익 관제)' },
               { link: "/synccrawl/", text: 'SyncCrawl (웹 데이터 수집)' },
             ]
           },
@@ -175,6 +162,12 @@ new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
             items: [
               { link: "/syncboot/", text: 'SyncBoot (백엔드 프레임워크)' },
               { link: "/syncllm/", text: 'SyncLLM (AI 모델 게이트웨이)' },
+            ]
+          },
+          {
+            text: '소개서 및 도입 제안서',
+            items: [
+              { link: "/proposals/", text: '📄 전 제품 소개서·제안서 PDF 다운로드' },
             ]
           },
           {
@@ -302,6 +295,7 @@ new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
           }
         ]
       },
+      { text: "통합 데모 포털", link: "https://sync.empasy.io", target: "_blank", rel: "noopener" },
       { text: "공식 홈페이지 (empasy.io)", link: "https://empasy.io/", target: "_blank", rel: "noopener" }
     ],
 
@@ -318,6 +312,7 @@ new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
         '/synccrawl/': generateKrSidebar('synccrawl'),
         '/synccms/': generateKrSidebar('synccms'),
         '/syncshop/': generateKrSidebar('syncshop'),
+        '/syncops/': generateKrSidebar('syncops'),
         '/syncllm/': generateKrSidebar('syncllm'),
         '/synceta/': generateKrSidebar('synceta'),
         '/syncboot/': generateKrSidebar('syncboot'),

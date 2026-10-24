@@ -20,7 +20,10 @@ Authorization: Bearer <API_KEY>
 
 ## 2. OpenAI 호환 추론 엔드포인트
 
-### 2.1 POST `/v1/chat/completions`
+- **프로덕션 게이트웨이 URL**: `https://llm.empasy.io/api/v1/llm/chat/completions`
+- **로컬 개발 서버 URL**: `http://localhost:18090/api/v1/llm/chat/completions`
+
+### 2.1 POST `/api/v1/llm/chat/completions`
 
 클라이언트의 프롬프트 질의를 수신하여 최적의 업스트림 모델로 라우팅하고 결과를 반환합니다.
 
@@ -35,10 +38,11 @@ Authorization: Bearer <API_KEY>
 | `max_tokens` | integer | No | null | 최대 생성 토큰 수 |
 | `syncllm_options` | object | No | - | SyncLLM 전용 제어 옵션 (`cacheBypass`, `piiStrict`) |
 
-#### cURL 예제
+#### cURL 예제 (프로덕션 및 로컬)
 
 ```bash
-curl -X POST https://api.syncllm.empasy.io/v1/chat/completions \
+# 프로덕션 엔드포인트 ( 로컬 개발 시: http://localhost:18090/api/v1/llm/chat/completions )
+curl -X POST https://llm.empasy.io/api/v1/llm/chat/completions \
   -H "Authorization: Bearer $SYNCLLM_KEY" \
   -H "Content-Type: application/json" \
   -d '{
@@ -53,12 +57,12 @@ curl -X POST https://api.syncllm.empasy.io/v1/chat/completions \
 
 ---
 
-### 2.2 POST `/v1/embeddings`
+### 2.2 POST `/api/v1/llm/embeddings`
 
 텍스트 임베딩 벡터를 생성합니다.
 
 ```bash
-curl -X POST https://api.syncllm.empasy.io/v1/embeddings \
+curl -X POST https://llm.empasy.io/api/v1/llm/embeddings \
   -H "Authorization: Bearer $SYNCLLM_KEY" \
   -H "Content-Type: application/json" \
   -d '{
@@ -71,7 +75,7 @@ curl -X POST https://api.syncllm.empasy.io/v1/embeddings \
 
 ## 3. FinOps 토큰 예산 관리 엔드포인트
 
-### 3.1 GET `/admin/v1/budgets`
+### 3.1 GET `/api/v1/llm/budgets`
 
 등록된 모든 에이전트/부서별 일간 및 월간 토큰 사용량과 잔여 예산을 조회합니다.
 
@@ -104,7 +108,7 @@ curl -X POST https://api.syncllm.empasy.io/v1/embeddings \
 
 ---
 
-### 3.2 POST `/admin/v1/budgets`
+### 3.2 POST `/api/v1/llm/budgets`
 
 특정 에이전트에 대한 토큰 예산 및 차단 임계치를 설정합니다.
 

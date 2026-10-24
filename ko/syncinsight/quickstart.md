@@ -39,8 +39,8 @@ head:
 ### 2.1. 저장소 클론 및 환경 설정
 ```bash
 # 1. 저장소 클론 및 디렉토리 이동
-git clone https://github.com/empasy/SyncInsight.git
-cd SyncInsight
+git clone https://github.com/DramaticCollaboration/SyncSeries.git
+cd SyncSeries/sync-insight
 
 # 2. 환경 설정 파일 복사
 cp .env.example .env
@@ -66,18 +66,18 @@ LLM_MODEL_NAME=gpt-4o
 
 ### 2.2. 컨테이너 실행
 ```bash
-docker compose -f docker-compose-local.yml up -d
+docker compose -f docker-compose-dev.yml up -d
 ```
 
 실행이 완료되면 브라우저에서 아래 주소로 접속합니다:
-* **Insight UI (대시보드)**: `http://localhost:3000` (기본 계정: `admin@empasy.com` / `admin1234`)
-* **Insight API Swagger**: `http://localhost:8084/swagger-ui.html`
+* **Insight UI (대시보드)**: `http://localhost:3101` (기본 계정: `admin` / `123456`)
+* **Insight API Swagger**: `http://localhost:8084/swagger-ui.html` (Canonical API Prefix: `/api/v1/insight/...`)
 
 ---
 
 ## 3. 분석 작업 실행 예시 (UI)
 
-1. 브라우저에서 `http://localhost:3000` 접속 후 로그인합니다.
+1. 브라우저에서 `http://localhost:3101` 접속 후 로그인(`admin` / `123456`)합니다.
 2. 좌측 메뉴에서 **[DeepResearch 캔버스 (SI-005)]**를 선택합니다.
 3. 분석 주제를 입력합니다:
    > *"최근 결제 이탈 요인을 분석하고 전환율 개선을 위한 프로모션 방안을 제안해줘."*
@@ -95,7 +95,7 @@ curl -X POST "http://localhost:8084/api/v1/insight/jobs" \
      -H "Authorization: Bearer YOUR_JWT_TOKEN" \
      -d '{
        "prompt": "하반기 시장 트렌드 및 경쟁사 프로모션 분석",
-       "requesterId": "admin@empasy.com"
+       "requesterId": "admin"
      }'
 ```
 
@@ -118,7 +118,7 @@ curl -X POST "http://localhost:8084/api/v1/insight/actions/b1eebc99-9c0b-4ef8-bb
      -H "Content-Type: application/json" \
      -H "Authorization: Bearer YOUR_JWT_TOKEN" \
      -d '{
-       "reviewedBy": "admin@empasy.com",
+       "reviewedBy": "admin",
        "comment": "검토 완료, 프로모션 적용 진행"
      }'
 ```

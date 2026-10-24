@@ -34,13 +34,13 @@ SyncCMS는 모든 콘텐츠, 레이아웃 및 폼 데이터를 표준 RESTful AP
 
 ## 1. 콘텐츠 조회 API
 
-### `GET /api/v1/contents/{contentSlug}`
+### `GET /api/v1/cms/contents/{contentSlug}`
 
 특정 채널에 발행(Published)된 최신 콘텐츠 데이터 및 SEO 메타데이터를 조회합니다.
 
 #### 요청 예시 (cURL)
 ```bash
-curl -X GET "https://cms.empasy.com/api/v1/contents/2026-fall-membership" \
+curl -X GET "https://cms.empasy.io/api/v1/cms/contents/2026-fall-membership" \
      -H "X-Sync-Site-Key: SITE_MAIN_PORTAL" \
      -H "Accept: application/json"
 ```
@@ -59,14 +59,14 @@ curl -X GET "https://cms.empasy.com/api/v1/contents/2026-fall-membership" \
     "fields": {
       "headline": "2026 하반기 멤버십 페스티벌",
       "description": "신규 가입 시 웰컴 쿠폰팩과 포인트 적립 혜택을 즉시 제공합니다.",
-      "bannerUrl": "https://cdn.empasy.com/images/promo2026.webp",
+      "bannerUrl": "https://cms.empasy.io/images/promo2026.webp",
       "ctaText": "혜택 확인하기",
       "ctaLink": "/events/welcome-pack"
     },
     "seo": {
       "metaTitle": "2026 멤버십 혜택 | Empasy",
       "metaDescription": "신규 회원 혜택과 이벤트 정보를 확인하세요.",
-      "ogImage": "https://cdn.empasy.com/images/og-fall.png"
+      "ogImage": "https://cms.empasy.io/images/og-fall.png"
     }
   }
 }
@@ -76,13 +76,13 @@ curl -X GET "https://cms.empasy.com/api/v1/contents/2026-fall-membership" \
 
 ## 2. 동적 폼 제출 API
 
-### `POST /api/v1/forms/{formKey}/submit`
+### `POST /api/v1/cms/forms/{formKey}/submit`
 
 웹/앱 프론트엔드에서 수집된 사용자 입력 폼 데이터를 저장하고 유효성을 검증합니다.
 
 #### 요청 예시 (cURL)
 ```bash
-curl -X POST "https://cms.empasy.com/api/v1/forms/contact-us/submit" \
+curl -X POST "https://cms.empasy.io/api/v1/cms/forms/contact-us/submit" \
      -H "X-Sync-Site-Key: SITE_MAIN_PORTAL" \
      -H "Content-Type: application/json" \
      -d '{
@@ -109,13 +109,13 @@ curl -X POST "https://cms.empasy.com/api/v1/forms/contact-us/submit" \
 
 ## 3. 글로벌 캐시 무효화 API (CDN Purge)
 
-### `POST /api/v1/deploy/purge-cache`
+### `POST /api/v1/cms/deploy/purge-cache`
 
 콘텐츠 갱신 시 백엔드 분산 캐시(Redis) 및 연결된 엣지 CDN 캐시를 즉시 무효화합니다.
 
 #### 요청 예시 (cURL)
 ```bash
-curl -X POST "https://cms.empasy.com/api/v1/deploy/purge-cache" \
+curl -X POST "https://cms.empasy.io/api/v1/cms/deploy/purge-cache" \
      -H "Authorization: Bearer ADMIN_JWT_TOKEN" \
      -H "Content-Type: application/json" \
      -d '{
@@ -132,11 +132,11 @@ curl -X POST "https://cms.empasy.com/api/v1/deploy/purge-cache" \
 
 ```json
 {
-  "type": "https://cms.empasy.com/errors/content-not-found",
+  "type": "https://cms.empasy.io/errors/content-not-found",
   "title": "Content Not Found",
   "status": 404,
   "detail": "지정된 슬러그('invalid-slug')에 해당하는 발행된 콘텐츠가 존재하지 않습니다.",
-  "instance": "/api/v1/contents/invalid-slug",
+  "instance": "/api/v1/cms/contents/invalid-slug",
   "timestamp": "2026-09-01T10:20:00Z"
 }
 ```

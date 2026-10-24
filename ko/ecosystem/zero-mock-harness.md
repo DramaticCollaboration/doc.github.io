@@ -1,7 +1,7 @@
 ---
 title: "Zero-Mock 엔터프라이즈 품질 하네스 및 검증 프로토콜"
 sidebarTitle: "Zero-Mock 품질 하네스"
-description: "SyncSeries 전사 16개 프로젝트에 적용된 Mock 전면 금지, RFC 7807 표준 에러 처리, 4-Cycle 품질 검증 및 자동화 감사 스크립트 명세"
+description: "SyncSeries 전사 코어 에이전트 및 공통 모듈에 적용된 Mock 전면 금지, RFC 7807 표준 에러 처리, 4-Cycle 품질 검증 및 자동화 감사 스크립트 명세"
 head:
   - - meta
     - name: keywords
@@ -61,7 +61,7 @@ graph TD
 
 ## 3. 전사 자동화 감사 스크립트 체계
 
-개발 산출물의 무결성을 검증하기 위해 전사 16개 서브프로젝트를 대상으로 3종의 전용 감사 스크립트를 운용합니다.
+개발 산출물의 무결성을 검증하기 위해 전사 코어 에이전트 및 공통 모듈을 대상으로 3종의 전용 감사 스크립트를 운용합니다.
 
 * **`verify-zero-mock.ps1`**:
   * Java, Vue, TypeScript 소스코드 내 하드코딩된 mock 변수, 임의의 더미 컬렉션 반환, 가짜 분기 로직을 정적 패턴 분석으로 검출.

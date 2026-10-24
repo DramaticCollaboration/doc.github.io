@@ -26,7 +26,7 @@ SyncBoot 실행을 위한 권장 사양은 다음과 같습니다:
 
 ```bash
 # 1. 저장소 복제
-git clone https://github.com/empasy/SyncSeries.git
+git clone https://github.com/DramaticCollaboration/SyncSeries.git
 cd SyncSeries/sync-boot
 
 # 2. Docker Compose 실행 (전체 통합 실행 시 docker-compose-dev.yml, 로컬 인프라 단독 실행 시 docker-compose-local.yml)

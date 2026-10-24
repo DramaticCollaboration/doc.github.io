@@ -14,7 +14,7 @@ head:
       content: "도메인별 AI 에이전트들이 협업하여 시스템 운영, 개발, 자가치유를 조율하는 중앙 제어 플랫폼입니다."
   - - meta
     - property: og:image
-      content: https://empasy.io/docs/images/favicon.png
+      content: https://doc.empasy.com/images/logo.png
   - - meta
     - property: og:url
       content: https://doc.empasy.com/syncverse/
@@ -22,6 +22,8 @@ sort: 1
 ---
 
 # SyncVerse: 멀티 에이전트 자율 운영 오케스트레이션 생태계
+
+> 📄 **제품 소개서 겸 도입 제안서 다운로드**: [SyncVerse_Proposal.pdf (8p)](/downloads/proposals/SyncVerse_Proposal.pdf){target="_blank" download="SyncVerse_Proposal.pdf"} · [전체 제품군 제안서 모음](/proposals/)
 
 > **Empasy SyncSeries AI Autonomous Operations Ecosystem**  
 > 중앙 제어 관제탑 및 AI DLC 오케스트레이션 플랫폼

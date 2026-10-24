@@ -7,7 +7,7 @@ head:
       content: git flow, git flow 가이드, git 브랜치 전략, feature branch, develop branch, release branch, hotfix branch, git commit 메시지, git 협업, git workflow
   - - meta
     - property: og:title
-      content: 스크럼반
+      content: Git Flow
   - - meta
     - property: og:description
       content: 팀 협업을 위한 Git Flow 완전 가이드. 브랜치 구조, 커밋 메시지 규칙, 릴리즈 및 핫픽스 관리 방법을 단계별로 쉽게 설명합니다.
@@ -16,7 +16,7 @@ head:
       content: https://doc.empasy.com/images/favicon.png
   - - meta
     - property: og:url
-      content: https://doc.empasy.com/agile/activity.html
+      content: https://doc.empasy.com/agile/gitFlow
 sort: 4000
 ---
 
