@@ -445,7 +445,7 @@ const DEFAULT_SIDEBAR_SHORT_TITLES: Record<string, Record<string, string>> = {
     'mcp-jsonrpc-agent-orchestration': 'MCP 도구 오케스트레이션',
     'hybrid-rag-dense-sparse-reranking': '하이브리드 RAG & 리랭킹',
     'springboot-virtual-threads-agentscope': '가상 스레드 & AgentScope',
-    vision-llm-finetuning: 'Llama-3.2-Vision 파인튜닝',
+    'vision-llm-finetuning': 'Llama-3.2-Vision 파인튜닝',
     'llm-finetuning-degradation-analysis': '파인튜닝 성능 저하 분석',
     rag: 'RAG 파이프라인 기초',
   },
