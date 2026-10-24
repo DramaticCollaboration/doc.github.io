@@ -24,6 +24,8 @@ dir:
 
 # SyncInsight: 데이터 분석 및 의사결정 지원 플랫폼
 
+> 📄 **제품 소개서 겸 도입 제안서 다운로드**: [SyncInsight_Proposal.pdf (8p)](/downloads/proposals/SyncInsight_Proposal.pdf){target="_blank" download="SyncInsight_Proposal.pdf"} · [전체 제품군 제안서 모음](/proposals/)
+
 **SyncInsight**는 SyncVerse 에이전트 생태계의 데이터 분석 및 의사결정 지원(Decision Intelligence) 플랫폼입니다.
 
 기존 비즈니스 인텔리전스(BI) 도구가 사전에 정의된 SQL 쿼리를 기반으로 과거 통계를 시각화하는 데 중점을 두었다면, SyncInsight는 **내부 운영 데이터(SyncVerse)**와 **외부 시장 데이터(SyncCrawl)**를 결합하여 원인을 분석하는 딥 리서치(Deep Research)를 수행하고, 에이전트 간 검토를 거쳐 구체적인 **실행 전략(Action Proposal)**을 제안합니다.

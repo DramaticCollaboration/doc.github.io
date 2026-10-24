@@ -25,10 +25,10 @@ SyncETA는 두 가지 방식으로 시작할 수 있습니다. 로컬 및 스테
 데스크톱 앱은 별도의 서버 구축이나 데이터베이스 설정 없이, 운영체제별 설치 파일 실행만으로 즉시 구동됩니다.
 
 ### 1단계: 설치 파일 다운로드
-[엠파시 공식 다운로드 페이지(empasy.io)](https://empasy.io/ko/download_eta.html)에서 사용 중인 OS에 맞는 최신 안정화 빌드(v0.0.33)를 내려받습니다.
+[엠파시 공식 다운로드 페이지(empasy.io)](https://empasy.io/ko/download_eta.html)에서 사용 중인 OS에 맞는 최신 안정화 빌드(v0.0.44)를 내려받습니다.
 
-- **Windows**: `SyncETA Setup 0.0.33.exe` (x64 및 arm64 지원)
-- **macOS**: `SyncETA-0.0.33-arm64.dmg` (Apple Silicon M시리즈) 또는 `SyncETA-0.0.33.dmg` (Intel)
+- **Windows**: `SyncETA Setup 0.0.44.exe` (x64 및 arm64 지원)
+- **macOS**: `SyncETA-0.0.44-arm64.dmg` (Apple Silicon M시리즈) 또는 `SyncETA-0.0.44.dmg` (Intel)
 
 ### 2단계: 애플리케이션 실행
 설치 완료 후 바탕화면 또는 애플리케이션 목록에서 **SyncETA**를 실행합니다. 별도의 로그인이나 외부 네트워크 인증 없이 로컬 모드로 즉시 기동됩니다.
@@ -41,7 +41,7 @@ SyncETA는 두 가지 방식으로 시작할 수 있습니다. 로컬 및 스테
 
 ```bash
 # 저장소 클론 및 디렉토리 이동
-git clone https://github.com/empasy/SyncSeries.git
+git clone https://github.com/DramaticCollaboration/SyncSeries.git
 cd SyncSeries/SyncEta
 
 # 컨테이너 서비스 일괄 실행

@@ -19,7 +19,7 @@ SyncSeries는 루트 `pom.xml` 멀티모듈 체계 아래 개별 도메인 서�
 
 ```mermaid
 graph TD
-    App["SyncSeries 도메인 및 버티컬 서비스군\n(SyncVerse, SyncBoot, SyncShop, SyncCMS, SyncInsight, SyncLLM, SyncOps, TodayCare, AwesomeFit)"]
+    App["SyncSeries 7대 코어 에이전트 제품군\n(SyncVerse, SyncInsight, SyncLLM, SyncBoot, SyncCMS, SyncShop, SyncOps)"]
     
     subgraph CoreFoundation ["기반 및 AI 에이전트 런타임 레이어"]
         Core["sync-core\n(Base Entity, 공통 응답, Virtual Thread Lock)"]

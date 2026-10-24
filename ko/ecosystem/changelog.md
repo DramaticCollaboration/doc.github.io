@@ -20,7 +20,7 @@ SyncSeries의 버전별 주요 업데이트, 보안 패치, 성능 개선 및 �
   * Admin 서버의 불필요한 SyncVerse 자동 등록을 차단(`self-registration.enabled: false`)하여 UI 기동 독립성 확보.
   * MCP 서버 전용 `AgentSelfRegistrationClient`의 비동기(`runAsync`) 및 3초 타임아웃 강제로 중앙 관제탑 오프라인 시에도 기동 0ms 지연 보장.
 * **Zero-Mock 및 4-Cycle 품질 검증 프로토콜 전사 정립**:
-  * 16개 서브프로젝트 전역에서 Mock/Stub 데이터 완전 박멸 (`verify-zero-mock.ps1` 100% 통과).
+  * 전사 코어 에이전트 및 공통 모듈 전역에서 Mock/Stub 데이터 완전 박멸 (`verify-zero-mock.ps1` 100% 통과).
   * 가짜 정상(Fake Normalcy) 상태 위장 원천 금지 및 RFC 7807 Problem Details 표준 에러 체계 일원화.
 * **SyncCMS 저작도구 및 웹 컴포넌트 고도화**:
   * Tiptap 섀도우 에디터 다중 디바이스(Desktop, Tablet, Mobile) 반응형 프리뷰 탑재.

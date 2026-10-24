@@ -23,8 +23,8 @@ SyncLLM은 Redis(시맨틱 캐시 및 레이트 리밋용)와 PostgreSQL(토큰 
 ### 2.1 저장소 복제 및 디렉토리 이동
 
 ```bash
-git clone https://github.com/empasy/SyncLLM.git
-cd SyncLLM/docker
+git clone https://github.com/DramaticCollaboration/SyncSeries.git
+cd SyncSeries/sync-llm
 ```
 
 ### 2.2 환경 변수 설정 (`.env`)

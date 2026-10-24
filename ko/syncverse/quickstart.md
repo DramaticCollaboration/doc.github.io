@@ -36,8 +36,8 @@ SyncVerse 저장소를 클론하고 번들된 Docker Compose 스크립트를 실
 
 ```bash
 # 1. 프로젝트 디렉토리로 이동
-git clone https://github.com/empasy/SyncSeries.git
-cd SyncSeries/SyncVerse
+git clone https://github.com/DramaticCollaboration/SyncSeries.git
+cd SyncSeries/sync-verse
 
 # 2. 환경 변수 설정 (.env 파일 복사)
 cp .env.example .env
@@ -117,6 +117,6 @@ docker compose -f docker-compose-local.yml ps
 
 ## 6. 다음 단계
 
-- [3-Layer 멀티 에이전트 아키텍처](./architecture)에서 에이전트 계층 간 통신 원리 확인
+- [4-Tier 자율 에이전트 연합 아키텍처](./architecture)에서 에이전트 계층 간 통신 원리 확인
 - [인텐트 라우팅 엔진](./intent-routing)에서 복합 요구사항 분해 규칙 확인
 - [자가치유 파이프라인](./self-healing-pipeline)에서 무인 버그 복구 메커니즘 확인

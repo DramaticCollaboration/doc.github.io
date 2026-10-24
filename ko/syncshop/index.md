@@ -22,6 +22,8 @@ sort: 1
 
 # SyncShop: 지능형 커머스 운영 플랫폼 개요
 
+> 📄 **제품 소개서 겸 도입 제안서 다운로드**: [SyncShop_Proposal.pdf (8p)](/downloads/proposals/SyncShop_Proposal.pdf){target="_blank" download="SyncShop_Proposal.pdf"} · [전체 제품군 제안서 모음](/proposals/)
+
 SyncShop은 비즈니스 유연성과 채널 확장성을 위해 백엔드 상거래 로직과 프론트엔드 표현층을 분리한 **Headless eCommerce** 플랫폼입니다.
 
 모든 핵심 기능을 RESTful API 및 표준 MCP(Model Context Protocol) 도구로 제공하여 웹, 모바일 앱, 키오스크, 소셜 커머스 등 다양한 고객 접점을 통합 제어하며, Spring Boot 3 기반 MSA 구조와 AgentScope Java 에이전트 하네스를 통해 자율 상거래 운영을 지원합니다.

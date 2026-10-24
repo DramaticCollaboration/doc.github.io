@@ -1,5 +1,5 @@
 ---
-title: "3-Layer 멀티 에이전트 아키텍처 및 A2A 통신"
+title: "4-Tier 자율 에이전트 연합 아키텍처 및 A2A 통신"
 sidebarTitle: "시스템 아키텍처"
 description: "SyncVerse의 L1(도메인 워커), L2(중앙 관제탑), L3(전사 의사결정) 3계층 구조와 표준 MCP 기반 Agent-to-Agent(A2A) 통신 메커니즘을 상세히 설명합니다."
 head:
@@ -8,22 +8,22 @@ head:
       content: SyncVerse, 멀티 에이전트 아키텍처, 3-Layer, Swarm, A2A, MCP, JSON-RPC, AgentScope Java, Vue Flow, 분산 오케스트레이션
   - - meta
     - property: og:title
-      content: "SyncVerse: 3-Layer 멀티 에이전트 아키텍처 및 A2A 통신"
+      content: "SyncVerse: 4-Tier 자율 에이전트 연합 아키텍처 및 A2A 통신"
   - - meta
     - property: og:description
       content: "L1-L2-L3 3계층 에이전트 구조와 표준 MCP 프로토콜 기반의 자율 운영 아키텍처 명세"
 sort: 2
 ---
 
-# 3-Layer 멀티 에이전트 아키텍처 및 A2A 통신
+# 4-Tier 자율 에이전트 연합 아키텍처 및 A2A 통신
 
-SyncVerse는 복잡한 엔터프라이즈 시스템을 체계적으로 운영하기 위해 **3-Layer 계층형 에이전트 아키텍처**와 **표준 MCP(Model Context Protocol) 기반의 Agent-to-Agent(A2A) 통신망**을 채택하고 있습니다.
+SyncVerse는 복잡한 엔터프라이즈 시스템을 체계적으로 운영하기 위해 **4-Tier 자율 에이전트 연합 아키텍처**와 **표준 MCP(Model Context Protocol) 기반의 Agent-to-Agent(A2A) 통신망**을 채택하고 있습니다.
 
 ---
 
-## 1. 3-Layer 에이전트 계층 구조
+## 1. 4-Tier 자율 에이전트 연합 계층 구조
 
-에이전트 간의 책임과 권한을 3개 계층으로 명확히 분리하여, 단일 장애점(SPOF)을 방지하고 보안과 실행 신뢰성을 확보합니다.
+에이전트 간의 책임과 권한을 4개 계층으로 명확히 분리하여, 단일 장애점(SPOF)을 방지하고 보안과 실행 신뢰성을 확보합니다.
 
 ```mermaid
 flowchart TD

@@ -48,6 +48,16 @@ const MODULE_CATEGORY_RULES: Record<string, Array<{ group: string; match: (name:
       match: (name) => ['mcp-and-agent', 'enterprise-faq'].includes(name),
     },
   ],
+  syncops: [
+    {
+      group: '시작하기',
+      match: (name) => ['index', 'architecture'].includes(name),
+    },
+    {
+      group: '에이전트 & API',
+      match: (name) => ['mcp-tools'].includes(name),
+    },
+  ],
   syncverse: [
     {
       group: '시작하기',
@@ -307,6 +317,11 @@ const DEFAULT_SIDEBAR_SHORT_TITLES: Record<string, Record<string, string>> = {
     'promotion-and-marketing': '프로모션 및 마케팅',
     'mcp-and-agent': 'MCP 도구 & A2A 연동',
     'enterprise-faq': '도입 FAQ',
+  },
+  syncops: {
+    index: '개요',
+    architecture: '시스템 아키텍처',
+    'mcp-tools': 'MCP 도구 & API',
   },
   syncllm: {
     index: '개요',
@@ -630,6 +645,7 @@ function formatFilenameAsTitle(filename: string): string {
     synccms: 'SyncCMS',
     synccrawl: 'SyncCrawl',
     syncinsight: 'SyncInsight',
+    syncops: 'SyncOps',
     synceta: 'SyncETA',
     syncadmin: 'SyncAdmin',
     syncapim: 'SyncAPIM',

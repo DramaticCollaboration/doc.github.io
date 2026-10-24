@@ -22,6 +22,8 @@ sort: 1
 
 # SyncCrawl™: 웹 크롤링 및 RAG 지식 구축 플랫폼
 
+> 📄 **제품 소개서 겸 도입 제안서 다운로드**: [SyncCrawl_Proposal.pdf (8p)](/downloads/proposals/SyncCrawl_Proposal.pdf){target="_blank" download="SyncCrawl_Proposal.pdf"} · [전체 제품군 제안서 모음](/proposals/)
+
 SyncCrawl™은 데이터 수집과 자연어 처리(NLP), **Playwright MCP 기반 브라우저 자동화**, 그리고 **RAG(검색 증강 생성) 지식 파이프라인**을 연계한 기업용 웹 수집 플랫폼입니다.
 
 수집 대상 웹사이트의 UI 및 DOM 구조가 변경되었을 때 맥락을 분석하여 셀렉터를 재구성(Self-Healing)하며, 수집된 비정형 웹 데이터를 정제·임베딩하여 기업 내 벡터 지식 저장소로 변환합니다.

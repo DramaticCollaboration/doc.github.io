@@ -89,7 +89,7 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: 'https://github.com/empasy/SyncSeries.git'
+    repoURL: 'https://github.com/DramaticCollaboration/SyncSeries.git'
     targetRevision: main
     path: deploy/helm
     helm:

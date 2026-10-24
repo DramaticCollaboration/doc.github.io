@@ -7,7 +7,7 @@ head:
       content: git commit, git commit 메시지, git 커밋 규칙, git 커밋 컨벤션, commit message guide, commit convention, git 협업, git 브랜치 전략, feat, fix, refactor
   - - meta
     - property: og:title
-      content: 스크럼반
+      content: 커밋 메세지
   - - meta
     - property: og:description
       content: git commit, git commit 메시지, git 커밋 규칙, git 커밋 컨벤션, commit message guide, commit convention, git 협업, git 브랜치 전략, feat, fix, refactor
@@ -16,7 +16,7 @@ head:
       content: https://doc.empasy.com/images/favicon.png
   - - meta
     - property: og:url
-      content: https://doc.empasy.com/agile/activity.html
+      content: https://doc.empasy.com/agile/gitCommitLog
 sort: 5000
 ---
 
