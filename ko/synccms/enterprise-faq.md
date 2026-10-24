@@ -49,7 +49,7 @@ SyncCMS는 바이너리 납품 방식의 블랙박스 소프트웨어가 아닙�
 | **데이터베이스 (PostgreSQL)** | 2 Core CPU, 4GB RAM | 8 Core CPU, 16GB RAM, SSD 스토리지 |
 | **캐시 서버 (Redis)** | 1 Core CPU, 2GB RAM | 2 Core CPU, 4GB RAM (Sentinel 또는 Cluster) |
 | **사내 AI 서버 (선택)** | CPU Only (양자화 모델) | NVIDIA A10G / L40S GPU (vLLM 구동) |
-| **지원 데이터베이스** | PostgreSQL 14+, Oracle 19c+, MySQL 8.0+ | PostgreSQL 15+ (JSONB 및 GIN 인덱스 권장) |
+| **지원 데이터베이스** | PostgreSQL 17+ (`pgvector`, `JSONB`) | PostgreSQL 17 (`pgvector/pgvector:pg17` 전사 표준) |
 
 ---
 

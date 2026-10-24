@@ -10,15 +10,15 @@ description: 외부 인터넷 연결이 차단된 사내 환경에서 vLLM 및 N
 
 ## 1. 개요 및 배경
 
-기업의 핵심 비즈니스 로직, 금융 거래 내역, 개인정보 또는 소스코드가 외부 상용 API(예: OpenAI, Anthropic 등)로 전송되는 것을 차단하기 위해, SyncSeries는 물리적으로 격리된 사내 프라이빗 클라우드 및 온프레미스 GPU 서버 환경에서 자체 오픈소스 모델(Qwen2.5, Llama 3.3, DeepSeek-R1 등)을 서빙하는 아키텍처를 지원합니다.
+기업의 핵심 비즈니스 로직, 금융 거래 내역, 개인정보 또는 소스코드가 외부 상용 API(예: OpenAI, Anthropic 등)로 전송되는 것을 차단하기 위해, SyncSeries는 물리적으로 격리된 사내 프라이빗 클라우드 및 온프레미스 GPU 서버 환경에서 자체 오픈소스 모델(Llama-3.3, Llama 3.3, OpenAI-o3 등)을 서빙하는 아키텍처를 지원합니다.
 
 본 가이드는 사내 데이터센터 환경에서 고성능 추론 엔진인 **vLLM**과 NVIDIA 하드웨어 가상화 기술인 **MIG(Multi-Instance GPU)**를 활용하여 가용 GPU 자원을 분할하고 서빙 안정성을 확보하는 절차를 다룹니다.
 
 ```mermaid
 flowchart TD
     subgraph PhysicalGPU ["NVIDIA A100 (80GB) 물리 GPU 1장"]
-        MIG1["MIG 인스턴스 1 (3g.40gb)<br/>메인 추론 (Qwen2.5-32B AWQ)"]
-        MIG2["MIG 인스턴스 2 (2g.20gb)<br/>요약 및 라우팅 (Qwen2.5-7B)"]
+        MIG1["MIG 인스턴스 1 (3g.40gb)<br/>메인 추론 (Llama-3.1-70B AWQ)"]
+        MIG2["MIG 인스턴스 2 (2g.20gb)<br/>요약 및 라우팅 (Llama-3.1-8B)"]
         MIG3["MIG 인스턴스 3 (1g.10gb)<br/>임베딩 전용 (bge-m3)"]
         MIG4["MIG 인스턴스 4 (1g.10gb)<br/>리랭커 전용 (bge-reranker-large)"]
     end
@@ -59,23 +59,23 @@ nvidia-smi -L
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: vllm-qwen-32b
+  name: vllm-llama-70b
   namespace: sync-ai
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: vllm-qwen-32b
+      app: vllm-llama-70b
   template:
     metadata:
       labels:
-        app: vllm-qwen-32b
+        app: vllm-llama-70b
     spec:
       containers:
       - name: vllm-server
         image: vllm/vllm-openai:v0.6.3
         args:
-        - "--model=/models/Qwen2.5-32B-Instruct-AWQ"
+        - "--model=/models/Llama-3.1-70B-Instruct-AWQ"
         - "--quantization=awq"
         - "--max-model-len=16384"
         - "--gpu-memory-utilization=0.92"

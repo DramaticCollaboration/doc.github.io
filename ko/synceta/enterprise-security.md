@@ -37,7 +37,7 @@ graph TD
 ```
 
 ### 사내 로컬 Vision / LLM 엔진 연동
-- **오픈소스 Vision 모델**: Qwen2-VL, LLaVA 등을 사내 GPU 인프라(vLLM, Ollama)에 배포하여 외부 API 통신 없이 시각적 회귀 분석을 수행합니다.
+- **오픈소스 Vision 모델**: Llama-3.2-Vision, LLaVA 등을 사내 GPU 인프라(vLLM, Ollama)에 배포하여 외부 API 통신 없이 시각적 회귀 분석을 수행합니다.
 - **표준 OpenAI 호환 인터페이스**: 엔드포인트 URL(`http://local-vllm.internal:8000/v1`)과 API 키 설정만으로 로컬 인스턴스를 손쉽게 전환할 수 있습니다.
 
 ---

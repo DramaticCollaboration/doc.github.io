@@ -63,7 +63,7 @@ flowchart LR
 SyncSeries 표준에 따라 필드 주입(`@Autowired`)을 엄격히 금지하고 `@RequiredArgsConstructor` 기반 생성자 주입을 적용합니다:
 
 ```java
-package com.empasy.syncboot.service;
+package com.empasy.sync.boot.service;
 
 import io.agentscope.core.ReActAgent;
 import io.agentscope.core.tool.ToolBox;
@@ -83,7 +83,7 @@ public class AutonomousEntityBuilderService {
 
         ReActAgent agent = ReActAgent.builder()
                 .name("SyncBoot-DomainEngineer")
-                .sysPrompt("Spring Boot 3.x, Java 21, JPA 기반 엔터프라이즈 마이크로서비스를 전문 설계하는 수석 아키텍트 에이전트입니다. " +
+                .sysPrompt("Spring Boot 3.5.16, Java 25, MyBatis-Plus 기반 엔터프라이즈 마이크로서비스를 전문 설계하는 수석 아키텍트 에이전트입니다. " +
                            "모든 Entity와 DTO는 반드시 Project Lombok 애너테이션(@Getter, @Builder, @NoArgsConstructor, @AllArgsConstructor)을 적용해야 합니다.")
                 .toolBox(engineeringToolBox)
                 .maxIterations(4)

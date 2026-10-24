@@ -1,26 +1,26 @@
 ﻿---
-title: Qwen2-VL 비전 파인튜닝 가이드
-description: Qwen2-VL 비전 언어 모델의 LoRA 파인튜닝 및 UI 요소 인식 최적화 절차
+title: Llama-3.2-Vision 비전 파인튜닝 가이드
+description: Llama-3.2-Vision 비전 언어 모델의 LoRA 파인튜닝 및 UI 요소 인식 최적화 절차
 head:
   - - meta
     - name: keywords
-      content: Qwen2-VL, 비전 파인튜닝, Vision-LLM, LoRA, UI 테스트 자동화, 엠파시, Empasy
+      content: Llama-3.2-Vision, 비전 파인튜닝, Vision-LLM, LoRA, UI 테스트 자동화, 엠파시, Empasy
   - - meta
     - property: og:title
-      content: Qwen2-VL 비전 파인튜닝 가이드 | 엠파시 기술 연구 아카이브
+      content: Llama-3.2-Vision 비전 파인튜닝 가이드 | 엠파시 기술 연구 아카이브
   - - meta
     - property: og:description
-      content: Qwen2-VL 비전 언어 모델의 LoRA 파인튜닝 및 웹 컴포넌트 인식 정확도 향상 가이드
+      content: Llama-3.2-Vision 비전 언어 모델의 LoRA 파인튜닝 및 웹 컴포넌트 인식 정확도 향상 가이드
   - - meta
     - property: og:image
       content: https://doc.empasy.com/images/favicon.png
   - - meta
     - property: og:url
-      content: https://doc.empasy.com/study/qwen2vlfinetuning.html
+      content: https://doc.empasy.com/study/vision-llm-finetuning.html
 sort: 400
 ---
 
-# Qwen2-VL 파인튜닝 가이드
+# Llama-3.2-Vision 파인튜닝 가이드
 
 ## 1. 파인튜닝 전 준비사항
 
@@ -38,8 +38,8 @@ pip install pillow
 pip install einops
 pip install timm
 
-# Qwen2-VL 전용 패키지
-pip install git+https://github.com/QwenLM/Qwen2-VL.git
+# Llama-3.2-Vision 전용 패키지
+pip install git+https://github.com/Llama-VisionLM/Llama-3.2-Vision.git
 ```
 
 ### 2. **하드웨어 요구사항**
@@ -103,8 +103,8 @@ pip install git+https://github.com/QwenLM/Qwen2-VL.git
 # full_finetune.py
 import torch
 from transformers import (
-    Qwen2VLForConditionalGeneration,
-    Qwen2VLProcessor,
+    Llama32VisionForConditionalGeneration,
+    Llama32VisionProcessor,
     TrainingArguments,
     Trainer
 )
@@ -112,13 +112,13 @@ from datasets import Dataset
 import json
 
 # 모델 로드
-model = Qwen2VLForConditionalGeneration.from_pretrained(
-    "Qwen/Qwen2-VL-7B-Instruct",
+model = Llama32VisionForConditionalGeneration.from_pretrained(
+    "Llama-Vision/Llama-3.2-Vision-7B-Instruct",
     torch_dtype=torch.bfloat16,
     device_map="auto"
 )
 
-processor = Qwen2VLProcessor.from_pretrained("Qwen/Qwen2-VL-7B-Instruct")
+processor = Llama32VisionProcessor.from_pretrained("Llama-Vision/Llama-3.2-Vision-7B-Instruct")
 
 # 데이터셋 준비
 def load_dataset(json_path):
@@ -190,7 +190,7 @@ trainer.save_model()
 ```python
 # lora_finetune.py
 from peft import LoraConfig, get_peft_model
-from transformers import Qwen2VLForConditionalGeneration
+from transformers import Llama32VisionForConditionalGeneration
 
 # LoRA 설정
 lora_config = LoraConfig(
@@ -203,8 +203,8 @@ lora_config = LoraConfig(
 )
 
 # 모델에 LoRA 적용
-model = Qwen2VLForConditionalGeneration.from_pretrained(
-    "Qwen/Qwen2-VL-7B-Instruct",
+model = Llama32VisionForConditionalGeneration.from_pretrained(
+    "Llama-Vision/Llama-3.2-Vision-7B-Instruct",
     torch_dtype=torch.bfloat16,
     device_map="auto"
 )
@@ -240,8 +240,8 @@ quantization_config = BitsAndBytesConfig(
 )
 
 # 양자화된 모델 로드
-model = Qwen2VLForConditionalGeneration.from_pretrained(
-    "Qwen/Qwen2-VL-7B-Instruct",
+model = Llama32VisionForConditionalGeneration.from_pretrained(
+    "Llama-Vision/Llama-3.2-Vision-7B-Instruct",
     quantization_config=quantization_config,
     device_map="auto"
 )
@@ -312,7 +312,7 @@ def save_dataset(dataset, output_path):
 # train_qwen2_vl.sh
 
 # 환경 변수 설정
-export MODEL_NAME="Qwen/Qwen2-VL-7B-Instruct"
+export MODEL_NAME="Llama-Vision/Llama-3.2-Vision-7B-Instruct"
 export DATA_PATH="train_data.json"
 export OUTPUT_DIR="./qwen2-vl-finetuned"
 export BATCH_SIZE=2

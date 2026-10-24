@@ -36,7 +36,7 @@ SyncVerse 저장소를 클론하고 번들된 Docker Compose 스크립트를 실
 
 ```bash
 # 1. 프로젝트 디렉토리로 이동
-git clone https://github.com/DramaticCollaboration/SyncSeries.git
+git clone https://github.com/empasy/SyncSeries.git
 cd SyncSeries/SyncVerse
 
 # 2. 환경 변수 설정 (.env 파일 복사)

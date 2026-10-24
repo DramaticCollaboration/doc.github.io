@@ -36,7 +36,7 @@ stateDiagram-v2
 모든 분산 액션은 `SagaStep` 인터페이스를 상속받아 정방향 실행(`execute`)과 역방향 롤백(`compensate`)을 1:1로 구현해야 합니다:
 
 ```java
-package com.empasy.syncboot.saga;
+package com.empasy.sync.boot.saga;
 
 public interface SagaStep<T, R> {
     String getStepName();
@@ -48,9 +48,9 @@ public interface SagaStep<T, R> {
 ### 3.1 주문-재고 연동 Saga Step 예제
 
 ```java
-package com.empasy.syncboot.saga.steps;
+package com.empasy.sync.boot.saga.steps;
 
-import com.empasy.syncboot.saga.SagaStep;
+import com.empasy.sync.boot.saga.SagaStep;
 import lombok.*;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;

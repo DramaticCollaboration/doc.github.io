@@ -66,9 +66,9 @@ SyncCrawl은 무중단 배포와 독립적 스케일아웃을 위해 4개의 분
 
 | 컨테이너 이미지 | 기술 스택 | 핵심 역할 및 기능 |
 | :--- | :--- | :--- |
-| **`smart-crawling-server`** | Java 21, Spring Boot 3.5, AgentScope Java (`io.agentscope:agentscope-harness`), Flyway | API 엔드포인트 제공, 수집 작업 스케줄링(Quartz), AI 작업 계획 수립, RAG 벡터 인덱싱 오케스트레이션 |
-| **`smart-crawling-agent`** | Java 21, Playwright Java, MCP SDK | 정규 웹 수집 작업 실행, DOM 파싱, 데이터 추출, HTML 스냅샷 저장 |
-| **`smart-crawling-scenario-agent`** | Java 21, Node.js/Playwright MCP, Chromium | 로그인, 다단계 폼 입력, 무한 스크롤, SPA 상호작용 등 복합 시나리오 실행 |
+| **`smart-crawling-server`** | Java 25, Spring Boot 3.5.16, AgentScope Java (`io.agentscope:agentscope-harness`), Flyway | API 엔드포인트 제공, 수집 작업 스케줄링(Quartz), AI 작업 계획 수립, RAG 벡터 인덱싱 오케스트레이션 |
+| **`smart-crawling-agent`** | Java 25, Playwright Java, MCP SDK | 정규 웹 수집 작업 실행, DOM 파싱, 데이터 추출, HTML 스냅샷 저장 |
+| **`smart-crawling-scenario-agent`** | Java 25, Node.js/Playwright MCP, Chromium | 로그인, 다단계 폼 입력, 무한 스크롤, SPA 상호작용 등 복합 시나리오 실행 |
 | **`smart-crawling-console`** | Vue 3, TypeScript, Vite, Quasar | 수집 작업 모니터링, 자연어 시나리오 빌더 UI, 수집 데이터 검증 및 RAG 질의응답 테스트 콘솔 |
 
 ---

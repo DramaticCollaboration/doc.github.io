@@ -49,7 +49,7 @@ flowchart TD
 
     subgraph Providers ["3단계: 멀티 LLM 공급자"]
         Router -->|"단순 분류/요약"| LiteModel["경량 모델
-(GPT-4o-mini / Haiku / Qwen)"]
+(GPT-4o-mini / Haiku / Solar-Pro)"]
         Router -->|"심층 추론/코드 분석"| ProModel["고성능 모델
 (Claude 3.5 Sonnet / GPT-4o)"]
         Router -->|"사내 민감 정보"| LocalModel["온프레미스 프라이빗 LLM

@@ -25,7 +25,7 @@ SyncVerse를 실제 기업 환경에 도입하기 위해 고객사 아키텍트�
 
 ### Q1. 사내 소스코드와 데이터가 외부 AI 벤더(OpenAI 등)로 전송되지 않도록 구성할 수 있나요?
 > **A. 사내 폐쇄망(Air-Gapped) 및 온프레미스 구성이 가능합니다.**  
-> SyncVerse는 사내에 구축된 오픈소스 LLM(vLLM, Ollama, 사내 파인튜닝된 Llama 3 / Qwen 등) 및 사내 GPU 서버와의 연동을 지원합니다. 또한 상용 클라우드 LLM을 사용하는 경우에도 **PII 자동 마스킹 필터**와 **엔터프라이즈 전용 데이터 미학습(Zero Data Retention) 엔드포인트**를 통해 데이터를 안전하게 보호합니다.
+> SyncVerse는 사내에 구축된 오픈소스 LLM(vLLM, Ollama, 사내 파인튜닝된 Llama 3 / Solar-Pro 등) 및 사내 GPU 서버와의 연동을 지원합니다. 또한 상용 클라우드 LLM을 사용하는 경우에도 **PII 자동 마스킹 필터**와 **엔터프라이즈 전용 데이터 미학습(Zero Data Retention) 엔드포인트**를 통해 데이터를 안전하게 보호합니다.
 
 ### Q2. AI가 실수로 상용 데이터베이스를 손상시킬 위험은 없나요?
 > **A. HITL(Human-In-The-Loop) 거버넌스로 사전에 차단됩니다.**  

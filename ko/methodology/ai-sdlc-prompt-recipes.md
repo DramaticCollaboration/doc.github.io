@@ -116,7 +116,7 @@ QA 테스트가 가능한 완료 기준(Acceptance Criteria)을 작성해 주세
 ### 프롬프트 3.1: Lombok 적용 및 표준 서비스 구현
 ```markdown
 [역할] 시니어 Spring Boot 개발자
-[기술 스택] Java 21, Spring Boot 3.x, PostgreSQL 17
+[기술 스택] Java 25, Spring Boot 3.5.16, PostgreSQL 17
 [구현 대상] {{구현할 기능, 예: 쿠폰 적용 비즈니스 로직}}
 [선행 명세] {{확정된 DDL 및 API 명세}}
 

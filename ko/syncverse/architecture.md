@@ -155,11 +155,11 @@ SyncVerse는 엔터프라이즈 환경의 대규모 트래픽과 무중단 운�
 
 | 계층 | 기술 스택 | 도입 목적 |
 | :--- | :--- | :--- |
-| **Backend Core** | Java 21, Spring Boot 3.3 | 엔터프라이즈 런타임, 가상 스레드(Virtual Threads), 트랜잭션 관리 |
+| **Backend Core** | Java 25, Spring Boot 3.5.16 | 엔터프라이즈 런타임, 가상 스레드(Virtual Threads), 트랜잭션 관리 |
 | **AI Framework** | **AgentScope Java** (`io.agentscope:agentscope-harness`) | 전사 표준 AI 프레임워크, 멀티 에이전트 협업 MsgHub, ReActAgent 자율 Tool 실행 |
 | **Frontend UI** | Vue 3, TypeScript, Vite, **Vue Flow** | 노드-엣지 토폴로지 시각화, 관제 대시보드 |
 | **State & Cache** | Redis 7.x (Cluster) | 에이전트 실시간 상태 공유, 시맨틱 캐싱, 분산 락 |
-| **Database** | PostgreSQL 15+ / MySQL 8.x | RDBMS 데이터 정합성, JSONB 감사 로그 영속화 |
+| **Database** | PostgreSQL 17 (`pgvector`) | RDBMS 데이터 정합성, JSONB 감사 로그 및 벡터 임베딩 영속화 |
 | **Infrastructure** | Docker, Kubernetes, GitHub Actions | 컨테이너 기반 격리 실행, CI/CD 배포 파이프라인 |
 
 ---

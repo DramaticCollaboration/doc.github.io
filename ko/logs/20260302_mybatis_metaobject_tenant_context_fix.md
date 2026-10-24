@@ -1,4 +1,4 @@
-﻿---
+---
 title: "[작업 일지] 멀티테넌시 환경 MyBatis-Plus 비동기 스레드 테넌트 ID 유실 버그 픽스"
 description: "Java 21 가상 스레드 환경에서 비동기 엔티티 생성 시 ThreadLocal 컨텍스트 미전파로 인해 tenant_id 및 감사 필드가 null로 삽입되던 결함의 분석과 해결 기록입니다."
 head:
@@ -22,7 +22,7 @@ sort: 40
 ```sql
 ### Error updating database. Cause: java.sql.SQLIntegrityConstraintViolationException: Column 'tenant_id' cannot be null
 ### The error occurred while setting parameters
-### SQL: INSERT INTO tb_kmeta_scenario (id, name, tenant_id, create_time) VALUES (?, ?, ?, ?)
+### SQL: INSERT INTO tb_sync_scenario (id, name, tenant_id, create_time) VALUES (?, ?, ?, ?)
 ```
 
 ---

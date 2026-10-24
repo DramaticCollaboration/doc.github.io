@@ -36,7 +36,7 @@ SyncSeries의 버전별 주요 업데이트, 보안 패치, 성능 개선 및 �
   * 실시간 DB 연동 다이내믹 프라이싱 및 무손실 스냅샷 롤백(`shop_batch_price_update`) 엔진.
   * 3단계 상거래 에이전트 스웜(Pricing Optimizer, Margin Safeguard, Executor) 탑재.
 * **전사 8대 공통 비즈니스 모듈(`sync-module-*`) 및 SyncSdk 구축**:
-  * `sync-core`: Java 21 가상 스레드(Virtual Threads) 환경 Carrier Pinning 방지(`ReentrantLock`).
+  * `sync-core`: Java 25 가상 스레드(Virtual Threads) 환경 Carrier Pinning 방지(`ReentrantLock`).
   * `sync-module-ai`: `AgentScope Java` (`io.agentscope:agentscope-harness`) 전사 표준 AI 프레임워크 일원화.
   * `sync-module-deploy`: Jenkins, GitHub Actions, ArgoCD 파이프라인 연동 및 K8s Pod 관제.
   * `sync-module-issue`: 유니버설 이슈 트래커(GitHub, GitLab, Jira, Linear, Redmine) 및 포트폴리오 칸반 보드.
@@ -80,7 +80,7 @@ SyncSeries의 버전별 주요 업데이트, 보안 패치, 성능 개선 및 �
 ### 주요 개선 사항
 * **SyncEta Vision-LLM 4.0 셀렉터 자가 치유(Self-Healing) 엔진**:
   * DOM 변경 감지 시 시각적 바운딩 박스와 텍스트 앵커를 결합한 자가 복구 성공률 98.4% 달성.
-  * 비상교육 AIDT E2E 회귀 테스트 시간 4시간에서 45분으로 81% 단축 실증.
+  * 에듀테크 글로벌 AIDT E2E 회귀 테스트 시간 4시간에서 45분으로 81% 단축 실증.
 * **Playwright 분산 클러스터 멀티 워커 노드 연동**:
   * K8s 환경에서 수백 대의 브라우저 컨테이너를 동시 오케스트레이션하여 병렬 테스트 수행.
 
@@ -89,7 +89,7 @@ SyncSeries의 버전별 주요 업데이트, 보안 패치, 성능 개선 및 �
 ## [v2.1.0] - 2025-11-10
 
 ### 주요 개선 사항
-* **SyncBoot Spring Boot 3.3 / Java 21 기반 MSA 프레임워크**:
+* **SyncBoot Spring Boot 3.5.16 / Java 25 기반 MSA 프레임워크**:
   * 분산 트랜잭션 일관성을 위한 Orchestrated Saga 패턴 및 보상 트랜잭션 자동 생성.
   * Virtual Threads(Loom) 적용으로 동시 I/O 처리량 300% 향상.
   * AgentScope Java (`io.agentscope:agentscope-harness`) 전사 표준 AI 프레임워크 연동.

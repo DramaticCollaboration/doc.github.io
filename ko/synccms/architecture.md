@@ -46,7 +46,7 @@ graph TD
     end
 
     subgraph "4. 데이터 및 인프라 계층 (Data & Infra Layer)"
-        RDB[("RDBMS (PostgreSQL JSONB / Oracle / MySQL)")]
+        RDB[("RDBMS (PostgreSQL 17 JSONB / pgvector)")]
         VEC[("Vector DB (PGVector 사내 지식베이스)")]
         CACHE[("Redis 분산 캐시 & Edge CDN")]
         LLM["사내 온프레미스 LLM (vLLM / Ollama)"]
@@ -76,7 +76,7 @@ graph TD
 - **감사 로깅 (Audit Logging)**: 콘텐츠의 생성, 수정, 결재 승인, 배포, 롤백 등 모든 변경 이력을 사용자 ID, IP, 변경 diff와 함께 저장합니다.
 
 ### 3. 코어 프레임워크 계층 (Core Layer)
-- **Spring Boot 3 & Java 21+**: 전사 표준 Java 프레임워크 기반으로 안정적인 트랜잭션 처리와 모듈식 확장을 지원합니다.
+- **Spring Boot 3.5.16 & Java 25**: 전사 표준 Java 프레임워크 기반으로 안정적인 트랜잭션 처리와 모듈식 확장을 지원합니다.
 - **AgentScope Java AI 엔진 (`io.agentscope:agentscope-harness`)**: Java 환경에서 온프레미스 LLM 연동, ReActAgent 자율 도구 실행, RAG(검색 증강 생성) 지식 베이스 검색을 단일 파이프라인으로 수행합니다.
 - **스냅샷 롤백 엔진**: 배포 시점의 콘텐츠 상태를 버전별 스냅샷으로 저장하여 유사시 즉각적인 롤백을 수행합니다.
 - **Quartz 스케줄러**: 정기 배치 작업 및 예약 배포를 실시간으로 제어합니다.

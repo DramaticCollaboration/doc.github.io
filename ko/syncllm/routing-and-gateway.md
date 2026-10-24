@@ -35,7 +35,7 @@ flowchart TD
     Analyze --> Decision{"2. 복잡도 평가"}
     
     Decision -->|"Tier 1 (단순 작업)"| T1["경량/고속 모델
-GPT-4o-mini / Haiku / Qwen-2.5"]
+GPT-4o-mini / Haiku / Llama-3.3"]
     Decision -->|"Tier 2 (표준 업무)"| T2["범용 밸런스 모델
 GPT-4o / Claude 3.5 Sonnet"]
     Decision -->|"Tier 3 (초고난도 추론)"| T3["최고 사양 추론 모델

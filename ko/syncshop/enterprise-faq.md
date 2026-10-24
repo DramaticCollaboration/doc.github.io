@@ -41,4 +41,4 @@ SyncShop 도입 및 운영 시 가장 많이 문의되는 기술 질문과 답�
 ### Q4. 온프레미스(폐쇄망) 환경에서도 배포가 가능한가요?
 **A:** 가능합니다.
 * SyncShop의 백엔드(`sync-shop-admin`), 에이전트 서버(`sync-shop-mcp-server`), 프론트엔드(`SyncShop Admin`)는 완전한 독립 컨테이너(Docker Compose / K8s Helm) 형태로 제공됩니다.
-* 외부 클라우드 의존성 없이 사내 MariaDB/MySQL 및 사내 LLM 게이트웨이(SyncLLM)와 결합하여 폐쇄망에서도 자율 상거래 기능을 수행할 수 있습니다.
+* 외부 클라우드 의존성 없이 사내 PostgreSQL 17 데이터베이스 및 사내 LLM 게이트웨이(SyncLLM)와 결합하여 폐쇄망에서도 자율 상거래 기능을 수행할 수 있습니다.

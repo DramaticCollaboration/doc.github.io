@@ -13,7 +13,7 @@ description: 도메인 주도 설계(DDD), 4계층 분리, Mandatory Lombok 규�
 SyncBoot로 생성되거나 운영되는 모든 마이크로서비스 백엔드는 계층 간 단방향 의존성을 보장하기 위해 다음 4계층 구조를 엄격히 준수합니다:
 
 ```
-com.empasy.<service>/
+com.empasy.sync.<domain>/
 ├── presentation/         # Layer 1: API 컨트롤러, Request/Response DTO
 │   ├── controller/
 │   └── dto/
@@ -36,13 +36,13 @@ SyncSeries의 전사 품질 규칙에 따라 보일러플레이트 코드 작성
 ### 2.1 도메인 엔티티 (Entity)
 ```java
 @Entity
-@Table(name = "tb_kmeta_asset")
+@Table(name = "tb_sync_asset")
 @Getter
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 @AllArgsConstructor
 @Builder
 @ToString
-public class KmetaAsset {
+public class SyncAsset {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -76,5 +76,5 @@ public class CreateAssetRequest {
 ## 3. Zero-Mock & Anti-Stub 원칙
 
 1. **더미 Mock 금지**: 단위 테스트 목적 외 프로덕션 코드에 하드코딩된 빈 리스트 반환(`return List.of()`), static JSON 더미 반환 작성을 엄격히 금지합니다.
-2. **실제 DB 연동**: 모든 REST API는 실제 MariaDB/MySQL 또는 인메모리 H2 스키마와 100% 바인딩되어야 합니다.
+2. **실제 DB 연동**: 모든 REST API는 실제 PostgreSQL 17 (`pgvector`) 스키마와 100% 바인딩되어야 합니다.
 3. **Linter 자동 검증**: 커밋 전 `scripts/verify-zero-mock.ps1`을 실행하여 AST 정적 검사를 반드시 통과해야 합니다.

@@ -26,7 +26,7 @@ flowchart TD
     end
 
     subgraph ServiceLayer ["백엔드 비즈니스 로직 (Core Backend)"]
-        AdminServer["sync-shop-admin\n(Spring Boot 3.3 / MyBatis)"]
+        AdminServer["sync-shop-admin\n(Spring Boot 3.5.16 / MyBatis)"]
         PMS["상품 관리\n(PMS Engine)"]
         OMS["주문/배송\n(OMS Engine)"]
         SMS["프로모션\n(SMS Engine)"]
@@ -80,7 +80,7 @@ sequenceDiagram
     participant Verse as SyncVerse (L2)
     participant ShopMcp as SyncShop MCP Server
     participant Swarm as Swarm (Safeguard)
-    participant DB as MariaDB / MySQL
+    participant DB as PostgreSQL 17 (pgvector)
 
     Admin->>Verse: "겨울 아우터 카테고리 10% 일괄 할인 적용"
     Verse->>ShopMcp: tools/call: shop_batch_price_update

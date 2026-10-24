@@ -34,11 +34,11 @@ sort: 1
 
 ### 2. 분산 에이전트 & 프로토콜
 - **[Model Context Protocol(MCP) JSON-RPC 사양 분석과 도구 오케스트레이션](./mcp-jsonrpc-agent-orchestration)**: Claude/Playwright 표준 도구 인터페이스와 엔터프라이즈 보안 게이트웨이 설계 패턴.
-- **[Java 21 가상 스레드와 AgentScope 기반 비동기 메시징 성능 분석](./springboot-virtual-threads-agentscope)**: Spring Boot 환경에서 블로킹 I/O 극복과 수만 단위 동시 에이전트 통신 처리 벤치마크.
+- **[Java 25 가상 스레드와 AgentScope 기반 비동기 메시징 성능 분석](./springboot-virtual-threads-agentscope)**: Spring Boot 환경에서 블로킹 I/O 극복과 수만 단위 동시 에이전트 통신 처리 벤치마크.
 
 ### 3. AI 모델 & 지식 파이프라인
 - **[엔터프라이즈 RAG 아키텍처: Sparse + Dense 하이브리드 검색과 Cross-Encoder 리랭킹](./hybrid-rag-dense-sparse-reranking)**: 도메인 특화 검색 정밀도 향상을 위한 BM25와 임베딩 벡터 결합 파이프라인.
-- **[Qwen2-VL 멀티모달 모델 파인튜닝 실무](./qwen2vlfinetuning)**: 한국어 웹 UI 화면 컴포넌트 인식을 위한 데이터셋 구성 및 LoRA 튜닝.
+- **[Llama-3.2-Vision 멀티모달 모델 파인튜닝 실무](./vision-llm-finetuning)**: 한국어 웹 UI 화면 컴포넌트 인식을 위한 데이터셋 구성 및 LoRA 튜닝.
 - **[LLM 파인튜닝 후 성능 저하 원인 및 해결책 분석](./llm-finetuning-degradation-analysis)**: Catastrophic Forgetting 방지 및 정렬 데이터 보정 연구.
 - **[RAG 기반 지식 검색 파이프라인 구축](./rag)**: 비정형 데이터 청킹 및 메타데이터 필터링 전략.
 

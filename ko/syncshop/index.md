@@ -69,7 +69,7 @@ graph LR
 
 | 영역 | 구성 요소 | 주요 기술 스택 | 설명 |
 |:---|:---|:---|:---|
-| **백엔드 서버** | `sync-shop-admin` | Java 21, Spring Boot 3.3, MyBatis | RESTful 커머스 API, 트랜잭션 및 보안(JWT, RBAC) |
+| **백엔드 서버** | `sync-shop-admin` | Java 25, Spring Boot 3.5.16, MyBatis | RESTful 커머스 API, 트랜잭션 및 보안(JWT, RBAC) |
 | **에이전트 서버** | `sync-shop-mcp-server` | AgentScope Java, Spring Web, MCP SDK | A2A 도구 제공, 다이내믹 프라이싱, 비동기 관제 연동 |
 | **관리자 UI** | `SyncShop Admin` | Vue 3, Vite, TypeScript, Ant Design Vue | 상거래 종합 운영 대시보드 및 백오피스 관제 화면 |
 | **모바일/클라이언트** | `SyncShop App` | Vue / Uni-App | 옴니채널 모바일 커머스 프론트엔드 |

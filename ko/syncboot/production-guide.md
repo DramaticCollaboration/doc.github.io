@@ -10,7 +10,7 @@ SyncBoot의 프로덕션 환경 운영을 위한 컨테이너 배포 구성과 �
 
 ---
 
-## 성능 테스트 지표 (Benchmark Data)
+## 성능 테스트 지표
 
 내부 테스트 환경 기준의 런타임 및 개발 생산성 지표입니다.
 
@@ -23,46 +23,44 @@ SyncBoot의 프로덕션 환경 운영을 위한 컨테이너 배포 구성과 �
 
 ---
 
-## Docker Compose 배포 구성
+## Docker Compose 통합 배포 구성 (`docker-compose-dev.yml`)
 
 ```yaml
-version: '3.8'
-
 services:
-  syncboot-server:
-    image: empasy/syncboot-server:latest
-    container_name: syncboot-server
+  sync-boot-server:
+    image: empasy/sync-boot-server:latest
+    container_name: sync-boot-server
     restart: always
     environment:
-      - SPRING_PROFILES_ACTIVE=prod
-      - DB_HOST=syncboot-mysql
-      - REDIS_HOST=syncboot-redis
+      - SPRING_PROFILES_ACTIVE=dev
+      - DB_HOST=sync-boot-db
+      - REDIS_HOST=sync-boot-redis
       - JAVA_OPTS=-Xms2g -Xmx4g -XX:+UseG1GC
     ports:
       - "8080:8080"
     depends_on:
-      - syncboot-mysql
-      - syncboot-redis
+      - sync-boot-db
+      - sync-boot-redis
 
-  syncboot-admin:
-    image: empasy/syncboot-admin:latest
-    container_name: syncboot-admin
+  sync-boot-admin:
+    image: empasy/sync-boot-admin:latest
+    container_name: sync-boot-admin
     restart: always
     ports:
       - "3000:80"
     environment:
-      - BACKEND_API_URL=http://syncboot-server:8080
+      - BACKEND_API_URL=http://sync-boot-server:8080
 
-  syncboot-mysql:
-    image: mysql:8.0
+  sync-boot-db:
+    image: pgvector/pgvector:pg17
     restart: always
     environment:
-      MYSQL_ROOT_PASSWORD: ${DB_ROOT_PASSWORD}
-      MYSQL_DATABASE: syncboot_db
+      POSTGRES_PASSWORD: ${DB_PASSWORD}
+      POSTGRES_DB: syncboot_db
     volumes:
-      - mysql_data:/var/lib/mysql
+      - postgres_data:/var/lib/postgresql/data
 
-  syncboot-redis:
+  sync-boot-redis:
     image: redis:7.2-alpine
     restart: always
     command: redis-server --appendonly yes --requirepass ${REDIS_PASSWORD}
@@ -70,7 +68,7 @@ services:
       - redis_data:/data
 
 volumes:
-  mysql_data:
+  postgres_data:
   redis_data:
 ```
 
@@ -82,12 +80,12 @@ volumes:
 apiVersion: autoscaling/v2
 kind: HorizontalPodAutoscaler
 metadata:
-  name: syncboot-server-hpa
+  name: sync-boot-server-hpa
 spec:
   scaleTargetRef:
     apiVersion: apps/v1
     kind: Deployment
-    name: syncboot-server
+    name: sync-boot-server
   minReplicas: 3
   maxReplicas: 20
   metrics:

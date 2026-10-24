@@ -79,7 +79,7 @@ AI에게 프로젝트 전체를 제한 없이 수정하도록 맡기면 의도�
 ```markdown
 [역할] 엔터프라이즈 Spring Boot 개발자
 [맥락]
-- 기술 환경: Java 21, Spring Boot 3.x, PostgreSQL 17
+- 기술 환경: Java 25, Spring Boot 3.5.16, PostgreSQL 17
 - 구현 대상: {{도메인명, 예: 쿠폰 적용 서비스}}
 - 선행 확정 명세:
 {{02단계에서 확정된 DDL 및 API 명세서 내용}}

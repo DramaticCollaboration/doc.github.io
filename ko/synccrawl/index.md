@@ -60,7 +60,7 @@ graph LR
 
 | 구분 | 지원 기술 및 사양 |
 | :--- | :--- |
-| **코어 백엔드** | Java 21, Spring Boot 3.5, AgentScope Java (`io.agentscope:agentscope-harness`), Flyway |
+| **코어 백엔드** | Java 25, Spring Boot 3.5.16, AgentScope Java (`io.agentscope:agentscope-harness:2.0.2`), Flyway |
 | **브라우저 자동화** | Playwright MCP, Headless Chromium, 분산 Worker |
 | **스토리지 및 캐시** | PostgreSQL, Redis, MinIO / S3 오브젝트 스토리지 |
 | **벡터 데이터베이스** | PGVector, Milvus, Qdrant, Weaviate |

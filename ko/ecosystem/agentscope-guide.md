@@ -33,7 +33,7 @@ AgentScope Java의 핵심인 `ReActAgent`는 Thought(사고), Action(도구 실�
 SyncSeries의 **Mandatory Lombok Rule**에 따라 생성자 수동 작성을 금지하고 `@RequiredArgsConstructor`와 `private final`을 적용합니다:
 
 ```java
-package com.empasy.syncboot.agent;
+package com.empasy.sync.boot.agent;
 
 import io.agentscope.core.ReActAgent;
 import io.agentscope.core.memory.Memory;
@@ -73,7 +73,7 @@ public class SchemaEngineeringAgent {
 에이전트가 호출할 수 있는 도구는 `@Tool` 애너테이션을 통해 선언하며, 입력 인자 모델은 반드시 Lombok DTO로 정의합니다:
 
 ```java
-package com.empasy.syncboot.agent.tools;
+package com.empasy.sync.boot.agent.tools;
 
 import io.agentscope.core.tool.annotation.Tool;
 import io.agentscope.core.tool.annotation.ToolParam;
@@ -98,7 +98,7 @@ public class DdlGeneratorTool {
 
     @Tool(
         name = "generate_ddl_script",
-        description = "테이블 명과 기본키 컬럼 정보를 전달받아 규격화된 MariaDB/MySQL DDL 스크립트를 생성합니다."
+        description = "테이블 명과 기본키 컬럼 정보를 전달받아 규격화된 PostgreSQL 17 DDL 스크립트를 생성합니다."
     )
     public String generateDdl(
             @ToolParam(description = "DDL 생성 요청 모델") DdlRequest request) {

@@ -84,7 +84,7 @@ graph TD
 
 | 구분 | 기술 요소 | 버전 및 상세 |
 | :--- | :--- | :--- |
-| **Backend Core** | Java, Spring Boot 3 | Java 21+, Spring Boot 3.4.x |
+| **Backend Core** | Java, Spring Boot 3 | Java 25, Spring Boot 3.5.16 |
 | **AI Framework** | AgentScope Java | `io.agentscope:agentscope-harness` |
 | **ORM / Data** | MyBatis-Plus, Spring Data JPA | HikariCP, PostgreSQL 17 (pgvector) |
 | **Protocol** | Model Context Protocol (MCP) | HTTP SSE / JSON-RPC 2.0 |

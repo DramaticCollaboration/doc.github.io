@@ -216,7 +216,7 @@ const MODULE_CATEGORY_RULES: Record<string, Array<{ group: string; match: (name:
     },
     {
       group: 'AI 모델 및 지식 검색 (RAG)',
-      match: (name) => ['rag', 'hybrid-rag-dense-sparse-reranking', 'qwen2vlfinetuning', 'llm-finetuning-degradation-analysis'].includes(name),
+      match: (name) => ['rag', 'hybrid-rag-dense-sparse-reranking', 'vision-llm-finetuning', 'llm-finetuning-degradation-analysis'].includes(name),
     },
   ],
   logs: [
@@ -445,7 +445,7 @@ const DEFAULT_SIDEBAR_SHORT_TITLES: Record<string, Record<string, string>> = {
     'mcp-jsonrpc-agent-orchestration': 'MCP 도구 오케스트레이션',
     'hybrid-rag-dense-sparse-reranking': '하이브리드 RAG & 리랭킹',
     'springboot-virtual-threads-agentscope': '가상 스레드 & AgentScope',
-    qwen2vlfinetuning: 'Qwen2-VL 파인튜닝',
+    vision-llm-finetuning: 'Llama-3.2-Vision 파인튜닝',
     'llm-finetuning-degradation-analysis': '파인튜닝 성능 저하 분석',
     rag: 'RAG 파이프라인 기초',
   },

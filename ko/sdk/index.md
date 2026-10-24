@@ -63,7 +63,7 @@ Spring Boot 3 환경에서 최소한의 설정으로 동작 가능한 첫 번째
 sync:
   ai:
     gateway-url: http://localhost:8000/v1
-    model-name: Qwen2.5-32B-Instruct
+    model-name: Llama-3.1-70B-Instruct
     api-key: ${SYNC_AI_API_KEY:local-dev-key}
     temperature: 0.1
     timeout-ms: 30000

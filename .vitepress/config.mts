@@ -27,7 +27,7 @@ export default withMermaid(
     ['link', { rel: 'icon', href: '/images/favicon.ico' }],
 
     // SEO-related
-    ['meta', { name: 'author', content: '엠파시' }], // 作者信息
+    ['meta', { name: 'author', content: '엠파시' }], // 작성자 정보
     [
       'meta',
       { name: 'keywords', content: '엠파시, Empasy, Sync Series, SyncVerse, SyncInsight, SyncETA, SyncCrawl, SyncBoot, SyncCMS, SyncLLM, AI 에이전트, AI 오케스트레이션, FinOps' },
@@ -60,7 +60,7 @@ export default withMermaid(
         content: '/images/icons/mstile-150x150.png',
       },
     ], // Windows Tile Icon
-    ['meta', { name: 'msapplication-TileColor', content: '#3eaf7c' }], // Windows Tile 背景色
+    ['meta', { name: 'msapplication-TileColor', content: '#3eaf7c' }], // Windows Tile 배경색
 
     // Add other ones that are needed <head> tags eg Google Analytics Etc
     // ['script', { src: 'https://example.com/script.js' }],
@@ -366,7 +366,7 @@ new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
             case "ru":
               return "Скопировать код";
             case "zhCN":
-              return "复制代码";
+              return "코드 복사";
             default:
               return "Copy code";
           }
@@ -402,4 +402,3 @@ new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
     },
   },
 }));
-

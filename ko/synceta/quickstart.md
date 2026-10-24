@@ -41,7 +41,7 @@ SyncETA는 두 가지 방식으로 시작할 수 있습니다. 로컬 및 스테
 
 ```bash
 # 저장소 클론 및 디렉토리 이동
-git clone https://github.com/DramaticCollaboration/SyncSeries.git
+git clone https://github.com/empasy/SyncSeries.git
 cd SyncSeries/SyncEta
 
 # 컨테이너 서비스 일괄 실행

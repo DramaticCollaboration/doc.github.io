@@ -39,7 +39,7 @@ head:
 ### 2.1. 저장소 클론 및 환경 설정
 ```bash
 # 1. 저장소 클론 및 디렉토리 이동
-git clone https://github.com/DramaticCollaboration/SyncInsight.git
+git clone https://github.com/empasy/SyncInsight.git
 cd SyncInsight
 
 # 2. 환경 설정 파일 복사
@@ -70,7 +70,7 @@ docker compose -f docker-compose-local.yml up -d
 ```
 
 실행이 완료되면 브라우저에서 아래 주소로 접속합니다:
-* **Insight UI (대시보드)**: `http://localhost:3000` (기본 계정: `admin@syncverse.local` / `admin1234`)
+* **Insight UI (대시보드)**: `http://localhost:3000` (기본 계정: `admin@empasy.com` / `admin1234`)
 * **Insight API Swagger**: `http://localhost:8084/swagger-ui.html`
 
 ---
@@ -95,7 +95,7 @@ curl -X POST "http://localhost:8084/api/v1/insight/jobs" \
      -H "Authorization: Bearer YOUR_JWT_TOKEN" \
      -d '{
        "prompt": "하반기 시장 트렌드 및 경쟁사 프로모션 분석",
-       "requesterId": "admin@syncverse.local"
+       "requesterId": "admin@empasy.com"
      }'
 ```
 
@@ -118,7 +118,7 @@ curl -X POST "http://localhost:8084/api/v1/insight/actions/b1eebc99-9c0b-4ef8-bb
      -H "Content-Type: application/json" \
      -H "Authorization: Bearer YOUR_JWT_TOKEN" \
      -d '{
-       "reviewedBy": "admin@syncverse.local",
+       "reviewedBy": "admin@empasy.com",
        "comment": "검토 완료, 프로모션 적용 진행"
      }'
 ```
