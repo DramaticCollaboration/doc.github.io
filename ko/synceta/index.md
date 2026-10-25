@@ -22,7 +22,7 @@ sort: 10
 
 # SyncETA: 자율 회귀 테스트 및 자가 치유 플랫폼
 
-> 📄 **제품 소개서 겸 도입 제안서 다운로드**: [SyncETA_Proposal.pdf (8p)](/downloads/proposals/SyncETA_Proposal.pdf){target="_blank" download="SyncETA_Proposal.pdf"} · [전체 제품군 제안서 모음](/proposals/)
+> 📄 **제품 소개서 및 라이브 데모**: [SyncETA_Proposal.pdf (8p)](/downloads/proposals/SyncETA_Proposal.pdf){target="_blank" download="SyncETA_Proposal.pdf"} · [🖥️ SyncETA 포털 상세 및 설치파일](https://sync.empasy.io/products/sync-eta#demo){target="_blank" rel="noopener"} · [🌐 제품 공식 페이지](https://empasy.io/ko/solutions/sync-eta.html){target="_blank" rel="noopener"} · [전체 제안서 모음](/proposals/)
 
 SyncETA는 웹 애플리케이션의 사용자 인터랙션을 기록하고, Model Context Protocol(MCP) 표준 인터페이스를 통해 테스트를 자동 실행하며, 시각적 변형 감지 및 선택자 자가 치유(Self-Healing)를 지원하는 엔터프라이즈 QA 플랫폼입니다.
 

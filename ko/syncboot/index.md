@@ -21,7 +21,7 @@ head:
 
 # SyncBoot: 디지털 백엔드 프레임워크 개요
 
-> 📄 **제품 소개서 겸 도입 제안서 다운로드**: [SyncBoot_Proposal.pdf (8p)](/downloads/proposals/SyncBoot_Proposal.pdf){target="_blank" download="SyncBoot_Proposal.pdf"} · [전체 제품군 제안서 모음](/proposals/)
+> 📄 **제품 소개서 및 라이브 데모**: [SyncBoot_Proposal.pdf (8p)](/downloads/proposals/SyncBoot_Proposal.pdf){target="_blank" download="SyncBoot_Proposal.pdf"} · [🖥️ SyncBoot 라이브 데모 체험](https://sync.empasy.io/products/sync-boot#demo){target="_blank" rel="noopener"} · [🌐 제품 공식 페이지](https://empasy.io/ko/solutions/sync-boot.html){target="_blank" rel="noopener"} · [전체 제안서 모음](/proposals/)
 
 SyncBoot는 비즈니스 도메인 맥락을 인지하여 데이터베이스 운영과 API 개발을 지원하는 Java 기반 엔터프라이즈 백엔드 플랫폼입니다.
 

@@ -23,7 +23,7 @@ sort: 1
 
 # SyncOps: 한국형 SI/솔루션 사업운영 & 손익·컴플라이언스 관제 플랫폼
 
-> 📄 **제품 소개서 겸 도입 제안서 다운로드**: [SyncOps_Proposal.pdf (8p)](/downloads/proposals/SyncOps_Proposal.pdf){target="_blank" download="SyncOps_Proposal.pdf"} · [전체 제품군 제안서 모음](/proposals/)
+> 📄 **제품 소개서 및 라이브 데모**: [SyncOps_Proposal.pdf (8p)](/downloads/proposals/SyncOps_Proposal.pdf){target="_blank" download="SyncOps_Proposal.pdf"} · [🖥️ SyncOps 라이브 데모 체험](https://sync.empasy.io/products/sync-ops#demo){target="_blank" rel="noopener"} · [🌐 제품 공식 페이지](https://empasy.io/ko/solutions/sync-ops.html){target="_blank" rel="noopener"} · [전체 제안서 모음](/proposals/)
 
 > **Tier 3 Enterprise SI PMO & Profit/Compliance Agent Platform**  
 > 서비스 도메인: `https://ops.empasy.io` · 표준 API Prefix: `/api/v1/ops`

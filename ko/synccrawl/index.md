@@ -22,7 +22,7 @@ sort: 1
 
 # SyncCrawl™: 웹 크롤링 및 RAG 지식 구축 플랫폼
 
-> 📄 **제품 소개서 겸 도입 제안서 다운로드**: [SyncCrawl_Proposal.pdf (8p)](/downloads/proposals/SyncCrawl_Proposal.pdf){target="_blank" download="SyncCrawl_Proposal.pdf"} · [전체 제품군 제안서 모음](/proposals/)
+> 📄 **제품 소개서 및 라이브 데모**: [SyncCrawl_Proposal.pdf (8p)](/downloads/proposals/SyncCrawl_Proposal.pdf){target="_blank" download="SyncCrawl_Proposal.pdf"} · [🖥️ SyncCrawl 라이브 데모 체험](https://sync.empasy.io/products/sync-crawl#demo){target="_blank" rel="noopener"} · [🌐 제품 공식 페이지](https://empasy.io/ko/solutions/sync-crawl.html){target="_blank" rel="noopener"} · [전체 제안서 모음](/proposals/)
 
 SyncCrawl™은 데이터 수집과 자연어 처리(NLP), **Playwright MCP 기반 브라우저 자동화**, 그리고 **RAG(검색 증강 생성) 지식 파이프라인**을 연계한 기업용 웹 수집 플랫폼입니다.
 

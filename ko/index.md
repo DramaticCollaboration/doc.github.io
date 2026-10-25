@@ -53,8 +53,8 @@ features:
     linkText: 문서 보기 →
   - icon:
       svg: '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><circle cx="19" cy="5" r="2"/><circle cx="5" cy="19" r="2"/><circle cx="19" cy="19" r="2"/><circle cx="5" cy="5" r="2"/><path d="m7 7 3 3"/><path d="m14 14 3 3"/><path d="m14 10 3-3"/><path d="m7 17 3-3"/></svg>'
-    title: SyncVerse (통합 관제 센터)
-    details: 4-Tier 자율 에이전트 연합 아키텍처 기반 도메인 에이전트들을 표준 MCP로 통합 제어하는 중앙 관제 플랫폼
+    title: SyncVerse (통합 관제 & Spec Studio)
+    details: A2A 멀티 에이전트 중앙 오케스트레이션, 5-Step Spec Studio 및 다중 코딩 엔진 거버넌스 플랫폼
     link: /syncverse/
     linkText: 문서 보기 →
   - icon:
@@ -120,7 +120,7 @@ footer: Copyright © 2026 Empasy Inc. All rights reserved.
 | **표준 산출물 양식** | 요구사항정의서, WBS, 테스트시나리오 등 실무 서식 양식 다운로드 | [표준 산출물 양식 →](/methodology/enterprise-document-templates) |
 | **AI 개발 주기 (AI-SDLC)** | 명세 우선 아키텍처 설계부터 4단계 자가치유 검증까지의 AI 협업 절차 | [AI-SDLC 가이드 →](/methodology/ai-driven-development) |
 | **애자일 및 Git Flow** | 스크럼반(Scrumban) 운영, Git 브랜치 전략, 일일 스크럼 실무 프로세스 | [애자일 가이드 →](/agile/) |
-| **제품별 소개서·도입제안서 (PDF)** | 통합 제안서 및 12개 전 제품군(SyncVerse~SyncCrawl) 개별 8p 제안서 다운로드 | [전체 제안서 다운로드 센터 →](/proposals/) · [통합 제안서 PDF](/downloads/proposals/SyncSeries_Master_Proposal.pdf) |
+| **제품별 소개서·도입제안서 (PDF)** | 요약 브로셔(4p), 통합 도입 제안서(8p) 및 10개 전 제품군(SyncVerse~SyncSDK) 개별 제안서 다운로드 | [전체 제안서 다운로드 센터 →](/proposals/) · [요약 브로셔 PDF](/downloads/proposals/SyncSeries_Brochure_v1.0.pdf) · [통합 제안서 PDF](/downloads/proposals/SyncSeries_Master_Proposal.pdf) |
 
 ---
 
@@ -146,58 +146,56 @@ footer: Copyright © 2026 Empasy Inc. All rights reserved.
 
 엠파시의 Sync Series는 소프트웨어 수명 주기 전반에 걸쳐 속도, 품질, 유연성을 지원하는 엔터프라이즈 AI 에이전트 및 프레임워크 라인업입니다.
 
-### SyncVerse: 멀티 에이전트 A2A 자율 오케스트레이션
-* **개요**: 개별 분산 소프트웨어 모듈과 도메인 에이전트들을 표준 MCP 기반으로 통합 제어하는 LLM 네이티브 중앙 관제탑입니다.
-* **핵심 기능**: 자연어 의도 기반 지능형 라우팅(Intent Routing), Swarm 에이전트 작업 조율, FinOps 토큰 비용 통제, 1-Click HITL(Human-in-the-Loop) 거버넌스.
-* **도입 효과**: 요구사항 분석부터 자율 코딩, 무인 QA, 배포 및 감사까지 6-Step AI DLC 라이프사이클을 단일 파이프라인으로 연결합니다.
+### SyncVerse: 멀티 에이전트 A2A 오케스트레이션 & 5-Step Spec Studio
+* **개요**: 개별 분산 소프트웨어 모듈과 도메인 에이전트들을 표준 MCP 및 A2A 프로토콜 기반으로 통합 관리하고, 5-Step Spec Studio와 7대 코딩 에이전트 엔진(`SyncSDK`)을 지휘하는 중앙 메타 오케스트레이션 플랫폼입니다.
+* **핵심 기능**: 자연어 의도 기반 작업 라우팅(Intent Routing) 및 도메인 Swarm 위임, 5-Step Spec Studio(요구사항 AC 정제 → 상세 설계 → 구현 계획 → 다중 코딩 엔진 자율 실행 → 4대 표준 산출물 역동기화), 다자간 HITL(Multi-Party Approval) 결재 및 KMS 보안 거버넌스.
+* **도입 효과**: 요구사항 정의부터 다중 코딩 에이전트 자율 구현, 자동 QA, 무중단 배포 및 산출물 최신화까지 전 개발·운영 주기를 단일 컨트롤 플레인으로 완결합니다.
 
 ### SyncInsight: 엔터프라이즈 의사결정 인텔리전스 & 관제
-* **개요**: 시스템 내외부 데이터를 실시간 수집·분석하여 비즈니스 의사결정과 장애 선제 대응을 지원하는 AI 관제 플랫폼입니다.
-* **핵심 기능**: 실시간 분산 데이터 스트리밍 분석, Anomaly Detection(이상 징후 자율 탐지), 자연어 기반 맞춤형 데이터 분석(NL2SQL & NLQ), Context-Aware RAG.
-* **도입 효과**: 복잡한 SQL 작성이나 대시보드 설계 없이 자연어 질의만으로 비즈니스 인사이트를 도출하고 실행 가능한 대안을 검토합니다.
+* **개요**: 시스템 내외부 데이터를 실시간 수집·분석하여 비즈니스 의사결정과 장애 대응을 돕는 데이터 분석 플랫폼입니다.
+* **핵심 기능**: 2-Phase Deep Research(원탁 토론), Apache Calcite 기반 읽기 전용 안전 자연어 데이터 조회(Safe NL2SQL), 데이터 리니지 영향도 시뮬레이션 및 RCA 자동 진단.
+* **도입 효과**: 복잡한 SQL 작성이나 별도 대시보드 개발 없이 자연어 질문만으로 필요한 지표를 확인하고 실행 가능한 후속 조치를 즉시 도출할 수 있습니다.
 
-### SyncETA: Vision-LLM 기반 E2E 테스트 자동화
-* **개요**: 웹 및 모바일 환경에서 DOM 변경에 취약한 기존 스크립트 기반 테스트의 한계를 극복하는 AI 자가복구(Self-Healing) 테스트 플랫폼입니다.
-* **핵심 기능**: Vision-LLM 화면 요소 시각적 재식별, 엑셀(Excel) 테스트케이스 직결 자동 실행, L1~L5 계층별 심층 품질 검증, CI/CD 무인 회귀 테스트 파이프라인.
-* **도입 효과**: UI 릴리즈 시 발생하는 셀렉터 장애를 런타임에 안정적으로 자가 복구하며, 반복 회귀 테스트 비용을 절감합니다.
+### SyncLLM: 엔터프라이즈 AI 게이트웨이 & FinOps 비용 관리
+* **개요**: 사내 여러 부서와 에이전트의 멀티 LLM API 호출을 단일 창구로 모으고 토큰 비용과 보안을 중앙 통제하는 AI 게이트웨이입니다.
+* **핵심 기능**: 질문 난이도별 모델 자동 선택(Tier 라우팅), 의미 기반 응답 캐싱(코사인 유사도 \(\ge 0.95\)), 4단계 자율 최적화 Swarm(`Cost Auditor ➔ Router Optimizer ➔ Cache Purge ➔ Budget Guard`), 개인정보(PII) 자동 마스킹.
+* **도입 효과**: 반복되는 유사 질문의 API 호출 비용을 절감하고, 사내 민감 정보가 외부 상용 모델로 넘어가는 것을 사전에 차단합니다.
 
-### SyncCrawl: 적응형 자율 크롤링 & RAG 지식 파이프라인
-* **개요**: 웹 페이지의 구조 변경에 능동적으로 적응하여 엔터프라이즈 RAG 파이프라인을 위한 고품질 정형 데이터를 수집하는 엔진입니다.
-* **핵심 기능**: DOM 구조 변화 자동 보정, 지능형 프록시 순환 및 브라우저 프로파일링(안티봇 우회), 고신뢰 JSON 스키마 자동 추출, 벡터 DB 실시간 동기화.
-* **도입 효과**: 사이트 개편 시 발생하는 크롤러 오류를 방지하고 지속 가능한 AI 지식 자산을 구축합니다.
+### SyncBoot: 클라우드 네이티브 Java 백오피스 개발 플랫폼
+* **개요**: Spring Boot 3.5 & Java 25 기반 Clean Architecture와 Domain-Driven Design(DDD)을 적용한 엔터프라이즈 백오피스 표준 프레임워크입니다.
+* **핵심 기능**: Schema Studio 코드 생성기(DDL, 엔티티, CRUD REST API 자동 생성), DB 단일 원천(`sys_permission`) 동적 메뉴 및 권한 관리, AES-256 암호화 기반 무중단 동적 환경설정(`sys_config`) 및 원격 소켓 진단.
+* **도입 효과**: 반복적인 기초 CRUD와 권한·메뉴 구축 시간을 줄여 핵심 비즈니스 로직 구현에 집중할 수 있습니다.
 
-### SyncBoot: 클라우드 네이티브 Java MSA 고속 개발 플랫폼
-* **개요**: Spring Boot 기반 Clean Architecture와 Domain-Driven Design(DDD)을 적용한 엔터프라이즈 마이크로서비스 개발 프레임워크입니다.
-* **핵심 기능**: Schema Studio 로우코드 생성기(DDL, 엔티티, CRUD REST API 자동 생성), Saga 패턴 기반 분산 보상 트랜잭션 관리, Sentinel/Seata/SkyWalking 풀스택 통합.
-* **도입 효과**: 기초 CRUD 및 권한 관리 구축 공수를 줄여 비즈니스 핵심 도메인 로직 구현에 집중할 수 있는 환경을 제공합니다.
+### SyncCMS: Nuxt 3 SSR 및 에이전트 협업 기반 하이브리드 헤드리스 CMS
+* **개요**: 마케터와 운영자의 편리한 콘텐츠 발행과 개발자의 유연한 확장을 함께 지원하는 Nuxt 3 SSR 기반 하이브리드 헤드리스 CMS입니다.
+* **핵심 기능**: Nuxt 3 SSR 고속 렌더링, 초안 작성·SEO 검토·발행 3단계 에이전트 협업(`CmsSwarmWorkflowService`), AEO/GEO/SEO 웹 품질 감사(`CmsAuditAeoGeoTool`), Live SDK 인라인 편집 연동.
+* **도입 효과**: 특정 벤더에 종속되지 않고 기업 환경에 맞는 웹사이트를 빠르게 구축하며, 검색엔진 및 AI 답변 인용 품질을 높입니다.
 
-### SyncCMS: Nuxt 3 SSR 및 멀티에이전트 스웜 기반 하이브리드 헤드리스 CMS
-* **개요**: 마케터와 운영자의 직관적인 콘텐츠 퍼블리싱과 개발자의 유연한 확장을 동시에 지원하는 Nuxt 3 SSR 및 Copywriter-SEO-Publisher 멀티에이전트 스웜 기반 하이브리드 헤드리스 CMS입니다.
-* **핵심 기능**: Nuxt 3 SSR 고속 렌더링, Copywriter-SEO-Publisher 3단계 에이전트 스웜(`CmsSwarmWorkflowService`), AEO/GEO 웹 품질 감사, Live SDK 인라인 편집 연동, 온프레미스 AI 보안 가드레일.
-* **도입 효과**: 벤더 종속성을 탈피하여 엔터프라이즈 요구사항에 맞춘 유연한 사이트 구축 및 AI 검색엔진(AEO/GEO) 인용 최적화를 안정적으로 지원합니다.
+### SyncShop: 분산 마이크로서비스(MSA) 상거래 및 운영 에이전트
+* **개요**: 9대 독립 마이크로서비스(`gateway`, `admin`, `portal`, `auth`, `search`, `monitor`, `mbg`, `mcp-server`, `common`)와 플래그십 스토어프론트(`SYNC SELECT`)로 구성된 엔터프라이즈 이커머스 플랫폼입니다.
+* **핵심 기능**: 다계층 카탈로그 및 동적 재고 잠금(Inventory Lock), 프로모션·타임세일 엔진, 최소 마진율을 지키는 다이내믹 프라이싱 일괄 조정 및 직전 가격 스냅샷 1-Click 복원(`shop_batch_price_update`).
+* **도입 효과**: 신규 커머스 채널 구축 기간을 단축하고, 마진 보호 기준 안에서 안전하게 가격을 조정하여 운영 리스크를 원천 방지합니다.
 
-### SyncShop: Headless 옴니채널 상거래 및 자율 운영 에이전트
-* **개요**: 프론트엔드 표현층과 백엔드 상거래 로직을 분리하여 웹, 모바일, 키오스크 등 모든 고객 접점에 신속히 대응하는 차세대 Headless eCommerce 플랫폼입니다.
-* **핵심 기능**: 다계층 카탈로그 및 동적 SKU 재고 잠금(Inventory Lock), 지능형 쿠폰 및 플래시딜 타임세일 엔진, 실시간 DB 기반 다이내믹 프라이싱 및 무손실 스냅샷 롤백(`shop_batch_price_update`), 3단계 에이전트 스웜(Pricing Optimizer, Margin Safeguard, Executor).
-* **도입 효과**: 옴니채널 출시 속도를 대폭 단축하고, 마진 안전가드 기반 무인 다이내믹 프라이싱으로 상거래 운영 공수와 마진 누수를 방지합니다.
+### SyncOps: 한국형 SI/솔루션 사업운영 & 손익·보증·연구노트 관리 플랫폼
+* **개요**: 수주형 SI 및 SW 솔루션 기업의 계약단가 대 실투입원가 비교 손익, KOSA 기술등급 인력 배치, 4대 보증보험, 하도급 대금 지급기일 및 전자연구노트를 한곳에서 관리하는 사업운영(PSA/PMO) 플랫폼입니다.
+* **핵심 기능**: 발주처 청구단가 vs 실투입원가 5차원 실시간 손익 피벗 매트릭스, KOSA 기술등급 및 월별 M/M 가동률 관리, 4대 보증보험 만기 알림, 하도급법(제6조·제13조 15일/60일 룰) 지급기한 자동 감시, 조특법 SHA-256 시점인증 전자연구노트.
+* **도입 효과**: 프로젝트 진행 중에도 실시간 영업이익률을 파악할 수 있으며, 보증보험·하도급 지급기일·R&D 세액공제 증빙 누락을 사전에 예방합니다.
 
-### SyncOps: 한국형 SI/솔루션 사업운영 & 듀얼단가 손익·보증·연구노트 관제 플랫폼
-* **개요**: 수주형 SI 및 SW 솔루션 기업의 계약단가 대 실투입원가 듀얼 손익, KOSA 기술등급 인력 매트릭스, 4대 보증보험, 하도급법 지급기일 감시 및 조특법 전자연구노트를 통합 관리하는 사업운영(PSA/PMO) 에이전트입니다.
-* **핵심 기능**: 발주처 계약단가 vs 실투입원가 듀얼단가 실시간 손익 관제, KOSA 기술등급 및 월별 M/M 가동률 매트릭스, 4대 이행보증보험 만기 추적, 하도급법 15일/60일 지급기일 및 지연이자 자동 산출, 조특법 SHA-256 시점인증 전자연구노트.
-* **도입 효과**: 프로젝트 종료 전 실시간 공헌이익을 투명하게 파악하고, 하도급법·보증보험·R&D 세액공제 감사 리스크를 선제적으로 차단합니다.
+### SyncSDK & 6대 공통 모듈: 다중 코딩 에이전트 SPI 및 플랫폼 파운데이션
+* **개요**: 7대 코딩 에이전트 엔진(`Antigravity`, `OpenSWE`, `Goose`, `MiniSWE`, `Cline`, `KiloCode`, `Eigent`)을 런타임 핫스왑으로 구동하는 표준 SPI(`SyncSDK`)와 전사 에이전트에 자동 주입되는 6대 공통 모듈입니다.
+* **핵심 구성**: `sync-core`(동적 설정·Saga), `sync-module-ai`(AgentScope Java 2.0.2·MsgHub), `sync-module-nl2sql`(Calcite 관계대수·SELECT-Only 방화벽), `sync-module-audit`(Playwright 웹 품질 평가), `sync-module-deploy`(GitHub Actions·ArgoCD·Jenkins 무중단 배포), `sync-module-rag`(pgvector + BM25 + Knowledge Graph 3중 하이브리드 RAG).
 
-### SyncLLM: 엔터프라이즈 AI 게이트웨이 & FinOps 비용 최적화
-* **개요**: 사내 분산된 멀티 LLM API 호출을 단일 진입점으로 통합 제어하고 토큰 비용을 체계적으로 최적화하는 게이트웨이입니다.
-* **핵심 기능**: 복잡도 기반 지능형 모델 라우팅, 코사인 유사도(\(\ge 0.95\)) 기반 시맨틱 캐싱, 부서별 실시간 토큰 예산(FinOps) 통제, PII 개인정보 자동 마스킹.
-* **도입 효과**: 중복 호출 제거를 통해 AI 토큰 비용을 대폭 절감하고, 민감 정보 유출 위험을 사전에 방어하여 신뢰할 수 있는 기업용 AI 활용 환경을 지원합니다.
+### SyncETA & SyncCrawl: Vision-LLM 테스트 자동화 및 적응형 웹 수집 엔진
+* **SyncETA**: 웹 및 모바일 환경에서 DOM 변경 시 Vision-LLM으로 셀렉터를 스스로 보정하는 자가치유(Self-Healing) E2E 테스트 자동화 플랫폼입니다.
+* **SyncCrawl**: 웹 페이지 구조 변경에 유연하게 대응하여 기업용 Tri-Hybrid RAG 파이프라인에 정형 마크다운 지식과 벡터 데이터를 실시간 공급하는 수집 엔진입니다.
 
-### SyncAdmin: 엔터프라이즈 백오피스 UI 템플릿
-* **개요**: Vue 3, Vite, TypeScript 기반으로 설계된 모던 엔터프라이즈 관리자 대시보드 프레임워크입니다.
-* **핵심 기능**: 역할 기반 동적 라우팅 및 버튼 단위 세분화 권한 제어, Ant Design Vue 호환, Pnpm/TurboRepo 모노레포 아키텍처.
+### 버티컬 비즈니스 서비스 (Vertical Application Services)
+* **TodayCare (`오늘도 안심`)**: 스마트폰 일상 활동 센서(Life-Log) 기반 실시간 안심 신호등, 무활동 이상 징후 단계별 알림 및 지자체·복지관 연계 시니어 안심 돌봄 플랫폼입니다.
+* **AwesomeFit (`어썸핏`)**: 도도매 AI 상품 소싱부터 오픈마켓 자동 등록, 무인 발주·송장 역전송, 1:1 건별 순익 대사까지 셀러 개입도 0%를 지향하는 B2B 패션 풀필먼트 자동화 플랫폼입니다.
 
-### SyncAPIM: 엔터프라이즈 API 라이프사이클 게이트웨이
-* **개요**: 대규모 트래픽 환경에서 API 보안, 라우팅, 모니터링, 과금을 통합 관리하는 API 게이트웨이 솔루션입니다.
-* **핵심 기능**: OAuth 2.0 / JWT 기반 다층 보안, 실시간 트래픽 쓰로틀링(Rate Limiting), API 성능 모니터링.
+### 아카이브 모듈 (`SyncAdmin` / `SyncAPIM`)
+* **SyncAdmin (현 전사 Vben Admin 표준으로 통합)**: Vue 3, Vite, TypeScript 및 DB 단일 원천(`sys_permission`) 동적 라우팅 기반의 백오피스 UI 표준 템플릿입니다.
+* **SyncAPIM (현 SyncLLM & Cloud Gateway로 통합)**: OAuth 2.0 / JWT 다층 보안, 실시간 트래픽 쓰로틀링(Rate Limiting) 및 API 라이프사이클 관리를 제공하는 게이트웨이 아카이브 문서입니다.
 
 ---
 

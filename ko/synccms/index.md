@@ -22,6 +22,8 @@ sort: 1
 
 # SyncCMS: 엔터프라이즈 AI 하이브리드 헤드리스 CMS
 
+> 📄 **제품 소개서 및 라이브 데모**: [SyncCMS_Proposal.pdf (8p)](/downloads/proposals/SyncCMS_Proposal.pdf){target="_blank" download="SyncCMS_Proposal.pdf"} · [🖥️ SyncCMS 라이브 데모 체험](https://sync.empasy.io/products/sync-cms#demo){target="_blank" rel="noopener"} · [🌐 제품 공식 페이지](https://empasy.io/ko/solutions/sync-cms.html){target="_blank" rel="noopener"} · [전체 제안서 모음](/proposals/)
+
 **SyncCMS**(`https://cms.empasy.io`)는 대고객 웹 포털, 모바일 앱 등 기업의 모든 디지털 접점에서 **Nuxt 3 SSR 고속 렌더링, Copywriter-SEO-Publisher 멀티에이전트 스웜(`CmsSwarmWorkflowService`), HTML Head 메타 정보의 동적 중앙 관리 및 차세대 AI 검색(AEO/GEO) 최적화를 제공하는 엔터프라이즈 하이브리드 헤드리스 CMS**입니다.
 
 외산 SaaS의 폐쇄성과 데이터 유출 위험, 국산 레거시 CMS의 노후화된 아키텍처를 극복하고, **Java Spring Boot 3.4+ 및 AgentScope Java(`io.agentscope:agentscope-harness`) 표준 프레임워크 소스코드를 전면 공개하여 구축된 시스템 전체가 고객사의 독립적인 디지털 소프트웨어 자산으로 내재화**됩니다.
