@@ -194,7 +194,7 @@ new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
           {
             text: '특허 기술 및 인프라',
             items: [
-              { link: "/patents/", text: '특허 기술 안내 (5건)' },
+              { link: "/patents/", text: '원천기술 특허 포트폴리오' },
               { link: "/infra/", text: '서버 인프라 및 보안 체계' },
             ]
           }
@@ -268,14 +268,14 @@ new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
             text: '소개서 및 다운로드',
             items: [
               {
-                text: '사업 소개서 (PDF)',
-                link: '/downloads/SyncSeries_Business_Proposal_v1.0.pdf',
+                text: '통합 도입제안서 (PDF)',
+                link: '/downloads/proposals/SyncSeries_Master_Proposal.pdf',
                 target: '_blank',
                 rel: 'noopener noreferrer',
               },
               {
-                text: '솔루션 안내서 (PDF)',
-                link: '/downloads/SyncSeries_Brochure_v1.0.pdf',
+                text: '통합 요약 브로셔 (PDF)',
+                link: '/downloads/proposals/SyncSeries_Brochure_v1.0.pdf',
                 target: '_blank',
                 rel: 'noopener noreferrer',
               },

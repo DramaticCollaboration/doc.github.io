@@ -20,7 +20,7 @@ sort: 1
 
 # SyncLLM: 엔터프라이즈 AI 게이트웨이 & FinOps
 
-> 📄 **제품 소개서 겸 도입 제안서 다운로드**: [SyncLLM_Proposal.pdf (8p)](/downloads/proposals/SyncLLM_Proposal.pdf){target="_blank" download="SyncLLM_Proposal.pdf"} · [전체 제품군 제안서 모음](/proposals/)
+> 📄 **제품 소개서 및 라이브 데모**: [SyncLLM_Proposal.pdf (8p)](/downloads/proposals/SyncLLM_Proposal.pdf){target="_blank" download="SyncLLM_Proposal.pdf"} · [🖥️ SyncLLM 라이브 데모 체험](https://sync.empasy.io/products/sync-llm#demo){target="_blank" rel="noopener"} · [🌐 제품 공식 페이지](https://empasy.io/ko/solutions/sync-llm.html){target="_blank" rel="noopener"} · [전체 제안서 모음](/proposals/)
 
 > **Empasy SyncSeries Enterprise AI Gateway & FinOps Engine**  
 > 지능형 모델 라우팅, 시맨틱 캐싱, 토큰 예산 관리 및 개인정보 보호 플랫폼

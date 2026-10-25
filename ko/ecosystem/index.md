@@ -54,7 +54,7 @@ flowchart TB
 ```
 
 ### Tier 1: 중앙 관제 및 통합 오케스트레이션 계층
-- **SyncVerse (`sync-verse`)**: 생태계의 중앙 신경망 역할을 담당합니다. 5-Step Spec Studio를 통한 자율 코딩 오케스트레이션, 다자간 HITL 결재, 그리고 내장된 비전 QA(`SyncETA` / `sync-verse-qa`) 및 적응형 크롤러(`SyncCrawl` / `sync-verse-crawl`)를 통합 관제합니다.
+- **SyncVerse (`sync-verse`)**: 생태계의 중앙 신경망 역할을 담당합니다. 5-Step Spec Studio를 통한 자율 코딩 오케스트레이션, 7대 코딩 에이전트 동적 라우팅(`CodingAgentRoutingProxy`), 다자간 HITL 결재, 그리고 내장된 비전 QA(`SyncETA` / `sync-verse-qa`) 및 적응형 크롤러(`SyncCrawl` / `sync-verse-crawl`)를 통합 관제합니다.
 
 ### Tier 2: 의사결정 인텔리전스 및 AI 게이트웨이 계층
 - **SyncInsight (`sync-insight`)**: 내외부 이기종 데이터를 실시간 수집·분석하고, 2-Phase Deep Research와 Apache Calcite 기반 Safe NL2SQL을 통해 검증된 비즈니스 실행 대안을 도출합니다.
@@ -63,12 +63,16 @@ flowchart TB
 ### Tier 3: 전문 도메인 실행 에이전트 계층
 - **SyncBoot (`sync-boot`)**: DB 단일 원천 동적 라우팅(`sys_permission`), 무중단 환경설정 핫스왑(`sys_config`), 원격 소켓 진단기를 제공하는 전사 백오피스 표준 베이스라인입니다.
 - **SyncCMS (`sync-cms`)**: Nuxt 3 SSR, Copywriter-SEO-Publisher 3단계 내부 Swarm과 AEO/GEO 웹 품질 감사 도구를 갖춘 자율 콘텐츠 퍼블리싱 에이전트입니다.
-- **SyncShop (`sync-shop`)**: Gateway, Auth, Admin, Portal, Search, Monitor, MBG, MCP Server의 8개 독립 마이크로서비스로 구성된 자율 이커머스 에이전트입니다.
+- **SyncShop (`sync-shop`)**: Gateway, Auth, Admin, Portal, Search, Monitor, MBG, MCP Server, Common의 9개 독립 마이크로서비스 및 플래그십 스토어프론트(`SYNC SELECT`)로 구성된 자율 이커머스 에이전트입니다.
 - **SyncOps (`sync-ops`)**: 한국형 SI 프로젝트 듀얼단가 손익, KOSA 등급 인력 매트릭스, 4대 이행보증보험, 하도급법 지급기일 감시 및 조특법 SHA-256 전자연구노트를 통합 수행합니다.
 
 ### Tier 4: 무인 자율 코딩 SDK 및 6대 공통 모듈
-- **SyncSDK (`sync-sdk`)**: Antigravity 및 OpenSWE 멀티 코딩 엔진 SPI 핫스왑과 4-Cycle 빌드 자가치유를 제공하는 자율 개발 SDK입니다.
+- **SyncSDK (`sync-sdk`)**: 7대 코딩 에이전트 엔진(`Antigravity`, `OpenSWE`, `Goose`, `MiniSWE`, `Cline`, `KiloCode`, `Eigent`) 멀티 엔진 SPI 핫스왑과 4-Cycle 빌드 자가치유를 제공하는 자율 개발 SDK입니다.
 - **6대 공통 모듈**: `sync-core`, `sync-module-ai`, `sync-module-nl2sql`, `sync-module-audit`, `sync-module-deploy`, `sync-module-rag`.
+
+### Vertical Services: 완성형 비즈니스 버티컬 서비스 (`services/`)
+- **TodayCare (`services/today-care`)**: 스마트폰 센서 활동 데이터(Life-Log) 기반 실시간 안심 신호등, 무활동 이상 징후 단계별 알림 및 지자체·복지관 연계 시니어 안심 돌봄 서비스입니다.
+- **AwesomeFit (`services/awesome-fit`)**: 도도매 AI 상품 소싱부터 오픈마켓 자동 등록, 무인 발주·송장 역전송, 1:1 건별 순익 대사까지 자동화하는 B2B 패션 풀필먼트 위탁운영 서비스입니다.
 
 ---
 
