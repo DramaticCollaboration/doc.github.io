@@ -1,6 +1,6 @@
 ---
 title: 엠파시 사업 및 프로젝트 관리 표준 문서 양식 통합 다운로드 센터
-description: 엠파시 사업 및 개발 방법론 전 주기(Phase 0~5) 표준 서식 46종과 실전 프로젝트 관리 스위트(PM Suite) 76종 등 총 122종의 공식 비즈니스 산출물 템플릿(Word, PowerPoint, Excel, PDF, Markdown) 일괄 및 개별 다운로드를 제공합니다.
+description: 엠파시 사업 및 개발 방법론 전 주기(Phase 0~5) 표준 서식 46종과 실전 프로젝트 관리 스위트(PM Suite) 72종 등 총 118종의 공식 비즈니스 산출물 템플릿(Word, PowerPoint, Excel, PDF, Markdown) 일괄 및 개별 다운로드를 제공합니다.
 head:
   - - meta
     - name: keywords
@@ -10,7 +10,7 @@ head:
       content: 엠파시 사업 및 프로젝트 관리 표준 문서 양식 통합 다운로드 센터
   - - meta
     - property: og:description
-      content: 실제 프로젝트 현장에서 즉시 활용 가능한 단계별 표준 문서 템플릿 및 통합 다운로드 패키지
+      content: 실제 프로젝트 현장에서 바로 활용 가능한 단계별 표준 문서 템플릿 및 통합 다운로드 패키지
   - - meta
     - property: og:image
       content: https://doc.empasy.com/images/favicon.png
@@ -22,9 +22,9 @@ sort: 93
 
 # 엠파시 사업 및 프로젝트 관리 표준 문서 양식 통합 다운로드 센터
 
-본 문서는 **엠파시 사업 및 개발 방법론**의 전 주기(Phase 0 사전영업 ~ Phase 5 오픈 및 정산)에 걸쳐 실제 회사를 운영하고 프로젝트를 수행할 때 필요한 **공식 비즈니스 문서 양식(Microsoft Word, PowerPoint, Excel, PDF)**과 **마크다운(.md)** 원본 서식, 그리고 현업 실무에 즉시 투입 가능한 **실전 프로젝트 관리 스위트(PM Suite 76종)**를 통합 제공합니다.
+본 문서는 **엠파시 사업 및 개발 방법론**의 전 주기(Phase 0 사전영업 ~ Phase 5 오픈 및 정산)에 걸쳐 실제 회사를 운영하고 프로젝트를 수행할 때 필요한 **공식 비즈니스 문서 양식(Microsoft Word, PowerPoint, Excel, PDF)**과 **마크다운(.md)** 원본 서식, 그리고 현업 실무에 바로 투입 가능한 **실전 프로젝트 관리 스위트(PM Suite 72종)**를 통합 제공합니다.
 
-모든 템플릿은 발주처(공공기관, 금융권, 민간 대기업)의 행정 감사 통과, 계약 분쟁 사전 차단, 기술 부채 방지, 신속한 대금 회수 리스크를 최소화할 수 있도록 국내 엔터프라이즈 및 공공 SI 표준 규격에 맞추어 검증되었습니다.
+모든 템플릿은 발주처(공공기관, 금융권, 민간 기업)의 행정 감사를 원활히 통과하고, 계약 조건의 해석 차이, 기술 부채 누적, 대금 정산 지연을 미리 예방할 수 있도록 국내 엔터프라이즈 및 공공 SI 표준 규격에 맞추어 정리되었습니다.
 
 ---
 
@@ -35,13 +35,13 @@ sort: 93
 ::: tip 통합 다운로드 옵션 안내
 * **[옵션 1] 전체 통합 마스터 압축팩 (Empasy Total Master Pack)**: 
   <a href="/templates/Empasy_Total_Master_Pack.zip" download="Empasy_Total_Master_Pack.zip">**[전체 양식 통합 마스터팩 다운로드 (Empasy_Total_Master_Pack.zip)]**</a> (용량: 약 51.6 MB)
-  - 엠파시 표준 오피스 서식 34종 + 마크다운 12종 + 실전 PM Suite 76종 등 **총 122종의 모든 서식**을 하나의 아카이브로 통합 제공합니다.
+  - 엠파시 표준 오피스 서식 34종 + 마크다운 12종 + 실전 PM Suite 72종 등 **총 118종의 표준 서식**을 하나의 압축 파일로 통합 제공합니다.
 * **[옵션 2] 실전 프로젝트 관리 스위트 전용팩 (PM Suite Pack)**:
   <a href="/templates/Empasy_PM_Suite_Templates.zip" download="Empasy_PM_Suite_Templates.zip">**[실전 프로젝트 관리 스위트 다운로드 (Empasy_PM_Suite_Templates.zip)]**</a> (용량: 약 50.4 MB)
-  - PMBOK 및 공공 SI 실전에 최적화된 **76종의 실전 프로젝트 관리 산출물(오피스 원본 서식 및 관리자 교육 교재)** 전용 패키지입니다.
+  - PMBOK 및 공공 SI 실전에 맞춘 **72종의 실전 프로젝트 관리 산출물(오피스 원본 서식 및 관리자 교육 교재)** 전용 패키지입니다.
 * **[옵션 3] 엠파시 핵심 표준 서식팩 (Core Standard Pack)**:
   <a href="/templates/Empasy_Methodology_All_Templates.zip" download="Empasy_Methodology_All_Templates.zip">**[핵심 표준 서식팩 다운로드 (Empasy_Methodology_All_Templates.zip)]**</a> (용량: 약 925 KB)
-  - 프로젝트 착수 및 계약에 필수적인 **46종(Office 34종 + Markdown 12종)**의 핵심 서식만을 경량화하여 고속 다운로드를 지원합니다.
+  - 프로젝트 착수 및 계약에 필수적인 **46종(Office 34종 + Markdown 12종)**의 핵심 서식만 가볍게 묶어 빠르게 내려받을 수 있습니다.
 :::
 
 ---
@@ -191,9 +191,9 @@ sort: 93
 | **E2** | **사업 중도 해지(타절) 합의 및 기성정산서** | 대표이사 / 법무 | Word | 사업 중단 시 **기 수행 공정률(기성고) 확정, 선금 정산 및 추가 손해배상 분쟁 영구 종결** 합의서 | <a href="/templates/office/Common_사업중도타절_기성정산합의서.docx" download>Word (.docx)</a> |
 ---
 
-## 3. 실전 프로젝트 관리 스위트 (000 PM Suite) 76종 전수 일람표
+## 3. 실전 프로젝트 관리 스위트 (000 PM Suite) 72종 전수 일람표
 
-현업 대형 프로젝트에서 검증된 `../../../docs/00_프로젝트_관리_방안` 기반의 76종 실무 서식을 카테고리별로 누락 없이 정리한 전수 일람표입니다. 모든 파일은 개별 다운로드가 가능합니다.
+현업 대형 프로젝트에서 활용된 72종 실무 서식을 카테고리별로 정리한 일람표입니다. 모든 파일은 개별 다운로드가 가능합니다.
 
 ### 3.1 총괄 방법론 및 체계 가이드 (3종)
 
@@ -328,19 +328,15 @@ sort: 93
 
 ---
 
-### 3.4 프로젝트 관리자 전문 교육 및 통합 마스터 (7종)
+### 3.4 프로젝트 관리자 전문 교육 및 통합 마스터 (3종)
 
-프로젝트 관리자(PM) 역량 강화를 위한 전문 교육 교재(슬라이드 및 핸드아웃)와 전 공정을 단일 파일로 총괄 통제할 수 있는 통합 관리 마스터 엑셀입니다.
+프로젝트 관리자(PM) 역량 강화를 위한 전문 교육 교재(슬라이드 및 핸드아웃)와 전 공정을 단일 파일로 관리할 수 있는 통합 관리 마스터 엑셀입니다.
 
 | 식별코드 | 구분 | 파일 명칭 | 형식 | 용량 | 교재 및 도구 주요 내용 | 다운로드 링크 |
 | :---: | :---: | :--- | :---: | :---: | :--- | :---: |
-| **PM-70** | 교육자료 이력 | `BASIC_International_프로젝트관리_V1.0_20230704.pdf` | PDF | 1.1 MB | PM 필수 실무 교육 교재 핸드아웃 (2023.07.04 초안) | <a href="/templates/000_pm_suite/03_%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%20%EA%B5%90%EC%9C%A1/00_Document%20History/BASIC_International_%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%EA%B4%80%EB%A6%AC_V1.0_20230704.pdf" download>PDF (1.1 MB)</a> |
-| **PM-71** | 교육자료 이력 | `BASIC_International_프로젝트관리_V1.0_20230704.pptx` | PPT | 1.4 MB | PM 필수 실무 교육 강의용 프레젠테이션 슬라이드 (2023.07.04 초안) | <a href="/templates/000_pm_suite/03_%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%20%EA%B5%90%EC%9C%A1/00_Document%20History/BASIC_International_%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%EA%B4%80%EB%A6%AC_V1.0_20230704.pptx" download>PPT (1.4 MB)</a> |
-| **PM-72** | 교육자료 이력 | `BASIC_International_프로젝트관리_V1.0_20230710.pdf` | PDF | 2.1 MB | PM 필수 실무 교육 교재 핸드아웃 (2023.07.10 개정본) | <a href="/templates/000_pm_suite/03_%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%20%EA%B5%90%EC%9C%A1/00_Document%20History/BASIC_International_%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%EA%B4%80%EB%A6%AC_V1.0_20230710.pdf" download>PDF (2.1 MB)</a> |
-| **PM-73** | 교육자료 이력 | `BASIC_International_프로젝트관리_V1.0_20230710.pptx` | PPT | 5.1 MB | PM 필수 실무 교육 강의용 프레젠테이션 슬라이드 (2023.07.10 개정본) | <a href="/templates/000_pm_suite/03_%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%20%EA%B5%90%EC%9C%A1/00_Document%20History/BASIC_International_%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%EA%B4%80%EB%A6%AC_V1.0_20230710.pptx" download>PPT (5.1 MB)</a> |
-| **PM-74** | 공식 교육자료 | `BASIC_International_프로젝트관리_V1.0_20230713.pdf` | PDF | 5.3 MB | **[공식 최종본]** PMBOK 기반 프로젝트 착수~종료 전 과정 종합 실무 교육 핸드아웃 | <a href="/templates/000_pm_suite/03_%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%20%EA%B5%90%EC%9C%A1/01_%EA%B5%90%EC%9C%A1%EC%9E%90%EB%A3%8C/BASIC_International_%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%EA%B4%80%EB%A6%AC_V1.0_20230713.pdf" download>PDF (5.3 MB)</a> |
-| **PM-75** | 공식 교육자료 | `BASIC_International_프로젝트관리_V1.0_20230713.pptx` | PPT | 10.9 MB | **[공식 최종본]** PMBOK 기반 프로젝트 착수~종료 전 과정 종합 실무 교육 강의 슬라이드 | <a href="/templates/000_pm_suite/03_%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%20%EA%B5%90%EC%9C%A1/01_%EA%B5%90%EC%9C%A1%EC%9E%90%EB%A3%8C/BASIC_International_%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%EA%B4%80%EB%A6%AC_V1.0_20230713.pptx" download>PPT (10.9 MB)</a> |
-| **PM-76** | 통합 마스터 | `프로젝트명_프로젝트관리문서_v0.1_20230714.xlsx` | Excel | 1.5 MB | **[통합 마스터]** WBS, 산출물, 공정률, 인력, 회의록, 이슈, 위험을 단일 파일로 통합 연동한 마스터 시트 | <a href="/templates/000_pm_suite/03_%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%20%EA%B5%90%EC%9C%A1/02_%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%EA%B4%80%EB%A6%AC/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%EB%AA%85_%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%EA%B4%80%EB%A6%AC%EB%AC%B8%EC%84%9C_v0.1_20230714.xlsx" download>Excel (1.5 MB)</a> |
+| **PM-70** | 공식 교육자료 | `Empasy_프로젝트관리_실무가이드_V1.0.pdf` | PDF | 5.3 MB | **[공식 최종본]** PMBOK 기반 프로젝트 착수~종료 전 과정 종합 실무 교육 핸드아웃 | <a href="/templates/000_pm_suite/03_%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%20%EA%B5%90%EC%9C%A1/01_%EA%B5%90%EC%9C%A1%EC%9E%90%EB%A3%8C/Empasy_%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%EA%B4%80%EB%A6%AC_%EC%8B%A4%EB%AC%B4%EA%B0%80%EC%9D%B4%EB%93%9C_V1.0.pdf" download>PDF (5.3 MB)</a> |
+| **PM-71** | 공식 교육자료 | `Empasy_프로젝트관리_실무가이드_V1.0.pptx` | PPT | 10.9 MB | **[공식 최종본]** PMBOK 기반 프로젝트 착수~종료 전 과정 종합 실무 교육 강의 슬라이드 | <a href="/templates/000_pm_suite/03_%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%20%EA%B5%90%EC%9C%A1/01_%EA%B5%90%EC%9C%A1%EC%9E%90%EB%A3%8C/Empasy_%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%EA%B4%80%EB%A6%AC_%EC%8B%A4%EB%AC%B4%EA%B0%80%EC%9D%B4%EB%93%9C_V1.0.pptx" download>PPT (10.9 MB)</a> |
+| **PM-72** | 통합 마스터 | `프로젝트명_프로젝트관리문서_v0.1_20230714.xlsx` | Excel | 1.5 MB | **[통합 마스터]** WBS, 산출물, 공정률, 인력, 회의록, 이슈, 위험을 단일 파일로 통합 연동한 마스터 시트 | <a href="/templates/000_pm_suite/03_%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%20%EA%B5%90%EC%9C%A1/02_%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%EA%B4%80%EB%A6%AC/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%EB%AA%85_%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%EA%B4%80%EB%A6%AC%EB%AC%B8%EC%84%9C_v0.1_20230714.xlsx" download>Excel (1.5 MB)</a> |
 ---
 
 ## 4. 웹 브라우저 즉시 복사용 주요 서식 전문
