@@ -1,10 +1,10 @@
 ---
 title: 엠파시 사업 및 개발 방법론 종합 포털
-description: 소프트웨어 사업의 출발점인 사전영업(RFP 분석)부터 계약, 행정, AI-SDLC, 122종 표준 산출물 납품, 감리, 상용 오픈 및 대금 회수에 이르는 전 생애주기를 체계화한 엠파시 표준 엔터프라이즈 사업 운영 및 개발 방법론 포털입니다.
+description: 소프트웨어 사업의 출발점인 사전영업(RFP 분석)부터 계약, 행정, AI-SDLC, 191종 표준 산출물 납품, 감리, 상용 오픈 및 대금 회수에 이르는 전 생애주기를 체계화한 엠파시 표준 엔터프라이즈 사업 운영 및 개발 방법론 포털입니다.
 head:
   - - meta
     - name: keywords
-      content: 엠파시 방법론, 사업 및 개발 방법론, 소프트웨어 사업 운영, RFP 분석, 기술 제안서, 착수계, WBS, 122종 표준 서식, AI-SDLC, UAT, 최종 검수, SLA, 엠파시, Empasy
+      content: 엠파시 방법론, 사업 및 개발 방법론, 소프트웨어 사업 운영, RFP 분석, 기술 제안서, 착수계, WBS, 191종 표준 서식, AI-SDLC, UAT, 최종 검수, SLA, 엠파시, Empasy
   - - meta
     - property: og:title
       content: 엠파시 사업 및 개발 방법론 종합 포털
@@ -35,7 +35,7 @@ flowchart TD
     subgraph CorePillars ["엠파시 사업 및 개발 방법론 4대 기둥"]
         P1["1. 사업 및 프로젝트 관리<br/>(Business & PM Governance)"]
         P2["2. AI 개발 생명주기<br/>(Empasy AI-SDLC)"]
-        P3["3. 표준 산출물 & 122종 서식<br/>(Deliverables Suite)"]
+        P3["3. 표준 산출물 & 191종 서식<br/>(Deliverables Suite)"]
         P4["4. 애자일 스프린트 연계<br/>(Agile & Scrumban Execution)"]
     end
 
@@ -49,8 +49,8 @@ flowchart TD
    - 부실 수주 차단(Go/No-Go), 선금 50% 확보, 4대 서명(Sign-off) 관리, 지체상금 및 외주 위장도급 리스크 차단, 100% 잔금 회수 행정 체계.
 2. **AI 개발 생명주기 (Empasy AI-SDLC)**:
    - 기획부터 배포까지 5단계(요구사항 구체화 ➔ 명세 우선 아키텍처 ➔ 에이전트 협업 구현 ➔ 4단계 회귀 검증 ➔ 무인 배포) 엔지니어링 표준.
-3. **표준 산출물 & 122종 실전 문서 스위트 (Deliverables Suite)**:
-   - 공공기관, 금융권, 대기업 감사를 무결함으로 통과할 수 있는 122종의 오피스(Word, PPT, Excel, PDF) 및 마크다운 원본 템플릿.
+3. **표준 산출물 & 191종 실전 문서 스위트 (Deliverables Suite)**:
+   - 공공기관, 금융권, 대기업 감사를 무결함으로 통과할 수 있는 191종의 오피스(Word, PPT, Excel, PDF) 및 마크다운 원본 템플릿.
 4. **애자일 스프린트 연계 (Agile & Scrumban Execution)**:
    - 거시적 마일스톤(WBS)을 일상적인 1~2주 스프린트로 세분화하고, Git Flow 및 이슈 트래킹 기반으로 매일 유기적으로 구동되는 실행 문화.
 
@@ -60,7 +60,7 @@ flowchart TD
 
 자신의 역할에 맞추어 필수 가이드와 양식을 즉시 확인하십시오.
 
-| 역할 | 담당 직무 | 필수 확인 가이드 | 작성 및 관리 필수 서식 (122종 템플릿) |
+| 역할 | 담당 직무 | 필수 확인 가이드 | 작성 및 관리 필수 서식 (191종 템플릿) |
 | :--- | :--- | :--- | :--- |
 | **영업 / 사업대표** | 수주 타당성 검토, RFP 분석, 견적 산출, 계약 체결, 잔금 회수 | [사전영업 플레이북](./presales-ai-playbook.md)<br>[라이프사이클 총괄](./enterprise-project-lifecycle.md) | NDA, Go/No-Go 심의표, TCO 원가계산서, 표준계약서, 기성/준공 대금청구 공문 |
 | **총괄 PM / PO** | 일정 통제(WBS), 마일스톤, 4대 서명 확보, 변경 통제, 감리 대응 | [28대 실행 가이드(SOP)](./enterprise-action-items-guide.md)<br>[표준 문서 체계 가이드](./enterprise-business-documents.md) | 사업수행계획서, WBS 마스터, Scope Freeze 합의서, 주간/월간보고, CR Form, 최종 검수확인서 |
@@ -116,16 +116,16 @@ flowchart LR
 
 ---
 
-## 4. 공식 산출물 및 서식 다운로드 센터 (122종)
+## 4. 공식 산출물 및 서식 다운로드 센터 (191종)
 
-프로젝트 현장에서 즉시 편집하여 사용할 수 있는 122종의 오피스 원본 서식과 마크다운 템플릿을 제공합니다.
+프로젝트 현장에서 즉시 편집하여 사용할 수 있는 191종의 오피스 원본 서식과 마크다운 템플릿을 제공합니다.
 
-::: tip 122종 통합 다운로드 센터 안내
+::: tip 191종 통합 다운로드 센터 안내
 * **[표준 문서 양식 통합 다운로드 센터 바로가기](./enterprise-document-templates.md)**
 * **제공 패키지 옵션**:
-  1. **전체 통합 마스터팩 (`Empasy_Total_Master_Pack.zip`, 약 51.6 MB)**: 엠파시 표준 서식 46종 + 실전 PM Suite 76종 등 전 122종 총괄 패키지
-  2. **실전 프로젝트 관리 스위트 (`Empasy_PM_Suite_Templates.zip`, 약 50.4 MB)**: PMBOK 기반 76종 실무 서식 및 관리자 교육 교재 전용팩
-  3. **핵심 표준 서식팩 (`Empasy_Methodology_All_Templates.zip`, 약 925 KB)**: 단계별 계약·행정 46종 초경량 고속 다운로드팩
+  1. **전체 통합 마스터팩 (`Empasy_Total_Master_Pack.zip`, 약 53.8 MB)**: 엠파시 표준 서식 111종 + 실전 PM Suite 80종 등 전 191종 총괄 패키지
+  2. **실전 프로젝트 관리 스위트 (`Empasy_PM_Suite_Templates.zip`, 약 43.0 MB)**: PMBOK 기반 80종 실무 서식 및 관리자 교육 교재 전용팩
+  3. **핵심 표준 서식팩 (`Empasy_Methodology_All_Templates.zip`, 약 10.9 MB)**: 단계별 계약·행정 및 AI·엔터프라이즈 111종 핵심 다운로드팩
 :::
 
 ---

@@ -1,16 +1,16 @@
 ---
 title: 엠파시 사업 및 프로젝트 관리 표준 문서 양식 통합 다운로드 센터
-description: 엠파시 사업 및 개발 방법론 전 주기(Phase 0~5) 표준 서식 46종과 실전 프로젝트 관리 스위트(PM Suite) 72종 등 총 118종의 공식 비즈니스 산출물 템플릿(Word, PowerPoint, Excel, PDF, Markdown) 일괄 및 개별 다운로드를 제공합니다.
+description: 엠파시 사업 및 개발 방법론 전 주기(Phase 0~5) 표준 서식 111종(오피스 97종 + 마크다운 14종)과 실전 프로젝트 관리 스위트(PM Suite) 80종 등 총 191종의 공식 비즈니스·AI·엔터프라이즈 산출물 템플릿(Word, PowerPoint, Excel, PDF, Markdown) 일괄 및 개별 다운로드를 제공합니다.
 head:
   - - meta
     - name: keywords
-      content: 사업 표준 서식, 프로젝트 관리 문서, PMBOK, WBS, 정보구조도, IA, 화면설계서, 시큐어코딩 49개, UAT, 최종 검수, SLA, 엠파시, Empasy
+      content: 사업 표준 서식, 프로젝트 관리 문서, PMBOK, WBS, 정보구조도, IA, 화면설계서, AI 프롬프트 명세서, 골든셋 평가, 데이터 표준화, 시큐어코딩 49개, UAT, 최종 검수, SLA, 엠파시, Empasy
   - - meta
     - property: og:title
       content: 엠파시 사업 및 프로젝트 관리 표준 문서 양식 통합 다운로드 센터
   - - meta
     - property: og:description
-      content: 실제 프로젝트 현장에서 바로 활용 가능한 단계별 표준 문서 템플릿 및 통합 다운로드 패키지
+      content: 실제 프로젝트 현장에서 바로 활용 가능한 단계별 표준 문서 템플릿 및 통합 다운로드 패키지 (총 191종)
   - - meta
     - property: og:image
       content: https://doc.empasy.com/images/favicon.png
@@ -22,9 +22,9 @@ sort: 93
 
 # 엠파시 사업 및 프로젝트 관리 표준 문서 양식 통합 다운로드 센터
 
-본 문서는 **엠파시 사업 및 개발 방법론**의 전 주기(Phase 0 사전영업 ~ Phase 5 오픈 및 정산)에 걸쳐 실제 회사를 운영하고 프로젝트를 수행할 때 필요한 **공식 비즈니스 문서 양식(Microsoft Word, PowerPoint, Excel, PDF)**과 **마크다운(.md)** 원본 서식, 그리고 현업 실무에 바로 투입 가능한 **실전 프로젝트 관리 스위트(PM Suite 72종)**를 통합 제공합니다.
+본 문서는 **엠파시 사업 및 개발 방법론**의 전 주기(Phase 0 사전영업 ~ Phase 5 오픈 및 정산)에 걸쳐 실제 회사를 운영하고 프로젝트를 수행할 때 필요한 **공식 비즈니스 및 AI·엔터프라이즈 문서 양식(Microsoft Word, PowerPoint, Excel, PDF 97종)**과 **마크다운(.md 14종)** 원본 서식, 그리고 현업 실무에 바로 투입 가능한 **실전 프로젝트 관리 스위트(PM Suite 80종)** 등 **총 191종**을 통합 제공합니다.
 
-모든 템플릿은 발주처(공공기관, 금융권, 민간 기업)의 행정 감사를 원활히 통과하고, 계약 조건의 해석 차이, 기술 부채 누적, 대금 정산 지연을 미리 예방할 수 있도록 국내 엔터프라이즈 및 공공 SI 표준 규격에 맞추어 정리되었습니다.
+모든 템플릿은 발주처(공공기관, 금융권, 민간 대기업)의 행정·기술 감리를 원활히 통과하고, 계약 조건의 해석 차이, AI/데이터 아키텍처 설계 누락, 대금 정산 지연을 미리 예방할 수 있도록 국내 엔터프라이즈 및 공공 SI 표준 규격에 맞추어 정리되었습니다. 특히 엔터프라이즈·AI 표준 산출물(`EMP_*`)은 가상의 발주사(**주식회사 한빛글로벌**)와 가상 프로젝트(**`SyncGuard AI` — 엔터프라이즈 AI 콘텐츠·규제 심의 자동화 시스템 구축 사업**)의 현실적인 예시 데이터가 채워져 있어 즉시 실무에 응용할 수 있습니다.
 
 ---
 
@@ -34,14 +34,14 @@ sort: 93
 
 ::: tip 통합 다운로드 옵션 안내
 * **[옵션 1] 전체 통합 마스터 압축팩 (Empasy Total Master Pack)**: 
-  <a href="/templates/Empasy_Total_Master_Pack.zip" download="Empasy_Total_Master_Pack.zip">**[전체 양식 통합 마스터팩 다운로드 (Empasy_Total_Master_Pack.zip)]**</a> (용량: 약 51.6 MB)
-  - 엠파시 표준 오피스 서식 34종 + 마크다운 12종 + 실전 PM Suite 72종 등 **총 118종의 표준 서식**을 하나의 압축 파일로 통합 제공합니다.
+  <a href="/templates/Empasy_Total_Master_Pack.zip" download="Empasy_Total_Master_Pack.zip">**[전체 양식 통합 마스터팩 다운로드 (Empasy_Total_Master_Pack.zip)]**</a> (용량: 약 53.8 MB)
+  - 엠파시 표준 오피스 서식 97종 + 마크다운 14종 + 실전 PM Suite 80종 등 **총 191종의 표준 서식**을 하나의 압축 파일로 통합 제공합니다.
 * **[옵션 2] 실전 프로젝트 관리 스위트 전용팩 (PM Suite Pack)**:
-  <a href="/templates/Empasy_PM_Suite_Templates.zip" download="Empasy_PM_Suite_Templates.zip">**[실전 프로젝트 관리 스위트 다운로드 (Empasy_PM_Suite_Templates.zip)]**</a> (용량: 약 50.4 MB)
-  - PMBOK 및 공공 SI 실전에 맞춘 **72종의 실전 프로젝트 관리 산출물(오피스 원본 서식 및 관리자 교육 교재)** 전용 패키지입니다.
-* **[옵션 3] 엠파시 핵심 표준 서식팩 (Core Standard Pack)**:
-  <a href="/templates/Empasy_Methodology_All_Templates.zip" download="Empasy_Methodology_All_Templates.zip">**[핵심 표준 서식팩 다운로드 (Empasy_Methodology_All_Templates.zip)]**</a> (용량: 약 925 KB)
-  - 프로젝트 착수 및 계약에 필수적인 **46종(Office 34종 + Markdown 12종)**의 핵심 서식만 가볍게 묶어 빠르게 내려받을 수 있습니다.
+  <a href="/templates/Empasy_PM_Suite_Templates.zip" download="Empasy_PM_Suite_Templates.zip">**[실전 프로젝트 관리 스위트 다운로드 (Empasy_PM_Suite_Templates.zip)]**</a> (용량: 약 43.0 MB)
+  - PMBOK 및 공공 SI 실전에 맞춘 **80종의 실전 프로젝트 관리 산출물(통합관리 8종, PM 7대 영역 18종, SDLC 48종, 교육/마스터 3종 등)** 전용 패키지입니다.
+* **[옵션 3] 엠파시 핵심 및 AI·엔터프라이즈 표준 서식팩 (Core & AI Standard Pack)**:
+  <a href="/templates/Empasy_Methodology_All_Templates.zip" download="Empasy_Methodology_All_Templates.zip">**[핵심 및 AI 표준 서식팩 다운로드 (Empasy_Methodology_All_Templates.zip)]**</a> (용량: 약 10.9 MB)
+  - 프로젝트 착수, 계약, 데이터 표준화, 클라우드 인프라 신청 및 AI/LLM/RAG 특화 설계·검증에 필수적인 **111종(Office 97종 + Markdown 14종)**의 핵심 표준 서식 패키지입니다.
 :::
 
 ---
@@ -64,6 +64,7 @@ sort: 93
 | **04** | **사업 기술 제안서 표준 템플릿** | 제안PM / 아키텍트 | PPT | 추진 전략, 목표 시스템 아키텍처, 세부 기능, 투입 인력 WBS 슬라이드 | <a href="/templates/office/Phase0_사업제안서_표준템플릿.pptx" download>PPT (.pptx)</a> |
 | **04-1** | **제안 작업 세부계획서** | 제안PM | Excel | 제안서 작성 목차별 작성 담당자, 일정 및 제출 점검표 | <a href="/templates/000_pm_suite/02_%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%20%EA%B0%9C%EB%B0%9C/01_%EC%BB%A8%EC%84%A4%ED%8C%85/02_%EC%A0%9C%EC%95%88%EC%9E%91%EC%97%85/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%EB%AA%85_%EC%A0%9C%EC%95%88%EA%B3%84%ED%9A%8D%EC%84%9C_V1.0_20230530.xlsx" download>실전 Excel (256 KB)</a> |
 | **04-2** | **소프트웨어 개발 표준 견적서** | 영업 / 재무 | Excel | 기능점수(FP) 및 투입공수 기준 표준 견적 산출 템플릿 | <a href="/templates/000_pm_suite/02_%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%20%EA%B0%9C%EB%B0%9C/01_%EC%BB%A8%EC%84%A4%ED%8C%85/02_%EC%A0%9C%EC%95%88%EC%9E%91%EC%97%85/%EA%B2%AC%EC%A0%81%EC%84%9C%20%EC%83%98%ED%94%8C.xlsx" download>실전 Excel (89 KB)</a> |
+| **04-3** | **사전 기술 제안방향서 (`EMP_PRE_010`)** | 제안PM / AA | Word | 본 제안서 작성 전 고객 요건 분석, 3단계 AI 아키텍처 및 기술 방향성 사전 제시 (표 18개 포함) | <a href="/templates/office/EMP_PRE_010_사전제안방향서.docx" download>실전 Word (23 KB)</a> |
 | **05** | **제안 발표(PT) 심사 슬라이드** | 제안PM / 영업 | PPT | 사업 이해도, 사전 PoC 실증 결과, 심사위원 단골 공격 질문 10선 Q&A 방어 | <a href="/templates/office/Phase0_제안발표_PT_슬라이드.pptx" download>PPT (.pptx)</a> |
 | **06** | **기술 수행 타당성 사전 승인서** | Tech Lead | Word | 개발 총괄이 제안 기능의 실현 가능성 및 납기를 서면 확인하고 서명 | <a href="/templates/office/Phase0_기술수행승인서_Signoff.docx" download>Word (.docx)</a> |
 
@@ -77,6 +78,8 @@ sort: 93
 | :---: | :--- | :---: | :---: | :--- | :---: |
 | **07** | **소프트웨어 용역 표준계약서** | 법무 / 영업 | Word | 대금 지급 조건(선금 30%, 중도금 40%, 잔금 30%), 지재권 공동 귀속, 지체상금 | <a href="/templates/office/Phase1_소프트웨어_용역표준계약서.docx" download>Word (.docx)</a> |
 | **08** | **사업 착수계 및 사업수행계획서** | PM | Word | 공식 착수 공문, 추진 조직도, 마일스톤 WBS, 품질/보안 관리 계획 | <a href="/templates/office/Phase1_착수계_및_사업수행계획서.docx" download>표준 Word (.docx)</a><br><a href="/templates/000_pm_suite/02_%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%20%EA%B0%9C%EB%B0%9C/02_%EC%B0%A9%EC%88%98/01_%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%20%EA%B3%84%ED%9A%8D%EC%88%98%EB%A6%BD/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%EB%AA%85_%EC%82%AC%EC%97%85%EC%88%98%ED%96%89%EA%B3%84%ED%9A%8D%EC%84%9C_V1.0_20230530.docx" download>실전 Word (151 KB)</a> |
+| **08-1** | **사업수행계획서 발표 슬라이드 (`EMP_INT_010`)** | PM / AA | PPT | 경영진 보고용 21슬라이드 고해상도 사업수행계획서(PMP) 발표 장표 | <a href="/templates/office/EMP_INT_010_사업수행계획서_발표용.pptx" download>실전 PPT (2.0 MB)</a> |
+| **08-2** | **프로젝트 연락망 및 정례회의 체계표 (`EMP_MAN_005`)** | PMO / PM | Excel | 발주사·주관사·협력사 담당자 R&R 연락망 및 주간/격주 정례회의·협업 채널 정의 | <a href="/templates/office/EMP_MAN_005_프로젝트_연락처_및_회의체계.xlsx" download>실전 Excel (9 KB)</a> |
 | **09** | **착수보고회 프레젠테이션** | PM | PPT | 발주처 경영진 및 현업 대상 사업 추진 로드맵 발표 및 필수 협조 요청 | <a href="/templates/office/Phase1_착수보고회_발표자료.pptx" download>표준 PPT (.pptx)</a><br><a href="/templates/000_pm_suite/02_%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%20%EA%B0%9C%EB%B0%9C/02_%EC%B0%A9%EC%88%98/04_%EC%B0%A9%EC%88%98%EB%B3%B4%EA%B3%A0%ED%9A%8C/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%EB%AA%85_%EC%B0%A9%EC%88%98%EB%B3%B4%EA%B3%A0%EC%84%9C_V1.0_20230530.pptx" download>실전 PPT (1.8 MB)</a> |
 | **09-1** | **착수 워크샵(Kick-off) 계획서** | PM | Excel | 양사 합동 킥오프 워크샵 식순, 참여자 명단 및 역할 정의서 | <a href="/templates/000_pm_suite/02_%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%20%EA%B0%9C%EB%B0%9C/02_%EC%B0%A9%EC%88%98/05_Workshop/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%EB%AA%85_%EC%9B%8C%ED%81%AC%EC%83%B5%EA%B3%84%ED%9A%8D%EC%84%9C_V1.0_20230530.xlsx" download>실전 Excel (161 KB)</a> |
 | **10** | **선금 신청서 및 사용계획서** | 경영지원 / PM | Word / MD | 국가계약법 제56조 준수, 계약금의 30~70% 선급금 확보 및 보증보험 증빙 | <a href="/templates/office/Phase1_선금신청서_및_사용계획서.docx" download>Word (.docx)</a><br><a href="/templates/04_Advance_Payment_template.md" download>Markdown (.md)</a> |
@@ -86,6 +89,10 @@ sort: 93
 | **13-1** | **요구사항 분석 질의서** | 기획 / BA | Excel | 고객 현업 인터뷰 및 요구사항 항목별 상세 질의/응답서 | <a href="/templates/000_pm_suite/02_%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%20%EA%B0%9C%EB%B0%9C/03_%EB%B6%84%EC%84%9D/01_%EC%9A%94%EA%B5%AC%EC%82%AC%ED%95%AD%ED%98%91%EC%9D%98/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%EB%AA%85_%EC%9A%94%EA%B5%AC%EC%82%AC%ED%95%AD%EC%A7%88%EC%9D%98%EC%84%9C_V1.0_20230530.xlsx" download>실전 Excel (93 KB)</a> |
 | **13-2** | **타깃 시스템 환경분석서** | 아키텍트 / 인프라 | Word | 고객사 레거시 전산 인프라, 네트워크, 연계 시스템 분석서 | <a href="/templates/000_pm_suite/02_%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%20%EA%B0%9C%EB%B0%9C/03_%EB%B6%84%EC%84%9D/02_%ED%99%98%EA%B2%BD%EB%B6%84%EC%84%9D/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%EB%AA%85_%ED%99%98%EA%B2%BD%EB%B6%84%EC%84%9D%EC%84%9C_V1.0_20230530.docx" download>실전 Word (75 KB)</a> |
 | **13-3** | **고객사 데이터/콘텐츠 수급목록** | BA / 데이터 | Excel | 고객사로부터 인도받아야 하는 업무 데이터, 텍스트, 이미지 수급 관리 | <a href="/templates/000_pm_suite/02_%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%20%EA%B0%9C%EB%B0%9C/03_%EB%B6%84%EC%84%9D/02_%ED%99%98%EA%B2%BD%EB%B6%84%EC%84%9D/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%EB%AA%85_%EC%BD%98%ED%85%90%EC%B8%A0%EC%88%98%EA%B8%89%EB%A6%AC%EC%8A%A4%ED%8A%B8_V1.0_20230530.xlsx" download>실전 Excel (108 KB)</a> |
+| **13-4** | **벤치마킹 분석 보고서 (`EMP_ANL_010`)** | 기획 / BA | PPT | 국내외 유사 AI/엔터프라이즈 솔루션 비교 분석 매트릭스 및 TO-BE 핵심 시사점 도출 | <a href="/templates/office/EMP_ANL_010_벤치마킹분석보고서.pptx" download>실전 PPT (40 KB)</a> |
+| **13-5** | **AS-IS 프로세스 정의서 (`EMP_ANL_040`)** | 기획 / BA | PPT | 현행 수기·레거시 업무 흐름도, 병목(Pain-Point) 진단 및 TO-BE 전환 로드맵 | <a href="/templates/office/EMP_ANL_040_ASIS_프로세스정의서.pptx" download>실전 PPT (40 KB)</a> |
+| **13-6** | **대내외 연계 규격 사전 협의서 (`EMP_ANL_050`)** | 아키텍트 / 연계PL | Excel | 기간계(SSO, 마케팅, R&D DB) 부서와 연계 방식·주기·보안·SLA를 사전 합의하는 4시트 양식 | <a href="/templates/office/EMP_ANL_050_연계규격협의서.xlsx" download>실전 Excel (12 KB)</a> |
+| **13-7** | **엔터프라이즈 요구사항 정의서·추적표 (`EMP_ANL_020/030`)** | BA / PM | Excel | 61건 상세 요구사항 명세(표지·개정이력·요약·목록 4시트) 및 양방향 추적표(RTM) | <a href="/templates/office/EMP_ANL_020_요구사항정의서.xlsx" download>SRS Excel (45 KB)</a><br><a href="/templates/office/EMP_ANL_030_요구사항추적표.xlsx" download>RTM Excel (29 KB)</a> |
 | **14** | **과업 범위 확정 합의서 (Scope Freeze)** | PM / 현업책임 | Word / MD | SRS v1.0 동결, 구두 요구사항 전면 무효화, 5 M/D 이상 변경 시 계약 연동 | <a href="/templates/office/Phase1_과업범위확정_Scope_Freeze_합의서.docx" download>Word (.docx)</a><br><a href="/templates/05_Scope_Freeze_Signoff_template.md" download>Markdown (.md)</a> |
 | **14-1** | **투입 인력 변경(교체) 승인 신청서** | PM / 사업관리 | Word | 소프트웨어 진흥법 준수, 이직/퇴직 시 동급 이상 대체 인력 승인 요청 | <a href="/templates/office/Phase1_투입인력변경_승인신청서.docx" download>Word (.docx)</a> |
 
@@ -114,16 +121,25 @@ sort: 93
 | **15** | **화면 UI/UX 상세 설계서 (스토리보드)**| UI/UX 기획 | PPT | 화면 와이어프레임, 정보 구조(IA), 컴포넌트 인터랙션 정의 | <a href="/templates/office/Phase2_화면설계서_스토리보드.pptx" download>표준 PPT (.pptx)</a><br><a href="/templates/000_pm_suite/02_%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%20%EA%B0%9C%EB%B0%9C/04_%EC%84%A4%EA%B3%84/01_%EA%B8%B0%ED%9A%8D%EC%84%A4%EA%B3%84/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%EB%AA%85_%ED%99%94%EB%A9%B4%EC%84%A4%EA%B3%84%EC%84%9C_%EA%B3%B5%ED%86%B5_V1.0_20230530.pptx" download>공통 PPT (54 KB)</a><br><a href="/templates/000_pm_suite/02_%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%20%EA%B0%9C%EB%B0%9C/04_%EC%84%A4%EA%B3%84/01_%EA%B8%B0%ED%9A%8D%EC%84%A4%EA%B3%84/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%EB%AA%85_%ED%99%94%EB%A9%B4%EC%84%A4%EA%B3%84%EC%84%9C_%EC%83%98%ED%94%8C_V1.0_20230530.pptx" download>샘플 PPT (696 KB)</a> |
 | **15-1** | **사이트/메뉴 정보구조도 (IA)** | UI/UX 기획 | Excel | 1Depth~4Depth 전체 메뉴 트리, URL 매핑 및 권한 체계 정의 | <a href="/templates/000_pm_suite/02_%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%20%EA%B0%9C%EB%B0%9C/04_%EC%84%A4%EA%B3%84/01_%EA%B8%B0%ED%9A%8D%EC%84%A4%EA%B3%84/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%EB%AA%85_%EC%A0%95%EB%B3%B4%EA%B5%AC%EC%A1%B0%EB%8F%84%28IA%29_V1.0_20230530.xlsx" download>실전 Excel (94 KB)</a> |
 | **15-2** | **비즈니스 서비스 프로세스도** | UI/UX / BA | PPT | 사용자 업무 동선 및 엔드-투-엔드 비즈니스 흐름도 | <a href="/templates/000_pm_suite/02_%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%20%EA%B0%9C%EB%B0%9C/04_%EC%84%A4%EA%B3%84/01_%EA%B8%B0%ED%9A%8D%EC%84%A4%EA%B3%84/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%EB%AA%85_%EC%84%9C%EB%B9%84%EC%8A%A4%ED%94%84%EB%A1%9C%EC%84%B8%EC%8A%A4_V1.0_20230530.pptx" download>실전 PPT (1.6 MB)</a> |
+| **15-2A** | **TO-BE 목표 프로세스 정의서 (`EMP_DEG_040`)** | BA / 기획 | PPT | AI 자동화 도입 후 목표 업무 프로세스(18슬라이드), 시스템 간 시퀀스 및 역할 분담 정의 | <a href="/templates/office/EMP_DEG_040_TOBE_프로세스정의서.pptx" download>실전 PPT (2.0 MB)</a> |
+| **15-2B** | **단위 기능 정의서 및 운영 정책 정의서 (`EMP_DEG_020/030`)** | 기획 / BA | Excel | 150행 규모의 화면·모듈별 세부 기능 명세서 및 권한·보안·보관주기·AI 임계치 정책 정의서 | <a href="/templates/office/EMP_DEG_020_기능정의서.xlsx" download>기능정의서 (45 KB)</a><br><a href="/templates/office/EMP_DEG_030_정책정의서.xlsx" download>정책정의서 (34 KB)</a> |
 | **15-3** | **디자인 전략서 및 비주얼 가이드** | 디자인팀 | PPT | UI 컨셉, 컬러 팔레트, 타이포그래피, 디자인 시스템 전략서 | <a href="/templates/000_pm_suite/02_%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%20%EA%B0%9C%EB%B0%9C/04_%EC%84%A4%EA%B3%84/02_%EB%94%94%EC%9E%90%EC%9D%B8%EC%84%A4%EA%B3%84/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%EB%AA%85_%EB%94%94%EC%9E%90%EC%9D%B8%EC%A0%84%EB%9E%B5%EC%84%9C_V1.0_20230530.pptx" download>실전 PPT (11.3 MB)</a> |
 | **15-4** | **저작권 이미지/폰트 사용관리서** | 디자인팀 | Excel | 라이선스 보유 상용 이미지/폰트 목록 및 저작권 침해 방지 대장 | <a href="/templates/000_pm_suite/02_%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%20%EA%B0%9C%EB%B0%9C/04_%EC%84%A4%EA%B3%84/02_%EB%94%94%EC%9E%90%EC%9D%B8%EC%84%A4%EA%B3%84/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%EB%AA%85_%EC%A0%80%EC%9E%91%EA%B6%8C%EC%9D%B4%EB%AF%B8%EC%A7%80%EC%82%AC%EC%9A%A9%EC%84%9C_V1.0_20230530.xlsx" download>실전 Excel (687 KB)</a> |
 | **15-5** | **프로토타입 계획서 및 결과서** | 기획 / 디자인 | Word | 사용자 인터랙션 프로토타입 제작 계획 및 사전 검증 결과 보고 | <a href="/templates/000_pm_suite/02_%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%20%EA%B0%9C%EB%B0%9C/04_%EC%84%A4%EA%B3%84/02_%EB%94%94%EC%9E%90%EC%9D%B8%EC%84%A4%EA%B3%84/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%EB%AA%85_%ED%94%84%EB%A1%9C%ED%86%A0%ED%83%80%EC%9E%85%20%EA%B3%84%ED%9A%8D%EC%84%9C_V1.0_20230530.docx" download>계획서 Word (58 KB)</a><br><a href="/templates/000_pm_suite/02_%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%20%EA%B0%9C%EB%B0%9C/04_%EC%84%A4%EA%B3%84/02_%EB%94%94%EC%9E%90%EC%9D%B8%EC%84%A4%EA%B3%84/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%EB%AA%85_%ED%94%84%EB%A1%9C%ED%86%A0%ED%83%80%EC%9E%85%20%EA%B2%B0%EA%B3%BC%EC%84%9C_V1.0_20230530.docx" download>결과서 Word (56 KB)</a> |
 | **16** | **시스템 아키텍처 설계서 (SAD)** | 인프라 / 아키텍트 | Word | 논리/물리 구성도, 서버 사양(vCPU/RAM), 네트워크 망분리 및 방화벽 포트 | <a href="/templates/office/Phase2_시스템아키텍처설계서_SAD.docx" download>표준 Word (.docx)</a><br><a href="/templates/000_pm_suite/02_%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%20%EA%B0%9C%EB%B0%9C/04_%EC%84%A4%EA%B3%84/03_%EA%B0%9C%EB%B0%9C%EC%84%A4%EA%B3%84/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%EB%AA%85_%EC%8B%9C%EC%8A%A4%ED%85%9C%EC%95%84%ED%82%A4%ED%85%8D%EC%B2%98%EC%A0%95%EC%9D%98%EC%84%9C_V1.0_20230530.docx" download>실전 Word (86 KB)</a> |
+| **16-A** | **시스템 아키텍처 구성도 슬라이드 (`EMP_DEG_090`)** | 아키텍트(AA) | PPT | DEV/STG/PRD 3계층 분리, 내부/대외 ALB 망분리, EKS 파드 및 하이브리드 RAG 아키텍처 구성도 | <a href="/templates/office/EMP_DEG_090_시스템아키텍처구성도.pptx" download>구성도 PPT (558 KB)</a><br><a href="/templates/office/EMP_DEG_090_아키텍처정의서.docx" download>정의서 Word (41 KB)</a> |
+| **16-B** | **클라우드 인프라 및 방화벽 신청서 (`EMP_DEG_091`)** | 인프라 / AA | Excel / PPT | 대기업 AWS(EKS/RDS/S3/ALB) 환경별 리소스 신청, 방화벽 오픈 매트릭스(8시트) 및 요청 구성도 | <a href="/templates/office/EMP_DEG_091_클라우드인프라_및_방화벽신청서.xlsx" download>신청서 Excel (459 KB)</a><br><a href="/templates/office/EMP_DEG_091_인프라생성요청_구성도.pptx" download>구성도 PPT (2.0 MB)</a> |
 | **16-1** | **개발 표준 정의서** | 테크리드 | Word | 코딩 컨벤션, 디렉터리 구조, 패키지 네이밍, 공통 모듈 가이드 | <a href="/templates/000_pm_suite/02_%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%20%EA%B0%9C%EB%B0%9C/04_%EC%84%A4%EA%B3%84/03_%EA%B0%9C%EB%B0%9C%EC%84%A4%EA%B3%84/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%EB%AA%85_%EA%B0%9C%EB%B0%9C%ED%91%9C%EC%A4%80%EC%A0%95%EC%9D%98%EC%84%9C_V1.0_20230530.docx" download>실전 Word (354 KB)</a> |
 | **16-2** | **개발 환경 정의서** | DevOps / 테크리드 | Word | OS, JDK 21, Node.js, Docker, 로컬 개발 인프라 세팅 가이드 | <a href="/templates/000_pm_suite/02_%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%20%EA%B0%9C%EB%B0%9C/04_%EC%84%A4%EA%B3%84/03_%EA%B0%9C%EB%B0%9C%EC%84%A4%EA%B3%84/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%EB%AA%85_%EA%B0%9C%EB%B0%9C%ED%99%98%EA%B2%BD%EC%A0%95%EC%9D%98%EC%84%9C_V1.0_20230530.docx" download>실전 Word (70 KB)</a> |
 | **16-3** | **소프트웨어 컴포넌트 설계서** | 백엔드 / 프론트 | Word | 공통 비즈니스 모듈, 서비스 레이어 컴포넌트 입출력 명세 | <a href="/templates/000_pm_suite/02_%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%20%EA%B0%9C%EB%B0%9C/04_%EC%84%A4%EA%B3%84/03_%EA%B0%9C%EB%B0%9C%EC%84%A4%EA%B3%84/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%EB%AA%85_%EC%BB%B4%ED%8F%AC%EB%84%8C%ED%8A%B8%EC%84%A4%EA%B3%84%EC%84%9C%28%EC%BB%B4%ED%8F%AC%EB%84%8C%ED%8A%B8%EB%AA%85%29_V1.0_20230530.docx" download>실전 Word (62 KB)</a> |
 | **17** | **테이블 정의서 (ERD 스키마)** | DBA / 백엔드 | Excel | PostgreSQL 스키마, 테이블/컬럼 영문·한글명, 타입, PK/FK, 인덱스 | <a href="/templates/office/Phase2_테이블정의서_ERD.xlsx" download>표준 Excel (.xlsx)</a><br><a href="/templates/000_pm_suite/02_%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%20%EA%B0%9C%EB%B0%9C/04_%EC%84%A4%EA%B3%84/03_%EA%B0%9C%EB%B0%9C%EC%84%A4%EA%B3%84/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%EB%AA%85_%ED%85%8C%EC%9D%B4%EB%B8%94%EC%A0%95%EC%9D%98%EC%84%9C_V1.0_20230530.xlsx" download>실전 Excel (90 KB)</a> |
+| **17-1** | **표준용어정의서 및 코드정의서 (`EMP_DEG_060/070`)** | 데이터아키텍트(DA) | Excel | **[감리 필수]** 도메인사전·표준단어·표준용어사전(3시트) 및 공통코드·세션변수·업무채번규칙(3시트) | <a href="/templates/office/EMP_DEG_060_표준용어정의서.xlsx" download>표준용어 (15 KB)</a><br><a href="/templates/office/EMP_DEG_070_코드정의서.xlsx" download>코드정의서 (42 KB)</a> |
+| **17-2** | **논리/물리 데이터 모델 설계서 (`EMP_DEG_100/110`)** | DA / DBA | Word | 핵심 주제영역 논리 ERD 명세 및 PostgreSQL + `pgvector` HNSW 인덱스·파티셔닝 물리 설계서 | <a href="/templates/office/EMP_DEG_110_논리데이터모델설계서.docx" download>논리모델 Word (41 KB)</a><br><a href="/templates/office/EMP_DEG_100_물리데이터모델설계서.docx" download>물리모델 Word (41 KB)</a> |
+| **17-3** | **데이터베이스 명세서 9시트 & CRUD Matrix (`EMP_DEG_080/140`)** | DBA / 테크리드 | Excel | **[감리 필수]** Table/Index/View/Sequence 9시트 통합 DB 명세서 및 프로세스×엔티티 상관분석표(CRUD Matrix) | <a href="/templates/office/EMP_DEG_080_데이터베이스명세서.xlsx" download>DB명세서 (52 KB)</a><br><a href="/templates/office/EMP_DEG_140_CRUD_Matrix.xlsx" download>CRUD Matrix (28 KB)</a> |
 | **18** | **인터페이스 API 명세서 / 매뉴얼** | 백엔드PL | Excel / Word | Canonical URL, Method, Request/Response 규격, 에러코드 | <a href="/templates/office/Phase2_인터페이스_API_명세서.xlsx" download>표준 Excel (.xlsx)</a><br><a href="/templates/000_pm_suite/02_%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%20%EA%B0%9C%EB%B0%9C/05_%EA%B5%AC%ED%98%84/03_%EA%B0%9C%EB%B0%9C/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%EB%AA%85_API%EB%A7%A4%EB%89%B4%EC%96%BC_V1.0_20230530.docx" download>실전 Word (60 KB)</a> |
 | **18-1** | **모듈별 개발 일정계획서** | 테크리드 / PM | Excel | 설계 산출물 기반 단위 기능별 개발 배정 공정표 | <a href="/templates/000_pm_suite/02_%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%20%EA%B0%9C%EB%B0%9C/04_%EC%84%A4%EA%B3%84/03_%EA%B0%9C%EB%B0%9C%EC%84%A4%EA%B3%84/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%EB%AA%85_%EC%9D%BC%EC%A0%95%EA%B3%84%ED%9A%8D%EC%84%9C%28%EA%B0%9C%EB%B0%9C%29_V1.0_20230530.xlsx" download>실전 Excel (99 KB)</a> |
+| **18-2** | **인터페이스 설계서 6시트 & 배치 프로그램 설계서 (`EMP_DEG_120/130`)** | 백엔드PL | Excel | 인터페이스 목록·접속정보·필드매핑 6시트 통합 설계서 및 일배치 스케줄러/재처리/타임아웃 설계서 | <a href="/templates/office/EMP_DEG_120_인터페이스설계서.xlsx" download>인터페이스 (68 KB)</a><br><a href="/templates/office/EMP_DEG_130_배치프로그램설계서.xlsx" download>배치설계서 (29 KB)</a> |
+| **18-3** | **AI 추론 파이프라인 및 프롬프트 설계서 (`EMP_DEG_150`)** | AI 엔지니어 / AA | Word | **[AI 특화]** 멀티모달 전처리(OCR/비전) → 하이브리드 RAG → 3단계 LLM 추론 아키텍처 및 프롬프트 설계서 | <a href="/templates/office/EMP_DEG_150_AI추론_및_프롬프트설계서.docx" download>실전 Word (39 KB)</a> |
 | **19** | **화면 UI 설계 승인 확인서** | UI/UX / 현업부서 | Word / MD | 전체 메뉴별 화면 수 확인 승인, 개발 착수 후 대규모 레이아웃 변경 제한 서명 | <a href="/templates/office/Phase2_화면설계_승인확인서.docx" download>Word (.docx)</a><br><a href="/templates/06_UI_Design_Signoff_template.md" download>Markdown (.md)</a> |
 
 ---
@@ -138,10 +154,15 @@ sort: 93
 | **20-1** | **WBS 및 마일스톤 관리 마스터** | PM | Excel / PPT | 전체 과업 세분화 WBS 및 핵심 마일스톤 현황표 | <a href="/templates/000_pm_suite/01_%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%20%EA%B4%80%EB%A6%AC/03_%EC%9D%BC%EC%A0%95%EA%B4%80%EB%A6%AC/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%EB%AA%85_WBS_V1.0_20220531.xlsx" download>실전 WBS Excel (333 KB)</a><br><a href="/templates/000_pm_suite/01_%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%20%EA%B4%80%EB%A6%AC/03_%EC%9D%BC%EC%A0%95%EA%B4%80%EB%A6%AC/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%EB%AA%85_milestone_v0.1_20220329.pptx" download>마일스톤 PPT (91 KB)</a> |
 | **20-2** | **프로젝트 인력 및 비용 관리대장** | PM / 사업관리 | Excel | 투입 인력 공수(M/M), 프로필 및 프로젝트 예산 집행 비용대장 | <a href="/templates/000_pm_suite/01_%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%20%EA%B4%80%EB%A6%AC/06_%EC%A1%B0%EC%A7%81%EA%B4%80%EB%A6%AC/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%EB%AA%85_%EC%9D%B8%EB%A0%A5%ED%88%AC%EC%9E%85%EA%B3%84%ED%9A%8D%EC%84%9C_V1.0_20230530.xlsx" download>인력투입 Excel (65 KB)</a><br><a href="/templates/000_pm_suite/01_%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%20%EA%B4%80%EB%A6%AC/06_%EC%A1%B0%EC%A7%81%EA%B4%80%EB%A6%AC/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%EB%AA%85_%ED%88%AC%EC%9E%85%EC%9D%B8%EB%A0%A5%20%ED%94%84%EB%A1%9C%ED%95%84_20230531.xlsx" download>인력프로필 Excel (12 KB)</a><br><a href="/templates/000_pm_suite/01_%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%20%EA%B4%80%EB%A6%AC/04_%EB%B9%84%EC%9A%A9%EA%B4%80%EB%A6%AC/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%EB%AA%85_%EB%B9%84%EC%9A%A9%EA%B4%80%EB%A6%AC_V1.0_20230530.xlsx" download>비용관리 Excel (69 KB)</a> |
 | **20-3** | **공식 회의록 및 도메인 용어사전** | 사업관리 / PM | Excel | 의사결정 사항 추적용 공식 회의록 및 프로젝트 표준 용어집 | <a href="/templates/000_pm_suite/01_%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%20%EA%B4%80%EB%A6%AC/07_%EC%9D%98%EC%82%AC%EC%86%8C%ED%86%B5%EA%B4%80%EB%A6%AC/00_%ED%9A%8C%EC%9D%98%EB%A1%9D/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%EB%AA%85_%ED%9A%8C%EC%9D%98%EB%A1%9D.xlsx" download>회의록 Excel (10 KB)</a><br><a href="/templates/000_pm_suite/01_%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%20%EA%B4%80%EB%A6%AC/07_%EC%9D%98%EC%82%AC%EC%86%8C%ED%86%B5%EA%B4%80%EB%A6%AC/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%EB%AA%85_%EC%9A%A9%EC%96%B4%EC%82%AC%EC%A0%84.xlsx" download>용어사전 Excel (101 KB)</a> |
+| **20-4** | **유형별 실전 회의록 3종 세트 (`EMP_MAN_020~022`)** | PMO / PM | Word | 착수 킥오프 회의록, 인프라 아키텍처 검토 회의록, 주간 업무보고 회의록 실전 샘플 3종 (Action Item 표 포함) | <a href="/templates/office/EMP_MAN_020_착수킥오프_회의록.docx" download>킥오프 Word (34 KB)</a><br><a href="/templates/office/EMP_MAN_021_인프라아키텍처검토_회의록.docx" download>인프라검토 Word (28 KB)</a><br><a href="/templates/office/EMP_MAN_022_주간보고_회의록.docx" download>주간회의 Word (32 KB)</a> |
+| **20-5** | **월별 투입공수(M/M) 및 직무별 공정 관리표 (`EMP_MAN_050`)** | PM / PMO | Excel | 사업개요, 월별 인력투입 계획/실적 집계 및 직무별(PM·AI·백엔드·프론트·QA) 상세 활동 시트(7시트) | <a href="/templates/office/EMP_MAN_050_월별투입공수관리표.xlsx" download>실전 Excel (19 KB)</a> |
 | **21** | **이슈 및 위험 관리대장** | PM / 테크리드 | Excel | 연계 지연, 데이터 결측 등 위험 요인의 심각도, 조치 방안, 해결일 추적 | <a href="/templates/office/Phase3_이슈_및_리스크_관리대장.xlsx" download>표준 Excel (.xlsx)</a><br><a href="/templates/000_pm_suite/01_%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%20%EA%B4%80%EB%A6%AC/07_%EC%9D%98%EC%82%AC%EC%86%8C%ED%86%B5%EA%B4%80%EB%A6%AC/05_%EC%9D%B4%EC%8A%88%EB%B3%B4%EA%B3%A0/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%EB%AA%85_%EC%9D%B4%EC%8A%88%EA%B4%80%EB%A6%AC%EB%8C%80%EC%9E%A5_V1.0_20230530.xlsx" download>실전 이슈대장 (140 KB)</a><br><a href="/templates/000_pm_suite/01_%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%20%EA%B4%80%EB%A6%AC/08_%EC%9C%84%ED%97%98%EA%B4%80%EB%A6%AC/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%EB%AA%85_%EC%9C%84%ED%97%98%EA%B4%80%EB%A6%AC%EB%8C%80%EC%9E%A5_V1.0_20230530.xlsx" download>실전 위험대장 (43 KB)</a> |
 | **22** | **과업 변경 요청서 (CR Form)** | PM / 현업요청자 | Word / MD | As-Is vs To-Be 사양, DB/API/UI 정량 영향도, 투입 공수(M/D) 및 일정 조정 합의 | <a href="/templates/office/Phase3_과업변경요청서_CR_Form.docx" download>Word (.docx)</a><br><a href="/templates/07_CR_Form_template.md" download>Markdown (.md)</a> |
 | **23** | **기성 검수 신청서 및 중간보고서** | PM / 영업 | Word / PPT | 마일스톤 달성 증빙, 기성금(40%) 대금 청구서 및 사업 중간 점검 발표자료 | <a href="/templates/office/Phase3_기성검수신청서_중간보고서.docx" download>표준 Word (.docx)</a><br><a href="/templates/000_pm_suite/01_%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%20%EA%B4%80%EB%A6%AC/07_%EC%9D%98%EC%82%AC%EC%86%8C%ED%86%B5%EA%B4%80%EB%A6%AC/03_%EC%A4%91%EA%B0%84%EB%B3%B4%EA%B3%A0/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%EB%AA%85_%EC%A4%91%EA%B0%84%EB%B3%B4%EA%B3%A0_V1.0_20230530.pptx" download>실전 중간보고 PPT (2.1 MB)</a> |
 | **23-1** | **납기 연장 신청 및 면책 입증서 (EOT)** | PM / 영업 | Word | **발주처 귀책(연계/자료 지연) 객관적 입증**, 지체상금 부과 면제 및 납기 순연 요청 | <a href="/templates/office/Phase3_공기연장신청서_면책입증서_EOT.docx" download>Word (.docx)</a> |
+| **23-2** | **변경관리 누적 대장 및 일일 결함관리대장 (`EMP_MAN_040/060`)** | PMO / QA | Excel | 요구사항/설계 변경이력 누적 관리대장 및 화면별 일일 점검(Daily Check) 통합 결함관리대장 | <a href="/templates/office/EMP_MAN_060_변경관리대장.xlsx" download>변경대장 (8 KB)</a><br><a href="/templates/office/EMP_MAN_040_결함관리대장.xlsx" download>결함대장 (205 KB)</a> |
+| **23-3** | **AI 비즈니스 규칙 사전 & 프롬프트 명세서 (`EMP_EXE_010/020`)** | AI 엔지니어 / BA | Excel | **[AI 특화]** 도메인 컴플라이언스 100대 룰셋 마스터 사전 및 단계별 LLM 프롬프트 템플릿·파라미터 관리 대장 | <a href="/templates/office/EMP_EXE_010_비즈니스규칙사전정의서.xlsx" download>규칙사전 (13 KB)</a><br><a href="/templates/office/EMP_EXE_020_AI프롬프트명세서.xlsx" download>프롬프트명세 (10 KB)</a> |
+| **23-4** | **레거시 기간계 DB 연계 상세 명세서 (`EMP_EXE_030`)** | 백엔드 / 연계PL | Excel | 고객사 기간계 R&D/마스터 DB 뷰 테이블 조회, 일배치 동기화 및 데이터 매핑 구현 명세서 | <a href="/templates/office/EMP_EXE_030_레거시DB연계명세서.xlsx" download>실전 Excel (8 KB)</a> |
 
 ---
 
@@ -158,6 +179,9 @@ sort: 93
 | **26** | **SW 개발보안 49개 점검표** | 보안 / 테크리드 | Excel | 디지털행정원 SW 개발보안 가이드 7대 분야 49개 보안약점 진단 및 소스코드 조치 내역 | <a href="/templates/office/Phase4_SW개발보안_49개_점검표.xlsx" download>Excel (.xlsx)</a> |
 | **27** | **오픈소스(OSS) 라이선스 검증서** | 보안 / 개발 | Excel | 도입 OSS 라이선스(Apache, MIT, BSD) 목록, 라이선스 오염(GPL) 방지, SBOM | <a href="/templates/office/Phase4_오픈소스_라이선스_검증서.xlsx" download>Excel (.xlsx)</a> |
 | **28** | **3자 감리 지적사항 조치결과서** | PM / 개발팀 | Word | 전자정부법 제57조 감리단의 응용/DB/보안 지적사항에 대한 개선 조치 및 증빙 | <a href="/templates/office/Phase4_3자감리_지적사항_조치결과서.docx" download>Word (.docx)</a> |
+| **28-1** | **단위 테스트 케이스 & 통합 테스트 시나리오 (`EMP_TST_010/020`)** | 개발 / QA | Excel | 57개 단위 테스트 케이스(표지·요약·케이스·결함 4시트) 및 42스텝 E2E 통합 테스트 시나리오 명세서 | <a href="/templates/office/EMP_TST_010_단위테스트케이스.xlsx" download>단위테스트 (69 KB)</a><br><a href="/templates/office/EMP_TST_020_통합테스트시나리오.xlsx" download>통합테스트 (36 KB)</a> |
+| **28-2** | **성능 및 부하 시험 결과보고서 (`EMP_TST_040`)** | 인프라 / QA | Excel | 동시접속 부하(VU), 목표 TPS, 평균 및 95%ile 응답시간 SLA 달성 여부를 입증하는 성능시험 결과서 | <a href="/templates/office/EMP_TST_040_성능시험결과보고서.xlsx" download>실전 Excel (8 KB)</a> |
+| **28-3** | **AI 골든셋(Golden-Set) 정량 품질 평가보고서 (`EMP_TST_050`)** | AI 엔지니어 / QA | Excel | **[AI 특화]** 50대 표준 정답셋(Golden-Set) 대비 AI 판정 결과 1:1 대조 및 정밀도(Precision)·재현율(Recall) 검수 보고서 | <a href="/templates/office/EMP_TST_050_AI골든셋_품질평가보고서.xlsx" download>실전 Excel (10 KB)</a> |
 
 ---
 
@@ -178,6 +202,10 @@ sort: 93
 | **35-1** | **유지보수 작업요청서 및 하자내역서** | 유지보수팀 | Word / Excel | 고객사 정기/비정기 변경 작업요청서 및 결함 조치 완료 내역 관리 | <a href="/templates/000_pm_suite/02_%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%20%EA%B0%9C%EB%B0%9C/08_%EC%9C%A0%EC%A7%80%EB%B3%B4%EC%88%98/02_%ED%95%98%EC%9E%90%EB%B3%B4%EC%88%98%EC%A0%91%EC%88%98/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%EB%AA%85_%EC%9E%91%EC%97%85%EC%9A%94%EC%B2%AD%EC%84%9C_V1.0_20230530.docx" download>작업요청 Word (33 KB)</a><br><a href="/templates/000_pm_suite/02_%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%20%EA%B0%9C%EB%B0%9C/08_%EC%9C%A0%EC%A7%80%EB%B3%B4%EC%88%98/03_%ED%95%98%EC%9E%90%EC%B2%98%EB%A6%AC/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%EB%AA%85_%ED%95%98%EC%9E%90%EB%B3%B4%EC%88%98%EB%82%B4%EC%97%AD%EC%84%9C_V1.0_20230530.xlsx" download>하자내역 Excel (97 KB)</a> |
 | **35-2** | **시스템 장애 보고서 (Incident Report)** | 테크리드 / 운영 | Word | 장애 경위, 타임라인, 근본 원인 분석(5-Whys) 및 재발 방지 대책(Post-Mortem) | <a href="/templates/office/Phase5_장애발생보고서_Incident_Report.docx" download>Word (.docx)</a> |
 | **35-3** | **월간 정기점검 운영보고서** | 인프라 / 유지보수 | Excel | 서버 CPU/메모리, DB 커넥션, 백업 소산, SLA 가용성(Uptime 99.9%) 점검표 | <a href="/templates/office/Phase5_월간_정기점검_운영보고서.xlsx" download>Excel (.xlsx)</a> |
+| **35-4** | **시스템 이행계획서(PT) 및 이행 체크리스트 (`EMP_IMP_010/020`)** | PM / DevOps | PPT / Excel | 컷오버 이행 전략 발표자료 및 오픈 사전/당일/사후 3단계 점검 체크리스트 | <a href="/templates/office/EMP_IMP_010_시스템이행계획서.pptx" download>이행계획 PPT (47 KB)</a><br><a href="/templates/office/EMP_IMP_020_이행체크리스트.xlsx" download>체크리스트 Excel (23 KB)</a> |
+| **35-5** | **운영팀 인수인계 계획서 및 교육결과보고서 (`EMP_IMP_030/070`)** | PM / 교육담당 | Word | 운영 조직 기술이전·인수인계 계획서 및 현업/관리자 교육 수료 결과보고서 | <a href="/templates/office/EMP_IMP_030_인수인계계획서.docx" download>인수인계 Word (43 KB)</a><br><a href="/templates/office/EMP_IMP_070_교육결과보고서.docx" download>교육결과 Word (38 KB)</a> |
+| **35-6** | **파일럿 시범운영 결과보고서 (`EMP_IMP_090`)** | PM / 현업리드 | PPT | 전사 그랜드 오픈 전 2주간 시범운영(Pilot) 처리 실적, 리드타임 단축 효과 및 본 오픈 전환 판정 보고서 | <a href="/templates/office/EMP_IMP_090_시범운영결과보고서.pptx" download>실전 PPT (31 KB)</a> |
+| **35-7** | **월간 AI FinOps (LLM·OCR 토큰) 정산보고서 (`EMP_FIN_010`)** | AI 운영 / PM | Excel | **[AI 특화]** 단계별 LLM/OCR/임베딩 호출 건수, 토큰 사용량, 시맨틱 캐시 절감액 및 부서별 차지백(Chargeback) 배부표 | <a href="/templates/office/EMP_FIN_010_월간_AI_FinOps_토큰정산보고서.xlsx" download>실전 Excel (9 KB)</a> |
 
 ---
 
@@ -189,11 +217,72 @@ sort: 93
 | :---: | :--- | :---: | :---: | :--- | :---: |
 | **E1** | **보안 침해사고 및 개인정보 유출 신고서** | CPO / 보안 | Word | 개인정보보호법 제34조에 따른 **72시간 이내 KISA 및 개인정보보호위원회 공식 신고** 서식 | <a href="/templates/office/Common_보안침해사고_개인정보유출_신고서.docx" download>Word (.docx)</a> |
 | **E2** | **사업 중도 해지(타절) 합의 및 기성정산서** | 대표이사 / 법무 | Word | 사업 중단 시 **기 수행 공정률(기성고) 확정, 선금 정산 및 추가 손해배상 분쟁 영구 종결** 합의서 | <a href="/templates/office/Common_사업중도타절_기성정산합의서.docx" download>Word (.docx)</a> |
+
 ---
 
-## 3. 실전 프로젝트 관리 스위트 (000 PM Suite) 72종 전수 일람표
+### AI·엔터프라이즈 표준 산출물 스위트 (`EMP_*` 51종 총괄 일람표)
 
-현업 대형 프로젝트에서 활용된 72종 실무 서식을 카테고리별로 정리한 일람표입니다. 모든 파일은 개별 다운로드가 가능합니다.
+대기업 및 AI(LLM·RAG·멀티모달) 시스템 구축 프로젝트에서 요구하는 **51종의 표준 산출물(`EMP_PRE_*` ~ `EMP_FIN_*`)** 전수 목록입니다. 모든 문서는 가상의 고객사(**주식회사 한빛글로벌**)와 가상 프로젝트(**`SyncGuard AI` — 엔터프라이즈 AI 콘텐츠·규제 심의 자동화 시스템 구축**) 기준의 실전 예시 데이터가 완비되어 있습니다.
+
+| 산출물 코드 | 공정 단계 | 파일 명칭 | 형식 | 용량 | 주요 내용 및 실무 활용도 | 개별 다운로드 |
+| :---: | :---: | :--- | :---: | :---: | :--- | :---: |
+| **EMP_PRE_010** | 0. 사전제안 | `EMP_PRE_010_사전제안방향서.docx` | Word | 23 KB | 고객 요건 분석, 3단계 AI 아키텍처 및 기술 방향성 사전 제시 문서 | <a href="/templates/office/EMP_PRE_010_사전제안방향서.docx" download>Word (23 KB)</a> |
+| **EMP_MAN_005** | 0. 사업관리 | `EMP_MAN_005_프로젝트_연락처_및_회의체계.xlsx` | Excel | 9 KB | 발주사·주관사·협력사 R&R 비상연락망 및 정례회의·협업 채널 체계표 | <a href="/templates/office/EMP_MAN_005_프로젝트_연락처_및_회의체계.xlsx" download>Excel (9 KB)</a> |
+| **EMP_MAN_020** | 0. 사업관리 | `EMP_MAN_020_착수킥오프_회의록.docx` | Word | 34 KB | 프로젝트 착수 킥오프 회의록 (논의 안건 및 Action Item 표 완비) | <a href="/templates/office/EMP_MAN_020_착수킥오프_회의록.docx" download>Word (34 KB)</a> |
+| **EMP_MAN_021** | 0. 사업관리 | `EMP_MAN_021_인프라아키텍처검토_회의록.docx` | Word | 28 KB | 클라우드(EKS/RDS/ALB) 및 사내 기간계 연계 아키텍처 검토 회의록 | <a href="/templates/office/EMP_MAN_021_인프라아키텍처검토_회의록.docx" download>Word (28 KB)</a> |
+| **EMP_MAN_022** | 0. 사업관리 | `EMP_MAN_022_주간보고_회의록.docx` | Word | 32 KB | 주간 정례 공정 보고 및 현업 의사결정 추적 회의록 | <a href="/templates/office/EMP_MAN_022_주간보고_회의록.docx" download>Word (32 KB)</a> |
+| **EMP_MAN_030** | 0. 사업관리 | `EMP_MAN_030_이슈관리대장.xlsx` | Excel | 27 KB | 프로젝트 수행 이슈 등록, 심각도, 해결 방안 및 상태 추적 대장 (4시트) | <a href="/templates/office/EMP_MAN_030_이슈관리대장.xlsx" download>Excel (27 KB)</a> |
+| **EMP_MAN_040** | 0. 사업관리 | `EMP_MAN_040_결함관리대장.xlsx` | Excel | 205 KB | 화면·기능별 일일 점검(Daily Check) 및 통합 결함 추적 관리대장 | <a href="/templates/office/EMP_MAN_040_결함관리대장.xlsx" download>Excel (205 KB)</a> |
+| **EMP_MAN_050** | 0. 사업관리 | `EMP_MAN_050_월별투입공수관리표.xlsx` | Excel | 19 KB | 직무별(PM·AI·백엔드·프론트·QA) 월별 투입공수(M/M) 및 세부 활동 관리표 (7시트) | <a href="/templates/office/EMP_MAN_050_월별투입공수관리표.xlsx" download>Excel (19 KB)</a> |
+| **EMP_MAN_060** | 0. 사업관리 | `EMP_MAN_060_변경관리대장.xlsx` | Excel | 8 KB | 요구사항·화면·DB·아키텍처 변경이력 누적 관리대장 | <a href="/templates/office/EMP_MAN_060_변경관리대장.xlsx" download>Excel (8 KB)</a> |
+| **EMP_INT_000** | 1. 착수 | `EMP_INT_000_착수보고서.pptx` | PPT | 144 KB | 엔터프라이즈 AI 시스템 구축 착수보고회 공식 발표자료 (24슬라이드) | <a href="/templates/office/EMP_INT_000_착수보고서.pptx" download>PPT (144 KB)</a> |
+| **EMP_INT_010** | 1. 착수 | `EMP_INT_010_사업수행계획서_발표용.pptx` | PPT | 2.0 MB | 사업 추진 전략, 수행 조직, WBS, 품질·보안 관리 계획 발표용 PMP (21슬라이드) | <a href="/templates/office/EMP_INT_010_사업수행계획서_발표용.pptx" download>PPT (2.0 MB)</a> |
+| **EMP_INT_020** | 1. 착수 | `EMP_INT_020_작업분할구조도_WBS.xlsx` | Excel | 79 KB | 공정별 세부 Task, 산출물 코드, 담당자, 가중치 공정률 마스터 WBS | <a href="/templates/office/EMP_INT_020_작업분할구조도_WBS.xlsx" download>Excel (79 KB)</a> |
+| **EMP_ANL_010** | 2. 분석 | `EMP_ANL_010_벤치마킹분석보고서.pptx` | PPT | 40 KB | 국내외 유사 AI 솔루션 비교 매트릭스, 시사점 및 TO-BE 반영 계획 (15슬라이드) | <a href="/templates/office/EMP_ANL_010_벤치마킹분석보고서.pptx" download>PPT (40 KB)</a> |
+| **EMP_ANL_020** | 2. 분석 | `EMP_ANL_020_요구사항정의서.xlsx` | Excel | 45 KB | 61건 기능·비기능·인터페이스·데이터·보안 요구사항 상세 명세서 (4시트) | <a href="/templates/office/EMP_ANL_020_요구사항정의서.xlsx" download>Excel (45 KB)</a> |
+| **EMP_ANL_030** | 2. 분석 | `EMP_ANL_030_요구사항추적표.xlsx` | Excel | 29 KB | 요구사항 ID ↔ 화면설계 ↔ DB 테이블 ↔ 테스트케이스 양방향 추적 매트릭스 | <a href="/templates/office/EMP_ANL_030_요구사항추적표.xlsx" download>Excel (29 KB)</a> |
+| **EMP_ANL_040** | 2. 분석 | `EMP_ANL_040_ASIS_프로세스정의서.pptx` | PPT | 40 KB | 현행 수기·레거시 업무 흐름도, 병목(Pain-Point) 분석 및 개선 방향 (15슬라이드) | <a href="/templates/office/EMP_ANL_040_ASIS_프로세스정의서.pptx" download>PPT (40 KB)</a> |
+| **EMP_ANL_050** | 2. 분석 | `EMP_ANL_050_연계규격협의서.xlsx` | Excel | 12 KB | 기간계(SSO, 마케팅허브, 프로덕트랩) 연계 방식·주기·보안·SLA 합의서 (4시트) | <a href="/templates/office/EMP_ANL_050_연계규격협의서.xlsx" download>Excel (12 KB)</a> |
+| **EMP_DEG_010** | 3. 설계 | `EMP_DEG_010_정보구조도_IA.xlsx` | Excel | 38 KB | 사용자 포털 및 관리자 백오피스 전체 메뉴 계층 구조 및 권한 매핑표 (5시트) | <a href="/templates/office/EMP_DEG_010_정보구조도_IA.xlsx" download>Excel (38 KB)</a> |
+| **EMP_DEG_020** | 3. 설계 | `EMP_DEG_020_기능정의서.xlsx` | Excel | 45 KB | 화면·모듈별 세부 기능 정의, 입력/처리/출력 로직 및 예외 규칙 명세 (4시트) | <a href="/templates/office/EMP_DEG_020_기능정의서.xlsx" download>Excel (45 KB)</a> |
+| **EMP_DEG_030** | 3. 설계 | `EMP_DEG_030_정책정의서.xlsx` | Excel | 34 KB | 권한, 보안, 데이터 보관주기, AI 판정 임계치 등 시스템 운영 정책 정의서 (4시트) | <a href="/templates/office/EMP_DEG_030_정책정의서.xlsx" download>Excel (34 KB)</a> |
+| **EMP_DEG_040** | 3. 설계 | `EMP_DEG_040_TOBE_프로세스정의서.pptx` | PPT | 2.0 MB | AI 도입 후 목표 비즈니스 프로세스 흐름도 및 시스템 시퀀스 정의서 (18슬라이드) | <a href="/templates/office/EMP_DEG_040_TOBE_프로세스정의서.pptx" download>PPT (2.0 MB)</a> |
+| **EMP_DEG_050** | 3. 설계 | `EMP_DEG_050_화면설계서_표준템플릿.pptx` | PPT | 579 KB | 화면 레이아웃, 와이어프레임 및 컴포넌트 기능 상세 디스크립션 표준 템플릿 (26슬라이드) | <a href="/templates/office/EMP_DEG_050_화면설계서_표준템플릿.pptx" download>PPT (579 KB)</a> |
+| **EMP_DEG_060** | 3. 설계 | `EMP_DEG_060_표준용어정의서.xlsx` | Excel | 15 KB | **[감리 필수]** 도메인사전, 표준단어사전, 표준용어사전 3시트 통합본 | <a href="/templates/office/EMP_DEG_060_표준용어정의서.xlsx" download>Excel (15 KB)</a> |
+| **EMP_DEG_070** | 3. 설계 | `EMP_DEG_070_코드정의서.xlsx` | Excel | 42 KB | **[감리 필수]** 공통코드그룹, 상세코드, 세션변수, 업무채번규칙 정의서 (5시트) | <a href="/templates/office/EMP_DEG_070_코드정의서.xlsx" download>Excel (42 KB)</a> |
+| **EMP_DEG_080** | 3. 설계 | `EMP_DEG_080_데이터베이스명세서.xlsx` | Excel | 52 KB | **[감리 필수]** Table, Index, Procedure, Function, View, Trigger, Sequence 9시트 통합 명세서 | <a href="/templates/office/EMP_DEG_080_데이터베이스명세서.xlsx" download>Excel (52 KB)</a> |
+| **EMP_DEG_090** | 3. 설계 | `EMP_DEG_090_시스템아키텍처구성도.pptx` | PPT | 558 KB | DEV/STG/PRD 3계층 분리, 내부/대외 ALB 망분리, 하이브리드 RAG 아키텍처 다이어그램 | <a href="/templates/office/EMP_DEG_090_시스템아키텍처구성도.pptx" download>PPT (558 KB)</a> |
+| **EMP_DEG_090D** | 3. 설계 | `EMP_DEG_090_아키텍처정의서.docx` | Word | 41 KB | 시스템·네트워크·컨테이너(EKS)·보안 아키텍처 상세 설계 정의서 | <a href="/templates/office/EMP_DEG_090_아키텍처정의서.docx" download>Word (41 KB)</a> |
+| **EMP_DEG_091** | 3. 설계 | `EMP_DEG_091_클라우드인프라_및_방화벽신청서.xlsx` | Excel | 459 KB | AWS(EKS/RDS/S3/ALB) 환경별 서버 스펙 신청, 방화벽 오픈 매트릭스 및 계정 신청서 (8시트) | <a href="/templates/office/EMP_DEG_091_클라우드인프라_및_방화벽신청서.xlsx" download>Excel (459 KB)</a> |
+| **EMP_DEG_091P** | 3. 설계 | `EMP_DEG_091_인프라생성요청_구성도.pptx` | PPT | 2.0 MB | 고객사 인프라/보안팀 제출용 클라우드 리소스 및 방화벽 오픈 요청 구성도 슬라이드 | <a href="/templates/office/EMP_DEG_091_인프라생성요청_구성도.pptx" download>PPT (2.0 MB)</a> |
+| **EMP_DEG_100** | 3. 설계 | `EMP_DEG_100_물리데이터모델설계서.docx` | Word | 41 KB | PostgreSQL 16 + `pgvector` HNSW 인덱스, 월별 파티셔닝 및 물리 테이블 설계서 | <a href="/templates/office/EMP_DEG_100_물리데이터모델설계서.docx" download>Word (41 KB)</a> |
+| **EMP_DEG_110** | 3. 설계 | `EMP_DEG_110_논리데이터모델설계서.docx` | Word | 41 KB | 핵심 비즈니스 주제영역 정의, 엔티티 관계(ERD) 및 정규화 논리 모델 설계서 | <a href="/templates/office/EMP_DEG_110_논리데이터모델설계서.docx" download>Word (41 KB)</a> |
+| **EMP_DEG_120** | 3. 설계 | `EMP_DEG_120_인터페이스설계서.xlsx` | Excel | 68 KB | 대내외 연계 인터페이스 목록, 접속정보, 송수신 필드 매핑 정의서 (6시트) | <a href="/templates/office/EMP_DEG_120_인터페이스설계서.xlsx" download>Excel (68 KB)</a> |
+| **EMP_DEG_130** | 3. 설계 | `EMP_DEG_130_배치프로그램설계서.xlsx` | Excel | 29 KB | **[감리 필수]** 일배치 스케줄러, 선후행 의존성, 타임아웃 및 실패 재처리 설계서 (4시트) | <a href="/templates/office/EMP_DEG_130_배치프로그램설계서.xlsx" download>Excel (29 KB)</a> |
+| **EMP_DEG_140** | 3. 설계 | `EMP_DEG_140_CRUD_Matrix.xlsx` | Excel | 28 KB | **[감리 필수]** 단위 프로세스(화면/API/배치) × DB 엔티티(Table) 상관분석표 (4시트) | <a href="/templates/office/EMP_DEG_140_CRUD_Matrix.xlsx" download>Excel (28 KB)</a> |
+| **EMP_DEG_150** | 3. 설계 | `EMP_DEG_150_AI추론_및_프롬프트설계서.docx` | Word | 39 KB | **[AI 특화]** 멀티모달 전처리 → 하이브리드 RAG → 3단계 LLM 추론 파이프라인 및 프롬프트 설계서 | <a href="/templates/office/EMP_DEG_150_AI추론_및_프롬프트설계서.docx" download>Word (39 KB)</a> |
+| **EMP_EXE_010** | 4. 구현 | `EMP_EXE_010_비즈니스규칙사전정의서.xlsx` | Excel | 13 KB | **[AI 특화]** 도메인 컴플라이언스 100대 룰셋(금지·주의·허용 정규식 및 대체표현) 사전 | <a href="/templates/office/EMP_EXE_010_비즈니스규칙사전정의서.xlsx" download>Excel (13 KB)</a> |
+| **EMP_EXE_020** | 4. 구현 | `EMP_EXE_020_AI프롬프트명세서.xlsx` | Excel | 10 KB | **[AI 특화]** 단계별 시스템/유저 프롬프트 템플릿, 모델 파라미터(Temp/Top-P) 및 JSON 스키마 대장 | <a href="/templates/office/EMP_EXE_020_AI프롬프트명세서.xlsx" download>Excel (10 KB)</a> |
+| **EMP_EXE_030** | 4. 구현 | `EMP_EXE_030_레거시DB연계명세서.xlsx` | Excel | 8 KB | 기간계 마스터 DB(ProductLab) 뷰 조회, 일배치 동기화 및 컬럼 매핑 명세서 | <a href="/templates/office/EMP_EXE_030_레거시DB연계명세서.xlsx" download>Excel (8 KB)</a> |
+| **EMP_TST_010** | 5. 테스트 | `EMP_TST_010_단위테스트케이스.xlsx` | Excel | 69 KB | 57개 모듈별 단위 테스트 케이스, 입력 데이터, 기대 결과 및 판정 명세서 (4시트) | <a href="/templates/office/EMP_TST_010_단위테스트케이스.xlsx" download>Excel (69 KB)</a> |
+| **EMP_TST_020** | 5. 테스트 | `EMP_TST_020_통합테스트시나리오.xlsx` | Excel | 36 KB | 42스텝 엔드-투-엔드(E2E) 업무 흐름 통합 테스트 시나리오 및 결과서 (4시트) | <a href="/templates/office/EMP_TST_020_통합테스트시나리오.xlsx" download>Excel (36 KB)</a> |
+| **EMP_TST_030** | 5. 테스트 | `EMP_TST_030_보안점검결과서.xlsx` | Excel | 10 KB | OWASP Top 10, 시큐어코딩, 개인정보 비식별화 및 인프라 취약점 점검 결과서 | <a href="/templates/office/EMP_TST_030_보안점검결과서.xlsx" download>Excel (10 KB)</a> |
+| **EMP_TST_040** | 5. 테스트 | `EMP_TST_040_성능시험결과보고서.xlsx` | Excel | 8 KB | 동시접속 부하(VU), 목표 TPS, 평균 및 95%ile 응답시간 SLA 측정 결과보고서 | <a href="/templates/office/EMP_TST_040_성능시험결과보고서.xlsx" download>Excel (8 KB)</a> |
+| **EMP_TST_050** | 5. 테스트 | `EMP_TST_050_AI골든셋_품질평가보고서.xlsx` | Excel | 10 KB | **[AI 특화]** 50문항 표준 골든셋(Golden-Set) 1:1 대조 및 정밀도(Precision)·재현율(Recall) 평가서 | <a href="/templates/office/EMP_TST_050_AI골든셋_품질평가보고서.xlsx" download>Excel (10 KB)</a> |
+| **EMP_IMP_010** | 6. 이행 | `EMP_IMP_010_시스템이행계획서.pptx` | PPT | 47 KB | 상용 컷오버 이행 전략, 리허설 시나리오, 비상 조직 및 롤백 절차 발표자료 (15슬라이드) | <a href="/templates/office/EMP_IMP_010_시스템이행계획서.pptx" download>PPT (47 KB)</a> |
+| **EMP_IMP_020** | 6. 이행 | `EMP_IMP_020_이행체크리스트.xlsx` | Excel | 23 KB | 오픈 D-7 사전점검, D-Day 시간대별 컷오버 실행, D+1 사후점검 체크리스트 (4시트) | <a href="/templates/office/EMP_IMP_020_이행체크리스트.xlsx" download>Excel (23 KB)</a> |
+| **EMP_IMP_030** | 6. 이행 | `EMP_IMP_030_인수인계계획서.docx` | Word | 43 KB | 고객사 운영팀 대상 기술이전, 산출물·계정 인계 및 안정화 지원 계획서 | <a href="/templates/office/EMP_IMP_030_인수인계계획서.docx" download>Word (43 KB)</a> |
+| **EMP_IMP_040** | 6. 이행 | `EMP_IMP_040_검수확인서.docx` | Word | 43 KB | 과업 요구사항·산출물 완비 검수 및 최종 인수 합격을 증명하는 공식 검수확인서 | <a href="/templates/office/EMP_IMP_040_검수확인서.docx" download>Word (43 KB)</a> |
+| **EMP_IMP_070** | 6. 이행 | `EMP_IMP_070_교육결과보고서.docx` | Word | 38 KB | 현업 사용자 및 시스템 운영자 교육 실시 결과, 참석자 명단 및 만족도 보고서 | <a href="/templates/office/EMP_IMP_070_교육결과보고서.docx" download>Word (38 KB)</a> |
+| **EMP_IMP_080** | 6. 이행 | `EMP_IMP_080_종료보고서.pptx` | PPT | 47 KB | 프로젝트 최종 완료(준공) 보고회 발표 슬라이드 (성과 요약, 산출물 검수, 향후 계획) | <a href="/templates/office/EMP_IMP_080_종료보고서.pptx" download>PPT (47 KB)</a> |
+| **EMP_IMP_090** | 6. 이행 | `EMP_IMP_090_시범운영결과보고서.pptx` | PPT | 31 KB | 전사 본 오픈 전 2주간 파일럿 시범운영 처리 실적, 품질 지표 및 오픈 전환 판정 보고서 | <a href="/templates/office/EMP_IMP_090_시범운영결과보고서.pptx" download>PPT (31 KB)</a> |
+| **EMP_FIN_010** | 6. 운영정산 | `EMP_FIN_010_월간_AI_FinOps_토큰정산보고서.xlsx` | Excel | 9 KB | **[AI 특화]** 월간 LLM·OCR·임베딩 토큰 사용량, 캐시 절감액 및 사업부별 차지백 정산서 | <a href="/templates/office/EMP_FIN_010_월간_AI_FinOps_토큰정산보고서.xlsx" download>Excel (9 KB)</a> |
+---
+
+
+## 3. 실전 프로젝트 관리 스위트 (000 PM Suite) 80종 전수 일람표
+
+현업 대형 프로젝트에서 활용된 80종 실무 서식을 카테고리별로 정리한 일람표입니다. 모든 파일은 개별 다운로드가 가능합니다.
 
 ### 3.1 총괄 방법론 및 체계 가이드 (3종)
 
@@ -207,12 +296,16 @@ sort: 93
 
 ---
 
-### 3.2 프로젝트 관리(PM) 7대 영역 산출물 (18종)
+### 3.2 프로젝트 관리(PM) 8대 영역 산출물 (26종)
 
-프로젝트 관리자의 핵심 영역인 범위, 일정, 비용, 품질, 조직, 의사소통, 위험 관리를 위한 표준 서식입니다.
+프로젝트 관리자의 핵심 영역인 통합, 범위, 일정, 비용, 품질, 조직, 의사소통, 위험 관리를 위한 표준 서식입니다.
 
 | 식별코드 | 관리 영역 | 파일 명칭 | 형식 | 용량 | 문서 목적 및 주요 관리 항목 | 다운로드 링크 |
 | :---: | :---: | :--- | :---: | :---: | :--- | :---: |
+| **PM-03A** | 통합관리 | `문서관리_계획서_템플릿.docx / .pptx` | Word / PPT | 47 KB / 68 KB | 프로젝트 산출물 디렉터리 체계, 버전 명명 규칙, 검토/승인 절차 정의 | <a href="/templates/000_pm_suite/01_%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%20%EA%B4%80%EB%A6%AC/01_%ED%86%B5%ED%95%A9%EA%B4%80%EB%A6%AC/%EB%AC%B8%EC%84%9C%EA%B4%80%EB%A6%AC_%EA%B3%84%ED%9A%8D%EC%84%9C_%ED%85%9C%ED%94%8C%EB%A6%BF.docx" download>Word (47 KB)</a><br><a href="/templates/000_pm_suite/01_%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%20%EA%B4%80%EB%A6%AC/01_%ED%86%B5%ED%95%A9%EA%B4%80%EB%A6%AC/%EB%AC%B8%EC%84%9C%EA%B4%80%EB%A6%AC_%EA%B3%84%ED%9A%8D%EC%84%9C_%ED%85%9C%ED%94%8C%EB%A6%BF.pptx" download>PPT (68 KB)</a> |
+| **PM-03B** | 통합관리 | `보고체계_관리_계획서_템플릿.docx / .pptx` | Word / PPT | 48 KB / 68 KB | 주간/월간/단계별 공식 보고 주기, 의사결정 에스컬레이션 체계 정의 | <a href="/templates/000_pm_suite/01_%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%20%EA%B4%80%EB%A6%AC/01_%ED%86%B5%ED%95%A9%EA%B4%80%EB%A6%AC/%EB%B3%B4%EA%B3%A0%EC%B2%B4%EA%B3%84_%EA%B4%80%EB%A6%AC_%EA%B3%84%ED%9A%8D%EC%84%9C_%ED%85%9C%ED%94%8C%EB%A6%BF.docx" download>Word (48 KB)</a><br><a href="/templates/000_pm_suite/01_%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%20%EA%B4%80%EB%A6%AC/01_%ED%86%B5%ED%95%A9%EA%B4%80%EB%A6%AC/%EB%B3%B4%EA%B3%A0%EC%B2%B4%EA%B3%84_%EA%B4%80%EB%A6%AC_%EA%B3%84%ED%9A%8D%EC%84%9C_%ED%85%9C%ED%94%8C%EB%A6%BF.pptx" download>PPT (68 KB)</a> |
+| **PM-03C** | 통합관리 | `자원_관리_계획서_템플릿.docx / .pptx` | Word / PPT | 49 KB / 69 KB | 투입 인력, 개발 장비, 클라우드/서버 환경 등 프로젝트 자원 배분 및 통제 계획 | <a href="/templates/000_pm_suite/01_%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%20%EA%B4%80%EB%A6%AC/01_%ED%86%B5%ED%95%A9%EA%B4%80%EB%A6%AC/%EC%9E%90%EC%9B%90_%EA%B4%80%EB%A6%AC_%EA%B3%84%ED%9A%8D%EC%84%9C_%ED%85%9C%ED%94%8C%EB%A6%BF.docx" download>Word (49 KB)</a><br><a href="/templates/000_pm_suite/01_%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%20%EA%B4%80%EB%A6%AC/01_%ED%86%B5%ED%95%A9%EA%B4%80%EB%A6%AC/%EC%9E%90%EC%9B%90_%EA%B4%80%EB%A6%AC_%EA%B3%84%ED%9A%8D%EC%84%9C_%ED%85%9C%ED%94%8C%EB%A6%BF.pptx" download>PPT (69 KB)</a> |
+| **PM-03D** | 통합관리 | `진도_관리_계획서_템플릿.docx / .pptx` | Word / PPT | 48 KB / 68 KB | WBS 가중치 산정 기준, 계획 대비 실적 공정률 측정 및 지연 만회 절차 정의 | <a href="/templates/000_pm_suite/01_%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%20%EA%B4%80%EB%A6%AC/01_%ED%86%B5%ED%95%A9%EA%B4%80%EB%A6%AC/%EC%A7%84%EB%8F%84_%EA%B4%80%EB%A6%AC_%EA%B3%84%ED%9A%8D%EC%84%9C_%ED%85%9C%ED%94%8C%EB%A6%BF.docx" download>Word (48 KB)</a><br><a href="/templates/000_pm_suite/01_%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%20%EA%B4%80%EB%A6%AC/01_%ED%86%B5%ED%95%A9%EA%B4%80%EB%A6%AC/%EC%A7%84%EB%8F%84_%EA%B4%80%EB%A6%AC_%EA%B3%84%ED%9A%8D%EC%84%9C_%ED%85%9C%ED%94%8C%EB%A6%BF.pptx" download>PPT (68 KB)</a> |
 | **PM-04** | 범위관리 | `프로젝트명_산출물목록_V1.0_20230530.xlsx` | Excel | 63 KB | 단계별 필수 제출 산출물 목록, 제출 시기, 포맷 및 승인권자 정의 | <a href="/templates/000_pm_suite/01_%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%20%EA%B4%80%EB%A6%AC/02_%EB%B2%94%EC%9C%84%EA%B4%80%EB%A6%AC/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%EB%AA%85_%EC%82%B0%EC%B6%9C%EB%AC%BC%EB%AA%A9%EB%A1%9D_V1.0_20230530.xlsx" download>Excel (63 KB)</a> |
 | **PM-05** | 범위관리 | `프로젝트명_수행범위_V1.0_20230530.xlsx` | Excel | 85 KB | RFP 요구사항 대비 실제 과업 수행 범위, 제외 범위, 전제 조건 명시 | <a href="/templates/000_pm_suite/01_%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%20%EA%B4%80%EB%A6%AC/02_%EB%B2%94%EC%9C%84%EA%B4%80%EB%A6%AC/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%EB%AA%85_%EC%88%98%ED%96%89%EB%B2%94%EC%9C%84_V1.0_20230530.xlsx" download>Excel (85 KB)</a> |
 | **PM-06** | 일정관리 | `프로젝트명_WBS_V1.0_20220531.xlsx` | Excel | 333 KB | 대/중/소/세부 4단계 과업 분할 구조, 시작일/종료일, 선행 작업, 가중치 공정률 | <a href="/templates/000_pm_suite/01_%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%20%EA%B4%80%EB%A6%AC/03_%EC%9D%BC%EC%A0%95%EA%B4%80%EB%A6%AC/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%EB%AA%85_WBS_V1.0_20220531.xlsx" download>Excel (333 KB)</a> |

@@ -25,7 +25,7 @@ sort: 91
 > **개요:** 본 가이드는 영업 제안부터 프로젝트 오픈까지 **각 단계에서 담당자가 '무엇을(Action Item)', '어떤 도구를 사용하여', '어떤 순서로 실행하고', '어떻게 합격 여부를 판정하는지'**를 구체적으로 규정한 실무 표준 운영 절차(SOP: Standard Operating Procedures)입니다.
 
 ::: tip 관련 상위 및 실무 가이드 바로가기
-* **[엠파시 사업 및 프로젝트 관리 표준 문서 양식 통합 다운로드 센터](./enterprise-document-templates.md)**: 엠파시 표준 서식 46종 및 실전 프로젝트 관리 스위트(PM Suite) 76종 등 총 122종 템플릿 및 통합 다운로드
+* **[엠파시 사업 및 프로젝트 관리 표준 문서 양식 통합 다운로드 센터](./enterprise-document-templates.md)**: 엠파시 표준 서식 111종(오피스 97종 + 마크다운 14종) 및 실전 프로젝트 관리 스위트(PM Suite) 80종 등 총 191종 템플릿 및 통합 다운로드
 * **[엠파시 사업 및 개발 방법론 개요 (RFP to Go-Live)](./enterprise-project-lifecycle.md)**: 전 주기 운영 및 조직 협업 가이드
 * **[엠파시 사업 전 주기 표준 문서 체계 및 납품·관리 실무 가이드](./enterprise-business-documents.md)**: 계약, 행정, 설계, 검수, 대금 청구 문서 표준
 * **[영업 지원 및 제안 단계 실무 가이드 (Pre-sales)](./presales-ai-playbook.md)**: RFP 분석, 제안서 작성, PoC 데모 제작, 공수 산정
