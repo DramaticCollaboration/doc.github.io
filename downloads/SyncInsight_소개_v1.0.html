@@ -1,0 +1,2574 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>SyncInsight 제품소개서</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;600;700;800;900&family=Pretendard:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+@page {
+    size: 1920px 1080px;
+    margin: 0;
+}
+* {
+    box-sizing: border-box;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+}
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 1920px;
+    background: #ffffff;
+    font-family: 'Pretendard', 'Noto Sans KR', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    color: #0f172a;
+}
+.slide {
+    width: 1920px;
+    height: 1080px;
+    max-height: 1080px;
+    page-break-after: always;
+    break-after: page;
+    page-break-inside: avoid;
+    break-inside: avoid;
+    position: relative;
+    background: #ffffff;
+    padding: 60px 80px;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+/* Top Breadcrumb Header */
+.slide-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+}
+.header-cat {
+    font-size: 20px;
+    font-weight: 700;
+    color: #ff4d00;
+    letter-spacing: 2px;
+}
+.header-desc {
+    font-size: 18px;
+    font-weight: 500;
+    color: #64748b;
+    letter-spacing: 3px;
+}
+.header-line {
+    border: none;
+    border-top: 1.5px solid #0f172a;
+    margin: 6px 0 24px 0;
+}
+.slide-headline {
+    font-size: 44px;
+    font-weight: 800;
+    color: #0f172a;
+    margin: 0 0 10px 0;
+    line-height: 1.25;
+    letter-spacing: -0.5px;
+}
+.slide-subdesc {
+    font-size: 20px;
+    font-weight: 400;
+    color: #64748b;
+    margin: 0 0 32px 0;
+    line-height: 1.5;
+}
+
+/* Footer */
+.slide-footer {
+    position: absolute;
+    bottom: 40px;
+    left: 80px;
+    right: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.footer-left {
+    font-size: 15px;
+    color: #94a3b8;
+    font-weight: 500;
+}
+.footer-page {
+    font-size: 18px;
+    font-weight: 700;
+    color: #0f172a;
+}
+
+/* Cover Slide */
+.cover-slide {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.cover-top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 700;
+}
+.cover-top-title {
+    color: #ff4d00;
+    letter-spacing: 4px;
+    font-size: 18px;
+}
+.cover-top-date {
+    color: #0f172a;
+    font-size: 20px;
+    letter-spacing: 2px;
+}
+.cover-top-line {
+    border: none;
+    border-top: 1.5px solid #0f172a;
+    margin: 12px 0 40px 0;
+}
+.cover-main-grid {
+    display: grid;
+    grid-template-columns: 1.05fr 0.95fr;
+    gap: 50px;
+    align-items: center;
+    flex: 1;
+}
+.cover-tag {
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    color: #475569;
+    margin-bottom: 8px;
+}
+.cover-brand-title {
+    font-size: 110px;
+    font-weight: 900;
+    color: #0f172a;
+    line-height: 0.95;
+    margin: 0 0 20px 0;
+    letter-spacing: -2px;
+}
+.cover-accent-bar {
+    width: 260px;
+    height: 8px;
+    background: #ff4d00;
+    border-radius: 4px;
+    margin-bottom: 28px;
+}
+.cover-catchphrase {
+    font-size: 32px;
+    font-weight: 800;
+    color: #0f172a;
+    margin-bottom: 14px;
+    line-height: 1.35;
+}
+.cover-keywords {
+    font-size: 18px;
+    color: #64748b;
+    margin-bottom: 20px;
+    line-height: 1.4;
+}
+.cover-agents {
+    font-size: 20px;
+    color: #ff4d00;
+    font-weight: 800;
+    line-height: 1.4;
+}
+.cover-right-preview {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    height: 580px;
+    justify-content: center;
+}
+.cover-right-preview .mockup-window {
+    height: 275px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.06);
+}
+.cover-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-top: 20px;
+}
+.cover-team {
+    font-size: 16px;
+    color: #64748b;
+    line-height: 1.5;
+}
+.cover-type-label {
+    font-size: 20px;
+    font-weight: 800;
+    letter-spacing: 6px;
+    color: #0f172a;
+}
+
+/* Slide 02 Overview */
+.overview-grid {
+    display: grid;
+    grid-template-columns: 0.95fr 1.05fr;
+    gap: 32px;
+    height: 680px;
+}
+.overview-dark-box {
+    background: #0f172a;
+    border-radius: 20px;
+    padding: 44px;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.summary-tag {
+    color: #ff4d00;
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+.summary-main-text {
+    font-size: 32px;
+    font-weight: 800;
+    line-height: 1.4;
+    color: #ffffff;
+    margin-bottom: 30px;
+}
+.summary-bullet-list {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+.summary-bullet-item {
+    display: flex;
+    gap: 12px;
+    font-size: 18px;
+    line-height: 1.5;
+    color: #cbd5e1;
+}
+.summary-bullet-item b {
+    color: #ffffff;
+    font-weight: 700;
+    white-space: nowrap;
+}
+.overview-cards-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    justify-content: space-between;
+}
+.ov-card {
+    background: #f8fafc;
+    border: 1.5px solid #e2e8f0;
+    border-radius: 16px;
+    padding: 24px 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.ov-card-header {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+.ov-card-num {
+    color: #ff4d00;
+    font-size: 24px;
+    font-weight: 800;
+}
+.ov-card-title {
+    color: #0f172a;
+    font-size: 22px;
+    font-weight: 800;
+}
+.ov-card-desc {
+    color: #475569;
+    font-size: 17px;
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* Slide 03 Structure */
+.structure-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.08fr 1fr;
+    gap: 24px;
+    height: 680px;
+}
+.struct-col {
+    border-radius: 20px;
+    padding: 36px 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.struct-col.light {
+    background: #f8fafc;
+    border: 1.5px solid #e2e8f0;
+}
+.struct-col.dark {
+    background: #0f172a;
+    color: #ffffff;
+    border: 2.5px solid #ff4d00;
+    box-shadow: 0 10px 30px rgba(255, 77, 0, 0.15);
+}
+.struct-phase {
+    font-size: 16px;
+    font-weight: 700;
+    color: #ff4d00;
+    letter-spacing: 2px;
+    margin-bottom: 8px;
+}
+.struct-title {
+    font-size: 24px;
+    font-weight: 800;
+    margin: 0 0 12px 0;
+}
+.struct-col.light .struct-title { color: #0f172a; }
+.struct-col.dark .struct-title { color: #ffffff; }
+.struct-desc {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 24px;
+}
+.struct-col.light .struct-desc { color: #475569; }
+.struct-col.dark .struct-desc { color: #cbd5e1; }
+.struct-items-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+.struct-item-card {
+    border-radius: 12px;
+    padding: 16px 20px;
+}
+.struct-col.light .struct-item-card {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+}
+.struct-col.dark .struct-item-card {
+    background: #1e293b;
+    border: 1px solid #334155;
+}
+.st-item-name {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 4px;
+}
+.struct-col.light .st-item-name { color: #0f172a; }
+.struct-col.dark .st-item-name { color: #ffffff; }
+.st-item-desc {
+    font-size: 15px;
+    line-height: 1.4;
+}
+.struct-col.light .st-item-desc { color: #64748b; }
+.struct-col.dark .st-item-desc { color: #94a3b8; }
+
+/* Slide 04 Agents */
+.agents-list-container {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    margin-bottom: 20px;
+}
+.agent-card {
+    background: #f8fafc;
+    border: 1.5px solid #e2e8f0;
+    border-radius: 16px;
+    padding: 20px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.agent-card.highlight {
+    background: #fff7ed;
+    border-color: #ffedd5;
+}
+.agent-left {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+.agent-num {
+    color: #ff4d00;
+    font-size: 26px;
+    font-weight: 800;
+    min-width: 36px;
+}
+.agent-name {
+    font-size: 22px;
+    font-weight: 800;
+    color: #0f172a;
+    margin-bottom: 4px;
+}
+.agent-desc {
+    font-size: 16px;
+    color: #475569;
+    margin: 0;
+}
+.agent-badge {
+    background: #f1f5f9;
+    color: #475569;
+    font-size: 15px;
+    font-weight: 700;
+    padding: 10px 22px;
+    border-radius: 30px;
+    white-space: nowrap;
+}
+.agent-card.highlight .agent-badge {
+    background: #ff4d00;
+    color: #ffffff;
+}
+.agents-bottom-box {
+    background: #0f172a;
+    color: #ffffff;
+    border-radius: 14px;
+    padding: 18px 28px;
+    font-size: 16px;
+    line-height: 1.5;
+}
+.agents-bottom-box b {
+    color: #ff4d00;
+}
+
+/* Slide 05 Pain points */
+.pain-list-container {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+.pain-card {
+    background: #f8fafc;
+    border: 1.5px solid #e2e8f0;
+    border-radius: 16px;
+    padding: 22px 32px;
+    display: flex;
+    align-items: flex-start;
+    gap: 24px;
+}
+.pain-num {
+    color: #ff4d00;
+    font-size: 26px;
+    font-weight: 800;
+    min-width: 36px;
+    margin-top: 2px;
+}
+.pain-content {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+.pain-title {
+    font-size: 22px;
+    font-weight: 800;
+    color: #0f172a;
+}
+.pain-desc {
+    font-size: 17px;
+    color: #475569;
+    line-height: 1.5;
+}
+
+/* Slide 06 Role Split */
+.role-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.05fr 1fr;
+    gap: 24px;
+    margin-bottom: 24px;
+}
+.role-col {
+    border-radius: 18px;
+    padding: 32px 28px;
+    display: flex;
+    flex-direction: column;
+}
+.role-col.agent {
+    background: #f8fafc;
+    border: 1.5px solid #e2e8f0;
+}
+.role-col.human {
+    background: #0f172a;
+    color: #ffffff;
+    border: 2px solid #ff4d00;
+}
+.role-col.engine {
+    background: #f8fafc;
+    border: 1.5px solid #e2e8f0;
+}
+.role-tag {
+    font-size: 16px;
+    font-weight: 700;
+    color: #ff4d00;
+    letter-spacing: 2px;
+    margin-bottom: 6px;
+}
+.role-title {
+    font-size: 22px;
+    font-weight: 800;
+    margin-bottom: 20px;
+}
+.role-col.agent .role-title, .role-col.engine .role-title { color: #0f172a; }
+.role-col.human .role-title { color: #ffffff; }
+.role-items-list {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+.role-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    font-size: 17px;
+    line-height: 1.45;
+}
+.role-col.agent .role-item, .role-col.engine .role-item { color: #334155; }
+.role-col.human .role-item { color: #e2e8f0; }
+.role-item::before {
+    content: "●";
+    color: #ff4d00;
+    font-size: 14px;
+    margin-top: 2px;
+}
+.role-bottom-summary {
+    background: #f1f5f9;
+    border-left: 6px solid #ff4d00;
+    border-radius: 12px;
+    padding: 20px 28px;
+    font-size: 18px;
+    color: #1e293b;
+    line-height: 1.5;
+}
+
+/* Slides 07-13 Screen Walkthrough */
+.screen-walkthrough-grid {
+    display: grid;
+    grid-template-columns: 1.12fr 0.88fr;
+    gap: 36px;
+    height: 680px;
+}
+.screen-mockup-container {
+    height: 100%;
+}
+.screen-features-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.features-section-title {
+    font-size: 26px;
+    font-weight: 800;
+    color: #0f172a;
+    text-align: center;
+    margin: 0 0 16px 0;
+}
+.features-cards-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+.feature-card {
+    background: #f8fafc;
+    border: 1.5px solid #e2e8f0;
+    border-radius: 14px;
+    padding: 16px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+.feat-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.feat-num {
+    color: #ff4d00;
+    font-size: 18px;
+    font-weight: 800;
+}
+.feat-title {
+    font-size: 18px;
+    font-weight: 800;
+    color: #0f172a;
+}
+.feat-desc {
+    font-size: 15px;
+    color: #475569;
+    line-height: 1.4;
+    margin: 0;
+}
+
+/* UI Mockup Components */
+.mockup-window {
+    background: #ffffff;
+    border: 1.5px solid #cbd5e1;
+    border-radius: 16px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    box-shadow: 0 12px 30px rgba(15, 23, 42, 0.08);
+}
+.mockup-header {
+    background: #f8fafc;
+    border-bottom: 1.5px solid #e2e8f0;
+    padding: 12px 18px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.mockup-dots {
+    display: flex;
+    gap: 6px;
+}
+.dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+}
+.dot.red { background: #ef4444; }
+.dot.yellow { background: #f59e0b; }
+.dot.green { background: #10b981; }
+.mockup-title-bar {
+    font-size: 13px;
+    color: #64748b;
+    font-family: monospace;
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    padding: 4px 18px;
+    border-radius: 20px;
+}
+.mockup-badge {
+    font-size: 11px;
+    font-weight: 700;
+    color: #10b981;
+    background: #ecfdf5;
+    border: 1px solid #a7f3d0;
+    padding: 3px 10px;
+    border-radius: 12px;
+}
+.mockup-body {
+    padding: 24px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    background: #fbfcfe;
+    overflow: hidden;
+}
+
+/* Mockup Elements */
+.mock-grid-header {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+}
+.mock-stat-box {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    padding: 12px 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+.mock-stat-box .label { font-size: 12px; color: #64748b; }
+.mock-stat-box .val { font-size: 20px; font-weight: 800; color: #0f172a; }
+.mock-table {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.mock-tr {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    padding: 10px 14px;
+    font-size: 13px;
+    align-items: center;
+    border-bottom: 1px solid #f1f5f9;
+}
+.mock-tr.th {
+    background: #f8fafc;
+    font-weight: 700;
+    color: #475569;
+    border-bottom: 1.5px solid #e2e8f0;
+}
+.status-badge {
+    font-size: 11px;
+    font-weight: 700;
+    padding: 3px 8px;
+    border-radius: 8px;
+    text-align: center;
+    display: inline-block;
+    width: fit-content;
+}
+.status-badge.green { background: #ecfdf5; color: #059669; }
+.status-badge.yellow { background: #fef3c7; color: #d97706; }
+.status-badge.blue { background: #eff6ff; color: #2563eb; }
+.tag { background: #f1f5f9; color: #475569; padding: 2px 8px; border-radius: 6px; font-size: 11px; width: fit-content; }
+
+.mock-btn {
+    padding: 8px 16px;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 700;
+    border: none;
+    cursor: pointer;
+}
+.mock-btn.primary { background: #ff4d00; color: #ffffff; }
+.mock-btn.secondary { background: #f1f5f9; color: #334155; }
+.mock-btn.danger { background: #ef4444; color: #ffffff; }
+
+/* Chat Mock */
+.mock-chat-container {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+.mock-chat-bubble {
+    border-radius: 12px;
+    padding: 14px 18px;
+}
+.mock-chat-bubble.user { background: #f1f5f9; align-self: flex-start; max-width: 90%; }
+.mock-chat-bubble.ai { background: #ffffff; border: 1.5px solid #fed7aa; align-self: stretch; }
+.mock-chat-bubble .author { font-size: 12px; font-weight: 700; color: #64748b; margin-bottom: 4px; display: block; }
+.mock-chat-bubble p { margin: 0; font-size: 14px; line-height: 1.45; }
+.mock-btn-group { display: flex; gap: 8px; margin-top: 10px; }
+
+/* Builder Mock */
+.mock-builder-layout { display: grid; grid-template-columns: 140px 1fr; gap: 14px; height: 100%; }
+.mock-builder-sidebar { display: flex; flex-direction: column; gap: 8px; }
+.mock-block-item { background: #f1f5f9; border: 1px dashed #cbd5e1; padding: 10px; border-radius: 8px; font-size: 12px; font-weight: 700; text-align: center; }
+.mock-builder-canvas { background: #ffffff; border: 1px solid #e2e8f0; border-radius: 10px; padding: 16px; display: flex; flex-direction: column; gap: 12px; }
+.canvas-banner { background: #0f172a; color: #ffffff; padding: 20px; border-radius: 8px; text-align: center; }
+.canvas-banner h3 { margin: 0 0 6px 0; font-size: 16px; color: #ff4d00; }
+.canvas-banner p { margin: 0; font-size: 12px; color: #cbd5e1; }
+.canvas-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
+.c-card { background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 6px; padding: 14px; text-align: center; font-size: 11px; font-weight: 700; }
+
+/* Schema Mock */
+.mock-schema-view { display: grid; grid-template-columns: 170px 1fr; gap: 12px; height: 100%; }
+.schema-tree { display: flex; flex-direction: column; gap: 6px; }
+.st-file { font-size: 12px; font-weight: 600; padding: 8px; border-radius: 6px; background: #f8fafc; }
+.schema-code-box { background: #0f172a; color: #f8fafc; border-radius: 10px; padding: 16px; display: flex; flex-direction: column; justify-content: space-between; }
+.schema-code-box pre { margin: 0; font-family: monospace; font-size: 12px; line-height: 1.4; color: #38bdf8; }
+.schema-approve-bar { display: flex; justify-content: space-between; align-items: center; background: #1e293b; padding: 10px 14px; border-radius: 8px; margin-top: 10px; }
+
+/* Pipeline Bar */
+.mock-pipeline-bar { display: grid; grid-template-columns: repeat(6, 1fr); gap: 6px; }
+.pipe-step { background: #f1f5f9; padding: 8px 4px; border-radius: 6px; font-size: 11px; font-weight: 700; text-align: center; color: #64748b; }
+.pipe-step.done { background: #ecfdf5; color: #059669; }
+.pipe-step.active { background: #ff4d00; color: #ffffff; }
+
+/* Topology Mock */
+.mock-topology-view { background: #0f172a; color: #ffffff; border-radius: 12px; padding: 24px; display: flex; flex-direction: column; align-items: center; justify-content: space-between; height: 100%; }
+.topo-center-node { background: #ff4d00; color: #ffffff; padding: 12px 24px; border-radius: 10px; font-weight: 800; font-size: 16px; }
+.topo-branches { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; width: 100%; }
+.t-node { background: #1e293b; border: 1.5px solid #334155; padding: 12px; border-radius: 8px; font-size: 12px; font-weight: 700; text-align: center; }
+.topo-footer-msg { font-size: 12px; color: #94a3b8; }
+
+/* Slide 14 Journey */
+.journey-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin-bottom: 30px;
+}
+.journey-card {
+    border-radius: 18px;
+    padding: 32px 28px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.journey-card.light {
+    background: #f8fafc;
+    border: 1.5px solid #e2e8f0;
+}
+.journey-card.highlight {
+    background: #0f172a;
+    color: #ffffff;
+    border: 2.5px solid #ff4d00;
+}
+.j-tag {
+    font-size: 16px;
+    font-weight: 800;
+    color: #ff4d00;
+    letter-spacing: 2px;
+    margin-bottom: 8px;
+}
+.j-role {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+.journey-card.light .j-role { color: #64748b; }
+.journey-card.highlight .j-role { color: #cbd5e1; }
+.j-title {
+    font-size: 24px;
+    font-weight: 800;
+    margin-bottom: 14px;
+    line-height: 1.35;
+}
+.journey-card.light .j-title { color: #0f172a; }
+.journey-card.highlight .j-title { color: #ffffff; }
+.j-desc {
+    font-size: 16px;
+    line-height: 1.5;
+}
+.journey-card.light .j-desc { color: #475569; }
+.journey-card.highlight .j-desc { color: #94a3b8; }
+
+.journey-benefits-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+}
+.j-benefit-card {
+    background: #f1f5f9;
+    border-left: 6px solid #ff4d00;
+    border-radius: 12px;
+    padding: 20px 24px;
+}
+.j-benefit-title {
+    font-size: 18px;
+    font-weight: 800;
+    color: #0f172a;
+    margin-bottom: 6px;
+}
+.j-benefit-desc {
+    font-size: 15px;
+    color: #475569;
+    line-height: 1.45;
+    margin: 0;
+}
+
+/* Slide 15 Comparison */
+.comp-table-container {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+.comp-header-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+}
+.comp-th {
+    padding: 16px 24px;
+    border-radius: 12px;
+    font-size: 20px;
+    font-weight: 800;
+    text-align: center;
+}
+.comp-th.legacy { background: #e2e8f0; color: #334155; }
+.comp-th.product { background: #ff4d00; color: #ffffff; }
+.comp-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+}
+.comp-cell {
+    border-radius: 12px;
+    padding: 16px 24px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    font-size: 17px;
+    line-height: 1.45;
+}
+.comp-cell.legacy {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    color: #475569;
+}
+.comp-cell.product {
+    background: #ffffff;
+    border: 1.5px solid #ff4d00;
+    color: #0f172a;
+}
+.comp-label {
+    font-weight: 800;
+    min-width: 130px;
+}
+.comp-cell.legacy .comp-label { color: #0f172a; }
+.comp-cell.product .comp-label { color: #ff4d00; }
+
+/* Slide 16 Effects */
+.effects-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+    height: 680px;
+}
+.effects-box {
+    border-radius: 20px;
+    padding: 40px 36px;
+    display: flex;
+    flex-direction: column;
+}
+.effects-box.sure {
+    background: #0f172a;
+    color: #ffffff;
+    border: 2px solid #ff4d00;
+}
+.effects-box.measure {
+    background: #f8fafc;
+    border: 1.5px solid #e2e8f0;
+}
+.eff-title {
+    font-size: 26px;
+    font-weight: 800;
+    margin-bottom: 28px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+.effects-box.sure .eff-title { color: #ff4d00; }
+.effects-box.measure .eff-title { color: #0f172a; }
+.eff-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.eff-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    font-size: 18px;
+    line-height: 1.5;
+}
+.effects-box.sure .eff-item { color: #e2e8f0; }
+.effects-box.measure .eff-item { color: #334155; }
+.eff-item::before {
+    content: "●";
+    font-size: 16px;
+    margin-top: 2px;
+}
+.effects-box.sure .eff-item::before { color: #ff4d00; }
+.effects-box.measure .eff-item::before { color: #64748b; }
+
+/* Slide 17 Differentiators */
+.diff-list-container {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+.diff-card {
+    background: #f8fafc;
+    border: 1.5px solid #e2e8f0;
+    border-radius: 16px;
+    padding: 22px 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+.diff-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+.diff-num {
+    color: #ff4d00;
+    font-size: 22px;
+    font-weight: 800;
+}
+.diff-title {
+    font-size: 22px;
+    font-weight: 800;
+    color: #0f172a;
+}
+.diff-desc {
+    font-size: 17px;
+    color: #475569;
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* Slide 18 Adoption */
+.adopt-phases-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin-bottom: 24px;
+}
+.adopt-card {
+    border-radius: 18px;
+    padding: 32px 28px;
+    display: flex;
+    flex-direction: column;
+}
+.adopt-card.light {
+    background: #f8fafc;
+    border: 1.5px solid #e2e8f0;
+}
+.adopt-card.highlight {
+    background: #ff4d00;
+    color: #ffffff;
+}
+.adopt-badge {
+    font-size: 15px;
+    font-weight: 700;
+    padding: 6px 16px;
+    border-radius: 20px;
+    width: fit-content;
+    margin-bottom: 14px;
+}
+.adopt-card.light .adopt-badge { background: #e2e8f0; color: #475569; }
+.adopt-card.highlight .adopt-badge { background: rgba(255,255,255,0.25); color: #ffffff; }
+.adopt-step-name {
+    font-size: 16px;
+    font-weight: 800;
+    margin-bottom: 6px;
+}
+.adopt-card.light .adopt-step-name { color: #ff4d00; }
+.adopt-card.highlight .adopt-step-name { color: #ffffff; }
+.adopt-title {
+    font-size: 24px;
+    font-weight: 800;
+    margin-bottom: 20px;
+}
+.adopt-card.light .adopt-title { color: #0f172a; }
+.adopt-card.highlight .adopt-title { color: #ffffff; }
+.adopt-items-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+.adopt-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    font-size: 16px;
+    line-height: 1.45;
+}
+.adopt-card.light .adopt-item { color: #334155; }
+.adopt-card.highlight .adopt-item { color: #ffffff; }
+.adopt-item::before {
+    content: "●";
+    font-size: 14px;
+    margin-top: 2px;
+}
+.adopt-card.light .adopt-item::before { color: #ff4d00; }
+.adopt-card.highlight .adopt-item::before { color: #ffffff; }
+
+.adopt-integration-box {
+    background: #f8fafc;
+    border: 1.5px solid #e2e8f0;
+    border-radius: 14px;
+    padding: 20px 28px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.adopt-int-title {
+    font-size: 18px;
+    font-weight: 800;
+    color: #0f172a;
+    white-space: nowrap;
+}
+.adopt-int-desc {
+    font-size: 16px;
+    color: #475569;
+    line-height: 1.4;
+}
+
+/* Slide 19 Closing */
+.closing-slide {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: #ffffff;
+}
+.closing-brand {
+    font-size: 100px;
+    font-weight: 900;
+    color: #0f172a;
+    margin-bottom: 20px;
+    letter-spacing: -1px;
+}
+.closing-thanks {
+    font-size: 48px;
+    font-weight: 800;
+    color: #ff4d00;
+    margin-bottom: 20px;
+}
+.closing-sub {
+    font-size: 24px;
+    color: #64748b;
+    margin-bottom: 40px;
+}
+.closing-company {
+    font-size: 20px;
+    font-weight: 700;
+    color: #0f172a;
+}
+</style>
+</head>
+<body>
+
+<!-- ==================== SLIDE 01: COVER ==================== -->
+<div class="slide cover-slide">
+    <div>
+        <div class="cover-top-bar">
+            <span class="cover-top-title">PRODUCT INTRODUCTION</span>
+            <span class="cover-top-date">2026.08</span>
+        </div>
+        <hr class="cover-top-line">
+    </div>
+
+    <div class="cover-main-grid">
+        <div>
+            <div class="cover-tag">AI AGENT · DECISION INTELLIGENCE &amp; BUSINESS BI</div>
+            <h1 class="cover-brand-title">SyncInsight</h1>
+            <div class="cover-accent-bar"></div>
+            <div class="cover-catchphrase">AI Agent 기반 비즈니스 인텔리전스 및 심층 의사결정 플랫폼 (Decision Intelligence &amp; BI)</div>
+            <div class="cover-keywords">DeepResearch Intelligence · Internal ERP + External Web BigData · Dynamic BI · Autonomous Strategy Loop</div>
+            <div class="cover-agents">DeepResearch Agent · Data Fusion Agent · Strategy Generator Agent · Simulation Sandbox Agent · Action Orchestrator Agent</div>
+        </div>
+        <div class="cover-right-preview">
+            
+    <div class="mockup-window">
+        <div class="mockup-header">
+            <div class="mockup-dots">
+                <span class="dot red"></span>
+                <span class="dot yellow"></span>
+                <span class="dot green"></span>
+            </div>
+            <div class="mockup-title-bar">https://syncinsight.empasy.internal/admin/dashboard</div>
+            <div class="mockup-badge">LIVE ACTIVE</div>
+        </div>
+        <div class="mockup-body">
+    
+            <div class="mock-grid-header">
+                <div class="mock-stat-box"><span class="label">예상 추가 매출</span><span class="val" style="color:#10b981;">+3.4억원</span></div>
+                <div class="mock-stat-box"><span class="label">시장 기회 지수</span><span class="val" style="color:#3b82f6;">94.2 pt</span></div>
+                <div class="mock-stat-box"><span class="label">경쟁사 가격 동향</span><span class="val" style="color:#f59e0b;">5건 하향 감지</span></div>
+                <div class="mock-stat-box"><span class="label">전략 시뮬레이션 ROI</span><span class="val" style="color:#10b981;">340%</span></div>
+            </div>
+            <div class="mock-insight-feed">
+                <div class="feed-item urgent">
+                    <div class="f-badge">긴급 추천 전략</div>
+                    <div class="f-content">
+                        <b>[경쟁사 A사 가격 인하 대응]</b> 주요 상품 3종에 대한 10% 주말 게릴라 쿠폰 프로모션 실행 제안 (예상 추가 순이익 +4,200만원)
+                    </div>
+                    <button class="mock-btn primary">시뮬레이션 확인 및 승인</button>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    
+            
+    <div class="mockup-window">
+        <div class="mockup-header">
+            <div class="mockup-dots">
+                <span class="dot red"></span>
+                <span class="dot yellow"></span>
+                <span class="dot green"></span>
+            </div>
+            <div class="mockup-title-bar">https://syncinsight.empasy.internal/admin/fusion</div>
+            <div class="mockup-badge">LIVE ACTIVE</div>
+        </div>
+        <div class="mockup-body">
+    
+            <div class="mock-fusion-view">
+                <div class="fusion-sources">
+                    <div class="src-card">사내 ERP/결제 데이터 (SyncVerse)</div>
+                    <div class="src-op">+</div>
+                    <div class="src-card">외부 시장/경쟁사 크롤링 (SyncCrawl)</div>
+                </div>
+                <div class="fusion-matrix">
+                    <div class="f-cell header">상품 카테고리</div><div class="f-cell header">사내 판매량</div><div class="f-cell header">외부 검색량</div><div class="f-cell header">기회 점수</div>
+                    <div class="f-cell">프리미엄 구독</div><div class="f-cell">1,240건</div><div class="f-cell">48,000건 (▲)</div><div class="f-cell" style="color:#10b981;">98pt (최상)</div>
+                    <div class="f-cell">일반 단품</div><div class="f-cell">5,100건</div><div class="f-cell">21,000건 (▼)</div><div class="f-cell">62pt (보통)</div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    
+        </div>
+    </div>
+
+    <div class="cover-footer">
+        <div class="cover-team">
+            엠파시 솔루션개발팀<br>
+            <b>Empasy.</b>
+        </div>
+        <div class="cover-type-label">제 품 소 개 서</div>
+    </div>
+</div>
+
+<!-- ==================== SLIDE 02: OVERVIEW ==================== -->
+<div class="slide">
+    <div class="slide-header">
+        <span class="header-cat">02 · SyncInsight 란</span>
+        <span class="header-desc">무 엇 을 하 는 프 로 그 램 인 가</span>
+    </div>
+    <hr class="header-line">
+    <h1 class="slide-headline">사내 내부 데이터와 외부 빅데이터를 융합하여 스스로 전략을 제안하는 의사결정 두뇌입니다.</h1>
+    <p class="slide-subdesc">경영진과 현업 기획자가 의사결정을 내릴 때 씁니다. 단순한 차트 조회를 넘어, AI가 시장 기회를 탐색하고 시뮬레이션된 최적의 전략을 제안하여 즉시 실행까지 연계합니다.</p>
+
+    <div class="overview-grid">
+        <div class="overview-dark-box">
+            <div>
+                <div class="summary-tag">한 문장으로 요약</div>
+                <div class="summary-main-text">SyncVerse의 사내 운영 데이터와 SyncCrawl의 외부 시장 데이터를 교차 분석하여 DeepResearch 심층 보고서를 생성하고 실행 가능한 전략을 자율 제안하는 BI 플랫폼</div>
+            </div>
+            <div class="summary-bullet-list">
+                <div class="summary-bullet-item"><span>●</span><div><b>사내외 데이터 실시간 융합 : </b>내부 ERP/DB와 외부 시장/경쟁사 웹 데이터를 결합</div></div><div class="summary-bullet-item"><span>●</span><div><b>실행 가능한 전략 자율 도출 : </b>단순 현황 파악을 넘어 구체적인 Action Plan 제시</div></div><div class="summary-bullet-item"><span>●</span><div><b>자율 실행 연계 (A2A 루프) : </b>경영진 승인 즉시 SyncVerse를 통해 시스템에 자동 반영</div></div>
+            </div>
+        </div>
+        <div class="overview-cards-grid">
+            
+            <div class="ov-card">
+                <div class="ov-card-header">
+                    <span class="ov-card-num">01</span>
+                    <span class="ov-card-title">사내외 빅데이터 융합 분석</span>
+                </div>
+                <p class="ov-card-desc">사내 ERP/주문 데이터와 외부 웹 트렌드/경쟁사 가격을 벡터 결합하여 다차원 분석합니다.</p>
+            </div>
+            
+            <div class="ov-card">
+                <div class="ov-card-header">
+                    <span class="ov-card-num">02</span>
+                    <span class="ov-card-title">DeepResearch 심층 보고서 자동 생성</span>
+                </div>
+                <p class="ov-card-desc">수백 개 소스를 교차 검증하여 전문 컨설턴트 수준의 심층 전략 리포트를 5분 만에 생성합니다.</p>
+            </div>
+            
+            <div class="ov-card">
+                <div class="ov-card-header">
+                    <span class="ov-card-num">03</span>
+                    <span class="ov-card-title">비즈니스 What-If 사전 시뮬레이션</span>
+                </div>
+                <p class="ov-card-desc">전략 실행 시 예상 매출, 고객 유입량, 리스크 요인을 샌드박스에서 사전에 정밀 예측합니다.</p>
+            </div>
+            
+            <div class="ov-card">
+                <div class="ov-card-header">
+                    <span class="ov-card-num">04</span>
+                    <span class="ov-card-title">AI 전략 제안 및 하위 에이전트 자율 실행</span>
+                </div>
+                <p class="ov-card-desc">승인된 전략을 SyncVerse 및 하위 에이전트(CMS, Shop 등)에 즉시 전달하여 자동 실행합니다.</p>
+            </div>
+            
+        </div>
+    </div>
+
+    <div class="slide-footer">
+        <span class="footer-left">SyncInsight 제품소개서  SyncInsight 란</span>
+        <span class="footer-page">02</span>
+    </div>
+</div>
+
+<!-- ==================== SLIDE 03: STRUCTURE ==================== -->
+<div class="slide">
+    <div class="slide-header">
+        <span class="header-cat">03 · 전 체 구 조</span>
+        <span class="header-desc">한 눈 에 보 기</span>
+    </div>
+    <hr class="header-line">
+    <h1 class="slide-headline">데이터를 융합하고 시뮬레이션하여, 전략 제안부터 실행까지 연결합니다.</h1>
+    <p class="slide-subdesc">SyncInsight의 워크플로우는 세 가지 단계로 나뉩니다. 사내외 데이터를 수집·융합하고(A), DeepResearch와 시뮬레이션을 통해 최적의 전략을 도출하며(B), 인간 승인 후 하위 시스템을 자율 제어합니다(C).</p>
+
+    <div class="structure-grid">
+        <div class="struct-col light">
+            <div>
+                <div class="struct-phase">PRE-PROCESS</div>
+                <div class="struct-title">A. 데이터 수집 및 멀티소스 융합</div>
+                <div class="struct-desc">사내 운영 데이터와 외부 웹 데이터를 수집하여 통합 벡터 지식 큐브를 구축합니다.</div>
+            </div>
+            <div class="struct-items-list">
+                
+                <div class="struct-item-card">
+                    <div class="st-item-name">SyncVerse 사내 운영 데이터 연동</div>
+                    <div class="st-item-desc">● ERP, CRM, 주문/결제 데이터 실시간 수집</div>
+                </div>
+                
+                <div class="struct-item-card">
+                    <div class="st-item-name">SyncCrawl 외부 시장 빅데이터 수집</div>
+                    <div class="st-item-desc">● 경쟁사 가격, 뉴스, SNS 반응 자율 크롤링</div>
+                </div>
+                
+                <div class="struct-item-card">
+                    <div class="st-item-name">벡터 임베딩 &amp; 데이터 정제</div>
+                    <div class="st-item-desc">● 정형/비정형 데이터를 융합하여 의미론적 인덱싱</div>
+                </div>
+                
+            </div>
+        </div>
+
+        <div class="struct-col dark">
+            <div>
+                <div class="struct-phase">CORE EXECUTION</div>
+                <div class="struct-title">B. DeepResearch &amp; 시뮬레이션</div>
+                <div class="struct-desc">지능형 에이전트들이 교차 분석을 수행하고 전략 시뮬레이션 결과를 산출합니다.</div>
+            </div>
+            <div class="struct-items-list">
+                
+                <div class="struct-item-card">
+                    <div class="st-item-name">1. 다섯 에이전트 협업 분석</div>
+                    <div class="st-item-desc">● 리서치-융합-전략-시뮬레이션-실행이 연쇄 작동</div>
+                </div>
+                
+                <div class="struct-item-card">
+                    <div class="st-item-name">2. DeepResearch 심층 다차원 분석</div>
+                    <div class="st-item-desc">● 수백 개 소스를 교차 분석하여 전문 보고서 작성</div>
+                </div>
+                
+                <div class="struct-item-card">
+                    <div class="st-item-name">3. What-If 비즈니스 샌드박스</div>
+                    <div class="st-item-desc">● 전략 실행 시 예상 ROI 및 리스크 사전 모의 검증</div>
+                </div>
+                
+            </div>
+        </div>
+
+        <div class="struct-col light">
+            <div>
+                <div class="struct-phase">POST-PROCESS</div>
+                <div class="struct-title">C. 전략 제안 및 자율 실행 연동</div>
+                <div class="struct-desc">경영진 승인 후 SyncVerse를 통해 실제 시스템에 전략을 즉시 반영합니다.</div>
+            </div>
+            <div class="struct-items-list">
+                
+                <div class="struct-item-card">
+                    <div class="st-item-name">경영진 HITL 전략 승인 센터</div>
+                    <div class="st-item-desc">● 제안된 액션 플랜과 시뮬레이션 결과 최종 승인</div>
+                </div>
+                
+                <div class="struct-item-card">
+                    <div class="st-item-name">SyncVerse A2A 자율 디스패치</div>
+                    <div class="st-item-desc">● SyncCMS/Shop 등에 프로모션 생성 자동 지시</div>
+                </div>
+                
+                <div class="struct-item-card">
+                    <div class="st-item-name">KPI 가치 실현 트래킹</div>
+                    <div class="st-item-desc">● 전략 실행 후 실제 비즈니스 성과 실시간 추적</div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+    <div class="slide-footer">
+        <span class="footer-left">SyncInsight 제품소개서  전 체 구 조</span>
+        <span class="footer-page">03</span>
+    </div>
+</div>
+
+<!-- ==================== SLIDE 04: AGENTS ==================== -->
+<div class="slide">
+    <div class="slide-header">
+        <span class="header-cat">04 · 핵 심 에 이 전 트</span>
+        <span class="header-desc">A G E N T S</span>
+    </div>
+    <hr class="header-line">
+    <h1 class="slide-headline">에이전트 다섯이 기업의 전략 의사결정을 자율 보좌합니다.</h1>
+    <p class="slide-subdesc">분석 질문 한 건이 들어오면 각 특화 에이전트가 데이터를 수집하고, 시뮬레이션하며, 실행 플랜을 완성합니다.</p>
+
+    <div class="agents-list-container">
+        
+        <div class="agent-card highlight">
+            <div class="agent-left">
+                <span class="agent-num">01</span>
+                <div>
+                    <div class="agent-name">DeepResearch Agent (심층 다차원 조사 및 리포팅)</div>
+                    <p class="agent-desc">수백 개 웹 소스와 사내 데이터를 교차 검증하여 전문 컨설턴트급 보고서를 작성합니다.</p>
+                </div>
+            </div>
+            <div class="agent-badge">AI 사용 · 확인 1회</div>
+        </div>
+        
+        <div class="agent-card ">
+            <div class="agent-left">
+                <span class="agent-num">02</span>
+                <div>
+                    <div class="agent-name">Data Fusion Agent (내외부 빅데이터 융합 분석)</div>
+                    <p class="agent-desc">SyncVerse(사내 DB)와 SyncCrawl(외부 시장) 데이터를 벡터 결합하여 숨겨진 상관관계를 도출합니다.</p>
+                </div>
+            </div>
+            <div class="agent-badge">AI 사용 · 자동 수행</div>
+        </div>
+        
+        <div class="agent-card ">
+            <div class="agent-left">
+                <span class="agent-num">03</span>
+                <div>
+                    <div class="agent-name">Strategy Generator (AI 전략 및 액션 플랜 수립)</div>
+                    <p class="agent-desc">비즈니스 목표 달성을 위한 최적의 프로모션, 가격 정책, 운영 개선안을 구체적으로 수립합니다.</p>
+                </div>
+            </div>
+            <div class="agent-badge">AI 사용 · 확인 1회</div>
+        </div>
+        
+        <div class="agent-card ">
+            <div class="agent-left">
+                <span class="agent-num">04</span>
+                <div>
+                    <div class="agent-name">Simulation Sandbox (비즈니스 What-If 시뮬레이션)</div>
+                    <p class="agent-desc">전략 실행 시 예상 매출 변화, 고객 반응, 이탈률, 소요 비용을 몬테카를로 기법으로 모의 검증합니다.</p>
+                </div>
+            </div>
+            <div class="agent-badge">AI 사용 · 자동 수행</div>
+        </div>
+        
+        <div class="agent-card ">
+            <div class="agent-left">
+                <span class="agent-num">05</span>
+                <div>
+                    <div class="agent-name">Action Orchestrator (HITL 승인 및 자율 실행 제어)</div>
+                    <p class="agent-desc">승인된 전략을 SyncVerse에 즉시 디스패치하여 CMS 페이지 생성, 상품 할인 등을 자율 반영합니다.</p>
+                </div>
+            </div>
+            <div class="agent-badge">AI 사용 · 자동 수행</div>
+        </div>
+        
+    </div>
+
+    <div class="agents-bottom-box">
+        [확장성] 산업별 특화 에이전트(예: 이커머스 MD 에이전트, 금융 리스크 분석 에이전트 등)를 추가함으로써, 마케팅뿐만 아니라 공급망(SCM), 재무 전략 등 전사 영역으로 유연하게 확장할 수 있습니다.
+    </div>
+
+    <div class="slide-footer">
+        <span class="footer-left">SyncInsight 제품소개서  핵 심 에 이 전 트</span>
+        <span class="footer-page">04</span>
+    </div>
+</div>
+
+<!-- ==================== SLIDE 05: PAIN POINTS ==================== -->
+<div class="slide">
+    <div class="slide-header">
+        <span class="header-cat">05 · 유 지 보 수 현 장</span>
+        <span class="header-desc">무 엇 이 힘 든 가</span>
+    </div>
+    <hr class="header-line">
+    <h1 class="slide-headline">데이터는 쌓여 있는데, 무엇을 해야 할지 아무도 알려주지 않습니다.</h1>
+    <p class="slide-subdesc">기존 대시보드는 과거의 숫자만 보여줄 뿐입니다. 사내외 데이터는 단절되어 있고, 전략 수립과 시스템 실행 사이에는 긴 지연이 발생합니다.</p>
+
+    <div class="pain-list-container">
+        
+        <div class="pain-card">
+            <span class="pain-num">01</span>
+            <div class="pain-content">
+                <div class="pain-title">사내 데이터와 외부 시장 데이터의 단절로 종합적 의사결정 불가</div>
+                <div class="pain-desc">사내 매출은 보이지만 경쟁사 가격이나 시장 트렌드와 결합 분석이 불가능하여 원인 파악 지연</div>
+            </div>
+        </div>
+        
+        <div class="pain-card">
+            <span class="pain-num">02</span>
+            <div class="pain-content">
+                <div class="pain-title">심층 시장 분석 보고서 하나 만드는 데 수주일 소요</div>
+                <div class="pain-desc">기획자/분석가가 데이터를 추출하고 웹 서칭과 엑셀 정리를 하느라 타이밍을 놓침</div>
+            </div>
+        </div>
+        
+        <div class="pain-card">
+            <span class="pain-num">03</span>
+            <div class="pain-content">
+                <div class="pain-title">정적 대시보드(BI)는 사후 통계일 뿐 구체적 실행 대안 부재</div>
+                <div class="pain-desc">그래프가 떨어지는 것은 보이지만, 무엇을 어떻게 조치해야 하는지 해답을 주지 못함</div>
+            </div>
+        </div>
+        
+        <div class="pain-card">
+            <span class="pain-num">04</span>
+            <div class="pain-content">
+                <div class="pain-title">전략 실행 전 사전 성과 예측 및 리스크 시뮬레이션 부재</div>
+                <div class="pain-desc">새로운 프로모션이나 가격 인하 시 실제 매출과 이익률에 미칠 영향을 사전에 검증하지 못함</div>
+            </div>
+        </div>
+        
+        <div class="pain-card">
+            <span class="pain-num">05</span>
+            <div class="pain-content">
+                <div class="pain-title">분석 결과가 실제 시스템 반영으로 이어지는 데 긴 실행 지연</div>
+                <div class="pain-desc">분석 보고서가 나와도 개발팀/운영팀에 전달하여 시스템에 적용하는 데 수주가 또 소요됨</div>
+            </div>
+        </div>
+        
+    </div>
+
+    <div class="slide-footer">
+        <span class="footer-left">SyncInsight 제품소개서  유 지 보 수 현 장</span>
+        <span class="footer-page">05</span>
+    </div>
+</div>
+
+<!-- ==================== SLIDE 06: ROLE SPLIT ==================== -->
+<div class="slide">
+    <div class="slide-header">
+        <span class="header-cat">06 · 역 할 분 담</span>
+        <span class="header-desc">A I  vs  사 람</span>
+    </div>
+    <hr class="header-line">
+    <h1 class="slide-headline">AI는 심층 분석과 전략을 제안합니다. 최종 결단은 경영진이 합니다.</h1>
+    <p class="slide-subdesc">AI에게 &#x27;이번 분기 매출 극대화 전략을 제안하고 시뮬레이션해라&#x27;라고 하면 잘합니다. 최종 투자 결정과 승인은 의사결정자가 내립니다.</p>
+
+    <div class="role-grid">
+        <div class="role-col agent">
+            <div class="role-tag">01 DEEP RESEARCH / FUSION</div>
+            <div class="role-title">빅데이터 융합 분석 및 전략 초안 도출</div>
+            <div class="role-items-list">
+                <div class="role-item">사내외 데이터 실시간 결합 및 상관관계 분석</div><div class="role-item">DeepResearch 기반 전문 심층 리포트 생성</div><div class="role-item">실행 가능한 3대 최적 전략 및 액션 플랜 도출</div>
+            </div>
+        </div>
+
+        <div class="role-col human">
+            <div class="role-tag">02 HUMAN IN THE LOOP</div>
+            <div class="role-title">경영진 및 사업 리더 (사람)</div>
+            <div class="role-items-list">
+                <div class="role-item">AI가 제안한 전략과 시뮬레이션 ROI 검토</div><div class="role-item">기업 예산 및 리스크 허용 범위 최종 결정</div><div class="role-item">가장 핵심적인 의사결정 지점 (1-Click Approve)</div>
+            </div>
+        </div>
+
+        <div class="role-col engine">
+            <div class="role-tag">03 SIMULATION / ACTION</div>
+            <div class="role-title">사전 모의 검증 및 시스템 자율 실행</div>
+            <div class="role-items-list">
+                <div class="role-item">What-If 시뮬레이션을 통한 리스크 사전 검증</div><div class="role-item">SyncVerse 연동을 통한 하위 시스템 즉시 반영</div><div class="role-item">KPI 성과 지표 실시간 추적 및 피드백</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="role-bottom-summary">
+        SyncInsight를 쓰면: 경영진이 데이터 분석가를 기다릴 필요 없이, AI가 시장 기회를 포착해 시뮬레이션된 전략을 먼저 제안하고, 승인 버튼 하나로 실제 시스템에 즉시 반영됩니다. 데이터 기반 의사결정의 완전 자동화를 실현합니다.
+    </div>
+
+    <div class="slide-footer">
+        <span class="footer-left">SyncInsight 제품소개서  역 할 분 담</span>
+        <span class="footer-page">06</span>
+    </div>
+</div>
+
+<!-- ==================== SLIDES 07~13: SCREENS ==================== -->
+
+<div class="slide">
+    <div class="slide-header">
+        <span class="header-cat">07 · 화 면 1 · 경영진 통합 전략 관제</span>
+        <span class="header-desc">샘 플 화 면</span>
+    </div>
+    <hr class="header-line">
+    <h1 class="slide-headline">기업의 핵심 비즈니스 지표와 AI 제안 전략을 한눈에 관제합니다.</h1>
+    <p class="slide-subdesc">매출, 고객 획득 비용(CAC), 전환율 등 핵심 KPI와 함께 AI가 실시간으로 감지한 시장 기회 알림을 제공합니다.</p>
+
+    <div class="screen-walkthrough-grid">
+        <div class="screen-mockup-container">
+            
+    <div class="mockup-window">
+        <div class="mockup-header">
+            <div class="mockup-dots">
+                <span class="dot red"></span>
+                <span class="dot yellow"></span>
+                <span class="dot green"></span>
+            </div>
+            <div class="mockup-title-bar">https://syncinsight.empasy.internal/admin/dashboard</div>
+            <div class="mockup-badge">LIVE ACTIVE</div>
+        </div>
+        <div class="mockup-body">
+    
+            <div class="mock-grid-header">
+                <div class="mock-stat-box"><span class="label">예상 추가 매출</span><span class="val" style="color:#10b981;">+3.4억원</span></div>
+                <div class="mock-stat-box"><span class="label">시장 기회 지수</span><span class="val" style="color:#3b82f6;">94.2 pt</span></div>
+                <div class="mock-stat-box"><span class="label">경쟁사 가격 동향</span><span class="val" style="color:#f59e0b;">5건 하향 감지</span></div>
+                <div class="mock-stat-box"><span class="label">전략 시뮬레이션 ROI</span><span class="val" style="color:#10b981;">340%</span></div>
+            </div>
+            <div class="mock-insight-feed">
+                <div class="feed-item urgent">
+                    <div class="f-badge">긴급 추천 전략</div>
+                    <div class="f-content">
+                        <b>[경쟁사 A사 가격 인하 대응]</b> 주요 상품 3종에 대한 10% 주말 게릴라 쿠폰 프로모션 실행 제안 (예상 추가 순이익 +4,200만원)
+                    </div>
+                    <button class="mock-btn primary">시뮬레이션 확인 및 승인</button>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    
+        </div>
+        <div class="screen-features-container">
+            <div class="features-section-title">이 화면에서 할 수 있는 일</div>
+            <div class="features-cards-list">
+                
+                <div class="feature-card">
+                    <div class="feat-header">
+                        <span class="feat-num">01</span>
+                        <span class="feat-title">경영진 핵심 KPI 통합 스코어카드</span>
+                    </div>
+                    <p class="feat-desc">매출액, 영업이익, 고객 체류시간, 이탈률 등 핵심 지표 실시간 시각화</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feat-header">
+                        <span class="feat-num">02</span>
+                        <span class="feat-title">AI 전략 추천 피드 (Action Feeds)</span>
+                    </div>
+                    <p class="feat-desc">AI가 내외부 데이터를 분석하여 도출한 오늘의 긴급 비즈니스 제안 목록</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feat-header">
+                        <span class="feat-num">03</span>
+                        <span class="feat-title">시장 기회 및 위협 레이더</span>
+                    </div>
+                    <p class="feat-desc">경쟁사의 가격 변동 및 신규 트렌드를 조기 감지하는 인텔리전스 레이더</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feat-header">
+                        <span class="feat-num">04</span>
+                        <span class="feat-title">전략 실행 현황 및 ROI 트래커</span>
+                    </div>
+                    <p class="feat-desc">현재 진행 중인 AI 추천 전략들의 목표 달성률 및 실제 성과 추적</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feat-header">
+                        <span class="feat-num">05</span>
+                        <span class="feat-title">자연어 비즈니스 질의 바 (Q&amp;A)</span>
+                    </div>
+                    <p class="feat-desc">&#x27;지난달 대비 이탈률이 증가한 원인이 뭐야?&#x27; 자연어 질문 시 즉각 답변</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feat-header">
+                        <span class="feat-num">06</span>
+                        <span class="feat-title">부서별 성과 비교 매트릭스</span>
+                    </div>
+                    <p class="feat-desc">사업부별 목표 대비 달성률 및 기여도를 히트맵으로 비교</p>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+    <div class="slide-footer">
+        <span class="footer-left">SyncInsight 제품소개서  화 면 1 · 경영진 통합 전략 관제</span>
+        <span class="footer-page">07</span>
+    </div>
+</div>
+
+<div class="slide">
+    <div class="slide-header">
+        <span class="header-cat">08 · 화 면 2 · DeepResearch 심층 리포트</span>
+        <span class="header-desc">샘 플 화 면</span>
+    </div>
+    <hr class="header-line">
+    <h1 class="slide-headline">클릭 한 번으로 수백 개 소스를 분석한 전문 보고서가 완성됩니다.</h1>
+    <p class="slide-subdesc">사내 데이터와 외부 전문 리포트, 뉴스를 교차 분석하여 완벽한 논리와 차트가 포함된 리서치 보고서를 생성합니다.</p>
+
+    <div class="screen-walkthrough-grid">
+        <div class="screen-mockup-container">
+            
+    <div class="mockup-window">
+        <div class="mockup-header">
+            <div class="mockup-dots">
+                <span class="dot red"></span>
+                <span class="dot yellow"></span>
+                <span class="dot green"></span>
+            </div>
+            <div class="mockup-title-bar">https://syncinsight.empasy.internal/admin/report</div>
+            <div class="mockup-badge">LIVE ACTIVE</div>
+        </div>
+        <div class="mockup-body">
+    
+            <div class="mock-report-view">
+                <div class="report-cover-box">
+                    <div class="r-title">2026 3분기 이커머스 트렌드 및 경쟁사 3사 가격 탄력성 심층 분석</div>
+                    <div class="r-meta">DeepResearch Agent (교차 분석 소스: 342건 / 신뢰수준: 98.6%)</div>
+                </div>
+                <div class="report-snippets">
+                    <p><b>핵심 요약:</b> 외부 시장에서 2030 고객층의 '구독형 번들 상품' 검색량이 전년 동기 대비 210% 급증하였으며, 사내 장바구니 이탈 고객 중 42%가 해당 상품군 가격 민감층으로 확인되었습니다.</p>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    
+        </div>
+        <div class="screen-features-container">
+            <div class="features-section-title">이 화면에서 할 수 있는 일</div>
+            <div class="features-cards-list">
+                
+                <div class="feature-card">
+                    <div class="feat-header">
+                        <span class="feat-num">01</span>
+                        <span class="feat-title">심층 리서치 주제 자동 기획</span>
+                    </div>
+                    <p class="feat-desc">분석 목표 입력 시 하위 조사 질문(Sub-queries)을 자율 생성</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feat-header">
+                        <span class="feat-num">02</span>
+                        <span class="feat-title">멀티소스 교차 검증 (Cross-Check)</span>
+                    </div>
+                    <p class="feat-desc">내부 ERP 수치와 외부 통계청/시장 조사 기관 데이터를 상호 대조</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feat-header">
+                        <span class="feat-num">03</span>
+                        <span class="feat-title">경쟁사 동향 정밀 벤치마킹</span>
+                    </div>
+                    <p class="feat-desc">경쟁사 3사의 상품 라인업, 프로모션 패턴, 사용자 리뷰 감성 분석</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feat-header">
+                        <span class="feat-num">04</span>
+                        <span class="feat-title">차트 및 다이어그램 자동 렌더링</span>
+                    </div>
+                    <p class="feat-desc">본문 분석 데이터에 맞춘 고화질 인터랙티브 차트 자동 삽입</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feat-header">
+                        <span class="feat-num">05</span>
+                        <span class="feat-title">출처 및 원문 링크 명시</span>
+                    </div>
+                    <p class="feat-desc">보고서 내 모든 수치와 주장에 대해 신뢰할 수 있는 출처 주석 자동 첨부</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feat-header">
+                        <span class="feat-num">06</span>
+                        <span class="feat-title">경영진 보고용 PDF/PPT 익스포트</span>
+                    </div>
+                    <p class="feat-desc">이사회 및 임원 회의에 즉시 보고 가능한 고품질 슬라이드 포맷 출력</p>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+    <div class="slide-footer">
+        <span class="footer-left">SyncInsight 제품소개서  화 면 2 · DeepResearch 심층 리포트</span>
+        <span class="footer-page">08</span>
+    </div>
+</div>
+
+<div class="slide">
+    <div class="slide-header">
+        <span class="header-cat">09 · 화 면 3 · 내외부 빅데이터 퓨전 캔버스</span>
+        <span class="header-desc">샘 플 화 면</span>
+    </div>
+    <hr class="header-line">
+    <h1 class="slide-headline">사내 ERP 데이터와 외부 웹 크롤링 데이터를 자유롭게 결합합니다.</h1>
+    <p class="slide-subdesc">SyncVerse(내부 DB)와 SyncCrawl(외부 웹)의 이종 데이터를 드래그 앤 드롭으로 결합하여 다차원 큐브를 생성합니다.</p>
+
+    <div class="screen-walkthrough-grid">
+        <div class="screen-mockup-container">
+            
+    <div class="mockup-window">
+        <div class="mockup-header">
+            <div class="mockup-dots">
+                <span class="dot red"></span>
+                <span class="dot yellow"></span>
+                <span class="dot green"></span>
+            </div>
+            <div class="mockup-title-bar">https://syncinsight.empasy.internal/admin/fusion</div>
+            <div class="mockup-badge">LIVE ACTIVE</div>
+        </div>
+        <div class="mockup-body">
+    
+            <div class="mock-fusion-view">
+                <div class="fusion-sources">
+                    <div class="src-card">사내 ERP/결제 데이터 (SyncVerse)</div>
+                    <div class="src-op">+</div>
+                    <div class="src-card">외부 시장/경쟁사 크롤링 (SyncCrawl)</div>
+                </div>
+                <div class="fusion-matrix">
+                    <div class="f-cell header">상품 카테고리</div><div class="f-cell header">사내 판매량</div><div class="f-cell header">외부 검색량</div><div class="f-cell header">기회 점수</div>
+                    <div class="f-cell">프리미엄 구독</div><div class="f-cell">1,240건</div><div class="f-cell">48,000건 (▲)</div><div class="f-cell" style="color:#10b981;">98pt (최상)</div>
+                    <div class="f-cell">일반 단품</div><div class="f-cell">5,100건</div><div class="f-cell">21,000건 (▼)</div><div class="f-cell">62pt (보통)</div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    
+        </div>
+        <div class="screen-features-container">
+            <div class="features-section-title">이 화면에서 할 수 있는 일</div>
+            <div class="features-cards-list">
+                
+                <div class="feature-card">
+                    <div class="feat-header">
+                        <span class="feat-num">01</span>
+                        <span class="feat-title">이종 데이터 소스 드래그 앤 드롭 결합</span>
+                    </div>
+                    <p class="feat-desc">사내 PostgreSQL 테이블과 외부 수집 JSON 데이터를 마우스로 연결</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feat-header">
+                        <span class="feat-num">02</span>
+                        <span class="feat-title">AI 자동 스키마 매핑 &amp; 결측치 정제</span>
+                    </div>
+                    <p class="feat-desc">서로 다른 형식의 데이터 컬럼을 의미 기반으로 자동 매핑 및 정제</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feat-header">
+                        <span class="feat-num">03</span>
+                        <span class="feat-title">다차원 시각화 피벗 테이블</span>
+                    </div>
+                    <p class="feat-desc">시간, 지역, 상품군, 고객 세그먼트별 다차원 슬라이스 앤 다이스 분석</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feat-header">
+                        <span class="feat-num">04</span>
+                        <span class="feat-title">상관관계(Correlation) 자동 탐지</span>
+                    </div>
+                    <p class="feat-desc">외부 날씨/트렌드와 사내 특정 상품 매출 간의 상관계수 자동 계산</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feat-header">
+                        <span class="feat-num">05</span>
+                        <span class="feat-title">비정형 텍스트 감성 지수화</span>
+                    </div>
+                    <p class="feat-desc">외부 SNS 및 고객 리뷰 텍스트를 긍정/부정 감성 점수로 정량화</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feat-header">
+                        <span class="feat-num">06</span>
+                        <span class="feat-title">융합 데이터셋 API 퍼블리싱</span>
+                    </div>
+                    <p class="feat-desc">생성된 융합 분석 큐브를 타 시스템이 조회할 수 있도록 API로 발행</p>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+    <div class="slide-footer">
+        <span class="footer-left">SyncInsight 제품소개서  화 면 3 · 내외부 빅데이터 퓨전 캔버스</span>
+        <span class="footer-page">09</span>
+    </div>
+</div>
+
+<div class="slide">
+    <div class="slide-header">
+        <span class="header-cat">10 · 화 면 4 · AI 전략 제안 &amp; 실행 루프</span>
+        <span class="header-desc">샘 플 화 면</span>
+    </div>
+    <hr class="header-line">
+    <h1 class="slide-headline">분석에서 멈추지 않고, 최적의 비즈니스 실행 플랜을 먼저 제시합니다.</h1>
+    <p class="slide-subdesc">목표(예: 매출 15% 증대)를 달성하기 위한 구체적인 프로모션, 가격 정책, 타깃 세그먼트 전략을 제안합니다.</p>
+
+    <div class="screen-walkthrough-grid">
+        <div class="screen-mockup-container">
+            
+    <div class="mockup-window">
+        <div class="mockup-header">
+            <div class="mockup-dots">
+                <span class="dot red"></span>
+                <span class="dot yellow"></span>
+                <span class="dot green"></span>
+            </div>
+            <div class="mockup-title-bar">https://syncinsight.empasy.internal/admin/strategy</div>
+            <div class="mockup-badge">LIVE ACTIVE</div>
+        </div>
+        <div class="mockup-body">
+    
+            <div class="mock-strategy-view">
+                <div class="strat-options">
+                    <div class="strat-card active">
+                        <div class="st-opt">대안 A (추천)</div>
+                        <div class="st-name">구독 번들 15% 할인 + 포인트 2배</div>
+                        <div class="st-roi" style="color:#10b981;">예상 ROI: 380% (매출 +1.8억)</div>
+                    </div>
+                    <div class="strat-card">
+                        <div class="st-opt">대안 B</div>
+                        <div class="st-name">신규 가입자 전원 무료 체험</div>
+                        <div class="st-roi" style="color:#3b82f6;">예상 ROI: 210% (고객수 +40%)</div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    
+        </div>
+        <div class="screen-features-container">
+            <div class="features-section-title">이 화면에서 할 수 있는 일</div>
+            <div class="features-cards-list">
+                
+                <div class="feature-card">
+                    <div class="feat-header">
+                        <span class="feat-num">01</span>
+                        <span class="feat-title">전략 후보 3대 대안 제안</span>
+                    </div>
+                    <p class="feat-desc">공격적 성장형, 수익 극대화형, 리스크 최소화형 3가지 전략 비교 제시</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feat-header">
+                        <span class="feat-num">02</span>
+                        <span class="feat-title">세부 실행 액션 아이템 목록화</span>
+                    </div>
+                    <p class="feat-desc">마케팅 배너 제작, 할인율 설정, 대상 고객군 필터링 등 구체적 지시서 작성</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feat-header">
+                        <span class="feat-num">03</span>
+                        <span class="feat-title">예상 소요 예산 및 ROI 산출</span>
+                    </div>
+                    <p class="feat-desc">전략 실행에 필요한 마케팅 비용과 기대되는 추가 순이익 자동 계산</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feat-header">
+                        <span class="feat-num">04</span>
+                        <span class="feat-title">타깃 고객 세그먼트 자동 추출</span>
+                    </div>
+                    <p class="feat-desc">전략의 반응률이 가장 높을 것으로 예측되는 잠재 고객군 자동 선별</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feat-header">
+                        <span class="feat-num">05</span>
+                        <span class="feat-title">과거 유사 전략 성과 벤치마크</span>
+                    </div>
+                    <p class="feat-desc">과거 유사 캠페인 실행 결과와 비교하여 성공 확률 예측</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feat-header">
+                        <span class="feat-num">06</span>
+                        <span class="feat-title">원클릭 승인 및 SyncVerse 전달</span>
+                    </div>
+                    <p class="feat-desc">승인 버튼 클릭 시 하위 에이전트들에게 실행 명령 즉각 디스패치</p>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+    <div class="slide-footer">
+        <span class="footer-left">SyncInsight 제품소개서  화 면 4 · AI 전략 제안 &amp; 실행 루프</span>
+        <span class="footer-page">10</span>
+    </div>
+</div>
+
+<div class="slide">
+    <div class="slide-header">
+        <span class="header-cat">11 · 화 면 5 · What-If 시뮬레이션 샌드박스</span>
+        <span class="header-desc">샘 플 화 면</span>
+    </div>
+    <hr class="header-line">
+    <h1 class="slide-headline">전략을 실행하기 전에, 미래 성과와 리스크를 모의 실험합니다.</h1>
+    <p class="slide-subdesc">가격 변경, 프로모션 기간, 할인율 등 파라미터를 조절하며 예상 매출 곡선과 고객 반응을 시뮬레이션합니다.</p>
+
+    <div class="screen-walkthrough-grid">
+        <div class="screen-mockup-container">
+            
+    <div class="mockup-window">
+        <div class="mockup-header">
+            <div class="mockup-dots">
+                <span class="dot red"></span>
+                <span class="dot yellow"></span>
+                <span class="dot green"></span>
+            </div>
+            <div class="mockup-title-bar">https://syncinsight.empasy.internal/admin/simulation</div>
+            <div class="mockup-badge">LIVE ACTIVE</div>
+        </div>
+        <div class="mockup-body">
+    
+            <div class="mock-sim-view">
+                <div class="sim-controls">
+                    <span>할인율 조절: <b>15%</b></span>
+                    <span>예산: <b>1,500만원</b></span>
+                    <span>기간: <b>7일간</b></span>
+                </div>
+                <div class="sim-chart-curve">
+                    <div class="sim-curve-label">Monte Carlo 시뮬레이션 (10,000회 실행)</div>
+                    <div class="sim-graph-box">
+                        <span class="sim-line optimistic">낙관 시나리오: +2.4억원 (20%)</span>
+                        <span class="sim-line expected" style="color:#FF4D00;"><b>기대 시나리오: +1.8억원 (70%)</b></span>
+                        <span class="sim-line pessimistic">보수 시나리오: +0.9억원 (10%)</span>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    
+        </div>
+        <div class="screen-features-container">
+            <div class="features-section-title">이 화면에서 할 수 있는 일</div>
+            <div class="features-cards-list">
+                
+                <div class="feature-card">
+                    <div class="feat-header">
+                        <span class="feat-num">01</span>
+                        <span class="feat-title">슬라이더 기반 What-If 파라미터 조절</span>
+                    </div>
+                    <p class="feat-desc">할인율, 광고 예산, 프로모션 일수를 조절하며 실시간 결과 예측</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feat-header">
+                        <span class="feat-num">02</span>
+                        <span class="feat-title">몬테카를로 확률 분포 시뮬레이션</span>
+                    </div>
+                    <p class="feat-desc">최선의 시나리오, 평균 시나리오, 최악의 시나리오 확률 구간 시각화</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feat-header">
+                        <span class="feat-num">03</span>
+                        <span class="feat-title">고객 이탈 및 카니발라이제이션 예측</span>
+                    </div>
+                    <p class="feat-desc">신규 프로모션이 기존 정가 상품 매출을 잠식하는 위험 사전 감지</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feat-header">
+                        <span class="feat-num">04</span>
+                        <span class="feat-title">서버 트래픽 및 재고 부하 시뮬레이션</span>
+                    </div>
+                    <p class="feat-desc">이벤트 오픈 시 예상 동시접속자 및 물류 재고 소진 속도 예측</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feat-header">
+                        <span class="feat-num">05</span>
+                        <span class="feat-title">전략 간 A/B 시뮬레이션 비교</span>
+                    </div>
+                    <p class="feat-desc">서로 다른 2개 전략안의 예상 성과를 나란히 대조하여 최적안 선정</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feat-header">
+                        <span class="feat-num">06</span>
+                        <span class="feat-title">시뮬레이션 신뢰도 및 민감도 분석</span>
+                    </div>
+                    <p class="feat-desc">어느 변수가 결과에 가장 결정적인 영향을 미치는지 민감도 차트 제공</p>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+    <div class="slide-footer">
+        <span class="footer-left">SyncInsight 제품소개서  화 면 5 · What-If 시뮬레이션 샌드박스</span>
+        <span class="footer-page">11</span>
+    </div>
+</div>
+
+<div class="slide">
+    <div class="slide-header">
+        <span class="header-cat">12 · 화 면 6 · HITL 전략 승인 센터</span>
+        <span class="header-desc">샘 플 화 면</span>
+    </div>
+    <hr class="header-line">
+    <h1 class="slide-headline">AI의 제안을 최종 검토하고 시스템 자동 실행을 안전하게 승인합니다.</h1>
+    <p class="slide-subdesc">경영진 및 담당 임원이 시뮬레이션된 결과를 바탕으로 실행 여부를 최종 승인하는 안전 거버넌스 콘솔입니다.</p>
+
+    <div class="screen-walkthrough-grid">
+        <div class="screen-mockup-container">
+            
+    <div class="mockup-window">
+        <div class="mockup-header">
+            <div class="mockup-dots">
+                <span class="dot red"></span>
+                <span class="dot yellow"></span>
+                <span class="dot green"></span>
+            </div>
+            <div class="mockup-title-bar">https://syncinsight.empasy.internal/admin/approval</div>
+            <div class="mockup-badge">LIVE ACTIVE</div>
+        </div>
+        <div class="mockup-body">
+    
+            <div class="mock-approval-view">
+                <div class="app-card">
+                    <div class="app-title"><b>[경영진 전략 승인]</b> 서머 구독 번들 프로모션 자동 반영</div>
+                    <div class="app-desc">승인 시 SyncVerse를 통해 SyncCMS 배너 생성, SyncShop 할인 정책 반영, SyncBoot 포인트 룰 갱신이 원클릭 실행됩니다.</div>
+                    <div class="app-actions">
+                        <button class="mock-btn primary">전략 최종 승인 및 A2A 실행 지시</button>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    
+        </div>
+        <div class="screen-features-container">
+            <div class="features-section-title">이 화면에서 할 수 있는 일</div>
+            <div class="features-cards-list">
+                
+                <div class="feature-card">
+                    <div class="feat-header">
+                        <span class="feat-num">01</span>
+                        <span class="feat-title">전략 승인 요청 요약 카드</span>
+                    </div>
+                    <p class="feat-desc">전략 목표, 예상 ROI, 소요 예산, 실행 대상 시스템을 한눈에 요약</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feat-header">
+                        <span class="feat-num">02</span>
+                        <span class="feat-title">단계별 승인 워크플로우 지원</span>
+                    </div>
+                    <p class="feat-desc">실무 팀장 -&gt; 마케팅 상무 -&gt; 대표이사로 이어지는 결재선 지정</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feat-header">
+                        <span class="feat-num">03</span>
+                        <span class="feat-title">조건부 승인 및 파라미터 조정</span>
+                    </div>
+                    <p class="feat-desc">할인율을 20%에서 15%로 즉석 조정한 후 부분 승인 처리</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feat-header">
+                        <span class="feat-num">04</span>
+                        <span class="feat-title">비상 정지(Emergency Rollback) 정책</span>
+                    </div>
+                    <p class="feat-desc">전략 실행 후 이상 지표 감지 시 자동으로 중단하는 안전 임계값 설정</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feat-header">
+                        <span class="feat-num">05</span>
+                        <span class="feat-title">의사결정 히스토리 감사 기록</span>
+                    </div>
+                    <p class="feat-desc">누가 어떤 시뮬레이션 결과를 보고 승인했는지 감사 증적 보존</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feat-header">
+                        <span class="feat-num">06</span>
+                        <span class="feat-title">모바일 앱 원격 승인 지원</span>
+                    </div>
+                    <p class="feat-desc">외부 출장 중에도 스마트폰으로 긴급 전략 요청을 확인하고 승인</p>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+    <div class="slide-footer">
+        <span class="footer-left">SyncInsight 제품소개서  화 면 6 · HITL 전략 승인 센터</span>
+        <span class="footer-page">12</span>
+    </div>
+</div>
+
+<div class="slide">
+    <div class="slide-header">
+        <span class="header-cat">13 · 화 면 7 · KPI 가치 실현 트래커</span>
+        <span class="header-desc">샘 플 화 면</span>
+    </div>
+    <hr class="header-line">
+    <h1 class="slide-headline">실행된 전략이 실제로 얼마의 매출을 창출했는지 끝까지 추적합니다.</h1>
+    <p class="slide-subdesc">승인된 전략의 실제 성과를 실시간 집계하여 AI 예측 모델을 스스로 강화하고 ROI를 증명합니다.</p>
+
+    <div class="screen-walkthrough-grid">
+        <div class="screen-mockup-container">
+            
+    <div class="mockup-window">
+        <div class="mockup-header">
+            <div class="mockup-dots">
+                <span class="dot red"></span>
+                <span class="dot yellow"></span>
+                <span class="dot green"></span>
+            </div>
+            <div class="mockup-title-bar">https://syncinsight.empasy.internal/admin/kpi</div>
+            <div class="mockup-badge">LIVE ACTIVE</div>
+        </div>
+        <div class="mockup-body">
+    
+            <div class="mock-kpi-view">
+                <div class="kpi-real-box">
+                    <div class="kpi-row"><span>시뮬레이션 예측 매출:</span> <b>1억 8,000만원</b></div>
+                    <div class="kpi-row"><span>실제 달성 매출:</span> <b style="color:#10b981;">1억 9,240만원 (106.8%)</b></div>
+                    <div class="kpi-row"><span>순수 기여 이익 (Lift):</span> <b style="color:#FF4D00;">+5,820만원</b></div>
+                </div>
+                <div class="kpi-feedback-tag">✔ AI 전략 예측 모델 정확도 94.2% 검증 완료 ➔ 피드백 학습 반영됨</div>
+            </div>
+            
+        </div>
+    </div>
+    
+        </div>
+        <div class="screen-features-container">
+            <div class="features-section-title">이 화면에서 할 수 있는 일</div>
+            <div class="features-cards-list">
+                
+                <div class="feature-card">
+                    <div class="feat-header">
+                        <span class="feat-num">01</span>
+                        <span class="feat-title">예측치 vs 실제치 실시간 대조</span>
+                    </div>
+                    <p class="feat-desc">시뮬레이션에서 예측한 매출 곡선과 실제 발생 매출을 일자별 대조</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feat-header">
+                        <span class="feat-num">02</span>
+                        <span class="feat-title">전략별 순수 기여 매출(Lift) 산출</span>
+                    </div>
+                    <p class="feat-desc">전략을 실행하지 않았을 때(Baseline) 대비 순수 증분 이익 정밀 계산</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feat-header">
+                        <span class="feat-num">03</span>
+                        <span class="feat-title">AI 예측 모델 자가 학습(Feedback)</span>
+                    </div>
+                    <p class="feat-desc">예측 오차를 분석하여 다음 전략 수립 시 모델의 정확도 자동 보정</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feat-header">
+                        <span class="feat-num">04</span>
+                        <span class="feat-title">캠페인 성과 회고 보고서 생성</span>
+                    </div>
+                    <p class="feat-desc">캠페인 종료 시 성공/실패 요인을 분석한 자동 회고 리포트 발행</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feat-header">
+                        <span class="feat-num">05</span>
+                        <span class="feat-title">전사 비즈니스 가치 대시보드</span>
+                    </div>
+                    <p class="feat-desc">SyncInsight 도입 후 누적 창출된 총 재무적 가치(ROI) 시각화</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feat-header">
+                        <span class="feat-num">06</span>
+                        <span class="feat-title">경영진 성과 알림 브리핑</span>
+                    </div>
+                    <p class="feat-desc">주요 마일스톤 달성 시 경영진 Slack/Email로 성과 축하 브리핑 발송</p>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+    <div class="slide-footer">
+        <span class="footer-left">SyncInsight 제품소개서  화 면 7 · KPI 가치 실현 트래커</span>
+        <span class="footer-page">13</span>
+    </div>
+</div>
+
+<!-- ==================== SLIDE 14: JOURNEY ==================== -->
+<div class="slide">
+    <div class="slide-header">
+        <span class="header-cat">14 · 담 당 자 가  하 는  일</span>
+        <span class="header-desc">에 이 전 트 와  사 람</span>
+    </div>
+    <hr class="header-line">
+    <h1 class="slide-headline">경영진이 하는 일은 시뮬레이션된 전략을 &#x27;승인&#x27;하는 것입니다.</h1>
+    <p class="slide-subdesc">데이터를 모으고, 심층 분석하며, 전략을 수립하고 모의 실험하는 일은 AI 에이전트가 합니다. 의사결정자는 제안된 전략과 ROI를 보고 승인만 해 주시면 됩니다.</p>
+
+    <div class="journey-grid">
+        <div class="journey-card light">
+            <div>
+                <div class="j-tag">STEP 01</div>
+                <div class="j-role">DEEP RESEARCH / SIMULATION</div>
+                <div class="j-title">시장 기회 포착 및 전략 시뮬레이션</div>
+            </div>
+            <div class="j-desc">사내외 데이터를 융합 분석하여 3대 최적 전략과 예상 매출, 리스크 시뮬레이션 결과를 준비해 내놓습니다.</div>
+        </div>
+
+        <div class="journey-card highlight">
+            <div>
+                <div class="j-tag">STEP 02 (주요 역할)</div>
+                <div class="j-role">경영진 / 의사결정자 (사람)</div>
+                <div class="j-title">전략과 리스크를 보고 승인합니다</div>
+            </div>
+            <div class="j-desc">시뮬레이션 결과와 소요 예산을 검토하고 실행을 최종 승인합니다. 중요한 전략 결정에 한 번 클릭합니다.</div>
+        </div>
+
+        <div class="journey-card light">
+            <div>
+                <div class="j-tag">STEP 03</div>
+                <div class="j-role">ACTION ORCHESTRATOR / SYNCVERSE</div>
+                <div class="j-title">시스템에 자동 반영하고 성과를 추적함</div>
+            </div>
+            <div class="j-desc">승인 즉시 SyncVerse를 통해 웹/앱에 프로모션을 적용하고, 실제 매출 창출액을 끝까지 추적합니다.</div>
+        </div>
+    </div>
+
+    <div class="journey-benefits-grid">
+        
+        <div class="j-benefit-card">
+            <div class="j-benefit-title">데이터 기반 초고속 결단 — 의사결정 지연이 사라집니다</div>
+            <p class="j-benefit-desc">- 시장 기회 포착부터 전략 제안과 시뮬레이션까지 수분 내에 준비되어 즉시 결단할 수 있기 때문입니다.</p>
+        </div>
+        
+        <div class="j-benefit-card">
+            <div class="j-benefit-title">완벽한 실행력 연계 — 보고서가 서랍 속에 묻히지 않습니다</div>
+            <p class="j-benefit-desc">- 승인된 분석 결과가 사람의 수작업을 거치지 않고 실제 운영 시스템에 자율 반영되기 때문입니다.</p>
+        </div>
+        
+    </div>
+
+    <div class="slide-footer">
+        <span class="footer-left">SyncInsight 제품소개서  담 당 자 가  하 는  일</span>
+        <span class="footer-page">14</span>
+    </div>
+</div>
+
+<!-- ==================== SLIDE 15: COMPARISON ==================== -->
+<div class="slide">
+    <div class="slide-header">
+        <span class="header-cat">15 · 무 엇 이  달 라 지 나</span>
+        <span class="header-desc">지 금  vs .  도 입  후</span>
+    </div>
+    <hr class="header-line">
+    <h1 class="slide-headline">지금 하시는 일과 비교하면 이렇습니다.</h1>
+    <p class="slide-subdesc">일이 완전히 없어지지는 않습니다. 지금 사람이 하던 방대한 데이터 수집과 보고서 작성, 수작업 실행이 자동화됩니다.</p>
+
+    <div class="comp-table-container">
+        <div class="comp-header-row">
+            <div class="comp-th legacy">지 금 (기존 수작업 기획/BI 방식)</div>
+            <div class="comp-th product">SYNCINSIGHT 도입 후</div>
+        </div>
+        
+        <div class="comp-row">
+            <div class="comp-cell legacy">
+                <span class="comp-label">시장 조사 및 리포팅</span>
+                <span>분석가가 수작업으로 데이터를 모아 수주간 보고서 작성</span>
+            </div>
+            <div class="comp-cell product">
+                <span class="comp-label">시장 조사 및 리포팅</span>
+                <span>DeepResearch가 수백 개 소스를 분석해 5분 내 전문 리포트 완성</span>
+            </div>
+        </div>
+        
+        <div class="comp-row">
+            <div class="comp-cell legacy">
+                <span class="comp-label">데이터 통합 분석</span>
+                <span>사내 DB와 외부 시장 데이터가 단절되어 편향된 분석</span>
+            </div>
+            <div class="comp-cell product">
+                <span class="comp-label">데이터 통합 분석</span>
+                <span>사내외 빅데이터 융합 캔버스로 다차원 교차 분석 즉시 수행</span>
+            </div>
+        </div>
+        
+        <div class="comp-row">
+            <div class="comp-cell legacy">
+                <span class="comp-label">비즈니스 전략 수립</span>
+                <span>담당자의 직관과 경험에 의존하여 시행착오 발생</span>
+            </div>
+            <div class="comp-cell product">
+                <span class="comp-label">비즈니스 전략 수립</span>
+                <span>AI가 목표 기반 최적의 실행 전략 3대 대안을 자율 도출</span>
+            </div>
+        </div>
+        
+        <div class="comp-row">
+            <div class="comp-cell legacy">
+                <span class="comp-label">전략 리스크 예측</span>
+                <span>실제 실행해 보기 전까지 성과와 부작용 파악 불가</span>
+            </div>
+            <div class="comp-cell product">
+                <span class="comp-label">전략 리스크 예측</span>
+                <span>What-If 몬테카를로 샌드박스로 예상 ROI 및 리스크 사전 검증</span>
+            </div>
+        </div>
+        
+        <div class="comp-row">
+            <div class="comp-cell legacy">
+                <span class="comp-label">분석 결과 시스템 실행</span>
+                <span>기획서 작성 후 개발/운영팀에 전달하여 수주일 지연</span>
+            </div>
+            <div class="comp-cell product">
+                <span class="comp-label">분석 결과 시스템 실행</span>
+                <span>승인 즉시 SyncVerse 연동을 통해 시스템에 무인 자율 반영</span>
+            </div>
+        </div>
+        
+        <div class="comp-row">
+            <div class="comp-cell legacy">
+                <span class="comp-label">KPI 성과 추적</span>
+                <span>캠페인 종료 후 한참 뒤에 수작업으로 정산 분석</span>
+            </div>
+            <div class="comp-cell product">
+                <span class="comp-label">KPI 성과 추적</span>
+                <span>실시간 가치 실현 트래커로 순수 기여 이익(Lift) 즉시 증명</span>
+            </div>
+        </div>
+        
+    </div>
+
+    <div class="slide-footer">
+        <span class="footer-left">SyncInsight 제품소개서  무 엇 이  달 라 지 나</span>
+        <span class="footer-page">15</span>
+    </div>
+</div>
+
+<!-- ==================== SLIDE 16: EFFECTS ==================== -->
+<div class="slide">
+    <div class="slide-header">
+        <span class="header-cat">16 · 기 대 효 과</span>
+        <span class="header-desc">지 금  말 씀  드 릴  수  있 는  것</span>
+    </div>
+    <hr class="header-line">
+    <h1 class="slide-headline">효과는 직접 써 보고 확인하시면 됩니다.</h1>
+    <p class="slide-subdesc">몇 퍼센트 줄어든다는 숫자를 먼저 말씀드리지 않겠습니다. 지금 분명히 말할 수 있는 것과, 직접 써 봐야 알 수 있는 것을 나눠 적었습니다.</p>
+
+    <div class="effects-grid">
+        <div class="effects-box sure">
+            <div class="eff-title">지 금  확 실 한  것</div>
+            <div class="eff-list">
+                <div class="eff-item">시장 조사 및 심층 보고서 작성 시간이 95% 이상 단축됩니다.</div><div class="eff-item">사내외 데이터 융합으로 의사결정의 사각지대가 사라집니다.</div><div class="eff-item">시뮬레이션을 통해 실패할 전략에 대한 예산 낭비를 사전에 막습니다.</div><div class="eff-item">전략 승인 후 실제 시스템 반영까지의 리드타임이 분 단위로 압축됩니다.</div><div class="eff-item">경영진은 감이 아닌 정밀한 시뮬레이션 데이터에 기반해 확신을 갖고 결단합니다.</div>
+            </div>
+        </div>
+
+        <div class="effects-box measure">
+            <div class="eff-title">써  보 고  재 야  아 는  것</div>
+            <div class="eff-list">
+                <div class="eff-item">AI 추천 전략 실행을 통해 증대된 신규 매출 및 영업이익 비율</div><div class="eff-item">경쟁사 가격 변동이나 시장 위협에 대한 대응 속도 단축 폭</div><div class="eff-item">What-If 사전 시뮬레이션 예측치와 실제 결과 간의 일치 정확도</div><div class="eff-item">전사 의사결정 주기(Decision Cycle Time)의 단축 수준</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="slide-footer">
+        <span class="footer-left">SyncInsight 제품소개서  기 대 효 과</span>
+        <span class="footer-page">16</span>
+    </div>
+</div>
+
+<!-- ==================== SLIDE 17: DIFFERENTIATORS ==================== -->
+<div class="slide">
+    <div class="slide-header">
+        <span class="header-cat">17 · 다 른  점</span>
+        <span class="header-desc">기 존  도 구 와 의  차 이</span>
+    </div>
+    <hr class="header-line">
+    <h1 class="slide-headline">단순히 그래프만 보여주는 대시보드(Tableau 등)와는 다릅니다.</h1>
+    <p class="slide-subdesc">과거 통계만 조회하는 BI가 아니라, 사내외 빅데이터를 융합하여 미래를 시뮬레이션하고 실행 가능한 전략을 먼저 제안하는 최상위 인텔리전스입니다.</p>
+
+    <div class="diff-list-container">
+        
+        <div class="diff-card">
+            <div class="diff-header">
+                <span class="diff-num">01</span>
+                <span class="diff-title">사내외(SyncVerse + SyncCrawl) 데이터를 실시간 결합합니다</span>
+            </div>
+            <p class="diff-desc">내부 ERP 데이터와 외부 웹 시장 트렌드를 벡터 수준에서 결합 분석하는 유일한 플랫폼입니다.</p>
+        </div>
+        
+        <div class="diff-card">
+            <div class="diff-header">
+                <span class="diff-num">02</span>
+                <span class="diff-title">단순 조회를 넘어 실행 가능한 전략(Action Plan)을 제시합니다</span>
+            </div>
+            <p class="diff-desc">차트만 띄우는 것이 아니라 &#x27;어느 상품을 몇 % 할인하고 어느 채널에 배포하라&#x27;는 구체적 대안을 냅니다.</p>
+        </div>
+        
+        <div class="diff-card">
+            <div class="diff-header">
+                <span class="diff-num">03</span>
+                <span class="diff-title">What-If 시뮬레이션 엔진을 기본 탑재했습니다</span>
+            </div>
+            <p class="diff-desc">전략 실행 시 예상되는 매출 증분, 고객 이탈, 소요 예산을 사전에 모의 실험할 수 있습니다.</p>
+        </div>
+        
+        <div class="diff-card">
+            <div class="diff-header">
+                <span class="diff-num">04</span>
+                <span class="diff-title">의사결정에서 실제 시스템 실행까지 단절 없이 이어집니다</span>
+            </div>
+            <p class="diff-desc">승인 즉시 SyncVerse 및 하위 에이전트(CMS, Shop)를 제어하여 시스템에 1초 만에 반영합니다.</p>
+        </div>
+        
+        <div class="diff-card">
+            <div class="diff-header">
+                <span class="diff-num">05</span>
+                <span class="diff-title">철저한 엔터프라이즈 HITL 정책 기반으로 안전합니다</span>
+            </div>
+            <p class="diff-desc">모든 전략 실행은 경영진의 명시적 승인을 거치며 비상 시 원클릭 롤백이 보장됩니다.</p>
+        </div>
+        
+    </div>
+
+    <div class="slide-footer">
+        <span class="footer-left">SyncInsight 제품소개서  다 른  점</span>
+        <span class="footer-page">17</span>
+    </div>
+</div>
+
+<!-- ==================== SLIDE 18: ADOPTION ==================== -->
+<div class="slide">
+    <div class="slide-header">
+        <span class="header-cat">18 · 도 입  방 안</span>
+        <span class="header-desc">시 작 하 는  법  ·  마 무 리</span>
+    </div>
+    <hr class="header-line">
+    <h1 class="slide-headline">핵심 비즈니스 질문 하나와 주력 상품군으로 시작합니다.</h1>
+    <p class="slide-subdesc">한 번에 전사 모든 사업부에 적용하지 않습니다. 가장 시급한 의사결정 과제 하나를 골라 분석해 보고 효과를 확인한 뒤 넓힙니다.</p>
+
+    <div class="adopt-phases-grid">
+        
+        <div class="adopt-card light">
+            <div class="adopt-badge">2 ~ 4주</div>
+            <div class="adopt-step-name">첫 째</div>
+            <div class="adopt-title">데이터 소스 연동 &amp; 지식 큐브 구축</div>
+            <div class="adopt-items-list">
+                <div class="adopt-item">대상 비즈니스 도메인 및 사내 DB/ERP 연동</div><div class="adopt-item">수집 대상 경쟁사 및 외부 웹 키워드(SyncCrawl) 지정</div><div class="adopt-item">DeepResearch 템플릿 및 사내 지식 임베딩 셋업</div>
+            </div>
+        </div>
+        
+        <div class="adopt-card highlight">
+            <div class="adopt-badge">4 ~ 8주</div>
+            <div class="adopt-step-name">둘 째</div>
+            <div class="adopt-title">시범 전략 도출 &amp; 시뮬레이션 검증</div>
+            <div class="adopt-items-list">
+                <div class="adopt-item">실제 비즈니스 과제로 AI 전략 제안 및 DeepResearch 리포트 생성</div><div class="adopt-item">What-If 샌드박스로 시뮬레이션 정확도 검증</div><div class="adopt-item">경영진 승인 및 SyncVerse 연동 자율 실행 테스트</div>
+            </div>
+        </div>
+        
+        <div class="adopt-card light">
+            <div class="adopt-badge">이후</div>
+            <div class="adopt-step-name">셋 째</div>
+            <div class="adopt-title">전사 의사결정 인텔리전스 확대</div>
+            <div class="adopt-items-list">
+                <div class="adopt-item">전사 모든 사업부 및 글로벌 마켓으로 분석 범위 확대</div><div class="adopt-item">사내 ERP/SCM/재무 시스템과 완전한 자율 실행 루프 연계</div><div class="adopt-item">Zero-Developer Operations &amp; Business Intelligence 완성</div>
+            </div>
+        </div>
+        
+    </div>
+
+    <div class="adopt-integration-box">
+        <div class="adopt-int-title">⚙ 이미 쓰고 계신 인프라와 연결</div>
+        <div class="adopt-int-desc">사내 ERP (SAP / Oracle ERP / 자체 DB) · 웹로그 (GA4 / Mixpanel) · 외부수집 (SyncCrawl Agent) · 중앙관제 (SyncVerse Control Tower)</div>
+    </div>
+
+    <div class="slide-footer">
+        <span class="footer-left">SyncInsight 제품소개서  도 입  방 안</span>
+        <span class="footer-page">18</span>
+    </div>
+</div>
+
+<!-- ==================== SLIDE 19: CLOSING ==================== -->
+<div class="slide closing-slide">
+    <div class="closing-brand">SyncInsight</div>
+    <div class="closing-thanks">감사합니다</div>
+    <div class="closing-sub">SyncInsight — AI Agent 기반 비즈니스 인텔리전스 및 심층 의사결정 플랫폼</div>
+    <div class="closing-company">
+        엠파시 솔루션개발팀<br>
+        <b>Empasy.</b>
+    </div>
+</div>
+
+</body>
+</html>
