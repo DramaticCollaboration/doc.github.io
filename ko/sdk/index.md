@@ -8,7 +8,7 @@ description: Spring Boot 기반 AgentScope 하네스 연동부터 첫 번째 ReA
 
 # Sync SDK 및 개발자 센터
 
-> 📄 **제품 소개서 겸 도입 제안서 다운로드**: [SyncSDK_Proposal.pdf (8p)](/downloads/proposals/SyncSDK_Proposal.pdf){target="_blank" download="SyncSDK_Proposal.pdf"} · [전체 제품군 제안서 모음](/proposals/)
+> **제품 소개서 겸 도입 제안서 다운로드**: [SyncSDK_Proposal.pdf (8p)](/downloads/proposals/SyncSDK_Proposal.pdf){target="_blank" download="SyncSDK_Proposal.pdf"} · [전체 제품군 제안서 모음](/proposals/)
 
 ## 1. 개요
 

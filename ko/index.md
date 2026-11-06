@@ -126,7 +126,7 @@ footer: Copyright © 2026 Empasy Inc. All rights reserved.
 
 ## 개요
 
-> 💡 **공식 홈페이지 안내**: 본 사이트(`doc.empasy.com`)는 **Sync Series 기술 문서 및 개발자 가이드 포털**입니다. 기업 소개, 솔루션 도입 문의 및 데스크톱 앱 다운로드는 **[엠파시 공식 홈페이지 (https://empasy.io)](https://empasy.io/)**를 방문해 주시기 바랍니다.
+> **공식 홈페이지 안내**: 본 사이트(`doc.empasy.com`)는 **Sync Series 기술 문서 및 개발자 가이드 포털**입니다. 기업 소개, 솔루션 도입 문의 및 데스크톱 앱 다운로드는 **[엠파시 공식 홈페이지 (https://empasy.io)](https://empasy.io/)**를 방문해 주시기 바랍니다.
 
 엠파시(Empasy)는 **"Empathic Synergy (공감 시너지)"**라는 핵심 가치를 바탕으로 빠르게 변화하는 비즈니스 환경에 민첩하게 대응하기 위한 차세대 소프트웨어 및 AI 에이전트 솔루션을 제공하는 기업입니다. 솔루션 기반의 SI(시스템 통합) 및 엔터프라이즈 DX 사업을 선도하며, **"변화에 최적화된 솔루션(Boon to Business by Agility)"**을 최고 가치로 내세우는 **Sync Series** 제품군을 통해 기업의 비즈니스 민첩성과 자율 운영을 지원합니다.
 

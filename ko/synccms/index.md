@@ -22,7 +22,7 @@ sort: 1
 
 # SyncCMS: 엔터프라이즈 AI 하이브리드 헤드리스 CMS
 
-> 📄 **제품 소개서 및 라이브 데모**: [SyncCMS_Proposal.pdf (8p)](/downloads/proposals/SyncCMS_Proposal.pdf){target="_blank" download="SyncCMS_Proposal.pdf"} · [🖥️ SyncCMS 라이브 데모 체험](https://sync.empasy.io/products/sync-cms#demo){target="_blank" rel="noopener"} · [🌐 제품 공식 페이지](https://empasy.io/ko/solutions/sync-cms.html){target="_blank" rel="noopener"} · [전체 제안서 모음](/proposals/)
+> **제품 소개서 및 라이브 데모**: [SyncCMS_Proposal.pdf (8p)](/downloads/proposals/SyncCMS_Proposal.pdf){target="_blank" download="SyncCMS_Proposal.pdf"} · [SyncCMS 라이브 데모 체험](https://sync.empasy.io/products/sync-cms#demo){target="_blank" rel="noopener"} · [제품 공식 페이지](https://empasy.io/ko/solutions/sync-cms.html){target="_blank" rel="noopener"} · [전체 제안서 모음](/proposals/)
 
 **SyncCMS**(`https://cms.empasy.io`)는 대고객 웹 포털, 모바일 앱 등 기업의 모든 디지털 접점에서 **Nuxt 3 SSR 고속 렌더링, Copywriter-SEO-Publisher 멀티에이전트 스웜(`CmsSwarmWorkflowService`), HTML Head 메타 정보의 동적 중앙 관리 및 차세대 AI 검색(AEO/GEO) 최적화를 제공하는 엔터프라이즈 하이브리드 헤드리스 CMS**입니다.
 
@@ -60,7 +60,7 @@ graph LR
 
 ---
 
-## 📚 공식 기술 문서 가이드 목차
+## 공식 기술 문서 가이드 목차
 
 1. [시스템 아키텍처 (Architecture)](/synccms/architecture) : Clean Architecture 4계층 및 Spring Boot 3.4+ / Nuxt 3 / AgentScope Java 기술 스택
 2. [Sync-Live-SDK 연동 가이드 (Live SDK)](/synccms/live-sdk-guide) : 프론트엔드 1줄 스크립트 임베딩(`cms.empasy.io`) 및 인라인 편집

@@ -95,7 +95,7 @@ pip install git+https://github.com/Llama-VisionLM/Llama-3.2-Vision.git
 }
 ```
 
-## 🔧 파인튜닝 방법
+## 파인튜닝 방법
 
 ### 1. **Full Fine-tuning**
 
@@ -262,7 +262,7 @@ lora_config = LoraConfig(
 model = get_peft_model(model, lora_config)
 ```
 
-## 📝 데이터 전처리 유틸리티
+## 데이터 전처리 유틸리티
 
 ```python
 # data_utils.py
@@ -336,7 +336,7 @@ python -m torch.distributed.launch \
     --save_steps 500
 ```
 
-## 🔍 평가 및 추론
+## 평가 및 추론
 
 ```python
 # evaluate.py

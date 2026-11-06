@@ -7,7 +7,7 @@ head:
       content: 공부 한것들을 적어 보아요
   - - meta
     - property: og:title
-      content: 작업 로그 놀이터 - 자유로운 작업 기록 공간 🎪
+      content: 작업 로그 놀이터 - 자유로운 작업 기록 공간 
   - - meta
     - property: og:description
       content: 이 곳은 팀원들이 자유롭게 작업 로그를 기록하고 공유하는 공간입니다. 강제 없이 필요할 때 편하게 추가할 수 있는 재미있는 작업 로그 시스템을 소개합니다.

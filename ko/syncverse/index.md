@@ -23,7 +23,7 @@ sort: 1
 
 # SyncVerse: 멀티 에이전트 자율 운영 오케스트레이션 생태계
 
-> 📄 **제품 소개서 및 라이브 데모**: [SyncVerse_Proposal.pdf (8p)](/downloads/proposals/SyncVerse_Proposal.pdf){target="_blank" download="SyncVerse_Proposal.pdf"} · [🖥️ SyncVerse 라이브 데모 체험](https://sync.empasy.io/products/sync-verse#demo){target="_blank" rel="noopener"} · [🌐 제품 공식 페이지](https://empasy.io/ko/solutions/sync-verse.html){target="_blank" rel="noopener"} · [전체 제안서 모음](/proposals/)
+> **제품 소개서 및 라이브 데모**: [SyncVerse_Proposal.pdf (8p)](/downloads/proposals/SyncVerse_Proposal.pdf){target="_blank" download="SyncVerse_Proposal.pdf"} · [SyncVerse 라이브 데모 체험](https://sync.empasy.io/products/sync-verse#demo){target="_blank" rel="noopener"} · [제품 공식 페이지](https://empasy.io/ko/solutions/sync-verse.html){target="_blank" rel="noopener"} · [전체 제안서 모음](/proposals/)
 
 > **Empasy SyncSeries AI Autonomous Operations Ecosystem**  
 > 중앙 제어 관제탑, 5-Step Spec Studio 및 AI DLC 오케스트레이션 플랫폼

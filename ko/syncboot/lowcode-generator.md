@@ -15,7 +15,7 @@ SyncBoot의 코드 생성 모듈은 데이터베이스 테이블 구조를 분�
 테이블을 선택하고 코드 생성을 실행하면 아래 구성요소가 생성됩니다.
 
 ```
-📁 생성되는 아티팩트 구성
+생성되는 아티팩트 구성
 ├── Backend (Java / Spring Boot 3)
 │   ├── SubscriptionController.java     # REST API 엔드포인트 & OpenAPI 문서 설정
 │   ├── SubscriptionService.java        # 비즈니스 로직 인터페이스
