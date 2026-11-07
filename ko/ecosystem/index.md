@@ -22,7 +22,7 @@ description: SyncSeries 7대 코어 에이전트, SyncSDK 및 6대 공통 모듈
 
 ## 2. 4-Tier 전사 아키텍처 및 핵심 모듈 구성
 
-SyncSeries 생태계는 역할과 책임에 따라 명확히 분리된 4개 계층의 7대 코어 에이전트(`SyncVerse`, `SyncInsight`, `SyncLLM`, `SyncBoot`, `SyncCMS`, `SyncShop`, `SyncOps`), QA·데이터 수집 도구(`SyncETA`, `SyncCrawl`), 자율 코딩 SDK(`SyncSDK`), 그리고 6대 공통 기반 모듈(`sync-core`, `sync-module-ai`, `sync-module-nl2sql`, `sync-module-audit`, `sync-module-deploy`, `sync-module-rag`)로 구성됩니다.
+SyncSeries 생태계는 역할과 책임에 따라 명확히 분리된 4개 계층의 8대 코어 에이전트(`SyncVerse`, `SyncInsight`, `SyncLLM`, `SyncAPIM`, `SyncBoot`, `SyncCMS`, `SyncShop`, `SyncOps`), QA·데이터 수집 도구(`SyncETA`, `SyncCrawl`), 자율 코딩 SDK(`SyncSDK`), 그리고 6대 공통 기반 모듈(`sync-core`, `sync-module-ai`, `sync-module-nl2sql`, `sync-module-audit`, `sync-module-deploy`, `sync-module-rag`)로 구성됩니다.
 
 ```mermaid
 flowchart TB
@@ -33,6 +33,7 @@ flowchart TB
     subgraph Tier2 ["Tier 2: 의사결정 인텔리전스 및 AI 게이트웨이"]
         SI["SyncInsight (Decision Intelligence)"]
         SLLM["SyncLLM (AI Gateway & FinOps)"]
+        SAPIM["SyncAPIM (API Security & Governance)"]
     end
 
     subgraph Tier3 ["Tier 3: 전문 도메인 에이전트 제품군"]
@@ -59,6 +60,7 @@ flowchart TB
 ### Tier 2: 의사결정 인텔리전스 및 AI 게이트웨이 계층
 - **SyncInsight (`sync-insight`)**: 내외부 이기종 데이터를 실시간 수집·분석하고, 2-Phase Deep Research와 Apache Calcite 기반 Safe NL2SQL을 통해 검증된 비즈니스 실행 대안을 도출합니다.
 - **SyncLLM (`sync-llm`)**: 멀티 LLM 티어 라우팅, 실시간 PII 개인정보 마스킹, Redis 시맨틱 캐시를 통한 토큰 비용 절감 및 예산 가드레일을 전담합니다.
+- **SyncAPIM (`sync-apim`)**: 4개 독립 JVM(`admin`, `receiver`, `detector`, `gateway`) 기반으로 미등록 섀도우 API 자동 발견, OpenAPI 3.0.1 명세 드리프트 진단, 6대 웹·API 공격 실시간 차단 및 8대 민감정보 동적 마스킹을 전담합니다.
 
 ### Tier 3: 전문 도메인 실행 에이전트 계층
 - **SyncBoot (`sync-boot`)**: DB 단일 원천 동적 라우팅(`sys_permission`), 무중단 환경설정 핫스왑(`sys_config`), 원격 소켓 진단기를 제공하는 전사 백오피스 표준 베이스라인입니다.

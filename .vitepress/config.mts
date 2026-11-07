@@ -12,7 +12,7 @@ export default withMermaid(
   lang: "ko-KR",
   title: "Empasy Docs (엠파시 기술 문서)",
   titleTemplate: ":title | Empasy Docs (엠파시 기술 문서)",
-  description: "엠파시(Empasy) Sync Series 공식 기술 문서 포털 - SyncVerse, SyncETA, SyncBoot, SyncCMS, SyncShop, SyncOps, SyncInsight, SyncCrawl, SyncLLM 아키텍처 및 개발 가이드",
+  description: "엠파시(Empasy) Sync Series 공식 기술 문서 포털 - SyncVerse, SyncETA, SyncBoot, SyncCMS, SyncShop, SyncOps, SyncInsight, SyncCrawl, SyncLLM, SyncAPIM 아키텍처 및 개발 가이드",
 
   rewrites: {
     "ko/:rest*": ":rest*",
@@ -30,7 +30,7 @@ export default withMermaid(
     ['meta', { name: 'author', content: '엠파시' }], // 작성자 정보
     [
       'meta',
-      { name: 'keywords', content: '엠파시, Empasy, Sync Series, SyncVerse, SyncInsight, SyncETA, SyncCrawl, SyncBoot, SyncCMS, SyncShop, SyncOps, SyncLLM, AI 에이전트, AI 오케스트레이션, FinOps' },
+      { name: 'keywords', content: '엠파시, Empasy, Sync Series, SyncVerse, SyncInsight, SyncETA, SyncCrawl, SyncBoot, SyncCMS, SyncShop, SyncOps, SyncLLM, SyncAPIM, AI 에이전트, AI 오케스트레이션, API 보안, FinOps' },
     ], //
 
     // PWA-related
@@ -162,6 +162,7 @@ new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
             items: [
               { link: "/syncboot/", text: 'SyncBoot (백엔드 프레임워크)' },
               { link: "/syncllm/", text: 'SyncLLM (AI 모델 게이트웨이)' },
+              { link: "/syncapim/", text: 'SyncAPIM (API 모니터링 및 보안)' },
             ]
           },
           {
@@ -173,8 +174,7 @@ new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
           {
             text: '아카이브',
             items: [
-              { link: "/syncadmin/", text: '[아카이브] SyncAdmin' },
-              { link: "/syncapim/", text: '[아카이브] SyncAPIM' }
+              { link: "/syncadmin/", text: '[아카이브] SyncAdmin' }
             ]
           }
         ]

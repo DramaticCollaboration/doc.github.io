@@ -30,13 +30,13 @@ hero:
 head:
   - - meta
     - name: keywords
-      content: 엠파시 기술 문서, Empasy Docs, Sync Series 매뉴얼, SyncVerse 가이드, SyncInsight, SyncETA, SyncCrawl, SyncBoot, SyncCMS, SyncShop, SyncOps, SyncLLM, MCP API 명세, 개발자 문서
+      content: 엠파시 기술 문서, Empasy Docs, Sync Series 매뉴얼, SyncVerse 가이드, SyncInsight, SyncETA, SyncCrawl, SyncBoot, SyncCMS, SyncShop, SyncOps, SyncLLM, SyncAPIM, MCP API 명세, 개발자 문서
   - - meta
     - property: og:title
       content: "엠파시 기술 문서 (Empasy Docs) - Sync Series 공식 아키텍처 및 개발 가이드"
   - - meta
     - property: og:description
-      content: "엠파시 Sync Series(SyncVerse, SyncInsight, SyncETA, SyncCrawl, SyncBoot, SyncCMS, SyncShop, SyncOps, SyncLLM) 공식 기술 문서 및 개발자 가이드 포털입니다."
+      content: "엠파시 Sync Series(SyncVerse, SyncInsight, SyncETA, SyncCrawl, SyncBoot, SyncCMS, SyncShop, SyncOps, SyncLLM, SyncAPIM) 공식 기술 문서 및 개발자 가이드 포털입니다."
   - - meta
     - property: og:image
       content: https://doc.empasy.com/images/favicon.png
@@ -105,6 +105,12 @@ features:
     details: 모델 지능형 라우팅, 실시간 토큰 비용 통제(FinOps), 시맨틱 캐싱 및 엔터프라이즈 PII 마스킹 통합 게이트웨이
     link: /syncllm/
     linkText: 문서 보기 →
+  - icon:
+      svg: '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>'
+    title: SyncAPIM (API 모니터링 및 보안 관제)
+    details: 미등록 섀도우 API 자동 발견, OpenAPI 3.0.1 명세 드리프트 진단, 6대 웹·API 공격 실시간 차단 및 8대 민감정보 동적 마스킹
+    link: /syncapim/
+    linkText: 문서 보기 →
 
 footer: Copyright © 2026 Empasy Inc. All rights reserved.
 ---
@@ -156,6 +162,11 @@ footer: Copyright © 2026 Empasy Inc. All rights reserved.
 * **핵심 기능**: 2-Phase Deep Research(원탁 토론), Apache Calcite 기반 읽기 전용 안전 자연어 데이터 조회(Safe NL2SQL), 데이터 리니지 영향도 시뮬레이션 및 RCA 자동 진단.
 * **도입 효과**: 복잡한 SQL 작성이나 별도 대시보드 개발 없이 자연어 질문만으로 필요한 지표를 확인하고 실행 가능한 후속 조치를 즉시 도출할 수 있습니다.
 
+### SyncAPIM: AI 자율 API 보안 관제 및 명세 거버넌스 플랫폼
+* **개요**: 실시간 API 패킷을 수집·분석하여 문서화되지 않은 미등록 섀도우 API를 자동 발견하고, OpenAPI 3.0.1 스펙 드리프트 진단과 웹·API 위협 차단(WAF) 및 개인정보 마스킹을 수행하는 4-JVM 고성능 보안 관제 에이전트입니다.
+* **핵심 기능**: 4개 독립 JVM(`admin`, `receiver`, `detector`, `gateway`) 성능 격리 아키텍처, OpenAPI 3.0.1 Contract Drift 비교 감사, 6대 공격(SQLi, XSS, SSRF, RCE, Path Traversal, JWT 위변조) 실시간 탐지·차단, 8대 개인·금융 민감정보 동적 마스킹, PostgreSQL 18.6 `pg_trgm` 초고속 포렌식 검색.
+* **도입 효과**: 별도의 무거운 외부 검색엔진 없이도 전체 API 인벤토리 가시성을 확보하고 미승인 API 노출 및 개인정보 유출 사고를 원천 차단합니다.
+
 ### SyncLLM: 엔터프라이즈 AI 게이트웨이 & FinOps 비용 관리
 * **개요**: 사내 여러 부서와 에이전트의 멀티 LLM API 호출을 단일 창구로 모으고 토큰 비용과 보안을 중앙 통제하는 AI 게이트웨이입니다.
 * **핵심 기능**: 질문 난이도별 모델 자동 선택(Tier 라우팅), 의미 기반 응답 캐싱(코사인 유사도 \(\ge 0.95\)), 4단계 자율 최적화 Swarm(`Cost Auditor ➔ Router Optimizer ➔ Cache Purge ➔ Budget Guard`), 개인정보(PII) 자동 마스킹.
@@ -193,9 +204,8 @@ footer: Copyright © 2026 Empasy Inc. All rights reserved.
 * **TodayCare (`오늘도 안심`)**: 스마트폰 일상 활동 센서(Life-Log) 기반 실시간 안심 신호등, 무활동 이상 징후 단계별 알림 및 지자체·복지관 연계 시니어 안심 돌봄 플랫폼입니다.
 * **AwesomeFit (`어썸핏`)**: 도도매 AI 상품 소싱부터 오픈마켓 자동 등록, 무인 발주·송장 역전송, 1:1 건별 순익 대사까지 셀러 개입도 0%를 지향하는 B2B 패션 풀필먼트 자동화 플랫폼입니다.
 
-### 아카이브 모듈 (`SyncAdmin` / `SyncAPIM`)
+### 아카이브 모듈 (`SyncAdmin`)
 * **SyncAdmin (현 전사 Vben Admin 표준으로 통합)**: Vue 3, Vite, TypeScript 및 DB 단일 원천(`sys_permission`) 동적 라우팅 기반의 백오피스 UI 표준 템플릿입니다.
-* **SyncAPIM (현 SyncLLM & Cloud Gateway로 통합)**: OAuth 2.0 / JWT 다층 보안, 실시간 트래픽 쓰로틀링(Rate Limiting) 및 API 라이프사이클 관리를 제공하는 게이트웨이 아카이브 문서입니다.
 
 ---
 

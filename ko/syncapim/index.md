@@ -1,49 +1,65 @@
 ---
-title: "SyncAPIM: Agility API Platform | 종합 API 관리 및 디지털 혁신 솔루션"
-description: SyncAPIM은 API 게이트웨이, 개발자 포털, 분석 도구 등 종합적인 API 관리 기능을 제공하여 안정적이고 효율적인 API 운영을 지원합니다. 비즈니스 민첩성을 위한 맞춤형 아키텍처를 통해 디지털 혁신을 선도하고, 강력한 보안, 최적의 성능, 개발 효율성 향상으로 새로운 비즈니스 기회를 창출합니다
+title: "SyncAPIM: AI 자율 API 보안 관제 및 명세 거버넌스 플랫폼"
+sidebarTitle: "개요"
+description: SyncAPIM은 실시간 API 트래픽 수집, 미등록 섀도우 API 자동 발견, OpenAPI 3.0.1 명세 드리프트 진단, 지능형 웹·API 공격 차단(WAF) 및 민감정보 실시간 마스킹을 제공하는 엔터프라이즈 API 보안·모니터링 에이전트 플랫폼입니다.
 head:
   - - meta
     - name: keywords
-      content: SyncAPIM, API 관리, API 플랫폼, API 게이트웨이, 개발자 포털, API 분석, 디지털 혁신, 비즈니스 민첩성, API 보안, API 성능 최적화, API 수명 주기 관리, 마이크로서비스 (MSA), 커스터마이징, 오픈소스, 엔터프라이즈 솔루션, SI 프로젝트, API 운영, API 개발, API 테스트, API 통합, 모니터링, RESTful AP
+      content: SyncAPIM, API 모니터링, API 보안, WAF, 섀도우 API 탐지, OpenAPI 3.0 스펙 진단, 개인정보 마스킹, JWT 검증, SQL 인젝션 차단, SSRF 방어, AgentScope Java, PostgreSQL 18.6
   - - meta
     - property: og:title
-      content: "SyncAPIM: Agility API Platform | 종합 API 관리 및 디지털 혁신 솔루션"
+      content: "SyncAPIM: AI 자율 API 보안 관제 및 명세 거버넌스 플랫폼"
   - - meta
     - property: og:description
-      content: SyncAPIM은 API 게이트웨이, 개발자 포털, 분석 도구 등 종합적인 API 관리 기능을 제공하여 안정적이고 효율적인 API 운영을 지원합니다. 비즈니스 민첩성을 위한 맞춤형 아키텍처를 통해 디지털 혁신을 선도하고, 강력한 보안, 최적의 성능, 개발 효율성 향상으로 새로운 비즈니스 기회를 창출합니다
+      content: SyncAPIM은 실시간 API 트래픽 수집, 미등록 섀도우 API 자동 발견, OpenAPI 3.0.1 명세 드리프트 진단, 지능형 웹·API 공격 차단(WAF) 및 민감정보 실시간 마스킹을 제공합니다.
   - - meta
     - property: og:image
       content: https://doc.empasy.com/images/favicon.png
   - - meta
     - property: og:url
       content: https://doc.empasy.com/syncapim/
-order: 1
-dir:
-  order: 3
+sort: 1
 ---
 
-# SyncAPIM: 엔터프라이즈 API 라이프사이클 게이트웨이 (아카이브)
+# SyncAPIM: AI 자율 API 보안 관제 및 명세 거버넌스 플랫폼
 
-> [!NOTE]
-> **전사 게이트웨이 통합 안내**: `SyncAPIM`의 API 라우팅, 레이트 리미팅, OAuth2/JWT 인가 및 과금 거버넌스 기능은 현재 AI 모델 게이트웨이인 **[SyncLLM](/syncllm/)** 및 각 마이크로서비스 게이트웨이(**[SyncBoot](/syncboot/) / [SyncShop Gateway](/syncshop/)**)로 통합되어 운영됩니다.
+> [!IMPORTANT]
+> **SyncSeries 4-Tier API 보안·관제 에이전트 (`SYNC_APIM`)**: `SyncAPIM`은 마이크로서비스 및 레거시 WAS 앞단에서 유통되는 모든 API 트래픽을 실시간 수집하여 **미등록 섀도우 API 자동 카탈로그화**, **OpenAPI 3.0.1 명세 드리프트 진단**, **6대 핵심 웹·API 공격 실시간 차단**, **8대 개인·금융 민감정보 동적 마스킹**을 자율 수행합니다.
 
-API 게이트웨이, 개발자 포털, 분석 도구 등 종합적인 API 관리 기능을 제공하여 안정적인 API 운영을 지원하고 개발 효율성을 향상시킵니다. 또한, API를 통해 기존 서비스와 데이터를 통합하고 새로운 서비스를 신속하게 개발하여 시장 변화에 민첩하게 대응하고 경쟁 우위를 확보하도록 돕습니다.
+## 1. 핵심 아키텍처 및 기술 표준
 
-## 주요 특징
+- **표준 네임스페이스 및 API**: `com.empasy.sync.apim` / Canonical API Prefix `/api/v1/apim/...`
+- **성능 격리형 4-JVM 멀티 프로세스 아키텍처**:
+  1. `sync-apim-admin` (포트 `18089` / `8080`): 통합 관리 콘솔 REST API, 시계열 통계 배치(`ApimTrafficAggregationService`), `SyncApimAgent` 및 MCP 서버(`/api/v1/apim/mcp`)
+  2. `sync-apim-receiver` (포트 `18090` / `8081`, TCP `5044`/`5055`): Java 25 Virtual Threads 기반 초고속 Lumberjack/Packetbeat 패킷 수신 및 Redis Stream(`job_queue`) 프로듀서
+  3. `sync-apim-detector` (포트 `18092` / `8090`): Redis Stream 컨슈머 워커, OpenAPI 3.0.1 스키마 자동 추론, 6종 WAF 위협 탐지, 8종 PII 마스킹 및 PostgreSQL 18.6 적재
+  4. `sync-apim-gateway` (포트 `18091` / `8083`): DB/Redis 실시간 연동 동적 API 차단 필터(`BlockedApiFilter`) 및 인라인 리버스 프록시 게이트웨이
+- **AI 자율 에이전트 프레임워크**: `AgentScope Java` (`io.agentscope:agentscope-harness`) 기반 스펙 드리프트 진단 및 위협 패킷 포렌식 해설
+- **PostgreSQL 18.6 단일 고성능 스토리지**: 무거운 외부 OpenSearch 클러스터를 제거하고 PostgreSQL 18.6 `JSONB` + `pg_trgm` GIN 인덱스 기반 시계열 위협·트래픽 이벤트(`wapf_detect_event`) 엔진으로 통합
+- **동적 RBAC 메뉴 거버넌스**: Vben Admin `PermissionModeEnum.BACK` 모드와 `sys_permission` 단일 원천 DB를 통해 11개 관제 화면을 역할별로 동적 공급
 
-1. 안정성: 고가용성 및 안정적인 운영 환경을 보장합니다.
-1. 보안성: OAuth 2.0, JWT, API 키를 통한 다층 보안 등 강력한 보안 기능으로 API 자산을 보호합니다. 데이터 암호화 및 무단 접근 방지를 통해 보안 위협을 감소시키고 안정적인 서비스를 제공합니다.
-1. 통합 관리: API 생성, 배포, 보안, 모니터링, 분석을 한 곳에서 처리할 수 있습니다. 정책 관리, API 관리 (중앙 등록 및 그룹 분류), API 테스트, 모니터링, 시스템 알림 기능을 포함합니다.
-1. 개발자 친화적: 직관적인 개발자 포털과 풍부한 문서화를 제공합니다.
-1. 확장성: 클라우드 네이티브 아키텍처를 통해 대규모 트래픽 처리가 가능하며 다양한 환경 및 요구사항에 유연하게 대응합니다. 표준 API 및 다양한 기술을 지원합니다.
-1. 고객 맞춤형 (Customization in Its DNA): 각 고객의 비즈니스 환경, 요구사항, 기술 스택이 다름을 인지하고, 표준 시스템의 한계를 극복하기 위해 설계되었습니다. 고객의 요구사항에 맞춰 시스템 확장 및 수정이 가능하며, 필요한 기능만 선택적으로 도입하여 비용 효율성을 높일 수 있습니다. 고객 특화 정책 개발 추가도 가능합니다. SI 프로젝트의 빠른 진행 및 통합을 지원하며, 고객의 비즈니스 목표에 최적화된 솔루션을 제공합니다.
+## 2. 주요 기능 구성
 
-## 주요 장점 및 기대 효과
+### 2.1 API 모니터링 (`perm-apim-000`)
+1. **호스트 관제 (`/waf/host`)**: 보호 대상 API 게이트웨이, WAS, 웹서버 호스트 인벤토리 등록 및 수집 에이전트 연결 상태 관제
+2. **API 카탈로그 (`/waf/endpoint`)**: 실트래픽 패킷 분석을 통한 API 엔드포인트 자동 발견, 위험도 점수 산출 및 원클릭 즉시 차단 제어
+3. **API 스펙 진단 (`/waf/api_test`)**: OpenAPI 3.0.1 명세서 대비 실제 요청·응답 스키마 불일치(Contract Drift) 및 미승인 섀도우 API 자동 판별
+4. **트래픽 통계 (`/waf/api_statistics`)**: 엔드포인트별 시계열 호출량, 호스트별 상위 호출 분포 및 엑셀 내보내기/가져오기 지원
+5. **수집 에이전트 (`/waf/agent`)**: 서비스 도메인별 트래픽 수집 에이전트 SHA-256 인증키 발급 및 대상 호스트 매핑 관리
 
-1. 비즈니스 확장: 새로운 파트너십 및 개발자 생태계 구축, API 자산 활용도 극대화.
-1. 운영 효율성 향상: API 관리 프로세스 자동화, API 개발, 배포, 운영 간소화, 개발자 만족도 증대.
-1. 비용 절감: API 수명 주기 자동화로 운영 비용 감소, 코드 생성 및 테스트 자동화로 개발 시간 단축 (전반적인 개발 효율성 포함).
-1. API 성능 최적화: API 응답 속도 향상 및 사용자 경험 개선.
-1. API 중심 생태계 구축: 내부 및 외부 개발자 협업 강화.
-1. 비즈니스 모델 확장: 새로운 API 서비스 개발 및 수익 창출, 디지털 전환 가속화, 새로운 수익 창출 기회 제공.
-1. 기업 경쟁력 강화: API 기반 혁신적인 서비스 제공 및 시장 선도, 매출 증대 실현.
+### 2.2 API 보안 방어 (`perm-apim-100`)
+1. **위협 탐지 로그 (`/waf/request`)**: SQL Injection, XSS, SSRF, RCE, Directory Traversal, JWT 서명 위변조 등 실시간 위협 패킷 원문 및 차단 여부 포렌식 조회
+2. **보안 정책 (`/waf/policy`)**: 인증, 접근제어, 데이터 암호화, 권한 인가, 네트워크 보안, 개인정보 보호, 침입 탐지 등 7대 표준 보안 정책 그룹 운영 (변경 즉시 Redis 캐시 동기화)
+3. **탐지 룰 관리 (`/waf/rule`)**: 정규식 시그니처 패턴 및 JWT 무결성 검증 옵션 정의
+4. **위협 룰 통계 (`/waf/rule_statistics`)**: 공격 유형 및 심각도 등급별 시계열 탐지 추이 및 상위 공격 룰 차트 분석
+5. **민감정보 마스킹 (`/waf/sensitivity`)**: 계좌번호, 이메일, 카드번호, 주민등록번호, 이름, 비밀번호, IP 주소, 전화번호 등 8대 민감정보 실시간 마스킹 규칙 관리
+6. **경보 메일 이력 (`/waf/warning_mails`)**: 고위험 공격 차단 및 섀도우 API 발견 시 보안 담당자 경보 발송 이력 추적
+
+## 3. 문서 구성 안내
+
+| 문서명 | 주요 다루는 내용 | 바로가기 |
+| :--- | :--- | :--- |
+| **4-JVM 아키텍처 & DB 설계** | 4개 독립 JVM 프로세스 분리 구조, Redis Stream 파이프라인, PostgreSQL 18.6 17개 도메인 테이블 상세 명세 | [아키텍처 보기 →](/syncapim/architecture) |
+| **WAF 위협 탐지 & PII 마스킹** | 섀도우 API 탐지, OpenAPI 3.0.1 Contract Drift 비교 감사, 6대 공격 탐지 룰 및 8대 민감정보 마스킹 정책 | [보안 거버넌스 보기 →](/syncapim/waf-and-pii-governance) |
+| **MCP 도구 & REST API** | `SyncVerse` 관제탑 연동 6대 MCP 도구(`apim_discover_shadow_apis` 등) 및 `/api/v1/apim` REST API 레퍼런스 | [MCP & API 보기 →](/syncapim/mcp-tools) |
+| **도입 FAQ** | 온프레미스 폐쇄망 구축, 4-JVM 성능 격리, OpenSearch 대체 아키텍처 등 자주 묻는 질문 | [FAQ 보기 →](/syncapim/enterprise-faq) |

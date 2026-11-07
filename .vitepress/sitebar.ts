@@ -48,6 +48,20 @@ const MODULE_CATEGORY_RULES: Record<string, Array<{ group: string; match: (name:
       match: (name) => ['mcp-and-agent', 'enterprise-faq'].includes(name),
     },
   ],
+  syncapim: [
+    {
+      group: '시작하기',
+      match: (name) => ['index', 'architecture'].includes(name),
+    },
+    {
+      group: 'API 보안 & 거버넌스',
+      match: (name) => ['waf-and-pii-governance'].includes(name),
+    },
+    {
+      group: '에이전트 & API',
+      match: (name) => ['mcp-tools', 'enterprise-faq'].includes(name),
+    },
+  ],
   syncops: [
     {
       group: '시작하기',
@@ -452,6 +466,10 @@ const DEFAULT_SIDEBAR_SHORT_TITLES: Record<string, Record<string, string>> = {
   },
   syncapim: {
     index: '개요',
+    architecture: '4-JVM 아키텍처 & DB 설계',
+    'waf-and-pii-governance': 'WAF 위협 탐지 & PII 마스킹',
+    'mcp-tools': 'MCP 도구 & REST API',
+    'enterprise-faq': '도입 FAQ',
   },
   study: {
     index: '연구 자료 개요',
