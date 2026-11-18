@@ -66,7 +66,7 @@ AgentScope Java (`io.agentscope:agentscope-harness`) 프레임워크와의 표�
 SyncCrawl은 기업의 인프라 환경에 맞춰 다양한 Vector DB 드라이버를 제공합니다.
 
 ```java
-// AgentScope Java + PostgreSQL 17 pgvector 기반 Vector DB 연동 예시
+// AgentScope Java + PostgreSQL 18.6 pgvector 기반 Vector DB 연동 예시
 @Bean
 public PgVectorKnowledgeStore knowledgeStore(JdbcTemplate jdbcTemplate, EmbeddingClient embeddingClient) {
     return PgVectorKnowledgeStore.builder()

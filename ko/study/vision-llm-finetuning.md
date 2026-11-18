@@ -1,4 +1,4 @@
-﻿---
+---
 title: Llama-3.2-Vision 비전 파인튜닝 가이드
 description: Llama-3.2-Vision 비전 언어 모델의 LoRA 파인튜닝 및 UI 요소 인식 최적화 절차
 head:
@@ -16,7 +16,7 @@ head:
       content: https://doc.empasy.com/images/favicon.png
   - - meta
     - property: og:url
-      content: https://doc.empasy.com/study/vision-llm-finetuning.html
+      content: https://doc.empasy.com/study/vision-llm-finetuning
 sort: 400
 ---
 
@@ -305,7 +305,7 @@ def save_dataset(dataset, output_path):
         json.dump(dataset, f, ensure_ascii=False, indent=2)
 ```
 
-##  학습 스크립트 예제
+## 학습 스크립트 예제
 
 ```bash
 #!/bin/bash
@@ -363,7 +363,7 @@ print(f"Answer: {result['answer']}")
 print(f"Confidence: {result['score']:.4f}")
 ```
 
-##  최적화 팁
+## 최적화 팁
 
 ### 1. **메모리 최적화**
 

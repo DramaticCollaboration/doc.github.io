@@ -1,17 +1,17 @@
 ---
 title: "SyncOps 시스템 아키텍처 및 데이터베이스 설계"
 sidebarTitle: "시스템 아키텍처"
-description: "SyncOps의 Spring Boot 3.5.16, AgentScope Java 4대 에이전트 스웜(TalentMatcher, RiskGuard, HandoverBriefing, DocInspector) 및 PostgreSQL 17 pgvector 도메인 스키마를 설명합니다."
+description: "SyncOps의 Spring Boot 3.5.16, AgentScope Java 4대 에이전트 스웜(TalentMatcher, RiskGuard, HandoverBriefing, DocInspector) 및 PostgreSQL 18.6 pgvector 도메인 스키마를 설명합니다."
 head:
   - - meta
     - name: keywords
-      content: SyncOps 아키텍처, AgentScope Java, PostgreSQL 17, pgvector, ops_project, ops_employee_profile, ops_resource_allocation, ops_surety_bond, ops_subcontract_payment, ops_rnd_research_note
+      content: SyncOps 아키텍처, AgentScope Java, PostgreSQL 18.6, pgvector, ops_project, ops_employee_profile, ops_resource_allocation, ops_surety_bond, ops_subcontract_payment, ops_rnd_research_note
   - - meta
     - property: og:title
       content: "SyncOps 시스템 아키텍처 및 데이터베이스 설계"
   - - meta
     - property: og:description
-      content: "듀얼단가 손익 계산 엔진, 하도급법 컴플라이언스 감시기 및 PostgreSQL 17 도메인 데이터 모델 명세"
+      content: "듀얼단가 손익 계산 엔진, 하도급법 컴플라이언스 감시기 및 PostgreSQL 18.6 도메인 데이터 모델 명세"
   - - meta
     - property: og:image
       content: https://doc.empasy.com/images/logo.png
@@ -23,7 +23,7 @@ sort: 2
 
 # SyncOps 시스템 아키텍처 및 데이터베이스 설계
 
-`SyncOps`는 **Java 25**, **Spring Boot 3.5.16**, **AgentScope Java (`io.agentscope:agentscope-harness`)**, **PostgreSQL 17 (`pgvector`)**, **Vue 3 + Vben Admin (`@empasy/sync-ops-admin`)** 표준 기술 스택 위에 구축된 엔터프라이즈 PMO 도메인 에이전트 플랫폼입니다.
+`SyncOps`는 **Java 25**, **Spring Boot 3.5.16**, **AgentScope Java (`io.agentscope:agentscope-harness`)**, **PostgreSQL 18.6 (`pgvector`)**, **Vue 3 + Vben Admin (`@empasy/sync-ops-admin`)** 표준 기술 스택 위에 구축된 엔터프라이즈 PMO 도메인 에이전트 플랫폼입니다.
 
 ---
 
@@ -45,7 +45,7 @@ flowchart TD
         DI["DocInspector\n(KOSA 등급 판정 & 연구노트 SHA-256 검증)"]
     end
 
-    subgraph DomainDB ["PostgreSQL 17 + pgvector (ops_* 도메인 스키마)"]
+    subgraph DomainDB ["PostgreSQL 18.6 + pgvector (ops_* 도메인 스키마)"]
         Emp[("ops_employee / ops_employee_profile\nops_skill_tag / ops_career_kosa")]
         Proj[("ops_project / ops_assignment\nops_resource_allocation / ops_timesheet")]
         Cont[("ops_contract_client / ops_contract_vendor\nops_guarantee_insurance (ops_surety_bond)\nops_vendor_milestone (ops_subcontract_payment)")]

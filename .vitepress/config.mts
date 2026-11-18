@@ -138,7 +138,7 @@ new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
       { text: "홈", link: "/" },
       {
         text: '제품 안내 (Sync Series)',
-        activeMatch: "^/(syncverse|syncinsight|synceta|synccrawl|syncboot|synccms|syncshop|syncops|syncllm|syncadmin|syncapim|syncwatch)/",
+        activeMatch: "^/(syncverse|syncinsight|synceta|synccrawl|syncboot|synccms|syncshop|syncops|syncllm|syncapim|syncwatch|proposals)/",
         items: [
           {
             text: '관제 및 테스트',
@@ -170,12 +170,6 @@ new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
             text: '소개서 및 도입 제안서',
             items: [
               { link: "/proposals/", text: '전 제품 소개서·제안서 PDF 다운로드' },
-            ]
-          },
-          {
-            text: '아카이브',
-            items: [
-              { link: "/syncadmin/", text: '[아카이브] SyncAdmin' }
             ]
           }
         ]
@@ -320,6 +314,7 @@ new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
         '/syncadmin/': generateKrSidebar('syncadmin'),
         '/syncapim/': generateKrSidebar('syncapim'),
         '/syncwatch/': generateKrSidebar('syncwatch'),
+        '/proposals/': generateKrSidebar('proposals'),
         '/logs/': generateKrSidebar('logs'),
         '/study/': generateKrSidebar('study'),
     },

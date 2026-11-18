@@ -46,7 +46,7 @@ graph TD
     end
 
     subgraph "4. 데이터 및 인프라 계층 (Data & Infra Layer)"
-        RDB[("RDBMS (PostgreSQL 17 JSONB / pgvector)")]
+        RDB[("RDBMS (PostgreSQL 18.6 JSONB / pgvector)")]
         VEC[("Vector DB (PGVector 사내 지식베이스)")]
         CACHE[("Redis 분산 캐시 & Edge CDN")]
         LLM["사내 온프레미스 LLM (vLLM / Ollama)"]

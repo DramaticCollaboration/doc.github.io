@@ -16,7 +16,7 @@ head:
       content: https://doc.empasy.com/images/favicon.png
   - - meta
     - property: og:url
-      content: https://doc.empasy.com/methodology/enterprise-action-items-guide.html
+      content: https://doc.empasy.com/methodology/enterprise-action-items-guide
 sort: 91
 ---
 
@@ -155,7 +155,7 @@ flowchart TD
 * **담당자**: 경영지원팀, 프리세일즈 엔지니어, 제안 발표자
 * **실행 절차**:
   1. 법인인감증명서, 사용인감계, 국세/지방세 완납증명서, 신용평가등급확인서, 사업실적증명원, 입찰보증보험증권을 발급받아 입찰 서류를 완비합니다.
-  2. 심사위원의 예상 공격 질문 10선을 도출하고 [원칙 설명 ➔ 기술적 해결책 ➔ 검증 실적] 3단 논법의 방어 스크립트를 작성합니다.
+  2. 심사위원의 예상 공격 질문 10선을 도출하고 [원칙 설명 -> 기술적 해결책 -> 검증 실적] 3단 논법의 방어 스크립트를 작성합니다.
 * **완료 산출물**: 입찰 참가 자격 서류 일체, `제안_PT_예상_질의응답집.md`
 * **합격 판정 기준**: 입찰 서류의 유효기간과 직인 누락이 없으며, 주요 리스크 질문에 대한 답변이 준비되었는가?
 

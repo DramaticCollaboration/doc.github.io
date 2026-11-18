@@ -12,7 +12,7 @@ description: SyncSeries 7대 코어 에이전트, SyncSDK 및 6대 공통 모듈
 
 **SyncSeries**는 개별 소프트웨어가 사일로 형태로 분리되어 운영되던 전통적인 IT 환경을 탈피하여, 각 도메인 영역을 전담하는 전문 AI 에이전트들이 표준 프로토콜을 통해 상호 통신하며 엔터프라이즈 시스템을 자율적으로 기획, 구현, 검증, 운영하는 **A2A(Agent-to-Agent) 자율 운영 생태계**입니다.
 
-전사 핵심 에이전트 및 공통 모듈은 **Java 25**, **Spring Boot 3.5.16**, **AgentScope Java (`io.agentscope:agentscope-harness:2.0.2`)**, **PostgreSQL 17 (`pgvector`)** 단일 표준 기술 스택 위에서 구동되며, 세 가지 핵심 원칙을 기반으로 동작합니다:
+전사 핵심 에이전트 및 공통 모듈은 **Java 25**, **Spring Boot 3.5.16**, **AgentScope Java (`io.agentscope:agentscope-harness:2.0.2`)**, **PostgreSQL 18.6 (`pgvector`)** 단일 표준 기술 스택 위에서 구동되며, 세 가지 핵심 원칙을 기반으로 동작합니다:
 
 1. **지능형 자율 오케스트레이션**: 중앙 관제탑인 **SyncVerse**가 사용자의 고차원 비즈니스 의도를 분석하고, 최적의 하위 도메인 에이전트에게 작업을 분할·위임합니다.
 2. **표준 도구 상호운용성**: 모든 에이전트는 **Model Context Protocol (MCP)** 및 전사 단일 Canonical URL (`/api/v1/{product}/...`)을 통해 도구를 공개하고 호출합니다.
@@ -22,7 +22,7 @@ description: SyncSeries 7대 코어 에이전트, SyncSDK 및 6대 공통 모듈
 
 ## 2. 4-Tier 전사 아키텍처 및 핵심 모듈 구성
 
-SyncSeries 생태계는 역할과 책임에 따라 명확히 분리된 4개 계층의 8대 코어 에이전트(`SyncVerse`, `SyncInsight`, `SyncLLM`, `SyncAPIM`, `SyncBoot`, `SyncCMS`, `SyncShop`, `SyncOps`), QA·데이터 수집 도구(`SyncETA`, `SyncCrawl`), 자율 코딩 SDK(`SyncSDK`), 그리고 6대 공통 기반 모듈(`sync-core`, `sync-module-ai`, `sync-module-nl2sql`, `sync-module-audit`, `sync-module-deploy`, `sync-module-rag`)로 구성됩니다.
+SyncSeries 생태계는 역할과 책임에 따라 명확히 분리된 4개 계층의 11대 엔터프라이즈 AI 에이전트(`SyncVerse`, `SyncInsight`, `SyncLLM`, `SyncAPIM`, `SyncWatch`, `SyncBoot`, `SyncCMS`, `SyncShop`, `SyncOps`, `SyncETA`, `SyncCrawl`), 자율 코딩 SDK(`SyncSDK`), 그리고 6대 공통 기반 모듈(`sync-core`, `sync-module-ai`, `sync-module-nl2sql`, `sync-module-audit`, `sync-module-deploy`, `sync-module-rag`)로 구성됩니다.
 
 ```mermaid
 flowchart TB
@@ -30,21 +30,22 @@ flowchart TB
         SV["SyncVerse (A2A Central Tower / SyncETA QA & SyncCrawl 내장)"]
     end
 
-    subgraph Tier2 ["Tier 2: 의사결정 인텔리전스 및 AI 게이트웨이"]
+    subgraph Tier2 ["Tier 2: 의사결정 인텔리전스, 게이트웨이 및 보안 관측"]
         SI["SyncInsight (Decision Intelligence)"]
         SLLM["SyncLLM (AI Gateway & FinOps)"]
         SAPIM["SyncAPIM (API Security & Governance)"]
+        SWATCH["SyncWatch (Threat Intelligence & Dual Rule Compiler)"]
     end
 
     subgraph Tier3 ["Tier 3: 전문 도메인 에이전트 제품군"]
         SB["SyncBoot (Backend Foundation)"]
         SCMS["SyncCMS (Content Swarm & AEO/GEO)"]
-        SSHOP["SyncShop (8-Module Commerce MSA)"]
+        SSHOP["SyncShop (9-Module Commerce MSA)"]
         SOPS["SyncOps (SI PMO & Profit/Compliance)"]
     end
 
     subgraph Tier4 ["Tier 4: 무인 자율 코딩 런타임 및 6대 공통 모듈"]
-        SDK["SyncSDK (Multi-Engine Coding SPI)"]
+        SDK["SyncSDK (15-Engine Coding SPI)"]
         CORE["sync-core & sync-module-ai/audit/nl2sql/deploy/rag"]
     end
 
@@ -55,12 +56,13 @@ flowchart TB
 ```
 
 ### Tier 1: 중앙 관제 및 통합 오케스트레이션 계층
-- **SyncVerse (`sync-verse`)**: 생태계의 중앙 신경망 역할을 담당합니다. 5-Step Spec Studio를 통한 자율 코딩 오케스트레이션, 7대 코딩 에이전트 동적 라우팅(`CodingAgentRoutingProxy`), 다자간 HITL 결재, 그리고 내장된 비전 QA(`SyncETA` / `sync-verse-qa`) 및 적응형 크롤러(`SyncCrawl` / `sync-verse-crawl`)를 통합 관제합니다.
+- **SyncVerse (`sync-verse`)**: 생태계의 중앙 신경망 역할을 담당합니다. 5-Step Spec Studio를 통한 자율 코딩 오케스트레이션, 15대 코딩 에이전트 동적 라우팅(`CodingAgentRoutingProxy`), 다자간 HITL 결재, 그리고 내장된 비전 QA(`SyncETA` / `sync-verse-qa`) 및 적응형 크롤러(`SyncCrawl` / `sync-verse-crawl`)를 통합 관제합니다.
 
-### Tier 2: 의사결정 인텔리전스 및 AI 게이트웨이 계층
+### Tier 2: 의사결정 인텔리전스, AI 게이트웨이 및 보안 관측 계층
 - **SyncInsight (`sync-insight`)**: 내외부 이기종 데이터를 실시간 수집·분석하고, 2-Phase Deep Research와 Apache Calcite 기반 Safe NL2SQL을 통해 검증된 비즈니스 실행 대안을 도출합니다.
 - **SyncLLM (`sync-llm`)**: 멀티 LLM 티어 라우팅, 실시간 PII 개인정보 마스킹, Redis 시맨틱 캐시를 통한 토큰 비용 절감 및 예산 가드레일을 전담합니다.
 - **SyncAPIM (`sync-apim`)**: 4개 독립 JVM(`admin`, `receiver`, `detector`, `gateway`) 기반으로 미등록 섀도우 API 자동 발견, OpenAPI 3.0.1 명세 드리프트 진단, 6대 웹·API 공격 실시간 차단 및 8대 민감정보 동적 마스킹을 전담합니다.
+- **SyncWatch (`sync-watch`)**: 8대 글로벌 보안 위협 피드(OSV.dev, GitHub GHSA, NVD CVE, CISA KEV, Nuclei, OWASP CRS, MITRE ATT&CK, KISA) 및 보안 진단 문서를 수집·정규화하여 `SyncVerse`(`VerseAuditPack`)와 `SyncAPIM`(`ApimDefensePack`)에 듀얼 보안 룰을 실시간 컴파일·배포합니다.
 
 ### Tier 3: 전문 도메인 실행 에이전트 계층
 - **SyncBoot (`sync-boot`)**: DB 단일 원천 동적 라우팅(`sys_permission`), 무중단 환경설정 핫스왑(`sys_config`), 원격 소켓 진단기를 제공하는 전사 백오피스 표준 베이스라인입니다.
@@ -69,12 +71,8 @@ flowchart TB
 - **SyncOps (`sync-ops`)**: 한국형 SI 프로젝트 듀얼단가 손익, KOSA 등급 인력 매트릭스, 4대 이행보증보험, 하도급법 지급기일 감시 및 조특법 SHA-256 전자연구노트를 통합 수행합니다.
 
 ### Tier 4: 무인 자율 코딩 SDK 및 6대 공통 모듈
-- **SyncSDK (`sync-sdk`)**: 7대 코딩 에이전트 엔진(`Antigravity`, `OpenSWE`, `Goose`, `MiniSWE`, `Cline`, `KiloCode`, `Eigent`) 멀티 엔진 SPI 핫스왑과 4-Cycle 빌드 자가치유를 제공하는 자율 개발 SDK입니다.
+- **SyncSDK (`sync-sdk`)**: 15대 코딩 에이전트 엔진(`ANTIGRAVITY`, `CLAUDE_CODE`, `GITHUB_COPILOT`, `CODEX_CLI`, `GEMINI_CLI`, `CURSOR_CLI`, `OPENHANDS`, `CONTINUE`, `AIDER`, `OPENSWE`, `GOOSE`, `MINI_SWE`, `CLINE`, `KIRO`, `EIGENT`) 멀티 엔진 SPI 핫스왑과 4-Cycle 빌드 자가치유를 제공하는 자율 개발 SDK입니다.
 - **6대 공통 모듈**: `sync-core`, `sync-module-ai`, `sync-module-nl2sql`, `sync-module-audit`, `sync-module-deploy`, `sync-module-rag`.
-
-### Vertical Services: 완성형 비즈니스 버티컬 서비스 (`services/`)
-- **TodayCare (`services/today-care`)**: 스마트폰 센서 활동 데이터(Life-Log) 기반 실시간 안심 신호등, 무활동 이상 징후 단계별 알림 및 지자체·복지관 연계 시니어 안심 돌봄 서비스입니다.
-- **AwesomeFit (`services/awesome-fit`)**: 도도매 AI 상품 소싱부터 오픈마켓 자동 등록, 무인 발주·송장 역전송, 1:1 건별 순익 대사까지 자동화하는 B2B 패션 풀필먼트 위탁운영 서비스입니다.
 
 ---
 

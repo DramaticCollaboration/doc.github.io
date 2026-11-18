@@ -87,9 +87,9 @@ graph TD
 
 | 단계 | 데이터 주체 | 데이터 포맷 | 설명 |
 | :--- | :--- | :--- | :--- |
-| **1. Capture** | Browser ➔ Recorder | `Raw Event Object` | 좌표, 타임스탬프, 이벤트 타입, 원시 DOM 스니펫 |
-| **2. Store** | Recorder ➔ PostgreSQL | `Scenario JSON` | 정규화된 스텝 목록, 변수 바인딩 키, 대기/검증 조건 |
-| **3. Dispatch** | CI/CD ➔ MCP Server | `MCP Tool Call (JSON)` | `scenario_id`, `browser_type`, `viewport`, `dataset_id` |
-| **4. Execute** | MCP Server ➔ Playwright | `Headless Context` | 격리된 브라우저 인스턴스에서 스크립트 실행 |
-| **5. Collect** | Playwright ➔ Storage | `Result Payload` | 통과 여부, 소요 시간, 실패 DOM, 콘솔 로그, MP4 비디오 |
-| **6. Analyze** | Storage ➔ Vision Engine | `Visual Diff Request` | 기준 이미지와 현재 이미지 간의 시각적 오차 분석 |
+| **1. Capture** | Browser -> Recorder | `Raw Event Object` | 좌표, 타임스탬프, 이벤트 타입, 원시 DOM 스니펫 |
+| **2. Store** | Recorder -> PostgreSQL | `Scenario JSON` | 정규화된 스텝 목록, 변수 바인딩 키, 대기/검증 조건 |
+| **3. Dispatch** | CI/CD -> MCP Server | `MCP Tool Call (JSON)` | `scenario_id`, `browser_type`, `viewport`, `dataset_id` |
+| **4. Execute** | MCP Server -> Playwright | `Headless Context` | 격리된 브라우저 인스턴스에서 스크립트 실행 |
+| **5. Collect** | Playwright -> Storage | `Result Payload` | 통과 여부, 소요 시간, 실패 DOM, 콘솔 로그, MP4 비디오 |
+| **6. Analyze** | Storage -> Vision Engine | `Visual Diff Request` | 기준 이미지와 현재 이미지 간의 시각적 오차 분석 |

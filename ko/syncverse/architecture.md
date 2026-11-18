@@ -159,7 +159,7 @@ SyncVerse는 엔터프라이즈 환경의 대규모 트래픽과 무중단 운�
 | **AI Framework** | **AgentScope Java** (`io.agentscope:agentscope-harness`) | 전사 표준 AI 프레임워크, 멀티 에이전트 협업 MsgHub, ReActAgent 자율 Tool 실행 |
 | **Frontend UI** | Vue 3, TypeScript, Vite, **Vue Flow** | 노드-엣지 토폴로지 시각화, 관제 대시보드 |
 | **State & Cache** | Redis 7.x (Cluster) | 에이전트 실시간 상태 공유, 시맨틱 캐싱, 분산 락 |
-| **Database** | PostgreSQL 17 (`pgvector`) | RDBMS 데이터 정합성, JSONB 감사 로그 및 벡터 임베딩 영속화 |
+| **Database** | PostgreSQL 18.6 (`pgvector`) | RDBMS 데이터 정합성, JSONB 감사 로그 및 벡터 임베딩 영속화 |
 | **Infrastructure** | Docker, Kubernetes, GitHub Actions | 컨테이너 기반 격리 실행, CI/CD 배포 파이프라인 |
 
 ---
@@ -183,7 +183,7 @@ graph TD
     end
 
     subgraph CenterTower ["SyncVerse 중앙 관제탑"]
-        RegEndpoint["POST /api/agents/register"]
+        RegEndpoint["POST /api/v1/verse/agents/register"]
     end
 
     AsyncReg -.->|오프라인 시에도 부팅 지연 0ms 보장| RegEndpoint

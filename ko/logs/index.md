@@ -24,7 +24,7 @@ sort: 1
 
 본 공간은 엠파시 엔지니어링 팀이 실제 프로덕션 환경 및 릴리즈 빌드 과정에서 마주한 **기술적 장애, 메모리 누수, 동시성 병목, 빌드 서명 오류**의 근본 원인(Root Cause)을 추적하고 해결한 실무 엔지니어링 일지입니다.
 
-단순한 작업 일람을 넘어, **재현 환경 ➔ 근본 원인 분석(RCA) ➔ 해결책 검증 ➔ 재발 방지 대책**의 표준 포스트모텀(Post-Mortem) 양식으로 체계화되어 있습니다.
+단순한 작업 일람을 넘어, **재현 환경 -> 근본 원인 분석(RCA) -> 해결책 검증 -> 재발 방지 대책**의 표준 포스트모텀(Post-Mortem) 양식으로 체계화되어 있습니다.
 
 ---
 
@@ -34,8 +34,8 @@ sort: 1
 - **[2026-02-10: Electron 멀티 웹뷰 DOM 스냅샷 메모리 누수 분석 및 해결](./20260210_electron_webview_memory_leak)**: 50개 이상 연속 시나리오 녹화 시 렌더러 프로세스 V8 힙 고갈 원인 규명 및 메모리 해제 최적화.
 - **[2026-02-18: 지연 로딩 컴포넌트 대상 Playwright 액션 타임아웃 안정화](./20260218_playwright_dynamic_timeout_stabilization)**: 무한 스크롤 및 지연 마운트 환경에서의 가상 스크롤 앵커 대기 메커니즘 개선.
 - **[2026-03-10: Windows Authenticode 서명 및 Apple Notarization 무인 배포 구축](./20260310_desktop_codesign_notarization_pipeline)**: GitHub Actions 러너 기반의 EV 인증서 코드 사이닝 및 macOS 게이트키퍼 통과 파이프라인.
-- **[2025-08-27: 데스크톱 디버그 크래시 분석](./20250827_debugCrash)**: 네이티브 브라우저 바인딩 충돌 분석.
-- **[2025-08-27: Electron 개발 환경 디버깅 일지](./20250827_electronDebug)**: 핫 리로딩 시 메인 프로세스 IPC 리스너 중복 등록 제거.
+- **[2025-08-27: 데스크톱 디버그 크래시 분석](./20250827_debugCrash)**: Linux inotify 파일 워처 한도 초과(`ENOSPC: System limit for number of file watchers reached`) 트러블슈팅.
+- **[2025-08-27: Electron 개발 환경 디버깅 일지](./20250827_electronDebug)**: IntelliJ Electron 메인 프로세스 원격 디버거(`ws://127.0.0.1:5858`) 연결 및 브레이크포인트 설정 가이드.
 
 ### 2. SyncVerse & SyncBoot (관제탑 & MSA 백엔드)
 - **[2026-02-25: Redis Redlock 및 SSE 기반 멀티 에이전트 트랜잭션 동기화 장애 복구](./20260225_redis_redlock_sse_saga_orchestration)**: 네트워크 파티션 발생 시 분산 락 타임아웃 갱신 실패 및 Saga 롤백 동기화 이슈 해결.
@@ -48,4 +48,18 @@ sort: 1
 1. **비난 없는 사후 검토 (Blameless Post-Mortem)**: 시스템 구조와 프로세스 취약점에 집중하여 실패를 조직적 자산으로 전환합니다.
 2. **정확한 메트릭 기반 기록**: 장애 발생 시점(T0), 인지 시점(T1), 완화 시점(T2), 완전 해결 시점(T3)의 타임라인을 명시합니다.
 3. **코드 레벨 변경점 명시**: 패치 전/후의 소스 코드 Diff를 포함하여 후속 엔지니어가 즉시 참조할 수 있도록 합니다.
+
+---
+
+## 장애 등급 및 대응 타임라인 요약 매트릭스
+
+| 일지 ID | 대상 제품 | 핵심 기술 영역 | 해결 전 증상 | 해결 후 정량 개선 지표 |
+| :--- | :--- | :--- | :--- | :--- |
+| **`20260210`** | `SyncETA` | Electron Webview / V8 Heap | 50회 연속 녹화 시 렌더러 OOM 크래시 | 메모리 점유량 **68% 감소**, 500회 연속 녹화 무장애 |
+| **`20260218`** | `SyncETA` | Playwright / Virtual Scroll | 지연 마운트 그리드에서 간헐적 Timeout | 동적 타임아웃 안정화로 Flaky 실패율 **0.2% 미만** 달성 |
+| **`20260225`** | `SyncVerse` | Redis Redlock / SSE Saga | 네트워크 순단 시 분산 락 갱신 누락 | Watchdog 자동 연장 및 보상 롤백 정합성 **100% 보장** |
+| **`20260302`** | `SyncBoot` | Java 25 Virtual Threads | 비동기 작업 시 `ThreadLocal` 테넌트 유실 | `ScopedValue` 전환으로 멀티테넌트 격리 누수 **0건** |
+| **`20260310`** | `SyncETA` | Windows EV / macOS Notarization | 수동 코드 서명으로 릴리즈 2시간 소요 | GitHub Actions 무인 서명·공증 파이프라인 **12분 이내 완결** |
+| **`20250827-A`** | `SyncETA` | Linux `inotify` Watcher | 개발 서버 구동 중 `ENOSPC` 프로세스 종료 | `fs.inotify.max_user_watches=524288` 영구 튜닝 표준화 |
+| **`20250827-B`** | `SyncETA` | IntelliJ / V8 Inspector | Electron 메인 프로세스 브레이크포인트 미작동 | `ws://127.0.0.1:5858` 원격 디버거 소켓 직결 절차 수립 |
 

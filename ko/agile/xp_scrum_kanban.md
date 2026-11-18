@@ -16,7 +16,7 @@ head:
       content: https://doc.empasy.com/images/favicon.png
   - - meta
     - property: og:url
-      content: https://doc.empasy.com/agile/xp_scrum_kanban.html
+      content: https://doc.empasy.com/agile/xp_scrum_kanban
 sort: 8000
 ---
 

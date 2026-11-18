@@ -16,7 +16,7 @@ head:
       content: https://doc.empasy.com/images/favicon.png
   - - meta
     - property: og:url
-      content: https://doc.empasy.com/agile/createIssue.html
+      content: https://doc.empasy.com/agile/createIssue
 sort: 7000
 ---
 

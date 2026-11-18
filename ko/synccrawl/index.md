@@ -62,12 +62,36 @@ graph LR
 
 | 구분 | 지원 기술 및 사양 |
 | :--- | :--- |
-| **코어 백엔드** | Java 25, Spring Boot 3.5.16, AgentScope Java (`io.agentscope:agentscope-harness:2.0.2`), Flyway |
+| **코어 백엔드** | Java 25, Spring Boot 3.5.16, AgentScope Java (`io.agentscope:agentscope-harness:2.0.2`), 6-File DB SSOT Standard (`db/00_extensions.sql` ~ `05_sample_dev.sql`) |
 | **브라우저 자동화** | Playwright MCP, Headless Chromium, 분산 Worker |
-| **스토리지 및 캐시** | PostgreSQL, Redis, MinIO / S3 오브젝트 스토리지 |
-| **벡터 데이터베이스** | PGVector, Milvus, Qdrant, Weaviate |
+| **스토리지 및 캐시** | PostgreSQL 18.6, Redis, MinIO / S3 오브젝트 스토리지 |
+| **벡터 데이터베이스** | PostgreSQL 18.6 `pgvector`, Milvus, Qdrant, Weaviate |
 | **운영 콘솔** | Vue 3, Vite, TypeScript, Quasar Design System |
 | **배포 인프라** | Docker Multi-Arch (amd64/arm64), Kubernetes(AKS), Air-Gapped Runner |
+
+---
+
+## 실제 구동 화면 및 핵심 워크플로우
+
+### 1. 적응형 웹 수집 파이프라인 및 워커 클러스터 관제 대시보드
+분산 브라우저 워커의 실시간 수집 처리량, DOM 셀렉터 자가치유 성공률, RAG 벡터 인덱싱 진행 현황을 통합 관제합니다.
+
+![SyncCrawl 웹 수집 파이프라인 관제 대시보드](/images/screenshots/sync-crawl/screen_01.png)
+
+### 2. 자연어 기반 수집 대상 사이트 등록 및 셀렉터 자가치유 설정
+복잡한 CSS/XPath 작성 없이 자연어 수집 목표와 추출 스키마를 정의하고, 웹사이트 개편 시 시맨틱 DOM 추론 기반 자동 복구 정책을 구성합니다.
+
+![SyncCrawl 수집 대상 사이트 및 시나리오 관리](/images/screenshots/sync-crawl/screen_02.png)
+
+### 3. 정제 마크다운 추출 결과 프리뷰 및 RAG 벡터 인덱싱
+광고·네비게이션 노이즈가 제거된 구조화 마크다운 문서와 PostgreSQL 18.6 `pgvector` 시맨틱 청크 임베딩 적재 결과를 실시간 검증합니다.
+
+![SyncCrawl 수집 데이터 및 마크다운 정제 결과](/images/screenshots/sync-crawl/screen_03.png)
+
+### 4. 수집 허용 정책 점검 · 저작권 위험도 및 개인정보 비식별화 감사
+수집 작업별 `robots.txt` 허용 정책, 대기 시간, 저작권 위험 등급 및 이메일·전화번호 등 개인정보 비식별화 완료 여부를 전수 감사합니다.
+
+![SyncCrawl 수집 규정 점검 및 개인정보 비식별화 감사](/images/screenshots/sync-crawl/screen_04.png)
 
 ---
 

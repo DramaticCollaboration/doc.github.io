@@ -115,7 +115,31 @@ sequenceDiagram
 
 ---
 
+## 실제 구동 화면 및 핵심 워크플로우
+
+### 1. 경영진 종합 대시보드 및 수주 프로젝트 손익 관제
+전사 수주 계약 총액, 프로젝트별 실시간 영업이익률, 인력 가동률(M/M) 및 법무 컴플라이언스 경보를 단일 경영 대시보드에서 관제합니다.
+
+![SyncOps 경영진 종합 손익 대시보드](/images/screenshots/sync-ops/screen_01.png)
+
+### 2. 발주처 계약단가 대 실투입원가 듀얼단가 손익 매트릭스
+발주처 청구단가와 정규직·프리랜서·하도급 실투입원가를 분리 집계하여 고객사·프로젝트·부서·기간별 공헌이익을 실시간 분석합니다.
+
+![SyncOps 듀얼단가 손익 피벗 매트릭스](/images/screenshots/sync-ops/screen_02.png)
+
+### 3. 4대 이행보증보험 만기 추적 및 하도급법 지급기일 감시
+입찰·계약·선급금·하자 보증증권 갱신 D-Day와 하도급 대금 법정 지급기한(수령 후 15일, 검수 후 60일) 및 지연이자를 자동 계산하여 법적 리스크를 차단합니다.
+
+![SyncOps 보증보험 및 하도급법 컴플라이언스 감시](/images/screenshots/sync-ops/screen_03.png)
+
+### 4. KOSA 기술등급 인력 매트릭스, 가동률 간트 및 전자연구노트
+KOSA 소프트웨어 기술자 등급별 프로젝트 투입 일정(간트차트)과 초과 배정 여부를 시각화하고, 시점인증 전자연구노트를 관리합니다.
+
+![SyncOps 인력 배정 간트차트 및 가동률 관제](/images/screenshots/sync-ops/screen_04.png)
+
+---
+
 ## 4. 공식 기술 문서 목차
 
-- **[시스템 아키텍처 및 DB 스키마](./architecture)**: AgentScope Java 4대 내부 에이전트 스웜, 듀얼단가 손익 엔진, PostgreSQL 17 도메인 스키마(`ops_*`) 상세 명세
+- **[시스템 아키텍처 및 DB 스키마](./architecture)**: AgentScope Java 4대 내부 에이전트 스웜, 듀얼단가 손익 엔진, PostgreSQL 18.6 도메인 스키마(`ops_*`) 상세 명세
 - **[MCP 도구 및 REST API 레퍼런스](./mcp-tools)**: `ops_analyze_project_profitability`, `ops_check_allocation_overload`, `ops_audit_subcontract_payment`, `ops_verify_rnd_note_hash` 도구 규격 및 `/api/v1/ops/...` API 가이드

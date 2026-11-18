@@ -66,7 +66,7 @@ SyncCrawl은 무중단 배포와 독립적 스케일아웃을 위해 4개의 분
 
 | 컨테이너 이미지 | 기술 스택 | 핵심 역할 및 기능 |
 | :--- | :--- | :--- |
-| **`smart-crawling-server`** | Java 25, Spring Boot 3.5.16, AgentScope Java (`io.agentscope:agentscope-harness`), Flyway | API 엔드포인트 제공, 수집 작업 스케줄링(Quartz), AI 작업 계획 수립, RAG 벡터 인덱싱 오케스트레이션 |
+| **`smart-crawling-server`** | Java 25, Spring Boot 3.5.16, AgentScope Java (`io.agentscope:agentscope-harness`), 6-File DB SSOT Standard (`db/00_extensions.sql` ~ `05_sample_dev.sql`) | API 엔드포인트 제공, 수집 작업 스케줄링(Quartz), AI 작업 계획 수립, RAG 벡터 인덱싱 오케스트레이션 |
 | **`smart-crawling-agent`** | Java 25, Playwright Java, MCP SDK | 정규 웹 수집 작업 실행, DOM 파싱, 데이터 추출, HTML 스냅샷 저장 |
 | **`smart-crawling-scenario-agent`** | Java 25, Node.js/Playwright MCP, Chromium | 로그인, 다단계 폼 입력, 무한 스크롤, SPA 상호작용 등 복합 시나리오 실행 |
 | **`smart-crawling-console`** | Vue 3, TypeScript, Vite, Quasar | 수집 작업 모니터링, 자연어 시나리오 빌더 UI, 수집 데이터 검증 및 RAG 질의응답 테스트 콘솔 |
@@ -90,6 +90,6 @@ SyncCrawl은 무중단 배포와 독립적 스케일아웃을 위해 4개의 분
 - **셀렉터 자율 복구 엔진**: DOM 트리가 변경되었을 때 페이지 텍스트 문맥과 시맨틱 태그를 대조하여 대체 셀렉터를 탐색합니다.
 
 ### 4. 데이터 & RAG 인프라 계층 (Data & Infra Layer)
-- **PostgreSQL & Flyway**: 수집 메타데이터, 사용자 스키마, 실행 이력을 관리하며 마이그레이션을 지원합니다.
-- **Vector DB & 임베딩**: 수집된 비정형 텍스트를 청킹하여 PGVector, Milvus, Qdrant 등에 저장하며, 엔터프라이즈 RAG 질의응답을 위한 시맨틱 검색을 제공합니다.
+- **PostgreSQL 18.6 & 6-File DB SSOT Standard (`db/00_extensions.sql` ~ `05_sample_dev.sql`)**: 수집 메타데이터, 동적 메뉴·권한(`sys_permission`), 실행 이력을 6단계 표준 SQL 체계로 일원화 관리합니다.
+- **Vector DB & 임베딩**: 수집된 비정형 텍스트를 청킹하여 PostgreSQL 18.6 `pgvector`, Milvus, Qdrant 등에 저장하며, 엔터프라이즈 RAG 질의응답을 위한 시맨틱 검색을 제공합니다.
 - **MinIO / S3 오브젝트 스토리지**: 수집 시점의 원본 HTML과 증적 캡처 이미지를 스토리지에 보관합니다.

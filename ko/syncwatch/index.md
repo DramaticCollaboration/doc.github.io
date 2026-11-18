@@ -7,7 +7,7 @@ sort: 1
 
 # SyncWatch 개요 (AI Security Threat Intelligence & Rule Compiler Agent)
 
-**SyncWatch (`SYNC_WATCH`, `com.empasy.sync.watch`)**는 글로벌 보안 위협 피드(NVD CVE, CISA KEV, OSV.dev, GitHub GHSA, Nuclei, OWASP CRS, KISA)와 기업 내부 보안 진단 문서를 단일 허브로 수집·정규화하여, **SyncVerse**에는 코드·의존성·모의해킹 보안 점검 팩(**`VerseAuditPack`**)을, **SyncAPIM**에는 런타임 공격 패턴 방어 팩(**`ApimDefensePack`**)을 실시간 컴파일·배포하는 **전사 보안 관측소(Security Threat Observatory & Dual Rule Compiler)**입니다.
+**SyncWatch (`SYNC_WATCH`, `com.empasy.sync.watch`)**는 **8대 글로벌 위협 피드(OSV.dev, GitHub GHSA, NVD CVE, CISA KEV, Nuclei, OWASP CRS, MITRE ATT&CK, KISA)**와 기업 내부 보안 진단 문서를 단일 허브로 수집·정규화하여, **SyncVerse**에는 코드·의존성·모의해킹 보안 점검 팩(**`VerseAuditPack`**)을, **SyncAPIM**에는 런타임 공격 패턴 방어 팩(**`ApimDefensePack`**)을 실시간 컴파일·배포하는 **전사 보안 관측소(Security Threat Observatory & Dual Rule Compiler)**입니다.
 
 ---
 
@@ -30,10 +30,10 @@ SyncSeries는 신규 제로데이 취약점이나 보안 권고가 발표되었�
 
 ```mermaid
 flowchart LR
-    subgraph Feeds["글로벌 위협 피드 & 진단 문서"]
-        F1["NVD CVE / CISA KEV"]
-        F2["OSV.dev / GitHub GHSA"]
-        F3["Nuclei / OWASP CRS / KISA"]
+    subgraph Feeds["8대 글로벌 위협 피드 & 진단 문서"]
+        F1["OSV.dev / GitHub GHSA"]
+        F2["NVD CVE / CISA KEV"]
+        F3["Nuclei / OWASP CRS / MITRE ATT&CK / KISA"]
         F4["보안 진단 리포트 (PDF/MD)"]
     end
 
@@ -72,8 +72,42 @@ flowchart LR
 
 ---
 
+## 실제 구동 화면 및 핵심 워크플로우
+
+### 1. 글로벌 보안 위협 인텔리전스 수집 및 관측 대시보드
+OSV.dev, GitHub GHSA, NVD CVE, CISA KEV, Nuclei, OWASP CRS, MITRE ATT&CK, KISA 등 8대 글로벌 위협 피드의 실시간 수집 현황과 심각도 분포를 통합 관제합니다.
+
+![SyncWatch 글로벌 보안 위협 관측 대시보드](/images/screenshots/sync-watch/screen_01.png)
+
+### 2. 8대 공인 보안 피드 수집 채널 및 연결 진단
+외부 보안 피드 수집 채널의 폴링 스케줄, 5단계 SSRF 방어 가드 연결 진단, 즉시 동기화 및 수집 배치 실행 상태를 관리합니다.
+
+![SyncWatch 외부 보안 피드 수집 채널 관리](/images/screenshots/sync-watch/screen_02.png)
+
+### 3. 정규화 보안 권고 원장 및 전사 SBOM 매칭 분석
+다양한 포맷의 외부 보안 권고와 진단 문서를 단일 표준 스키마로 정규화하고 영향받는 패키지 생태계와 전사 SBOM 영향도를 분석합니다.
+
+![SyncWatch 정규화 보안 권고 원장](/images/screenshots/sync-watch/screen_03.png)
+
+### 4. 생태계별 취약 패키지 및 코드 보안 점검 기준
+개발 관제탑에 공급되는 의존성 버전 범위(SCA), 정적 코드 패턴(SAST), 동적 런타임 프로브(DAST) 점검 기준과 취약 심볼 명세를 관리합니다.
+
+![SyncWatch 취약 패키지 및 코드 보안 점검 기준](/images/screenshots/sync-watch/screen_04.png)
+
+### 5. 런타임 공격 패턴 및 샌드박스 정/오탐 검증
+API 보안 게이트웨이에 공급되는 HTTP 검사 위치, 탐지 정규식, 방어 조건식 및 샌드박스 무오탐 검증(TP 100%, FP 0%) 결과를 관리합니다.
+
+![SyncWatch 런타임 공격 패턴 및 샌드박스 검증](/images/screenshots/sync-watch/screen_05.png)
+
+### 6. 피드 수집·파싱 실행 로그 및 전사 배포 이력
+수집·컴파일·샌드박스 검증 배치 실행 로그와 구독 서비스 대상 위협 정보 브로드캐스트 제공 이력을 투명하게 추적합니다.
+
+![SyncWatch 피드 수집 실행 로그 및 전사 배포 이력](/images/screenshots/sync-watch/screen_06.png)
+
+---
+
 ## 3. 문서 구성 안내
 
-* **[아키텍처 및 듀얼 룰 컴파일러](./architecture)**: 6대 수집 채널, 5단계 SSRF 방어 가드, `WatchRuleCompilerService` 듀얼 룰 컴파일 및 자체 샌드박스 검증 메커니즘을 설명합니다.
+* **[아키텍처 및 듀얼 룰 컴파일러](./architecture)**: 8대 글로벌 위협 피드 수집 채널, 5단계 SSRF 방어 가드, `WatchRuleCompilerService` 듀얼 룰 컴파일 및 자체 샌드박스 검증 메커니즘을 설명합니다.
 * **[SyncVerse & SyncAPIM 연동 프로토콜](./devsecops-protocol)**: `VerseAuditPack` 및 `ApimDefensePack` 데이터 계약과 실시간 브로드캐스트·피드백 프로토콜을 다룹니다.
 * **[DB 스키마 및 REST/MCP API 명세](./api-and-schema)**: 6대 `watch_*` 테이블 DDL 규격과 `/api/v1/watch/*` REST API 및 MCP 도구를 안내합니다.

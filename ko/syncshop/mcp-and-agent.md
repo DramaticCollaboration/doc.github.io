@@ -87,11 +87,11 @@ sequenceDiagram
     participant Admin as SyncShop Core DB
 
     Note over Verse,Shop: 1. A2A 핸드셰이크 & 세션 인증
-    Verse->>Shop: POST /mcp/shop/sse (헤더: X-Agent-Secret-Key)
+    Verse->>Shop: POST /api/v1/shop/mcp/sse (헤더: X-Agent-Secret-Key)
     Shop-->>Verse: 200 OK (A2A Session Token 발행)
 
     Note over Verse,Shop: 2. 자율 도구 실행
-    Verse->>Shop: POST /mcp/call (tool: shop_batch_price_update)
+    Verse->>Shop: POST /api/v1/shop/mcp/call (tool: shop_batch_price_update)
     Shop->>Admin: 스냅샷 저장 및 pms_product 수정
     Admin-->>Shop: 반영 완료
     Shop-->>Verse: JSON-RPC Result 응답

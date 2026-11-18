@@ -16,7 +16,7 @@ head:
       content: https://doc.empasy.com/images/favicon.png
   - - meta
     - property: og:url
-      content: https://doc.empasy.com/methodology/ai-sdlc-02-architecture.html
+      content: https://doc.empasy.com/methodology/ai-sdlc-02-architecture
 sort: 102
 ---
 
@@ -61,7 +61,7 @@ flowchart LR
 * `00_extensions.sql`: 필수 확장 모듈 선언
 * `02_schema_domain.sql`: 업무 테이블 생성(DDL), 기본키(PK), 외래키(FK), 인덱스(INDEX)
 * `04_seed_domain.sql`: 업무 메뉴 권한(`sys_permission`) 및 역할 매핑
-* **작성 원칙**: 충돌 회피용 임시 구문(`ON CONFLICT DO NOTHING` 등)을 지양하고, 사전에 키 정합성을 검증한 순수 `INSERT INTO` 구문으로 작성합니다.
+* **작성 원칙**: 충돌 회피용 임시 구문(`` 등)을 지양하고, 사전에 키 정합성을 검증한 순수 `INSERT INTO` 구문으로 작성합니다.
 
 ### 3단계: 표준 REST API 규격 정의
 * **단일 매핑 원칙**: 하나의 기능에 다중 URL을 매핑하지 않고, 명확한 단일 Canonical URL만 정의합니다.
@@ -79,7 +79,7 @@ flowchart LR
 ```markdown
 [역할] 수석 데이터베이스 모델러 겸 DBA
 [맥락]
-- 데이터베이스: PostgreSQL 17
+- 데이터베이스: PostgreSQL 18.6
 - 도메인: {{도메인명, 예: shop_coupon}}
 - 기능 요구사항:
 {{01단계에서 확정된 기능 명세서 내용}}
@@ -90,7 +90,7 @@ flowchart LR
 3. created_at, updated_at, created_by, updated_by, del_flag(삭제여부) 공통 감사 컬럼을 포함해 주세요.
 4. 자주 조회되는 조건(회원ID, 상태값, 날짜)에 적절한 인덱스를 생성해 주세요.
 5. 데이터 무결성을 위해 외래키(FK) 및 필수 제약조건을 명시해 주세요.
-6. 충돌 회피용 구문(ON CONFLICT DO NOTHING 등) 대신 정합성이 보장된 순수 CREATE TABLE 및 INSERT 구문으로 작성해 주세요.
+6. 충돌 회피용 구문( 등) 대신 정합성이 보장된 순수 CREATE TABLE 및 INSERT 구문으로 작성해 주세요.
 
 [출력 형식]
 - Mermaid 테이블 관계도
@@ -142,7 +142,7 @@ flowchart LR
 | :--- | :--- | :--- |
 | **다중 URL 매핑** | 하위 호환성을 이유로 `@RequestMapping({"/coupon", "/api/v1/coupon"})` 작성 | 단일 표준 URL 원칙을 적용하여 `/api/v1/{domain}/...` 하나로 통합합니다. |
 | **순환 참조 발생** | 양방향 연관관계에 `@Data`를 무분별하게 적용하여 무한 루프 발생 | `@Data` 사용을 지양하고 `@Getter`, `@NoArgsConstructor`, `@Builder` 등을 개별 선언합니다. |
-| **임시 구문 남발** | 키 충돌을 피하기 위해 `ON CONFLICT DO NOTHING`으로 넘김 | 사전에 ID 생성 규칙을 검증하여 중복 없이 실행되는 순수 INSERT 구문으로 관리합니다. |
+| **임시 구문 남발** | 키 충돌을 피하기 위해 ``으로 넘김 | 사전에 ID 생성 규칙을 검증하여 중복 없이 실행되는 순수 INSERT 구문으로 관리합니다. |
 
 ---
 

@@ -27,7 +27,7 @@ flowchart TD
     Server <--> |비동기 RPC / MsgHub| ScenarioAgent
     
     Agent --> ExtWeb["외부 대상 웹사이트"]
-    Server --> DB[("PostgreSQL 17 & MinIO")]
+    Server --> DB[("PostgreSQL 18.6 & MinIO")]
 ```
 
 ---

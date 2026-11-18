@@ -51,3 +51,16 @@ sort: 1
 2. **정량적 데이터 제시**: 레이턴시, 메모리 점유율, 처리량(Throughput), 실패율 등 수치화된 지표를 기반으로 기술 채택 여부를 결정합니다.
 3. **상용 안정성 검토**: 네트워크 단절, 스레드 고갈, DOM 지연 렌더링 등 에지 케이스에 대한 방어 로직을 포함합니다.
 
+---
+
+## 연구 주제별 적용 제품군 매핑
+
+| 연구 문서 | 핵심 기술 키워드 | 상용 적용 제품군 |
+| :--- | :--- | :--- |
+| **Playwright & CDP 동기화** | CDP Frame Capture, Network Idle, Layout Shift | `SyncETA`, `SyncCrawl`, `sync-module-audit` |
+| **Vision-LLM 자가치유 알고리즘** | Bounding Box 추론, 시맨틱 DOM 앵커, Self-Healing | `SyncETA`, `SyncCrawl` |
+| **MCP JSON-RPC 오케스트레이션** | JSON-RPC 2.0, HTTP SSE, A2A Tool Discovery | `SyncVerse`, 전사 11대 에이전트 MCP 서버 |
+| **가상 스레드 & AgentScope** | JDK 25 Virtual Threads, `ReentrantLock`, `MsgHub` | `sync-core`, `sync-module-ai`, 전사 백엔드 |
+| **하이브리드 RAG & 리랭킹** | `PostgreSQL 18.6 pgvector` HNSW, `pg_trgm`, Cross-Encoder | `sync-module-rag`, `SyncInsight`, `SyncCrawl` |
+| **Vision-LLM 파인튜닝 & 열화 분석** | Llama-3.2-Vision, LoRA, Catastrophic Forgetting 방지 | `SyncETA`, `SyncLLM` 온프레미스 모델 |
+

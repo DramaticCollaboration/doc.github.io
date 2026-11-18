@@ -16,7 +16,7 @@ head:
       content: https://doc.empasy.com/images/favicon.png
   - - meta
     - property: og:url
-      content: https://doc.empasy.com/agile/glossaryOfTerms.html
+      content: https://doc.empasy.com/agile/glossaryOfTerms
 sort: 1000
 ---
 
@@ -46,5 +46,21 @@ sort: 1000
 | 이벤트    | 회고               | Retrospective           | -    | 팀이 일정 주기마다 진행하는 프로세스 개선 회의                                  |
 | 측정 지표 | 번다운 차트        | Burndown Chart          | -    | 남은 작업량을 시간에 따라 시각화한 차트                                         |
 | 측정 지표 | 누적 흐름도        | Cumulative Flow Diagram | CFD  | 작업 상태별 누적 항목 변화를 시각화하여 병목 현상을 파악하는 차트               |
+| 품질 기준 | 준비 완료 정의     | Definition of Ready     | DoR  | 백로그 항목이 개발에 착수하기 위해 충족해야 하는 최소 명세·인수 조건 기준       |
+| 품질 기준 | 완료 정의          | Definition of Done      | DoD  | 스토리나 태스크가 완료(`Done`)로 승인되기 위해 통과해야 하는 빌드·QA·문서 기준  |
+| 추정 기법 | 스토리 포인트      | Story Point             | SP   | 작업의 상대적 규모, 복잡도, 불확실성을 피보나치 수열 등으로 추정한 단위         |
+| 추정 기법 | 벨로시티 (속도)    | Velocity                | -    | 한 스프린트 동안 팀이 완료(`Done`)한 스토리 포인트의 총합                       |
+| 흐름 제어 | 풀 시스템          | Pull System             | -    | 가용 용량(WIP 여유)이 발생했을 때만 다음 작업을 끌어와 착수하는 흐름 제어 방식  |
+| 흐름 제어 | 블로커             | Blocker                 | -    | 외부 의존성이나 기술적 장애로 인해 작업 진행이 중단된 병목 요인                 |
 
 ---
+
+## 핵심 흐름 지표 간 관계 (Little's Law)
+
+스크럼반 운영에서는 진행 중 작업 수(WIP), 처리량(Throughput), 사이클 타임(Cycle Time) 간의 관계를 다음과 같이 관리하여 리드 타임을 단축합니다:
+
+\[
+\text{ 평균 Cycle Time } = \frac{\text{평균 WIP (진행 중 작업 수)}}{\text{평균 Throughput (단위 기간당 완료 건수)}}
+\]
+
+- **WIP 제한의 효과**: 동시에 벌여 놓는 작업(WIP)을 줄이면 컨텍스트 스위칭 비용이 감소하여 개별 작업의 완료 시간(Cycle Time)이 단축되고 품질 결함이 줄어듭니다.

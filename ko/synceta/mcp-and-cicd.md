@@ -25,7 +25,7 @@ SyncETA는 **Model Context Protocol (MCP)** 표준을 준수하여 외부 AI 오
 - **프로토콜 표준**: Model Context Protocol (MCP) 2024-11-05 사양 준수
 - **전송 계층**: HTTP Server-Sent Events (SSE)
 - **인증 방식**: HTTP Bearer JWT (`role` 클레임 기반 접근 제어)
-- **엔드포인트**: `POST /mcp/v1/tools/call`
+- **엔드포인트**: `POST /api/v1/eta/mcp/call`
 
 ---
 
@@ -135,7 +135,7 @@ jobs:
           SYNCETA_API_KEY: ${{ secrets.SYNCETA_API_KEY }}
           SYNCETA_HOST: "https://synceta-api.company.internal"
         run: |
-          RESPONSE=$(curl -s -X POST "$SYNCETA_HOST/mcp/v1/tools/call" \
+          RESPONSE=$(curl -s -X POST "$SYNCETA_HOST/api/v1/eta/mcp/call" \
             -H "Authorization: Bearer $SYNCETA_API_KEY" \
             -H "Content-Type: application/json" \
             -d '{
@@ -163,7 +163,7 @@ pipeline {
     agent any
     environment {
         SYNCETA_KEY = credentials('synceta-api-token')
-        SYNCETA_ENDPOINT = 'https://synceta-api.company.internal/mcp/v1/tools/call'
+        SYNCETA_ENDPOINT = 'https://synceta-api.company.internal/api/v1/eta/mcp/call'
     }
     stages {
         stage('E2E Regression Testing') {

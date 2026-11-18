@@ -16,7 +16,7 @@ head:
       content: https://doc.empasy.com/images/favicon.png
   - - meta
     - property: og:url
-      content: https://doc.empasy.com/methodology/ai-sdlc-01-requirements.html
+      content: https://doc.empasy.com/methodology/ai-sdlc-01-requirements
 sort: 101
 ---
 

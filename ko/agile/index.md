@@ -55,7 +55,7 @@ flowchart LR
 * **[Git Flow 브랜치 전략](./gitFlow.md)**: `main`, `develop`, `feature/*`, `release/*`, `hotfix/*` 표준 운영 규칙
 * **[Git 커밋 로그 컨벤션](./gitCommitLog.md)**: `feat:`, `fix:`, `docs:`, `refactor:`, `test:`, `chore:` 접두사 및 커밋 메시지 본문 작성 표준
 * **[이슈 생성 규칙 및 템플릿](./createIssue.md)**: 버그 리포트, 신규 기능, 작업 태스크 템플릿 및 라벨 규칙
-* **[이슈 라이프사이클 관리 원칙](./PrinciplesForIssueUsage.md)**: Todo ➔ In Progress ➔ Review ➔ Done 상태 전환 규칙
+* **[이슈 라이프사이클 관리 원칙](./PrinciplesForIssueUsage.md)**: Todo -> In Progress -> Review -> Done 상태 전환 규칙
 
 ---
 

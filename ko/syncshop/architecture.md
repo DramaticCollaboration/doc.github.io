@@ -80,7 +80,7 @@ sequenceDiagram
     participant Verse as SyncVerse (L2)
     participant ShopMcp as SyncShop MCP Server
     participant Swarm as Swarm (Safeguard)
-    participant DB as PostgreSQL 17 (pgvector)
+    participant DB as PostgreSQL 18.6 (pgvector)
 
     Admin->>Verse: "겨울 아우터 카테고리 10% 일괄 할인 적용"
     Verse->>ShopMcp: tools/call: shop_batch_price_update

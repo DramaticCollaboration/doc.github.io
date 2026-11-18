@@ -8,35 +8,26 @@ hero:
     text: "Sync Series 아키텍처 및 개발 가이드"
     tagline: "AI 에이전트 자율 운영 생태계 Sync Series의 설치, 아키텍처, API/MCP 연동 및 운영 매뉴얼을 안내합니다."
     actions:
-      - text: 빠른 시작
+      - text: 솔루션 가이드 시작하기
         link: /syncverse/
-        type: primary
-      - text: 솔루션 둘러보기
-        link: '#solutions'
-        type: secondary
-      - text: 개발자 센터
-        link: /sdk/
-        type: secondary
-      - text: 소개서·제안서 PDF
+        theme: brand
+      - text: 소개서 · 제안서 PDF
         link: /proposals/
-        type: secondary
-      - text: 통합 데모 포털 (sync.empasy.io)
+        theme: alt
+      - text: 통합 데모 포털 (sync.empasy.io) ↗
         link: https://sync.empasy.io
         theme: alt
-      - text: 공식 홈페이지 (empasy.io) ↗
-        link: https://empasy.io/
-        type: alt
 
 head:
   - - meta
     - name: keywords
-      content: 엠파시 기술 문서, Empasy Docs, Sync Series 매뉴얼, SyncVerse 가이드, SyncInsight, SyncETA, SyncCrawl, SyncBoot, SyncCMS, SyncShop, SyncOps, SyncLLM, SyncAPIM, MCP API 명세, 개발자 문서
+      content: 엠파시 기술 문서, Empasy Docs, Sync Series 매뉴얼, SyncVerse 가이드, SyncInsight, SyncETA, SyncCrawl, SyncBoot, SyncCMS, SyncShop, SyncOps, SyncLLM, SyncAPIM, SyncWatch, MCP API 명세, 개발자 문서
   - - meta
     - property: og:title
       content: "엠파시 기술 문서 (Empasy Docs) - Sync Series 공식 아키텍처 및 개발 가이드"
   - - meta
     - property: og:description
-      content: "엠파시 Sync Series(SyncVerse, SyncInsight, SyncETA, SyncCrawl, SyncBoot, SyncCMS, SyncShop, SyncOps, SyncLLM, SyncAPIM) 공식 기술 문서 및 개발자 가이드 포털입니다."
+      content: "엠파시 Sync Series(SyncVerse, SyncInsight, SyncETA, SyncCrawl, SyncBoot, SyncCMS, SyncShop, SyncOps, SyncLLM, SyncAPIM, SyncWatch) 공식 기술 문서 및 개발자 가이드 포털입니다."
   - - meta
     - property: og:image
       content: https://doc.empasy.com/images/favicon.png
@@ -48,73 +39,73 @@ features:
   - icon:
       svg: '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>'
     title: 플랫폼 연동 구조 (Ecosystem)
-    details: 표준 MCP 프로토콜 기반 서비스 간 연동 규격 및 전사 4-Tier 자율 에이전트 연합 아키텍처
+    details: 표준 MCP 프로토콜 기반의 서비스 간 연동 규격과 4-Tier 자율 에이전트 연합 아키텍처를 안내합니다.
     link: /ecosystem/
     linkText: 문서 보기 →
   - icon:
       svg: '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><circle cx="19" cy="5" r="2"/><circle cx="5" cy="19" r="2"/><circle cx="19" cy="19" r="2"/><circle cx="5" cy="5" r="2"/><path d="m7 7 3 3"/><path d="m14 14 3 3"/><path d="m14 10 3-3"/><path d="m7 17 3-3"/></svg>'
     title: SyncVerse (통합 관제 & Spec Studio)
-    details: A2A 멀티 에이전트 중앙 오케스트레이션, 5-Step Spec Studio 및 다중 코딩 엔진 거버넌스 플랫폼
+    details: 멀티 에이전트 중앙 오케스트레이션, 5단계 스펙 스튜디오 및 다중 코딩 엔진을 통합 관제합니다.
     link: /syncverse/
     linkText: 문서 보기 →
   - icon:
       svg: '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>'
     title: SyncInsight (데이터 분석 및 모니터링)
-    details: 시스템 데이터를 실시간 수집·분석하고 자연어 질의로 업무 지표를 도출하는 분석 센터
+    details: 내외부 데이터를 실시간 통합 분석하고 자연어 질의로 실행 가능한 의사결정 지표를 도출합니다.
     link: /syncinsight/
     linkText: 문서 보기 →
   - icon:
       svg: '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 11 3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>'
     title: SyncETA (테스트 자동화)
-    details: 코드리스 GUI 테스트 및 Vision 기반 화면 자가치유 파이프라인 제공. 데스크톱 앱(v0.0.44) 배포 중
+    details: 노코드 GUI 테스트 녹화 및 비전 기반 셀렉터 자가치유를 제공하며 데스크톱 앱(v0.0.58)을 지원합니다.
     link: /synceta/
     linkText: 문서 보기 →
   - icon:
       svg: '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>'
     title: SyncBoot (백엔드 프레임워크)
-    details: Spring Boot 기반 클린 아키텍처 및 도메인 모델 생성 도구를 제공하는 개발 플랫폼
+    details: Spring Boot 3.5 기반 클린 아키텍처, 스키마 스튜디오 및 동적 권한 관리를 제공하는 백엔드 표준입니다.
     link: /syncboot/
     linkText: 문서 보기 →
   - icon:
       svg: '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M3 9h18"/><path d="M9 21V9"/></svg>'
     title: SyncCMS (콘텐츠 관리 시스템)
-    details: Nuxt 3 SSR 및 Copywriter-SEO-Publisher 멀티에이전트 스웜 기반 하이브리드 헤드리스 CMS
+    details: Nuxt 3 SSR 렌더링과 3단계 에이전트 협업 기반으로 검색·AI 답변 품질을 높이는 헤드리스 CMS입니다.
     link: /synccms/
     linkText: 문서 보기 →
   - icon:
       svg: '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>'
     title: SyncShop (이커머스 운영 솔루션)
-    details: 옴니채널 상거래 관리, 다이내믹 프라이싱, 실시간 재고 관리 및 주문 처리 솔루션
+    details: 9대 마이크로서비스 기반 옴니채널 상품·주문·재고 관리 및 마진 보호 다이내믹 프라이싱을 제공합니다.
     link: /syncshop/
     linkText: 문서 보기 →
   - icon:
       svg: '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="14" x="2" y="7" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>'
     title: SyncOps (SI 사업운영 및 손익 관제)
-    details: 듀얼단가 실시간 프로젝트 손익, KOSA 기술등급 M/M 매트릭스, 4대 보증보험·하도급법 감시 및 SHA-256 전자연구노트 플랫폼
+    details: 계약단가 대 실원가 실시간 손익, 기술등급 인력 배치, 보증보험·하도급법 및 전자연구노트를 통합 관리합니다.
     link: /syncops/
     linkText: 문서 보기 →
   - icon:
       svg: '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/><path d="M3 12c0 1.66 4 3 9 3s9-1.34 9-3"/></svg>'
     title: SyncCrawl (적응형 웹 수집 엔진)
-    details: 웹 구조 변경에 유연하게 대응하고 실시간 지식 파이프라인을 구축하여 고신뢰 RAG 답변을 지원하는 수집 엔진
+    details: 웹 구조 변경에 스스로 적응하여 정형 마크다운 지식과 고신뢰 RAG 벡터 데이터를 실시간 공급합니다.
     link: /synccrawl/
     linkText: 문서 보기 →
   - icon:
       svg: '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="16" height="16" x="4" y="4" rx="2"/><rect width="6" height="6" x="9" y="9" rx="1"/><path d="M15 2v2"/><path d="M15 20v2"/><path d="M2 15h2"/><path d="M2 9h2"/><path d="M20 15h2"/><path d="M20 9h2"/><path d="M9 2v2"/><path d="M9 20v2"/></svg>'
     title: SyncLLM (AI 모델 게이트웨이 & FinOps)
-    details: 모델 지능형 라우팅, 실시간 토큰 비용 통제(FinOps), 시맨틱 캐싱 및 엔터프라이즈 PII 마스킹 통합 게이트웨이
+    details: 질문 난이도별 멀티 모델 라우팅, 시맨틱 캐싱, 실시간 토큰 예산 통제 및 개인정보 마스킹을 수행합니다.
     link: /syncllm/
     linkText: 문서 보기 →
   - icon:
       svg: '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>'
     title: SyncAPIM (API 모니터링 및 보안 관제)
-    details: 구문 토큰 지문 분석기(SqlXssLexicalTokenizer) + SyncWatch 연동 핀셋 가상 패치(SandboxedDefenseEvaluator) + 커널 eBPF 차단 및 섀도우 API·민감정보 보호
+    details: 실시간 트래픽 기반 미등록 섀도우 API 탐지, 스펙 드리프트 진단, 무중단 가상 패치 및 민감정보를 보호합니다.
     link: /syncapim/
     linkText: 문서 보기 →
   - icon:
       svg: '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>'
     title: SyncWatch (전사 보안 위협 관측 및 룰 컴파일러)
-    details: 7대 글로벌 보안 피드 수집·정규화 및 SyncVerse(VerseAuditPack)·SyncAPIM(ApimDefensePack) 듀얼 보안 룰 실시간 컴파일·배포
+    details: 8대 글로벌 위협 피드와 진단 문서를 수집·정규화하여 코드 감사 룰과 런타임 방어 룰을 실시간 컴파일·배포합니다.
     link: /syncwatch/
     linkText: 문서 보기 →
 
@@ -132,91 +123,40 @@ footer: Copyright © 2026 Empasy Inc. All rights reserved.
 | **표준 산출물 양식** | 요구사항정의서, WBS, 테스트시나리오 등 실무 서식 양식 다운로드 | [표준 산출물 양식 →](/methodology/enterprise-document-templates) |
 | **AI 개발 주기 (AI-SDLC)** | 명세 우선 아키텍처 설계부터 4단계 자가치유 검증까지의 AI 협업 절차 | [AI-SDLC 가이드 →](/methodology/ai-driven-development) |
 | **애자일 및 Git Flow** | 스크럼반(Scrumban) 운영, Git 브랜치 전략, 일일 스크럼 실무 프로세스 | [애자일 가이드 →](/agile/) |
-| **제품별 소개서·도입제안서 (PDF)** | 요약 브로셔(4p), 통합 도입 제안서(8p) 및 10개 전 제품군(SyncVerse~SyncSDK) 개별 제안서 다운로드 | [전체 제안서 다운로드 센터 →](/proposals/) · [요약 브로셔 PDF](/downloads/proposals/SyncSeries_Brochure_v1.0.pdf) · [통합 제안서 PDF](/downloads/proposals/SyncSeries_Master_Proposal.pdf) |
+| **제품별 소개서·도입제안서 (PDF)** | 요약 브로셔(4p), 통합 도입 제안서(8p) 및 12개 전 제품군(SyncVerse~SyncSDK) 개별 제안서 다운로드 | [전체 제안서 다운로드 센터 →](/proposals/) · [요약 브로셔 PDF](/downloads/proposals/SyncSeries_Brochure_v1.0.pdf) · [통합 제안서 PDF](/downloads/proposals/SyncSeries_Master_Proposal.pdf) |
 
 ---
 
-## 개요
+## 개요 및 핵심 비전
 
 > **공식 홈페이지 안내**: 본 사이트(`doc.empasy.com`)는 **Sync Series 기술 문서 및 개발자 가이드 포털**입니다. 기업 소개, 솔루션 도입 문의 및 데스크톱 앱 다운로드는 **[엠파시 공식 홈페이지 (https://empasy.io)](https://empasy.io/)**를 방문해 주시기 바랍니다.
 
-엠파시(Empasy)는 **"Empathic Synergy (공감 시너지)"**라는 핵심 가치를 바탕으로 빠르게 변화하는 비즈니스 환경에 민첩하게 대응하기 위한 차세대 소프트웨어 및 AI 에이전트 솔루션을 제공하는 기업입니다. 솔루션 기반의 SI(시스템 통합) 및 엔터프라이즈 DX 사업을 선도하며, **"변화에 최적화된 솔루션(Boon to Business by Agility)"**을 최고 가치로 내세우는 **Sync Series** 제품군을 통해 기업의 비즈니스 민첩성과 자율 운영을 지원합니다.
+엠파시(Empasy)는 **"Empathic Synergy (공감 시너지)"**라는 핵심 가치를 바탕으로, 기획부터 개발·검증·배포·운영까지의 전 주기를 유기적으로 연결하는 **Sync Series** 자율 운영 에이전트 제품군을 제공합니다.
+
+* **Boon to Business by Agility**: 시장 변화에 즉각 대응할 수 있도록 소프트웨어 기획부터 운영까지의 전 주기를 민첩하게 연결합니다.
+* **살아 있는 소프트웨어 (Living Software)**: 시스템 스스로 상태를 진단하고 결함을 자가 치유(Self-Healing)하며 진화하는 생태계를 구축합니다.
+* **AI DLC (AI Development Life Cycle)**: 표준 협업 프로토콜(A2A & MCP)과 인간 승인 거버넌스(HITL)를 결합하여 안전성과 엔지니어링 생산성을 동시에 확보합니다.
 
 ---
 
-## 엠파시의 핵심 가치 및 비전
+## Sync Series 4-Tier 솔루션 아키텍처 한눈에 보기 {#solutions-detail}
 
-엠파시의 사명인 **"EmpaSy"**는 깊은 공감과 협업을 통해 탁월한 시너지를 창출하는 **"Empathic Synergy"**를 의미합니다. 이는 고객의 비즈니스 페인포인트를 깊이 이해하고 기술적 동반자로서 공동의 목표를 달성하겠다는 철학을 담고 있습니다.
+Sync Series는 역할과 책임에 따라 분리된 **4-Tier 아키텍처(11대 엔터프라이즈 AI 에이전트 + SyncSDK 및 6대 공통 모듈)**로 구성됩니다.
 
-* **Boon to Business by Agility**: 소프트웨어는 현대 비즈니스의 심장이며, 시장 변화에 즉각 대응하기 위해서는 기획부터 배포·운영까지의 전 주기가 민첩하게 연결되어야 합니다.
-* **살아 있는 소프트웨어 (Living Software)**: 고정된 레거시 시스템을 넘어, 시스템 스스로 상태를 진단하고 코드를 자가 치유(Self-Healing)하며 진화하는 차세대 소프트웨어 생태계를 구축합니다.
-* **AI DLC (AI Development Life Cycle)**: 멀티 에이전트 간 표준 협업 프로토콜(A2A & MCP)을 기반으로 휴먼 에러를 최소화하고 엔지니어링 생산성을 향상시킵니다.
-
----
-
-## Sync Series 솔루션 라인업 {#solutions-detail}
-
-엠파시의 Sync Series는 소프트웨어 수명 주기 전반에 걸쳐 속도, 품질, 유연성을 지원하는 엔터프라이즈 AI 에이전트 및 프레임워크 라인업입니다.
-
-### SyncVerse: 멀티 에이전트 A2A 오케스트레이션 & 5-Step Spec Studio
-* **개요**: 개별 분산 소프트웨어 모듈과 도메인 에이전트들을 표준 MCP 및 A2A 프로토콜 기반으로 통합 관리하고, 5-Step Spec Studio와 7대 코딩 에이전트 엔진(`SyncSDK`)을 지휘하는 중앙 메타 오케스트레이션 플랫폼입니다.
-* **핵심 기능**: 자연어 의도 기반 작업 라우팅(Intent Routing) 및 도메인 Swarm 위임, 5-Step Spec Studio(요구사항 AC 정제 → 상세 설계 → 구현 계획 → 다중 코딩 엔진 자율 실행 → 4대 표준 산출물 역동기화), 다자간 HITL(Multi-Party Approval) 결재 및 KMS 보안 거버넌스.
-* **도입 효과**: 요구사항 정의부터 다중 코딩 에이전트 자율 구현, 자동 QA, 무중단 배포 및 산출물 최신화까지 전 개발·운영 주기를 단일 컨트롤 플레인으로 완결합니다.
-
-### SyncInsight: 엔터프라이즈 의사결정 인텔리전스 & 관제
-* **개요**: 시스템 내외부 데이터를 실시간 수집·분석하여 비즈니스 의사결정과 장애 대응을 돕는 데이터 분석 플랫폼입니다.
-* **핵심 기능**: 2-Phase Deep Research(원탁 토론), Apache Calcite 기반 읽기 전용 안전 자연어 데이터 조회(Safe NL2SQL), 데이터 리니지 영향도 시뮬레이션 및 RCA 자동 진단.
-* **도입 효과**: 복잡한 SQL 작성이나 별도 대시보드 개발 없이 자연어 질문만으로 필요한 지표를 확인하고 실행 가능한 후속 조치를 즉시 도출할 수 있습니다.
-
-### SyncAPIM: AI 자율 API 보안 관제 및 명세 거버넌스 플랫폼
-* **개요**: 실시간 API 패킷을 수집·분석하여 문서화되지 않은 미등록 섀도우 API를 자동 발견하고, OpenAPI 3.0.1 스펙 드리프트 진단과 웹·API 위협 차단(WAF) 및 개인정보 마스킹을 수행하는 4-JVM 고성능 보안 관제 에이전트입니다.
-* **핵심 기능**: 4개 독립 JVM(`admin`, `receiver`, `detector`, `gateway`) 성능 격리 아키텍처, 구문 토큰 지문 분석기(`SqlXssLexicalTokenizer`), `SyncWatch` 연동 실시간 공격 패턴 탐지·핀셋 가상 패치(`ApimDefensePack` & `SandboxedDefenseEvaluator`), 커널 eBPF 차단, OpenAPI 3.0.1 Contract Drift 비교 감사, 8대 개인·금융 민감정보 동적 마스킹, PostgreSQL 18.6 `pg_trgm` 초고속 포렌식 검색.
-* **도입 효과**: 별도의 무거운 외부 검색엔진 없이도 전체 API 인벤토리 가시성을 확보하고 제로데이 취약점 가상 패치, 미승인 API 노출 및 개인정보 유출 사고를 원천 차단합니다.
-
-### SyncWatch: 전사 보안 이슈 수집·컴파일·배포 에이전트
-* **개요**: 글로벌 보안 위협(NVD CVE, CISA KEV, OSV.dev, GitHub GHSA, Nuclei, OWASP CRS, KISA) 및 보안 진단 문서를 단일 허브로 수집·정규화하여, `SyncVerse`에는 코드·의존성·모의해킹 보안 점검 팩(`VerseAuditPack`)을, `SyncAPIM`에는 런타임 공격 패턴 팩(`ApimDefensePack`)을 실시간 컴파일·배포하는 전사 보안 관측소입니다.
-* **핵심 기능**: 5단계 SSRF 방어 가드 기반 6대 채널 수집, `WatchRuleCompilerService` 듀얼 룰 컴파일, Positive/Negative 샘플 기반 자체 샌드박스 검증(TP 100%, FP 0%), 전사 실시간 브로드캐스트 배포 및 피드백 원장 관제.
-* **도입 효과**: `SyncWatch` → `SyncVerse`(Shift-Left 코드 감사 & 자동 패치 PR) → `SyncAPIM`(Shift-Right 런타임 공격 차단)으로 이어지는 3각 자율 DevSecOps 보안 체계를 완성합니다.
-
-### SyncLLM: 엔터프라이즈 AI 게이트웨이 & FinOps 비용 관리
-* **개요**: 사내 여러 부서와 에이전트의 멀티 LLM API 호출을 단일 창구로 모으고 토큰 비용과 보안을 중앙 통제하는 AI 게이트웨이입니다.
-* **핵심 기능**: 질문 난이도별 모델 자동 선택(Tier 라우팅), 의미 기반 응답 캐싱(코사인 유사도 \(\ge 0.95\)), 4단계 자율 최적화 Swarm(`Cost Auditor ➔ Router Optimizer ➔ Cache Purge ➔ Budget Guard`), 개인정보(PII) 자동 마스킹.
-* **도입 효과**: 반복되는 유사 질문의 API 호출 비용을 절감하고, 사내 민감 정보가 외부 상용 모델로 넘어가는 것을 사전에 차단합니다.
-
-### SyncBoot: 클라우드 네이티브 Java 백오피스 개발 플랫폼
-* **개요**: Spring Boot 3.5 & Java 25 기반 Clean Architecture와 Domain-Driven Design(DDD)을 적용한 엔터프라이즈 백오피스 표준 프레임워크입니다.
-* **핵심 기능**: Schema Studio 코드 생성기(DDL, 엔티티, CRUD REST API 자동 생성), DB 단일 원천(`sys_permission`) 동적 메뉴 및 권한 관리, AES-256 암호화 기반 무중단 동적 환경설정(`sys_config`) 및 원격 소켓 진단.
-* **도입 효과**: 반복적인 기초 CRUD와 권한·메뉴 구축 시간을 줄여 핵심 비즈니스 로직 구현에 집중할 수 있습니다.
-
-### SyncCMS: Nuxt 3 SSR 및 에이전트 협업 기반 하이브리드 헤드리스 CMS
-* **개요**: 마케터와 운영자의 편리한 콘텐츠 발행과 개발자의 유연한 확장을 함께 지원하는 Nuxt 3 SSR 기반 하이브리드 헤드리스 CMS입니다.
-* **핵심 기능**: Nuxt 3 SSR 고속 렌더링, 초안 작성·SEO 검토·발행 3단계 에이전트 협업(`CmsSwarmWorkflowService`), AEO/GEO/SEO 웹 품질 감사(`CmsAuditAeoGeoTool`), Live SDK 인라인 편집 연동.
-* **도입 효과**: 특정 벤더에 종속되지 않고 기업 환경에 맞는 웹사이트를 빠르게 구축하며, 검색엔진 및 AI 답변 인용 품질을 높입니다.
-
-### SyncShop: 분산 마이크로서비스(MSA) 상거래 및 운영 에이전트
-* **개요**: 9대 독립 마이크로서비스(`gateway`, `admin`, `portal`, `auth`, `search`, `monitor`, `mbg`, `mcp-server`, `common`)와 플래그십 스토어프론트(`SYNC SELECT`)로 구성된 엔터프라이즈 이커머스 플랫폼입니다.
-* **핵심 기능**: 다계층 카탈로그 및 동적 재고 잠금(Inventory Lock), 프로모션·타임세일 엔진, 최소 마진율을 지키는 다이내믹 프라이싱 일괄 조정 및 직전 가격 스냅샷 1-Click 복원(`shop_batch_price_update`).
-* **도입 효과**: 신규 커머스 채널 구축 기간을 단축하고, 마진 보호 기준 안에서 안전하게 가격을 조정하여 운영 리스크를 원천 방지합니다.
-
-### SyncOps: 한국형 SI/솔루션 사업운영 & 손익·보증·연구노트 관리 플랫폼
-* **개요**: 수주형 SI 및 SW 솔루션 기업의 계약단가 대 실투입원가 비교 손익, KOSA 기술등급 인력 배치, 4대 보증보험, 하도급 대금 지급기일 및 전자연구노트를 한곳에서 관리하는 사업운영(PSA/PMO) 플랫폼입니다.
-* **핵심 기능**: 발주처 청구단가 vs 실투입원가 5차원 실시간 손익 피벗 매트릭스, KOSA 기술등급 및 월별 M/M 가동률 관리, 4대 보증보험 만기 알림, 하도급법(제6조·제13조 15일/60일 룰) 지급기한 자동 감시, 조특법 SHA-256 시점인증 전자연구노트.
-* **도입 효과**: 프로젝트 진행 중에도 실시간 영업이익률을 파악할 수 있으며, 보증보험·하도급 지급기일·R&D 세액공제 증빙 누락을 사전에 예방합니다.
-
-### SyncSDK & 6대 공통 모듈: 다중 코딩 에이전트 SPI 및 플랫폼 파운데이션
-* **개요**: 7대 코딩 에이전트 엔진(`Antigravity`, `OpenSWE`, `Goose`, `MiniSWE`, `Cline`, `KiloCode`, `Eigent`)을 런타임 핫스왑으로 구동하는 표준 SPI(`SyncSDK`)와 전사 에이전트에 자동 주입되는 6대 공통 모듈입니다.
-* **핵심 구성**: `sync-core`(동적 설정·Saga), `sync-module-ai`(AgentScope Java 2.0.2·MsgHub), `sync-module-nl2sql`(Calcite 관계대수·SELECT-Only 방화벽), `sync-module-audit`(Playwright 웹 품질 평가), `sync-module-deploy`(GitHub Actions·ArgoCD·Jenkins 무중단 배포), `sync-module-rag`(pgvector + BM25 + Knowledge Graph 3중 하이브리드 RAG).
-
-### SyncETA & SyncCrawl: Vision-LLM 테스트 자동화 및 적응형 웹 수집 엔진
-* **SyncETA**: 웹 및 모바일 환경에서 DOM 변경 시 Vision-LLM으로 셀렉터를 스스로 보정하는 자가치유(Self-Healing) E2E 테스트 자동화 플랫폼입니다.
-* **SyncCrawl**: 웹 페이지 구조 변경에 유연하게 대응하여 기업용 Tri-Hybrid RAG 파이프라인에 정형 마크다운 지식과 벡터 데이터를 실시간 공급하는 수집 엔진입니다.
-
-### 버티컬 비즈니스 서비스 (Vertical Application Services)
-* **TodayCare (`오늘도 안심`)**: 스마트폰 일상 활동 센서(Life-Log) 기반 실시간 안심 신호등, 무활동 이상 징후 단계별 알림 및 지자체·복지관 연계 시니어 안심 돌봄 플랫폼입니다.
-* **AwesomeFit (`어썸핏`)**: 도도매 AI 상품 소싱부터 오픈마켓 자동 등록, 무인 발주·송장 역전송, 1:1 건별 순익 대사까지 셀러 개입도 0%를 지향하는 B2B 패션 풀필먼트 자동화 플랫폼입니다.
-
-### 아카이브 모듈 (`SyncAdmin`)
-* **SyncAdmin (현 전사 Vben Admin 표준으로 통합)**: Vue 3, Vite, TypeScript 및 DB 단일 원천(`sys_permission`) 동적 라우팅 기반의 백오피스 UI 표준 템플릿입니다.
+| 계층 구분 | 솔루션 | 핵심 역할 (한 줄 요약) | 가이드 바로가기 |
+| :--- | :--- | :--- | :--- |
+| **Tier 1 (중앙 관제)** | **SyncVerse** | 멀티 에이전트 A2A 오케스트레이션, 5-Step Spec Studio 및 다자간 HITL 결재 관제탑 | [SyncVerse 가이드 →](/syncverse/) |
+| **Tier 2 (지능 · 보안)** | **SyncInsight** | 2단계 심층 리서치, 읽기 전용 Safe NL2SQL 및 What-If 시뮬레이션 의사결정 플랫폼 | [SyncInsight 가이드 →](/syncinsight/) |
+| **Tier 2 (지능 · 보안)** | **SyncLLM** | 난이도 기반 멀티 LLM 라우팅, 시맨틱 캐싱, 부서별 FinOps 예산 및 PII 마스킹 게이트웨이 | [SyncLLM 가이드 →](/syncllm/) |
+| **Tier 2 (지능 · 보안)** | **SyncAPIM** | 4-JVM 성능 격리 기반 미등록 섀도우 API 탐지, OpenAPI 스펙 감사 및 런타임 가상 패치 | [SyncAPIM 가이드 →](/syncapim/) |
+| **Tier 2 (지능 · 보안)** | **SyncWatch** | 8대 글로벌 위협 피드 수집·정규화 및 코드 감사·런타임 방어 듀얼 보안 룰 컴파일러 | [SyncWatch 가이드 →](/syncwatch/) |
+| **Tier 3 (도메인 운영)** | **SyncBoot** | Spring Boot 3.5 & Java 25 기반 백오피스 표준, Schema Studio 및 DB 동적 권한 관리 | [SyncBoot 가이드 →](/syncboot/) |
+| **Tier 3 (도메인 운영)** | **SyncCMS** | Nuxt 3 SSR 고속 렌더링, 3단계 저작 에이전트 스웜 및 SEO·AEO·GEO 품질 감사 CMS | [SyncCMS 가이드 →](/synccms/) |
+| **Tier 3 (도메인 운영)** | **SyncShop** | 9대 독립 마이크로서비스 이커머스, 재고 잠금 및 스냅샷 복원 기반 다이내믹 프라이싱 | [SyncShop 가이드 →](/syncshop/) |
+| **Tier 3 (도메인 운영)** | **SyncOps** | 한국형 SI 듀얼단가 실시간 손익, KOSA 인력 가동률, 4대 보증·하도급법·전자연구노트 관제 | [SyncOps 가이드 →](/syncops/) |
+| **QA & 데이터 수집** | **SyncETA** | 노코드 브라우저·모바일 테스트 녹화 및 비전 기반 셀렉터 자가치유 E2E 품질 검증(`v0.0.58`) | [SyncETA 가이드 →](/synceta/) |
+| **QA & 데이터 수집** | **SyncCrawl** | 시맨틱 DOM 자가치유 웹 데이터 수집 및 Tri-Hybrid RAG 마크다운·벡터 지식 파이프라인 | [SyncCrawl 가이드 →](/synccrawl/) |
+| **Tier 4 (SDK & 기반)** | **SyncSDK & 공통 모듈** | 15대 다중 코딩 에이전트 핫스왑 SPI(`sync-sdk`) 및 6대 전사 공통 모듈(`sync-core`, `sync-module-*`) | [개발자 센터 →](/sdk/) · [생태계 구조 →](/ecosystem/) |
 
 ---
 
@@ -226,8 +166,8 @@ footer: Copyright © 2026 Empasy Inc. All rights reserved.
 
 | 고객사 및 프로젝트 | 적용 솔루션 | 핵심 정량 성과 및 지표 | 비즈니스 혁신 가치 |
 | :--- | :--- | :--- | :--- |
-| **에듀테크 글로벌 AIDT** | **SyncETA** | • **테스트 작성 생산성 80% 향상** (기존 Appium 4시간 ➔ 자연어 기반 0.8시간)<br>• **회귀 테스트 자동화 커버리지 대폭 확대**로 운영 효율 30% 향상<br>• 리팩토링 및 릴리즈 시 **장애율 0.1% 이하 안정화 유지**<br>• **OS 동시 실행 성공률 95%**, UI 파편화 검출 정확도 90% 달성 | 대규모 코드 변경에도 휴먼 에러를 최소화하고 상시 안정적인 서비스 품질 확보 |
-| **메가마트 & 스마트케어가전**<br>(MIS 재구축 & BO 개편) | **SyncBoot** | • **신규 기능 배포 속도 2배 이상 향상** (월 단위 ➔ 주/일 단위 릴리즈 전환)<br>• 표준 플랫폼 기반 개발 공수 및 현대화 비용 **최대 20% 절감**<br>• 학사 및 관리 업무 프로세스 중복 **30% 이상 절감**<br>• 380개 현행 테이블 중 실사용 230개(60%) 사전 분석/클렌징 완료 | 마이크로서비스 전환 및 복합 데이터 마이그레이션 리스크 해소 |
+| **에듀테크 글로벌 AIDT** | **SyncETA** | • **테스트 작성 생산성 80% 향상** (기존 Appium 4시간 -> 자연어 기반 0.8시간)<br>• **회귀 테스트 자동화 커버리지 대폭 확대**로 운영 효율 30% 향상<br>• 리팩토링 및 릴리즈 시 **장애율 0.1% 이하 안정화 유지**<br>• **OS 동시 실행 성공률 95%**, UI 파편화 검출 정확도 90% 달성 | 대규모 코드 변경에도 휴먼 에러를 최소화하고 상시 안정적인 서비스 품질 확보 |
+| **메가마트 & 스마트케어가전**<br>(MIS 재구축 & BO 개편) | **SyncBoot** | • **신규 기능 배포 속도 2배 이상 향상** (월 단위 -> 주/일 단위 릴리즈 전환)<br>• 표준 플랫폼 기반 개발 공수 및 현대화 비용 **최대 20% 절감**<br>• 학사 및 관리 업무 프로세스 중복 **30% 이상 절감**<br>• 380개 현행 테이블 중 실사용 230개(60%) 사전 분석/클렌징 완료 | 마이크로서비스 전환 및 복합 데이터 마이그레이션 리스크 해소 |
 | **리빙스페이스 & 미래교육원**<br>(글로벌 포털 & T셀파) | **SyncCMS** | • **글로벌 다국어 사이트 단일 플랫폼 통합** (해외 법인별 독립 사이트 신속 개설)<br>• 템플릿 I18n 엔진으로 **신규 국가 사이트 오픈 기간 획기적 단축**<br>• 일일 수백만 PV 및 수십만 교육 콘텐츠 트래픽 상황에서 **무중단 안정성 달성** | 벤더 종속 없는 유연한 커스터마이징 및 대규모 트래픽 안정 운영 |
 | **글로벌일렉트로닉스 & 퍼스트모빌리티** | **SyncETA** | • 엔터프라이즈 B2B 포털 UI 검증 및 분산 환경 로그 수집 자동화 | 무인 CI/CD 회귀 검증 체계 구축 |
 | **코어시큐리티** | **SyncAPIM** | • 대규모 보안 API 라이프사이클 관리 및 고가용성 게이트웨이 구축 | API 보안 거버넌스 확립 |

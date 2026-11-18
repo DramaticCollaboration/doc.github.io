@@ -76,5 +76,5 @@ public class CreateAssetRequest {
 ## 3. Zero-Mock & Anti-Stub 원칙
 
 1. **더미 Mock 금지**: 단위 테스트 목적 외 프로덕션 코드에 하드코딩된 빈 리스트 반환(`return List.of()`), static JSON 더미 반환 작성을 엄격히 금지합니다.
-2. **실제 DB 연동**: 모든 REST API는 실제 PostgreSQL 17 (`pgvector`) 스키마와 100% 바인딩되어야 합니다.
+2. **실제 DB 연동**: 모든 REST API는 실제 PostgreSQL 18.6 (`pgvector`) 스키마와 100% 바인딩되어야 합니다.
 3. **Linter 자동 검증**: 커밋 전 `scripts/verify-zero-mock.ps1`을 실행하여 AST 정적 검사를 반드시 통과해야 합니다.

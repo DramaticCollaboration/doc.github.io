@@ -1,414 +1,301 @@
 ---
 title: RAG 아키텍처 및 파이프라인 구축 가이드
-description: 검색 증강 생성(Retrieval-Augmented Generation)의 핵심 개념과 파이프라인 구축 단계
+description: 검색 증강 생성(Retrieval-Augmented Generation)의 핵심 개념과 AgentScope Java 및 PostgreSQL 18.6 pgvector 기반 엔터프라이즈 파이프라인 구축 단계
 head:
   - - meta
     - name: keywords
-      content: RAG, 검색증강생성, Retrieval Augmented Generation, 벡터 검색, LLM 파이프라인, 엠파시, Empasy
+      content: RAG, 검색증강생성, Retrieval Augmented Generation, 벡터 검색, PostgreSQL 18.6, pgvector, AgentScope Java, sync-module-rag, LLM 파이프라인, 엠파시, Empasy
   - - meta
     - property: og:title
       content: RAG 아키텍처 및 파이프라인 구축 가이드 | 엠파시 기술 연구 아카이브
   - - meta
     - property: og:description
-      content: 검색 증강 생성(RAG)의 기본 원리, 청킹 및 임베딩, 벡터 데이터베이스 연동 및 답변 생성 파이프라인 가이드
+      content: 검색 증강 생성(RAG)의 기본 원리, 청킹 및 임베딩, PostgreSQL 18.6 pgvector 데이터베이스 연동 및 AgentScope Java 답변 생성 파이프라인 가이드
   - - meta
     - property: og:image
       content: https://doc.empasy.com/images/favicon.png
   - - meta
     - property: og:url
-      content: https://doc.empasy.com/study/rag.html
+      content: https://doc.empasy.com/study/rag
 sort: 300
 ---
 
-## **RAG(검색 증강 생성) 아키텍처 및 파이프라인 구축 가이드**
-
-### **목차**
-
-1.  [RAG가 뭔가요? 쉬운 비유로 이해하기](#1-rag가-뭔가요-쉬운-비유로-이해하기)
-2.  [왜 RAG가 필요할까요?](#2-왜-rag가-필요할까요)
-3.  [RAG를 구축하려면 무엇이 필요할까요? (준비물)](#3-rag를-구축하려면-무엇이-필요할까요-준비물)
-4.  [RAG 구축 5단계: 따라만 하면 됩니다!](#4-rag-구축-5단계-따라만-하면-됩니다)
-5.  [어떤 도구들을 사용하면 좋을까요?](#5-어떤-도구들을-사용하면-좋을까요)
-
----
-
-### **1. RAG가 뭔가요? 쉬운 비유로 이해하기**
-
-**RAG(Retrieval-Augmented Generation)** 는 **"정보 검색(Retrieval) + 답변 생성(Generation)"** 을 합친 기술입니다.
-
-- **`R`(Retrieval - 검색)**: 방대한 문서 더미에서 **질문과 관련된 정보를 찾아오는** 단계
-- **`AG`(Augmented Generation - 향상된 생성)**: 찾아온 정보를 바탕으로 **LLM이 정확한 답변을 생성하는** 단계
-
-#### ** 쉬운 비유: 열심히 하는 비서님**
-
-여러분에게 **`A`** 와 **`B`** , 두 명의 비서가 있다고 상상해보세요.
-
-- **비서 A (일반적인 LLM)**: 머리가 엄청 좋아서 수많은 책을 읽었습니다. 하지만 가끔 **잊어버리거나, 최신 정보를 모를 때가 있습니다.** 그리고 가끔 **"있어 보이는" 말을 지어내기도(Hallucination) 합니다.**
-- _"2024년 한국 축구 국가대표팀 감독이 누구예요?"_
-- _"음... 클린스만... 인가? 아니면 홍명보...? (확신 없음 또는 잘못된 답변)"_
-
-- **비서 B (RAG를 사용하는 LLM)**: 비서 A만큼 머리는 좋지만, **옆에 신뢰할 수 있는 전용 자료실이 있습니다.** 여러분이 질문하면,
-
-1.  먼저 **자료실(DB)로 뛰어가서** 최신 뉴스, 회사 문서, 보고서 등 **관련 자료를 찾아옵니다. (Retrieval)**
-2.  찾아온 자료를 비서 A에게 건네주면서 **"자, 이 자료 보면서 답변해"** 라고 합니다.
-3.  비서 A는 **정확한 자료를 바탕으로** 자신있게 답변합니다. **(Augmented Generation)**
-
-- _"2024년 한국 축구 국가대표팀 감독이 누구예요?"_
-- _"(자료실에서 '2024년 3월, 대한축구협회, 황선홍 감독 선임' 기사를 찾아옴)"_
-- _"네, 2024년 현재 한국 축구 국가대표팀 감독은 황선홍 감독입니다. 관련 기사 내용은 다음과 같습니다..."_
-
-**결론: RAG는 LLM에게 '정확한 자료'를 먼저 찾아주어 더 신뢰할 수 있는 답변을 만들게 해주는 '똑똑한 비서 시스템'입니다.**
-
----
-
-### **2. 왜 RAG가 필요할까요?**
-
-일반적인 LLM(예: ChatGPT)의 **단점을 해결**해 줍니다.
-
-1.  **최신 정보 부족**: LLM은 학습이 끊긴 시점의 데이터만 알고 있습니다. RAG는 실시간 문서를 제공해 최신 정보로 답변하게 합니다.
-2.  **환각(Hallucination)**: 사실이 아닌 내용을 생성할 때가 있습니다. RAG는 **'근거 자료'** 를 제공해 이를 방지합니다.
-3.  **내부 정보 활용 불가**: 회사의 매뉴얼, 계약서, 메일 등 **비공개 문서를 LLM이 알지 못합니다.** RAG는 이 내부 문서들을 자료실에 넣어 활용하게 합니다.
-4.  **투명성과 신뢰성**: 답변의 출처(어떤 문서의 몇 페이지)를 제공해 **"왜 그렇게 답변했는지"** 확인이 가능합니다.
-
----
-
-### **3. RAG를 구축하려면 무엇이 필요할까요? (준비물)**
-
-크게 4가지 구성 요소가 필요합니다.
-
-1.  **지식(Knowledge) / 문서 데이터**: 답변의 근거가 될 **내부 문서들** (PDF, HWP, Word, Excel, PPT, 웹페이지, DB 등)
-2.  **임베딩 모델(Embedding Model)**: 문서의 **'의미'를 숫자로 변환**해주는 AI. 비유하자면 **'문서를 컴퓨터가 이해할 수 있는 바코드(벡터)로 만들어주는 스캐너'** 입니다.
-3.  **벡터 데이터베이스(Vector DB)**: 그 '바코드(벡터)'들을 **저장하고, 빠르게 검색할 수 있는** 특별한 DB. **'초고속 정리된 자료실'** 이라고 생각하세요.
-4.  **LLM(Large Language Model)**: 최종적으로 **답변을 생성하는** AI. (예: GPT-4, Claude, Llama2 등)
-
----
-
-### **4. RAG 구축 5단계: 따라만 하면 됩니다!**
-
-전체 과정은 **'자료실 세팅'** 과 **'질문-답변'** 두 파트로 나눌 수 있습니다.
-
-```mermaid
-flowchart TD
-    subgraph A [자료실 세팅 과정 배치 작업]
-        direction LR
-        A1[문서 수집 및 전처리] --> A2[임베딩 모델로<br>문서를 벡터로 변환] --> A3[벡터 DB에 저장]
-    end
-
-    subgraph B [사용자 질의-응답 과정 실시간]
-        direction LR
-        B1[사용자 질문] --> B2[동일 임베딩 모델로<br>질문을 벡터로 변환]
-        B2 -- 유사도 검색 --> B3[벡터 DB에서<br>관련 문서 검색]
-        B3 -- 검색된 문서를<br>답변 근거로 제공 --> B4[LLM이 최종 답변 생성]
-        B4 --> B5[사용자에게 답변 전달]
-    end
-
-    A3 -.-> B3
-```
-
-#### **파트 1: 자료실 세팅 (한번 해두면 계속 사용)**
-
-**1단계: 문서 수집 및 전처리**
-
-- **하는 일**: PDF, Word 등 다양한 형식의 문서를 **텍스트만 뽑아내서** 정리합니다.
-- **세부 작업**:
-- **텍스트 추출**: 문서에서 글자만 뽑아냅니다.
-- **쪼개기(Chunking)**: 100페이지짜리 문서를 통째로 넣으면 효율이 나쁩니다. **의미가 통하는 단위(예: 3~5문단씩)** 로 잘라줍니다. 이게 **자료실의 한 장 한 장**이 됩니다.
-- **정제**: 불필요한 공백, 특수문자를 정리합니다.
-
-**2단계: 문서를 숫자(벡터)로 변환 (임베딩)**
-
-- **하는 일**: 쪼개놓은 텍스트 조각들을 **임베딩 모델**에 넣어 **숫자 나열(벡터)** 로 변환합니다. 의미가 비슷한 문서들은 비슷한 숫자 값을 가집니다.
-
-**3단계: 벡터 데이터베이스에 저장**
-
-- **하는 일**: 변환된 숫자들(벡터)과 원본 텍스트를 **벡터 DB**에 짝지어 저장합니다. 이제 **'의미 기반'으로 검색할 수 있는 자료실**이 완성되었습니다.
-
-#### **파트 2: 질문-답변 (사용자가 질문할 때마다 진행)**
-
-**4단계: 질문을 숫자(벡터)로 변환 및 검색**
-
-- **하는 일**: 사용자의 질문도 **똑같은 임베딩 모델**을 이용해 숫자(벡터)로 변환합니다.
-- 그런 다음, **벡터 DB에서** 이 질문의 벡터와 **가장 유사한 벡터(즉, 가장 관련성 높은 문서)** 를 찾아서 그 **원본 텍스트를 꺼내옵니다.**
-
-**5단계: LLM이 최종 답변 생성**
-
-- **하는 일**: 다음과 같은 **'설명서(프롬프트)'** 와 함께 찾아온 문서들을 LLM에게 건넵니다.
-- _"주어진 [참고 문서] 내용만을 정확히 참고하여 사용자의 질문에 사실에 입각해 답변하는 전문 어시스턴트입니다. 모르는 내용은 모른다고 명확히 밝히세요."_
-- `[참고 문서]:` (4단계에서 찾아온 텍스트들)
-- `[사용자 질문]:` "우리 회사 휴가 규정은 어떻게 되나요?"
-- LLM은 **주어진 문서를 참조해서** 정확하고 신뢰할 수 있는 답변을 생성합니다.
-
----
-
-### **5. 어떤 도구들을 사용하면 좋을까요?**
-
-코딩 없이도 GUI로 쉽게 시작할 수 있는 도구들과, 본격적인 개발에 유용한 오픈소스 도구들을 소개합니다.
-
-#### **초보자/비개발자 친화적 도구 (Low-Code/No-Code)**
-
-- **ChatPDF, AskYourPDF**: 그냐 PDF 파일을 업로드하면 바로 질문할 수 있는 서비스. RAG의 가장 간단한 형태입니다.
-- **Microsoft Copilot Studio**: 마이크로소프트 365 제품군 사용한다면, SharePoint나 Word 파일에 기반한 RAG 챗봇을 쉽게 만들 수 있습니다.
-- **Notion AI**: 노션 workspace 내의 문서를 기반으로 답변.
-
-#### **본격적으로 개발하기 위한 오픈소스 도구들**
-
-- **임베딩 모델**: `all-MiniLM-L6-v2` (가볍고 좋음), `BGE`, `OpenAI의 text-embedding-3` (성능 좋음)
-- **벡터 DB**: `Chroma` (가장 쉬움), `Weaviate`, `Qdrant`, `Pinecone` (클라우드 서비스)
-- **LLM**: `OpenAI API (GPT-4)`, `Anthropic API (Claude)`, `Llama 3` (오픈소스)
-- **프레임워크**: `LangChain`, `LlamaIndex` - RAG 시스템의 **접착제** 같은 역할. 위의 모든 요소들을 쉽게 연결하게 도와주는 파이썬 라이브러리입니다.
-
-**시작 추천 조합:** `LangChain` + `Chroma DB` + `all-MiniLM-L6-v2` + `GPT-4 API` 조합이 학습하기에 좋습니다.
-
-# RAG(Retrieval-Augmented Generation) 구축 가이드: Java 개발자 샘플
+# RAG(검색 증강 생성) 아키텍처 및 파이프라인 구축 가이드
 
 ## 목차
 
-1. [RAG란 무엇인가?](#1-rag란-무엇인가)
-2. [RAG의 필요성](#2-rag의-필요성)
-3. [RAG 시스템 구성 요소](#3-rag-시스템-구성-요소)
-4. [Java 기반 RAG 구현 단계](#4-java-기반-rag-구현-단계)
-5. [간단한 Java 구현 예제](#5-간단한-java-구현-예제)
+1. [RAG란 무엇인가? (개념 및 비유)](#1-rag란-무엇인가-개념-및-비유)
+2. [RAG의 필요성 및 도입 효과](#2-rag의-필요성-및-도입-효과)
+3. [RAG 시스템 핵심 구성 요소](#3-rag-시스템-핵심-구성-요소)
+4. [RAG 구축 5단계 파이프라인](#4-rag-구축-5단계-파이프라인)
+5. [AgentScope Java & PostgreSQL 18.6 pgvector 기반 구현](#5-agentscope-java--postgresql-186-pgvector-기반-구현)
 6. [향후 발전 방향](#6-향후-발전-방향)
 
 ---
 
-## 1. RAG란 무엇인가?
+## 1. RAG란 무엇인가? (개념 및 비유)
 
-RAG(Retrieval-Augmented Generation)는 **정보 검색(Retrieval)** 과 **답변 생성(Generation)** 을 결합한 기술로, 대형 언어 모델(LLM)이 외부 지식 소스를 활용하여 더 정확하고 신뢰할 수 있는 답변을 생성할 수 있게 합니다.
+**RAG(Retrieval-Augmented Generation)** 는 **"정보 검색(Retrieval) + 답변 생성(Generation)"** 을 결합한 아키텍처로, 대형 언어 모델(LLM)이 검증된 외부 지식 저장소를 실시간 참조하여 사실에 기반한 답변을 생성하도록 돕는 기술입니다.
 
-### 쉬운 비유: 도서관 사서
+- **`R` (Retrieval - 검색)**: 방대한 사내 문서 및 데이터베이스에서 **질문과 의미적으로 가장 연관성 높은 근거 문서를 찾아오는** 단계입니다.
+- **`AG` (Augmented Generation - 증강 생성)**: 검색된 근거 문서를 프롬프트 컨텍스트로 주입하여 **LLM이 환각 없이 정확한 답변을 생성하는** 단계입니다.
 
-- **일반 LLM**: 백과사전을 통째로 외운 천재 (단, 최신 정보 없고 가끔 틀림)
-- **RAG LLM**: 도서관에서 관련 자료 찾아와 참고하며 답변하는 사서 (정확하고 최신 정보 제공)
+### 비유로 이해하는 일반 LLM vs RAG 기반 에이전트
 
----
-
-## 2. RAG의 필요성
-
-| 문제점              | 일반 LLM                | RAG 적용 시         |
-| ------------------- | ----------------------- | ------------------- |
-| 최신 정보 부족      | [실패]  학습 데이터에만 의존 | [완료]  실시간 정보 활용 |
-| 환각(Hallucination) | [실패]  가끔 지어냄          | [완료]  근거 자료 기반   |
-| 내부 정보 활용      | [실패]  불가능               | [완료]  가능             |
-| 투명성 부족         | [실패]  답변 근거 불명확     | [완료]  출처 명시 가능   |
+- **일반 LLM (기억에만 의존하는 자문역)**: 사전 학습된 방대한 지식을 보유하고 있으나, **학습 시점 이후의 최신 정보나 사내 비공개 규정**을 알지 못하며 근거 없이 그럴듯한 문장을 지어내는 환각(Hallucination) 현상이 발생할 수 있습니다.
+- **RAG 기반 에이전트 (검증된 자료실을 갖춘 전문 비서)**: 질문을 받으면 먼저 **사내 전용 자료실(Vector DB)** 에서 최신 규정집과 보고서를 검색(Retrieval)한 뒤, 해당 원문 조항을 근거로 제시하며 정확하게 답변(Augmented Generation)합니다.
 
 ---
 
-## 3. RAG 시스템 구성 요소
+## 2. RAG의 필요성 및 도입 효과
 
-1. **문서 저장소**: PDF, Word, 내부 문서 등 원본 자료
-2. **임베딩 모델**: 텍스트 → 숫자 벡터 변환
-3. **벡터 데이터베이스**: 벡터 저장 및 유사도 검색
-4. **LLM**: 최종 답변 생성
+엔터프라이즈 환경에서 RAG 아키텍처는 상용 LLM의 구조적 한계를 다음과 같이 해결합니다.
+
+| 평가 항목 | 일반 LLM 단독 사용 | 엔터프라이즈 RAG 적용 (`sync-module-rag`) |
+| :--- | :--- | :--- |
+| **최신 정보 반영** | 사전 학습 시점(Cut-off) 이후 데이터 반영 불가 | 문서 적재 즉시 재학습 없이 실시간 최신 정보 반영 |
+| **환각(Hallucination) 통제** | 미확인 사실에 대해 확률적 추측 답변 생성 위험 | 검색된 근거 문서 범위 내에서만 사실 기반 답변 강제 |
+| **사내 비공개 지식 활용** | 사내 매뉴얼, 계약서, 운영 DB 참조 불가 | RBAC/ABAC 권한이 검증된 사내 문서 및 지식 그래프 연동 |
+| **투명성 및 감사 추적** | 답변의 출처 및 근거 조항 확인 불가 | 참조한 원본 문서 ID, 섹션 헤더, 코사인 유사도 점수 명시 |
 
 ---
 
-## 4. Java 기반 RAG 구현 단계
+## 3. RAG 시스템 핵심 구성 요소
 
-### 단계 1: 환경 설정 (의존성 추가)
+1. **원천 지식 저장소 (Knowledge Source)**: PDF, Word, Markdown 기술 문서, 위키, 웹 수집 데이터(`SyncCrawl`) 및 운영 DB 메타데이터
+2. **문맥 보존 청킹 및 임베딩 엔진 (Chunking & Embedding)**: 문서를 의미 단위로 분할(`ContextAwareMarkdownSplitter`)하고 고차원 실수 벡터(`vector(1536)`)로 변환하는 임베딩 모델
+3. **벡터 데이터베이스 (`PostgreSQL 18.6 pgvector`)**: 벡터 임베딩과 메타데이터(`JSONB`), 전문 검색 토큰(`pg_trgm`)을 단일 ACID 트랜잭션 내에 저장하고 HNSW 인덱스로 고속 검색하는 저장소
+4. **에이전트 런타임 (`AgentScope Java`)**: 검색된 컨텍스트를 조합하고 도메인 가드레일을 적용하여 최종 응답을 합성하는 `ReActAgent` 오케스트레이터
+
+---
+
+## 4. RAG 구축 5단계 파이프라인
+
+전체 파이프라인은 **지식 색인(Indexing) 배치 파이프라인**과 **실시간 질의-응답(Retrieval & Generation) 파이프라인**으로 구분됩니다.
+
+```mermaid
+flowchart TD
+    subgraph Indexing ["파트 1: 지식 색인 파이프라인 (Batch / CDC)"]
+        direction LR
+        A1["1단계: 문서 수집 및 정제\n(Markdown / 텍스트 추출)"] --> A2["2단계: 문맥 보존 분할 및 임베딩\n(ContextAwareMarkdownSplitter)"] --> A3["3단계: 벡터 DB 적재\n(PostgreSQL 18.6 pgvector HNSW)"]
+    end
+
+    subgraph Runtime ["파트 2: 실시간 질의-응답 파이프라인 (Online)"]
+        direction LR
+        B1["사용자 질의 수신"] --> B2["4단계: 질의 임베딩 및 하이브리드 검색\n(Dense Vector + pg_trgm 키워드)"]
+        B2 --> B3["관련 청크 Top-K 추출 및 리랭킹"]
+        B3 --> B4["5단계: AgentScope ReActAgent\n근거 기반 답변 생성"]
+        B4 --> B5["출처 포함 최종 응답 반환"]
+    end
+
+    A3 -.->|"코사인 유사도 (<=>)"| B2
+```
+
+### 파트 1: 지식 색인 파이프라인
+- **1단계 (문서 수집 및 정제)**: 문서에서 불필요한 노이즈 태그를 제거하고 제목 계층(`H1`~`H3`)과 표 구조를 보존한 마크다운으로 정규화합니다.
+- **2단계 (문맥 보존 분할 및 임베딩)**: 단순 글자 수 절단이 아닌 헤더 계층과 코드 블록 경계를 유지하며 청크(Chunk)를 분할한 뒤 임베딩 벡터를 산출합니다.
+- **3단계 (벡터 데이터베이스 저장)**: `PostgreSQL 18.6 pgvector` 테이블에 원본 청크 텍스트, 출처 메타데이터(`JSONB`), 임베딩 벡터를 함께 저장합니다.
+
+### 파트 2: 실시간 질의-응답 파이프라인
+- **4단계 (질의 벡터 변환 및 유사도 검색)**: 사용자 질의를 동일한 임베딩 모델로 벡터화한 후, `pgvector` HNSW 코사인 거리 연산자(`<=>`)와 `pg_trgm` 키워드 필터를 결합하여 상위 `Top-K` 문서를 조회합니다.
+- **5단계 (프롬프트 증강 및 답변 생성)**: 검색된 문서를 시스템 프롬프트의 `[참고 문서]` 블록에 주입하여 `AgentScope Java` 에이전트가 출처와 함께 답변을 생성합니다.
+
+---
+
+## 5. AgentScope Java & PostgreSQL 18.6 pgvector 기반 구현
+
+SyncSeries 전사 표준 스택인 **Spring Boot 3.5**, **AgentScope Java (`io.agentscope:agentscope-harness:2.0.2`)**, **Lombok (`@RequiredArgsConstructor`, `@Slf4j`)**, **PostgreSQL 18.6 (`pgvector`)** 기반의 실전 구현 예시입니다.
+
+### 5.1 Maven 의존성 설정 (`pom.xml`)
 
 ```xml
-<!-- pom.xml -->
 <dependencies>
+    <!-- 전사 표준 AI 에이전트 프레임워크 -->
     <dependency>
-        <groupId>org.springframework.ai</groupId>
-        <artifactId>spring-ai-openai-spring-boot-starter</artifactId>
-        <version>0.8.1</version>
+        <groupId>io.agentscope</groupId>
+        <artifactId>agentscope-harness</artifactId>
+        <version>2.0.2</version>
     </dependency>
+
+    <!-- 전사 Tri-Hybrid RAG 공통 모듈 -->
     <dependency>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starter-web</artifactId>
+        <groupId>com.empasy.sync</groupId>
+        <artifactId>sync-module-rag</artifactId>
+        <version>2026.10.0</version>
     </dependency>
-    <!-- 벡터 DB 의존성 (선택 사항) -->
+
+    <!-- PostgreSQL 18.6 & pgvector 드라이버 -->
+    <dependency>
+        <groupId>org.postgresql</groupId>
+        <artifactId>postgresql</artifactId>
+        <scope>runtime</scope>
+    </dependency>
 </dependencies>
 ```
 
-### 단계 2: 문서 로드 및 분할
+### 5.2 PostgreSQL 18.6 `pgvector` 스키마 (`db/00_extensions.sql` & `02_schema_domain.sql`)
+
+```sql
+-- db/00_extensions.sql
+CREATE EXTENSION IF NOT EXISTS "vector";
+CREATE EXTENSION IF NOT EXISTS "uuid-ossp";
+CREATE EXTENSION IF NOT EXISTS "pg_trgm";
+
+-- db/02_schema_domain.sql
+CREATE TABLE rag_knowledge_chunk (
+    chunk_id VARCHAR(64) PRIMARY KEY,
+    doc_title VARCHAR(255) NOT NULL,
+    section_path VARCHAR(500) NOT NULL,
+    content TEXT NOT NULL,
+    embedding vector(1536) NOT NULL,
+    created_at TIMESTAMPTZ NOT NULL DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE INDEX idx_rag_chunk_embedding_hnsw
+    ON rag_knowledge_chunk USING hnsw (embedding vector_cosine_ops)
+    WITH (m = 16, ef_construction = 64);
+```
+
+### 5.3 문맥 보존 청킹 및 PostgreSQL 18.6 벡터 검색 리포지토리
+
+인메모리 컬렉션(`HashMap` 등) 대신 실제 `JdbcTemplate` / MyBatis와 `PostgreSQL 18.6 pgvector` 코사인 거리 연산자(`<=>`)를 사용하여 영속성과 확장성을 보장합니다.
 
 ```java
-public class DocumentLoader {
-    public List<String> loadAndSplitDocuments(String filePath, int chunkSize) throws IOException {
-        String content = new String(Files.readAllBytes(Paths.get(filePath)));
-        return splitTextIntoChunks(content, chunkSize);
+package com.empasy.sync.rag.repository;
+
+import lombok.Builder;
+import lombok.Getter;
+import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.stereotype.Repository;
+
+import java.util.List;
+
+@Slf4j
+@Repository
+@RequiredArgsConstructor
+public class PgVectorKnowledgeRepository {
+
+    private final JdbcTemplate jdbcTemplate;
+
+    @Getter
+    @Builder
+    public static class MatchedChunk {
+        private final String chunkId;
+        private final String docTitle;
+        private final String sectionPath;
+        private final String content;
+        private final double similarity;
     }
 
-    private List<String> splitTextIntoChunks(String text, int chunkSize) {
-        List<String> chunks = new ArrayList<>();
-        for (int i = 0; i < text.length(); i += chunkSize) {
-            chunks.add(text.substring(i, Math.min(i + chunkSize, text.length())));
-        }
-        return chunks;
+    public List<MatchedChunk> searchTopK(String vectorLiteral, int topK, double minSimilarity) {
+        String sql = """
+            SELECT chunk_id,
+                   doc_title,
+                   section_path,
+                   content,
+                   1 - (embedding <=> ?::vector) AS similarity
+              FROM rag_knowledge_chunk
+             WHERE 1 - (embedding <=> ?::vector) >= ?
+             ORDER BY embedding <=> ?::vector ASC
+             LIMIT ?
+            """;
+
+        return jdbcTemplate.query(
+                sql,
+                (rs, rowNum) -> MatchedChunk.builder()
+                        .chunkId(rs.getString("chunk_id"))
+                        .docTitle(rs.getString("doc_title"))
+                        .sectionPath(rs.getString("section_path"))
+                        .content(rs.getString("content"))
+                        .similarity(rs.getDouble("similarity"))
+                        .build(),
+                vectorLiteral, vectorLiteral, minSimilarity, vectorLiteral, topK
+        );
     }
 }
 ```
 
-### 단계 3: 텍스트 임베딩 생성
+### 5.4 AgentScope Java 기반 RAG 질의 서비스 및 컨트롤러
 
 ```java
+package com.empasy.sync.rag.service;
+
+import com.empasy.sync.rag.repository.PgVectorKnowledgeRepository;
+import com.empasy.sync.rag.repository.PgVectorKnowledgeRepository.MatchedChunk;
+import io.agentscope.core.agent.ReActAgent;
+import io.agentscope.core.message.Msg;
+import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.stereotype.Service;
+
+import java.util.List;
+import java.util.stream.Collectors;
+
+@Slf4j
 @Service
-public class EmbeddingService {
-    private final OpenAiEmbeddingClient embeddingClient;
+@RequiredArgsConstructor
+public class EnterpriseRagQueryService {
 
-    public EmbeddingService(OpenAiEmbeddingClient embeddingClient) {
-        this.embeddingClient = embeddingClient;
-    }
+    private final PgVectorKnowledgeRepository knowledgeRepository;
+    private final EmbeddingVectorClient embeddingVectorClient;
+    private final ReActAgent ragAnswerAgent;
 
-    public List<Double> generateEmbedding(String text) {
-        return embeddingClient.embed(text);
+    public String answerWithEvidence(String question) {
+        String queryVector = embeddingVectorClient.encodeAsVectorLiteral(question);
+        List<MatchedChunk> chunks = knowledgeRepository.searchTopK(queryVector, 5, 0.78);
+
+        if (chunks.isEmpty()) {
+            throw new IllegalStateException("질의와 일치하는 사내 근거 문서를 찾을 수 없습니다: " + question);
+        }
+
+        String contextBlock = chunks.stream()
+                .map(c -> String.format("[%s > %s (유사도: %.3f)]\n%s",
+                        c.getDocTitle(), c.getSectionPath(), c.getSimilarity(), c.getContent()))
+                .collect(Collectors.joining("\n\n---\n\n"));
+
+        String augmentedPrompt = String.format("""
+                다음 [사내 근거 문서]만을 기반으로 질문에 정확히 답변하고 출처를 명시하십시오.
+                
+                [사내 근거 문서]
+                %s
+                
+                [사용자 질문]
+                %s
+                """, contextBlock, question);
+
+        Msg reply = ragAnswerAgent.reply(Msg.ofUser("User", augmentedPrompt));
+        return reply.getText();
     }
 }
 ```
 
-### 단계 4: 벡터 저장 및 검색 (간단한 구현)
+### 5.5 `application.yml` 표준 설정 (`SyncLLM` 게이트웨이 연동)
 
-```java
-public class SimpleVectorStore {
-    private Map<String, List<Double>> vectorMap = new HashMap<>();
-    private Map<String, String> textMap = new HashMap<>();
+```yaml
+spring:
+  profiles:
+    active: ${SPRING_PROFILES_ACTIVE:local}
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:45432/sync_db
+    username: ${DB_USERNAME:postgres}
+    password: ${DB_PASSWORD:postgres}
 
-    public void storeVector(String id, String text, List<Double> vector) {
-        vectorMap.put(id, vector);
-        textMap.put(id, text);
-    }
-
-    public String findMostSimilar(List<Double> queryVector) {
-        String mostSimilarId = null;
-        double maxSimilarity = -1;
-
-        for (Map.Entry<String, List<Double>> entry : vectorMap.entrySet()) {
-            double similarity = cosineSimilarity(queryVector, entry.getValue());
-            if (similarity > maxSimilarity) {
-                maxSimilarity = similarity;
-                mostSimilarId = entry.getKey();
-            }
-        }
-
-        return textMap.get(mostSimilarId);
-    }
-
-    private double cosineSimilarity(List<Double> vectorA, List<Double> vectorB) {
-        double dotProduct = 0.0;
-        double normA = 0.0;
-        double normB = 0.0;
-
-        for (int i = 0; i < vectorA.size(); i++) {
-            dotProduct += vectorA.get(i) * vectorB.get(i);
-            normA += Math.pow(vectorA.get(i), 2);
-            normB += Math.pow(vectorB.get(i), 2);
-        }
-
-        return dotProduct / (Math.sqrt(normA) * Math.sqrt(normB));
-    }
-}
-```
-
-### 단계 5: RAG 시스템 통합
-
-```java
-@Service
-public class RagService {
-    private final EmbeddingService embeddingService;
-    private final SimpleVectorStore vectorStore;
-    private final OpenAiChatClient chatClient;
-
-    public RagService(EmbeddingService embeddingService,
-                     SimpleVectorStore vectorStore,
-                     OpenAiChatClient chatClient) {
-        this.embeddingService = embeddingService;
-        this.vectorStore = vectorStore;
-        this.chatClient = chatClient;
-    }
-
-    public String query(String question) {
-        // 1. 질문 임베딩 생성
-        List<Double> questionEmbedding = embeddingService.generateEmbedding(question);
-
-        // 2. 관련 문서 검색
-        String relevantText = vectorStore.findMostSimilar(questionEmbedding);
-
-        // 3. LLM에 컨텍스트와 함께 질문
-        String prompt = "다음 문서 내용을 참고하여 질문에 답변하세요:\n\n" +
-                       "문서: " + relevantText + "\n\n" +
-                       "질문: " + question + "\n\n" +
-                       "답변:";
-
-        return chatClient.call(prompt);
-    }
-}
+sync:
+  ai:
+    gateway-url: ${SYNC_LLM_GATEWAY_URL:http://localhost:18085/api/v1/llm}
+    chat-model: claude-3-5-sonnet
+    embedding-model: text-embedding-3-large
+    min-similarity: 0.78
 ```
 
 ---
 
-## 5. 간단한 Java 구현 예제
+## 6. 향후 발전 방향
 
-### 전체 애플리케이션 코드
-
-```java
-@SpringBootApplication
-public class SimpleRagApplication implements CommandLineRunner {
-    @Autowired
-    private RagService ragService;
-
-    @Autowired
-    private DocumentLoader documentLoader;
-
-    @Autowired
-    private EmbeddingService embeddingService;
-
-    @Autowired
-    private SimpleVectorStore vectorStore;
-
-    public static void main(String[] args) {
-        SpringApplication.run(SimpleRagApplication.class, args);
-    }
-
-    @Override
-    public void run(String... args) throws Exception {
-        // 문서 로드 및 처리
-        List<String> chunks = documentLoader.loadAndSplitDocuments("data/company_policy.txt", 500);
-
-        // 벡터 저장소에 문서 저장
-        for (int i = 0; i < chunks.size(); i++) {
-            List<Double> embedding = embeddingService.generateEmbedding(chunks.get(i));
-            vectorStore.storeVector("doc_" + i, chunks.get(i), embedding);
-        }
-
-        // 간단한 쿼리 인터페이스
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("RAG 시스템이 준비되었습니다. 질문을 입력하세요 (종료: exit):");
-
-        while (true) {
-            System.out.print("> ");
-            String question = scanner.nextLine();
-
-            if ("exit".equalsIgnoreCase(question)) {
-                break;
-            }
-
-            String answer = ragService.query(question);
-            System.out.println("답변: " + answer);
-        }
-
-        scanner.close();
-    }
-}
-```
-
-### application.properties 설정
-
-```properties
-# OpenAI API 설정
-spring.ai.openai.api-key=your-openai-api-key
-spring.ai.openai.chat.model=gpt-3.5-turbo
-spring.ai.openai.embedding.model=text-embedding-ada-002
-```
-
----
-
-## 6. 고급 기능
-
-1. **고급 벡터 데이터베이스 도입**: Chroma, Pinecone, Weaviate 등
-2. **성능 최적화**: 임베딩 캐싱, 비동기 처리
-3. **정확도 향상**: 다양한 검색 알고리즘, 재순위화
-4. **보안 강화**: 접근 제어, 데이터 암호화
-
+1. **Tri-Hybrid RAG 아키텍처 고도화**: Dense 벡터 검색(`pgvector` HNSW) + Sparse 키워드 검색(`pg_trgm` / BM25) + 도메인 지식 그래프(Knowledge Graph) 3중 결합 및 Cross-Encoder 리랭킹(`sync-module-rag`)으로 복합 도메인 질의 정확도를 극대화합니다.
+2. **시맨틱 캐싱 및 FinOps 연계**: `SyncLLM` 시맨틱 캐시(유사도 \(\ge 0.95\))와 연동하여 반복되는 사내 규정·매뉴얼 질의의 LLM 추론 비용과 응답 지연시간을 절감합니다.
+3. **실시간 CDC 및 적응형 웹 지식 동기화**: `SyncCrawl` 적응형 수집 파이프라인과 연동하여 외부 법령·시장 동향 변경 시 벡터 인덱스를 무중단 증분 갱신합니다.
+4. **ABAC 문서 보안 및 PII 가드레일**: 질의자의 역할(Role)과 부서 속성에 따라 접근 가능한 청크만 벡터 검색 조건에 자동 필터링하고 민감 개인정보를 실시간 마스킹합니다.

@@ -1,28 +1,28 @@
 ---
-title: SyncWatch 아키텍처 — 6대 채널 수집, 5단계 SSRF 가드 및 듀얼 룰 컴파일러
-description: SyncWatch의 6대 위협 수집 채널, 5단계 SSRF 방어 가드, WatchRuleCompilerService 듀얼 보안 룰 컴파일 및 자체 샌드박스 검증 아키텍처를 설명합니다.
+title: SyncWatch 아키텍처 — 8대 글로벌 위협 피드 수집, 5단계 SSRF 가드 및 듀얼 룰 컴파일러
+description: SyncWatch의 8대 글로벌 위협 피드(OSV.dev, GitHub GHSA, NVD CVE, CISA KEV, Nuclei, OWASP CRS, MITRE ATT&CK, KISA) 수집 채널, 5단계 SSRF 방어 가드, WatchRuleCompilerService 듀얼 보안 룰 컴파일 및 자체 샌드박스 검증 아키텍처를 설명합니다.
 sidebarTitle: 아키텍처 & 룰 컴파일러
 sort: 2
 ---
 
 # SyncWatch 시스템 아키텍처 및 듀얼 룰 컴파일러
 
-`SyncWatch`는 외부 위협 인텔리전스를 안전하게 반입하고, 오탐(False Positive) 없는 고신뢰 점검·방어 규칙으로 변환하기 위해 **다채널 정규화 수집기**, **5단계 SSRF 가드**, **`WatchRuleCompilerService` 듀얼 컴파일러**, 그리고 **자체 샌드박스 검증기**로 구성됩니다.
+`SyncWatch`는 외부 위협 인텔리전스를 안전하게 반입하고, 오탐(False Positive) 없는 고신뢰 점검·방어 규칙으로 변환하기 위해 **8대 글로벌 위협 피드 다채널 정규화 수집기**, **5단계 SSRF 가드**, **`WatchRuleCompilerService` 듀얼 컴파일러**, 그리고 **자체 샌드박스 검증기**로 구성됩니다.
 
 ---
 
-## 1. 6대 위협 수집 채널 및 7대 글로벌 피드 정규화
+## 1. 6대 위협 수집 채널 및 8대 글로벌 위협 피드 정규화
 
-`SyncWatch`는 다양한 포맷(`REST_JSON`, `STIX_TAXII`, `YAML_NUCLEI`, `CRS_CONF`, `RSS_XML`, `DOCUMENT_UPLOAD`)의 보안 정보를 단일 표준 원장(`watch_security_advisory`)으로 정규화합니다.
+`SyncWatch`는 **8대 글로벌 위협 피드(OSV.dev, GitHub GHSA, NVD CVE, CISA KEV, Nuclei, OWASP CRS, MITRE ATT&CK, KISA)** 및 다양한 포맷(`REST_JSON`, `STIX_TAXII`, `YAML_NUCLEI`, `CRS_CONF`, `RSS_XML`, `DOCUMENT_UPLOAD`)의 보안 정보를 단일 표준 원장(`watch_security_advisory`)으로 정규화합니다.
 
-| 수집 채널 (`source_channel`) | 대표 공급자 (`provider_code`) | 수집 포맷 | 주요 정규화 추출 항목 |
+| 수집 채널 (`source_channel`) | 8대 대표 공급자 (`provider_code`) | 수집 포맷 | 주요 정규화 추출 항목 |
 | :--- | :--- | :--- | :--- |
-| **1. 글로벌 CVE 데이터베이스** | `NVD_CVE_FEED` (NIST NVD) | `REST_JSON` | CVE ID, CVSS v3.1 점수, CWE 코드, 영향 받는 CPE/패키지 버전 범위 |
-| **2. 실전 악용 확인 취약점** | `CISA_KEV_CATALOG` (CISA KEV) | `REST_JSON` | 실제 해킹에 악용 중인 취약점(`ACTIVE_EXPLOIT`), 필수 조치 기한, 완화 지침 |
-| **3. 오픈소스 생태계 권고** | `OSV_DEV_FEED`, `GITHUB_GHSA` | `REST_JSON` | `MAVEN`, `NPM`, `PYPI`, `GO` 패키지별 취약 버전 범위 및 패치 완료 버전 |
-| **4. 모의해킹·취약점 스캐너 템플릿** | `NUCLEI_TEMPLATES` | `YAML_NUCLEI` | HTTP 요청 메소드·경로, 공격 페이로드 프로브, 매처(Matcher) 정규식 |
-| **5. 웹 방화벽 핵심 룰셋** | `OWASP_CRS_FEED` | `CRS_CONF` | SQLi/XSS/RCE/LFI 탐지 정규식, 타깃 위치(`HEADER`, `URI`, `QUERY`, `BODY`), 구문 지문 |
-| **6. 국내 보안 권고 및 진단 문서** | `KISA_BOHO_NOTICE`, 사내 진단서 업로드 | `RSS_XML` / `DOC` | KISA 보안 공지, 외부 모의해킹 결과 보고서(PDF/Markdown) 파싱 및 정규화 |
+| **1. 오픈소스 생태계 권고** | `OSV_DEV_FEED` (OSV.dev), `GITHUB_GHSA` (GitHub GHSA) | `REST_JSON` | `MAVEN`, `NPM`, `PYPI`, `GO`, `DOCKER` 패키지별 취약 버전 범위 및 패치 완료 버전 |
+| **2. 글로벌 CVE 데이터베이스** | `NVD_CVE_FEED` (NIST NVD CVE) | `REST_JSON` | CVE ID, CVSS v3.1 점수, CWE 코드, 영향 받는 CPE/패키지 버전 범위 |
+| **3. 실전 악용 확인 취약점** | `CISA_KEV_CATALOG` (CISA KEV) | `REST_JSON` | 실제 해킹에 악용 중인 취약점(`ACTIVE_EXPLOIT`), 필수 조치 기한, 완화 지침 |
+| **4. 모의해킹·취약점 스캐너 템플릿** | `NUCLEI_TEMPLATES` (Nuclei) | `YAML_NUCLEI` | HTTP 요청 메소드·경로, 공격 페이로드 프로브, 매처(Matcher) 정규식 |
+| **5. 웹 방화벽 & 공격 전술 매트릭스** | `OWASP_CRS_FEED` (OWASP CRS), `MITRE_ATTACK_STIX` (MITRE ATT&CK) | `CRS_CONF` / `STIX_TAXII` | SQLi/XSS/RCE/LFI 탐지 정규식, 타깃 위치(`HEADER`, `URI`, `QUERY`, `BODY`), 구문 지문, MITRE 전술 코드(`T1190` 등) |
+| **6. 국내 보안 권고 및 진단 문서** | `KISA_BOHO_NOTICE` (KISA 보호나라), 사내 진단서 업로드 | `RSS_XML` / `DOC` | KISA 보안 공지, 외부 모의해킹 결과 보고서(PDF/Markdown) 파싱 및 정규화 |
 
 ---
 

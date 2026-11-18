@@ -146,3 +146,30 @@ const msg: A2AMessage = {
 const response = await client.send(msg);
 console.log(response.data);
 ```
+
+---
+
+## 5. 코딩 에이전트 표준 SPI (`ICodingAgentClient` & `CodingAgentType` 15종)
+
+`sync-sdk-common`은 `SyncVerse`의 5-Step Spec Studio와 15대 자율 코딩 에이전트 엔진을 단일 인터페이스로 연결하는 `ICodingAgentClient` SPI와 `CodingAgentType` 열거형을 제공합니다.
+
+### 15대 코딩 에이전트 엔진 (`CodingAgentType`)
+모든 코딩 에이전트의 기본 추론 모델은 `SystemConfigHolder.getValue("sync.sdk.agent.default-model.<code_lower>", defaultModel)`을 통해 DB `sys_config` 테이블에서 런타임에 동적으로 조회됩니다:
+
+| 엔진 코드 (`CodingAgentType`) | 구현 클래스 | 프로토콜 / 실행 방식 | 기본 모델 설정 키 (`sys_config`) |
+| :--- | :--- | :--- | :--- |
+| `ANTIGRAVITY` | `AntigravitySdkClient` | Local Harness gRPC/CLI (`agy`) | `sync.sdk.agent.default-model.antigravity` |
+| `CLAUDE_CODE` | `ClaudeCodeSdkClient` | Anthropic Claude Code CLI (`claude`) | `sync.sdk.agent.default-model.claude_code` |
+| `GITHUB_COPILOT` | `GitHubCopilotSdkClient` | GitHub Copilot Agent CLI (`gh copilot`) | `sync.sdk.agent.default-model.github_copilot` |
+| `CODEX_CLI` | `CodexCliSdkClient` | OpenAI Codex CLI (`codex`) | `sync.sdk.agent.default-model.codex_cli` |
+| `GEMINI_CLI` | `GeminiCliSdkClient` | Google Gemini CLI (`gemini`) | `sync.sdk.agent.default-model.gemini_cli` |
+| `CURSOR_CLI` | `CursorCliSdkClient` | Cursor Agent CLI (`cursor`) | `sync.sdk.agent.default-model.cursor_cli` |
+| `OPENHANDS` | `OpenHandsSdkClient` | OpenHands Headless / REST | `sync.sdk.agent.default-model.openhands` |
+| `CONTINUE` | `ContinueSdkClient` | Continue CLI (`cn`) | `sync.sdk.agent.default-model.continue` |
+| `AIDER` | `AiderSdkClient` | Aider CLI (`aider`) | `sync.sdk.agent.default-model.aider` |
+| `OPENSWE` | `OpenSweSdkClient` | OpenSWE Docker / REST | `sync.sdk.agent.default-model.openswe` |
+| `GOOSE` | `GooseSdkClient` | Block Goose CLI (`goose`) | `sync.sdk.agent.default-model.goose` |
+| `MINI_SWE` | `MiniSweSdkClient` | Mini-SWE-Agent CLI | `sync.sdk.agent.default-model.mini_swe` |
+| `CLINE` | `ClineSdkClient` | Cline Autonomous CLI (`cline`) | `sync.sdk.agent.default-model.cline` |
+| `KIRO` | `KiroSdkClient` | AWS Kiro Spec Agent (`kiro`) | `sync.sdk.agent.default-model.kiro` |
+| `EIGENT` | `EigentSdkClient` | Eigent Multi-Agent CLI | `sync.sdk.agent.default-model.eigent` |

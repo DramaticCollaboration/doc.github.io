@@ -25,9 +25,9 @@ dir:
 # SyncAdmin: 지능형 백오피스 시스템을 위한 프론트엔드 표준 (아카이브)
 
 > [!NOTE]
-> **전사 프론트엔드 표준 통합 안내**: `SyncAdmin`의 설계 자산과 컴포넌트 체계는 현재 SyncSeries 전 제품군(`SyncVerse`, `SyncBoot`, `SyncCMS`, `SyncShop`, `SyncOps`, `SyncLLM`, `TodayCare`, `AwesomeFit`)의 **`admin/` (Vue 3 + Vben Admin + DB 단일 원천 동적 라우팅)** 표준 프론트엔드 아키텍처로 전면 내재화되었습니다.
+> **전사 프론트엔드 표준 통합 안내**: `SyncAdmin`의 설계 자산과 컴포넌트 체계는 현재 SyncSeries 11대 엔터프라이즈 제품군(`SyncVerse`, `SyncInsight`, `SyncLLM`, `SyncAPIM`, `SyncWatch`, `SyncBoot`, `SyncCMS`, `SyncShop`, `SyncOps`, `SyncETA`, `SyncCrawl`)의 **`admin/` (Vue 3 + Vben Admin + DB 단일 원천 동적 라우팅)** 표준 프론트엔드 아키텍처로 전면 내재화되었습니다.
 
-SyncAdmin은 Vue 3, Vite, TypeScript를 기반으로 설계된 기업용 관리 시스템 프론트엔드 표준입니다. 단순한 데이터 CRUD 인터페이스를 넘어, SyncSeries의 AI 에이전트(SyncVerse, SyncBoot, SyncCMS, SyncShop 등)와 유기적으로 연동되어 시스템의 상태를 모니터링하고 제어할 수 있는 지능형 대시보드 환경을 제공합니다.
+SyncAdmin은 Vue 3, Vite, TypeScript를 기반으로 설계된 기업용 관리 시스템 프론트엔드 표준입니다. 단순한 데이터 CRUD 인터페이스를 넘어, SyncSeries의 11대 AI 에이전트(`SyncVerse`, `SyncInsight`, `SyncLLM`, `SyncAPIM`, `SyncWatch`, `SyncBoot`, `SyncCMS`, `SyncShop`, `SyncOps`, `SyncETA`, `SyncCrawl`)와 유기적으로 연동되어 시스템의 상태를 모니터링하고 제어할 수 있는 지능형 대시보드 환경을 제공합니다.
 
 ## 1. AI 친화적인 프론트엔드 아키텍처
 
@@ -52,3 +52,23 @@ SyncAdmin은 내부 시스템 구축에 필요한 모든 UI 자산을 통합하�
 - **통합 관제 대시보드**: AI 에이전트들의 활동 로그, 상태, 데이터 수집 현황을 실시간으로 시각화하는 관제 센터 역할을 수행합니다.
 - **기업용 코어 솔루션**: ERP, CRM, 인사 관리 등 복잡한 비즈니스 로직과 많은 입력 폼이 필요한 시스템의 개발 기간을 크게 단축시킵니다.
 - **데이터 분석 화면**: 다양한 UI 프레임워크(Ant Design Vue 등)와 차트 라이브러리를 지원하여, 데이터를 직관적으로 이해할 수 있는 리포트 화면을 쉽게 구성합니다.
+
+---
+
+## 4. 전사 11대 제품군 프론트엔드(`admin/`) 표준 매핑 현황
+
+현재 `SyncAdmin` 아키텍처가 내재화된 11대 엔터프라이즈 제품군의 프론트엔드 패키지 및 동적 권한 API 매핑 규격은 다음과 같습니다.
+
+| 제품군 | 프론트엔드 패키지명 (`package.json`) | 라우팅 모드 | 동적 메뉴·권한 인가 Canonical API |
+| :--- | :--- | :---: | :--- |
+| **SyncVerse** | `@empasy/sync-verse-admin` | `BACK` | `/api/v1/verse/sys/permission/getUserPermissionByToken` |
+| **SyncInsight** | `@empasy/sync-insight-admin` | `BACK` | `/api/v1/insight/sys/permission/getUserPermissionByToken` |
+| **SyncLLM** | `@empasy/sync-llm-admin` | `BACK` | `/api/v1/llm/sys/permission/getUserPermissionByToken` |
+| **SyncAPIM** | `@empasy/sync-apim-admin` | `BACK` | `/api/v1/apim/sys/permission/getUserPermissionByToken` |
+| **SyncWatch** | `@empasy/sync-watch-admin` | `BACK` | `/api/v1/watch/sys/permission/getUserPermissionByToken` |
+| **SyncBoot** | `@empasy/sync-boot-admin` | `BACK` | `/api/v1/boot/sys/permission/getUserPermissionByToken` |
+| **SyncCMS** | `@empasy/sync-cms-admin` | `BACK` | `/api/v1/cms/sys/permission/getUserPermissionByToken` |
+| **SyncShop** | `@empasy/sync-shop-admin` | `BACK` | `/api/v1/shop/sys/permission/getUserPermissionByToken` |
+| **SyncOps** | `@empasy/sync-ops-admin` | `BACK` | `/api/v1/ops/sys/permission/getUserPermissionByToken` |
+| **SyncETA** | `@empasy/sync-eta-admin` | `BACK` | `/api/v1/eta/sys/permission/getUserPermissionByToken` |
+| **SyncCrawl** | `@empasy/sync-crawl-admin` | `BACK` | `/api/v1/crawl/sys/permission/getUserPermissionByToken` |

@@ -16,7 +16,7 @@ head:
       content: https://doc.empasy.com/images/favicon.png
   - - meta
     - property: og:url
-      content: https://doc.empasy.com/agile/guide.html
+      content: https://doc.empasy.com/agile/guide
 sort: 300
 ---
 

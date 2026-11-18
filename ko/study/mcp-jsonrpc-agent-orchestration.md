@@ -143,4 +143,4 @@ SyncVerse 관제탑은 MCP를 통해 도메인 에이전트(SyncBoot, SyncCMS, S
 2. **Human-in-the-Loop (HITL) 사전 승인 게이트**:
    데이터베이스 스키마 변경, 결제 데이터 수정, 프로덕션 배포 등 위험도가 높은 도구 호출의 경우 즉시 실행하지 않고 `status: WAITING_APPROVAL` 상태로 전환하여 관리자 승인을 대기합니다.
 3. **Saga 보상 트랜잭션 연동**:
-   다단계 워크플로우(예: API 스키마 생성 ➔ CMS 배포 ➔ E2E 테스트) 중 특정 단계 실패 시, 이전 단계의 보상 도구(`rollback_schema`, `unpublish_cms`)를 순서대로 역실행하여 데이터 정합성을 보장합니다.
+   다단계 워크플로우(예: API 스키마 생성 -> CMS 배포 -> E2E 테스트) 중 특정 단계 실패 시, 이전 단계의 보상 도구(`rollback_schema`, `unpublish_cms`)를 순서대로 역실행하여 데이터 정합성을 보장합니다.

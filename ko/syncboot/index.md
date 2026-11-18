@@ -53,7 +53,7 @@ graph LR
    - 스키마 변경 시 영향도를 사전에 분석하고 관리자의 사전 승인(Human-in-the-Loop)을 거쳐 데이터베이스에 반영합니다.
 
 3. **로우코드 풀스택 API & UI 생성기 (Low-Code Fullstack)**:
-   - 데이터베이스 엔티티 메타데이터를 기반으로 Controller, Service, Mapper, DTO 및 Ant Design Vue 3 화면 코드를 생성합니다.
+   - 데이터베이스 엔티티 메타데이터를 기반으로 Controller, Service, Mapper, DTO 및 Vben Admin 표준 컴포넌트(`BasicTable`, `BasicModal`, `BasicForm`) 기반 Vue 3 화면 코드를 생성합니다.
 
 4. **멀티테넌트 및 RBAC 보안 (Enterprise Security)**:
    - 테넌트 데이터 격리(독립 DB 및 공유 DB 방식 지원), 컬럼 단위 동적 데이터 마스킹, 행 단위(Row-Level) 권한 필터링을 지원합니다.
@@ -83,6 +83,30 @@ SyncBoot는 도메인 관리, 보안, 배치, 프로토콜 연동 역할을 모�
 
 ---
 
+## 실제 구동 화면 및 핵심 워크플로우
+
+### 1. 백오피스 경영 실적 및 예산·결재 리드타임 통합 대시보드
+편성 대비 실집행 예산, AI 백오피스 자동화 절감액, 평균 전자결재 처리 리드타임, 전사 백오피스 SLA 준수율 및 부서별 집행 현황을 한 화면에서 모니터링합니다.
+
+![SyncBoot 백오피스 경영 실적 및 SLA 통합 대시보드](/images/screenshots/sync-boot/screen_01.png)
+
+### 2. 조직·부서 연동 사용자 계정 및 역할 기반 권한 관리
+조직·부서 트리와 연동된 사용자 계정 원장, 직무 역할(RBAC) 매핑, 메뉴·버튼 단위 접근 권한을 데이터베이스 단일 원천 기반으로 즉시 제어합니다.
+
+![SyncBoot 조직·부서 연동 사용자 및 RBAC 권한 관리](/images/screenshots/sync-boot/screen_02.png)
+
+### 3. 한국형 전자결재 문서함 및 다단계 결재선 승인 위저드
+지출결의·보안정책·외주정산·품질검증 등 한국형 전자결재 문서함과 기안 상신 -> 기술/보안 합의 -> 최종 결재로 이어지는 다단계 결재선 및 세부 품의 내역 워크플로우를 기본 내장하고 있습니다.
+
+![SyncBoot 한국형 전자결재 기안 및 다단계 승인 워크플로우](/images/screenshots/sync-boot/screen_03.png)
+
+### 4. 실시간 권한 인가 · 전자결재 · 배치 스케줄러 작업 감사 로그
+권한 인가, 전자결재 최종승인, 공통 코드 동기화, SSO 토큰 발급, 정기 배치 스케줄러 실행 등 전사 백오피스 작업 이력과 수행자 IP·소요시간을 중앙에서 추적합니다.
+
+![SyncBoot 실시간 시스템 작업 감사 로그](/images/screenshots/sync-boot/screen_04.png)
+
+---
+
 ## 문서 목차
 
 - [5분 퀵스타트 가이드](./quickstart) - Docker Compose를 이용한 로컬 환경 실행
@@ -93,4 +117,4 @@ SyncBoot는 도메인 관리, 보안, 배치, 프로토콜 연동 역할을 모�
 - [배치 및 작업 스케줄러](./batch-and-scheduler) - Spring Batch 및 Quartz 작업 관리
 - [AgentScope Java 및 MCP 연동](./mcp-and-ai) - Model Context Protocol 도구 사양
 - [프로덕션 배포 및 벤치마크](./production-guide) - 컨테이너 배포 및 성능 지표
-- [H2 임베디드 데이터베이스 설정](./h2) - 로컬 개발 및 단위 테스트 환경 설정
+- [PostgreSQL 18.6 로컬 컨테이너 환경](./h2) - Zero-Mock 기반 로컬 개발 및 테스트 DB 구성

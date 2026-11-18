@@ -16,7 +16,7 @@ head:
       content: https://doc.empasy.com/images/favicon.png
   - - meta
     - property: og:url
-      content: https://doc.empasy.com/methodology/ai-sdlc-05-review-deploy.html
+      content: https://doc.empasy.com/methodology/ai-sdlc-05-review-deploy
 sort: 105
 ---
 
@@ -50,7 +50,7 @@ sort: 105
 flowchart LR
     R1["1단계: PR 문서 생성<br/>(변경점 및 위험도 요약)"] --> R2["2단계: 로컬 직접 검증<br/>(브랜치 체크아웃 & 테스트)"]
     R2 --> R3["3단계: 피드백 반영<br/>(의견 작성 & 코드 수정)"]
-    R3 --> R4["4단계: 다단계 승인<br/>(개발 ➔ QA ➔ 운영)"]
+    R3 --> R4["4단계: 다단계 승인<br/>(개발 -> QA -> 운영)"]
     R4 --> R5["5단계: 무인 배포<br/>(동적 설정 반영 & 모니터링)"]
 ```
 

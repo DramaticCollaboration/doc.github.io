@@ -16,7 +16,7 @@ head:
       content: https://doc.empasy.com/images/favicon.png
   - - meta
     - property: og:url
-      content: https://doc.empasy.com/methodology/presales-ai-playbook.html
+      content: https://doc.empasy.com/methodology/presales-ai-playbook
 sort: 94
 ---
 
@@ -147,7 +147,7 @@ flowchart LR
 [역할] 수석 소프트웨어 아키텍트
 [맥락] 위 요구사항 매트릭스를 만족하는 시스템 아키텍처 제안서를 작성합니다.
 [제안 시스템명] {{시스템명, 예: 차세대 지능형 이커머스 플랫폼}}
-[기본 스택] Java 25, Spring Boot 3.5.16, PostgreSQL 17, Vue 3, SyncVerse 오케스트레이터
+[기본 스택] Java 25, Spring Boot 3.5.16, PostgreSQL 18.6, Vue 3, SyncVerse 오케스트레이터
 
 [요청 사항]
 고객사 평가위원에게 기술적 우수성과 안정성을 어필할 수 있도록 아래 항목을 마크다운으로 작성해 주세요:
@@ -171,7 +171,7 @@ flowchart LR
 [요청 사항]
 심사위원이 던질 만한 예상 공격 질문 5개와 각 질문에 대한 기술적 방어 논리를 짝지어 작성해 주세요:
 - 질문 예시: "대용량 트래픽 급증 시 동시성 결함 대응책은?", "레거시 데이터 마이그레이션 실패 시 다운타임 복구 계획은?"
-- 답변 형식: 1) 공감 및 원칙 설명 ➔ 2) 구체적인 기술적 해결책(아키텍처/캐시/롤백) ➔ 3) 사내 검증 실적
+- 답변 형식: 1) 공감 및 원칙 설명 -> 2) 구체적인 기술적 해결책(아키텍처/캐시/롤백) -> 3) 사내 검증 실적
 ```
 
 ---

@@ -37,7 +37,7 @@ graph TD
     end
 
     subgraph "4. 영속성 및 인프라 계층 (Persistence & Infra Layer)"
-        RDB[(PostgreSQL 17 + pgvector)]
+        RDB[(PostgreSQL 18.6 + pgvector)]
         REDIS[(Redis 7 - 세션 캐시, 분산 락, Saga 상태)]
         BATCH[(Quartz & Spring Batch 대용량 처리)]
         LOGS[(분산 인스턴스 서버 로그)]
@@ -86,7 +86,7 @@ graph TD
 | :--- | :--- | :--- |
 | **Backend Core** | Java, Spring Boot 3 | Java 25, Spring Boot 3.5.16 |
 | **AI Framework** | AgentScope Java | `io.agentscope:agentscope-harness` |
-| **ORM / Data** | MyBatis-Plus, Spring Data JPA | HikariCP, PostgreSQL 17 (pgvector) |
+| **ORM / Data** | MyBatis-Plus, Spring Data JPA | HikariCP, PostgreSQL 18.6 (pgvector) |
 | **Protocol** | Model Context Protocol (MCP) | HTTP SSE / JSON-RPC 2.0 |
 | **Frontend UI** | Vue 3, Vite, TypeScript | Ant Design Vue 4.x, Pinia, Vue Router |
 | **Batch / Cache** | Spring Batch, Quartz, Redis | Redis 7.x, Lettuce |

@@ -31,12 +31,12 @@ Playwright 트레이스 뷰어(`playwright show-trace`)를 분석하여 클릭 �
 ```
 [locator.click Log]
 - waiting for locator('button.btn-add-to-cart').nth(15)
--   locator resolved to <button class="btn-add-to-cart">담기</button>
+- locator resolved to <button class="btn-add-to-cart">담기</button>
 - attempting click action
--   waiting for element to be visible, enabled and stable
--   element is visible, enabled and stable
--   scrolling into view if needed
--   element is outside of the viewport or covered by <header class="global-nav">...
+- waiting for element to be visible, enabled and stable
+- element is visible, enabled and stable
+- scrolling into view if needed
+- element is outside of the viewport or covered by <header class="global-nav">...
 - retrying click action, attempt #2...
 ```
 
@@ -89,6 +89,6 @@ export async function safeClickElement(page: Page, selector: string, timeoutMs =
 
 실제 고정 헤더와 무한 스크롤이 복합 적용된 5개 주요 고객사 사이트(의류 커머스, 금융 포털 등)를 대상으로 500회 반복 실행 검증을 진행했습니다.
 
-- **클릭 액션 타임아웃 발생률**: 기존 8.8% ➔ **0.1% 미만**으로 대폭 개선.
+- **클릭 액션 타임아웃 발생률**: 기존 8.8% -> **0.1% 미만**으로 대폭 개선.
 - **테스트 스위트 완주 시간**: 불필요한 타임아웃 재시도 대기가 사라져 전체 실행 시간 **22% 단축**.
 - **v0.0.33 릴리즈 반영**: 해당 로직을 SyncEta 데스크톱 런타임 코어 엔진에 기본 탑재 완료.

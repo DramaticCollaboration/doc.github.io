@@ -32,7 +32,7 @@ flowchart LR
 |:---|:---|:---|
 | **AgentScope Java 표준** | Spring Boot 환경에서 에이전트 협업 및 ReAct 구성 규칙 | [AgentScope 가이드 →](/ecosystem/agentscope-guide) |
 | **표준 MCP 규격** | Model Context Protocol 도구 호출 사양 및 에러 처리 표준 | [MCP 프로토콜 규격 →](/ecosystem/mcp-protocol) |
-| **공통 비즈니스 모듈** | 8대 공통 모듈(`sync-module-*`) 및 SDK 기본 설계 | [공유 모듈 & SDK →](/ecosystem/shared-modules-and-sdk) |
+| **공통 비즈니스 모듈** | 6대 공통 모듈(`sync-core`, `sync-module-ai`, `sync-module-nl2sql`, `sync-module-audit`, `sync-module-deploy`, `sync-module-rag`) 및 SDK 기본 설계 | [공유 모듈 & SDK →](/ecosystem/shared-modules-and-sdk) |
 | **품질 검증 원칙** | 실제 인프라 연동 기반 4-Cycle 품질 검증 프로토콜 | [품질 하네스 원칙 →](/ecosystem/zero-mock-harness) |
 | **운영 및 승인 관리** | 현업 승인(HITL) 및 토큰 예산 관리 콘솔 운영 가이드 | [운영 가이드 →](/guide/) |
 
@@ -54,7 +54,7 @@ Spring Boot 3 환경에서 최소한의 설정으로 동작 가능한 첫 번째
 <dependency>
     <groupId>io.agentscope</groupId>
     <artifactId>agentscope-harness</artifactId>
-    <version>1.0.4</version>
+    <version>2.0.2</version>
 </dependency>
 ```
 
@@ -116,7 +116,7 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping("/api/v1/support")
+@RequestMapping("/api/v1/verse/support")
 @RequiredArgsConstructor
 public class SupportAgentController {
 
@@ -129,6 +129,30 @@ public class SupportAgentController {
     }
 }
 ```
+
+---
+
+## 실제 구동 화면 및 핵심 워크플로우
+
+### 1. 15대 멀티 코딩 에이전트 엔진 런타임 핫스왑 및 라우팅 관제
+`ANTIGRAVITY`, `CLAUDE_CODE`, `GITHUB_COPILOT`, `CODEX_CLI`, `GEMINI_CLI`, `CURSOR_CLI`, `OPENHANDS`, `OPENSWE` 등 15대 코딩 엔진의 상태와 동적 모델 매핑을 단일 인터페이스로 제어합니다.
+
+![SyncSDK 멀티 코딩 에이전트 엔진 라우팅 관제](/images/screenshots/sync-sdk/screen_01.png)
+
+### 2. 도메인 스킬 레지스트리 및 동적 프롬프트 템플릿 관리
+DB 기반 무중단 프롬프트 템플릿, 버전 히스토리 롤백 및 에이전트별 전문 스킬 하네스를 중앙에서 관리합니다.
+
+![SyncSDK 스킬 레지스트리 및 프롬프트 관리](/images/screenshots/sync-sdk/screen_02.png)
+
+### 3. 격리 샌드박스 실행 보안 정책 · 위험 명령어 차단 및 승인 규칙
+코딩 에이전트가 격리 샌드박스에서 실행하는 터미널 명령, 파일 수정, 커밋 저장, 웹 탐색에 대해 위험 명령어 차단 및 관리자 승인 후 실행 가드레일을 통제합니다.
+
+![SyncSDK 격리 샌드박스 위험 명령어 차단 및 보안 정책](/images/screenshots/sync-sdk/screen_03.png)
+
+### 4. 전사 표준 MCP 도구 레지스트리 및 엔드포인트 연동 현황
+도메인 에이전트 도구들의 JSON Schema 명세, 위험 등급(Safety Level) 및 실시간 호출 지표를 확인합니다.
+
+![SyncSDK MCP 서버 및 도구 레지스트리](/images/screenshots/sync-sdk/screen_04.png)
 
 ---
 

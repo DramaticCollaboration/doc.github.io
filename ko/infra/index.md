@@ -31,7 +31,7 @@ flowchart TD
     end
 
     subgraph DataCluster ["데이터 및 캐시 계층 (HA 구성)"]
-        PG[("PostgreSQL 17 (pgvector 주-보조 복제)")]
+        PG[("PostgreSQL 18.6 (pgvector 주-보조 복제)")]
         Redis[("Redis Cluster (분산 락 & 세션)")]
         MinIO[("MinIO 오브젝트 스토리지")]
     end
@@ -58,7 +58,7 @@ flowchart TD
 | :--- | :--- | :--- | :--- |
 | **API & 오케스트레이션** | `SyncVerse`, API Gateway, Nacos | 범용 컴퓨팅 노드 (8 vCPU, 32GB RAM) | 외부 인바운드 허용, mTLS 통신 |
 | **도메인 비즈니스 서비스** | `SyncBoot`, `SyncCMS`, `SyncShop` | 메모리 최적화 노드 (16 vCPU, 64GB RAM) | 내부 사설망 전용, 클러스터 내부 통신 |
-| **데이터 및 RAG 벡터 저장소** | PostgreSQL 17, Redis, MinIO | NVMe SSD 탑재 스토리지 노드 | 내부 격리망, 데이터 암호화(LUKS/TLS) |
+| **데이터 및 RAG 벡터 저장소** | PostgreSQL 18.6, Redis, MinIO | NVMe SSD 탑재 스토리지 노드 | 내부 격리망, 데이터 암호화(LUKS/TLS) |
 | **로컬 AI 서빙 (온프레미스)** | vLLM, TensorRT-LLM, 임베딩 모델 | GPU 가속 노드 (NVIDIA L40S, A100, H100) | 추론 전용 격리 VLAN, 외부망 차단 |
 
 ---

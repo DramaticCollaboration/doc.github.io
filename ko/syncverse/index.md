@@ -50,7 +50,7 @@ flowchart TB
         W1[SyncBoot / SyncOps Agent\n(백엔드 인프라 / SI 손익 관제)]
         W2[SyncCMS / SyncShop Agent\n(콘텐츠 / 커머스 Swarm)]
         W3[SyncETA / Audit Agent\n(무인 QA / SEO·AEO 감사)]
-        W4[SyncSDK 7-Engine Proxy\n(다중 코딩 에이전트 자율 실행)]
+        W4[SyncSDK 15-Engine Proxy\n(15대 다중 코딩 에이전트 자율 실행)]
     end
 
     H1 --> IR
@@ -73,8 +73,8 @@ SyncVerse는 소프트웨어 생애주기(AI DLC, AI Development Life Cycle) 운
 | 핵심 엔진 | 역할 및 기능 | 주요 기술 메커니즘 |
 | :--- | :--- | :--- |
 | **01. 자연어 의도 분류 및 A2A Swarm 위임** | 현업의 자연어 지시가 '운영(CRUD)'인지 '개발(소스수정)'인지 실시간 판별 및 하위 도메인 Swarm 위임 | `A2ASwarmDelegationStrategyHandler`, 도메인 컨텍스트 Tri-Hybrid RAG 주입 |
-| **02. 5-Step Spec Studio (SDD 2.0)** | 요구사항 AC 정제 ➔ 상세 기술 명세 ➔ 구현 계획 ➔ 자율 코딩 ➔ 4대 표준 산출물 역동기화 | Decision Queue, Living Spec, 요구사항 커버리지 매트릭스 |
-| **03. 7대 코딩 에이전트 동적 라우팅 (`SyncSDK`)** | 소스코드 수정이 필요한 경우 7종 코딩 엔진 중 활성 엔진을 호출하여 작업 브랜치에 코드 생성 | `CodingAgentRoutingProxy` (`Antigravity`, `OpenSWE`, `Goose`, `MiniSWE`, `Cline`, `KiloCode`, `Eigent`) |
+| **02. 5-Step Spec Studio (SDD 2.0)** | 요구사항 AC 정제 -> 상세 기술 명세 -> 구현 계획 -> 자율 코딩 -> 4대 표준 산출물 역동기화 | Decision Queue, Living Spec, 요구사항 커버리지 매트릭스 |
+| **03. 15대 코딩 에이전트 동적 라우팅 (`SyncSDK`)** | 소스코드 수정이 필요한 경우 15종 코딩 엔진 중 활성 엔진을 호출하여 작업 브랜치에 코드 생성 | `CodingAgentRoutingProxy` (`ANTIGRAVITY`, `CLAUDE_CODE`, `GITHUB_COPILOT`, `CODEX_CLI`, `GEMINI_CLI`, `CURSOR_CLI`, `OPENHANDS`, `CONTINUE`, `AIDER`, `OPENSWE`, `GOOSE`, `MINI_SWE`, `CLINE`, `KIRO`, `EIGENT`) |
 | **04. 무인 CI/CD & 자가치유 복구** | 4-Cycle 빌드 자가 치유 및 테스트 오류 발생 시 클러스터 로그를 수집하여 자동 수정·롤백 | `sync-module-deploy`, Multi-Party HITL 결재선, 스냅샷 보상 롤백 |
 
 ---
@@ -84,7 +84,7 @@ SyncVerse는 소프트웨어 생애주기(AI DLC, AI Development Life Cycle) 운
 SyncVerse는 자연어 요구사항 접수부터 최종 상용 배포까지 6단계 자율 운영 파이프라인을 실시간 관제합니다.
 
 1. **요구사항 분석 및 스펙 정제 (Spec Studio Step 1~3)**: 관리자의 자연어 프롬프트를 분석하여 인수 조건(AC), 상세 기술 명세, 구현 계획 및 커버리지 매트릭스 수립
-2. **다중 엔진 자율 코딩 (Spec Studio Step 4)**: 코딩 에이전트(`SyncSDK` 7종 엔진)가 격리된 작업 브랜치에서 소스코드 및 Flyway DDL 변경안 작성
+2. **다중 엔진 자율 코딩 (Spec Studio Step 4)**: 코딩 에이전트(`SyncSDK` 15종 엔진)가 격리된 작업 브랜치에서 소스코드 및 6-File DB SSOT(`db/00_extensions.sql` ~ `05_sample_dev.sql`) DDL 변경안 작성
 3. **무인 QA 검증 (Autonomous QA)**: 자동 빌드 및 Playwright/SyncETA E2E 리그레션 테스트 수행
 4. **자가치유 복구 (4-Cycle Self-Healing Loop)**: 컴파일/테스트 실패 시 서버 클러스터 분산 로그를 수집하여 코딩 에이전트가 버그를 스스로 수정
 5. **다자간 아키텍트 승인 (Multi-Party HITL Approval)**: 시스템 아키텍트가 코드 Diff 및 영향도 분석 리포트를 확인하고 다단계 결재 승인/반려 결정
@@ -96,8 +96,8 @@ SyncVerse는 자연어 요구사항 접수부터 최종 상용 배포까지 6단
 
 | 구분 항목 | 기존 수작업 개발/운영 방식 | SyncVerse 자율 운영 생태계 |
 | :--- | :--- | :--- |
-| **요구사항 반영 주기** | 기획서 작성 및 회의를 거쳐 배포까지 수주일 소요 | **5-Step Spec Studio 및 7종 코딩 엔진으로 단시간 내 반영** |
-| **소스코드 수정** | 개발자가 직접 로컬 IDE를 켜고 코드를 수작업 수정 | **Antigravity·OpenSWE 등 7대 코딩 에이전트가 작업 브랜치 자율 수정** |
+| **요구사항 반영 주기** | 기획서 작성 및 회의를 거쳐 배포까지 수주일 소요 | **5-Step Spec Studio 및 15종 코딩 엔진으로 단시간 내 반영** |
+| **소스코드 수정** | 개발자가 직접 로컬 IDE를 켜고 코드를 수작업 수정 | **Antigravity·Claude Code·Copilot·OpenSWE 등 15대 코딩 에이전트가 작업 브랜치 자율 수정** |
 | **QA 및 버그 수정** | 에러 발생 시 개발자가 로그 수집 및 수동 재디버깅 | **4-Cycle 빌드 자가치유 및 클러스터 로그 기반 자동 수정** |
 | **LLM 비용 관리** | 팀마다 개별 API 키를 사용하여 중복 비용 발생 | **SyncLLM 단일 게이트웨이 및 시맨틱 캐싱으로 비용 절감** |
 | **에이전트 거버넌스** | 개별 도구들이 파편화되어 맥락 단절 및 통제 불가 | **표준 MCP 기반 중앙 관제탑으로 모든 에이전트 일원화 관리** |
@@ -111,5 +111,29 @@ SyncVerse는 기업의 핵심 비즈니스 자산을 보호하기 위해 다음�
 
 - **프라이빗 AI 보안 환경**: 사내망을 벗어나면 안 되는 민감 데이터를 위해 온프레미스(On-Premise) 및 프라이빗 클라우드(VPC) 환경 지원
 - **Multi-Party HITL 안전 게이트**: DDL 변경, 권한 수정, 상용 배포 등 중요 작업은 다자간 결재선 승인을 거치도록 정책화
-- **실제 서비스 직접 연동 (Zero-Mock)**: 하드코딩된 더미 로직 없이 실제 PostgreSQL 17 데이터베이스 및 백엔드 서비스와 100% 직접 연동
+- **실제 서비스 직접 연동 (Zero-Mock)**: 하드코딩된 더미 로직 없이 실제 PostgreSQL 18.6 데이터베이스 및 백엔드 서비스와 100% 직접 연동
 - **전사 감사 증적(Audit Trail) & KMS**: 작업 지시자, 승인 이력, 에이전트 도구 호출 내역을 전수 기록하고 AES-256 마스터 키 1-클릭 회전을 지원
+
+---
+
+## 실제 구동 화면 및 핵심 워크플로우
+
+### 1. 통합 커맨드 센터 및 에이전트 토폴로지 관제
+자연어 비즈니스 명령을 입력받아 하위 도메인 에이전트(`SyncBoot`, `SyncCMS`, `SyncShop`, `SyncOps`, `SyncAPIM`, `SyncWatch` 등)로 의도를 라우팅하고 실시간 A2A 협업 상태를 관제합니다.
+
+![SyncVerse 통합 커맨드 센터 및 에이전트 토폴로지 관제](/images/screenshots/sync-verse/screen_01.png)
+
+### 2. 전사 에이전트 자율 작업 및 품질 검증 파이프라인 관제
+도메인 에이전트에 위임된 자율 작업 목록, AI 아키타입(역질문·Spec합의, 무코드·스냅샷, 시각회귀·자가치유 등), 품질 검증 파이프라인 진행률 및 상태를 단일 화면에서 추적합니다.
+
+![SyncVerse 전사 에이전트 자율 작업 및 품질 검증 파이프라인 관제](/images/screenshots/sync-verse/screen_02.png)
+
+### 3. 웹 품질 및 저장소 보안 통합 감사
+헤드리스 브라우저 렌더링과 보안 점검 룰을 결합하여 웹 품질 점수(SEO/AEO/GEO) 및 저장소 보안 취약점을 상시 진단합니다.
+
+![SyncVerse 사이트 품질 및 보안 감사](/images/screenshots/sync-verse/screen_03.png)
+
+### 4. 다자간 승인 결재 및 스냅샷 롤백 센터
+고위험 DDL 변경, 소스코드 패치 PR, 상용 배포 작업에 대해 변경 전후 Diff와 영향도를 검토하고 다자간 결재 승인 또는 1-Click 스냅샷 롤백을 수행합니다.
+
+![SyncVerse 다자간 HITL 결재 승인 및 롤백 센터](/images/screenshots/sync-verse/screen_04.png)

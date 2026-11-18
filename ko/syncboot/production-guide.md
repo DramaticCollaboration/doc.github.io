@@ -52,7 +52,7 @@ services:
       - BACKEND_API_URL=http://sync-boot-server:8080
 
   sync-boot-db:
-    image: pgvector/pgvector:pg17
+    image: pgvector/pgvector:pg18
     restart: always
     environment:
       POSTGRES_PASSWORD: ${DB_PASSWORD}

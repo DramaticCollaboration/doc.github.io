@@ -85,12 +85,12 @@ SyncSeries 전 제품군(13개 파트 · 209개 사용 시나리오 × 5대 차�
 | **API 계약 & 시크릿 누출 감사** | 전사 Canonical URL (`/api/v1/{product}/...`) 및 시크릿 스캔 | **`11 / 11 PASSED (0 Leaks)`** |
 | **Playwright E2E UI & 고해상도 캡처** | 전 제품군 대표 화면 `1920×1080` 원본 42종 + 콜아웃 어노테이션 40종 | **`ConsoleErrors=0`, `PageErrors=0` (총 82종)** |
 
-### 대표 제품군 검증 화면 캡처 (콜아웃 어노테이션)
+### 대표 제품군 검증 화면 캡처
 
-![SyncVerse 통합 관제 대시보드](/images/screenshots/sync-verse/screen_01_annotated.png)
+![SyncVerse 통합 관제 대시보드](/images/screenshots/sync-verse/screen_01.png)
 
-![SyncBoot 엔터프라이즈 백오피스](/images/screenshots/sync-boot/screen_01_annotated.png)
+![SyncBoot 엔터프라이즈 백오피스](/images/screenshots/sync-boot/screen_01.png)
 
-![SyncShop 8대 MSA 커머스 관제](/images/screenshots/sync-shop/screen_01_annotated.png)
+![SyncShop 9대 독립 마이크로서비스 커머스 관제](/images/screenshots/sync-shop/screen_01.png)
 
-![SyncETA 자율 비전 QA 관제](/images/screenshots/sync-eta/screen_01_annotated.png)
+![SyncETA 자율 비전 QA 관제](/images/screenshots/sync-eta/screen_01.png)

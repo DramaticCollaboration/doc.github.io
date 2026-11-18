@@ -7,7 +7,7 @@ sort: 3
 
 # SyncVerse & SyncAPIM 보안 팩 연동 프로토콜
 
-`SyncWatch`는 컴파일 및 샌드박스 검증이 완료된 보안 룰을 **`VerseAuditPack`**(코드·의존성·모의해킹 점검용)과 **`ApimDefensePack`**(런타임 게이트웨이 방어용) 표준 페이로드로 패키징하여 `SyncVerse` 및 `SyncAPIM`으로 실시간 배포합니다.
+`SyncWatch`는 **8대 글로벌 위협 피드(OSV.dev, GitHub GHSA, NVD CVE, CISA KEV, Nuclei, OWASP CRS, MITRE ATT&CK, KISA)** 및 진단 문서로부터 컴파일·샌드박스 검증이 완료된 보안 룰을 **`VerseAuditPack`**(코드·의존성·모의해킹 점검용)과 **`ApimDefensePack`**(런타임 게이트웨이 방어용) 표준 페이로드로 패키징하여 `SyncVerse` 및 `SyncAPIM`으로 실시간 배포합니다.
 
 ---
 

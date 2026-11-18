@@ -49,14 +49,38 @@ graph LR
 - **Lottie & 멀티 포맷 미디어 스트리밍**: Lottie 애니메이션 JSON, WebP, 멀티미디어 자산을 REST API(`/api/v1/cms/...`)로 안정적으로 서빙합니다.
 
 ### 2. Copywriter-SEO-Publisher 멀티에이전트 스웜 & AEO·GEO·SEO 검색 최적화
-- **3단계 에이전트 스웜(`CmsSwarmWorkflowService`)**: Copywriter(초안 작성) ➔ SEO/Reviewer(키워드·가독성·메타태그 검수) ➔ Publisher(발행 및 캐시 무효화) 스웜이 협업하여 고품질 콘텐츠를 자율 생산합니다.
+- **3단계 에이전트 스웜(`CmsSwarmWorkflowService`)**: Copywriter(초안 작성) -> SEO/Reviewer(키워드·가독성·메타태그 검수) -> Publisher(발행 및 캐시 무효화) 스웜이 협업하여 고품질 콘텐츠를 자율 생산합니다.
 - **Schema.org JSON-LD 자동 생성**: 검색엔진(SEO) 및 AI 답변엔진(AEO)이 즉시 이해할 수 있는 구조화 데이터 스크립트를 CMS가 헤더에 자동 렌더링합니다.
 - **생성형 AI(GEO) 인용 표준**: 제목-요약-H1~H3 계층-명확한 출처/작성자/검증일자 포맷을 제공하여 ChatGPT, Perplexity 등 AI 답변 인용을 극대화합니다.
 
 ### 3. Java Spring Boot 3.4+ 프레임워크 & 라이선스 0원
-- **자바 표준 프레임워크 전면 공개**: 비즈니스 Controller 소스 및 PostgreSQL 17 DDL 전체를 투명하게 제공하여 사내 개발팀의 자유로운 확장을 보장합니다.
+- **자바 표준 프레임워크 전면 공개**: 비즈니스 Controller 소스 및 PostgreSQL 18.6 DDL 전체를 투명하게 제공하여 사내 개발팀의 자유로운 확장을 보장합니다.
 - **추가 솔루션 라이선스 비용 0원**: SI 구축비에 솔루션이 포함되어 트래픽/유저수 증가에 따른 추가 과금이 없습니다.
 - **안정적인 전문 기술지원 (M/M)**: AI 모델 업데이트 및 검색 알고리즘 변화에 지속 대응하는 체계적인 유지보수 파트너십을 제공합니다.
+
+---
+
+## 실제 구동 화면 및 핵심 워크플로우
+
+### 1. 하이브리드 헤드리스 CMS 콘텐츠 발행 및 트래픽 관제 대시보드
+Nuxt 3 SSR 웹 서버 연동 현황, 아티클 발행 추이, AI 에이전트 저작 대기열 및 검색 품질 지표를 실시간으로 모니터링합니다.
+
+![SyncCMS 콘텐츠 발행 및 트래픽 대시보드](/images/screenshots/sync-cms/screen_01.png)
+
+### 2. 다국어 카테고리 필터 · AI 초안 자동 작성 · 단계별 승인 원장
+멀티사이트·다국어 카테고리 트리에서 AI 초안 작성, 단계별 승인 상태 및 RAG 지식베이스 색인 원장을 통합 관리합니다.
+
+![SyncCMS 게시글 원장 및 AI 초안 관리](/images/screenshots/sync-cms/screen_02.png)
+
+### 3. 발행 전 본문 · 첨부파일 · 댓글 위험도 및 컴플라이언스 AI 자동 검수
+발행 전후 콘텐츠의 본문, 첨부파일, 댓글 위험도와 표시광고법·타사 비교표 등 컴플라이언스 위반 여부를 AI가 자동 검수하고 승인·차단합니다.
+
+![SyncCMS AI 콘텐츠 안전 검수](/images/screenshots/sync-cms/screen_03.png)
+
+### 4. 브랜드 용어집 기반 다국어 AI 자동 번역 및 원문·번역 비교
+브랜드 고유명사 용어집을 기반으로 영·일·중·독·스페인어 등 다국어 번역을 수행하고 원문과 번역문을 나란히 비교·검수하여 즉시 반영합니다.
+
+![SyncCMS 브랜드 용어집 기반 다국어 AI 번역](/images/screenshots/sync-cms/screen_04.png)
 
 ---
 

@@ -52,7 +52,7 @@ flowchart TD
     end
 
     subgraph Persistence_Tier ["4. 데이터베이스 및 스토리지"]
-        PG_DB[("PostgreSQL 16\n• 작업 관리 테이블\n• 액션 제안 이력\n• 감사 로그")]
+        PG_DB[("PostgreSQL 18.6\n• 작업 관리 테이블\n• 액션 제안 이력\n• 감사 로그")]
         VECTOR_DB[("PgVector 확장\n• 도메인 지식 임베딩\n• 보고서 벡터 인덱스")]
         STORAGE[("오브젝트 스토리지\n• PDF 보고서\n• 오디오 파일")]
     end
@@ -164,7 +164,7 @@ SyncInsight는 타 에이전트 및 외부 도구와의 연동을 위해 Model C
 
 ## 4. 데이터베이스 테이블 설계
 
-PostgreSQL 16 및 PgVector 확장을 활용하여 분석 작업과 액션 이력을 관리합니다.
+PostgreSQL 18.6 및 PgVector 확장을 활용하여 분석 작업과 액션 이력을 관리합니다.
 
 ```sql
 -- 1. 분석 작업 관리 테이블

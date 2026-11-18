@@ -49,3 +49,17 @@ AI가 생성한 테스트 케이스나 자가 치유 선택자를 시스템에 �
 
 ### Air-Gapped / On-Premise 배포
 외부 인터넷 통신이 차단된 사내 폐쇄망 환경에서도 로컬 오픈소스 Vision/LLM 엔진(vLLM 등)과 결합하여 독립적으로 구동 가능한 엔터프라이즈 배포 방식입니다.
+
+---
+
+## 테스트 자산 계층 구조 요약
+
+```mermaid
+flowchart LR
+    Project["Project (프로젝트)\n최상위 RBAC 격리 단위"] --> Collection["Collection (컬렉션)\n순차/병렬 일괄 실행 스위트"]
+    Project --> Story["Story (스토리)\n플로우차트 세션 유지 워크플로우"]
+    Collection --> Scenario["Scenario (시나리오)\n단위 비즈니스 테스트 케이스"]
+    Story --> Scenario
+    Scenario --> Record["Record (레코드)\n최소 DOM 액션 & 검증 스텝"]
+    Dataset["Data Set (데이터셋)\n파라미터 테이블 / Excel"] -.->|"변수 바인딩 {{var}}"| Scenario
+```

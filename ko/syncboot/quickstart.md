@@ -16,7 +16,7 @@ SyncBoot 실행을 위한 권장 사양은 다음과 같습니다:
 
 - **Docker & Docker Compose**: Docker 24.0 이상 / Docker Compose v2.20 이상
 - **메모리**: 최소 4GB RAM (권장 8GB 이상)
-- **네트워크 포트**: `8080` (Spring Boot API), `3000` (Admin Console UI), `5432` (PostgreSQL 17), `6379` (Redis)
+- **네트워크 포트**: `8080` (Spring Boot API), `3000` (Admin Console UI), `5432` (PostgreSQL 18.6), `6379` (Redis)
 
 ---
 
@@ -70,7 +70,7 @@ curl -X GET http://localhost:8080/actuator/health
 
 ### 2) MCP Server 등록 도구 조회
 ```bash
-curl -X GET http://localhost:8080/mcp/tools
+curl -X GET http://localhost:8080/api/v1/boot/mcp/tools
 ```
 ```json
 {

@@ -16,7 +16,7 @@ head:
       content: https://doc.empasy.com/images/favicon.png
   - - meta
     - property: og:url
-      content: https://doc.empasy.com/methodology/ai-driven-development.html
+      content: https://doc.empasy.com/methodology/ai-driven-development
 sort: 100
 ---
 
@@ -107,7 +107,7 @@ flowchart LR
 
 ## 2. 엠파시 AI 개발 생명주기 5단계 흐름
 
-엠파시 AI-SDLC 기반 개발 흐름은 **요구사항 접수 ➔ 명세 우선 설계 ➔ 구현 ➔ 4단계 검증 ➔ 검토 및 배포**로 이어집니다.
+엠파시 AI-SDLC 기반 개발 흐름은 **요구사항 접수 -> 명세 우선 설계 -> 구현 -> 4단계 검증 -> 검토 및 배포**로 이어집니다.
 
 ```mermaid
 sequenceDiagram
@@ -163,7 +163,7 @@ sequenceDiagram
 ### 2.2. 2단계: 명세 우선 아키텍처 설계
 * **목적**: 코딩을 시작하기 전에 데이터 모델과 API 입출력 규격을 먼저 확정하여 서버와 화면 간의 불일치를 줄입니다.
 * **주요 활동**:
-  * PostgreSQL 17 기준의 6단계 DDL 스키마(`00_extensions.sql` ~ `05_sample_dev.sql`)를 작성합니다.
+  * PostgreSQL 18.6 기준의 6단계 DDL 스키마(`00_extensions.sql` ~ `05_sample_dev.sql`)를 작성합니다.
   * 임시 충돌 회피 구문(`ON CONFLICT`)을 배제하고 정확한 제약조건과 인덱스를 선언합니다.
   * 단일 매핑 원칙을 준수하는 표준 REST API 엔드포인트(`/api/v1/{domain}/{resource}`)를 선행 정의합니다.
 * **상세 실전 가이드**: [02단계: 명세 우선 아키텍처 및 DDL/API 설계 가이드](./ai-sdlc-02-architecture.md)
@@ -200,7 +200,7 @@ sequenceDiagram
 * **주요 활동**:
   * AI가 변경점(Git Diff)을 요약한 PR(Pull Request) 문서를 자동 작성합니다.
   * 개발자가 로컬 IDE에서 작업 브랜치를 체크아웃하여 직접 테스트하고 필요한 경우 인라인 피드백을 전달합니다.
-  * 위험 작업에 대한 다단계 승인(`개발자` ➔ `QA` ➔ `관리자`)을 거칩니다.
+  * 위험 작업에 대한 다단계 승인(`개발자` -> `QA` -> `관리자`)을 거칩니다.
   * 무인 배포를 진행하고, 설정 변경 건은 서버 재기동 없이 런타임에 동적으로 반영합니다.
 * **상세 실전 가이드**: [05단계: 코드 검토 및 무인 배포 가이드](./ai-sdlc-05-review-deploy.md)
 

@@ -98,7 +98,7 @@ public class DdlGeneratorTool {
 
     @Tool(
         name = "generate_ddl_script",
-        description = "테이블 명과 기본키 컬럼 정보를 전달받아 규격화된 PostgreSQL 17 DDL 스크립트를 생성합니다."
+        description = "테이블 명과 기본키 컬럼 정보를 전달받아 규격화된 PostgreSQL 18.6 DDL 스크립트를 생성합니다."
     )
     public String generateDdl(
             @ToolParam(description = "DDL 생성 요청 모델") DdlRequest request) {

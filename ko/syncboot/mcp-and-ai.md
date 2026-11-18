@@ -18,12 +18,12 @@ SyncBoot는 HTTP Server-Sent Events (SSE) 기반으로 도구(Tools)와 리소�
 sequenceDiagram
     autonumber
     participant Client as 오케스트레이터 / AI 클라이언트
-    participant MCP as SyncBoot MCP Server (/mcp/sse)
+    participant MCP as SyncBoot MCP Server (/api/v1/boot/mcp/sse)
     participant Core as SyncBoot Core / DB / Logs
 
-    Client->>MCP: GET /mcp/tools (도구 목록 조회)
+    Client->>MCP: GET /api/v1/boot/mcp/tools (도구 목록 조회)
     MCP-->>Client: [read_schema, execute_query, fetch_logs, etc.]
-    Client->>MCP: POST /mcp/call (Tool: syncboot_fetch_server_logs)
+    Client->>MCP: POST /api/v1/boot/mcp/call (Tool: syncboot_fetch_server_logs)
     MCP->>Core: 클러스터 서버 에러 로그 수집
     Core-->>MCP: 로그 데이터 반환
     MCP-->>Client: 결과 페이로드 전달

@@ -19,13 +19,13 @@ SyncSeries는 데이터 손실이 치명적인 금융, 제조, 공공 서비스�
 flowchart TD
     subgraph PrimaryDC ["주 데이터센터 (Active)"]
         K8s_P["쿠버네티스 워커 노드"]
-        PG_P[("PostgreSQL 17 Primary")]
+        PG_P[("PostgreSQL 18.6 Primary")]
         Redis_P[("Redis Primary")]
     end
 
     subgraph SecondaryDC ["재해복구 센터 (Standby)"]
         K8s_S["쿠버네티스 대기 노드"]
-        PG_S[("PostgreSQL 17 Standby")]
+        PG_S[("PostgreSQL 18.6 Standby")]
         Redis_S[("Redis Replica")]
     end
 
@@ -40,8 +40,8 @@ flowchart TD
 
 ## 2. 데이터 계층 고가용성 및 복제 아키텍처
 
-### 1) PostgreSQL 17 (pgvector) WAL 스트리밍 복제
-- 비즈니스 테이블 및 AI 임베딩 벡터 데이터의 일관성을 유지하기 위해 PostgreSQL 17의 물리 스트리밍 복제(Physical Streaming Replication)를 적용합니다.
+### 1) PostgreSQL 18.6 (pgvector) WAL 스트리밍 복제
+- 비즈니스 테이블 및 AI 임베딩 벡터 데이터의 일관성을 유지하기 위해 PostgreSQL 18.6의 물리 스트리밍 복제(Physical Streaming Replication)를 적용합니다.
 - `synchronous_commit = on` 설정을 통해 트랜잭션 커밋 신호가 보조 노드의 WAL(Write-Ahead Log)에 기록된 후 최종 클라이언트 응답을 반환하여 장애 시 커밋 유실을 방지합니다.
 
 ```ini

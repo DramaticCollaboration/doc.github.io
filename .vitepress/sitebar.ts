@@ -319,6 +319,12 @@ const MODULE_CATEGORY_RULES: Record<string, Array<{ group: string; match: (name:
       match: (name) => ['hitl-approval-operations', 'finops-budget-operations'].includes(name),
     },
   ],
+  proposals: [
+    {
+      group: '제품 소개서 및 도입 제안서',
+      match: (name) => ['index'].includes(name),
+    },
+  ],
 }
 
 // Concise 1-line standard sidebar titles
@@ -382,7 +388,7 @@ const DEFAULT_SIDEBAR_SHORT_TITLES: Record<string, Record<string, string>> = {
     'ddd-clean-architecture': 'DDD & 클린 아키텍처',
     'enterprise-security': '보안 & 멀티테넌시',
     'production-guide': '운영 배포 가이드',
-    h2: '인메모리 H2 모드',
+    h2: 'PostgreSQL 18.6 로컬 환경',
   },
   synccms: {
     index: '개요',
@@ -534,6 +540,9 @@ const DEFAULT_SIDEBAR_SHORT_TITLES: Record<string, Record<string, string>> = {
     'hitl-approval-operations': '다단계 결재 & 감사',
     'finops-budget-operations': 'FinOps 예산 & 비용 관리',
   },
+  proposals: {
+    index: '전체 제안서 PDF 다운로드',
+  },
 }
 
 export function generateKrSidebar(dir: string): SidebarItem[] {
@@ -684,6 +693,14 @@ function formatFilenameAsTitle(filename: string): string {
     syncadmin: 'SyncAdmin',
     syncapim: 'SyncAPIM',
     syncwatch: 'SyncWatch',
+    syncllm: 'SyncLLM',
+    syncshop: 'SyncShop',
+    sdk: 'SyncSDK',
+    ecosystem: '플랫폼 연동 구조',
+    infra: '인프라 및 보안',
+    patents: '특허 포트폴리오',
+    guide: '운영 가이드',
+    proposals: '소개서 및 도입 제안서',
     methodology: '사업 및 개발 방법론',
     agile: '애자일',
     study: 'Study',

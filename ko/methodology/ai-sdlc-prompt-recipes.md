@@ -16,7 +16,7 @@ head:
       content: https://doc.empasy.com/images/favicon.png
   - - meta
     - property: og:url
-      content: https://doc.empasy.com/methodology/ai-sdlc-prompt-recipes.html
+      content: https://doc.empasy.com/methodology/ai-sdlc-prompt-recipes
 sort: 106
 ---
 
@@ -73,10 +73,10 @@ QA 테스트가 가능한 완료 기준(Acceptance Criteria)을 작성해 주세
 
 ## 2. 아키텍처 및 데이터베이스 설계 (아키텍트 / DBA)
 
-### 프롬프트 2.1: PostgreSQL 17 표준 DDL 생성
+### 프롬프트 2.1: PostgreSQL 18.6 표준 DDL 생성
 ```markdown
 [역할] 수석 데이터베이스 아키텍트
-[데이터베이스] PostgreSQL 17
+[데이터베이스] PostgreSQL 18.6
 [도메인] {{도메인명, 예: shop_coupon}}
 [요구사항] {{기능 명세서 내용}}
 
@@ -85,7 +85,7 @@ QA 테스트가 가능한 완료 기준(Acceptance Criteria)을 작성해 주세
 2. 기본키 id는 BIGINT 표준을 적용해 주세요.
 3. 감사 컬럼(created_at, updated_at, created_by, updated_by, del_flag)을 포함해 주세요.
 4. 자주 조회되는 컬럼에 대해 명시적 인덱스(INDEX)를 부여해 주세요.
-5. 임시 충돌 회피 구문(ON CONFLICT DO NOTHING 등) 대신 고유성이 검증된 순수 CREATE TABLE 및 INSERT 구문으로 작성해 주세요.
+5. 임시 충돌 회피 구문( 등) 대신 고유성이 검증된 순수 CREATE TABLE 및 INSERT 구문으로 작성해 주세요.
 
 [출력 형식]
 - Mermaid 테이블 관계도
@@ -116,7 +116,7 @@ QA 테스트가 가능한 완료 기준(Acceptance Criteria)을 작성해 주세
 ### 프롬프트 3.1: Lombok 적용 및 표준 서비스 구현
 ```markdown
 [역할] 시니어 Spring Boot 개발자
-[기술 스택] Java 25, Spring Boot 3.5.16, PostgreSQL 17
+[기술 스택] Java 25, Spring Boot 3.5.16, PostgreSQL 18.6
 [구현 대상] {{구현할 기능, 예: 쿠폰 적용 비즈니스 로직}}
 [선행 명세] {{확정된 DDL 및 API 명세}}
 

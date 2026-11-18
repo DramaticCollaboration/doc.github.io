@@ -88,7 +88,7 @@ flowchart TD
 
 ## 3. PostgreSQL 18.6 도메인 데이터베이스 설계 (`db/02_schema_domain.sql`)
 
-기존 MariaDB/MySQL + OpenSearch 이중 스토리지를 단일 **PostgreSQL 18.6 (`sync_apim` 데이터베이스)**으로 통합하여 운영 복잡도와 메모리 점유율을 낮추었습니다.
+기존 PostgreSQL 18.6/PostgreSQL 18.6 + OpenSearch 이중 스토리지를 단일 **PostgreSQL 18.6 (`sync_apim` 데이터베이스)**으로 통합하여 운영 복잡도와 메모리 점유율을 낮추었습니다.
 
 | 분류 | 물리 테이블명 | 주요 컬럼 및 설계 특징 |
 | :--- | :--- | :--- |
