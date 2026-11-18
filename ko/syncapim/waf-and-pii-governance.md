@@ -23,7 +23,19 @@ sort: 3
 
 # SyncAPIM WAF 위협 탐지, 스펙 드리프트 감사 및 PII 마스킹 거버넌스
 
-`SyncAPIM`은 단순 시그니처 방화벽을 넘어 **API 인벤토리 가시성 확보(Shadow API Discovery)**, **설계 명세 대비 실트래픽 정합성 검증(Contract Drift Audit)**, **실시간 웹·API 공격 차단(WAF)**, **개인·금융 민감정보 유출 방지(PII Masking)**의 4단계 보안 거버넌스를 단일 파이프라인으로 제공합니다.
+`SyncAPIM`은 단순 시그니처 방화벽을 넘어 **구문 토큰 지문 분석기(`SqlXssLexicalTokenizer`)**, **`SyncWatch` 연동 실시간 공격 패턴 탐지·핀셋 가상 패치(`SandboxedDefenseEvaluator`)**, **커널 eBPF 차단**, **API 인벤토리 가시성 확보(Shadow API Discovery)**, **설계 명세 대비 실트래픽 정합성 검증(Contract Drift Audit)**, **개인·금융 민감정보 유출 방지(PII Masking)**를 단일 파이프라인으로 제공합니다.
+
+---
+
+## 0. 구문 토큰 지문 분석기(`SqlXssLexicalTokenizer`) + `SyncWatch` 핀셋 가상 패치 + 커널 eBPF 차단
+
+1. **구문 토큰 지문 분석기 (`SqlXssLexicalTokenizer`)**:
+   - 기존의 부정확한 해시 기반 의사 벡터 방식을 전면 배제하고, 3단계 다중 디코딩(URL, HTML 엔티티, 유니코드 이스케이프, SQL 인라인 주석 해제) 후 어휘 토큰 시퀀스 지문(`s&1`, `sUE`, `;k`, `f(n)`, `x_script`, `x_event_handler` 등)을 `0.05ms` 이내에 결정론적으로 추출하여 변종 SQLi 및 XSS 우회 공격을 탐지합니다.
+2. **`SyncWatch` 연동 실시간 공격 패턴 탐지 및 핀셋 가상 패치 (`ApimDefensePack` & `SandboxedDefenseEvaluator`)**:
+   - 전사 보안 관측소인 [`SyncWatch`](/syncwatch/)가 글로벌 위협 피드(NVD CVE, CISA KEV, OSV.dev, GitHub GHSA, Nuclei, OWASP CRS, KISA)를 수집해 컴파일·검증한 **`ApimDefensePack`**을 실시간 수신합니다.
+   - `SandboxedDefenseEvaluator`(`SimpleEvaluationContext` 기반 격리 평가기)가 구문 토큰 지문, 타깃 위치별 정규식(`HEADER`, `URI`, `QUERY`, `BODY`), Restricted SpEL 표현식을 결합 평가하여 서버 재시작 없이 특정 엔드포인트에 핀셋 가상 패치를 즉시 적용합니다.
+3. **커널 eBPF 초저지연 차단**:
+   - 고위험 침해 시도가 확인된 공격원 IP와 비정상 패킷은 L7 게이트웨이 차단과 동시에 커널 eBPF(XDP/TC) 계층에서 즉시 드롭하여 백엔드 자원 고갈을 원천 차단합니다.
 
 ---
 

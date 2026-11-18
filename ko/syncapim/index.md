@@ -24,7 +24,7 @@ sort: 1
 # SyncAPIM: AI 자율 API 보안 관제 및 명세 거버넌스 플랫폼
 
 > [!IMPORTANT]
-> **SyncSeries 4-Tier API 보안·관제 에이전트 (`SYNC_APIM`)**: `SyncAPIM`은 마이크로서비스 및 레거시 WAS 앞단에서 유통되는 모든 API 트래픽을 실시간 수집하여 **미등록 섀도우 API 자동 카탈로그화**, **OpenAPI 3.0.1 명세 드리프트 진단**, **6대 핵심 웹·API 공격 실시간 차단**, **8대 개인·금융 민감정보 동적 마스킹**을 자율 수행합니다.
+> **SyncSeries 4-Tier API 보안·관제 에이전트 (`SYNC_APIM`)**: `SyncAPIM`은 마이크로서비스 및 레거시 WAS 앞단에서 유통되는 모든 API 트래픽을 실시간 수집하여 **구문 토큰 지문 분석기(`SqlXssLexicalTokenizer`)**, **`SyncWatch` 연동 실시간 공격 패턴 탐지·핀셋 가상 패치(`ApimDefensePack` & `SandboxedDefenseEvaluator`)**, **커널 eBPF 차단**, **미등록 섀도우 API 자동 카탈로그화**, **OpenAPI 3.0.1 명세 드리프트 진단**, **8대 개인·금융 민감정보 동적 마스킹**을 자율 수행합니다.
 
 ## 1. 핵심 아키텍처 및 기술 표준
 

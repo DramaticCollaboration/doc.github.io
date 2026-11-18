@@ -106,7 +106,10 @@ API 요청·응답 데이터 필드(`wapf_data_field`) 및 패킷에서 주민�
   }
   ```
 
-### 1.6 `agent_execute_task`
+### 1.6 `apim_receive_watch_defense_pack`
+[`SyncWatch`](/syncwatch/)가 컴파일 및 자체 샌드박스 검증을 마친 런타임 공격 패턴 방어 팩(`ApimDefensePack`)을 수신하여 `SqlXssLexicalTokenizer` 지문 매처 및 `SandboxedDefenseEvaluator`에 무중단 핫스왑 적용합니다.
+
+### 1.7 `agent_execute_task`
 `SyncVerse` 관제탑이 위임한 자연어 보안 감사·차단 태스크를 `AgentScope Java` `ReActAgent` 루프로 자율 수행합니다.
 
 ---

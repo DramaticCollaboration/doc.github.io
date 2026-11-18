@@ -30,7 +30,7 @@ sort: 1
 
 **SyncVerse**는 개별적으로 동작하던 분산 소프트웨어 솔루션들을 하나의 유기적인 AI 에코시스템으로 통합하는 **LLM 네이티브 중앙 제어 플랫폼(Central Control Tower)**입니다.
 
-사람이 시스템 모니터링, 유지보수 티켓 처리, 코드 수정, 배포를 수동으로 수행하던 구조에서 벗어나, **SyncVerse 중앙 오케스트레이터가 하위 시스템(SyncBoot, SyncCMS, SyncShop, SyncOps, SyncLLM, SyncInsight 등)의 도메인 에이전트들과 표준 프로토콜로 협업**하여 시스템을 자율 운영합니다.
+사람이 시스템 모니터링, 유지보수 티켓 처리, 코드 수정, 배포를 수동으로 수행하던 구조에서 벗어나, **SyncVerse 중앙 오케스트레이터가 하위 시스템(SyncWatch, SyncAPIM, SyncBoot, SyncCMS, SyncShop, SyncOps, SyncLLM, SyncInsight 등)의 도메인 에이전트들과 표준 프로토콜로 협업**하여 시스템을 자율 운영하며, [`SyncWatch`](/syncwatch/)로부터 수신한 `VerseAuditPack`(SCA 의존성·SAST 코드·DAST 모의해킹 보안 점검 팩)을 기반으로 전사 저장소의 취약점을 상시 감사하고 자동 패치 PR을 생성합니다.
 
 ```mermaid
 flowchart TB

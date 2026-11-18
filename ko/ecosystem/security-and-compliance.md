@@ -91,5 +91,5 @@ SyncSeries 인라인 프록시 및 SyncLLM 게이트웨이는 요청/응답 페�
 ```
 
 1. **감사 추적(Audit Trail) 보존**: 모든 A2A(Agent-to-Agent) 호출, MCP 도구 실행 내역, 관리자 승인 이력을 RFC 5424 규격의 구조화 로그(JSON)로 최소 2년간 영구 보존합니다.
-2. **소프트웨어 공급망 보안 (SBOM)**: 모든 배포 이미지 및 아티팩트는 CycloneDX / SPDX 규격의 SBOM을 제공하며, OWASP Dependency-Check 및 Trivy 정기 취약점 스캔을 100% 통과한 빌드만 출하합니다.
+2. **소프트웨어 공급망 보안 (SBOM) 및 3각 자율 DevSecOps (`SyncWatch` → `SyncVerse` → `SyncAPIM`)**: 모든 배포 이미지 및 아티팩트는 CycloneDX / SPDX 규격의 SBOM을 제공하며, [`SyncWatch`](/syncwatch/)가 수집·컴파일한 `VerseAuditPack`(SCA/SAST/DAST 코드 점검)과 `ApimDefensePack`(`SqlXssLexicalTokenizer` 구문 토큰 지문 + `SandboxedDefenseEvaluator` 핀셋 가상 패치 + 커널 eBPF 차단)을 통해 코드와 런타임 양단에서 제로데이 위협을 실시간 방어합니다.
 3. **비밀유지계약(NDA) 선체결 절차**: 고객사의 기술 심의 및 PoC 착수 전, 양사 간 표준 엔터프라이즈 상호 비밀유지계약을 선제적으로 체결하여 기술 자산과 비즈니스 정보를 보호합니다.

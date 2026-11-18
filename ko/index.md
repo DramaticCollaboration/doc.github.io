@@ -108,8 +108,14 @@ features:
   - icon:
       svg: '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>'
     title: SyncAPIM (API 모니터링 및 보안 관제)
-    details: 미등록 섀도우 API 자동 발견, OpenAPI 3.0.1 명세 드리프트 진단, 6대 웹·API 공격 실시간 차단 및 8대 민감정보 동적 마스킹
+    details: 구문 토큰 지문 분석기(SqlXssLexicalTokenizer) + SyncWatch 연동 핀셋 가상 패치(SandboxedDefenseEvaluator) + 커널 eBPF 차단 및 섀도우 API·민감정보 보호
     link: /syncapim/
+    linkText: 문서 보기 →
+  - icon:
+      svg: '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>'
+    title: SyncWatch (전사 보안 위협 관측 및 룰 컴파일러)
+    details: 7대 글로벌 보안 피드 수집·정규화 및 SyncVerse(VerseAuditPack)·SyncAPIM(ApimDefensePack) 듀얼 보안 룰 실시간 컴파일·배포
+    link: /syncwatch/
     linkText: 문서 보기 →
 
 footer: Copyright © 2026 Empasy Inc. All rights reserved.
@@ -164,8 +170,13 @@ footer: Copyright © 2026 Empasy Inc. All rights reserved.
 
 ### SyncAPIM: AI 자율 API 보안 관제 및 명세 거버넌스 플랫폼
 * **개요**: 실시간 API 패킷을 수집·분석하여 문서화되지 않은 미등록 섀도우 API를 자동 발견하고, OpenAPI 3.0.1 스펙 드리프트 진단과 웹·API 위협 차단(WAF) 및 개인정보 마스킹을 수행하는 4-JVM 고성능 보안 관제 에이전트입니다.
-* **핵심 기능**: 4개 독립 JVM(`admin`, `receiver`, `detector`, `gateway`) 성능 격리 아키텍처, OpenAPI 3.0.1 Contract Drift 비교 감사, 6대 공격(SQLi, XSS, SSRF, RCE, Path Traversal, JWT 위변조) 실시간 탐지·차단, 8대 개인·금융 민감정보 동적 마스킹, PostgreSQL 18.6 `pg_trgm` 초고속 포렌식 검색.
-* **도입 효과**: 별도의 무거운 외부 검색엔진 없이도 전체 API 인벤토리 가시성을 확보하고 미승인 API 노출 및 개인정보 유출 사고를 원천 차단합니다.
+* **핵심 기능**: 4개 독립 JVM(`admin`, `receiver`, `detector`, `gateway`) 성능 격리 아키텍처, 구문 토큰 지문 분석기(`SqlXssLexicalTokenizer`), `SyncWatch` 연동 실시간 공격 패턴 탐지·핀셋 가상 패치(`ApimDefensePack` & `SandboxedDefenseEvaluator`), 커널 eBPF 차단, OpenAPI 3.0.1 Contract Drift 비교 감사, 8대 개인·금융 민감정보 동적 마스킹, PostgreSQL 18.6 `pg_trgm` 초고속 포렌식 검색.
+* **도입 효과**: 별도의 무거운 외부 검색엔진 없이도 전체 API 인벤토리 가시성을 확보하고 제로데이 취약점 가상 패치, 미승인 API 노출 및 개인정보 유출 사고를 원천 차단합니다.
+
+### SyncWatch: 전사 보안 이슈 수집·컴파일·배포 에이전트
+* **개요**: 글로벌 보안 위협(NVD CVE, CISA KEV, OSV.dev, GitHub GHSA, Nuclei, OWASP CRS, KISA) 및 보안 진단 문서를 단일 허브로 수집·정규화하여, `SyncVerse`에는 코드·의존성·모의해킹 보안 점검 팩(`VerseAuditPack`)을, `SyncAPIM`에는 런타임 공격 패턴 팩(`ApimDefensePack`)을 실시간 컴파일·배포하는 전사 보안 관측소입니다.
+* **핵심 기능**: 5단계 SSRF 방어 가드 기반 6대 채널 수집, `WatchRuleCompilerService` 듀얼 룰 컴파일, Positive/Negative 샘플 기반 자체 샌드박스 검증(TP 100%, FP 0%), 전사 실시간 브로드캐스트 배포 및 피드백 원장 관제.
+* **도입 효과**: `SyncWatch` → `SyncVerse`(Shift-Left 코드 감사 & 자동 패치 PR) → `SyncAPIM`(Shift-Right 런타임 공격 차단)으로 이어지는 3각 자율 DevSecOps 보안 체계를 완성합니다.
 
 ### SyncLLM: 엔터프라이즈 AI 게이트웨이 & FinOps 비용 관리
 * **개요**: 사내 여러 부서와 에이전트의 멀티 LLM API 호출을 단일 창구로 모으고 토큰 비용과 보안을 중앙 통제하는 AI 게이트웨이입니다.

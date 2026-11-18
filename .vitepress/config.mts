@@ -12,7 +12,7 @@ export default withMermaid(
   lang: "ko-KR",
   title: "Empasy Docs (엠파시 기술 문서)",
   titleTemplate: ":title | Empasy Docs (엠파시 기술 문서)",
-  description: "엠파시(Empasy) Sync Series 공식 기술 문서 포털 - SyncVerse, SyncETA, SyncBoot, SyncCMS, SyncShop, SyncOps, SyncInsight, SyncCrawl, SyncLLM, SyncAPIM 아키텍처 및 개발 가이드",
+  description: "엠파시(Empasy) Sync Series 공식 기술 문서 포털 - SyncVerse, SyncWatch, SyncAPIM, SyncETA, SyncBoot, SyncCMS, SyncShop, SyncOps, SyncInsight, SyncCrawl, SyncLLM 아키텍처 및 개발 가이드",
 
   rewrites: {
     "ko/:rest*": ":rest*",
@@ -30,7 +30,7 @@ export default withMermaid(
     ['meta', { name: 'author', content: '엠파시' }], // 작성자 정보
     [
       'meta',
-      { name: 'keywords', content: '엠파시, Empasy, Sync Series, SyncVerse, SyncInsight, SyncETA, SyncCrawl, SyncBoot, SyncCMS, SyncShop, SyncOps, SyncLLM, SyncAPIM, AI 에이전트, AI 오케스트레이션, API 보안, FinOps' },
+      { name: 'keywords', content: '엠파시, Empasy, Sync Series, SyncVerse, SyncWatch, SyncAPIM, SyncInsight, SyncETA, SyncCrawl, SyncBoot, SyncCMS, SyncShop, SyncOps, SyncLLM, AI 에이전트, AI 오케스트레이션, API 보안, 위협 인텔리전스, FinOps' },
     ], //
 
     // PWA-related
@@ -138,7 +138,7 @@ new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
       { text: "홈", link: "/" },
       {
         text: '제품 안내 (Sync Series)',
-        activeMatch: "^/(syncverse|syncinsight|synceta|synccrawl|syncboot|synccms|syncshop|syncops|syncllm|syncadmin|syncapim)/",
+        activeMatch: "^/(syncverse|syncinsight|synceta|synccrawl|syncboot|synccms|syncshop|syncops|syncllm|syncadmin|syncapim|syncwatch)/",
         items: [
           {
             text: '관제 및 테스트',
@@ -163,12 +163,13 @@ new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
               { link: "/syncboot/", text: 'SyncBoot (백엔드 프레임워크)' },
               { link: "/syncllm/", text: 'SyncLLM (AI 모델 게이트웨이)' },
               { link: "/syncapim/", text: 'SyncAPIM (API 모니터링 및 보안)' },
+              { link: "/syncwatch/", text: 'SyncWatch (보안 위협 관측 및 룰 컴파일)' },
             ]
           },
           {
             text: '소개서 및 도입 제안서',
             items: [
-              { link: "/proposals/", text: '📄 전 제품 소개서·제안서 PDF 다운로드' },
+              { link: "/proposals/", text: '전 제품 소개서·제안서 PDF 다운로드' },
             ]
           },
           {
@@ -318,6 +319,7 @@ new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
         '/syncboot/': generateKrSidebar('syncboot'),
         '/syncadmin/': generateKrSidebar('syncadmin'),
         '/syncapim/': generateKrSidebar('syncapim'),
+        '/syncwatch/': generateKrSidebar('syncwatch'),
         '/logs/': generateKrSidebar('logs'),
         '/study/': generateKrSidebar('study'),
     },

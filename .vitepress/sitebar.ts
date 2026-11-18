@@ -62,6 +62,16 @@ const MODULE_CATEGORY_RULES: Record<string, Array<{ group: string; match: (name:
       match: (name) => ['mcp-tools', 'enterprise-faq'].includes(name),
     },
   ],
+  syncwatch: [
+    {
+      group: '시작하기',
+      match: (name) => ['index', 'architecture'].includes(name),
+    },
+    {
+      group: '자율 DevSecOps 연동 & API',
+      match: (name) => ['devsecops-protocol', 'api-and-schema'].includes(name),
+    },
+  ],
   syncops: [
     {
       group: '시작하기',
@@ -471,6 +481,12 @@ const DEFAULT_SIDEBAR_SHORT_TITLES: Record<string, Record<string, string>> = {
     'mcp-tools': 'MCP 도구 & REST API',
     'enterprise-faq': '도입 FAQ',
   },
+  syncwatch: {
+    index: '개요',
+    architecture: '아키텍처 & 룰 컴파일러',
+    'devsecops-protocol': 'Verse & APIM 연동 프로토콜',
+    'api-and-schema': 'DB 스키마 & API 명세',
+  },
   study: {
     index: '연구 자료 개요',
     'playwright-cdp-visual-regression': 'Playwright & CDP 동기화',
@@ -667,6 +683,7 @@ function formatFilenameAsTitle(filename: string): string {
     synceta: 'SyncETA',
     syncadmin: 'SyncAdmin',
     syncapim: 'SyncAPIM',
+    syncwatch: 'SyncWatch',
     methodology: '사업 및 개발 방법론',
     agile: '애자일',
     study: 'Study',
