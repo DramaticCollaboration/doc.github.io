@@ -123,7 +123,7 @@ footer: Copyright © 2026 Empasy Inc. All rights reserved.
 | **표준 산출물 양식** | 요구사항정의서, WBS, 테스트시나리오 등 실무 서식 양식 다운로드 | [표준 산출물 양식 →](/methodology/enterprise-document-templates) |
 | **AI 개발 주기 (AI-SDLC)** | 명세 우선 아키텍처 설계부터 4단계 자가치유 검증까지의 AI 협업 절차 | [AI-SDLC 가이드 →](/methodology/ai-driven-development) |
 | **애자일 및 Git Flow** | 스크럼반(Scrumban) 운영, Git 브랜치 전략, 일일 스크럼 실무 프로세스 | [애자일 가이드 →](/agile/) |
-| **제품별 소개서·도입제안서 (PDF)** | 요약 브로셔(4p), 통합 도입 제안서(8p) 및 12개 전 제품군(SyncVerse~SyncSDK) 개별 제안서 다운로드 | [전체 제안서 다운로드 센터 →](/proposals/) · [요약 브로셔 PDF](/downloads/proposals/SyncSeries_Brochure_v1.0.pdf) · [통합 제안서 PDF](/downloads/proposals/SyncSeries_Master_Proposal.pdf) |
+| **제품별 소개서·도입제안서 (PDF)** | 요약 브로셔(8p), 통합 도입 제안서(24p) 및 12개 전 제품군(SyncVerse~SyncSDK) 개별 제안서 다운로드 | [전체 제안서 다운로드 센터 →](/proposals/) · [요약 브로셔 PDF](/downloads/proposals/SyncSeries_Brochure_v1.0.pdf) · [통합 제안서 PDF](/downloads/proposals/SyncSeries_Master_Proposal.pdf) |
 
 ---
 
