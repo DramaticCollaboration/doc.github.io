@@ -62,7 +62,7 @@ graph LR
 
 | 구분 | 지원 기술 및 사양 |
 | :--- | :--- |
-| **코어 백엔드** | Java 25, Spring Boot 3.5.16, AgentScope Java (`io.agentscope:agentscope-harness:2.0.2`), 6-File DB SSOT Standard (`db/00_extensions.sql` ~ `05_sample_dev.sql`) |
+| **코어 백엔드** | Java 25, Spring Boot 4.0, AgentScope Java (`io.agentscope:agentscope-harness:2.0.2`), 6-File DB SSOT Standard (`db/00_extensions.sql` ~ `05_sample_dev.sql`) |
 | **브라우저 자동화** | Playwright MCP, Headless Chromium, 분산 Worker |
 | **스토리지 및 캐시** | PostgreSQL 18.6, Redis, MinIO / S3 오브젝트 스토리지 |
 | **벡터 데이터베이스** | PostgreSQL 18.6 `pgvector`, Milvus, Qdrant, Weaviate |

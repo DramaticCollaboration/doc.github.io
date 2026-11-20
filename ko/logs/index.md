@@ -57,7 +57,7 @@ sort: 1
 | :--- | :--- | :--- | :--- | :--- |
 | **`20260210`** | `SyncETA` | Electron Webview / V8 Heap | 50회 연속 녹화 시 렌더러 OOM 크래시 | 메모리 점유량 **68% 감소**, 500회 연속 녹화 무장애 |
 | **`20260218`** | `SyncETA` | Playwright / Virtual Scroll | 지연 마운트 그리드에서 간헐적 Timeout | 동적 타임아웃 안정화로 Flaky 실패율 **0.2% 미만** 달성 |
-| **`20260225`** | `SyncVerse` | Redis Redlock / SSE Saga | 네트워크 순단 시 분산 락 갱신 누락 | Watchdog 자동 연장 및 보상 롤백 정합성 **100% 보장** |
+| **`20260225`** | `SyncVerse` | Redis Redlock / SSE Saga | 네트워크 순단 시 분산 락 갱신 누락 | Watchdog 자동 연장 및 보상 롤백 정합성 **사전 검증 완료** |
 | **`20260302`** | `SyncBoot` | Java 25 Virtual Threads | 비동기 작업 시 `ThreadLocal` 테넌트 유실 | `ScopedValue` 전환으로 멀티테넌트 격리 누수 **0건** |
 | **`20260310`** | `SyncETA` | Windows EV / macOS Notarization | 수동 코드 서명으로 릴리즈 2시간 소요 | GitHub Actions 무인 서명·공증 파이프라인 **12분 이내 완결** |
 | **`20250827-A`** | `SyncETA` | Linux `inotify` Watcher | 개발 서버 구동 중 `ENOSPC` 프로세스 종료 | `fs.inotify.max_user_watches=524288` 영구 튜닝 표준화 |

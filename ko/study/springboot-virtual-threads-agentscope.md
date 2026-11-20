@@ -1,10 +1,10 @@
 ---
 title: "Java 25 가상 스레드와 AgentScope Java 기반 비동기 메시징 성능 분석"
-description: "Spring Boot 3.x 백엔드에서 대규모 멀티 에이전트 협업 시 발생하는 블로킹 I/O 문제를 극복하기 위해, Java 25 가상 스레드(Virtual Threads)와 AgentScope Java를 결합한 고성능 아키텍처 연구입니다."
+description: "Spring Boot 4.0.x 백엔드에서 대규모 멀티 에이전트 협업 시 발생하는 블로킹 I/O 문제를 극복하기 위해, Java 25 가상 스레드(Virtual Threads)와 AgentScope Java를 결합한 고성능 아키텍처 연구입니다."
 head:
   - - meta
     - name: keywords
-      content: Java 25, 가상 스레드, Virtual Threads, AgentScope Java, Spring Boot 3, 비동기 메시징, 멀티 에이전트 성능, SyncBoot, SyncVerse
+      content: Java 25, 가상 스레드, Virtual Threads, AgentScope Java, Spring Boot 4.0, 비동기 메시징, 멀티 에이전트 성능, SyncBoot, SyncVerse
   - - meta
     - property: og:title
       content: "Java 25 가상 스레드와 AgentScope Java 기반 비동기 메시징 성능 분석 | 엠파시(Empasy)"
@@ -60,7 +60,7 @@ graph TD
 
 ---
 
-## 3. Spring Boot 3.x 및 AgentScope Java 설정 실무
+## 3. Spring Boot 4.0.x 및 AgentScope Java 설정 실무
 
 ### 1) Spring Boot 가상 스레드 활성화 (`application.yml`)
 

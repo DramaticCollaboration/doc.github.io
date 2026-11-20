@@ -1,10 +1,10 @@
 ---
 title: "SyncBoot: 디지털 백엔드 프레임워크 개요"
-description: "도메인 데이터 운영과 스키마 관리를 지원하는 엔터프라이즈 백엔드 플랫폼입니다. Spring Boot 3, AgentScope Java, MCP 연동을 통해 시스템 운영과 API 개발을 지원합니다."
+description: "도메인 데이터 운영과 스키마 관리를 지원하는 엔터프라이즈 백엔드 플랫폼입니다. Spring Boot 4.0, AgentScope Java, MCP 연동을 통해 시스템 운영과 API 개발을 지원합니다."
 head:
   - - meta
     - name: keywords
-      content: SyncBoot, Java, Spring Boot 3, AgentScope Java, AI Agent, Model Context Protocol, MCP, 로우코드, 엔터프라이즈 백엔드, 6-File SQL, RBAC, 멀티테넌트
+      content: SyncBoot, Java, Spring Boot 4.0, AgentScope Java, AI Agent, Model Context Protocol, MCP, 로우코드, 엔터프라이즈 백엔드, 6-File SQL, RBAC, 멀티테넌트
   - - meta
     - property: og:title
       content: "SyncBoot: 디지털 백엔드 프레임워크 개요"
@@ -25,7 +25,7 @@ head:
 
 SyncBoot는 비즈니스 도메인 맥락을 인지하여 데이터베이스 운영과 API 개발을 지원하는 Java 기반 엔터프라이즈 백엔드 플랫폼입니다.
 
-Spring Boot 3, AgentScope Java (`io.agentscope:agentscope-harness`), Model Context Protocol (MCP) 표준을 기반으로 설계되었으며, 데이터 CRUD, 스키마 관리, 풀스택 코드 생성, 분산 로그 진단 기능을 제공합니다.
+Spring Boot 4.0, AgentScope Java (`io.agentscope:agentscope-harness`), Model Context Protocol (MCP) 표준을 기반으로 설계되었으며, 데이터 CRUD, 스키마 관리, 풀스택 코드 생성, 분산 로그 진단 기능을 제공합니다.
 
 ---
 
@@ -79,7 +79,7 @@ SyncBoot는 도메인 관리, 보안, 배치, 프로토콜 연동 역할을 모�
 - **백엔드 개발 공수 절감**: 반복적인 CRUD API 작성과 관리자 UI 화면 구현 시간을 단축합니다.
 - **안정적인 DB 마이그레이션**: 변경 영향도 사전 분석과 승인 콘솔을 통해 스키마 변경 시의 오류 위험을 낮춥니다.
 - **로그 수집 및 분석 시간 단축**: 분산 서버의 최근 에러 로그를 수집하여 원인 파악을 돕습니다.
-- **표준 프레임워크 준수**: Spring Boot 3, AgentScope Java (`io.agentscope:agentscope-harness`), OpenAPI 3.0, Model Context Protocol(MCP) 사양을 준수합니다.
+- **표준 프레임워크 준수**: Spring Boot 4.0, AgentScope Java (`io.agentscope:agentscope-harness`), OpenAPI 3.0, Model Context Protocol(MCP) 사양을 준수합니다.
 
 ---
 

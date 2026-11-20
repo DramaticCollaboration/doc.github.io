@@ -11,7 +11,7 @@ sort: 25
 
 # 전사 공유 모듈 및 AI 코딩 SDK 아키텍처
 
-SyncSeries는 루트 `pom.xml` 멀티모듈 체계 아래 개별 도메인 서비스와 에이전트 간의 중복 코드를 제거하고 전사 일관된 아키텍처 원칙(Java 25, Spring Boot 3.5.16, AgentScope Java 2.0.2, PostgreSQL 18.6)을 적용하기 위해 **6대 공통 기반 모듈(`sync-core`, `sync-module-*`)**과 **15대 AI 코딩 엔지니어링 SDK(`sync-sdk`)**를 표준화하여 운용합니다.
+SyncSeries는 루트 `pom.xml` 멀티모듈 체계 아래 개별 도메인 서비스와 에이전트 간의 중복 코드를 제거하고 전사 일관된 아키텍처 원칙(Java 25, Spring Boot 4.0, AgentScope Java 2.0.2, PostgreSQL 18.6)을 적용하기 위해 **6대 공통 기반 모듈(`sync-core`, `sync-module-*`)**과 **15대 AI 코딩 엔지니어링 SDK(`sync-sdk`)**를 표준화하여 운용합니다.
 
 ---
 

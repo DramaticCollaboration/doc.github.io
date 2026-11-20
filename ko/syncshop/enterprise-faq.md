@@ -1,21 +1,21 @@
 ---
 title: "SyncShop: 엔터프라이즈 자주 묻는 질문 (FAQ)"
 sidebarTitle: "도입 FAQ"
-description: "SyncShop의 9대 독립 마이크로서비스 아키텍처, ERP/WMS 기간계 연동, 다이내믹 프라이싱 마진 보호 및 대규모 트래픽 오버셀 방지 관련 FAQ"
+description: "SyncShop의 8개 독립 마이크로서비스 아키텍처, ERP/WMS 기간계 연동, 다이내믹 프라이싱 마진 보호 및 대규모 트래픽 오버셀 방지 관련 FAQ"
 head:
   - - meta
     - name: keywords
-      content: SyncShop, FAQ, 9대 마이크로서비스, ERP 연동, WMS, 역마진 방지, 오버셀, Headless Commerce, 엔터프라이즈
+      content: SyncShop, FAQ, 8개 마이크로서비스, ERP 연동, WMS, 역마진 방지, 오버셀, Headless Commerce, 엔터프라이즈
 sort: 6
 ---
 
 # SyncShop 엔터프라이즈 도입 FAQ
 
-9대 독립 마이크로서비스 기반의 자율 상거래 플랫폼인 `SyncShop`을 도입 및 운영할 때 이커머스 사업부, 물류/ERP 운영팀, IT 아키텍트가 가장 많이 문의하는 기술 질문과 답변입니다.
+8개 독립 마이크로서비스 기반의 자율 상거래 플랫폼인 `SyncShop`을 도입 및 운영할 때 이커머스 사업부, 물류/ERP 운영팀, IT 아키텍트가 가장 많이 문의하는 기술 질문과 답변입니다.
 
 ---
 
-## 1. 9대 마이크로서비스(MSA) 아키텍처 및 기간계 연동
+## 1. 8개 마이크로서비스(MSA) 아키텍처 및 기간계 연동
 
 ```mermaid
 flowchart TB
@@ -32,9 +32,9 @@ flowchart TB
     MBG --> DB[("PostgreSQL 18.6 + Redis 7")]
 ```
 
-### Q1. 왜 단일 모놀리스가 아닌 9개의 독립 마이크로서비스 구조로 구성되어 있나요?
+### Q1. 왜 단일 모놀리스가 아닌 8개의 독립 마이크로서비스 구조로 구성되어 있나요?
 - **답변**: 이커머스 워크로드는 평시 백오피스 상품·정산 관리(`sync-shop-admin`)와 대규모 프로모션·타임세일 시 폭증하는 대고객 조회·주문 트래픽(`sync-shop-portal`, `sync-shop-search`, `sync-shop-gateway`)의 특성이 완전히 다릅니다.
-- `SyncShop`은 9대 독립 모듈(`gateway`, `auth`, `admin`, `portal`, `search`, `monitor`, `mbg`, `mcp-server`, `common`)을 물리적으로 분리하여, 대고객 트래픽 폭증 시 `portal`과 `search` 컨테이너만 즉시 스케일아웃(Scale-Out)하고 백오피스와 AI 에이전트(`mcp-server`)의 안정성을 완벽히 격리합니다.
+- `SyncShop`은 8개 독립 모듈(`gateway`, `auth`, `admin`, `portal`, `search`, `monitor`, `mbg`, `mcp-server`, `common`)을 물리적으로 분리하여, 대고객 트래픽 폭증 시 `portal`과 `search` 컨테이너만 즉시 스케일아웃(Scale-Out)하고 백오피스와 AI 에이전트(`mcp-server`)의 안정성을 체계적으로 격리합니다.
 
 ### Q2. 기존 사내 ERP(SAP, 더존 등), WMS(물류창고관리) 및 PG 결제망과 어떻게 연동하나요?
 - **답변**: `SyncShop`은 모든 상거래 도메인이 `/api/v1/shop/*` 표준 Canonical REST API와 이벤트 웹훅(Webhook)으로 열려 있는 Headless Commerce 아키텍처입니다.
@@ -50,7 +50,7 @@ flowchart TB
 ## 2. 다이내믹 프라이싱 마진 보호 및 스냅샷 롤백
 
 ### Q3. AI 에이전트가 다이내믹 프라이싱(`shop_batch_price_update`)으로 가격을 일괄 조정할 때 역마진이 발생할 위험은 없나요?
-- **답변**: 가격 조정 시 내부 **3단계 상거래 에이전트 스웜(`Pricing Optimizer` -> `Margin Safeguard` -> `Executor`)** 과 다중 안전장치가 작동하여 역마진을 원천 차단합니다:
+- **답변**: 가격 조정 시 내부 **3단계 상거래 에이전트 스웜(`Pricing Optimizer` -> `Margin Safeguard` -> `Executor`)** 과 다중 안전장치가 작동하여 역마진을 사전에 차단하도록 돕습니다:
   1. **최소 보장 마진율 가드레일**: 상품 마스터(`pms_product`)의 매입 원가(`cost_price`)와 카테고리별 최소 마진율 기준(예: `15%`)을 대조하여, 단 1개 품목이라도 하한선 미만으로 산출되면 배치 트랜잭션 전체를 즉시 거부(Fail-Fast)합니다.
   2. **HITL 사전 결재 게이트**: 일정 할인율(예: `10%` 초과) 또는 대규모 카테고리 일괄 가격 변경은 `SyncVerse` HITL 승인 대기열로 자동 회부되어 커머스 책임자의 승인을 거쳐야만 반영됩니다.
   3. **변경 전 가격 스냅샷 및 1-Click 즉시 복원**: 가격 변경 직전 모든 대상 SKU의 기존 판매가 스냅샷(`SNP-YYYYMM-NNN`)이 DB에 자동 보존되며, 필요 시 `action: "ROLLBACK_PRICE"` 호출 한 번으로 `1초` 이내에 직전 가격으로 100% 원복됩니다.
@@ -84,11 +84,11 @@ flowchart TB
 - **답변**: 네, `sync-shop-search` 마이크로서비스는 **PostgreSQL 18.6의 `pgvector` HNSW 벡터 인덱스와 `pg_trgm` 전문 검색 인덱스**를 결합하여 운영합니다. 이를 통해 `"가을 출근룩 가벼운 자켓"` 같은 자연어 의도 기반 시맨틱 상품 검색과 브랜드·SKU 코드 정확 일치 검색을 단일 PostgreSQL 18.6 클러스터에서 초저지연으로 제공하며, 이기종 검색엔진 색인 동기화 지연이나 클러스터 이중 관리 비용을 제거합니다.
 
 ### Q6. 온프레미스 또는 프라이빗 클라우드(VPC) 환경에 독립 구축할 수 있나요?
-- **답변**: 가능합니다. 9대 마이크로서비스, 백오피스(`admin/`), 플래그십 스토어프론트(`web/`), 그리고 6-File DB SSOT 스크립트(`sync-shop/db/00_extensions.sql` ~ `05_sample_dev.sql`)가 표준 컨테이너(`docker-compose-dev.yml` 및 K8s 매니페스트)로 패키징되어 제공되므로 외부 SaaS 종속 없이 기업 자체 인프라에 즉시 구축할 수 있습니다.
+- **답변**: 가능합니다. 8개 마이크로서비스, 백오피스(`admin/`), 플래그십 스토어프론트(`web/`), 그리고 6-File DB SSOT 스크립트(`sync-shop/db/00_extensions.sql` ~ `05_sample_dev.sql`)가 표준 컨테이너(`docker-compose-dev.yml` 및 K8s 매니페스트)로 패키징되어 제공되므로 외부 SaaS 종속 없이 기업 자체 인프라에 즉시 구축할 수 있습니다.
 
 ---
 
-## 4. 9대 독립 마이크로서비스 모듈 및 포트 구성표
+## 4. 8개 독립 마이크로서비스 모듈 및 포트 구성표
 
 | 순번 | 모듈 ArtifactId (`Server/`) | 기본 포트 | 핵심 책임 및 기술 역할 |
 | :---: | :--- | :---: | :--- |

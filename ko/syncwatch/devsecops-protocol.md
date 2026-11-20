@@ -95,6 +95,6 @@ sort: 3
 2. **구문 토큰 지문 추출 (`SqlXssLexicalTokenizer`)**:
    - 입력 문자열을 어휘 토큰(`s` 문자열, `1` 숫자, `&` 논리 연산자, `U` UNION, `E` SELECT, `;` 구문 종료, `k` 위험 키워드, `f(n)` 함수 호출, `x_script` 스크립트 태그, `x_event_handler` 이벤트 핸들러 등)으로 변환하여 `0.05ms` 이내에 구조적 공격 지문(`grammarFingerprint`)을 생성합니다.
 3. **핀셋 가상 패치 (`SandboxedDefenseEvaluator`)**:
-   - `SyncWatch`가 배포한 `ApimDefensePack`의 타깃 경로(`target_path`), HTTP 메소드(`target_method`), 검사 위치(`target_locations`)가 일치할 때만 격리된 `SimpleEvaluationContext`(타입 참조·리플렉션·런타임 명령 실행 원천 차단)에서 방어 표현식을 평가합니다.
+   - `SyncWatch`가 배포한 `ApimDefensePack`의 타깃 경로(`target_path`), HTTP 메소드(`target_method`), 검사 위치(`target_locations`)가 일치할 때만 격리된 `SimpleEvaluationContext`(타입 참조·리플렉션·런타임 명령 실행 사전 차단)에서 방어 표현식을 평가합니다.
 4. **커널 eBPF 실시간 차단**:
    - 위협으로 판정된 패킷은 L7 게이트웨이에서 즉시 `403 Forbidden`으로 차단됨과 동시에, 반복 공격원 IP는 커널 eBPF(XDP/TC) 블랙리스트 맵에 등록되어 네트워크 인터페이스 수준에서 초저지연 드롭됩니다.

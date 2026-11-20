@@ -1,16 +1,16 @@
 ---
 title: 시스템 아키텍처 및 Clean Architecture | SyncCMS
-description: SyncCMS의 엔터프라이즈 Clean Architecture 4계층 구성과 Spring Boot 3, AgentScope Java, Nuxt 3 기술 스택 및 데이터 처리 파이프라인을 설명합니다.
+description: SyncCMS의 엔터프라이즈 Clean Architecture 4계층 구성과 Spring Boot 4.0, AgentScope Java, Nuxt 3 기술 스택 및 데이터 처리 파이프라인을 설명합니다.
 head:
   - - meta
     - name: keywords
-      content: SyncCMS 아키텍처, Clean Architecture, Spring Boot 3, AgentScope Java, Nuxt 3, Vue 3, PostgreSQL JSONB, Redis, Quartz, 온프레미스 AI
+      content: SyncCMS 아키텍처, Clean Architecture, Spring Boot 4.0, AgentScope Java, Nuxt 3, Vue 3, PostgreSQL JSONB, Redis, Quartz, 온프레미스 AI
   - - meta
     - property: og:title
       content: 시스템 아키텍처 및 Clean Architecture | SyncCMS
   - - meta
     - property: og:description
-      content: 엔터프라이즈 Clean Architecture 4계층 구성과 Spring Boot 3, AgentScope Java, Nuxt 3 기술 스택
+      content: 엔터프라이즈 Clean Architecture 4계층 구성과 Spring Boot 4.0, AgentScope Java, Nuxt 3 기술 스택
 sort: 2
 ---
 
@@ -39,7 +39,7 @@ graph TD
     end
 
     subgraph "3. 코어 프레임워크 계층 (Core Layer)"
-        CTRL["비즈니스 서비스 로직 (Spring Boot 3)"]
+        CTRL["비즈니스 서비스 로직 (Spring Boot 4.0)"]
         AS["AgentScope Java AI 오케스트레이션 엔진"]
         ENG["스냅샷 버전 관리 및 롤백 엔진"]
         SCHED["Quartz 기반 동적 스케줄러"]
@@ -76,7 +76,7 @@ graph TD
 - **감사 로깅 (Audit Logging)**: 콘텐츠의 생성, 수정, 결재 승인, 배포, 롤백 등 모든 변경 이력을 사용자 ID, IP, 변경 diff와 함께 저장합니다.
 
 ### 3. 코어 프레임워크 계층 (Core Layer)
-- **Spring Boot 3.5.16 & Java 25**: 전사 표준 Java 프레임워크 기반으로 안정적인 트랜잭션 처리와 모듈식 확장을 지원합니다.
+- **Spring Boot 4.0 & Java 25**: 전사 표준 Java 프레임워크 기반으로 안정적인 트랜잭션 처리와 모듈식 확장을 지원합니다.
 - **AgentScope Java AI 엔진 (`io.agentscope:agentscope-harness`)**: Java 환경에서 온프레미스 LLM 연동, ReActAgent 자율 도구 실행, RAG(검색 증강 생성) 지식 베이스 검색을 단일 파이프라인으로 수행합니다.
 - **스냅샷 롤백 엔진**: 배포 시점의 콘텐츠 상태를 버전별 스냅샷으로 저장하여 유사시 즉각적인 롤백을 수행합니다.
 - **Quartz 스케줄러**: 정기 배치 작업 및 예약 배포를 실시간으로 제어합니다.
@@ -97,7 +97,7 @@ sequenceDiagram
     autonumber
     participant Client as 사용자 브라우저
     participant Nuxt as Nuxt 3 (SSR Server)
-    participant API as Spring Boot 3 API
+    participant API as Spring Boot 4.0 API
     participant DB as PostgreSQL (JSONB)
 
     Client->>Nuxt: 페이지 요청 (GET /events/summer)

@@ -16,7 +16,7 @@ sort: 1
 | 항목 | 표준 명세 |
 | :--- | :--- |
 | **에이전트 식별 코드** | `SYNC_WATCH` (`sync-watch`) |
-| **Maven 좌표계** | `com.empasy.sync.watch:sync-watch-server` (Spring Boot 3.5.x, JDK 25) |
+| **Maven 좌표계** | `com.empasy.sync.watch:sync-watch-server` (Spring Boot 4.0.x, JDK 25) |
 | **표준 API Prefix** | `/api/v1/watch/*` (권한 API: `/api/v1/watch/sys/permission/getUserPermissionByToken`) |
 | **Admin 관리 콘솔** | 로컬: `http://localhost:3107` / 클라우드: `https://watch-admin.empasy.io` |
 | **백엔드 API & 홈페이지** | 로컬: `http://localhost:18087/api/v1/watch` / 클라우드: `https://watch.empasy.io` |

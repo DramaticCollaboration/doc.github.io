@@ -18,9 +18,9 @@
 | **Tier 2 (지능·게이트웨이)** | **SyncLLM** | 엔터프라이즈 AI 모델 게이트웨이, FinOps 토큰 예산 통제 & 시맨틱 캐시 | `/syncllm/` |
 | **Tier 2 (지능·게이트웨이)** | **SyncAPIM** | 4-JVM 성능 격리 기반 AI 자율 API 보안 관제, 섀도우 API 탐지 및 OpenAPI 3.0.1 명세 거버넌스 | `/syncapim/` |
 | **Tier 2 (지능·게이트웨이)** | **SyncWatch** | 8대 글로벌 보안 피드 수집·정규화 및 듀얼 보안 룰(`VerseAuditPack` / `ApimDefensePack`) 컴파일러 | `/syncwatch/` |
-| **Tier 3 (도메인 에이전트)** | **SyncBoot** | Spring Boot 3.5 / Java 25 기반 클린 아키텍처 백엔드 표준 플랫폼 | `/syncboot/` |
+| **Tier 3 (도메인 에이전트)** | **SyncBoot** | Spring Boot 4.0 / Java 25 기반 클린 아키텍처 백엔드 표준 플랫폼 | `/syncboot/` |
 | **Tier 3 (도메인 에이전트)** | **SyncCMS** | Nuxt 3 SSR & 멀티에이전트 스웜 기반 AEO/GEO 하이브리드 헤드리스 CMS | `/synccms/` |
-| **Tier 3 (도메인 에이전트)** | **SyncShop** | 9대 마이크로서비스 기반 옴니채널 상거래 및 다이내믹 프라이싱 에이전트 | `/syncshop/` |
+| **Tier 3 (도메인 에이전트)** | **SyncShop** | 8개 독립 마이크로서비스 기반 옴니채널 상거래 및 다이내믹 프라이싱 에이전트 | `/syncshop/` |
 | **Tier 3 (도메인 에이전트)** | **SyncOps** | 한국형 SI/솔루션 사업운영, 듀얼단가 손익, KOSA 매트릭스, 보증보험·하도급법·연구노트 관제 | `/syncops/` |
 | **QA & 수집 도구** | **SyncETA / SyncCrawl** | Vision-LLM 자가치유 E2E 테스트 자동화(`v0.0.58`) 및 적응형 웹 수집 엔진 | `/synceta/`, `/synccrawl/` |
 | **Tier 4 (SDK & 공통 모듈)** | **SyncSDK & 6대 공통 모듈** | 15대 멀티 코딩 엔진 SPI(`sync-sdk`) 및 `sync-core`, `sync-module-ai/nl2sql/audit/deploy/rag` | `/sdk/`, `/ecosystem/` |

@@ -104,7 +104,7 @@ flowchart TD
 
 ## 5. AgentScope Java & PostgreSQL 18.6 pgvector 기반 구현
 
-SyncSeries 전사 표준 스택인 **Spring Boot 3.5**, **AgentScope Java (`io.agentscope:agentscope-harness:2.0.2`)**, **Lombok (`@RequiredArgsConstructor`, `@Slf4j`)**, **PostgreSQL 18.6 (`pgvector`)** 기반의 실전 구현 예시입니다.
+SyncSeries 전사 표준 스택인 **Spring Boot 4.0**, **AgentScope Java (`io.agentscope:agentscope-harness:2.0.2`)**, **Lombok (`@RequiredArgsConstructor`, `@Slf4j`)**, **PostgreSQL 18.6 (`pgvector`)** 기반의 실전 구현 예시입니다.
 
 ### 5.1 Maven 의존성 설정 (`pom.xml`)
 

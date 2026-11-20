@@ -23,7 +23,7 @@ sort: 2
 
 # SyncAPIM 4-JVM 시스템 아키텍처 및 데이터베이스 설계
 
-`SyncAPIM`은 **Java 25 (Virtual Threads)**, **Spring Boot 3.5.16**, **AgentScope Java (`io.agentscope:agentscope-harness`)**, **PostgreSQL 18.6 (`JSONB` + `pg_trgm`)**, **Redis 7 Stream**, **Vue 3 + Vben Admin (`@empasy/sync-apim-admin`)** 표준 기술 스택 위에 구축된 고성능 API 모니터링 및 보안 에이전트 플랫폼입니다.
+`SyncAPIM`은 **Java 25 (Virtual Threads)**, **Spring Boot 4.0**, **AgentScope Java (`io.agentscope:agentscope-harness`)**, **PostgreSQL 18.6 (`JSONB` + `pg_trgm`)**, **Redis 7 Stream**, **Vue 3 + Vben Admin (`@empasy/sync-apim-admin`)** 표준 기술 스택 위에 구축된 고성능 API 모니터링 및 보안 에이전트 플랫폼입니다.
 
 ---
 

@@ -73,7 +73,7 @@ flowchart LR
 ## 3. 온프레미스 폐쇄망 배포 및 FinOps 비용 통제
 
 ### Q5. 금융·공공기관처럼 외부 인터넷이 완전히 차단된 폐쇄망(Air-Gapped) 환경에서도 딥 리서치와 NL2SQL이 동작하나요?
-- **답변**: 네, 완벽히 동작합니다. SyncInsight는 외부 클라우드 SaaS 의존성 없이 사내 쿠버네티스 또는 온프레미스 서버에 컨테이너로 배포되며, 사내 GPU 서버에 구축된 **온프레미스 LLM(`vLLM` / `Ollama` 기반 Llama-3.3-70B, Qwen-2.5-72B 등)** 및 **`SyncLLM` 게이트웨이**와 연동하여 사내망 내부에서만 안전하게 추론을 수행합니다.
+- **답변**: 네, 체계적으로 동작합니다. SyncInsight는 외부 클라우드 SaaS 의존성 없이 사내 쿠버네티스 또는 온프레미스 서버에 컨테이너로 배포되며, 사내 GPU 서버에 구축된 **온프레미스 LLM(`vLLM` / `Ollama` 기반 Llama-3.3-70B, Qwen-2.5-72B 등)** 및 **`SyncLLM` 게이트웨이**와 연동하여 사내망 내부에서만 안전하게 추론을 수행합니다.
 
 ### Q6. 전사 임직원이 자연어 데이터 탐색과 딥 리서치를 많이 사용할 경우 LLM 토큰 비용이 급증하지 않나요?
 - **답변**: 모든 LLM 호출은 `SyncLLM` FinOps 게이트웨이를 경유하며 다음 3단계 비용 최적화 정책이 기본 적용됩니다:
@@ -87,7 +87,7 @@ flowchart LR
 
 | 구분 | 항목 | 표준 설정 및 사양 |
 | :--- | :--- | :--- |
-| **코어 백엔드 서버** | `sync-insight-server` | Java 25, Spring Boot 3.5.16, `AgentScope Java 2.0.2`, 4 vCPU / 8GB RAM 이상 |
+| **코어 백엔드 서버** | `sync-insight-server` | Java 25, Spring Boot 4.0, `AgentScope Java 2.0.2`, 4 vCPU / 8GB RAM 이상 |
 | **데이터베이스** | `PostgreSQL 18.6` | `pgvector/pgvector:pg18` (`vector`, `uuid-ossp`, `pg_trgm`), 6-File DB SSOT 표준 |
 | **NL2SQL 안전 엔진** | `sync-module-nl2sql` | Apache Calcite 1.37.0 + JSqlParser 4.9 (`SELECT`-Only AST 방화벽, 기본 `LIMIT 1000`) |
 | **핵심 REST API** | Canonical Prefix | `POST /api/v1/insight/nl2sql/query`<br>`POST /api/v1/insight/research/jobs`<br>`POST /api/v1/insight/debate/sessions`<br>`POST /api/v1/insight/actions/{actionId}/approve` |

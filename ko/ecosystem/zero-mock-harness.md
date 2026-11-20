@@ -91,6 +91,6 @@ SyncSeries 전 제품군(13개 파트 · 209개 사용 시나리오 × 5대 차�
 
 ![SyncBoot 엔터프라이즈 백오피스](/images/screenshots/sync-boot/screen_01.png)
 
-![SyncShop 9대 독립 마이크로서비스 커머스 관제](/images/screenshots/sync-shop/screen_01.png)
+![SyncShop 8개 독립 마이크로서비스 커머스 관제](/images/screenshots/sync-shop/screen_01.png)
 
 ![SyncETA 자율 비전 QA 관제](/images/screenshots/sync-eta/screen_01.png)

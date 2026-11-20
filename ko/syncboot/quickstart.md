@@ -45,7 +45,7 @@ docker compose -f docker-compose-dev.yml up -d
 | 서비스 | URL | 인증 정보 | 설명 |
 | :--- | :--- | :--- | :--- |
 | **Admin Console UI** | `http://localhost:3000` | `admin` / `syncboot123!` | 백엔드 통합 관제 및 관리자 콘솔 |
-| **REST API Server** | `http://localhost:8080` | JWT Bearer Token | Spring Boot 3 기반 도메인 비즈니스 서버 |
+| **REST API Server** | `http://localhost:8080` | JWT Bearer Token | Spring Boot 4.0 기반 도메인 비즈니스 서버 |
 | **OpenAPI / Swagger**| `http://localhost:8080/swagger-ui/index.html` | - | REST API 인터랙티브 테스트 인터페이스 |
 | **MCP Server Endpoint** | `http://localhost:8080/api/v1/boot/mcp` | MCP Auth Header | Model Context Protocol 표준 엔드포인트 |
 

@@ -155,7 +155,7 @@ SyncVerse는 엔터프라이즈 환경의 대규모 트래픽과 무중단 운�
 
 | 계층 | 기술 스택 | 도입 목적 |
 | :--- | :--- | :--- |
-| **Backend Core** | Java 25, Spring Boot 3.5.16 | 엔터프라이즈 런타임, 가상 스레드(Virtual Threads), 트랜잭션 관리 |
+| **Backend Core** | Java 25, Spring Boot 4.0 | 엔터프라이즈 런타임, 가상 스레드(Virtual Threads), 트랜잭션 관리 |
 | **AI Framework** | **AgentScope Java** (`io.agentscope:agentscope-harness`) | 전사 표준 AI 프레임워크, 멀티 에이전트 협업 MsgHub, ReActAgent 자율 Tool 실행 |
 | **Frontend UI** | Vue 3, TypeScript, Vite, **Vue Flow** | 노드-엣지 토폴로지 시각화, 관제 대시보드 |
 | **State & Cache** | Redis 7.x (Cluster) | 에이전트 실시간 상태 공유, 시맨틱 캐싱, 분산 락 |
@@ -189,7 +189,7 @@ graph TD
     AsyncReg -.->|오프라인 시에도 부팅 지연 0ms 보장| RegEndpoint
 ```
 
-1. **Admin 서버의 SyncVerse 의존성 원천 차단**:
+1. **Admin 서버의 SyncVerse 의존성 사전 차단**:
    * 각 서비스의 Admin 서버는 화면 렌더링 및 비즈니스 REST API 제공에 집중하며, `self-registration.enabled: false` 설정을 통해 불필요한 관제탑 등록 시도를 차단합니다.
 2. **MCP 서버의 비동기 자기 등록 및 타임아웃**:
    * MCP 서버 기동 시 `AgentSelfRegistrationClient`가 `CompletableFuture.runAsync` 백그라운드 스레드로 등록을 진행합니다.

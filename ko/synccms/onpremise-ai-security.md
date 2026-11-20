@@ -4,7 +4,7 @@ description: 외부 인터넷 차단망에서도 동작하는 AgentScope Java �
 head:
   - - meta
     - name: keywords
-      content: 사내 폐쇄망 AI, 온프레미스 LLM, AgentScope Java, PII 마스킹, 비식별화, 망분리 규정, Spring Boot 3, vLLM, Ollama, 표시광고법
+      content: 사내 폐쇄망 AI, 온프레미스 LLM, AgentScope Java, PII 마스킹, 비식별화, 망분리 규정, Spring Boot 4.0, vLLM, Ollama, 표시광고법
   - - meta
     - property: og:title
       content: 사내 폐쇄망 AI 및 PII 보안 컴플라이언스 | SyncCMS
@@ -25,7 +25,7 @@ SyncCMS는 금융권, 공공기관, 대기업의 **망분리 보안 규정 및 �
 ```mermaid
 graph TD
     subgraph "사내 폐쇄망 인프라 (외부 인터넷 100% 차단)"
-        CMS["SyncCMS 백엔드 (Spring Boot 3)"]
+        CMS["SyncCMS 백엔드 (Spring Boot 4.0)"]
         INTERCEPTOR["PII 마스킹 인터셉터"]
         AS["AgentScope Java 오케스트레이터"]
         LLM["사내 AI 추론 서버 (vLLM / Ollama)"]
@@ -136,7 +136,7 @@ public class PiiMaskingInterceptor {
 
 ## 3. 표시광고법 및 기업 표준 용어 사전 검증
 
-- **법적 리스크 단어 탐지**: `최초`, `최고`, `100% 보장`, `무조건`, `완전 무료` 등 근거 제시가 필요한 단어 입력 시 확인 플래그를 생성합니다.
+- **법적 리스크 단어 탐지**: `최초`, `최고`, `안정적으로 지원`, `무조건`, `완전 무료` 등 근거 제시가 필요한 단어 입력 시 확인 플래그를 생성합니다.
 - **사내 표준 용어집(Glossary) 주입**: 회사의 공식 브랜드 명칭, 띄어쓰기 규정 및 금칙어 룰셋을 AI 프롬프트 System Prompt에 자동 주입하여 일관된 톤앤매너를 유지합니다.
 
 ---

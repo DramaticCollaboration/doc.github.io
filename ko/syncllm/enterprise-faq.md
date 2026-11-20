@@ -84,7 +84,7 @@ flowchart TD
 - **답변**: 네, `SyncLLM`은 **OpenAI 호환 표준 REST API 규격(`/api/v1/llm/chat/completions`, `/api/v1/llm/embeddings`)** 과 `AgentScope Java` 표준 모델 클라이언트를 100% 지원합니다. 기존 애플리케이션에서는 `baseUrl`만 `SyncLLM` 게이트웨이 주소로 변경하고 부서별 가상 API 키(`X-SyncLLM-Key`)를 주입하면 코드 변경 없이 즉시 시맨틱 캐싱, PII 마스킹, FinOps 예산 통제를 적용받을 수 있습니다.
 
 ### Q6. 금융·국방·공공 등 완전 망분리(Air-Gapped) 온프레미스 환경에 단독 구축할 수 있나요?
-- **답변**: 가능합니다. 외부 인터넷 연결이 전혀 없는 폐쇄망 환경에서도 `docker-compose-dev.yml` 또는 Kubernetes Helm 차트를 통해 설치할 수 있으며, 사내 GPU 클러스터에서 구동되는 **vLLM, Ollama, TGI(Text Generation Inference)** 추론 엔진들의 로드밸런서 겸 보안·감사 관제 게이트웨이로 완벽히 동작합니다.
+- **답변**: 가능합니다. 외부 인터넷 연결이 전혀 없는 폐쇄망 환경에서도 `docker-compose-dev.yml` 또는 Kubernetes Helm 차트를 통해 설치할 수 있으며, 사내 GPU 클러스터에서 구동되는 **vLLM, Ollama, TGI(Text Generation Inference)** 추론 엔진들의 로드밸런서 겸 보안·감사 관제 게이트웨이로 체계적으로 동작합니다.
 
 ---
 

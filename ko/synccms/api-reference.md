@@ -4,7 +4,7 @@ description: SyncCMS의 헤드리스 REST API 엔드포인트 명세, 요청/응
 head:
   - - meta
     - name: keywords
-      content: REST API, API Reference, 헤드리스 API, JSON 스키마, cURL, 캐시 무효화 API, RFC 7807, Spring Boot 3
+      content: REST API, API Reference, 헤드리스 API, JSON 스키마, cURL, 캐시 무효화 API, RFC 7807, Spring Boot 4.0
   - - meta
     - property: og:title
       content: 헤드리스 REST API 레퍼런스 | SyncCMS

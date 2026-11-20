@@ -35,7 +35,7 @@ sort: 3
    - 전사 보안 관측소인 [`SyncWatch`](/syncwatch/)가 글로벌 위협 피드(NVD CVE, CISA KEV, OSV.dev, GitHub GHSA, Nuclei, OWASP CRS, KISA)를 수집해 컴파일·검증한 **`ApimDefensePack`**을 실시간 수신합니다.
    - `SandboxedDefenseEvaluator`(`SimpleEvaluationContext` 기반 격리 평가기)가 구문 토큰 지문, 타깃 위치별 정규식(`HEADER`, `URI`, `QUERY`, `BODY`), Restricted SpEL 표현식을 결합 평가하여 서버 재시작 없이 특정 엔드포인트에 핀셋 가상 패치를 즉시 적용합니다.
 3. **커널 eBPF 초저지연 차단**:
-   - 고위험 침해 시도가 확인된 공격원 IP와 비정상 패킷은 L7 게이트웨이 차단과 동시에 커널 eBPF(XDP/TC) 계층에서 즉시 드롭하여 백엔드 자원 고갈을 원천 차단합니다.
+   - 고위험 침해 시도가 확인된 공격원 IP와 비정상 패킷은 L7 게이트웨이 차단과 동시에 커널 eBPF(XDP/TC) 계층에서 즉시 드롭하여 백엔드 자원 고갈을 사전에 차단하도록 돕습니다.
 
 ---
 

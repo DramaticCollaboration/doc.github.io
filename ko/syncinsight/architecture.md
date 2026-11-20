@@ -37,7 +37,7 @@ flowchart TD
         UI_STREAM["Server-Sent Events (SSE) 수신"]
     end
 
-    subgraph API_Gateway_Tier ["2. 게이트웨이 및 보안 계층 (Spring Boot 3)"]
+    subgraph API_Gateway_Tier ["2. 게이트웨이 및 보안 계층 (Spring Boot 4.0)"]
         AUTH["Spring Security / JWT 기반 RBAC"]
         MCP_SERVER["MCP 호스트 및 도구 레지스트리"]
         FINOPS_GUARD["토큰 사용량 관리 및 PII 마스킹 필터"]
@@ -67,7 +67,7 @@ flowchart TD
 - **블록 기반 문서 편집**: 생성된 분석 보고서를 블록 단위로 확인하고 직접 수정할 수 있는 인터페이스를 제공합니다.
 - **파라미터 시뮬레이션**: 슬라이더를 통해 변수를 조정하고 예측 지표의 변화를 화면에서 바로 확인합니다.
 
-### 1.2. 게이트웨이 및 보안 계층 (Spring Boot 3)
+### 1.2. 게이트웨이 및 보안 계층 (Spring Boot 4.0)
 - **표준 API 라우팅**: REST API 요청 처리, 테넌트 분리 및 세분화된 접근 권한(RBAC) 검증을 수행합니다.
 - **개인정보 보호 필터**: 외부 또는 내부 분석 엔진으로 질의가 전달되기 전 주민등록번호, 연락처 등 주요 개인식별정보(PII)를 감지하여 마스킹 처리합니다.
 - **FinOps 컨트롤러**: 사용자 및 부서별 토큰 사용량을 추적하고, 사전 설정된 정책에 따라 경량 모델로의 전환을 지원합니다.

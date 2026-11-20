@@ -1,12 +1,12 @@
 ---
 title: 로우코드 풀스택 API & UI 생성기
-description: 데이터베이스 테이블 메타데이터를 기반으로 Spring Boot 3 백엔드 코드와 Vben Admin 표준 컴포넌트(BasicTable, BasicModal, BasicForm) 기반 Vue 3 프론트엔드 관리자 UI 코드를 생성합니다.
+description: 데이터베이스 테이블 메타데이터를 기반으로 Spring Boot 4.0 백엔드 코드와 Vben Admin 표준 컴포넌트(BasicTable, BasicModal, BasicForm) 기반 Vue 3 프론트엔드 관리자 UI 코드를 생성합니다.
 sort: 4
 ---
 
 # 로우코드 풀스택 API & UI 생성기
 
-SyncBoot의 코드 생성 모듈은 데이터베이스 테이블 구조를 분석하여 **Spring Boot 3 백엔드 API(`/api/v1/boot/...`)와 Vben Admin 고수준 표준 컴포넌트(`BasicTable`, `BasicModal`, `BasicForm`) 기반 Vue 3 프론트엔드 관리자 화면** 소스코드를 생성합니다.
+SyncBoot의 코드 생성 모듈은 데이터베이스 테이블 구조를 분석하여 **Spring Boot 4.0 백엔드 API(`/api/v1/boot/...`)와 Vben Admin 고수준 표준 컴포넌트(`BasicTable`, `BasicModal`, `BasicForm`) 기반 Vue 3 프론트엔드 관리자 화면** 소스코드를 생성합니다.
 
 ---
 
@@ -16,7 +16,7 @@ SyncBoot의 코드 생성 모듈은 데이터베이스 테이블 구조를 분�
 
 ```
 생성되는 아티팩트 구성
-├── Backend (Java / Spring Boot 3)
+├── Backend (Java / Spring Boot 4.0)
 │   ├── SubscriptionController.java     # REST API 엔드포인트 (/api/v1/boot/subscriptions) & OpenAPI 설정
 │   ├── SubscriptionService.java        # 비즈니스 로직 인터페이스
 │   ├── SubscriptionServiceImpl.java    # 트랜잭션 서비스 구현체

@@ -5,7 +5,7 @@ description: "SyncShop의 Headless 분리 구조, MSA 백엔드 설계, AgentSco
 head:
   - - meta
     - name: keywords
-      content: SyncShop, Headless Commerce, AgentScope Java, A2A, MCP, 에이전트 스웜, 다이내믹 프라이싱, Spring Boot 3
+      content: SyncShop, Headless Commerce, AgentScope Java, A2A, MCP, 에이전트 스웜, 다이내믹 프라이싱, Spring Boot 4.0
 sort: 2
 ---
 
@@ -26,7 +26,7 @@ flowchart TD
     end
 
     subgraph ServiceLayer ["백엔드 비즈니스 로직 (Core Backend)"]
-        AdminServer["sync-shop-admin\n(Spring Boot 3.5.16 / MyBatis)"]
+        AdminServer["sync-shop-admin\n(Spring Boot 4.0 / MyBatis)"]
         PMS["상품 관리\n(PMS Engine)"]
         OMS["주문/배송\n(OMS Engine)"]
         SMS["프로모션\n(SMS Engine)"]
@@ -102,6 +102,6 @@ sequenceDiagram
 
 ## 4. 보안 및 트랜잭션 무결성
 
-* **A2A 인바운드 보안**: `A2ASessionKeyHolder`를 통한 비밀키 및 인바운드 토큰 검증으로 미인가 에이전트의 제어 요청을 원천 차단합니다.
+* **A2A 인바운드 보안**: `A2ASessionKeyHolder`를 통한 비밀키 및 인바운드 토큰 검증으로 미인가 에이전트의 제어 요청을 사전에 차단하도록 돕습니다.
 * **Saga 패턴 일관성**: 작업 단위별 고유 `task_id`를 추적하며, 연동 실패 시 보상 트랜잭션을 통해 이전 일관성 상태를 유지합니다.
 * **Zero-Mock 원칙**: 모든 도구 호출은 인메모리 더미 데이터를 배제하고 실제 영속 데이터베이스와 100% 연동됩니다.

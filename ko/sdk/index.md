@@ -40,7 +40,7 @@ flowchart LR
 
 ## 2. 5분 퀵스타트 (Java / Spring Boot)
 
-Spring Boot 3 환경에서 최소한의 설정으로 동작 가능한 첫 번째 AI 에이전트를 구성하는 표준 절차입니다.
+Spring Boot 4.0 환경에서 최소한의 설정으로 동작 가능한 첫 번째 AI 에이전트를 구성하는 표준 절차입니다.
 
 ### 1단계: Maven 의존성 추가
 프로젝트의 `pom.xml` 파일에 SyncSeries SDK 코어 모듈을 추가합니다:

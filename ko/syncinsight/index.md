@@ -80,7 +80,7 @@ flowchart TB
         UI5["NL2SQL 스마트 시트"]
     end
 
-    subgraph Gateway_Layer ["2. 게이트웨이 및 보안 계층 (Spring Boot 3)"]
+    subgraph Gateway_Layer ["2. 게이트웨이 및 보안 계층 (Spring Boot 4.0)"]
         GW1["인증 / 인가 (RBAC)"]
         GW2["비동기 작업 관리자"]
         GW3["MCP 호스트 및 라우터"]

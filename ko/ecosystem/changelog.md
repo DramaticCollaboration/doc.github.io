@@ -55,7 +55,7 @@ SyncSeries의 버전별 주요 업데이트, 보안 패치, 성능 개선 및 �
 * **3단계 HITL(Human-In-The-Loop) 안전 거버넌스 승인 파이프라인 정식 출시**:
   * `LOW`, `MEDIUM`, `HIGH` 등급별 자동 실행 및 관리자 승인 게이트웨이 구현.
 * **RFC 7807 Problem Details 표준 에러 프로토콜 전사 적용**:
-  * 가짜 정상(Fake Normalcy) 상태 위장을 원천 차단하고 구조화된 진단 정보 전파.
+  * 가짜 정상(Fake Normalcy) 상태 위장을 사전 차단하고 구조화된 진단 정보 전파.
 
 ### 보안 및 컴플라이언스
 * 푸터 필수 사업자 공시 정보 완비 및 B2B 엔터프라이즈 서비스 이용약관(`terms.html`) 신설.
@@ -89,7 +89,7 @@ SyncSeries의 버전별 주요 업데이트, 보안 패치, 성능 개선 및 �
 ## [v2.1.0] - 2025-11-10
 
 ### 주요 개선 사항
-* **SyncBoot Spring Boot 3.5.16 / Java 25 기반 MSA 프레임워크**:
+* **SyncBoot Spring Boot 4.0 / Java 25 기반 MSA 프레임워크**:
   * 분산 트랜잭션 일관성을 위한 Orchestrated Saga 패턴 및 보상 트랜잭션 자동 생성.
   * Virtual Threads(Loom) 적용으로 동시 I/O 처리량 300% 향상.
   * AgentScope Java (`io.agentscope:agentscope-harness`) 전사 표준 AI 프레임워크 연동.

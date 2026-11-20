@@ -1,10 +1,10 @@
 ---
 title: "SyncShop: 지능형 커머스 운영 플랫폼 개요"
-description: "비즈니스 민첩성과 옴니채널 확장을 지원하는 Headless eCommerce 및 자율 상거래 운영 플랫폼입니다. Spring Boot 3, Vue 3, AgentScope Java, MCP 연동을 지원합니다."
+description: "비즈니스 민첩성과 옴니채널 확장을 지원하는 Headless eCommerce 및 자율 상거래 운영 플랫폼입니다. Spring Boot 4.0, Vue 3, AgentScope Java, MCP 연동을 지원합니다."
 head:
   - - meta
     - name: keywords
-      content: SyncShop, Headless eCommerce, 커머스 에이전트, Spring Boot 3, AgentScope Java, MCP, 다이내믹 프라이싱, 주문 라이프사이클, 옴니채널
+      content: SyncShop, Headless eCommerce, 커머스 에이전트, Spring Boot 4.0, AgentScope Java, MCP, 다이내믹 프라이싱, 주문 라이프사이클, 옴니채널
   - - meta
     - property: og:title
       content: "SyncShop: 지능형 커머스 운영 플랫폼 개요"
@@ -26,7 +26,7 @@ sort: 1
 
 SyncShop은 비즈니스 유연성과 채널 확장성을 위해 백엔드 상거래 로직과 프론트엔드 표현층을 분리한 **Headless eCommerce** 플랫폼입니다.
 
-모든 핵심 기능을 RESTful API 및 표준 MCP(Model Context Protocol) 도구로 제공하여 웹, 모바일 앱, 키오스크, 소셜 커머스 등 다양한 고객 접점을 통합 제어하며, Spring Boot 3 기반 MSA 구조와 AgentScope Java 에이전트 하네스를 통해 자율 상거래 운영을 지원합니다.
+모든 핵심 기능을 RESTful API 및 표준 MCP(Model Context Protocol) 도구로 제공하여 웹, 모바일 앱, 키오스크, 소셜 커머스 등 다양한 고객 접점을 통합 제어하며, Spring Boot 4.0 기반 MSA 구조와 AgentScope Java 에이전트 하네스를 통해 자율 상거래 운영을 지원합니다.
 
 ---
 
@@ -71,7 +71,7 @@ graph LR
 
 | 영역 | 구성 요소 | 주요 기술 스택 | 설명 |
 |:---|:---|:---|:---|
-| **백엔드 서버** | `sync-shop-admin` | Java 25, Spring Boot 3.5.16, MyBatis | RESTful 커머스 API, 트랜잭션 및 보안(JWT, RBAC) |
+| **백엔드 서버** | `sync-shop-admin` | Java 25, Spring Boot 4.0, MyBatis | RESTful 커머스 API, 트랜잭션 및 보안(JWT, RBAC) |
 | **에이전트 서버** | `sync-shop-mcp-server` | AgentScope Java, Spring Web, MCP SDK | A2A 도구 제공, 다이내믹 프라이싱, 비동기 관제 연동 |
 | **관리자 UI** | `SyncShop Admin` | Vue 3, Vite, TypeScript, Ant Design Vue | 상거래 종합 운영 대시보드 및 백오피스 관제 화면 |
 | **모바일/클라이언트** | `SyncShop App` | Vue / Uni-App | 옴니채널 모바일 커머스 프론트엔드 |

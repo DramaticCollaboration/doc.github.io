@@ -34,28 +34,26 @@ export default withMermaid(
     ], //
 
     // PWA-related
-    ['meta', { name: 'theme-color', content: '#3eaf7c' }], // Accent color
-    ['meta', { name: 'apple-mobile-web-app-capable', content: 'yes' }], // iOS Safari Fullscreen
-    ['meta', { name: 'apple-mobile-web-app-status-bar-style', content: 'black' }], // iOS Safari Status bar style
+    ['meta', { name: 'theme-color', content: '#0e7490' }],
+    ['meta', { name: 'apple-mobile-web-app-capable', content: 'yes' }],
+    ['meta', { name: 'apple-mobile-web-app-status-bar-style', content: 'default' }],
 
     [
       'meta',
       { name: 'naver-site-verification', content: '3102a764f7ad54fe27ab3083cd0a7b0f647be4c7' },
     ],
 
-    ['link', { rel: 'apple-touch-icon', href: '/images/favicon.png' }], // Apple Touch Icon
-    ['meta', { name: 'msapplication-TileColor', content: '#3eaf7c' }], // Windows Tile 배경색
+    ['link', { rel: 'apple-touch-icon', href: '/images/favicon.png' }],
+    ['meta', { name: 'msapplication-TileColor', content: '#0e7490' }],
 
-    // Add other ones that are needed <head> tags eg Google Analytics Etc
-    // ['script', { src: 'https://example.com/script.js' }],
-    // Import the corresponding link
-    ['link', { rel: 'preconnect', href: 'https://fonts.googleapis.com' }],
-    ['link', { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: '' }],
+    // Pretendard Variable (Empasy unified webfont)
     [
       'link',
       {
-        href: 'https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap',
         rel: 'stylesheet',
+        as: 'style',
+        crossorigin: '',
+        href: 'https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css',
       },
     ],
     ['script', { src: 'https://www.googletagmanager.com/gtag/js?id=G-6BNPM5TX7C', async: true }],
@@ -137,109 +135,89 @@ new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
     nav: [
       { text: "홈", link: "/" },
       {
-        text: '제품 안내 (Sync Series)',
+        text: '제품 가이드',
         activeMatch: "^/(syncverse|syncinsight|synceta|synccrawl|syncboot|synccms|syncshop|syncops|syncllm|syncapim|syncwatch|proposals)/",
         items: [
           {
-            text: '관제 및 테스트',
+            text: '주력 솔루션 (4종)',
             items: [
-              { link: "/syncverse/", text: 'SyncVerse (통합 관제 센터)' },
-              { link: "/syncinsight/", text: 'SyncInsight (데이터 분석 및 모니터링)' },
-              { link: "/synceta/", text: 'SyncETA (테스트 자동화)' },
+              { link: "/syncverse/", text: 'SyncVerse — 협업·승인 통합 관리' },
+              { link: "/synceta/", text: 'SyncETA — 자동 테스트 · 데스크톱 앱' },
+              { link: "/syncboot/", text: 'SyncBoot — 기업 업무 시스템 기반' },
+              { link: "/synccms/", text: 'SyncCMS — 웹사이트 · 다국어 관리' },
             ]
           },
           {
-            text: '업무 도메인 솔루션',
+            text: '데이터 · AI 확장 모듈',
             items: [
-              { link: "/syncshop/", text: 'SyncShop (이커머스 운영)' },
-              { link: "/synccms/", text: 'SyncCMS (콘텐츠 관리)' },
-              { link: "/syncops/", text: 'SyncOps (SI 사업운영 및 손익 관제)' },
-              { link: "/synccrawl/", text: 'SyncCrawl (웹 데이터 수집)' },
+              { link: "/syncinsight/", text: 'SyncInsight — 대화형 데이터 조회' },
+              { link: "/syncllm/", text: 'SyncLLM — AI 비용 · 개인정보 관리' },
+              { link: "/synccrawl/", text: 'SyncCrawl — 웹 데이터 자동 수집' },
             ]
           },
           {
-            text: '개발 플랫폼 및 게이트웨이',
+            text: '보안 · 업무 확장 모듈',
             items: [
-              { link: "/syncboot/", text: 'SyncBoot (백엔드 프레임워크)' },
-              { link: "/syncllm/", text: 'SyncLLM (AI 모델 게이트웨이)' },
-              { link: "/syncapim/", text: 'SyncAPIM (API 모니터링 및 보안)' },
-              { link: "/syncwatch/", text: 'SyncWatch (보안 위협 관측 및 룰 컴파일)' },
+              { link: "/syncapim/", text: 'SyncAPIM — API 현황 · 보안 관리' },
+              { link: "/syncwatch/", text: 'SyncWatch — 보안 취약점 · 규칙 관리' },
+              { link: "/syncshop/", text: 'SyncShop — 쇼핑몰 · 가격 관리' },
+              { link: "/syncops/", text: 'SyncOps — SI 프로젝트 · 손익 관리' },
             ]
           },
           {
-            text: '소개서 및 도입 제안서',
+            text: '소개서 및 다운로드',
             items: [
-              { link: "/proposals/", text: '전 제품 소개서·제안서 PDF 다운로드' },
+              { link: "/proposals/", text: '제품 소개서 · 제안서 PDF 모음' },
+              { link: "https://empasy.io/ko/download_eta.html", text: 'SyncETA 데스크톱 앱 다운로드' },
             ]
           }
         ]
       },
       {
-        text: '기술 및 아키텍처',
-        activeMatch: "^/(ecosystem|patents|infra)/",
+        text: '연동 및 개발',
+        activeMatch: "^/(ecosystem|patents|infra|sdk|guide)/",
         items: [
           {
             text: '전체 구조 및 표준 규격',
             items: [
-              { link: "/ecosystem/", text: '플랫폼 연동 구조 개요' },
+              { link: "/ecosystem/", text: '공통 기반 및 모듈 연동 구조' },
               { link: "/ecosystem/mcp-protocol", text: '표준 도구 호출 규격 (MCP)' },
-              { link: "/ecosystem/e2e-workflow", text: '서비스 간 연동 시나리오' },
+              { link: "/ecosystem/e2e-workflow", text: '모듈 간 연동 시나리오' },
             ]
           },
           {
-            text: '특허 기술 및 인프라',
-            items: [
-              { link: "/patents/", text: '원천기술 특허 포트폴리오' },
-              { link: "/infra/", text: '서버 인프라 및 보안 체계' },
-            ]
-          }
-        ]
-      },
-      {
-        text: '개발자 센터',
-        activeMatch: "^/(sdk|guide)/",
-        items: [
-          {
-            text: 'SDK 활용 및 도구 개발',
+            text: 'SDK 및 운영 가이드',
             items: [
               { link: "/sdk/", text: '개발 시작 가이드' },
-              { link: "/sdk/custom-mcp-tool", text: '커스텀 도구 개발 (MCP)' },
-              { link: "/ecosystem/agentscope-guide", text: 'AgentScope Java 연동 방법' },
-              { link: "/sdk/sync-sdk-reference", text: 'SDK 인터페이스 명세' },
-            ]
-          },
-          {
-            text: '테스트 및 운영 관리',
-            items: [
-              { link: "/sdk/zero-mock-testing", text: '실환경 기반 테스트 가이드' },
+              { link: "/sdk/custom-mcp-tool", text: '커스텀 도구 개발' },
               { link: "/ecosystem/shared-modules-and-sdk", text: '공통 비즈니스 모듈' },
               { link: "/guide/", text: '승인 및 비용 운영 가이드' },
             ]
+          },
+          {
+            text: '인프라 및 특허',
+            items: [
+              { link: "/infra/", text: '서버 인프라 및 보안 체계' },
+              { link: "/patents/", text: '보유 특허 포트폴리오' },
+            ]
           }
         ]
       },
       {
-        text: '프로젝트 방법론',
+        text: '방법론',
         activeMatch: "^/(methodology|agile)/",
         items: [
           {
-            text: '사업 진행 단계별 가이드',
+            text: '프로젝트 진행 표준',
             items: [
               { link: "/methodology/", text: '방법론 개요' },
               { link: "/methodology/enterprise-project-lifecycle", text: '사업 전 주기 6단계 절차' },
               { link: "/methodology/enterprise-document-templates", text: '표준 산출물 양식 모음' },
-              { link: "/methodology/enterprise-action-items-guide", text: '단계별 주요 점검 사항' },
+              { link: "/methodology/ai-driven-development", text: 'AI 협업 개발 절차' },
             ]
           },
           {
-            text: 'AI 협업 개발 절차 (AI-SDLC)',
-            items: [
-              { link: "/methodology/ai-driven-development", text: 'AI 개발 주기 개요' },
-              { link: "/methodology/ai-sdlc-prompt-recipes", text: '상황별 실무 프롬프트 모음' },
-            ]
-          },
-          {
-            text: '애자일 및 협업 방식',
+            text: '애자일 협업',
             items: [
               { link: "/agile/", text: '스크럼반 운영 방식' },
               { link: "/agile/gitFlow", text: 'Git 브랜치 운영 전략' },
@@ -248,50 +226,8 @@ new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
           }
         ]
       },
-      {
-        text: '기술 자료',
-        activeMatch: "^/(study|logs)/",
-        items: [
-          {
-            text: '연구 및 문제 해결',
-            items: [
-              { link: "/study/", text: '기술 연구 자료 (Study)' },
-              { link: "/logs/", text: '작업 및 장애 조치 일지 (Logs)' },
-            ]
-          },
-          {
-            text: '소개서 및 다운로드',
-            items: [
-              {
-                text: '통합 도입제안서 (PDF)',
-                link: '/downloads/proposals/SyncSeries_Master_Proposal.pdf',
-                target: '_blank',
-                rel: 'noopener noreferrer',
-              },
-              {
-                text: '통합 요약 브로셔 (PDF)',
-                link: '/downloads/proposals/SyncSeries_Brochure_v1.0.pdf',
-                target: '_blank',
-                rel: 'noopener noreferrer',
-              },
-              {
-                text: 'SyncETA 설치 프로그램',
-                link: 'https://empasy.io/ko/download_eta.html',
-                target: '_blank',
-                rel: 'noopener noreferrer',
-              },
-              {
-                text: '엠파시 공식 홈페이지',
-                link: 'https://empasy.io/',
-                target: '_blank',
-                rel: 'noopener',
-              }
-            ]
-          }
-        ]
-      },
-      { text: "통합 데모 포털", link: "https://sync.empasy.io", target: "_blank", rel: "noopener" },
-      { text: "공식 홈페이지 (empasy.io)", link: "https://empasy.io/", target: "_blank", rel: "noopener" }
+      { text: "통합 데모", link: "https://sync.empasy.io", target: "_blank", rel: "noopener" },
+      { text: "엠파시 홈", link: "https://empasy.io/", target: "_blank", rel: "noopener" }
     ],
 
     sidebar: {

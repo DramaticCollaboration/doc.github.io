@@ -1,7 +1,7 @@
 ---
 title: "SyncOps 시스템 아키텍처 및 데이터베이스 설계"
 sidebarTitle: "시스템 아키텍처"
-description: "SyncOps의 Spring Boot 3.5.16, AgentScope Java 4대 에이전트 스웜(TalentMatcher, RiskGuard, HandoverBriefing, DocInspector) 및 PostgreSQL 18.6 pgvector 도메인 스키마를 설명합니다."
+description: "SyncOps의 Spring Boot 4.0, AgentScope Java 4대 에이전트 스웜(TalentMatcher, RiskGuard, HandoverBriefing, DocInspector) 및 PostgreSQL 18.6 pgvector 도메인 스키마를 설명합니다."
 head:
   - - meta
     - name: keywords
@@ -23,7 +23,7 @@ sort: 2
 
 # SyncOps 시스템 아키텍처 및 데이터베이스 설계
 
-`SyncOps`는 **Java 25**, **Spring Boot 3.5.16**, **AgentScope Java (`io.agentscope:agentscope-harness`)**, **PostgreSQL 18.6 (`pgvector`)**, **Vue 3 + Vben Admin (`@empasy/sync-ops-admin`)** 표준 기술 스택 위에 구축된 엔터프라이즈 PMO 도메인 에이전트 플랫폼입니다.
+`SyncOps`는 **Java 25**, **Spring Boot 4.0**, **AgentScope Java (`io.agentscope:agentscope-harness`)**, **PostgreSQL 18.6 (`pgvector`)**, **Vue 3 + Vben Admin (`@empasy/sync-ops-admin`)** 표준 기술 스택 위에 구축된 엔터프라이즈 PMO 도메인 에이전트 플랫폼입니다.
 
 ---
 

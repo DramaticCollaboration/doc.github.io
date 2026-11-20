@@ -12,7 +12,7 @@ description: SyncSeries 7대 코어 에이전트, SyncSDK 및 6대 공통 모듈
 
 **SyncSeries**는 개별 소프트웨어가 사일로 형태로 분리되어 운영되던 전통적인 IT 환경을 탈피하여, 각 도메인 영역을 전담하는 전문 AI 에이전트들이 표준 프로토콜을 통해 상호 통신하며 엔터프라이즈 시스템을 자율적으로 기획, 구현, 검증, 운영하는 **A2A(Agent-to-Agent) 자율 운영 생태계**입니다.
 
-전사 핵심 에이전트 및 공통 모듈은 **Java 25**, **Spring Boot 3.5.16**, **AgentScope Java (`io.agentscope:agentscope-harness:2.0.2`)**, **PostgreSQL 18.6 (`pgvector`)** 단일 표준 기술 스택 위에서 구동되며, 세 가지 핵심 원칙을 기반으로 동작합니다:
+전사 핵심 에이전트 및 공통 모듈은 **Java 25**, **Spring Boot 4.0**, **AgentScope Java (`io.agentscope:agentscope-harness:2.0.2`)**, **PostgreSQL 18.6 (`pgvector`)** 단일 표준 기술 스택 위에서 구동되며, 세 가지 핵심 원칙을 기반으로 동작합니다:
 
 1. **지능형 자율 오케스트레이션**: 중앙 관제탑인 **SyncVerse**가 사용자의 고차원 비즈니스 의도를 분석하고, 최적의 하위 도메인 에이전트에게 작업을 분할·위임합니다.
 2. **표준 도구 상호운용성**: 모든 에이전트는 **Model Context Protocol (MCP)** 및 전사 단일 Canonical URL (`/api/v1/{product}/...`)을 통해 도구를 공개하고 호출합니다.
@@ -67,7 +67,7 @@ flowchart TB
 ### Tier 3: 전문 도메인 실행 에이전트 계층
 - **SyncBoot (`sync-boot`)**: DB 단일 원천 동적 라우팅(`sys_permission`), 무중단 환경설정 핫스왑(`sys_config`), 원격 소켓 진단기를 제공하는 전사 백오피스 표준 베이스라인입니다.
 - **SyncCMS (`sync-cms`)**: Nuxt 3 SSR, Copywriter-SEO-Publisher 3단계 내부 Swarm과 AEO/GEO 웹 품질 감사 도구를 갖춘 자율 콘텐츠 퍼블리싱 에이전트입니다.
-- **SyncShop (`sync-shop`)**: Gateway, Auth, Admin, Portal, Search, Monitor, MBG, MCP Server, Common의 9개 독립 마이크로서비스 및 플래그십 스토어프론트(`SYNC SELECT`)로 구성된 자율 이커머스 에이전트입니다.
+- **SyncShop (`sync-shop`)**: Gateway, Auth, Admin, Portal, Search, Monitor, MBG, MCP Server, Common의 8개 독립 마이크로서비스 및 플래그십 스토어프론트(`SYNC SELECT`)로 구성된 자율 이커머스 에이전트입니다.
 - **SyncOps (`sync-ops`)**: 한국형 SI 프로젝트 듀얼단가 손익, KOSA 등급 인력 매트릭스, 4대 이행보증보험, 하도급법 지급기일 감시 및 조특법 SHA-256 전자연구노트를 통합 수행합니다.
 
 ### Tier 4: 무인 자율 코딩 SDK 및 6대 공통 모듈
@@ -123,7 +123,7 @@ sequenceDiagram
 ## 5. 다음 단계
 
 - **[표준 MCP 프로토콜 명세](/ecosystem/mcp-protocol)**: 에이전트 간 도구 호출 및 메시징 규격 학습
-- **[AgentScope Java 표준 가이드](/ecosystem/agentscope-guide)**: Spring Boot 3.5.16 & Java 25 백엔드 에이전트 개발 표준
+- **[AgentScope Java 표준 가이드](/ecosystem/agentscope-guide)**: Spring Boot 4.0 & Java 25 백엔드 에이전트 개발 표준
 - **[공유 모듈 & SDK 아키텍처](/ecosystem/shared-modules-and-sdk)**: 6대 공통 모듈(`sync-core`, `sync-module-*`) 및 `SyncSDK` 구조
 - **[엔드투엔드 워크플로우 실무](/ecosystem/e2e-workflow)**: 실제 시나리오 기반 협업 과정 확인
 - **[HITL 거버넌스 & Saga](/ecosystem/hitl-governance)**: 관리자 안전 승인 및 분산 롤백 메커니즘
