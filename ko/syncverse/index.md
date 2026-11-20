@@ -31,19 +31,19 @@ SyncVerse 중앙 오케스트레이터는 하위 도메인 모듈(`SyncWatch`, `
 
 ```mermaid
 flowchart TB
-    subgraph Human ["Human Architect (시스템 아키텍트)"]
+    subgraph Human["Human Architect (시스템 아키텍트)"]
         H1["자연어 요구사항 입력"]
         H2["Multi-Party HITL 결재 승인 / 반려"]
     end
 
-    subgraph SyncVerse ["SyncVerse Control Tower (중앙 제어 엔진)"]
+    subgraph SyncVerse["SyncVerse Control Tower (중앙 제어 엔진)"]
         IR["Intent Router Agent<br/>(의도 분석 및 라우팅)"]
         SO["Swarm Orchestrator Agent<br/>(A2A 에이전트 작업 조율)"]
         SS["5-Step Spec Studio<br/>(요구사항·설계·계획·역동기화)"]
         SH["Self-Healing Supervisor<br/>(로그 분석 및 자가치유)"]
     end
 
-    subgraph Workers ["Domain Worker Agents & Coding SDK"]
+    subgraph Workers["Domain Worker Agents / Coding SDK"]
         W1["SyncBoot / SyncOps Agent<br/>(백엔드 인프라 / SI 손익 관제)"]
         W2["SyncCMS / SyncShop Agent<br/>(콘텐츠 / 커머스 Swarm)"]
         W3["SyncETA / Audit Agent<br/>(자동 QA / SEO·AEO 감사)"]
@@ -53,12 +53,14 @@ flowchart TB
     H1 --> IR
     IR --> SO
     IR --> SS
-    SO -->|"A2A MCP Protocol"| Workers
-    SS -->|"5-Step 스펙 번들 위임"| W4
-    W3 -->|"QA 실패 감지"| SH
-    SH -->|"로그 전달 & 4-Cycle 자가치유"| W4
-    W4 -->|"Diff & 산출물 제안"| H2
-    H2 -->|"승인"| SO
+    SO -->|A2A MCP 위임| W1
+    SO -->|A2A MCP 위임| W2
+    SO -->|자동 QA 지시| W3
+    SS -->|5-Step 스펙 번들 위임| W4
+    W3 -->|QA 실패 감지| SH
+    SH -->|로그 전달 및 4-Cycle 자가치유| W4
+    W4 -->|Diff 및 산출물 제안| H2
+    H2 -->|승인| SO
 ```
 
 ---
