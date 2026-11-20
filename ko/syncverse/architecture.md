@@ -32,20 +32,20 @@ flowchart TD
     end
 
     subgraph L2 ["Layer 2: Central Control Tower (중앙 제어 - SyncVerse)"]
-        Router["01 Intent Router Agent\n(자연어 의도 분석)"]
-        Orchestrator["02 Swarm Orchestrator Agent\n(A2A 태스크 분배)"]
-        Dispatcher["03 Coding Dispatcher Agent\n(SDK 코딩 제어)"]
-        SelfHeal["04 Self-Healing Supervisor\n(로그 분석 & 치유)"]
-        FinOps["05 FinOps Gateway Agent\n(비용 & 모델 최적화)"]
+        Router["01 Intent Router Agent<br/>(자연어 의도 분석)"]
+        Orchestrator["02 Swarm Orchestrator Agent<br/>(A2A 태스크 분배)"]
+        Dispatcher["03 Coding Dispatcher Agent<br/>(SDK 코딩 제어)"]
+        SelfHeal["04 Self-Healing Supervisor<br/>(로그 분석 & 치유)"]
+        FinOps["05 FinOps Gateway Agent<br/>(비용 & 모델 최적화)"]
     end
 
     subgraph L1 ["Layer 1: Domain Worker Agents (하위 도메인 워커)"]
-        SyncBoot["SyncBoot Agent\n(백엔드 인프라/API)"]
-        SyncCMS["SyncCMS Agent\n(콘텐츠/뷰 렌더링)"]
-        SyncShop["SyncShop Agent\n(이커머스/주문결제)"]
-        SyncETA["SyncETA Agent\n(무인 E2E QA 검증)"]
-        SyncCrawl["SyncCrawl Agent\n(지능형 크롤러)"]
-        SyncSDK["SyncSDK Coding Agent\n(Antigravity SWE)"]
+        SyncBoot["SyncBoot Agent<br/>(백엔드 인프라/API)"]
+        SyncCMS["SyncCMS Agent<br/>(콘텐츠/뷰 렌더링)"]
+        SyncShop["SyncShop Agent<br/>(이커머스/주문결제)"]
+        SyncETA["SyncETA Agent<br/>(무인 E2E QA 검증)"]
+        SyncCrawl["SyncCrawl Agent<br/>(지능형 크롤러)"]
+        SyncSDK["SyncSDK Coding Agent<br/>(Antigravity SWE)"]
     end
 
     SyncInsight -->|전사 KPI 및 전략적 지시| Router
@@ -173,12 +173,12 @@ graph TD
     subgraph AdminRuntime ["Admin 서버 (sync-*-admin)"]
         UI["관리자 화면 API 서빙"]
         Auth["인증/인가 및 사용자 관리"]
-        Block["self-registration.enabled: false\n(중앙 등록 시도 차단)"]
+        Block["self-registration.enabled: false<br/>(중앙 등록 시도 차단)"]
     end
 
     subgraph McpRuntime ["MCP 서버 (sync-*-mcp-server)"]
         ToolRegistry["도구 레지스트리 (JSON-RPC)"]
-        AsyncReg["비동기 자기 등록 클라이언트\n(CompletableFuture.runAsync)"]
+        AsyncReg["비동기 자기 등록 클라이언트<br/>(CompletableFuture.runAsync)"]
         Timeout["3초 Connect/Read 타임아웃"]
     end
 

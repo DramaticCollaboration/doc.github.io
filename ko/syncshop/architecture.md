@@ -20,37 +20,37 @@ SyncShop은 프론트엔드와 백엔드의 완전한 분리를 보장하는 **H
 ```mermaid
 flowchart TD
     subgraph ClientLayer ["프론트엔드 표현층 (Headless Clients)"]
-        WebAdmin["SyncShop Admin\n(Vue 3 + Vite)"]
-        MobileApp["Mobile App\n(Uni-App / Native)"]
-        ThirdParty["외부 커머스 채널\n(오픈마켓 / 소셜 커머스)"]
+        WebAdmin["SyncShop Admin<br/>(Vue 3 + Vite)"]
+        MobileApp["Mobile App<br/>(Uni-App / Native)"]
+        ThirdParty["외부 커머스 채널<br/>(오픈마켓 / 소셜 커머스)"]
     end
 
     subgraph ServiceLayer ["백엔드 비즈니스 로직 (Core Backend)"]
-        AdminServer["sync-shop-admin\n(Spring Boot 4.0 / MyBatis)"]
-        PMS["상품 관리\n(PMS Engine)"]
-        OMS["주문/배송\n(OMS Engine)"]
-        SMS["프로모션\n(SMS Engine)"]
+        AdminServer["sync-shop-admin<br/>(Spring Boot 4.0 / MyBatis)"]
+        PMS["상품 관리<br/>(PMS Engine)"]
+        OMS["주문/배송<br/>(OMS Engine)"]
+        SMS["프로모션<br/>(SMS Engine)"]
         AdminServer --- PMS
         AdminServer --- OMS
         AdminServer --- SMS
     end
 
     subgraph AgentLayer ["자율 상거래 에이전트 (Commerce Swarm)"]
-        McpServer["sync-shop-mcp-server\n(AgentScope Java)"]
-        PricingAgent["Pricing Optimizer Agent\n(가격/마진 최적화)"]
-        SafeguardAgent["Margin Safeguard Agent\n(역마진 원천 방어)"]
-        ExecAgent["Snapshot & Exec Agent\n(스냅샷 보존 및 DB 반영)"]
+        McpServer["sync-shop-mcp-server<br/>(AgentScope Java)"]
+        PricingAgent["Pricing Optimizer Agent<br/>(가격/마진 최적화)"]
+        SafeguardAgent["Margin Safeguard Agent<br/>(역마진 원천 방어)"]
+        ExecAgent["Snapshot & Exec Agent<br/>(스냅샷 보존 및 DB 반영)"]
         McpServer --- PricingAgent
         McpServer --- SafeguardAgent
         McpServer --- ExecAgent
     end
 
     subgraph ControlTower ["전사 중앙 관제 (SyncSeries Orchestrator)"]
-        SyncVerse["SyncVerse Control Tower\n(A2A 메시지 버스 & HITL 승인)"]
+        SyncVerse["SyncVerse Control Tower<br/>(A2A 메시지 버스 & HITL 승인)"]
     end
 
-    ClientLayer -->|RESTful API / JWT| AdminServer
-    SyncVerse <-->|MCP JSON-RPC / SSE| McpServer
+    ClientLayer -->|"RESTful API / JWT"| AdminServer
+    SyncVerse <-->|"MCP JSON-RPC / SSE"| McpServer
     McpServer -->|내부 서비스 바인딩| AdminServer
 ```
 

@@ -1,6 +1,6 @@
 ﻿---
 title: "[작업 일지] Windows Authenticode 서명 및 Apple Notarization 무인 배포 파이프라인 구축"
-description: "SyncEta 데스크톱 앱 다운로드 시 Windows SmartScreen 경고와 macOS Gatekeeper 차단 문제를 해결하기 위해, GitHub Actions 기반 무인 코드 사이닝 및 Apple 공증 자동화 파이프라인을 구축한 기록입니다."
+description: "SyncETA 데스크톱 앱 다운로드 시 Windows SmartScreen 경고와 macOS Gatekeeper 차단 문제를 해결하기 위해, GitHub Actions 기반 무인 코드 사이닝 및 Apple 공증 자동화 파이프라인을 구축한 기록입니다."
 head:
   - - meta
     - name: keywords
@@ -15,7 +15,7 @@ sort: 50
 
 ## 1. 추진 배경 및 과제
 
-SyncEta 데스크톱 애플리케이션의 설치 파일(`.exe`, `.dmg`)을 웹사이트(empasy.io)에서 다운로드하여 최초 실행할 때, 최신 운영체제의 엄격한 보안 메커니즘으로 인해 사용자 이탈이 발생하는 심각한 병목이 존재했습니다:
+SyncETA 데스크톱 애플리케이션의 설치 파일(`.exe`, `.dmg`)을 웹사이트(empasy.io)에서 다운로드하여 최초 실행할 때, 최신 운영체제의 엄격한 보안 메커니즘으로 인해 사용자 이탈이 발생하는 심각한 병목이 존재했습니다:
 
 1. **Windows SmartScreen 경고**: "Windows의 PC 보호 - 인식할 수 없는 앱의 시작을 차단했습니다." (게시자 알 수 없음 표기)
 2. **macOS Gatekeeper 차단**: "SyncETA를 열 수 없습니다. Apple이 악성 소프트웨어가 있는지 확인할 수 없기 때문입니다."
@@ -28,21 +28,21 @@ SyncEta 데스크톱 애플리케이션의 설치 파일(`.exe`, `.dmg`)을 웹�
 
 ```mermaid
 graph TD
-    A[Git Tag Push: v0.0.33] --> B[GitHub Actions Runner]
+    A["Git Tag Push: v0.0.33"] --> B[GitHub Actions Runner]
     B --> C{Matrix Build}
 
     subgraph "Windows Build & Sign"
-        C -->|win-x64 / arm64| D[electron-builder 패키징]
-        D --> E[Azure Trusted Signing / Cloud HSM]
-        E --> F[SignTool: SHA256 서명 + 타임스탬프]
+        C -->|"win-x64 / arm64"| D[electron-builder 패키징]
+        D --> E["Azure Trusted Signing / Cloud HSM"]
+        E --> F["SignTool: SHA256 서명 + 타임스탬프"]
         F --> G[SyncETA Setup 0.0.33.exe]
     end
 
     subgraph "macOS Build & Notarize"
-        C -->|mac-silicon / intel| H[electron-builder 패키징]
-        H --> I[codesign: Developer ID Application 서명]
-        I --> J[Apple Notary API: xcrun notarytool 제출]
-        J --> K[Ticket Stapling: xcrun stapler staple]
+        C -->|"mac-silicon / intel"| H[electron-builder 패키징]
+        H --> I["codesign: Developer ID Application 서명"]
+        I --> J["Apple Notary API: xcrun notarytool 제출"]
+        J --> K["Ticket Stapling: xcrun stapler staple"]
         K --> L[SyncETA-0.0.33.dmg]
     end
 

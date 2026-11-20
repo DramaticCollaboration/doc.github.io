@@ -24,28 +24,28 @@ SyncETA는 브라우저 이벤트 캡처부터 분산 실행, 시각적 검증, 
 
 ```mermaid
 graph TD
-    subgraph Layer1 [1. Interaction & Recording Layer]
+    subgraph Layer1 ["1. Interaction & Recording Layer"]
         A1[웹 브라우저 인스펙터]
         A2[Selenium Event Interceptor]
-        A3[DOM & XPath Normalizer]
+        A3["DOM & XPath Normalizer"]
     end
 
-    subgraph Layer2 [2. Orchestration & Protocol Layer]
+    subgraph Layer2 ["2. Orchestration & Protocol Layer"]
         B1[SyncETA Core Server - NestJS]
         B2[Scenario Repository - PostgreSQL]
         B3[Model Context Protocol Server - HTTP SSE]
     end
 
-    subgraph Layer3 [3. Execution & Validation Layer]
+    subgraph Layer3 ["3. Execution & Validation Layer"]
         C1[Playwright Multi-Browser Engine]
-        C2[Chromium / Firefox / WebKit Workers]
+        C2["Chromium / Firefox / WebKit Workers"]
         C3[Vision AI Layout Analysis Engine]
     end
 
-    subgraph Layer4 [4. Governance & Self-Healing Layer]
+    subgraph Layer4 ["4. Governance & Self-Healing Layer"]
         D1[Broken Selector Detection]
         D2[Alternative Selector Generator]
-        D3[SyncVerse / QA Approval Console]
+        D3["SyncVerse / QA Approval Console"]
     end
 
     A1 --> A2 --> A3 --> B1
@@ -53,7 +53,7 @@ graph TD
     B1 --> B3 --> C1
     C1 --> C2
     C2 --> C3
-    C3 -->|결함 / 변경 감지| D1
+    C3 -->|"결함 / 변경 감지"| D1
     D1 --> D2 --> D3
 ```
 

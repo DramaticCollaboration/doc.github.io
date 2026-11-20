@@ -20,10 +20,10 @@ SyncCrawl은 자체 개발된 URL 검증 모듈인 **`BrowserNavigateUrlValidato
 graph TD
     REQ[크롤링 URL 요청 입력] --> VAL{BrowserNavigateUrlValidator}
     
-    VAL -->|1. Loopback 차단| DROP1[127.0.0.1 / localhost 차단]
-    VAL -->|2. 사설망 IP 차단| DROP2[10.0.0.0/8, 172.16.0.0/12, 192.168.0.0/16 차단]
-    VAL -->|3. 클라우드 메타 차단| DROP3[169.254.169.254 AWS/Azure 메타 차단]
-    VAL -->|4. 비표준 프로토콜 차단| DROP4[file://, gopher://, ftp:// 차단]
+    VAL -->|1. Loopback 차단| DROP1["127.0.0.1 / localhost 차단"]
+    VAL -->|2. 사설망 IP 차단| DROP2["10.0.0.0/8, 172.16.0.0/12, 192.168.0.0/16 차단"]
+    VAL -->|3. 클라우드 메타 차단| DROP3["169.254.169.254 AWS/Azure 메타 차단"]
+    VAL -->|4. 비표준 프로토콜 차단| DROP4["file://, gopher://, ftp:// 차단"]
     VAL -->|5. DNS Rebinding 검증| DROP5[해석된 실제 IP 대역 2차 검증]
     
     VAL -->|모든 보안 검증 통과| PERMIT[안전한 외부 웹사이트 브라우징 허용]
@@ -49,9 +49,9 @@ graph TD
         AGENT[smart-crawling-agent]
         
         subgraph "사내 AI 인프라"
-            VLLM[사내 Private LLM - vLLM / Ollama]
+            VLLM["사내 Private LLM - vLLM / Ollama"]
             EMB[사내 임베딩 모델 - BGE-M3]
-            VDB[(사내 PGVector / Milvus)]
+            VDB[("사내 PGVector / Milvus")]
         end
         
         CONSOLE --> SERVER
@@ -59,7 +59,7 @@ graph TD
         SERVER --> VLLM & EMB & VDB
     end
     
-    OUTSIDE((외부 인터넷 / DMZ 프록시))
+    OUTSIDE(("외부 인터넷 / DMZ 프록시"))
     AGENT -.->|보안 포워드 프록시 경유 수집| OUTSIDE
 ```
 

@@ -15,8 +15,8 @@ SyncCrawl은 수집한 웹 데이터를 정제하여 생성형 AI 애플리케�
 ```mermaid
 graph LR
     subgraph "1. 수집 & 정제"
-        RAW[원본 HTML / 텍스트] --> CLEAN[보일러플레이트 / 광고 제거]
-        CLEAN --> META[출처 / 시간 메타데이터 부착]
+        RAW["원본 HTML / 텍스트"] --> CLEAN["보일러플레이트 / 광고 제거"]
+        CLEAN --> META["출처 / 시간 메타데이터 부착"]
     end
 
     subgraph "2. 지능형 청킹"
@@ -25,12 +25,12 @@ graph LR
     end
 
     subgraph "3. 임베딩 & 벡터 저장"
-        OVERLAP --> EMB[한국어/다국어 임베딩 모델]
-        EMB --> VDB[(Vector DB - PGVector/Milvus/Qdrant)]
+        OVERLAP --> EMB["한국어/다국어 임베딩 모델"]
+        EMB --> VDB[("Vector DB - PGVector/Milvus/Qdrant")]
     end
 
     subgraph "4. RAG 검색 & 생성"
-        USER[엔터프라이즈 QA 질의] --> RET[하이브리드 리트리버<br/>Dense + BM25]
+        USER[엔터프라이즈 QA 질의] --> RET["하이브리드 리트리버<br/>Dense + BM25"]
         VDB --> RET
         RET --> LLM[AgentScope Java RAG 엔진]
         LLM --> ANS[근거 기반 응답 생성]

@@ -100,15 +100,33 @@ img {
     --vp-home-hero-name-color: #38bdf8;
 }
 
-@media (min-width: 640px) {
-    :root {
-        --vp-home-hero-image-filter: blur(56px);
-    }
+/* Home Hero Architectural Diagram Sizing */
+.VPHero .image-container {
+    width: 100% !important;
+    max-width: 540px !important;
+    height: auto !important;
+    transform: none !important;
 }
 
-@media (min-width: 960px) {
-    :root {
-        --vp-home-hero-image-filter: blur(68px);
+.VPHero .image-src {
+    position: static !important;
+    transform: none !important;
+    width: 100% !important;
+    max-width: 540px !important;
+    max-height: none !important;
+    height: auto !important;
+    border-radius: 14px !important;
+}
+
+@media (max-width: 959px) {
+    .VPHero .image {
+        order: 2;
+        margin: 28px 0 0 !important;
+    }
+
+    .VPHero .image-container {
+        margin: 0 auto !important;
+        max-width: 100% !important;
     }
 }
 
@@ -327,22 +345,69 @@ img {
     line-height: 1.75 !important;
     font-size: 15.5px !important;
     letter-spacing: -0.01em !important;
+    overflow-wrap: break-word;
+}
+
+.vp-doc :not(pre) > code {
+    overflow-wrap: anywhere;
+}
+
+.vp-doc img {
+    max-width: 100%;
+    height: auto;
 }
 
 /**
  * ==========================================================================
- * Modern Tables
+ * Mermaid Diagrams (Responsive & Overflow-Safe)
+ * ========================================================================== */
+.vp-doc .mermaid,
+.mermaid {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    margin: 22px 0;
+}
+
+.vp-doc .mermaid svg,
+.mermaid svg {
+    max-width: 100% !important;
+    height: auto !important;
+    display: block;
+    margin: 0 auto;
+}
+
+/**
+ * ==========================================================================
+ * Modern Tables (Mobile 390px Overflow-Safe)
  * ========================================================================== */
 .vp-doc table {
-    display: table !important;
-    width: 100% !important;
+    display: block !important;
+    width: max-content;
+    max-width: 100% !important;
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch !important;
     border-collapse: separate !important;
     border-spacing: 0 !important;
     margin: 22px 0 !important;
     border-radius: 10px !important;
-    overflow: hidden !important;
     border: 1px solid var(--vp-c-divider) !important;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02) !important;
+}
+
+@media (max-width: 768px) {
+    .vp-doc table {
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+
+    .vp-doc th,
+    .vp-doc td {
+        padding: 9px 12px !important;
+        font-size: 13px !important;
+    }
 }
 
 .vp-doc th {
@@ -430,6 +495,9 @@ img {
     border-radius: 10px !important;
     border: 1px solid var(--vp-c-divider) !important;
     margin: 18px 0 !important;
+    max-width: 100% !important;
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch !important;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03) !important;
 }
 

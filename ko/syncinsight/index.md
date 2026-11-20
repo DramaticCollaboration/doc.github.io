@@ -24,7 +24,7 @@ dir:
 
 # SyncInsight: 데이터 분석 및 의사결정 지원 플랫폼
 
-> **제품 소개서 및 라이브 데모**: [SyncInsight_Proposal.pdf (12p)](/downloads/proposals/SyncInsight_Proposal.pdf){target="_blank" download="SyncInsight_Proposal.pdf"} · [SyncInsight 라이브 데모 체험](https://sync.empasy.io/products/sync-insight#demo){target="_blank" rel="noopener"} · [제품 공식 페이지](https://empasy.io/ko/solutions/sync-insight.html){target="_blank" rel="noopener"} · [전체 제안서 모음](/proposals/)
+> **비개발자 · 도입 검토 안내**: 쉬운 제품 소개는 [SyncInsight 제품 홈페이지(insight.empasy.io)](https://insight.empasy.io/){target="_blank" rel="noopener"}에서, 설치 없는 화면 체험은 [통합 데모 포털](https://sync.empasy.io/products/sync-insight#demo){target="_blank" rel="noopener"}에서 이용하실 수 있으며, 소개서·제안서 PDF는 [제안서 자료실](/proposals/)에서 내려받으실 수 있습니다.
 
 **SyncInsight**는 SyncVerse 에이전트 생태계의 데이터 분석 및 의사결정 지원(Decision Intelligence) 플랫폼입니다.
 
@@ -39,12 +39,12 @@ graph LR
     A[SyncInsight 핵심 기능] --> B[1. 멀티소스 심층 분석 및 토론]
     A --> C[2. HITL 액션 승인 센터]
     A --> D[3. 자연어 데이터 탐색 NL2SQL]
-    A --> E[4. AI FinOps & 관제 모니터링]
+    A --> E["4. AI FinOps & 관제 모니터링"]
 
-    B -.-> B1[DeepResearch 캔버스 & 다중 에이전트 라운드테이블]
-    C -.-> C1[What-If 시뮬레이터 & Before vs After 검증]
-    D -.-> D1[자연어 질의 & 스마트 시트 Cell Copilot]
-    E -.-> E1[LLM 토큰 비용 관리 & 이상 감지 자가 치유]
+    B -.-> B1["DeepResearch 캔버스 & 다중 에이전트 라운드테이블"]
+    C -.-> C1["What-If 시뮬레이터 & Before vs After 검증"]
+    D -.-> D1["자연어 질의 & 스마트 시트 Cell Copilot"]
+    E -.-> E1["LLM 토큰 비용 관리 & 이상 감지 자가 치유"]
 ```
 
 ### 1. 멀티소스 심층 분석 및 에이전트 토론 (Deep Research & Debate)
@@ -95,12 +95,12 @@ flowchart TB
     end
 
     subgraph DB_Layer ["4. 데이터 저장소"]
-        DB1[("PostgreSQL 18.6\n(메타데이터/이력)")]
-        DB2[("PgVector\n(벡터 임베딩/지식)")]
-        DB3[("오브젝트 스토리지\n(보고서/파일)")]
+        DB1[("PostgreSQL 18.6<br/>(메타데이터/이력)")]
+        DB2[("PgVector<br/>(벡터 임베딩/지식)")]
+        DB3[("오브젝트 스토리지<br/>(보고서/파일)")]
     end
 
-    UI_Layer <-->|REST API / SSE| Gateway_Layer
+    UI_Layer <-->|"REST API / SSE"| Gateway_Layer
     Gateway_Layer <-->|이벤트 및 도구 호출| Core_Layer
     Core_Layer <--> DB_Layer
 ```

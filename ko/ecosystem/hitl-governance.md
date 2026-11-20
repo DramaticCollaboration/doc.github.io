@@ -22,13 +22,13 @@ SyncSeries는 자율성을 극대화하되 위험성을 체계적으로 통제�
 ```mermaid
 flowchart TD
     Req[에이전트 액션 요청] --> Eval{위험도 평가}
-    Eval -->|Tier 1: Read-Only| Auto[Tier 1: 완전 자율 실행<br/>조회, 통계 수집, 가상 시뮬레이션]
-    Eval -->|Tier 2: Soft Mutation| Notify[Tier 2: 사후 통보형 실행<br/>임시 저장, 캐시 갱신, 스테이징 배포]
-    Eval -->|Tier 3: Hard Mutation| Gate[Tier 3: 사전 승인 게이트<br/>DB DDL/DML, 결제 정책 변경, 프로덕션 배포]
+    Eval -->|"Tier 1: Read-Only"| Auto["Tier 1: 완전 자율 실행<br/>조회, 통계 수집, 가상 시뮬레이션"]
+    Eval -->|"Tier 2: Soft Mutation"| Notify["Tier 2: 사후 통보형 실행<br/>임시 저장, 캐시 갱신, 스테이징 배포"]
+    Eval -->|"Tier 3: Hard Mutation"| Gate["Tier 3: 사전 승인 게이트<br/>DB DDL/DML, 결제 정책 변경, 프로덕션 배포"]
 
     Gate --> AdminDecision{관리자 승인?}
-    AdminDecision -->|승인 (Approve)| Exec[프로덕션 실행 & WORM 감사 원장 기록]
-    AdminDecision -->|반려 (Reject)| Rollback[액션 폐기 및 원상태 유지]
+    AdminDecision -->|"승인 (Approve)"| Exec["프로덕션 실행 & WORM 감사 원장 기록"]
+    AdminDecision -->|"반려 (Reject)"| Rollback[액션 폐기 및 원상태 유지]
 ```
 
 | 등급 | 위험 수준 | 대상 작업 예시 | 승인 정책 |

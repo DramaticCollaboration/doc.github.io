@@ -18,8 +18,8 @@ graph LR
     B -->|Redis 분산 락 확인| C{실행 가능 여부}
     C -->|성공| D[Spring Batch Chunk 처리]
     C -->|잠금 상태| E[중복 실행 방지 건너뜀]
-    D -->|Reader: 10,000건| F[Processor: 데이터 변환]
-    F -->|Writer: 일괄 저장| G[(RDBMS)]
+    D -->|"Reader: 10,000건"| F["Processor: 데이터 변환"]
+    F -->|"Writer: 일괄 저장"| G[(RDBMS)]
     D -.->|실패 발생| H[지수 백오프 재시도 및 알림 발송]
 ```
 

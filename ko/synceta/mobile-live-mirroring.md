@@ -27,7 +27,7 @@ flowchart TD
     end
 
     subgraph FrontendUI ["프론트엔드 미러링 뷰어 (Vue 3 Client)"]
-        ImgView["HTML5 <img> 태그 (Direct HTTP 소비)"]
+        ImgView["HTML5 &lt;img&gt; 태그 (Direct HTTP 소비)"]
         MouseCapture["마우스 클릭/드래그 리스너"]
     end
 
@@ -37,7 +37,7 @@ flowchart TD
         Merge["레코드 합성기 및 300ms 디바운스 필터"]
     end
 
-    StreamPort --> |Direct MJPEG 무복사 스트림 (15ms 미만)| ImgView
+    StreamPort --> |"Direct MJPEG 무복사 스트림 (15ms 미만)"| ImgView
     MouseCapture --> FastTrack --> TouchPort
     MouseCapture --> SlowTrack --> Merge
     Merge --> StoredRecord["정규화된 시나리오 레코드"]

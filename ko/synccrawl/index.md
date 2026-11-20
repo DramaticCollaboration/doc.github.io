@@ -22,7 +22,7 @@ sort: 1
 
 # SyncCrawl™: 웹 크롤링 및 RAG 지식 구축 플랫폼
 
-> **제품 소개서 및 라이브 데모**: [SyncCrawl_Proposal.pdf (12p)](/downloads/proposals/SyncCrawl_Proposal.pdf){target="_blank" download="SyncCrawl_Proposal.pdf"} · [SyncCrawl 라이브 데모 체험](https://sync.empasy.io/products/sync-crawl#demo){target="_blank" rel="noopener"} · [제품 공식 페이지](https://empasy.io/ko/solutions/sync-crawl.html){target="_blank" rel="noopener"} · [전체 제안서 모음](/proposals/)
+> **비개발자 · 도입 검토 안내**: 쉬운 제품 소개는 [SyncCrawl 제품 홈페이지(crawl.empasy.io)](https://crawl.empasy.io/){target="_blank" rel="noopener"}에서, 설치 없는 화면 체험은 [통합 데모 포털](https://sync.empasy.io/products/sync-crawl#demo){target="_blank" rel="noopener"}에서 이용하실 수 있으며, 소개서·제안서 PDF는 [제안서 자료실](/proposals/)에서 내려받으실 수 있습니다.
 
 SyncCrawl™은 데이터 수집과 자연어 처리(NLP), **Playwright MCP 기반 브라우저 자동화**, 그리고 **RAG(검색 증강 생성) 지식 파이프라인**을 연계한 기업용 웹 수집 플랫폼입니다.
 
@@ -36,10 +36,10 @@ SyncCrawl™은 데이터 수집과 자연어 처리(NLP), **Playwright MCP 기�
 
 ```mermaid
 graph LR
-    A[자연어 수집 지시<br/>Natural Language] --> B[에이전트 오케스트레이션<br/>AgentScope Java + MCP]
-    B --> C[웹 브라우징<br/>Playwright Self-Healing]
-    C --> D[정제 및 분할<br/>Document Pipeline]
-    D --> E[지식베이스 연동<br/>Vector DB / RAG QA]
+    A["자연어 수집 지시<br/>Natural Language"] --> B["에이전트 오케스트레이션<br/>AgentScope Java + MCP"]
+    B --> C["웹 브라우징<br/>Playwright Self-Healing"]
+    C --> D["정제 및 분할<br/>Document Pipeline"]
+    D --> E["지식베이스 연동<br/>Vector DB / RAG QA"]
 ```
 
 ### 1. 적응형 크롤링 (Self-Healing Crawling)

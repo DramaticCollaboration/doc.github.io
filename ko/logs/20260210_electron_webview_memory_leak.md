@@ -1,6 +1,6 @@
 ﻿---
 title: "[포스트모텀] Electron 멀티 웹뷰 DOM 스냅샷 메모리 누수 분석 및 해결"
-description: "SyncEta 데스크톱 애플리케이션에서 대량의 시나리오를 연속 녹화/실행할 때 발생한 렌더러 프로세스 V8 힙 고갈 현상의 원인을 규명하고 메모리 해제 로직을 최적화한 실무 일지입니다."
+description: "SyncETA 데스크톱 애플리케이션에서 대량의 시나리오를 연속 녹화/실행할 때 발생한 렌더러 프로세스 V8 힙 고갈 현상의 원인을 규명하고 메모리 해제 로직을 최적화한 실무 일지입니다."
 head:
   - - meta
     - name: keywords
@@ -16,7 +16,7 @@ sort: 10
 ## 1. 개요 및 장애 현상
 
 - **발생 일시**: 2026-02-10 14:20 KST
-- **영향 범위**: SyncEta 데스크톱 애플리케이션 (v0.0.31 빌드)
+- **영향 범위**: SyncETA 데스크톱 애플리케이션 (v0.0.31 빌드)
 - **증상**: 사용자가 30개 이상의 E2E 시나리오를 연속으로 실행하거나 장시간 녹화 세션을 유지할 때, Electron 렌더러 프로세스의 메모리 점유율이 800MB에서 **3.8GB까지 지속 상승**한 뒤 `STATUS_BREAKPOINT (0x80000003)` 에러와 함께 화면이 백화(White-out)되는 크래시 발생.
 
 ---
@@ -29,8 +29,8 @@ Chrome DevTools Memory 탭의 **Heap Snapshot** 및 **Allocation Instrumentation
 graph TD
     A[Electron Main Process] -->|IPC create-session| B[Webview Tag Element]
     B -->|DOM Snapshot Base64 Event| C[Scenario Editor Store Pinia]
-    C -->|Closure Reference| D[Global Undo/Redo Stack]
-    D -.->|메모리 해제 불가| E[Retained Size: 2.9GB V8 Heap]
+    C -->|Closure Reference| D["Global Undo/Redo Stack"]
+    D -.->|메모리 해제 불가| E["Retained Size: 2.9GB V8 Heap"]
 ```
 
 ### 핵심 누수 원인 3가지

@@ -6,10 +6,16 @@ hero:
     name: "엠파시 기술 문서"
     text: "SyncSeries 설치 · 구조 · 연동 가이드"
     tagline: "하나의 공통 기반(SyncBoot) 위에 구성된 주력 솔루션 4종과 목적별 확장 모듈의 아키텍처, API 규격, 운영 매뉴얼을 사실 그대로 정리한 공식 문서입니다."
+    image:
+      src: /images/syncseries-arch-hero.svg
+      alt: "SyncSeries 공통 기반(SyncBoot) 및 주력 솔루션 4종·확장 모듈 7종 REST/MCP 연동 아키텍처"
     actions:
       - text: 연동 구조부터 보기
         link: /ecosystem/
         theme: brand
+      - text: 전사 기술 용어집
+        link: /glossary/
+        theme: alt
       - text: 소개서 · 제안서 PDF
         link: /proposals/
         theme: alt
@@ -38,27 +44,27 @@ features:
   - title: SyncVerse (주력 · 협업·승인 관리)
     details: 요구사항 정리, 작업 추적, 품질 점검 결과 조회 및 담당자 단계별 승인 흐름을 통합 관리합니다.
     link: /syncverse/
-    linkText: 가이드 보기 →
+    linkText: 가이드 보기
   - title: SyncETA (주력 · 자동 테스트)
     details: 코딩 없는 데스크톱 시나리오 기록과 UI 변경 대응 보정, 배포 전후 화면 비교 점검을 제공합니다.
     link: /synceta/
-    linkText: 가이드 보기 →
+    linkText: 가이드 보기
   - title: SyncBoot (주력 · 업무 시스템 기반)
     details: Spring Boot 4.0과 Java 25 기반의 표준 백오피스 구조, 조직·권한 관리, 전자결재 및 감사 로그를 제공합니다.
     link: /syncboot/
-    linkText: 가이드 보기 →
+    linkText: 가이드 보기
   - title: SyncCMS (주력 · 웹사이트 관리)
     details: 멀티사이트 페이지 작성, 검수·승인 흐름, 검색·접근성 사전 점검 및 다국어 현지화를 지원합니다.
     link: /synccms/
-    linkText: 가이드 보기 →
+    linkText: 가이드 보기
   - title: 공통 기반 및 연동 규격 (Ecosystem)
     details: 개별 모듈이 하나의 공통 기반 위에서 표준 MCP·REST 인터페이스로 연결되는 구조를 안내합니다.
     link: /ecosystem/
-    linkText: 구조 보기 →
+    linkText: 구조 보기
   - title: 데이터 · 보안 · 업무 확장 모듈
     details: SyncInsight, SyncLLM, SyncCrawl, SyncAPIM, SyncWatch, SyncShop, SyncOps 개별 가이드를 아래 표에서 확인하세요.
     link: "#module-map"
-    linkText: 전체 목록 보기 →
+    linkText: 전체 목록 보기
 
 footer: Copyright © 2026 Empasy Inc. All rights reserved.
 ---
@@ -67,8 +73,8 @@ footer: Copyright © 2026 Empasy Inc. All rights reserved.
 
 ## 본 문서 포털의 역할
 
-> 본 사이트(`doc.empasy.com`)는 **개발자와 시스템 운영자를 위한 공식 기술 매뉴얼**입니다.
-> 비개발자를 위한 쉬운 제품 소개는 각 제품 홈페이지(`*.empasy.io`)와 [엠파시 공식 홈페이지(empasy.io)](https://empasy.io/)에서, 설치 없는 화면 체험은 [통합 데모 포털(sync.empasy.io)](https://sync.empasy.io/)에서 이용하실 수 있습니다.
+> 본 사이트(`doc.empasy.com`)는 **개발자와 시스템 운영자를 위한 공식 기술 매뉴얼 및 기술 용어 원천(SSOT)**입니다.
+> 비개발자를 위한 쉬운 제품 소개는 각 제품 홈페이지(`*.empasy.io`)와 [엠파시 공식 홈페이지(empasy.io)](https://empasy.io/)에서, 설치 없는 화면 체험은 [통합 데모 포털(sync.empasy.io)](https://sync.empasy.io/)에서 이용하실 수 있으며, 생태계 전반의 표준 기술 용어는 [전사 기술 용어집(/glossary/)](/glossary/)에서 확인하실 수 있습니다.
 
 ---
 
@@ -105,9 +111,10 @@ SyncSeries는 서로 무관한 11개의 개별 시스템을 별도로 만든 것
 
 | 구분 | 내용 요약 | 링크 |
 | :--- | :--- | :--- |
+| **전사 기술 용어집** | MCP, A2A, AgentScope Java, NL2SQL, GraphRAG, HITL, eBPF, FinOps 등 표준 기술 용어 정의 | [전사 기술 용어집 →](/glossary/) |
 | **공통 모듈 및 SDK** | 공통 코어(`sync-core`), 도메인 공통 모듈(`sync-module-*`), 연동 SDK 가이드 | [개발자 센터 →](/sdk/) · [공통 모듈 →](/ecosystem/shared-modules-and-sdk) |
 | **사업 전 주기 방법론** | 제안·분석·설계·구현·테스트·이관 6단계 수행 절차 및 점검 기준 | [방법론 개요 →](/methodology/) |
-| **표준 산출물 양식** | 요구사항정의서, WBS, 화면설계서, 테스트 시나리오 등 실무 양식 | [표준 산출물 양식 →](/methodology/enterprise-document-templates) |
+| **표준 산출물 양식 (191종)** | 요구사항정의서, WBS, 화면설계서, 테스트 시나리오 등 오피스·마크다운·PM 스위트 191종 | [표준 산출물 양식 →](/methodology/enterprise-document-templates) |
 | **애자일 및 Git 협업** | 스크럼반(Scrumban) 운영 절차, Git 브랜치 전략, 스프린트 점검표 | [애자일 가이드 →](/agile/) |
 | **소개서 · 제안서 (PDF)** | 요약 브로셔, 통합 제안서 및 제품별 개별 제안서 PDF 모음 | [제안서 자료실 →](/proposals/) |
 | **SyncETA 설치 파일** | Windows · macOS 데스크톱 앱 공식 다운로드 페이지 | [SyncETA 다운로드 ↗](https://empasy.io/ko/download_eta.html) |

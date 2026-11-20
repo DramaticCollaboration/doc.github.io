@@ -18,7 +18,7 @@ SyncSeries의 전사 프로덕션 환경은 인프라 구성의 일관성과 추
 flowchart LR
     Dev["개발자 커밋 & PR"] --> GitRepo["Git 형상 저장소 (Config Repo)"]
     GitRepo --> ArgoCD["ArgoCD GitOps 컨트롤러"]
-    ArgoCD --> |선언적 동기화 (Sync)| K8sCluster["프로덕션 쿠버네티스 클러스터"]
+    ArgoCD --> |"선언적 동기화 (Sync)"| K8sCluster["프로덕션 쿠버네티스 클러스터"]
     
     subgraph K8sCluster
         Deployments["서비스 Deployments (SyncVerse, Boot 등)"]

@@ -31,11 +31,11 @@ sort: 5
 
 ```mermaid
 flowchart LR
-    Traffic["실시간 API 트래픽\n(Mirroring / In-Line)"] --> GW["JVM 1: sync-apim-gateway\n(:18091 실시간 차단 & PII 마스킹)"]
-    Traffic --> RCV["JVM 2: sync-apim-receiver\n(:18090 / TCP 5044 패킷 수집)"]
-    RCV -->|"Redis Stream (job_queue)"| DET["JVM 3: sync-apim-detector\n(:18092 스펙 추론 & 구문 지문 탐지)"]
-    DET --> PG[("PostgreSQL 18.6\n(JSONB + pg_trgm GIN)")]
-    ADM["JVM 4: sync-apim-admin\n(:18089 관제 UI & MCP 서버)"] <--> PG
+    Traffic["실시간 API 트래픽<br/>(Mirroring / In-Line)"] --> GW["JVM 1: sync-apim-gateway<br/>(:18091 실시간 차단 & PII 마스킹)"]
+    Traffic --> RCV["JVM 2: sync-apim-receiver<br/>(:18090 / TCP 5044 패킷 수집)"]
+    RCV -->|"Redis Stream (job_queue)"| DET["JVM 3: sync-apim-detector<br/>(:18092 스펙 추론 & 구문 지문 탐지)"]
+    DET --> PG[("PostgreSQL 18.6<br/>(JSONB + pg_trgm GIN)")]
+    ADM["JVM 4: sync-apim-admin<br/>(:18089 관제 UI & MCP 서버)"] <--> PG
     ADM -->|"Redis Pub/Sub 정책 핫스왑"| GW
 ```
 

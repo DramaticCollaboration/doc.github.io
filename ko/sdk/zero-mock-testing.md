@@ -34,7 +34,7 @@ flowchart LR
     end
     
     Testcontainers --> PG & Redis
-    JUnit --> |실제 JDBC / Redis 통신| IsolatedEnv
+    JUnit --> |"실제 JDBC / Redis 통신"| IsolatedEnv
 ```
 
 ---

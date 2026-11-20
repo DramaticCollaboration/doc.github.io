@@ -18,7 +18,7 @@ flowchart LR
     SB --> Tool1[DDL Generation Tool]
     SB --> Tool2[Lombok Entity Builder]
     SB --> Tool3[Spring Data JPA Repo Tool]
-    SB --> Test[mvn test-compile & verify-zero-mock]
+    SB --> Test["mvn test-compile & verify-zero-mock"]
     Test --> Result[검증 완료된 Spring Boot 모듈]
 ```
 

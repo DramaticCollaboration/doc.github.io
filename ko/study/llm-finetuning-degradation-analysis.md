@@ -21,10 +21,10 @@ sort: 500
 ```mermaid
 flowchart TD
     Degradation[파인튜닝 후 성능 저하]
-    Degradation --> Cause1[1. 파국적 망각<br/>(가중치 공간의 급격한 이동)]
-    Degradation --> Cause2[2. 과적합 및 다양성 상실<br/>(Overfitting to Narrow Format)]
-    Degradation --> Cause3[3. LoRA 랭크 및 알파 불균형<br/>(Rank Saturation & Scaling)]
-    Degradation --> Cause4[4. 레이블 노이즈 & 데이터 오염<br/>(Format Inconsistency)]
+    Degradation --> Cause1["1. 파국적 망각<br/>(가중치 공간의 급격한 이동)"]
+    Degradation --> Cause2["2. 과적합 및 다양성 상실<br/>(Overfitting to Narrow Format)"]
+    Degradation --> Cause3["3. LoRA 랭크 및 알파 불균형<br/>(Rank Saturation & Scaling)"]
+    Degradation --> Cause4["4. 레이블 노이즈 & 데이터 오염<br/>(Format Inconsistency)"]
 ```
 
 ### 2.1 가중치 공간의 급격한 변위 (Catastrophic Forgetting)

@@ -19,12 +19,12 @@ SyncShop의 상품 관리(PMS)와 주문 관리(OMS)는 대규모 이커머스 �
 
 ```mermaid
 graph TD
-    Category["계층형 카테고리\n(무제한 뎁스)"] --> Product["기본 상품 (Spu)"]
+    Category["계층형 카테고리<br/>(무제한 뎁스)"] --> Product["기본 상품 (Spu)"]
     Brand["브랜드 자산 관리"] --> Product
-    Template["속성 템플릿\n(소재, 원산지 등)"] --> Product
-    Product --> Sku1["SKU #1\n(Black / S / 재고 50)"]
-    Product --> Sku2["SKU #2\n(Black / M / 재고 80)"]
-    Product --> Sku3["SKU #3\n(White / L / 재고 30)"]
+    Template["속성 템플릿<br/>(소재, 원산지 등)"] --> Product
+    Product --> Sku1["SKU #1<br/>(Black / S / 재고 50)"]
+    Product --> Sku2["SKU #2<br/>(Black / M / 재고 80)"]
+    Product --> Sku3["SKU #3<br/>(White / L / 재고 30)"]
 ```
 
 ### 1.1 계층형 카테고리 및 브랜드

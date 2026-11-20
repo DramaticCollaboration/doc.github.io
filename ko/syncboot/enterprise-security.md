@@ -18,15 +18,15 @@ SyncBoot의 보안 및 권한 모듈은 엔터프라이즈 환경에 맞춘 다�
 graph TD
     subgraph "방식 A: 공유 DB - 테넌트 ID 컬럼 격리"
         DB1[(공유 Database)]
-        DB1 --- T1[Tenant: A]
-        DB1 --- T2[Tenant: B]
-        DB1 --- T3[Tenant: C]
+        DB1 --- T1["Tenant: A"]
+        DB1 --- T2["Tenant: B"]
+        DB1 --- T3["Tenant: C"]
     end
 
     subgraph "방식 B: 독립 DB - 데이터베이스 분리 격리"
-        DB_A[(DB: Tenant_A)]
-        DB_B[(DB: Tenant_B)]
-        DB_C[(DB: Tenant_C)]
+        DB_A[("DB: Tenant_A")]
+        DB_B[("DB: Tenant_B")]
+        DB_C[("DB: Tenant_C")]
     end
 ```
 

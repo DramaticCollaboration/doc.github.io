@@ -16,14 +16,14 @@ SyncBoot는 안정적인 서비스 운영과 확장성을 위해 4계층 아키�
 graph TD
     subgraph "1. 인터페이스 계층 (Presentation Layer)"
         UI1[SyncBoot Admin Console - Vue 3 + Ant Design]
-        UI2[Swagger / OpenAPI 3.0 UI]
-        UI3[외부 클라이언트 - REST API & WebHook]
+        UI2["Swagger / OpenAPI 3.0 UI"]
+        UI3["외부 클라이언트 - REST API & WebHook"]
     end
 
     subgraph "2. 보안 및 게이트웨이 계층 (Security & Gateway Layer)"
-        GW[API Gateway & Rate Limiter]
-        JWT[JWT / OAuth2 / SSO 인증 모듈]
-        RBAC[다계층 RBAC 권한 필터 & 테넌트 격리]
+        GW["API Gateway & Rate Limiter"]
+        JWT["JWT / OAuth2 / SSO 인증 모듈"]
+        RBAC["다계층 RBAC 권한 필터 & 테넌트 격리"]
         MASK[동적 데이터 마스킹 모듈]
     end
 
@@ -39,7 +39,7 @@ graph TD
     subgraph "4. 영속성 및 인프라 계층 (Persistence & Infra Layer)"
         RDB[(PostgreSQL 18.6 + pgvector)]
         REDIS[(Redis 7 - 세션 캐시, 분산 락, Saga 상태)]
-        BATCH[(Quartz & Spring Batch 대용량 처리)]
+        BATCH[("Quartz & Spring Batch 대용량 처리")]
         LOGS[(분산 인스턴스 서버 로그)]
     end
 

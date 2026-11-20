@@ -18,10 +18,10 @@ description: Copywriter-SEO-Publisher 3단계 에이전트 스웜 초안 생성�
 
 ```mermaid
 flowchart LR
-    Ideation["1. 콘텐츠 기획 & RAG 지식 조회\n(주제·타깃 키워드·근거 문서)"] --> Copywriter["2. Copywriter Agent\n(구조화 마크다운 초안 작성)"]
-    Copywriter --> Reviewer["3. SEO / AEO Reviewer Agent\n(JSON-LD 생성·키워드·PII 감사)"]
-    Reviewer --> Editor["4. Tiptap 섀도우 에디터 & HITL 결재\n(실시간 SEO 패널 & 다중 디바이스 프리뷰)"]
-    Editor --> Publisher["5. Publisher Agent\n(Nuxt 3 SSR 배포 & 스냅샷 보관)"]
+    Ideation["1. 콘텐츠 기획 & RAG 지식 조회<br/>(주제·타깃 키워드·근거 문서)"] --> Copywriter["2. Copywriter Agent<br/>(구조화 마크다운 초안 작성)"]
+    Copywriter --> Reviewer["3. SEO / AEO Reviewer Agent<br/>(JSON-LD 생성·키워드·PII 감사)"]
+    Reviewer --> Editor["4. Tiptap 섀도우 에디터 & HITL 결재<br/>(실시간 SEO 패널 & 다중 디바이스 프리뷰)"]
+    Editor --> Publisher["5. Publisher Agent<br/>(Nuxt 3 SSR 배포 & 스냅샷 보관)"]
 ```
 
 ### 1.1 에이전트별 역할 및 산출물 명세

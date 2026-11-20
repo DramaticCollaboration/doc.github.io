@@ -23,7 +23,7 @@ sort: 1
 
 # SyncOps: 한국형 SI/솔루션 사업운영 & 손익·컴플라이언스 관제 플랫폼
 
-> **제품 소개서 및 라이브 데모**: [SyncOps_Proposal.pdf (12p)](/downloads/proposals/SyncOps_Proposal.pdf){target="_blank" download="SyncOps_Proposal.pdf"} · [SyncOps 라이브 데모 체험](https://sync.empasy.io/products/sync-ops#demo){target="_blank" rel="noopener"} · [제품 공식 페이지](https://empasy.io/ko/solutions/sync-ops.html){target="_blank" rel="noopener"} · [전체 제안서 모음](/proposals/)
+> **비개발자 · 도입 검토 안내**: 쉬운 제품 소개는 [SyncOps 제품 홈페이지(ops.empasy.io)](https://ops.empasy.io/){target="_blank" rel="noopener"}에서, 설치 없는 화면 체험은 [통합 데모 포털](https://sync.empasy.io/products/sync-ops#demo){target="_blank" rel="noopener"}에서 이용하실 수 있으며, 소개서·제안서 PDF는 [제안서 자료실](/proposals/)에서 내려받으실 수 있습니다.
 
 > **Tier 3 Enterprise SI PMO & Profit/Compliance Agent Platform**  
 > 서비스 도메인: `https://ops.empasy.io` · 표준 API Prefix: `/api/v1/ops`
@@ -51,12 +51,12 @@ sort: 1
 ```mermaid
 flowchart TB
     subgraph SyncOps ["SyncOps 엔터프라이즈 PMO 6대 핵심 밸류체인"]
-        D1["1. 경영·손익 관제\n(/executive/*)"]
-        D2["2. 사업·계약 관리\n(/contract/*)"]
-        D3["3. 프로젝트 수행\n(/project/*)"]
-        D4["4. 인재·리소스 관리\n(/talent/*)"]
-        D5["5. 기성·재무 정산\n(/settlement/*)"]
-        D6["6. 솔루션 & R&D 자산화\n(/product/*)"]
+        D1["1. 경영·손익 관제<br/>(/executive/*)"]
+        D2["2. 사업·계약 관리<br/>(/contract/*)"]
+        D3["3. 프로젝트 수행<br/>(/project/*)"]
+        D4["4. 인재·리소스 관리<br/>(/talent/*)"]
+        D5["5. 기성·재무 정산<br/>(/settlement/*)"]
+        D6["6. 솔루션 & R&D 자산화<br/>(/product/*)"]
     end
 
     D2 --> D3

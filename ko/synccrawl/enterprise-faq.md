@@ -23,7 +23,7 @@ graph TD
     end
 
     subgraph "SyncCrawl 플랫폼 방식"
-        UI[자연어 명령 / 웹 콘솔] --> AI_RUN[에이전트 자율 수집]
+        UI["자연어 명령 / 웹 콘솔"] --> AI_RUN[에이전트 자율 수집]
         AI_RUN --> HEAL[UI 변경 시 Self-Healing 복구]
         HEAL --> RAG_AUTO[Vector DB 실시간 RAG 적재]
     end

@@ -86,7 +86,7 @@ new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
         },
         "publisher": {
           "@type": "Organization",
-          "name": "주식회사 엠파시 (Empasy)",
+          "name": "주식회사 엠파시 (Empasy Inc.)",
           "url": "https://empasy.io/"
         }
       }),
@@ -175,12 +175,13 @@ new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
       },
       {
         text: '연동 및 개발',
-        activeMatch: "^/(ecosystem|patents|infra|sdk|guide)/",
+        activeMatch: "^/(ecosystem|glossary|patents|infra|sdk|guide)/",
         items: [
           {
             text: '전체 구조 및 표준 규격',
             items: [
               { link: "/ecosystem/", text: '공통 기반 및 모듈 연동 구조' },
+              { link: "/glossary/", text: '전사 기술 용어집 (Glossary)' },
               { link: "/ecosystem/mcp-protocol", text: '표준 도구 호출 규격 (MCP)' },
               { link: "/ecosystem/e2e-workflow", text: '모듈 간 연동 시나리오' },
             ]
@@ -231,6 +232,7 @@ new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
     ],
 
     sidebar: {
+        '/glossary/': generateKrSidebar('glossary'),
         '/patents/': generateKrSidebar('patents'),
         '/infra/': generateKrSidebar('infra'),
         '/sdk/': generateKrSidebar('sdk'),

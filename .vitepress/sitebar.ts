@@ -259,7 +259,7 @@ const MODULE_CATEGORY_RULES: Record<string, Array<{ group: string; match: (name:
       match: (name) => ['index'].includes(name),
     },
     {
-      group: 'SyncEta 트러블슈팅',
+      group: 'SyncETA 트러블슈팅',
       match: (name) => ['20260210_electron_webview_memory_leak', '20260218_playwright_dynamic_timeout_stabilization', '20260310_desktop_codesign_notarization_pipeline', '20250827_debugCrash', '20250827_electronDebug'].includes(name),
     },
     {
@@ -322,6 +322,12 @@ const MODULE_CATEGORY_RULES: Record<string, Array<{ group: string; match: (name:
   proposals: [
     {
       group: '제품 소개서 및 도입 제안서',
+      match: (name) => ['index'].includes(name),
+    },
+  ],
+  glossary: [
+    {
+      group: '표준 기술 용어 원천 (SSOT)',
       match: (name) => ['index'].includes(name),
     },
   ],
@@ -452,7 +458,7 @@ const DEFAULT_SIDEBAR_SHORT_TITLES: Record<string, Record<string, string>> = {
     'enterprise-project-lifecycle': '사업 전 주기 총괄 (Lifecycle)',
     'enterprise-action-items-guide': '단계별 실행 가이드 (SOP)',
     'enterprise-business-documents': '사업 전 주기 표준 문서 체계',
-    'enterprise-document-templates': '표준 문서 양식 다운로드 (122종)',
+    'enterprise-document-templates': '표준 문서 양식 다운로드 (191종)',
     'presales-ai-playbook': '사전영업 & 제안 플레이북',
     'ai-driven-development': 'AI 개발 생명주기 (AI-SDLC)',
     'ai-sdlc-01-requirements': '[01단계] 기획 및 요구사항 구체화',
@@ -506,11 +512,11 @@ const DEFAULT_SIDEBAR_SHORT_TITLES: Record<string, Record<string, string>> = {
   },
   logs: {
     index: '작업 일지 개요',
-    '20260210_electron_webview_memory_leak': '[SyncEta] Electron 메모리 누수',
-    '20260218_playwright_dynamic_timeout_stabilization': '[SyncEta] Playwright 타임아웃 안정화',
+    '20260210_electron_webview_memory_leak': '[SyncETA] Electron 메모리 누수',
+    '20260218_playwright_dynamic_timeout_stabilization': '[SyncETA] Playwright 타임아웃 안정화',
     '20260225_redis_redlock_sse_saga_orchestration': '[SyncVerse] Redis Redlock 동기화',
     '20260302_mybatis_metaobject_tenant_context_fix': '[SyncBoot] 멀티테넌트 컨텍스트 픽스',
-    '20260310_desktop_codesign_notarization_pipeline': '[SyncEta] 코드 서명 & 공증 파이프라인',
+    '20260310_desktop_codesign_notarization_pipeline': '[SyncETA] 코드 서명 & 공증 파이프라인',
     '20250827_debugCrash': '디버그 크래시 분석',
     '20250827_electronDebug': 'Electron 디버깅 일지',
   },
@@ -542,6 +548,9 @@ const DEFAULT_SIDEBAR_SHORT_TITLES: Record<string, Record<string, string>> = {
   },
   proposals: {
     index: '전체 제안서 PDF 다운로드',
+  },
+  glossary: {
+    index: '전사 기술 용어집 (Glossary)',
   },
 }
 
@@ -701,6 +710,7 @@ function formatFilenameAsTitle(filename: string): string {
     patents: '특허 포트폴리오',
     guide: '운영 가이드',
     proposals: '소개서 및 도입 제안서',
+    glossary: '전사 기술 용어집',
     methodology: '사업 및 개발 방법론',
     agile: '애자일',
     study: 'Study',

@@ -22,7 +22,7 @@ sort: 1
 
 # 엔지니어링 연구 아카이브 (Study)
 
-본 공간은 엠파시 SyncSeries(SyncEta, SyncVerse, SyncBoot, SyncCrawl 등) 제품군의 기반이 되는 핵심 기술 스택에 대해, 구현 원리와 성능 벤치마크, 아키텍처 설계 패턴을 심층 연구하여 기록하는 기술 아카이브입니다.
+본 공간은 엠파시 SyncSeries(SyncETA, SyncVerse, SyncBoot, SyncCrawl 등) 제품군의 기반이 되는 핵심 기술 스택에 대해, 구현 원리와 성능 벤치마크, 아키텍처 설계 패턴을 심층 연구하여 기록하는 기술 아카이브입니다.
 
 ---
 

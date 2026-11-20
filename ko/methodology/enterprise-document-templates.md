@@ -1,5 +1,5 @@
 ---
-title: 엠파시 사업 및 프로젝트 관리 표준 문서 양식 통합 다운로드 센터
+title: 엠파시 사업 및 프로젝트 관리 표준 문서 양식 통합 다운로드 센터 (191종)
 description: 엠파시 사업 및 개발 방법론 전 주기(Phase 0~5) 표준 서식 111종(오피스 97종 + 마크다운 14종)과 실전 프로젝트 관리 스위트(PM Suite) 80종 등 총 191종의 공식 비즈니스·AI·엔터프라이즈 산출물 템플릿(Word, PowerPoint, Excel, PDF, Markdown) 일괄 및 개별 다운로드를 제공합니다.
 head:
   - - meta
@@ -7,10 +7,10 @@ head:
       content: 사업 표준 서식, 프로젝트 관리 문서, PMBOK, WBS, 정보구조도, IA, 화면설계서, AI 프롬프트 명세서, 골든셋 평가, 데이터 표준화, 시큐어코딩 49개, UAT, 최종 검수, SLA, 엠파시, Empasy
   - - meta
     - property: og:title
-      content: 엠파시 사업 및 프로젝트 관리 표준 문서 양식 통합 다운로드 센터
+      content: 엠파시 사업 및 프로젝트 관리 표준 문서 양식 통합 다운로드 센터 (191종)
   - - meta
     - property: og:description
-      content: 실제 프로젝트 현장에서 바로 활용 가능한 단계별 표준 문서 템플릿 및 통합 다운로드 도면도면도면패키지 (총 191종)
+      content: 실제 프로젝트 현장에서 바로 활용 가능한 단계별 표준 문서 템플릿 및 통합 다운로드 패키지 (총 191종)
   - - meta
     - property: og:image
       content: https://doc.empasy.com/images/favicon.png
@@ -20,7 +20,7 @@ head:
 sort: 93
 ---
 
-# 엠파시 사업 및 프로젝트 관리 표준 문서 양식 통합 다운로드 센터
+# 엠파시 사업 및 프로젝트 관리 표준 문서 양식 통합 다운로드 센터 (191종)
 
 본 문서는 **엠파시 사업 및 개발 방법론**의 전 주기(Phase 0 사전영업 ~ Phase 5 오픈 및 정산)에 걸쳐 실제 회사를 운영하고 프로젝트를 수행할 때 필요한 **공식 비즈니스 및 AI·엔터프라이즈 문서 양식(Microsoft Word, PowerPoint, Excel, PDF 97종)**과 **마크다운(.md 14종)** 원본 서식, 그리고 현업 실무에 바로 투입 가능한 **실전 프로젝트 관리 스위트(PM Suite 80종)** 등 **총 191종**을 통합 제공합니다.
 
@@ -28,9 +28,9 @@ sort: 93
 
 ---
 
-## 1. 전체 문서 양식 일괄 다운로드 (통합 도면도면도면패키지)
+## 1. 전체 문서 양식 일괄 다운로드 (통합 패키지)
 
-프로젝트 환경과 요구사항에 맞추어 3가지 형태의 압축 도면도면도면패키지를 선택하여 일괄 다운로드할 수 있습니다.
+프로젝트 환경과 요구사항에 맞추어 3가지 형태의 압축 패키지를 선택하여 일괄 다운로드할 수 있습니다.
 
 ::: tip 통합 다운로드 옵션 안내
 * **[옵션 1] 전체 통합 마스터 압축팩 (Empasy Total Master Pack)**: 
@@ -38,10 +38,10 @@ sort: 93
   - 엠파시 표준 오피스 서식 97종 + 마크다운 14종 + 실전 PM Suite 80종 등 **총 191종의 표준 서식**을 하나의 압축 파일로 통합 제공합니다.
 * **[옵션 2] 실전 프로젝트 관리 스위트 전용팩 (PM Suite Pack)**:
   <a href="/templates/Empasy_PM_Suite_Templates.zip" download="Empasy_PM_Suite_Templates.zip">**[실전 프로젝트 관리 스위트 다운로드 (Empasy_PM_Suite_Templates.zip)]**</a> (용량: 약 43.0 MB)
-  - PMBOK 및 공공 SI 실전에 맞춘 **80종의 실전 프로젝트 관리 산출물(통합관리 8종, PM 7대 영역 18종, SDLC 48종, 교육/마스터 3종 등)** 전용 도면도면도면패키지입니다.
+  - PMBOK 및 공공 SI 실전에 맞춘 **80종의 실전 프로젝트 관리 산출물(총괄 방법론 3종, PM 8대 영역 26종, SDLC 48종, 교육/마스터 3종)** 전용 패키지입니다.
 * **[옵션 3] 엠파시 핵심 및 AI·엔터프라이즈 표준 서식팩 (Core & AI Standard Pack)**:
   <a href="/templates/Empasy_Methodology_All_Templates.zip" download="Empasy_Methodology_All_Templates.zip">**[핵심 및 AI 표준 서식팩 다운로드 (Empasy_Methodology_All_Templates.zip)]**</a> (용량: 약 10.9 MB)
-  - 프로젝트 착수, 계약, 데이터 표준화, 클라우드 인프라 신청 및 AI/LLM/RAG 특화 설계·검증에 필수적인 **111종(Office 97종 + Markdown 14종)**의 핵심 표준 서식 도면도면도면패키지입니다.
+  - 프로젝트 착수, 계약, 데이터 표준화, 클라우드 인프라 신청 및 AI/LLM/RAG 특화 설계·검증에 필수적인 **111종(Office 97종 + Markdown 14종)**의 핵심 표준 서식 패키지입니다.
 :::
 
 ---
@@ -129,7 +129,7 @@ sort: 93
 | **16** | **시스템 아키텍처 설계서 (SAD)** | 인프라 / 아키텍트 | Word | 논리/물리 구성도, 서버 사양(vCPU/RAM), 네트워크 망분리 및 방화벽 포트 | <a href="/templates/office/Phase2_시스템아키텍처설계서_SAD.docx" download>표준 Word (.docx)</a><br><a href="/templates/000_pm_suite/02_%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%20%EA%B0%9C%EB%B0%9C/04_%EC%84%A4%EA%B3%84/03_%EA%B0%9C%EB%B0%9C%EC%84%A4%EA%B3%84/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%EB%AA%85_%EC%8B%9C%EC%8A%A4%ED%85%9C%EC%95%84%ED%82%A4%ED%85%8D%EC%B2%98%EC%A0%95%EC%9D%98%EC%84%9C_V1.0_20230530.docx" download>실전 Word (86 KB)</a> |
 | **16-A** | **시스템 아키텍처 구성도 슬라이드 (`EMP_DEG_090`)** | 아키텍트(AA) | PPT | DEV/STG/PRD 3계층 분리, 내부/대외 ALB 망분리, EKS 파드 및 하이브리드 RAG 아키텍처 구성도 | <a href="/templates/office/EMP_DEG_090_시스템아키텍처구성도.pptx" download>구성도 PPT (558 KB)</a><br><a href="/templates/office/EMP_DEG_090_아키텍처정의서.docx" download>정의서 Word (41 KB)</a> |
 | **16-B** | **클라우드 인프라 및 방화벽 신청서 (`EMP_DEG_091`)** | 인프라 / AA | Excel / PPT | 대기업 AWS(EKS/RDS/S3/ALB) 환경별 리소스 신청, 방화벽 오픈 매트릭스(8시트) 및 요청 구성도 | <a href="/templates/office/EMP_DEG_091_클라우드인프라_및_방화벽신청서.xlsx" download>신청서 Excel (459 KB)</a><br><a href="/templates/office/EMP_DEG_091_인프라생성요청_구성도.pptx" download>구성도 PPT (2.0 MB)</a> |
-| **16-1** | **개발 표준 정의서** | 테크리드 | Word | 코딩 컨벤션, 디렉터리 구조, 도면도면도면패키지 네이밍, 공통 모듈 가이드 | <a href="/templates/000_pm_suite/02_%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%20%EA%B0%9C%EB%B0%9C/04_%EC%84%A4%EA%B3%84/03_%EA%B0%9C%EB%B0%9C%EC%84%A4%EA%B3%84/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%EB%AA%85_%EA%B0%9C%EB%B0%9C%ED%91%9C%EC%A4%80%EC%A0%95%EC%9D%98%EC%84%9C_V1.0_20230530.docx" download>실전 Word (354 KB)</a> |
+| **16-1** | **개발 표준 정의서** | 테크리드 | Word | 코딩 컨벤션, 디렉터리 구조, 패키지 네이밍, 공통 모듈 가이드 | <a href="/templates/000_pm_suite/02_%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%20%EA%B0%9C%EB%B0%9C/04_%EC%84%A4%EA%B3%84/03_%EA%B0%9C%EB%B0%9C%EC%84%A4%EA%B3%84/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%EB%AA%85_%EA%B0%9C%EB%B0%9C%ED%91%9C%EC%A4%80%EC%A0%95%EC%9D%98%EC%84%9C_V1.0_20230530.docx" download>실전 Word (354 KB)</a> |
 | **16-2** | **개발 환경 정의서** | DevOps / 테크리드 | Word | OS, JDK 21, Node.js, Docker, 로컬 개발 인프라 세팅 가이드 | <a href="/templates/000_pm_suite/02_%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%20%EA%B0%9C%EB%B0%9C/04_%EC%84%A4%EA%B3%84/03_%EA%B0%9C%EB%B0%9C%EC%84%A4%EA%B3%84/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%EB%AA%85_%EA%B0%9C%EB%B0%9C%ED%99%98%EA%B2%BD%EC%A0%95%EC%9D%98%EC%84%9C_V1.0_20230530.docx" download>실전 Word (70 KB)</a> |
 | **16-3** | **소프트웨어 컴포넌트 설계서** | 백엔드 / 프론트 | Word | 공통 비즈니스 모듈, 서비스 레이어 컴포넌트 입출력 명세 | <a href="/templates/000_pm_suite/02_%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%20%EA%B0%9C%EB%B0%9C/04_%EC%84%A4%EA%B3%84/03_%EA%B0%9C%EB%B0%9C%EC%84%A4%EA%B3%84/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%EB%AA%85_%EC%BB%B4%ED%8F%AC%EB%84%8C%ED%8A%B8%EC%84%A4%EA%B3%84%EC%84%9C%28%EC%BB%B4%ED%8F%AC%EB%84%8C%ED%8A%B8%EB%AA%85%29_V1.0_20230530.docx" download>실전 Word (62 KB)</a> |
 | **17** | **테이블 정의서 (ERD 스키마)** | DBA / 백엔드 | Excel | PostgreSQL 스키마, 테이블/컬럼 영문·한글명, 타입, PK/FK, 인덱스 | <a href="/templates/office/Phase2_테이블정의서_ERD.xlsx" download>표준 Excel (.xlsx)</a><br><a href="/templates/000_pm_suite/02_%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%20%EA%B0%9C%EB%B0%9C/04_%EC%84%A4%EA%B3%84/03_%EA%B0%9C%EB%B0%9C%EC%84%A4%EA%B3%84/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%EB%AA%85_%ED%85%8C%EC%9D%B4%EB%B8%94%EC%A0%95%EC%9D%98%EC%84%9C_V1.0_20230530.xlsx" download>실전 Excel (90 KB)</a> |
@@ -359,7 +359,7 @@ sort: 93
 | **PM-33** | `프로젝트명_요구사항추적표_V1.0_20230530.xlsx` | Excel | 29 KB | 요구사항 ID - WBS 코드 - 설계서 번호 - 테스트 케이스 ID 양방향 추적 매트릭스 | <a href="/templates/000_pm_suite/02_%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%20%EA%B0%9C%EB%B0%9C/03_%EB%B6%84%EC%84%9D/03_%EC%9A%94%EA%B5%AC%EC%82%AC%ED%95%AD%EC%A0%95%EC%9D%98/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%EB%AA%85_%EC%9A%94%EA%B5%AC%EC%82%AC%ED%95%AD%EC%B6%94%EC%A0%81%ED%91%9C_V1.0_20230530.xlsx" download>Excel (29 KB)</a> |
 | **PM-34** | `프로젝트명_품질체크리스트_V1.0_20230530.xlsx` | Excel | 7 KB | 요구사항 분석 단계 완료 점검 체크리스트 (명확성, 검증 가능성, 누락 여부) | <a href="/templates/000_pm_suite/02_%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%20%EA%B0%9C%EB%B0%9C/03_%EB%B6%84%EC%84%9D/04_%EC%9A%94%EA%B5%AC%EC%82%AC%ED%95%AD%EA%B2%80%ED%86%A0/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%EB%AA%85_%ED%92%88%EC%A7%88%EC%B2%B4%ED%81%AC%EB%A6%AC%EC%8A%A4%ED%8A%B8_V1.0_20230530.xlsx" download>Excel (7 KB)</a> |
 
-#### D. 설계 단계 (16종)
+#### D. 설계 단계 (17종)
 
 | 식별코드 | 설계 세부 | 파일 명칭 | 형식 | 용량 | 주요 내용 및 실무 활용도 | 다운로드 링크 |
 | :---: | :---: | :--- | :---: | :---: | :--- | :---: |
@@ -387,7 +387,7 @@ sort: 93
 | :---: | :--- | :---: | :---: | :--- | :---: |
 | **PM-52** | `프로젝트명_API매뉴얼_V1.0_20230530.docx` | Word | 38 KB | 프론트엔드-백엔드 및 대외 기관 연계 REST API 인터페이스 매뉴얼 | <a href="/templates/000_pm_suite/02_%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%20%EA%B0%9C%EB%B0%9C/05_%EA%B5%AC%ED%98%84/03_%EA%B0%9C%EB%B0%9C/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%EB%AA%85_API%EB%A7%A4%EB%89%B4%EC%96%BC_V1.0_20230530.docx" download>Word (38 KB)</a> |
 
-#### F. 검수 및 테스트 단계 (7종)
+#### F. 검수 및 테스트 단계 (8종)
 
 | 식별코드 | 테스트 구분 | 파일 명칭 | 형식 | 용량 | 주요 내용 및 실무 활용도 | 다운로드 링크 |
 | :---: | :---: | :--- | :---: | :---: | :--- | :---: |

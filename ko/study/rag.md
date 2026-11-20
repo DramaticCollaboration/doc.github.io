@@ -77,14 +77,14 @@ sort: 300
 flowchart TD
     subgraph Indexing ["파트 1: 지식 색인 파이프라인 (Batch / CDC)"]
         direction LR
-        A1["1단계: 문서 수집 및 정제\n(Markdown / 텍스트 추출)"] --> A2["2단계: 문맥 보존 분할 및 임베딩\n(ContextAwareMarkdownSplitter)"] --> A3["3단계: 벡터 DB 적재\n(PostgreSQL 18.6 pgvector HNSW)"]
+        A1["1단계: 문서 수집 및 정제<br/>(Markdown / 텍스트 추출)"] --> A2["2단계: 문맥 보존 분할 및 임베딩<br/>(ContextAwareMarkdownSplitter)"] --> A3["3단계: 벡터 DB 적재<br/>(PostgreSQL 18.6 pgvector HNSW)"]
     end
 
     subgraph Runtime ["파트 2: 실시간 질의-응답 파이프라인 (Online)"]
         direction LR
-        B1["사용자 질의 수신"] --> B2["4단계: 질의 임베딩 및 하이브리드 검색\n(Dense Vector + pg_trgm 키워드)"]
+        B1["사용자 질의 수신"] --> B2["4단계: 질의 임베딩 및 하이브리드 검색<br/>(Dense Vector + pg_trgm 키워드)"]
         B2 --> B3["관련 청크 Top-K 추출 및 리랭킹"]
-        B3 --> B4["5단계: AgentScope ReActAgent\n근거 기반 답변 생성"]
+        B3 --> B4["5단계: AgentScope ReActAgent<br/>근거 기반 답변 생성"]
         B4 --> B5["출처 포함 최종 응답 반환"]
     end
 

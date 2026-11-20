@@ -14,18 +14,18 @@ description: 엔터프라이즈 웹 수집 환경에서의 브라우저 핑거�
 
 ```mermaid
 flowchart TB
-    Scheduler["Quartz 분산 크롤링 스케줄러"] -->Validator["1. BrowserNavigateUrlValidator\n(5단계 SSRF 방어 & 도메인 화이트리스트)"]
+    Scheduler["Quartz 분산 크롤링 스케줄러"] -->Validator["1. BrowserNavigateUrlValidator<br/>(5단계 SSRF 방어 & 도메인 화이트리스트)"]
     Validator --> Queue["2. Redisson / Redis Stream 분산 작업 큐"]
     
     subgraph WorkerPool ["3. Playwright 분산 워커 클러스터 (K8s HPA)"]
-        W1["smart-crawling-agent #1\n(Context Pool & Adaptive Throttler)"]
-        W2["smart-crawling-agent #2\n(Context Pool & Adaptive Throttler)"]
-        W3["smart-crawling-scenario-agent #N\n(SPA 동적 렌더링 & 셀렉터 자가치유)"]
+        W1["smart-crawling-agent #1<br/>(Context Pool & Adaptive Throttler)"]
+        W2["smart-crawling-agent #2<br/>(Context Pool & Adaptive Throttler)"]
+        W3["smart-crawling-scenario-agent #N<br/>(SPA 동적 렌더링 & 셀렉터 자가치유)"]
     end
     
     Queue --> WorkerPool
     WorkerPool --> Sanitizer["4. HTML 노이즈 제거 & Prompt Injection 필터"]
-    Sanitizer --> Storage[("PostgreSQL 18.6 pgvector\n& MinIO 스냅샷 스토리지")]
+    Sanitizer --> Storage[("PostgreSQL 18.6 pgvector<br/>& MinIO 스냅샷 스토리지")]
 ```
 
 ### 1.1 3대 핵심 적응형 수집 안정화 기법

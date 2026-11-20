@@ -30,15 +30,15 @@ flowchart TD
     Req["사내 에이전트의 AI 호출 요청"] --> Gate["SyncLLM Gateway"]
 
     subgraph Security ["보안 & 비용 필터"]
-        Gate --> PII["1. PII 개인정보 자동 마스킹\n(주민번호, 계좌, API Key 제거)"]
-        PII --> Cache{"2. Semantic Cache 검색\n(유사 프롬프트 캐시 적중?)"}
+        Gate --> PII["1. PII 개인정보 자동 마스킹<br/>(주민번호, 계좌, API Key 제거)"]
+        PII --> Cache{"2. Semantic Cache 검색<br/>(유사 프롬프트 캐시 적중?)"}
     end
 
     Cache -->|"Cache Hit (비용 $0, 5ms)"| CacheRes["기존 캐시 결과 즉시 응답"]
-    Cache -->|"Cache Miss"| Router["3. 지능형 모델 라우터\n(난이도 기반 모델 선별)"]
+    Cache -->|"Cache Miss"| Router["3. 지능형 모델 라우터<br/>(난이도 기반 모델 선별)"]
 
-    Router -->|"단순 분류/CRUD"| LiteModel["경량 모델\n(GPT-4o-mini / Claude Haiku / 사내 Llama 3)"]
-    Router -->|"복잡한 코드 작성"| ProModel["고성능 모델\n(Claude 3.5 Sonnet / GPT-4o)"]
+    Router -->|"단순 분류/CRUD"| LiteModel["경량 모델<br/>(GPT-4o-mini / Claude Haiku / 사내 Llama 3)"]
+    Router -->|"복잡한 코드 작성"| ProModel["고성능 모델<br/>(Claude 3.5 Sonnet / GPT-4o)"]
 
     LiteModel --> Quota["4. 부서별 토큰 예산(Budget) 검증"]
     ProModel --> Quota

@@ -19,9 +19,9 @@ flowchart TD
     Prompt["사용자 전략 질의 & Safe NL2SQL 기초 지표"] --> Moderator["조정자 에이전트 (Moderator & Judge Agent)"]
     
     subgraph Roundtable ["AgentScope MsgHub 라운드테이블 토론장 (최대 3 라운드)"]
-        AgentA["에이전트 A: 성장 & 매출 극대화\n(Growth & GMV Optimizer)"]
-        AgentB["에이전트 B: 리스크 & 마진 방어\n(Risk & Margin Guardian)"]
-        AgentC["에이전트 C: 고객 경험 & 이탈 방지\n(CX & Retention Specialist)"]
+        AgentA["에이전트 A: 성장 & 매출 극대화<br/>(Growth & GMV Optimizer)"]
+        AgentB["에이전트 B: 리스크 & 마진 방어<br/>(Risk & Margin Guardian)"]
+        AgentC["에이전트 C: 고객 경험 & 이탈 방지<br/>(CX & Retention Specialist)"]
     end
     
     Moderator -->|"Round 1: 초기 가설 발의 요청"| Roundtable
@@ -29,9 +29,9 @@ flowchart TD
     AgentB <-->|"수수료·원가·하한 마진율 검증"| AgentC
     AgentC <-->|"코호트 재구매율·LTV 시뮬레이션"| AgentA
     
-    Roundtable -->|"Round 3: 수정 대안 제출"| Eval{"가중치 합의 점수 평가\n(Consensus Score >= 0.88)"}
+    Roundtable -->|"Round 3: 수정 대안 제출"| Eval{"가중치 합의 점수 평가<br/>(Consensus Score >= 0.88)"}
     Eval -- "미달 (< 0.88)" --> Moderator
-    Eval -- "수렴 (>= 0.88)" --> ActionPlan["최종 파레토 최적 액션 플랜\n(HITL 승인 센터 회부)"]
+    Eval -- "수렴 (>= 0.88)" --> ActionPlan["최종 파레토 최적 액션 플랜<br/>(HITL 승인 센터 회부)"]
 ```
 
 ---

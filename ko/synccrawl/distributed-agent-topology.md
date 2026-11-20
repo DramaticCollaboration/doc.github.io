@@ -23,8 +23,8 @@ flowchart TD
         ScenarioAgent["smart-crawling-scenario-agent<br/>(시맨틱 DOM 추론 / AI 분석 워커)"]
     end
     
-    Server <--> |mTLS & Redis 대기열| Agent
-    Server <--> |비동기 RPC / MsgHub| ScenarioAgent
+    Server <--> |"mTLS & Redis 대기열"| Agent
+    Server <--> |"비동기 RPC / MsgHub"| ScenarioAgent
     
     Agent --> ExtWeb["외부 대상 웹사이트"]
     Server --> DB[("PostgreSQL 18.6 & MinIO")]

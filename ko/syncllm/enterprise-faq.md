@@ -16,11 +16,11 @@ description: SyncLLM 비용 절감 원리, 온프레미스 망분리 배포, PII
 
 ```mermaid
 flowchart TD
-    Req["부서 / 도메인 에이전트 LLM 요청\n(/api/v1/llm/chat/completions)"] --> PII["1. 인라인 PII 마스킹 & 보안 필터"]
-    PII --> Cache{"2. pgvector + Redis\n시맨틱 캐시 (유사도 >= 0.95)"}
+    Req["부서 / 도메인 에이전트 LLM 요청<br/>(/api/v1/llm/chat/completions)"] --> PII["1. 인라인 PII 마스킹 & 보안 필터"]
+    PII --> Cache{"2. pgvector + Redis<br/>시맨틱 캐시 (유사도 >= 0.95)"}
     Cache -- "Cache Hit (비용 $0, <15ms)" --> Unmask["역마스킹 후 즉시 응답 반환"]
     Cache -- "Cache Miss" --> Budget{"3. 부서별 FinOps 예산 잔여율 검사"}
-    Budget -- "정상 (<80%)" --> TierRoute["4. 난이도 기반 최적 모델 라우팅\n(Tier 1~3)"]
+    Budget -- "정상 (<80%)" --> TierRoute["4. 난이도 기반 최적 모델 라우팅<br/>(Tier 1~3)"]
     Budget -- "임계 도달 (80~100%)" --> AutoDowngrade["경량/온프레미스 모델 자동 다운그레이드"]
     TierRoute --> Provider["멀티 LLM 공급자 (서킷 브레이커 Failover)"]
     AutoDowngrade --> Provider

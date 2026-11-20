@@ -1,13 +1,13 @@
 ---
-title: "SyncETA (SyncEta): AI 테스트 자동화 및 자가 치유(Self-Healing) QA 플랫폼"
+title: "SyncETA (SyncETA): AI 테스트 자동화 및 자가 치유(Self-Healing) QA 플랫폼"
 description: "AI를 활용한 테스트 자동화 플랫폼 SyncETA는 시나리오 생성, Playwright 기반 분산 병렬 실행, 실패 원인 분석, Vision AI 시각적 회귀 검증 및 선택자 자가 치유(Self-Healing)를 제공하는 엔터프라이즈 AI 테스트 자동화 솔루션입니다."
 head:
   - - meta
     - name: keywords
-      content: AI 테스트 자동화, 테스트 자동화, SyncETA, SyncEta, QA 테스트 자동화, 자가 치유 테스트 자동화, 회귀 테스트, Playwright, MCP, Model Context Protocol, Visual Regression, Self-Healing, CI/CD, 엔터프라이즈 QA, 엠파시, Empasy
+      content: AI 테스트 자동화, 테스트 자동화, SyncETA, SyncETA, QA 테스트 자동화, 자가 치유 테스트 자동화, 회귀 테스트, Playwright, MCP, Model Context Protocol, Visual Regression, Self-Healing, CI/CD, 엔터프라이즈 QA, 엠파시, Empasy
   - - meta
     - property: og:title
-      content: "SyncETA (SyncEta): AI 테스트 자동화 및 자가 치유(Self-Healing) QA 플랫폼"
+      content: "SyncETA (SyncETA): AI 테스트 자동화 및 자가 치유(Self-Healing) QA 플랫폼"
   - - meta
     - property: og:description
       content: "테스트 시나리오 생성, Playwright MCP 실행, 실패 원인 분석, Vision AI 시각 검증 및 자가 치유(Self-Healing) 파이프라인을 지원합니다."
@@ -20,11 +20,11 @@ head:
 sort: 10
 ---
 
-# SyncETA (SyncEta): AI 테스트 자동화 및 자가 치유(Self-Healing) 플랫폼
+# SyncETA (SyncETA): AI 테스트 자동화 및 자가 치유(Self-Healing) 플랫폼
 
-> **제품 소개서 및 라이브 데모**: [SyncETA_Proposal.pdf (12p)](/downloads/proposals/SyncETA_Proposal.pdf){target="_blank" download="SyncETA_Proposal.pdf"} · [SyncETA 포털 상세 및 설치파일](https://sync.empasy.io/products/sync-eta#demo){target="_blank" rel="noopener"} · [제품 공식 페이지](https://empasy.io/ko/solutions/sync-eta.html){target="_blank" rel="noopener"} · [전체 제안서 모음](/proposals/)
+> **비개발자 · 도입 검토 안내**: 쉬운 제품 소개는 [SyncETA 제품 홈페이지(eta.empasy.io)](https://eta.empasy.io/){target="_blank" rel="noopener"}에서, 데스크톱 설치 및 체험은 [통합 데모 포털](https://sync.empasy.io/products/sync-eta#demo){target="_blank" rel="noopener"}에서 이용하실 수 있으며, 소개서·제안서 PDF는 [제안서 자료실](/proposals/)에서 내려받으실 수 있습니다.
 
-**SyncETA(SyncEta)**는 **테스트 코드 작성 없이 시나리오 자동 생성(노코드 녹화·자연어·엑셀), Playwright MCP 병렬 실행, 실패 원인 분석, 시각적 화면 깨짐(Visual Regression) 감지 및 선택자 자가 치유(Self-Healing)**까지 전 과정을 자동화하여 QA와 개발 효율을 극대화하는 엔터프라이즈 **AI 테스트 자동화** 플랫폼입니다.
+**SyncETA(SyncETA)**는 **테스트 코드 작성 없이 시나리오 자동 생성(노코드 녹화·자연어·엑셀), Playwright MCP 병렬 실행, 실패 원인 분석, 시각적 화면 깨짐(Visual Regression) 감지 및 선택자 자가 치유(Self-Healing)**까지 전 과정을 자동화하여 QA와 개발 효율을 극대화하는 엔터프라이즈 **AI 테스트 자동화** 플랫폼입니다.
 
 ::: tip 데스크톱 애플리케이션 즉시 실행 안내
 SyncETA는 별도의 서버 인프라 구축 없이 로컬 및 스테이징 웹사이트를 즉시 테스트할 수 있는 데스크톱 애플리케이션(v0.0.58)을 제공합니다.  
@@ -53,7 +53,7 @@ graph LR
     A --> D[3. Vision AI 시각적 회귀 검증]
     A --> E[4. 자가 치유 및 오케스트레이션]
 
-    B -.-> B1[Selenium 기반 이벤트/DOM 추출 및 YAML/JSON 변환]
+    B -.-> B1["Selenium 기반 이벤트/DOM 추출 및 YAML/JSON 변환"]
     C -.-> C1[Chrome, Firefox, Edge 멀티 브라우저 병렬 구동]
     D -.-> D1[레이아웃 붕괴, 요소 가림 현상 인지 검출]
     E -.-> E1[Broken Selector 탐지 및 SyncVerse 승인 연동]

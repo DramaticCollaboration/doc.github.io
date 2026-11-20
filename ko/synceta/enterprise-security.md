@@ -26,11 +26,11 @@ SyncETA는 금융, 공공, 대기업의 엄격한 보안 요건을 충족하기 
 
 ```mermaid
 graph TD
-    subgraph Air_Gapped_Network [사내 폐쇄망 / On-Premise 인프라]
-        A[QA 엔지니어 PC - 브라우저] --> B[SyncETA Web & Core Server]
+    subgraph Air_Gapped_Network ["사내 폐쇄망 / On-Premise 인프라"]
+        A[QA 엔지니어 PC - 브라우저] --> B["SyncETA Web & Core Server"]
         B --> C[Playwright Runner Containers]
-        B --> D[On-Premise PostgreSQL & Redis]
-        B --> E[사내 온프레미스 Vision / LLM 엔진 - vLLM]
+        B --> D["On-Premise PostgreSQL & Redis"]
+        B --> E["사내 온프레미스 Vision / LLM 엔진 - vLLM"]
     end
 
     style Air_Gapped_Network fill:#f9f9f9,stroke:#333,stroke-width:2px

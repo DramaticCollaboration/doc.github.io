@@ -16,17 +16,17 @@ description: Vue 3 및 Vite 기반의 스마트 크롤링 운영 콘솔 아키�
 
 ```mermaid
 flowchart LR
-    Admin["수집 운영자 / 데이터 엔지니어"] --> Console["스마트 크롤링 콘솔\n(Vue 3 / Vite / TypeScript)"]
+    Admin["수집 운영자 / 데이터 엔지니어"] --> Console["스마트 크롤링 콘솔<br/>(Vue 3 / Vite / TypeScript)"]
     
     subgraph ConsoleModules ["콘솔 4대 핵심 제어 모듈"]
-        Dashboard["1. 파이프라인 관제 대시보드\n(처리량, 성공률, 워커 부하)"]
-        LiveView["2. 실시간 브라우저 세션 스트림\n(SSE 화면 중계 & 세션 중재)"]
-        SelectorStudio["3. 셀렉터 자가치유 디버거\n(Before/After DOM 비교 & 승인)"]
-        DataGrid["4. 정제 데이터 & RAG 인덱싱 그리드\n(Raw HTML vs Markdown/JSON)"]
+        Dashboard["1. 파이프라인 관제 대시보드<br/>(처리량, 성공률, 워커 부하)"]
+        LiveView["2. 실시간 브라우저 세션 스트림<br/>(SSE 화면 중계 & 세션 중재)"]
+        SelectorStudio["3. 셀렉터 자가치유 디버거<br/>(Before/After DOM 비교 & 승인)"]
+        DataGrid["4. 정제 데이터 & RAG 인덱싱 그리드<br/>(Raw HTML vs Markdown/JSON)"]
     end
     
     Console --> Dashboard & LiveView & SelectorStudio & DataGrid
-    Console <-->|"REST API (/api/v1/crawl/*) & SSE"| Server["SyncCrawl 백엔드 서버\n(PostgreSQL 18.6 & Redis 7)"]
+    Console <-->|"REST API (/api/v1/crawl/*) & SSE"| Server["SyncCrawl 백엔드 서버<br/>(PostgreSQL 18.6 & Redis 7)"]
 ```
 
 ---

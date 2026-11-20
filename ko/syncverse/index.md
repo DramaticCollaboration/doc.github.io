@@ -21,87 +21,84 @@ head:
 sort: 1
 ---
 
-# SyncVerse: 멀티 에이전트 자율 운영 오케스트레이션 생태계
+# SyncVerse: 멀티 에이전트 중앙 관제 및 오케스트레이션 플랫폼
 
-> **제품 소개서 및 라이브 데모**: [SyncVerse_Proposal.pdf (12p)](/downloads/proposals/SyncVerse_Proposal.pdf){target="_blank" download="SyncVerse_Proposal.pdf"} · [SyncVerse 라이브 데모 체험](https://sync.empasy.io/products/sync-verse#demo){target="_blank" rel="noopener"} · [제품 공식 페이지](https://empasy.io/ko/solutions/sync-verse.html){target="_blank" rel="noopener"} · [전체 제안서 모음](/proposals/)
+> **비개발자 · 도입 검토 안내**: 쉬운 제품 소개는 [SyncVerse 제품 홈페이지(verse.empasy.io)](https://verse.empasy.io/){target="_blank" rel="noopener"}에서, 설치 없는 화면 체험은 [통합 데모 포털](https://sync.empasy.io/products/sync-verse#demo){target="_blank" rel="noopener"}에서 이용하실 수 있으며, 소개서·제안서 PDF는 [제안서 자료실](/proposals/)에서 내려받으실 수 있습니다.
 
-> **Empasy SyncSeries AI Autonomous Operations Ecosystem**  
-> 중앙 제어 관제탑, 5-Step Spec Studio 및 AI DLC 오케스트레이션 플랫폼
+**SyncVerse**는 개별적으로 동작하는 분산 도메인 솔루션을 표준 인터페이스로 연결해 요구사항 정리, 작업 배분, 품질 검증 조회, 단계별 결재 승인을 통합 관리하는 **중앙 오케스트레이션 플랫폼(Control Tower)**입니다.
 
-**SyncVerse**는 개별적으로 동작하던 분산 소프트웨어 솔루션들을 하나의 유기적인 AI 에코시스템으로 통합하는 **LLM 네이티브 중앙 제어 플랫폼(Central Control Tower)**입니다.
-
-사람이 시스템 모니터링, 유지보수 티켓 처리, 코드 수정, 배포를 수동으로 수행하던 구조에서 벗어나, **SyncVerse 중앙 오케스트레이터가 하위 시스템(SyncWatch, SyncAPIM, SyncBoot, SyncCMS, SyncShop, SyncOps, SyncLLM, SyncInsight 등)의 도메인 에이전트들과 표준 프로토콜로 협업**하여 시스템을 자율 운영하며, [`SyncWatch`](/syncwatch/)로부터 수신한 `VerseAuditPack`(SCA 의존성·SAST 코드·DAST 모의해킹 보안 점검 팩)을 기반으로 전사 저장소의 취약점을 상시 감사하고 자동 패치 PR을 생성합니다.
+SyncVerse 중앙 오케스트레이터는 하위 도메인 모듈(`SyncWatch`, `SyncAPIM`, `SyncBoot`, `SyncCMS`, `SyncShop`, `SyncOps`, `SyncLLM`, `SyncInsight`, `SyncETA`, `SyncCrawl`)과 표준 **[MCP](/glossary/#mcp)** 및 **[A2A](/glossary/#a2a)** 프로토콜로 통신합니다. 또한 [`SyncWatch`](/syncwatch/)로부터 수신한 `VerseAuditPack`(SCA 의존성·SAST 코드·DAST 점검 규칙 팩)을 기반으로 저장소 취약점을 점검하고 패치 PR 초안을 생성합니다.
 
 ```mermaid
 flowchart TB
     subgraph Human ["Human Architect (시스템 아키텍트)"]
-        H1[자연어 요구사항 입력]
-        H2[Multi-Party HITL 결재 승인 / 반려]
+        H1["자연어 요구사항 입력"]
+        H2["Multi-Party HITL 결재 승인 / 반려"]
     end
 
     subgraph SyncVerse ["SyncVerse Control Tower (중앙 제어 엔진)"]
-        IR[Intent Router Agent\n(의도 분석 및 라우팅)]
-        SO[Swarm Orchestrator Agent\n(A2A 에이전트 작업 조율)]
-        SS[5-Step Spec Studio\n(요구사항·설계·계획·역동기화)]
-        SH[Self-Healing Supervisor\n(로그 분석 및 자가치유)]
+        IR["Intent Router Agent<br/>(의도 분석 및 라우팅)"]
+        SO["Swarm Orchestrator Agent<br/>(A2A 에이전트 작업 조율)"]
+        SS["5-Step Spec Studio<br/>(요구사항·설계·계획·역동기화)"]
+        SH["Self-Healing Supervisor<br/>(로그 분석 및 자가치유)"]
     end
 
     subgraph Workers ["Domain Worker Agents & Coding SDK"]
-        W1[SyncBoot / SyncOps Agent\n(백엔드 인프라 / SI 손익 관제)]
-        W2[SyncCMS / SyncShop Agent\n(콘텐츠 / 커머스 Swarm)]
-        W3[SyncETA / Audit Agent\n(무인 QA / SEO·AEO 감사)]
-        W4[SyncSDK 15-Engine Proxy\n(15대 다중 코딩 에이전트 자율 실행)]
+        W1["SyncBoot / SyncOps Agent<br/>(백엔드 인프라 / SI 손익 관제)"]
+        W2["SyncCMS / SyncShop Agent<br/>(콘텐츠 / 커머스 Swarm)"]
+        W3["SyncETA / Audit Agent<br/>(자동 QA / SEO·AEO 감사)"]
+        W4["SyncSDK Coding SPI<br/>(멀티 코딩 엔진 어댑터 라우팅)"]
     end
 
     H1 --> IR
     IR --> SO
     IR --> SS
-    SO -->|A2A MCP Protocol| Workers
-    SS -->|5-Step 스펙 번들 위임| W4
-    W3 -->|QA 실패 감지| SH
-    SH -->|로그 전달 & 4-Cycle 자가치유| W4
-    W4 -->|Diff & 산출물 제안| H2
-    H2 -->|승인| SO
+    SO -->|"A2A MCP Protocol"| Workers
+    SS -->|"5-Step 스펙 번들 위임"| W4
+    W3 -->|"QA 실패 감지"| SH
+    SH -->|"로그 전달 & 4-Cycle 자가치유"| W4
+    W4 -->|"Diff & 산출물 제안"| H2
+    H2 -->|"승인"| SO
 ```
 
 ---
 
-## 1. 4대 핵심 축 (Core Pillars)
+## 1. 4대 핵심 구성 요소
 
-SyncVerse는 소프트웨어 생애주기(AI DLC, AI Development Life Cycle) 운영을 위해 다음 네 가지 핵심 엔진을 제공합니다.
+SyncVerse는 소프트웨어 개발·운영 생명주기(AI DLC)를 지원하기 위해 네 가지 핵심 엔진을 제공합니다.
 
 | 핵심 엔진 | 역할 및 기능 | 주요 기술 메커니즘 |
 | :--- | :--- | :--- |
-| **01. 자연어 의도 분류 및 A2A Swarm 위임** | 현업의 자연어 지시가 '운영(CRUD)'인지 '개발(소스수정)'인지 실시간 판별 및 하위 도메인 Swarm 위임 | `A2ASwarmDelegationStrategyHandler`, 도메인 컨텍스트 Tri-Hybrid RAG 주입 |
-| **02. 5-Step Spec Studio (SDD 2.0)** | 요구사항 AC 정제 -> 상세 기술 명세 -> 구현 계획 -> 자율 코딩 -> 4대 표준 산출물 역동기화 | Decision Queue, Living Spec, 요구사항 커버리지 매트릭스 |
-| **03. 15대 코딩 에이전트 동적 라우팅 (`SyncSDK`)** | 소스코드 수정이 필요한 경우 15종 코딩 엔진 중 활성 엔진을 호출하여 작업 브랜치에 코드 생성 | `CodingAgentRoutingProxy` (`ANTIGRAVITY`, `CLAUDE_CODE`, `GITHUB_COPILOT`, `CODEX_CLI`, `GEMINI_CLI`, `CURSOR_CLI`, `OPENHANDS`, `CONTINUE`, `AIDER`, `OPENSWE`, `GOOSE`, `MINI_SWE`, `CLINE`, `KIRO`, `EIGENT`) |
-| **04. 무인 CI/CD & 자가치유 복구** | 4-Cycle 빌드 자가 치유 및 테스트 오류 발생 시 클러스터 로그를 수집하여 자동 수정·롤백 | `sync-module-deploy`, Multi-Party HITL 결재선, 스냅샷 보상 롤백 |
+| **01. 자연어 의도 분류 및 A2A 위임** | 입력된 요청이 운영 데이터 작업인지 소스 변경 작업인지 판별하고 하위 도메인 모듈에 위임 | `A2ASwarmDelegationStrategyHandler`, 도메인 컨텍스트 Tri-Hybrid RAG 주입 |
+| **02. 5-Step Spec Studio** | 인수 조건(AC) 정제 -> 상세 기술 명세 -> 구현 계획 -> 브랜치 작업 위임 -> 4대 표준 산출물 역동기화 | Decision Queue, Living Spec, 요구사항 커버리지 매트릭스 |
+| **03. 멀티 코딩 엔진 SPI 라우팅 (`SyncSDK`)** | 소스코드 수정 시 사내 정책으로 등록된 활성 코딩 어댑터를 선택해 격리 브랜치에서 패치 생성 | `CodingAgentRoutingProxy` (`ICodingAgentClient` 플러그인 어댑터 구조) |
+| **04. 자동 배포 연계 & 자가치유 복구** | 4-Cycle 빌드 오류 분석·보정 및 배포 실패 시 스냅샷 기반 보상 롤백 | `sync-module-deploy`, [Multi-Party HITL](/glossary/#hitl) 결재선, 스냅샷 보상 롤백 |
 
 ---
 
 ## 2. 6-Step AI DLC 라이프사이클
 
-SyncVerse는 자연어 요구사항 접수부터 최종 상용 배포까지 6단계 자율 운영 파이프라인을 실시간 관제합니다.
+SyncVerse는 요구사항 접수부터 승인·배포까지 6단계 파이프라인의 상태를 추적합니다.
 
-1. **요구사항 분석 및 스펙 정제 (Spec Studio Step 1~3)**: 관리자의 자연어 프롬프트를 분석하여 인수 조건(AC), 상세 기술 명세, 구현 계획 및 커버리지 매트릭스 수립
-2. **다중 엔진 자율 코딩 (Spec Studio Step 4)**: 코딩 에이전트(`SyncSDK` 15종 엔진)가 격리된 작업 브랜치에서 소스코드 및 6-File DB SSOT(`db/00_extensions.sql` ~ `05_sample_dev.sql`) DDL 변경안 작성
-3. **무인 QA 검증 (Autonomous QA)**: 자동 빌드 및 Playwright/SyncETA E2E 리그레션 테스트 수행
-4. **자가치유 복구 (4-Cycle Self-Healing Loop)**: 컴파일/테스트 실패 시 서버 클러스터 분산 로그를 수집하여 코딩 에이전트가 버그를 스스로 수정
-5. **다자간 아키텍트 승인 (Multi-Party HITL Approval)**: 시스템 아키텍트가 코드 Diff 및 영향도 분석 리포트를 확인하고 다단계 결재 승인/반려 결정
-6. **무중단 배포 & 산출물 역동기화 (Spec Studio Step 5)**: 승인된 변경사항을 상용 환경에 무중단 배포하고 4대 표준 산출물(요구사항정의서, 화면설계서, DB설계서, 테스트결과서) 자동 갱신
+1. **요구사항 분석 및 스펙 정제 (Spec Studio Step 1~3)**: 요구사항 프롬프트를 분석해 인수 조건(AC), 기술 명세, 구현 계획 및 요구사항 커버리지 매트릭스를 생성합니다.
+2. **격리 브랜치 코드 작성 (Spec Studio Step 4)**: `SyncSDK` 어댑터를 통해 격리된 작업 브랜치에서 소스코드 및 6-File DB SSOT(`db/00_extensions.sql` ~ `05_sample_dev.sql`) DDL 변경안을 작성합니다.
+3. **자동 회귀 검증 (Automated QA)**: 자동 빌드와 Playwright/`SyncETA` E2E 회귀 테스트를 수행합니다.
+4. **빌드·테스트 오류 보정 (4-Cycle Self-Healing Loop)**: 컴파일 또는 테스트 실패 시 분산 로그를 수집해 원인 분석 및 패치 재시도를 수행합니다.
+5. **다자간 아키텍트 승인 (Multi-Party HITL Approval)**: 시스템 아키텍트가 코드 Diff와 영향도 분석 리포트를 검토하고 다단계 결재 승인 또는 반려를 결정합니다.
+6. **배포 및 산출물 역동기화 (Spec Studio Step 5)**: 승인된 변경사항을 배포 파이프라인으로 전달하고 4대 표준 산출물(요구사항정의서, 화면설계서, DB설계서, 테스트결과서)을 갱신합니다.
 
 ---
 
-## 3. 도입 전후 비교 (기존 운영 vs SyncVerse)
+## 3. 운영 구조 비교 (개별 수동 운영 vs SyncVerse 중앙 관제)
 
-| 구분 항목 | 기존 수작업 개발/운영 방식 | SyncVerse 자율 운영 생태계 |
+| 구분 항목 | 개별 수동 개발·운영 방식 | SyncVerse 중앙 관제 아키텍처 |
 | :--- | :--- | :--- |
-| **요구사항 반영 주기** | 기획서 작성 및 회의를 거쳐 배포까지 수주일 소요 | **5-Step Spec Studio 및 15종 코딩 엔진으로 단시간 내 반영** |
-| **소스코드 수정** | 개발자가 직접 로컬 IDE를 켜고 코드를 수작업 수정 | **Antigravity·Claude Code·Copilot·OpenSWE 등 15대 코딩 에이전트가 작업 브랜치 자율 수정** |
-| **QA 및 버그 수정** | 에러 발생 시 개발자가 로그 수집 및 수동 재디버깅 | **4-Cycle 빌드 자가치유 및 클러스터 로그 기반 자동 수정** |
-| **LLM 비용 관리** | 팀마다 개별 API 키를 사용하여 중복 비용 발생 | **SyncLLM 단일 게이트웨이 및 시맨틱 캐싱으로 비용 절감** |
-| **에이전트 거버넌스** | 개별 도구들이 파편화되어 맥락 단절 및 통제 불가 | **표준 MCP 기반 중앙 관제탑으로 모든 에이전트 일원화 관리** |
-| **안전장치 & 롤백** | 배포 실패 시 야간 비상대기하며 수동 롤백 | **Multi-Party HITL 승인 게이트 & 인메모리/DB 스냅샷 롤백 지원** |
+| **요구사항 명세 추적** | 기획서·이슈·코드가 분리되어 변경 이력 불일치 발생 | 5-Step Spec Studio 기반 명세·구현·산출물 역동기화 |
+| **코드 변경 워크플로우** | 개발자별 상이한 도구 및 수동 브랜치·검증 절차 | `SyncSDK` 표준 SPI를 통한 격리 브랜치 생성 및 일관된 검증 게이트 적용 |
+| **장애 원인 분석 및 재검증** | 에러 발생 시 서버 로그 수동 수집 및 재현 | 클러스터 로그 수집과 4-Cycle 빌드·테스트 재검증 자동 연계 |
+| **LLM 비용 통제** | 팀별 개별 API 키 사용으로 비용 추적 및 제한 곤란 | `SyncLLM` 단일 게이트웨이, [시맨틱 캐시](/glossary/#semantic-cache), [FinOps](/glossary/#finops) 예산 한도 적용 |
+| **도구·모듈 거버넌스** | 개별 도구가 파편화되어 감사 및 접근 통제 불가 | 표준 [MCP](/glossary/#mcp) 레지스트리 및 [RBAC](/glossary/#rbac) 기반 일원화 관리 |
+| **배포 안전장치** | 장애 발생 시 수동 롤백 및 야간 대응 부담 | Multi-Party HITL 사전 승인 게이트 및 스냅샷 보상 롤백 |
 
 ---
 

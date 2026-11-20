@@ -44,9 +44,9 @@ SyncVerse를 실제 기업 환경에 도입하기 위해 고객사 아키텍트�
 
 ```mermaid
 flowchart LR
-    Git["Git / GitLab\n(PR & Diff)"] <--> Verse["SyncVerse 관제탑"]
-    CI["Jenkins / K8s\n(빌드 & 배포)"] <--> Verse
-    Slack["Slack / Teams\n(승인 알림)"] <--> Verse
+    Git["Git / GitLab<br/>(PR & Diff)"] <--> Verse["SyncVerse 관제탑"]
+    CI["Jenkins / K8s<br/>(빌드 & 배포)"] <--> Verse
+    Slack["Slack / Teams<br/>(승인 알림)"] <--> Verse
 ```
 
 ### Q4. Java Spring Boot 외에 다른 언어로 개발된 레거시 시스템도 지원하나요?

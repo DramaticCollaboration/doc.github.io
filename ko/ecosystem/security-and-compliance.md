@@ -17,7 +17,7 @@ flowchart TB
     subgraph ClientEnv ["고객사 보안 인프라 (Air-Gapped / VPC)"]
         direction TB
         EnterpriseData[("고객 데이터 자산<br/>(소스코드, DB, 도메인 지식)")]
-        LocalAgent["SyncSeries Local Engine<br/>(SyncBoot, SyncEta, SyncInsight)"]
+        LocalAgent["SyncSeries Local Engine<br/>(SyncBoot, SyncETA, SyncInsight)"]
         LocalLLM["온프레미스 vLLM / Ollama<br/>(외부 인터넷 차단 폐쇄망)"]
     end
 

@@ -27,11 +27,11 @@ MCP 사양은 세 가지 주요 프리미티브를 정의합니다:
 
 ```mermaid
 graph LR
-    A[MCP Client / Orchestrator] -->|tools/list, tools/call| B[Tools: 실행 가능한 함수]
-    A -->|resources/read, resources/list| C[Resources: 읽기 전용 데이터/컨텍스트]
-    A -->|prompts/get, prompts/list| D[Prompts: 사전 정의된 프롬프트 템플릿]
+    A["MCP Client / Orchestrator"] -->|"tools/list, tools/call"| B["Tools: 실행 가능한 함수"]
+    A -->|"resources/read, resources/list"| C["Resources: 읽기 전용 데이터/컨텍스트"]
+    A -->|"prompts/get, prompts/list"| D["Prompts: 사전 정의된 프롬프트 템플릿"]
 
-    B --> E[SyncEta Playwright Runner]
+    B --> E[SyncETA Playwright Runner]
     B --> F[SyncBoot Schema Studio]
     C --> G[SyncCrawl Knowledge Store]
 ```
@@ -127,7 +127,7 @@ MCP는 두 가지 표준 트랜스포트를 규정하고 있습니다.
 | 비교 항목 | Stdio (표준 입출력) | HTTP with SSE (Server-Sent Events) |
 |:---|:---|:---|
 | **동작 환경** | 단일 머신 로컬 프로세스 간 통신 | 분산 네트워크 및 컨테이너 환경 |
-| **적용 사례** | SyncEta 데스크톱 내부 Playwright 프로세스 제어 | SyncVerse 중앙 관제탑과 원격 도메인 에이전트 연동 |
+| **적용 사례** | SyncETA 데스크톱 내부 Playwright 프로세스 제어 | SyncVerse 중앙 관제탑과 원격 도메인 에이전트 연동 |
 | **통신 프로토콜** | stdin/stdout 파이프 | HTTP POST (요청) + SSE (단방향 스트리밍) |
 | **보안 및 인증** | OS 사용자 프로세스 권한 격리 | Bearer JWT, mTLS, IP 화이트리스트 |
 | **확장성** | 로컬 머신 자원에 한정 | 로드밸런서 기반 수평적 스케일 아웃 가능 |
@@ -136,7 +136,7 @@ MCP는 두 가지 표준 트랜스포트를 규정하고 있습니다.
 
 ## 5. SyncSeries 멀티 에이전트 오케스트레이션 적용
 
-SyncVerse 관제탑은 MCP를 통해 도메인 에이전트(SyncBoot, SyncCMS, SyncEta)를 오케스트레이션하며 다음과 같은 엔터프라이즈 패턴을 내재화했습니다:
+SyncVerse 관제탑은 MCP를 통해 도메인 에이전트(SyncBoot, SyncCMS, SyncETA)를 오케스트레이션하며 다음과 같은 엔터프라이즈 패턴을 내재화했습니다:
 
 1. **도구 레지스트리 동적 탐색**:
    각 도메인 에이전트 기동 시 SyncVerse 게이트웨이에 MCP 엔드포인트를 등록하고, 가용 도구를 동적으로 수집하여 LLM 시스템 프롬프트에 주입합니다.

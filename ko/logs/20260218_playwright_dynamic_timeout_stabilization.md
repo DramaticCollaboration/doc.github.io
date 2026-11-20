@@ -15,7 +15,7 @@ sort: 20
 
 ## 1. 문제 상황
 
-- **대상 모듈**: SyncEta Playwright 실행 엔진 (`sync-eta-runner`)
+- **대상 모듈**: SyncETA Playwright 실행 엔진 (`sync-eta-runner`)
 - **이슈 현상**:
   SPA(Single Page Application) 쇼핑몰 및 대시보드 사이트 검증 시, 리스트 하단에 위치한 상품 카드나 '더보기' 버튼을 클릭하는 스텝에서 30초 타임아웃(`TimeoutError: locator.click: Timeout 30000ms exceeded`)이 빈번하게 발생.
 - **원인 가설**:
@@ -46,7 +46,7 @@ Playwright의 기본 `scrollIntoViewIfNeeded`는 요소를 뷰포트의 상단 �
 
 ## 3. 해결 설계: 2단계 안전 스크롤 및 옵셋 보정
 
-SyncEta 실행 엔진에 커스텀 액션 인터셉터를 구현하여, 클릭 전 뷰포트 중앙 배치 및 고정 헤더 높이만큼의 마진 옵셋(Margin Offset)을 자동으로 계산하도록 개선했습니다.
+SyncETA 실행 엔진에 커스텀 액션 인터셉터를 구현하여, 클릭 전 뷰포트 중앙 배치 및 고정 헤더 높이만큼의 마진 옵셋(Margin Offset)을 자동으로 계산하도록 개선했습니다.
 
 ```typescript
 // 패치된 안전 클릭 액션 (Safe Action Interceptor)
@@ -91,4 +91,4 @@ export async function safeClickElement(page: Page, selector: string, timeoutMs =
 
 - **클릭 액션 타임아웃 발생률**: 기존 8.8% -> **0.1% 미만**으로 대폭 개선.
 - **테스트 스위트 완주 시간**: 불필요한 타임아웃 재시도 대기가 사라져 전체 실행 시간 **22% 단축**.
-- **v0.0.33 릴리즈 반영**: 해당 로직을 SyncEta 데스크톱 런타임 코어 엔진에 기본 탑재 완료.
+- **v0.0.33 릴리즈 반영**: 해당 로직을 SyncETA 데스크톱 런타임 코어 엔진에 기본 탑재 완료.

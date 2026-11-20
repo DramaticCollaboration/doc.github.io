@@ -22,7 +22,7 @@ sort: 1
 
 # SyncCMS: 엔터프라이즈 AI 하이브리드 헤드리스 CMS
 
-> **제품 소개서 및 라이브 데모**: [SyncCMS_Proposal.pdf (12p)](/downloads/proposals/SyncCMS_Proposal.pdf){target="_blank" download="SyncCMS_Proposal.pdf"} · [SyncCMS 라이브 데모 체험](https://sync.empasy.io/products/sync-cms#demo){target="_blank" rel="noopener"} · [제품 공식 페이지](https://empasy.io/ko/solutions/sync-cms.html){target="_blank" rel="noopener"} · [전체 제안서 모음](/proposals/)
+> **비개발자 · 도입 검토 안내**: 쉬운 제품 소개는 [SyncCMS 제품 홈페이지(cms.empasy.io)](https://cms.empasy.io/){target="_blank" rel="noopener"}에서, 설치 없는 화면 체험은 [통합 데모 포털](https://sync.empasy.io/products/sync-cms#demo){target="_blank" rel="noopener"}에서 이용하실 수 있으며, 소개서·제안서 PDF는 [제안서 자료실](/proposals/)에서 내려받으실 수 있습니다.
 
 **SyncCMS**(`https://cms.empasy.io`)는 대고객 웹 포털, 모바일 앱 등 기업의 모든 디지털 접점에서 **Nuxt 3 SSR 고속 렌더링, Copywriter-SEO-Publisher 멀티에이전트 스웜(`CmsSwarmWorkflowService`), HTML Head 메타 정보의 동적 중앙 관리 및 차세대 AI 검색(AEO/GEO) 최적화를 제공하는 엔터프라이즈 하이브리드 헤드리스 CMS**입니다.
 
@@ -34,9 +34,9 @@ sort: 1
 
 ```mermaid
 graph LR
-    A[SyncCMS Enterprise Hub] --> B[1. Nuxt 3 SSR & HTML Head 메타 거버넌스]
-    A --> C[2. Copywriter-SEO-Publisher 스웜 & AEO/GEO]
-    A --> D[3. Spring Boot 4.0 & AgentScope Java 기술 주권]
+    A[SyncCMS Enterprise Hub] --> B["1. Nuxt 3 SSR & HTML Head 메타 거버넌스"]
+    A --> C["2. Copywriter-SEO-Publisher 스웜 & AEO/GEO"]
+    A --> D["3. Spring Boot 4.0 & AgentScope Java 기술 주권"]
 
     B --> B1["하드코딩 탈피 / OG 태그 & Canonical 즉시 제어 / Lottie 자산 관리"]
     C --> C1["3단계 멀티에이전트 자율 저작 / Schema.org JSON-LD 자동 생성"]

@@ -19,16 +19,16 @@ sort: 6
 
 ```mermaid
 flowchart TB
-    Client["옴니채널 스토어프론트 (SYNC SELECT / 모바일 앱 / 외부 몰)"] --> GW["1. sync-shop-gateway\n(라우팅 & 인가 필터)"]
-    GW --> AUTH["2. sync-shop-auth\n(OAuth2 / JWT 인증)"]
-    GW --> PORTAL["3. sync-shop-portal\n(전시·장바구니·주문 API)"]
-    GW --> SEARCH["4. sync-shop-search\n(PostgreSQL 18.6 pgvector + pg_trgm 검색)"]
+    Client["옴니채널 스토어프론트 (SYNC SELECT / 모바일 앱 / 외부 몰)"] --> GW["1. sync-shop-gateway<br/>(라우팅 & 인가 필터)"]
+    GW --> AUTH["2. sync-shop-auth<br/>(OAuth2 / JWT 인증)"]
+    GW --> PORTAL["3. sync-shop-portal<br/>(전시·장바구니·주문 API)"]
+    GW --> SEARCH["4. sync-shop-search<br/>(PostgreSQL 18.6 pgvector + pg_trgm 검색)"]
     
-    AdminUI["SyncShop Admin 백오피스"] --> ADMIN["5. sync-shop-admin\n(PMS / OMS / SMS / UMS 백오피스)"]
-    Verse["SyncVerse 관제탑"] <-->|"MCP JSON-RPC"| MCP["6. sync-shop-mcp-server\n(다이내믹 프라이싱 & 자율 에이전트)"]
-    MONITOR["7. sync-shop-monitor\n(서비스 헬스·메트릭 관제)"] -.-> ADMIN & PORTAL & SEARCH
+    AdminUI["SyncShop Admin 백오피스"] --> ADMIN["5. sync-shop-admin<br/>(PMS / OMS / SMS / UMS 백오피스)"]
+    Verse["SyncVerse 관제탑"] <-->|"MCP JSON-RPC"| MCP["6. sync-shop-mcp-server<br/>(다이내믹 프라이싱 & 자율 에이전트)"]
+    MONITOR["7. sync-shop-monitor<br/>(서비스 헬스·메트릭 관제)"] -.-> ADMIN & PORTAL & SEARCH
     
-    ADMIN & PORTAL & SEARCH & MCP --> MBG["8. sync-shop-mbg & 9. sync-shop-common\n(도메인 매퍼 & 공통 보안/유틸리티)"]
+    ADMIN & PORTAL & SEARCH & MCP --> MBG["8. sync-shop-mbg & 9. sync-shop-common<br/>(도메인 매퍼 & 공통 보안/유틸리티)"]
     MBG --> DB[("PostgreSQL 18.6 + Redis 7")]
 ```
 

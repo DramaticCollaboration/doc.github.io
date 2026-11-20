@@ -21,8 +21,8 @@ flowchart LR
     end
 
     subgraph SyncInsight ["SyncInsight 의사결정 인텔리전스"]
-        S1["Apache Calcite Safe NL2SQL\n+ 2-Phase Deep Research"] --> S2["멀티 에이전트 라운드테이블 토론\n& What-If 시뮬레이션"]
-        S2 --> S3["HITL 승인 후 도메인 에이전트\n(SyncShop/CMS/Boot) MCP 즉시 실행"]
+        S1["Apache Calcite Safe NL2SQL<br/>+ 2-Phase Deep Research"] --> S2["멀티 에이전트 라운드테이블 토론<br/>& What-If 시뮬레이션"]
+        S2 --> S3["HITL 승인 후 도메인 에이전트<br/>(SyncShop/CMS/Boot) MCP 즉시 실행"]
     end
 ```
 

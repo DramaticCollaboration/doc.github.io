@@ -15,18 +15,18 @@ SyncCrawl은 대규모 크롤링 워크로드 처리와 안정적인 운영, AI 
 ```mermaid
 graph TD
     subgraph "1. 화면 및 시나리오 제어 계층 (Presentation Layer)"
-        UI1[운영자 웹 콘솔 - Vue 3 / Vite / Quasar]
+        UI1["운영자 웹 콘솔 - Vue 3 / Vite / Quasar"]
         UI2[대화형 자연어 시나리오 빌더]
         UI3[외부 시스템 REST API 클라이언트]
         UI4[MCP Client - SyncVerse 에이전트 연동]
     end
 
     subgraph "2. 오케스트레이션 및 스케줄링 계층 (Orchestration Layer)"
-        GW[REST API Controller / Rate Limiter]
-        AUTH[RBAC 인증 / 토큰 무결성 검증]
+        GW["REST API Controller / Rate Limiter"]
+        AUTH["RBAC 인증 / 토큰 무결성 검증"]
         SCHED[Quartz 분산 크롤링 스케줄러]
         AS[AgentScope Java AI 오케스트레이션 엔진]
-        QUEUE[Redisson 분산 작업 큐 / 핸드오프]
+        QUEUE["Redisson 분산 작업 큐 / 핸드오프"]
     end
 
     subgraph "3. 브라우저 자동화 및 실행 계층 (Worker & Execution Layer)"
@@ -38,11 +38,11 @@ graph TD
     end
 
     subgraph "4. 데이터 & RAG 인프라 계층 (Data & Infra Layer)"
-        RDB[(PostgreSQL - 수집 메타/실행 이력/Quartz)]
-        VEC[(Vector DB - PGVector / Milvus / Qdrant 지식베이스)]
-        CACHE[(Redis - 분산 락 / 세션 / 상태 캐시)]
-        STORAGE[(MinIO / S3 - HTML 스냅샷 / 캡처 증적)]
-        LLM[사내 구축 Private LLM / Embedding - vLLM / Ollama]
+        RDB[("PostgreSQL - 수집 메타/실행 이력/Quartz")]
+        VEC[("Vector DB - PGVector / Milvus / Qdrant 지식베이스")]
+        CACHE[("Redis - 분산 락 / 세션 / 상태 캐시")]
+        STORAGE[("MinIO / S3 - HTML 스냅샷 / 캡처 증적")]
+        LLM["사내 구축 Private LLM / Embedding - vLLM / Ollama"]
     end
 
     UI1 & UI2 & UI3 & UI4 --> GW

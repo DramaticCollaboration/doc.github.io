@@ -26,13 +26,13 @@ SyncETA의 자가 치유(Self-Healing) 엔진은 단순 텍스트 검색에 머�
 ```mermaid
 graph TD
     A[Playwright Action Failure] -->|NoSuchElementError| B[Self-Healing Trigger]
-    B -->|화면 캡처 & 활성 DOM 추출| C[Context Aggregator]
+    B -->|"화면 캡처 & 활성 DOM 추출"| C[Context Aggregator]
     C -->|이미지 + 요소 메타데이터| D[Vision-LLM Engine]
     D -->|정규화 좌표 0~1000 Box| E[Coordinate Mapper]
     E -->|CDP DOM.getNodeForLocation| F[DOM Element Resolver]
     F -->|대체 선택자 생성| G[Candidate Selector Generator]
     G -->|고유성 및 상호작용성 검증| H{Validation Pass?}
-    H -->|Yes| I[Script Patch & Resume]
+    H -->|Yes| I["Script Patch & Resume"]
     H -->|No| J[Human-in-the-Loop Escalation]
 ```
 

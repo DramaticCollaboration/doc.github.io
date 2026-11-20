@@ -19,21 +19,21 @@ SyncSeries는 루트 `pom.xml` 멀티모듈 체계 아래 개별 도메인 서�
 
 ```mermaid
 graph TD
-    App["SyncSeries 11대 엔터프라이즈 AI 에이전트 제품군\n(SyncVerse, SyncInsight, SyncLLM, SyncBoot, SyncCMS, SyncShop, SyncOps, SyncCrawl, SyncAPIM, SyncWatch, SyncETA)"]
+    App["SyncSeries 11대 엔터프라이즈 AI 에이전트 제품군<br/>(SyncVerse, SyncInsight, SyncLLM, SyncBoot, SyncCMS, SyncShop, SyncOps, SyncCrawl, SyncAPIM, SyncWatch, SyncETA)"]
     
     subgraph CoreFoundation ["기반, 동적 설정/프롬프트 및 클러스터 동기화 레이어"]
-        Core["sync-core\n(SystemConfigHolder, SystemPromptHolder, ClusterEventBroadcaster, SagaCoordinator)"]
-        Ai["sync-module-ai\n(AgentScope Java 2.0.2, ReActAgent, MsgHub, SemanticTaskRouter)"]
+        Core["sync-core<br/>(SystemConfigHolder, SystemPromptHolder, ClusterEventBroadcaster, SagaCoordinator)"]
+        Ai["sync-module-ai<br/>(AgentScope Java 2.0.2, ReActAgent, MsgHub, SemanticTaskRouter)"]
     end
 
     subgraph IntelligenceLayer ["지능형 분석 및 지식/감사 레이어"]
-        Rag["sync-module-rag\n(PostgreSQL 18.6 pgvector Tri-Hybrid RAG)"]
-        Nl2Sql["sync-module-nl2sql\n(Apache Calcite 1.37 AST 안전 질의 엔진)"]
-        Audit["sync-module-audit\n(Playwright SEO/AEO/GEO 360 품질 감사)"]
+        Rag["sync-module-rag<br/>(PostgreSQL 18.6 pgvector Tri-Hybrid RAG)"]
+        Nl2Sql["sync-module-nl2sql<br/>(Apache Calcite 1.37 AST 안전 질의 엔진)"]
+        Audit["sync-module-audit<br/>(Playwright SEO/AEO/GEO 360 품질 감사)"]
     end
 
     subgraph DeliveryLayer ["무중단 배포 및 인프라 제어 레이어"]
-        Deploy["sync-module-deploy\n(GitHub Actions / ArgoCD / Jenkins 배포 및 롤백)"]
+        Deploy["sync-module-deploy<br/>(GitHub Actions / ArgoCD / Jenkins 배포 및 롤백)"]
     end
 
     App --> CoreFoundation

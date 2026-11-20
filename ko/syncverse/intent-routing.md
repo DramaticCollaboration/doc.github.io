@@ -27,14 +27,14 @@ SyncVerse는 시스템 안정성을 위해 **데이터 운영 작업**과 **소�
 
 ```mermaid
 flowchart TD
-    Prompt["자연어 사용자 지시 입력"] --> Classifier{"Intent Classifier\n(AgentScope Java Router)"}
+    Prompt["자연어 사용자 지시 입력"] --> Classifier{"Intent Classifier<br/>(AgentScope Java Router)"}
 
-    Classifier -->|"운영 데이터 변경 (신뢰도 >= 0.85)"| Ops["운영(CRUD) 경로\nSyncBoot / SyncCMS 워커"]
-    Classifier -->|"소스코드/DDL 수정 (신뢰도 >= 0.85)"| Dev["개발(Code) 경로\nSyncSDK 코딩 에이전트"]
-    Classifier -->|"신뢰도 미달 (< 0.85)"| Clarify["사용자 추가 질의 (HITL\nClarification Prompt)"]
+    Classifier -->|"운영 데이터 변경 (신뢰도 >= 0.85)"| Ops["운영(CRUD) 경로<br/>SyncBoot / SyncCMS 워커"]
+    Classifier -->|"소스코드/DDL 수정 (신뢰도 >= 0.85)"| Dev["개발(Code) 경로<br/>SyncSDK 코딩 에이전트"]
+    Classifier -->|"신뢰도 미달 (< 0.85)"| Clarify["사용자 추가 질의 (HITL<br/>Clarification Prompt)"]
 
     Ops --> OpsExec["실제 DB 쿼리 / 콘텐츠 반영"]
-    Dev --> DevBranch["Git 격리 브랜치 생성\n소프트웨어 자율 수정"]
+    Dev --> DevBranch["Git 격리 브랜치 생성<br/>소프트웨어 자율 수정"]
 ```
 
 ### 카테고리별 분류 기준
@@ -68,9 +68,9 @@ flowchart TD
 ### 분해 결과 (DAG 체인):
 ```mermaid
 flowchart LR
-    T1["Step 1: SyncCMS\n(이벤트 페이지 등록)"] --> T2["Step 2: SyncSDK\n(쿠폰 발급 로직 코드 수정)"]
-    T2 --> T3["Step 3: SyncETA\n(쿠폰 발급 E2E 리그레션 테스트)"]
-    T3 --> T4["Step 4: HITL\n(아키텍트 최종 배포 승인)"]
+    T1["Step 1: SyncCMS<br/>(이벤트 페이지 등록)"] --> T2["Step 2: SyncSDK<br/>(쿠폰 발급 로직 코드 수정)"]
+    T2 --> T3["Step 3: SyncETA<br/>(쿠폰 발급 E2E 리그레션 테스트)"]
+    T3 --> T4["Step 4: HITL<br/>(아키텍트 최종 배포 승인)"]
 ```
 
 ---

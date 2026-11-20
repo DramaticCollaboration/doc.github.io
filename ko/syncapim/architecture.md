@@ -34,20 +34,20 @@ sort: 2
 ```mermaid
 flowchart TD
     subgraph TrafficSources ["보호 대상 API 호스트 & 수집 에이전트"]
-        Beat["Packetbeat / Filebeat\n(TCP 5044 / 5055)"]
-        Client["API 클라이언트 요청\n(HTTP/HTTPS)"]
+        Beat["Packetbeat / Filebeat<br/>(TCP 5044 / 5055)"]
+        Client["API 클라이언트 요청<br/>(HTTP/HTTPS)"]
     end
 
     subgraph SyncApimCluster ["SyncAPIM 4-JVM 독립 프로세스 클러스터"]
-        GW["JVM #4: sync-apim-gateway (18091)\n동적 BlockedApiFilter & 트래픽 미러링"]
-        RCV["JVM #2: sync-apim-receiver (18090)\nVirtual Thread 패킷 라우터 & 수집 API"]
-        DET["JVM #3: sync-apim-detector (18092)\nOpenAPI 3.0 추론 · WAF 룰 매칭 · PII 마스킹"]
-        ADM["JVM #1: sync-apim-admin (18089)\n통합 관제 API · 통계 배치 · MCP Server"]
+        GW["JVM #4: sync-apim-gateway (18091)<br/>동적 BlockedApiFilter & 트래픽 미러링"]
+        RCV["JVM #2: sync-apim-receiver (18090)<br/>Virtual Thread 패킷 라우터 & 수집 API"]
+        DET["JVM #3: sync-apim-detector (18092)<br/>OpenAPI 3.0 추론 · WAF 룰 매칭 · PII 마스킹"]
+        ADM["JVM #1: sync-apim-admin (18089)<br/>통합 관제 API · 통계 배치 · MCP Server"]
     end
 
     subgraph Storage ["전사 단일 데이터 플레인"]
-        Redis[("Redis 7\nStream: job_queue\nCache: wapf:policy:rules / blocked:endpoints")]
-        PG[("PostgreSQL 18.6 (sync_apim)\nwapf_* 17개 테이블 + pg_trgm GIN 인덱스")]
+        Redis[("Redis 7<br/>Stream: job_queue<br/>Cache: wapf:policy:rules / blocked:endpoints")]
+        PG[("PostgreSQL 18.6 (sync_apim)<br/>wapf_* 17개 테이블 + pg_trgm GIN 인덱스")]
     end
 
     Client --> GW
@@ -57,7 +57,7 @@ flowchart TD
     Redis -->|XREADGROUP| DET
     DET -->|엔드포인트·스펙·탐지이벤트 저장| PG
     ADM <-->|카탈로그·정책·통계·드리프트 감사| PG
-    ADM -->|정책/민감정보/차단목록 실시간 동기화| Redis
+    ADM -->|"정책/민감정보/차단목록 실시간 동기화"| Redis
     Redis -->|차단 경로 및 탐지 룰 즉시 반영| GW
     Redis -->|탐지 룰 및 PII 패턴 캐시 조회| DET
 ```

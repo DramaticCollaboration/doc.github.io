@@ -45,7 +45,7 @@ flowchart LR
         A3["Swarm Worker"]
     end
 
-    Services -->|SSE / stdio| T1
+    Services -->|"SSE / stdio"| T1
     T1 --> T2
     T2 --> T3
     T3 <-->|표준 MCP Tools Call| Agents

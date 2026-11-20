@@ -30,11 +30,11 @@ SyncCrawl 및 SyncInsight는 이러한 한계를 극복하기 위해 **Sparse(BM
 
 ```mermaid
 graph TD
-    A[사용자 질의 Query] --> B[Sparse 검색: Elasticsearch/OpenSearch BM25]
-    A --> C[Dense 검색: Vector DB pgvector/Qdrant Cosine]
-    B -->|Top-K 50건| D[결과 통합: Reciprocal Rank Fusion RRF]
+    A[사용자 질의 Query] --> B["Sparse 검색: Elasticsearch/OpenSearch BM25"]
+    A --> C["Dense 검색: Vector DB pgvector/Qdrant Cosine"]
+    B -->|Top-K 50건| D["결과 통합: Reciprocal Rank Fusion RRF"]
     C -->|Top-K 50건| D
-    D -->|통합 상위 30건| E[Cross-Encoder Reranker: BGE-Reranker-Large]
+    D -->|통합 상위 30건| E["Cross-Encoder Reranker: BGE-Reranker-Large"]
     E -->|정밀 유사도 재채점| F[최종 상위 5건 Context]
     F --> G[LLM 프롬프트 주입 및 답변 생성]
 ```

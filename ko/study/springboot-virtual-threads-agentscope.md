@@ -18,7 +18,7 @@ sort: 50
 전통적인 웹 백엔드는 데이터베이스 쿼리나 캐시 조회가 수 밀리초(ms) 단위로 완료되는 반면, **자율 AI 에이전트 시스템(A2A)**은 본질적으로 극단적인 **I/O Bound 워크로드**를 가집니다:
 
 - **LLM API 추론 대기 시간**: 모델 호출 1회당 1초~10초의 긴 HTTP 통신 대기 발생.
-- **다단계 도구 체이닝**: 데이터베이스 스키마 생성(SyncBoot), 크롤링(SyncCrawl), E2E 테스트(SyncEta) 등 복수 에이전트 간 순차/병렬 메시지 교환.
+- **다단계 도구 체이닝**: 데이터베이스 스키마 생성(SyncBoot), 크롤링(SyncCrawl), E2E 테스트(SyncETA) 등 복수 에이전트 간 순차/병렬 메시지 교환.
 - **전통적 OS 플랫폼 스레드의 한계**: 1개 스레드당 약 1MB의 스택 메모리를 점유하므로, 동시 활성 에이전트가 수천 개로 증가할 경우 스레드 풀 고갈(`OutOfMemoryError: unable to create native thread`) 및 컨텍스트 스위칭 오버헤드로 시스템이 급격히 저하됩니다.
 
 SyncSeries의 Java 백엔드 표준 프레임워크인 **SyncBoot**와 **AgentScope Java**(`io.agentscope:agentscope-harness`)는 이 문제를 해결하기 위해 **Java 25 가상 스레드(Virtual Threads)**를 기본 런타임으로 채택했습니다.
@@ -32,10 +32,10 @@ SyncSeries의 Java 백엔드 표준 프레임워크인 **SyncBoot**와 **AgentSc
 ```mermaid
 graph TD
     subgraph "수만 개의 가상 스레드 (Virtual Threads)"
-        V1[Virtual Thread 1: LLM 호출 대기]
-        V2[Virtual Thread 2: DB 쿼리 실행]
-        V3[Virtual Thread 3: MCP 도구 호출 대기]
-        V4[Virtual Thread N: SSE 스트리밍]
+        V1["Virtual Thread 1: LLM 호출 대기"]
+        V2["Virtual Thread 2: DB 쿼리 실행"]
+        V3["Virtual Thread 3: MCP 도구 호출 대기"]
+        V4["Virtual Thread N: SSE 스트리밍"]
     end
 
     subgraph "소수 캐리어 스레드 (ForkJoinPool Worker - CPU Core 수)"
@@ -48,7 +48,7 @@ graph TD
         K[OS Kernel CPU Scheduler]
     end
 
-    V1 -.->|I/O 블로킹 시 언마운트| C1
+    V1 -.->|"I/O 블로킹 시 언마운트"| C1
     V2 -->|활성 연산 중 마운트| C1
     V3 -.->|언마운트| C2
     C1 --> K

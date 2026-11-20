@@ -21,7 +21,7 @@ head:
 
 # SyncBoot: 디지털 백엔드 프레임워크 개요
 
-> **제품 소개서 및 라이브 데모**: [SyncBoot_Proposal.pdf (12p)](/downloads/proposals/SyncBoot_Proposal.pdf){target="_blank" download="SyncBoot_Proposal.pdf"} · [SyncBoot 라이브 데모 체험](https://sync.empasy.io/products/sync-boot#demo){target="_blank" rel="noopener"} · [제품 공식 페이지](https://empasy.io/ko/solutions/sync-boot.html){target="_blank" rel="noopener"} · [전체 제안서 모음](/proposals/)
+> **비개발자 · 도입 검토 안내**: 쉬운 제품 소개는 [SyncBoot 제품 홈페이지(boot.empasy.io)](https://boot.empasy.io/){target="_blank" rel="noopener"}에서, 설치 없는 화면 체험은 [통합 데모 포털](https://sync.empasy.io/products/sync-boot#demo){target="_blank" rel="noopener"}에서 이용하실 수 있으며, 소개서·제안서 PDF는 [제안서 자료실](/proposals/)에서 내려받으실 수 있습니다.
 
 SyncBoot는 비즈니스 도메인 맥락을 인지하여 데이터베이스 운영과 API 개발을 지원하는 Java 기반 엔터프라이즈 백엔드 플랫폼입니다.
 
@@ -36,7 +36,7 @@ graph LR
     A[SyncBoot 4대 핵심 영역] --> B[1. 도메인 CRUD 운영]
     A --> C[2. 6-File 스키마 관리]
     A --> D[3. 풀스택 코드 생성기]
-    A --> E[4. 엔터프라이즈 IAM & 멀티테넌트]
+    A --> E["4. 엔터프라이즈 IAM & 멀티테넌트"]
 
     B -.-> B1[자연어 질의 및 트랜잭션 처리]
     C -.-> C1[00_extensions ~ 05_sample_dev 분리 및 사전 승인]

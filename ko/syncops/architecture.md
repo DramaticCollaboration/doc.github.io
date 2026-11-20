@@ -39,17 +39,17 @@ flowchart TD
     end
 
     subgraph SyncOpsSwarm ["Tier 3: SyncOps AgentScope Java 에이전트 스웜"]
-        TM["TalentMatcher\n(pgvector 스킬 매칭 & 벤치 해소)"]
-        RG["RiskGuard\n(듀얼단가 손익 번다운 & 하도급법 감시)"]
-        HB["HandoverBriefing\n(원클릭 업무 인수인계 브리핑)"]
-        DI["DocInspector\n(KOSA 등급 판정 & 연구노트 SHA-256 검증)"]
+        TM["TalentMatcher<br/>(pgvector 스킬 매칭 & 벤치 해소)"]
+        RG["RiskGuard<br/>(듀얼단가 손익 번다운 & 하도급법 감시)"]
+        HB["HandoverBriefing<br/>(원클릭 업무 인수인계 브리핑)"]
+        DI["DocInspector<br/>(KOSA 등급 판정 & 연구노트 SHA-256 검증)"]
     end
 
     subgraph DomainDB ["PostgreSQL 18.6 + pgvector (ops_* 도메인 스키마)"]
-        Emp[("ops_employee / ops_employee_profile\nops_skill_tag / ops_career_kosa")]
-        Proj[("ops_project / ops_assignment\nops_resource_allocation / ops_timesheet")]
-        Cont[("ops_contract_client / ops_contract_vendor\nops_guarantee_insurance (ops_surety_bond)\nops_vendor_milestone (ops_subcontract_payment)")]
-        Rnd[("ops_research_project\nops_research_note (ops_rnd_research_note)")]
+        Emp[("ops_employee / ops_employee_profile<br/>ops_skill_tag / ops_career_kosa")]
+        Proj[("ops_project / ops_assignment<br/>ops_resource_allocation / ops_timesheet")]
+        Cont[("ops_contract_client / ops_contract_vendor<br/>ops_guarantee_insurance (ops_surety_bond)<br/>ops_vendor_milestone (ops_subcontract_payment)")]
+        Rnd[("ops_research_project<br/>ops_research_note (ops_rnd_research_note)")]
     end
 
     TM <--> Emp
@@ -61,7 +61,7 @@ flowchart TD
 
     RG -->|OPS_RISK_ALERT| EventBus
     TM -->|OPS_BENCH_ALERT| EventBus
-    Cont -->|과업변경(CR) & R&D 차출 승인| HITL
+    Cont -->|"과업변경(CR) & R&D 차출 승인"| HITL
 ```
 
 ### 1.1 `TalentMatcher` (인력 매칭 및 유휴 벤치 해소 에이전트)

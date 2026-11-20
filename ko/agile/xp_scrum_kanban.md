@@ -185,37 +185,37 @@ XP, Scrum, Kanban은 서로 경쟁하는 방법론이 아닙니다.이들은 서
 
 ```mermaid
 flowchart TD
-    A[<b>Product Backlog</b><br>PO가 우선순위 관리] --> B[Sprint Planning Meeting];
+    A["<b>Product Backlog</b><br/>PO가 우선순위 관리"] --> B[Sprint Planning Meeting];
 
-    subgraph B [Scrum 이벤트: 계획]
+    subgraph B ["Scrum 이벤트: 계획"]
         direction LR
-        B1[PO: What<br>무엇을 만들지?] --> B2[Dev Team: 어떻게<br>만들지?<br>작업 Task 분해];
+        B1["PO: What<br/>무엇을 만들지?"] --> B2["Dev Team: 어떻게<br/>만들지?<br/>작업 Task 분해"];
     end
 
-    B --> C[<b>Sprint Backlog</b><br>Task 단위 목록];
-    C --> D[<b>Kanban Board</b>에 Task 배치];
+    B --> C["<b>Sprint Backlog</b><br/>Task 단위 목록"];
+    C --> D["<b>Kanban Board</b>에 Task 배치"];
 
-    subgraph E [스프린트 내 작업 실행<br>XP + Kanban]
+    subgraph E ["스프린트 내 작업 실행<br/>XP + Kanban"]
         direction TB
-        F[To Do<br>대기] --> G[Development<br>WIP Limit: 4<br>**XP 실천법 적용**<br>- TDD<br>- Pair Programming<br>- CI];
-        G --> H[Code Review<br>WIP Limit: 2];
+        F["To Do<br/>대기"] --> G["Development<br/>WIP Limit: 4<br/>**XP 실천법 적용**<br/>- TDD<br/>- Pair Programming<br/>- CI"];
+        G --> H["Code Review<br/>WIP Limit: 2"];
         H --> I[Testing];
         I --> J[Done];
     end
 
     D --> E;
 
-    subgraph K [Scrum 이벤트: 일상]
-        L[<b>Daily Scrum</b><br>보드를 보며<br>진행 상황 공유<br>장애물 확인];
+    subgraph K ["Scrum 이벤트: 일상"]
+        L["<b>Daily Scrum</b><br/>보드를 보며<br/>진행 상황 공유<br/>장애물 확인"];
     end
 
     E --> L;
-    J --> M[<b>Increment</b><br>작동하는 소프트웨어];
+    J --> M["<b>Increment</b><br/>작동하는 소프트웨어"];
 
-    subgraph N [Scrum 이벤트: 검사 및 적응]
+    subgraph N ["Scrum 이벤트: 검사 및 적응"]
         direction LR
-        O[Sprint Review<br>고객/PO에게<br>Increment 시연<br>피드백 반영];
-        P[Sprint Retrospective<br>프로세스 개선 도출<br>ex “WIP Limit 조정”<br>“TDD 적용 범위 확대”];
+        O["Sprint Review<br/>고객/PO에게<br/>Increment 시연<br/>피드백 반영"];
+        P["Sprint Retrospective<br/>프로세스 개선 도출<br/>ex “WIP Limit 조정”<br/>“TDD 적용 범위 확대”"];
     end
 
     M --> N;

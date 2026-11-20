@@ -23,6 +23,8 @@ sort: 1
 
 # SyncAPIM: AI 자율 API 보안 관제 및 명세 거버넌스 플랫폼
 
+> **비개발자 · 도입 검토 안내**: 쉬운 제품 소개는 [SyncAPIM 제품 홈페이지(apim.empasy.io)](https://apim.empasy.io/){target="_blank" rel="noopener"}에서, 설치 없는 화면 체험은 [통합 데모 포털](https://sync.empasy.io/products/sync-apim#demo){target="_blank" rel="noopener"}에서 이용하실 수 있으며, 소개서·제안서 PDF는 [제안서 자료실](/proposals/)에서 내려받으실 수 있습니다.
+
 > [!IMPORTANT]
 > **SyncSeries 4-Tier API 보안·관제 에이전트 (`SYNC_APIM`)**: `SyncAPIM`은 마이크로서비스 및 레거시 WAS 앞단에서 유통되는 모든 API 트래픽을 실시간 수집하여 **구문 토큰 지문 분석기(`SqlXssLexicalTokenizer`)**, **`SyncWatch` 연동 실시간 공격 패턴 탐지·핀셋 가상 패치(`ApimDefensePack` & `SandboxedDefenseEvaluator`)**, **커널 eBPF 차단**, **미등록 섀도우 API 자동 카탈로그화**, **OpenAPI 3.0.1 명세 드리프트 진단**, **8대 개인·금융 민감정보 동적 마스킹**을 자율 수행합니다.
 

@@ -36,7 +36,7 @@ graph TD
     C -->|Page.getLayoutMetrics| D[Chromium Blink Engine]
     C -->|Emulation.setDefaultBackgroundColorOverride| D
     C -->|CSS.stopRuleUsageTracking| D
-    D -->|RAF & Paint Events| E[Render Frame]
+    D -->|"RAF & Paint Events"| E[Render Frame]
 ```
 
 ### 핵심 CDP 파라미터 제어

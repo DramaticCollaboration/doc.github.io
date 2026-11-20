@@ -56,10 +56,10 @@ AI가 생성한 테스트 케이스나 자가 치유 선택자를 시스템에 �
 
 ```mermaid
 flowchart LR
-    Project["Project (프로젝트)\n최상위 RBAC 격리 단위"] --> Collection["Collection (컬렉션)\n순차/병렬 일괄 실행 스위트"]
-    Project --> Story["Story (스토리)\n플로우차트 세션 유지 워크플로우"]
-    Collection --> Scenario["Scenario (시나리오)\n단위 비즈니스 테스트 케이스"]
+    Project["Project (프로젝트)<br/>최상위 RBAC 격리 단위"] --> Collection["Collection (컬렉션)<br/>순차/병렬 일괄 실행 스위트"]
+    Project --> Story["Story (스토리)<br/>플로우차트 세션 유지 워크플로우"]
+    Collection --> Scenario["Scenario (시나리오)<br/>단위 비즈니스 테스트 케이스"]
     Story --> Scenario
-    Scenario --> Record["Record (레코드)\n최소 DOM 액션 & 검증 스텝"]
-    Dataset["Data Set (데이터셋)\n파라미터 테이블 / Excel"] -.->|"변수 바인딩 {{var}}"| Scenario
+    Scenario --> Record["Record (레코드)<br/>최소 DOM 액션 & 검증 스텝"]
+    Dataset["Data Set (데이터셋)<br/>파라미터 테이블 / Excel"] -.->|"변수 바인딩 {{var}}"| Scenario
 ```

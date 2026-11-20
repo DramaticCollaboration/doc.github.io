@@ -22,7 +22,7 @@ sort: 1
 
 # SyncShop: 지능형 커머스 운영 플랫폼 개요
 
-> **제품 소개서 및 라이브 데모**: [SyncShop_Proposal.pdf (12p)](/downloads/proposals/SyncShop_Proposal.pdf){target="_blank" download="SyncShop_Proposal.pdf"} · [SyncShop 라이브 데모 체험](https://sync.empasy.io/products/sync-shop#demo){target="_blank" rel="noopener"} · [제품 공식 페이지](https://empasy.io/ko/solutions/sync-shop.html){target="_blank" rel="noopener"} · [전체 제안서 모음](/proposals/)
+> **비개발자 · 도입 검토 안내**: 쉬운 제품 소개는 [SyncShop 제품 홈페이지(shop.empasy.io)](https://shop.empasy.io/){target="_blank" rel="noopener"}에서, 설치 없는 화면 체험은 [통합 데모 포털](https://sync.empasy.io/products/sync-shop#demo){target="_blank" rel="noopener"}에서 이용하실 수 있으며, 소개서·제안서 PDF는 [제안서 자료실](/proposals/)에서 내려받으실 수 있습니다.
 
 SyncShop은 비즈니스 유연성과 채널 확장성을 위해 백엔드 상거래 로직과 프론트엔드 표현층을 분리한 **Headless eCommerce** 플랫폼입니다.
 
