@@ -58,10 +58,10 @@ flowchart LR
 AI에게 프로젝트 전체를 제한 없이 수정하도록 맡기면 의도치 않은 파일이 바뀌는 문제가 생길 수 있습니다. 이번 기능 구현에 필요한 파일 목록(`focusFiles`)을 명시하여 작업 범위를 한정합니다.
 * 예시: `CouponController.java`, `CouponService.java`, `CouponRepository.java`, `CouponApplyModal.vue`
 
-### 2단계: 백엔드 계층별 구현
-1. **데이터 접근 계층 (Repository / Mapper)**: 데이터베이스 쿼리 메서드 작성.
-2. **비즈니스 계층 (Service)**: 유효성 검증(만료, 잔액 부족, 중복 방지) 및 트랜잭션(`@Transactional`) 처리.
-3. **컨트롤러 계층 (Controller)**: `@RequiredArgsConstructor` 생성자 주입 및 표준 단일 URL 매핑.
+### 2단계: 백엔드 계층별 구현 (AgentScope Java · Lombok 표준)
+1. **데이터 접근 계층 (Repository / Mapper)**: 데이터베이스 쿼리 메서드 작성 (실제 PostgreSQL 18.6 연동, 임시 더미 반환 금지).
+2. **비즈니스 계층 (Service)**: 유효성 검증(만료, 잔액 부족, 중복 방지) 및 트랜잭션(`@Transactional`) 처리. AI 추론(`AgentScope Java`) 및 외부 MCP I/O는 반드시 `@Transactional` 외부로 분리.
+3. **컨트롤러 계층 (Controller)**: `@RequiredArgsConstructor` 생성자 주입, `@Slf4j` 구조화 로깅, 표준 단일 Canonical URL(`/api/v1/{product}/{resource}`) 매핑.
 
 ### 3단계: 프론트엔드 컴포넌트 분리 구현
 1. **API 호출 모듈**: 백엔드 표준 URL을 호출하는 통신 함수 작성.
@@ -120,19 +120,21 @@ AI에게 프로젝트 전체를 제한 없이 수정하도록 맡기면 의도�
 
 ---
 
-### 프롬프트 3: IDE 설정 규칙 예시 (.cursorrules)
+### 프롬프트 3: 에이전트 공통 규칙 파일 예시 (`.agents/AGENTS.md` / IDE 규칙 연동)
 ```markdown
-# 프로젝트 루트의 .cursorrules 파일에 설정하여 기본 코딩 규칙을 자동 안내합니다:
+# 프로젝트 루트의 .agents/AGENTS.md (및 IDE 규칙 파일)에 전사 개발 표준을 선언합니다:
 
 본 에이전트는 프로젝트의 개발 표준을 엄격히 준수하는 엔지니어링 에이전트입니다.
 아래 코딩 규칙을 지켜주세요:
-1. Java:
-   - DTO, Entity, Service에 Lombok을 적용합니다 (@Getter, @Builder, @RequiredArgsConstructor).
-   - Controller 매핑은 단일 표준 URL인 `/api/v1/{domain}/{resource}` 형식을 사용합니다.
-   - 임시 더미 리턴(return null 등)을 지양하고 실제 로직을 연결합니다.
-2. Vue 3:
-   - 모달 팝업은 components/<Name>Modal.vue로 독립 분리하여 작성합니다.
-   - 정적 라우트 하드코딩 대신 DB 기반 동적 메뉴 연동을 고려합니다.
+1. Java (JDK 25 / Spring Boot 4.0):
+   - DTO, Entity, Service에 Lombok을 적용합니다 (@Getter, @Builder, @RequiredArgsConstructor, @Slf4j).
+   - Controller 매핑은 단일 표준 URL인 `/api/v1/{product}/{resource}` 형식을 사용합니다.
+   - AI 기능은 AgentScope Java를 표준으로 사용하며 @Transactional 외부에서 호출합니다.
+   - 임시 더미 리턴(return null 등)과 가짜 예외 폴백을 금지하고 실제 DB 로직을 연결합니다.
+2. Vue 3 (Vben Admin):
+   - BasicTable, BasicModal, BasicForm 표준 컴포넌트를 우선 사용합니다.
+   - 모달 팝업은 components/<Name>Modal.vue로 독립 분리하고 내부 패딩(p-4)을 확보합니다.
+   - 정적 라우트 하드코딩을 금지하고 DB(sys_permission) 기반 동적 메뉴 연동을 준수합니다.
 ```
 
 ---
@@ -149,8 +151,11 @@ AI에게 프로젝트 전체를 제한 없이 수정하도록 맡기면 의도�
 
 ## 6. 단계 완료 점검 체크리스트 (종료 기준)
 
-다음 단계인 **[04단계: 테스트 및 자동 수정]**으로 넘어가기 위해 아래 항목을 확인합니다:
+다음 단계인 **[04단계: 테스트 및 자동 수정](./ai-sdlc-04-testing.md)**으로 넘어가기 위해 아래 항목을 확인합니다:
 - [ ] DTO, 서비스, 컨트롤러에 Lombok 및 생성자 주입이 적용되었는가?
 - [ ] 모달 팝업이 독립 컴포넌트로 분리되었는가?
 - [ ] 로컬 실행 시 프론트엔드와 백엔드가 실제 데이터베이스와 정상 연동되는가?
 - [ ] 지정한 수정 대상 파일 외에 다른 파일이 변경되지 않았는가? (`git status` 확인)
+
+### 연계 공식 산출물 (Phase 3)
+* **[EMP-P3-01] 주간업무보고서** · **[EMP-P3-10] 과업변경요청서(CR Form)** · **[EMP-P3-14] REST API 개발매뉴얼** · **[EMP-P3-15] AI 비즈니스규칙사전** · **[EMP-P3-16] AI 프롬프트명세서** -> [표준 서식 다운로드 센터 바로가기](./enterprise-document-templates.md#emp-p3-01)

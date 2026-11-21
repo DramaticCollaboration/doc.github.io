@@ -17,6 +17,7 @@ export default withMermaid(
   rewrites: {
     "ko/:rest*": ":rest*",
   },
+  srcExclude: ["public/**"],
 
   lastUpdated: true,
   cleanUrls: true,

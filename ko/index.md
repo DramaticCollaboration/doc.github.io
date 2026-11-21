@@ -114,7 +114,7 @@ SyncSeries는 서로 무관한 11개의 개별 시스템을 별도로 만든 것
 | **전사 기술 용어집** | MCP, A2A, AgentScope Java, NL2SQL, GraphRAG, HITL, eBPF, FinOps 등 표준 기술 용어 정의 | [전사 기술 용어집 →](/glossary/) |
 | **공통 모듈 및 SDK** | 공통 코어(`sync-core`), 도메인 공통 모듈(`sync-module-*`), 연동 SDK 가이드 | [개발자 센터 →](/sdk/) · [공통 모듈 →](/ecosystem/shared-modules-and-sdk) |
 | **사업 전 주기 방법론** | 제안·분석·설계·구현·테스트·이관 6단계 수행 절차 및 점검 기준 | [방법론 개요 →](/methodology/) |
-| **표준 산출물 양식 (191종)** | 요구사항정의서, WBS, 화면설계서, 테스트 시나리오 등 오피스·마크다운·PM 스위트 191종 | [표준 산출물 양식 →](/methodology/enterprise-document-templates) |
+| **표준 산출물 양식 (125종)** | 90-8-2 전사 표준 포맷으로 통일된 단계별 오피스 125종, 동기화 마크다운 14종, 규모별 Tailoring 프리셋 | [표준 산출물 양식 →](/methodology/enterprise-document-templates) |
 | **애자일 및 Git 협업** | 스크럼반(Scrumban) 운영 절차, Git 브랜치 전략, 스프린트 점검표 | [애자일 가이드 →](/agile/) |
 | **소개서 · 제안서 (PDF)** | 요약 브로셔, 통합 제안서 및 제품별 개별 제안서 PDF 모음 | [제안서 자료실 →](/proposals/) |
 | **SyncETA 설치 파일** | Windows · macOS 데스크톱 앱 공식 다운로드 페이지 | [SyncETA 다운로드 ↗](https://empasy.io/ko/download_eta.html) |

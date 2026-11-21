@@ -85,7 +85,7 @@ QA 테스트가 가능한 완료 기준(Acceptance Criteria)을 작성해 주세
 2. 기본키 id는 BIGINT 표준을 적용해 주세요.
 3. 감사 컬럼(created_at, updated_at, created_by, updated_by, del_flag)을 포함해 주세요.
 4. 자주 조회되는 컬럼에 대해 명시적 인덱스(INDEX)를 부여해 주세요.
-5. 임시 충돌 회피 구문( 등) 대신 고유성이 검증된 순수 CREATE TABLE 및 INSERT 구문으로 작성해 주세요.
+5. 임시 충돌 회피 구문(`ON CONFLICT DO NOTHING` 등) 대신 고유성이 검증된 순수 CREATE TABLE 및 INSERT 구문으로 작성해 주세요.
 
 [출력 형식]
 - Mermaid 테이블 관계도

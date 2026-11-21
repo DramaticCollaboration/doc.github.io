@@ -210,7 +210,7 @@ sequenceDiagram
 
 개발 현장에서 바로 활용할 수 있는 프롬프트와 규칙 설정 파일은 별도 문서로 제공됩니다:
 * **[상황별 실전 프롬프트 모음집 (치트시트)](./ai-sdlc-prompt-recipes.md)**: 기획, DDL 설계, 백엔드 서비스, 프론트엔드 모달, 단위 테스트, 디버깅 등 즉시 복사하여 사용할 수 있는 완성형 템플릿 제공.
-* **IDE 공통 규칙 주입**: Cursor의 `.cursorrules` 및 GitHub Copilot의 `copilot-instructions.md` 파일에 전사 표준 규칙(Lombok 강제, 단일 URL 매핑, 모달 분리 등)을 설정하여 일관성을 유지합니다.
+* **에이전트 공통 규칙 주입**: 저장소 루트의 `.agents/AGENTS.md` 및 IDE 규칙(`.cursorrules`, `copilot-instructions.md` 등)에 전사 표준 규칙(AgentScope Java, Lombok 강제, 단일 Canonical URL, 모달 분리, Zero-Mock 4-Cycle 검증)을 일관되게 설정합니다.
 
 ---
 
