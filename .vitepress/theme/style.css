@@ -119,8 +119,14 @@ img {
     transform: none !important;
 }
 
+.VPHero .image-bg {
+    pointer-events: none;
+}
+
 .VPHero .image-src {
-    position: static !important;
+    position: relative !important;
+    top: auto !important;
+    left: auto !important;
     transform: none !important;
     width: 100% !important;
     max-width: 540px !important;
@@ -659,11 +665,11 @@ img {
  * Component: medium-zoom & progress bar
  * -------------------------------------------------------------------------- */
 .medium-zoom-overlay {
-    z-index: 30;
+    z-index: 9990;
 }
 
-.medium-zoom-image {
-    z-index: 9999 !important;
+.medium-zoom-image--opened {
+    z-index: 9991 !important;
 }
 
 .bprogress {

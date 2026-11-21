@@ -11,8 +11,14 @@ export default {
   extends: DefaultTheme,
   setup() {
     const route = useRoute();
+    let zoom: ReturnType<typeof mediumZoom> | null = null;
     const initZoom = () => {
-      mediumZoom(".VPHero .image-src, .main img", { background: "var(--vp-c-bg)" });
+      if (!zoom) {
+        zoom = mediumZoom(".VPHero .image-src, .main img", { background: "var(--vp-c-bg)" });
+      } else {
+        zoom.detach();
+        zoom.attach(".VPHero .image-src, .main img");
+      }
     };
     const openMermaidLightbox = (svgEl: SVGElement) => {
       const existing = document.querySelector(".vp-mermaid-lightbox");
