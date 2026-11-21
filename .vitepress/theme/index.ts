@@ -3,15 +3,59 @@ import mediumZoom from "medium-zoom";
 import { EnhanceAppContext, inBrowser, Theme, useRoute } from "vitepress";
 import DefaultTheme from "vitepress/theme";
 import { nextTick, onMounted, watch } from "vue";
-import { BProgress } from "./bprogress"; // 진행 표시줄 컴포넌트
-import "./bprogress.css"; // 진행 표시줄 스타일
+import { BProgress } from "./bprogress";
+import "./bprogress.css";
 import "./style.css";
+
+type DocUiLocale = "ko" | "en" | "ja";
+
+const MERMAID_UI_LABELS: Record<
+  DocUiLocale,
+  {
+    dialogAria: string;
+    dialogTitle: string;
+    closeBtn: string;
+    toolbarHint: string;
+    zoomBtn: string;
+  }
+> = {
+  ko: {
+    dialogAria: "다이어그램 확대 보기",
+    dialogTitle: "아키텍처 다이어그램 확대 보기 (좌우로 밀어 탐색)",
+    closeBtn: "닫기",
+    toolbarHint: "다이어그램 (좌우 스크롤 가능)",
+    zoomBtn: "확대 보기",
+  },
+  en: {
+    dialogAria: "Expanded diagram view",
+    dialogTitle: "Architecture Diagram Zoom View (scroll horizontally to explore)",
+    closeBtn: "Close",
+    toolbarHint: "Diagram (horizontally scrollable)",
+    zoomBtn: "Zoom",
+  },
+  ja: {
+    dialogAria: "ダイアグラム拡大表示",
+    dialogTitle: "アーキテクチャ図 拡大表示（左右スクロールで閲覧）",
+    closeBtn: "閉じる",
+    toolbarHint: "ダイアグラム（左右スクロール可能）",
+    zoomBtn: "拡大表示",
+  },
+};
+
+function detectRouteLocale(pathname: string): DocUiLocale {
+  if (pathname === "/en" || pathname.startsWith("/en/")) return "en";
+  if (pathname === "/ja" || pathname.startsWith("/ja/")) return "ja";
+  return "ko";
+}
 
 export default {
   extends: DefaultTheme,
   setup() {
     const route = useRoute();
     let zoom: ReturnType<typeof mediumZoom> | null = null;
+
+    const getUiLabels = () => MERMAID_UI_LABELS[detectRouteLocale(route.path)];
+
     const initZoom = () => {
       if (!zoom) {
         zoom = mediumZoom(".VPHero .image-src, .main img", { background: "var(--vp-c-bg)" });
@@ -20,7 +64,9 @@ export default {
         zoom.attach(".VPHero .image-src, .main img");
       }
     };
+
     const openMermaidLightbox = (svgEl: SVGElement) => {
+      const labels = getUiLabels();
       const existing = document.querySelector(".vp-mermaid-lightbox");
       if (existing) existing.remove();
 
@@ -28,16 +74,16 @@ export default {
       overlay.className = "vp-mermaid-lightbox";
       overlay.setAttribute("role", "dialog");
       overlay.setAttribute("aria-modal", "true");
-      overlay.setAttribute("aria-label", "다이어그램 확대 보기");
+      overlay.setAttribute("aria-label", labels.dialogAria);
 
       const bar = document.createElement("div");
       bar.className = "vp-mermaid-lightbox-bar";
       const title = document.createElement("span");
-      title.textContent = "아키텍처 다이어그램 확대 보기 (좌우로 밀어 탐색)";
+      title.textContent = labels.dialogTitle;
       const closeBtn = document.createElement("button");
       closeBtn.type = "button";
       closeBtn.className = "vp-mermaid-lightbox-close";
-      closeBtn.textContent = "닫기";
+      closeBtn.textContent = labels.closeBtn;
 
       const stage = document.createElement("div");
       stage.className = "vp-mermaid-lightbox-stage";
@@ -69,6 +115,7 @@ export default {
     };
 
     const enhanceMermaidBlocks = () => {
+      const labels = getUiLabels();
       document.querySelectorAll<HTMLElement>(".vp-doc .mermaid, .mermaid").forEach((box) => {
         if (box.dataset.zoomBound === "true") return;
         const svg = box.querySelector("svg");
@@ -78,11 +125,11 @@ export default {
         const toolbar = document.createElement("div");
         toolbar.className = "vp-mermaid-toolbar";
         const hint = document.createElement("span");
-        hint.textContent = "다이어그램 (좌우 스크롤 가능)";
+        hint.textContent = labels.toolbarHint;
         const btn = document.createElement("button");
         btn.type = "button";
         btn.className = "vp-mermaid-zoom-btn";
-        btn.textContent = "확대 보기";
+        btn.textContent = labels.zoomBtn;
         btn.addEventListener("click", () => {
           const currentSvg = box.querySelector("svg");
           if (currentSvg) openMermaidLightbox(currentSvg);
@@ -93,7 +140,16 @@ export default {
       });
     };
 
+    const persistPreferredLocale = () => {
+      try {
+        localStorage.setItem("doc_empasy_locale", detectRouteLocale(route.path));
+      } catch {
+        // ignore storage restrictions
+      }
+    };
+
     const scheduleEnhance = () => {
+      persistPreferredLocale();
       nextTick(() => {
         initZoom();
         enhanceMermaidBlocks();
@@ -101,6 +157,7 @@ export default {
         window.setTimeout(enhanceMermaidBlocks, 1400);
       });
     };
+
     const scrollToSolutions = () => {
       const target = document.querySelector(".VPFeatures") || document.querySelector("#solutions");
       if (target) {
@@ -111,7 +168,6 @@ export default {
     onMounted(() => {
       scheduleEnhance();
 
-      // Handle direct hash navigation on load
       if (
         window.location.hash === "#solutions" ||
         window.location.hash.includes("제품군") ||
@@ -120,7 +176,6 @@ export default {
         setTimeout(scrollToSolutions, 300);
       }
 
-      // Intercept anchor clicks for #solutions and legacy #sync-series-제품군
       document.addEventListener("click", (e) => {
         const link = (e.target as HTMLElement).closest("a");
         if (link) {
@@ -137,22 +192,20 @@ export default {
         }
       });
     });
+
     watch(
       () => route.path,
       () => scheduleEnhance()
     );
   },
-  // Layout: () => {
-  //   return h();
-  // },
-  enhanceApp({ app, router, siteData }: EnhanceAppContext) {
+  enhanceApp({ router }: EnhanceAppContext) {
     if (inBrowser) {
       BProgress.configure({ showSpinner: false });
       router.onBeforeRouteChange = () => {
-        BProgress.start(); // 진행 표시줄 시작
+        BProgress.start();
       };
       router.onAfterRouteChange = () => {
-        BProgress.done(); // 진행 표시줄 종료
+        BProgress.done();
       };
     }
   },

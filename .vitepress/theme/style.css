@@ -20,6 +20,16 @@ body {
     overflow-wrap: break-word;
 }
 
+html[lang^="en"] body {
+    word-break: normal;
+    overflow-wrap: break-word;
+}
+
+html[lang^="ja"] body {
+    word-break: normal;
+    overflow-wrap: anywhere;
+}
+
 .VPLocalNav .menu:focus:not(:focus-visible),
 .VPLocalNav .outline-dropdown button:focus:not(:focus-visible) {
     outline: none;
@@ -59,7 +69,7 @@ img {
     --color-nav-background: rgba(255, 255, 255, 0.92);
     --color-nav-sidebar-background: #f8fafc;
 
-    --vp-font-family-base: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Noto Sans KR", sans-serif;
+    --vp-font-family-base: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Noto Sans KR", "Hiragino Sans", "Yu Gothic", "Noto Sans JP", sans-serif;
     --vp-font-family-mono:
         "JetBrains Mono", ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas, Liberation Mono,
         monospace, var(--vp-font-family-base);

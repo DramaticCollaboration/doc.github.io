@@ -63,7 +63,7 @@ sites/doc.github.io/
 │   ├── config.mts              # VitePress 글로벌 설정, 네비게이션, Canonical URL 변환기
 │   ├── sitebar.ts              # 모듈별 사이드바 자동 생성 및 정렬 규칙
 │   └── vitepress-pdf.config.ts # PDF 문서 내보내기 설정
-├── ko/                         # 한국어 기술 문서 원본 (rewrites를 통해 루트 경로 '/'로 매핑)
+├── ko/                         # 한국어 기술 문서 원본 (rewrites를 통해 루트 경로 '/'로 매핑, 172개)
 │   ├── ecosystem/              # 4-Tier 생태계 개요, MCP 프로토콜, 공유 모듈 & SDK
 │   ├── syncverse/              # SyncVerse 중앙 관제탑 문서
 │   ├── syncinsight/            # SyncInsight 의사결정 인텔리전스 문서
@@ -79,5 +79,7 @@ sites/doc.github.io/
 │   ├── agile/                  # 스크럼반 및 Git 브랜치 전략 가이드
 │   ├── patents/                # 핵심 원천 특허 기술 백서
 │   └── infra/                  # 온프레미스 GPU, K8s GitOps 및 재해 복구 가이드
+├── en/                         # 영어 기술 문서 ('/en/' 경로 매핑, 172개)
+├── ja/                         # 일본어 기술 문서 ('/ja/' 경로 매핑, 172개)
 └── public/                     # 정적 자산 (로고, 파비콘, 다운로드용 PDF/템플릿)
 ```

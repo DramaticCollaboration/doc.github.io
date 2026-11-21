@@ -22,7 +22,8 @@ function extractLinksFromConfig(config: DefaultTheme.Config) {
   return links
 }
 
-const links = extractLinksFromConfig(userConfig.themeConfig!)
+const rootSidebar = userConfig.locales?.root?.themeConfig?.sidebar ?? userConfig.themeConfig?.sidebar
+const links = rootSidebar ? extractLinksFromConfig({ sidebar: rootSidebar }) : []
 const routeOrder = [
   '/index.html',
   ...links,
