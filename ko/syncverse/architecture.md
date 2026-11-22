@@ -54,11 +54,11 @@ flowchart TD
     Orchestrator --> SelfHeal
     Orchestrator --> FinOps
 
-    Orchestrator <-->|MCP JSON-RPC| SyncBoot
-    Orchestrator <-->|MCP JSON-RPC| SyncCMS
-    Orchestrator <-->|MCP JSON-RPC| SyncShop
-    Orchestrator <-->|MCP JSON-RPC| SyncETA
-    Orchestrator <-->|MCP JSON-RPC| SyncCrawl
+    Orchestrator <-->|"MCP REST/SSE"| SyncBoot
+    Orchestrator <-->|"MCP REST/SSE"| SyncCMS
+    Orchestrator <-->|"MCP REST/SSE"| SyncShop
+    Orchestrator <-->|"MCP REST/SSE"| SyncETA
+    Orchestrator <-->|"MCP REST/SSE"| SyncCrawl
     Dispatcher <-->|SWE Protocol| SyncSDK
 ```
 
@@ -80,7 +80,7 @@ flowchart TD
 
 ## 2. A2A 통신 프로토콜 (Model Context Protocol)
 
-SyncVerse 내 모든 에이전트 간 통신은 오픈 표준인 **MCP(Model Context Protocol)** 및 **JSON-RPC 2.0**을 기반으로 동작합니다.
+SyncVerse 내 모든 에이전트 간 통신은 표준 **REST API (`/api/v1/*`)** 및 **MCP (Model Context Protocol) SSE** 스트리밍 규격을 기반으로 동작합니다.
 
 ### 통신 시퀀스 다이어그램
 
@@ -177,7 +177,7 @@ graph TD
     end
 
     subgraph McpRuntime ["MCP 서버 (sync-*-mcp-server)"]
-        ToolRegistry["도구 레지스트리 (JSON-RPC)"]
+        ToolRegistry["도구 레지스트리 (REST / MCP SSE)"]
         AsyncReg["비동기 자기 등록 클라이언트<br/>(CompletableFuture.runAsync)"]
         Timeout["3초 Connect/Read 타임아웃"]
     end

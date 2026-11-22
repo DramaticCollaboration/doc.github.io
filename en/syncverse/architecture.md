@@ -54,11 +54,11 @@ flowchart TD
     Orchestrator --> SelfHeal
     Orchestrator --> FinOps
 
-    Orchestrator <-->|MCP JSON-RPC| SyncBoot
-    Orchestrator <-->|MCP JSON-RPC| SyncCMS
-    Orchestrator <-->|MCP JSON-RPC| SyncShop
-    Orchestrator <-->|MCP JSON-RPC| SyncETA
-    Orchestrator <-->|MCP JSON-RPC| SyncCrawl
+    Orchestrator <-->|"MCP REST/SSE"| SyncBoot
+    Orchestrator <-->|"MCP REST/SSE"| SyncCMS
+    Orchestrator <-->|"MCP REST/SSE"| SyncShop
+    Orchestrator <-->|"MCP REST/SSE"| SyncETA
+    Orchestrator <-->|"MCP REST/SSE"| SyncCrawl
     Dispatcher <-->|SWE Protocol| SyncSDK
 ```
 
@@ -80,7 +80,7 @@ flowchart TD
 
 ## 2. A2A Communication Protocol (Model Context Protocol)
 
-All inter-agent communication within SyncVerse operates on open standards: **MCP (Model Context Protocol)** and **JSON-RPC 2.0**.
+All inter-agent communication within SyncVerse operates on standard **REST API (`/api/v1/*`)** and **MCP (Model Context Protocol) SSE** streaming specifications.
 
 ### Communication Sequence Diagram
 
@@ -177,7 +177,7 @@ graph TD
     end
 
     subgraph McpRuntime ["MCP Server (sync-*-mcp-server)"]
-        ToolRegistry["Tool Registry (JSON-RPC)"]
+        ToolRegistry["Tool Registry (REST / MCP SSE)"]
         AsyncReg["Asynchronous Self-Registration Client<br/>(CompletableFuture.runAsync)"]
         Timeout["3s Connect/Read Timeout"]
     end

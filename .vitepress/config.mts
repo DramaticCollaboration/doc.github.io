@@ -55,6 +55,19 @@ export default withMermaid(
           href: "https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css",
         },
       ],
+      [
+        "script",
+        {},
+        `window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('consent', 'default', {
+  analytics_storage: 'denied',
+  ad_storage: 'denied',
+  ad_user_data: 'denied',
+  ad_personalization: 'denied',
+  wait_for_update: 500
+});`,
+      ],
       ["script", { src: "https://www.googletagmanager.com/gtag/js?id=G-6BNPM5TX7C", async: true }],
       [
         "script",
@@ -130,13 +143,27 @@ new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
       const enUrl = `${SITE_ORIGIN}/en/${basePath}`;
       const jaUrl = `${SITE_ORIGIN}/ja/${basePath}`;
 
+      const pageTitle = pageData.frontmatter.title || pageData.title || "Empasy Docs";
+      const pageDesc =
+        pageData.frontmatter.description ||
+        pageData.description ||
+        "Empasy SyncSeries Official Technical Documentation Portal";
+
       pageData.frontmatter.head ??= [];
       pageData.frontmatter.head.push(
         ["link", { rel: "canonical", href: canonicalUrl }],
         ["link", { rel: "alternate", hreflang: "ko", href: koUrl }],
         ["link", { rel: "alternate", hreflang: "en", href: enUrl }],
         ["link", { rel: "alternate", hreflang: "ja", href: jaUrl }],
-        ["link", { rel: "alternate", hreflang: "x-default", href: koUrl }]
+        ["link", { rel: "alternate", hreflang: "x-default", href: koUrl }],
+        ["meta", { property: "og:type", content: "article" }],
+        ["meta", { property: "og:site_name", content: "Empasy Docs" }],
+        ["meta", { property: "og:title", content: `${pageTitle} | Empasy Docs` }],
+        ["meta", { property: "og:description", content: pageDesc }],
+        ["meta", { property: "og:url", content: canonicalUrl }],
+        ["meta", { name: "twitter:card", content: "summary_large_image" }],
+        ["meta", { name: "twitter:title", content: `${pageTitle} | Empasy Docs` }],
+        ["meta", { name: "twitter:description", content: pageDesc }]
       );
     },
 
