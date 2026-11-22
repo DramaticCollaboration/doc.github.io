@@ -68,7 +68,7 @@
 
   <!-- Protocol Bus -->
   <rect x="24" y="170" width="512" height="30" rx="6" fill="#F8FAFC" stroke="#0891B2" stroke-width="1.2" stroke-dasharray="4 2"/>
-  <text x="280" y="189" text-anchor="middle" class="mono" font-size="10.5" font-weight="600" fill="#0E7490">Standard REST (/api/v1/*)  ·  MCP JSON-RPC  ·  RBAC · Audit Trail</text>
+  <text x="280" y="189" text-anchor="middle" class="mono" font-size="10.5" font-weight="600" fill="#0E7490">Standard REST (/api/v1/*)  ·  MCP REST/SSE  ·  RBAC · Audit Trail</text>
 
   <!-- Connectors Bus -> Extension Modules -->
   <g stroke="#94A3B8" stroke-width="1.2">
