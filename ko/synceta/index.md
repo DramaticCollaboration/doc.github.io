@@ -1,16 +1,16 @@
 ---
-title: "SyncETA (SyncETA): AI 테스트 자동화 및 자가 치유(Self-Healing) QA 플랫폼"
-description: "AI를 활용한 테스트 자동화 플랫폼 SyncETA는 시나리오 생성, Playwright 기반 분산 병렬 실행, 실패 원인 분석, Vision AI 시각적 회귀 검증 및 선택자 자가 치유(Self-Healing)를 제공하는 엔터프라이즈 AI 테스트 자동화 솔루션입니다."
+title: "SyncETA: 웹 화면 테스트 자동화 · 사이트 결함 검출 및 이력 관리 플랫폼"
+description: "SyncETA는 브라우저 동작 녹화, 엑셀·한 줄 문장 테스트 변환, 멀티 계정 동시 테스트, 시나리오 없는 링크·화면 디자인 결함 전수 검사 및 버그 칸반 원클릭 재검증을 제공하는 웹 테스트 자동화 플랫폼입니다."
 head:
   - - meta
     - name: keywords
-      content: AI 테스트 자동화, 테스트 자동화, SyncETA, SyncETA, QA 테스트 자동화, 자가 치유 테스트 자동화, 회귀 테스트, Playwright, MCP, Model Context Protocol, Visual Regression, Self-Healing, CI/CD, 엔터프라이즈 QA, 엠파시, Empasy
+      content: 웹 화면 테스트 자동화, 사이트 결함 검출, SyncETA, 버그 칸반, QA 테스트 자동화, 자가 치유 테스트 자동화, 회귀 테스트, Playwright, MCP, Model Context Protocol, Visual Regression, Self-Healing, CI/CD, 엔터프라이즈 QA, 엠파시, Empasy
   - - meta
     - property: og:title
-      content: "SyncETA (SyncETA): AI 테스트 자동화 및 자가 치유(Self-Healing) QA 플랫폼"
+      content: "SyncETA: 웹 화면 테스트 자동화 · 사이트 결함 검출 및 이력 관리 플랫폼"
   - - meta
     - property: og:description
-      content: "테스트 시나리오 생성, Playwright MCP 실행, 실패 원인 분석, Vision AI 시각 검증 및 자가 치유(Self-Healing) 파이프라인을 지원합니다."
+      content: "브라우저 동작 녹화, 엑셀·한 줄 문장 테스트 변환, 링크·화면 결함 전수 검사 및 버그 칸반 원클릭 재검증을 지원합니다."
   - - meta
     - property: og:image
       content: https://doc.empasy.com/images/favicon.png
@@ -20,11 +20,11 @@ head:
 sort: 10
 ---
 
-# SyncETA (SyncETA): AI 테스트 자동화 및 자가 치유(Self-Healing) 플랫폼
+# SyncETA: 웹 화면 테스트 자동화 · 사이트 결함 검출 및 이력 관리 플랫폼
 
-> **비개발자 · 도입 검토 안내**: 쉬운 제품 소개는 [SyncETA 제품 홈페이지(eta.empasy.io)](https://eta.empasy.io/){target="_blank" rel="noopener"}에서, 데스크톱 설치 및 체험은 [통합 데모 포털](https://sync.empasy.io/products/sync-eta#demo){target="_blank" rel="noopener"}에서 이용하실 수 있으며, 소개서·제안서 PDF는 [제안서 자료실](/proposals/)에서 내려받으실 수 있습니다.
+> **비개발자 · 도입 검토 안내**: 쉬운 제품 소개는 [SyncETA 제품 홈페이지(eta.empasy.io)](https://eta.empasy.io/){target="_blank" rel="noopener"}에서, 데스크톱 설치 및 체험은 [통합 데모 포털](https://sync.empasy.io/products/sync-eta#demo){target="_blank" rel="noopener"}에서 이용하실 수 있으며, 최신 소개서(15p) PDF는 [제안서 자료실](/proposals/)에서 내려받으실 수 있습니다.
 
-**SyncETA(SyncETA)**는 **테스트 코드 작성 없이 시나리오 자동 생성(노코드 녹화·자연어·엑셀), Playwright MCP 병렬 실행, 실패 원인 분석, 시각적 화면 깨짐(Visual Regression) 감지 및 선택자 자가 치유(Self-Healing)**까지 전 과정을 자동화하여 QA와 개발 효율을 극대화하는 엔터프라이즈 **AI 테스트 자동화** 플랫폼입니다.
+**SyncETA**는 **브라우저 동작 녹화, 엑셀·한 줄 문장 테스트 변환, 멀티 계정 동시 테스트, 시나리오 없는 하위 링크·화면 디자인 결함(글자 겹침·빈 영역) 전수 검사, 버그 칸반 보드 및 `[지금 확인]` 원클릭 재검증**까지 웹 화면 품질 점검의 전 과정을 자동화하는 플랫폼입니다. 또한 Playwright MCP 분산 실행, 화면 변경 시 대체 요소 자동 탐색(Self-Healing), 금융 보안 가상 키패드·글로벌 쿠키 배너 자동 처리 및 민감 개인정보 마스킹을 지원합니다.
 
 ::: tip 데스크톱 애플리케이션 즉시 실행 안내
 SyncETA는 별도의 서버 인프라 구축 없이 로컬 및 스테이징 웹사이트를 즉시 테스트할 수 있는 데스크톱 애플리케이션(v0.0.58)을 제공합니다.  
@@ -113,25 +113,35 @@ sequenceDiagram
 
 ## 실제 구동 화면 및 핵심 워크플로우
 
-### 1. 자율 QA 품질보증 통합 대시보드
-전체 프로젝트의 테스트 시나리오 통과율, 자율 작업 건수, 셀렉터 자가치유 현황 및 스냅샷 경량화를 통한 토큰 절감 지표를 통합 관제합니다.
+### 1. 프로젝트 대시보드 및 실행 현황 분석
+전체 프로젝트의 테스트 횟수, 성공률 추이, 실패 원인 비율, 활성 스케줄 및 운영 사이트 SSL 인증서 만료 현황을 한눈에 관제하고 원클릭 레포트를 생성합니다.
 
-![SyncETA 자율 QA 품질보증 통합 대시보드](/images/screenshots/sync-eta/screen_01.png)
+![SyncETA 프로젝트 대시보드 및 실행 현황 분석](/images/screenshots/sync-eta/screen_01.png)
 
-### 2. 셀렉터 자가치유 및 로케이터 자동 복구
-UI 개편으로 인해 깨진 기존 셀렉터와 AI가 시각·DOM 문맥으로 추론한 신규 복구 셀렉터, 신뢰도 점수 및 추론 근거를 확인하고 승인 반영합니다.
+### 2. 브라우저 동작 레코더 및 실시간 DOM 검증
+클릭·입력·스크롤 동작을 실시간 기록해 재사용 동작 블록으로 저장하며, 금융 보안 가상 키패드 자동 인식, 글로벌 쿠키 동의 배너 자동 닫기, 민감 개인정보 자동 마스킹을 지원합니다.
 
-![SyncETA 셀렉터 자동 복구 및 추론 근거](/images/screenshots/sync-eta/screen_02.png)
+![SyncETA 브라우저 동작 레코더 및 실시간 DOM 검증](/images/screenshots/sync-eta/screen_02.png)
 
-### 3. 해상도별 시각 회귀 검수 및 레이아웃 결함 분석
-배포 전후 기준 화면(Baseline)과 현재 화면을 해상도별로 비교하여 픽셀 오차율, 레이아웃 붕괴, 텍스트 잘림 여부를 자동 판정합니다.
+### 3. 엑셀 시험표 및 한 줄 문장 테스트 변환
+기존 엑셀·CSV 테스트 문서를 일괄 업로드해 행별로 선택 변환하고, 대표·표본 주소(URL) 설정 및 표본 주소 사전 실행으로 여러 국가·상품 페이지에 공통 적용합니다.
 
-![SyncETA 시각 회귀 화면 검사](/images/screenshots/sync-eta/screen_03.png)
+![SyncETA 엑셀 시험표 및 한 줄 문장 테스트 변환](/images/screenshots/sync-eta/screen_03.png)
 
-### 4. 도메인별 E2E 시나리오 실행 이력 및 스냅샷 증적 조회
-도메인별 E2E 시나리오 실행 통과율, 셀렉터 위치 안정성 지표, 소요 시간 및 스텝별 DOM 스냅샷·네트워크 증적을 추적합니다.
+### 4. 멀티 계정 동시 테스트 및 녹화 영상 비교
+문의자(탭 0)와 관리자(탭 1)처럼 서로 다른 계정을 독립 로그인 세션으로 동시 실행해 역할 간 상호작용과 단계별 녹화 영상·오류 로그를 분리 추적합니다.
 
-![SyncETA 시나리오 실행 이력 및 증적 원장](/images/screenshots/sync-eta/screen_04.png)
+![SyncETA 멀티 계정 동시 테스트 실행 히스토리](/images/screenshots/sync-eta/screen_04.png)
+
+### 5. 사이트 지식그래프 기반 링크 전수 검사 및 디자인 결함 진단
+시나리오 없이도 페이지 내 모든 하위 링크(404·의미 불일치)와 글자 겹침·빈 영역·미디어 재생 오류를 자동 검출하고, 애매한 항목은 사진과 함께 `[확인 필요]`로 정직하게 분류합니다.
+
+![SyncETA 사이트 지식그래프 및 디자인 결함 자동 감지](/images/screenshots/sync-eta/screen_05.png)
+
+### 6. 버그 칸반 보드 및 `[지금 확인]` 원클릭 재검증
+문제 사진이 첨부된 결함 티켓을 백로그→아직 있음→해결됨→종료 단계로 관리하며, 중복 티켓 차단·`[버그가 아닙니다]` 판정 영구 기억·`[지금 확인]` 원클릭 재검증을 제공합니다.
+
+![SyncETA 버그 칸반 보드 및 원클릭 재검증](/images/screenshots/sync-eta/screen_06.png)
 
 ---
 

@@ -20,11 +20,11 @@ head:
 sort: 10
 ---
 
-# SyncETA: AI Test Automation and Self-Healing Platform
+# SyncETA: Web Test Automation · Site Audit & Defect Tracking Platform
 
-> **Non-Developers & Adoption Evaluation Guide**: For an accessible product overview, visit the [SyncETA Product Homepage (eta.empasy.io)](https://eta.empasy.io/en/){target="_blank" rel="noopener"}. For desktop installation and live hands-on evaluation, visit the [Unified Demo Portal](https://sync.empasy.io/en/products/sync-eta#demo){target="_blank" rel="noopener"}. Brochures and proposal PDFs are available in the [Proposals Library](/en/proposals/).
+> **Non-Developers & Adoption Evaluation Guide**: For an accessible product overview, visit the [SyncETA Product Homepage (eta.empasy.io)](https://eta.empasy.io/en/){target="_blank" rel="noopener"}. For desktop installation and live hands-on evaluation, visit the [Unified Demo Portal](https://sync.empasy.io/en/products/sync-eta#demo){target="_blank" rel="noopener"}. The latest 15-page brochure PDF is available in the [Proposals Library](/en/proposals/).
 
-**SyncETA** is an enterprise **AI test automation** platform that maximizes QA and development efficiency by automating the entire lifecycle without writing test code: **automatic scenario generation (no-code recording, natural language, and Excel), Playwright MCP parallel execution, failure root-cause analysis, visual regression detection, and selector Self-Healing**.
+**SyncETA** automates the entire web quality verification lifecycle without writing brittle scripts: **browser action recording (with security keypad, cookie banner bypass, and PII masking), Excel and one-line prompt test conversion using representative/sample URLs, multi-account simultaneous testing, scenario-free link and layout-overlap audits with honest `[Needs Review]` triage, and Bug Kanban one-click `[Check Now]` re-verification**—powered by Playwright MCP parallel execution and adaptive element recovery.
 
 ::: tip Instant Desktop Application Launch Guide
 SyncETA provides a desktop application (v0.0.58) that lets you immediately test local and staging websites without setting up separate server infrastructure.  
@@ -113,25 +113,35 @@ sequenceDiagram
 
 ## Live UI Screens and Core Workflows
 
-### 1. Autonomous QA Quality Assurance Unified Dashboard
-Monitors overall project scenario pass rates, autonomous task counts, selector self-healing status, and token savings achieved through snapshot lightweighting in a unified control view.
+### 1. Project Dashboard & Execution Analytics
+Monitors overall test runs, pass-rate trends, failure cause ratios, active schedules, and live SSL certificate expiration status in one workspace with one-click reporting.
 
-![SyncETA Autonomous QA Quality Assurance Unified Dashboard](/images/screenshots/sync-eta/screen_01.png)
+![SyncETA Project Dashboard & Execution Analytics](/images/screenshots/sync-eta/screen_01.png)
 
-### 2. Selector Self-Healing and Automated Locator Recovery
-Reviews legacy selectors broken by UI redesigns alongside AI-inferred replacement selectors from visual and DOM context, confidence scores, and reasoning before approving updates.
+### 2. Browser Action Recorder & Real-Time DOM Verification
+Captures clicks, inputs, and scrolls into reusable blocks while automatically handling financial virtual security keypads, global cookie consent banners, and personal data masking.
 
-![SyncETA Selector Auto-Recovery and Reasoning](/images/screenshots/sync-eta/screen_02.png)
+![SyncETA Browser Action Recorder & Live DOM Verification](/images/screenshots/sync-eta/screen_02.png)
 
-### 3. Multi-Resolution Visual Regression Inspection and Layout Defect Analysis
-Compares baseline screens before deployment against current screens across resolutions to automatically evaluate pixel error rates, layout collapse, and text clipping.
+### 3. Excel Test Sheet & One-Line Prompt Conversion
+Uploads existing Excel/CSV test specifications to batch-generate selected scenarios and applies them across multiple regional or product pages via representative and sample URLs.
 
-![SyncETA Visual Regression Screen Inspection](/images/screenshots/sync-eta/screen_03.png)
+![SyncETA Excel Test Sheet & One-Line Prompt Conversion](/images/screenshots/sync-eta/screen_03.png)
 
-### 4. Domain-Specific E2E Scenario Execution History and Snapshot Evidence Ledger
-Tracks domain-level E2E scenario pass rates, selector positional stability metrics, execution duration, and step-by-step DOM snapshot and network evidence.
+### 4. Multi-Account Simultaneous Testing & Synchronized Video Replay
+Runs two independent login sessions (such as customer Tab 0 and administrator Tab 1) side by side to validate cross-role workflows with separate per-tab logs and video replays.
 
-![SyncETA Scenario Execution History and Evidence Ledger](/images/screenshots/sync-eta/screen_04.png)
+![SyncETA Multi-Account Simultaneous Execution History](/images/screenshots/sync-eta/screen_04.png)
+
+### 5. Site Knowledge Graph Link Audit & Visual Defect Detection
+Without pre-written scripts, audits all sub-links (404 errors and destination mismatches), text overlaps, empty regions, and media playback, flagging uncertain items as `[Needs Review]` with screenshots.
+
+![SyncETA Site Knowledge Graph & Visual Defect Detection](/images/screenshots/sync-eta/screen_05.png)
+
+### 6. Bug Kanban Board & One-Click `[Check Now]` Re-Verification
+Manages photo-attached defect tickets across Backlog, Open, Resolved, and Closed columns with duplicate blocking, persistent `[Not a Bug]` memory, and instant one-click re-checks.
+
+![SyncETA Bug Kanban Board & One-Click Re-Verification](/images/screenshots/sync-eta/screen_06.png)
 
 ---
 
