@@ -8,7 +8,7 @@ description: Enterprise architecture overview detailing how the 11 SyncSeries do
 
 # SyncSeries Unified Architecture and Module Integration
 
-> **Reader's Guide**: This document is a technical overview for developers and system architects. For a non-technical service introduction, visit the [Empasy Official Website (empasy.io)](https://empasy.io/en/pages/index.html). For installation-free hands-on demos, visit the [Unified Demo Portal (sync.empasy.io)](https://sync.empasy.io/en/). For adoption proposal PDFs, see the [Proposal Repository (/en/proposals/)](/en/proposals/), and for core technical term definitions, refer to the [Enterprise Technical Glossary (/en/glossary/)](/en/glossary/).
+> **Reader's Guide**: This document is a technical overview for developers and system architects. For a non-technical service introduction, visit the [Empasy Official Website (empasy.io)](https://empasy.io/en/pages/index.html). For installation-free hands-on demos, visit the [Unified Demo Portal (demo.empasy.io)](https://demo.empasy.io/en/). For adoption proposal PDFs, see the [Proposal Repository (/en/proposals/)](/en/proposals/), and for core technical term definitions, refer to the [Enterprise Technical Glossary (/en/glossary/)](/en/glossary/).
 
 ## 1. Architecture Overview and Design Principles
 

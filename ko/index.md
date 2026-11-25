@@ -17,7 +17,7 @@ hero:
         link: /glossary/
         theme: alt
       - text: 통합 데모 포털 ↗
-        link: https://sync.empasy.io
+        link: https://demo.empasy.io/
         theme: alt
 
 head:
@@ -71,7 +71,7 @@ footer: Copyright © 2026 Empasy Inc. All rights reserved.
 ## 본 문서 포털의 역할
 
 > 본 사이트(`doc.empasy.com`)는 **개발자와 시스템 운영자를 위한 공식 기술 매뉴얼 및 기술 용어 원천(SSOT)**입니다.
-> 비개발자를 위한 쉬운 제품 소개는 각 제품 홈페이지(`*.empasy.io`)와 [엠파시 공식 홈페이지(empasy.io)](https://empasy.io/)에서, 설치 없는 화면 체험은 [통합 데모 포털(sync.empasy.io)](https://sync.empasy.io/)에서 이용하실 수 있으며, 생태계 전반의 표준 기술 용어는 [전사 기술 용어집(/glossary/)](/glossary/)에서 확인하실 수 있습니다.
+> 비개발자를 위한 쉬운 제품 소개는 [엠파시 공식 홈페이지(empasy.io)](https://empasy.io/)의 제품별 소개 페이지에서, 설치 없는 화면 체험은 [통합 데모 포털(demo.empasy.io)](https://demo.empasy.io/)에서 이용하실 수 있으며, 생태계 전반의 표준 기술 용어는 [전사 기술 용어집(/glossary/)](/glossary/)에서 확인하실 수 있습니다.
 
 ---
 

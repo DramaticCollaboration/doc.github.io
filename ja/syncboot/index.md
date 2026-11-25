@@ -21,7 +21,7 @@ head:
 
 # SyncBoot: デジタルバックエンドフレームワーク概要
 
-> **非開発者・導入検討向け案内**: 分かりやすい製品紹介は [SyncBoot 製品ホームページ（boot.empasy.io）](https://boot.empasy.io/ja/){target="_blank" rel="noopener"} で、インストール不要の画面体験は [統合デモポータル](https://sync.empasy.io/ja/products/sync-boot#demo){target="_blank" rel="noopener"} でご利用いただけます。紹介資料・提案書 PDF は [提案書資料室](/ja/proposals/) からダウンロードできます。
+> **非開発者・導入検討向け案内**: 分かりやすい製品紹介は [SyncBoot 製品ホームページ（boot.empasy.io）](https://empasy.io/ja/solutions/sync-boot.html){target="_blank" rel="noopener"} で、インストール不要の画面体験は [統合デモポータル](https://demo.empasy.io/ja/products/sync-boot#demo){target="_blank" rel="noopener"} でご利用いただけます。紹介資料・提案書 PDF は [提案書資料室](/ja/proposals/) からダウンロードできます。
 
 SyncBoot はビジネスドメインのコンテキストを認識し、データベース運用と API 開発を支援する Java ベースのエンタープライズバックエンドプラットフォームです。
 

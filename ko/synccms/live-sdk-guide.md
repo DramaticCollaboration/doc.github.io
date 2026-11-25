@@ -64,8 +64,8 @@ HTML 파일의 `<body>` 태그 하단에 SDK 스크립트를 추가하고, 수�
     </div>
 
     <!-- Sync-Live-SDK 스크립트 임베딩 -->
-    <script src="https://cms.empasy.io/sdk/sync-live-sdk.js"
-            data-sync-cms-endpoint="https://cms.empasy.io/api/v1/cms"
+    <script src="https://empasy.io/ko/solutions/sync-cms.htmlsdk/sync-live-sdk.js"
+            data-sync-cms-endpoint="https://empasy.io/ko/solutions/sync-cms.htmlapi/v1/cms"
             data-sync-site-key="SITE_PORTAL_KO"
             async></script>
 </body>

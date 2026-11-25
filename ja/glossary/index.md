@@ -23,7 +23,7 @@ sort: 1
 
 # 全社技術用語集 (SyncSeries Technical Glossary)
 
-> **文書の位置づけについて**: 本ページは、`doc.empasy.com` が管理する**株式会社エムパシー（Empasy）および SyncSeries 公式技術用語の単一情報源（SSOT）**です。非開発者・導入検討担当者向けの製品紹介については、[エムパシー公式ホームページ（empasy.io）](https://empasy.io/ja/pages/index.html)および[統合デモポータル（sync.empasy.io）](https://sync.empasy.io/ja/)をご参照ください。
+> **文書の位置づけについて**: 本ページは、`doc.empasy.com` が管理する**株式会社エムパシー（Empasy）および SyncSeries 公式技術用語の単一情報源（SSOT）**です。非開発者・導入検討担当者向けの製品紹介については、[エムパシー公式ホームページ（empasy.io）](https://empasy.io/ja/pages/index.html)および[統合デモポータル（sync.empasy.io）](https://demo.empasy.io/ja/)をご参照ください。
 
 ---
 

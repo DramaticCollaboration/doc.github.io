@@ -8,7 +8,7 @@ description: SyncSeriesの11種類のドメインモジュール、SyncSDK、お
 
 # SyncSeries 統合アーキテクチャおよびモジュール連携構造
 
-> **読者ガイド**: 本ドキュメントは、開発者およびシステムアーキテクト向けの技術概要です。非開発者向けのサービス紹介は[株式会社エムパシー公式サイト (empasy.io)](https://empasy.io/ja/pages/index.html)、インストール不要の体験は[統合デモポータル (sync.empasy.io)](https://sync.empasy.io/ja/)、導入提案書PDFは[提案書資料室 (/ja/proposals/)](/ja/proposals/)、コア技術用語の定義は[全社技術用語集 (/ja/glossary/)](/ja/glossary/)でご確認いただけます。
+> **読者ガイド**: 本ドキュメントは、開発者およびシステムアーキテクト向けの技術概要です。非開発者向けのサービス紹介は[株式会社エムパシー公式サイト (empasy.io)](https://empasy.io/ja/pages/index.html)、インストール不要の体験は[統合デモポータル (demo.empasy.io)](https://demo.empasy.io/ja/)、導入提案書PDFは[提案書資料室 (/ja/proposals/)](/ja/proposals/)、コア技術用語の定義は[全社技術用語集 (/ja/glossary/)](/ja/glossary/)でご確認いただけます。
 
 ## 1. アーキテクチャ概要および設計原則
 

@@ -71,5 +71,5 @@ description: "SyncSeries 통합 브로셔·마스터 제안서 및 12개 전 제
 
 ## 5. 통합 라이브 데모 및 데스크톱 앱 체험 안내
 
-* **통합 라이브 데모 포털**: [https://sync.empasy.io](https://sync.empasy.io) 에서 12대 전 제품의 실제 관리자·사용자 구동 화면을 지금 바로 체험하실 수 있습니다.
+* **통합 라이브 데모 포털**: [https://demo.empasy.io](https://demo.empasy.io) 에서 12대 전 제품의 실제 관리자·사용자 구동 화면을 지금 바로 체험하실 수 있습니다.
 * **SyncETA 데스크톱 앱 다운로드**: [https://empasy.io/ko/download_eta.html](https://empasy.io/ko/download_eta.html) 에서 Windows / macOS용 설치 파일을 내려받아 내 PC에서 바로 클릭 녹화와 자동 테스트를 실행해 보실 수 있습니다.

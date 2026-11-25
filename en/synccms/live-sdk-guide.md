@@ -64,8 +64,8 @@ Add the SDK script at the bottom of the `<body>` tag in your HTML file and defin
     </div>
 
     <!-- Sync-Live-SDK script embedding -->
-    <script src="https://cms.empasy.io/sdk/sync-live-sdk.js"
-            data-sync-cms-endpoint="https://cms.empasy.io/api/v1/cms"
+    <script src="https://empasy.io/en/solutions/sync-cms.htmlsdk/sync-live-sdk.js"
+            data-sync-cms-endpoint="https://empasy.io/en/solutions/sync-cms.htmlapi/v1/cms"
             data-sync-site-key="SITE_PORTAL_KO"
             async></script>
 </body>

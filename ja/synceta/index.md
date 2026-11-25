@@ -22,7 +22,7 @@ sort: 10
 
 # SyncETA: Web画面テスト自動化 · サイト欠陥検出および履歴管理プラットフォーム
 
-> **非開発者・導入検討ガイド**: わかりやすい製品紹介は[SyncETA製品ホームページ（eta.empasy.io）](https://eta.empasy.io/ja/){target="_blank" rel="noopener"}で、デスクトップインストールおよび体験は[統合デモポータル](https://sync.empasy.io/ja/products/sync-eta#demo){target="_blank" rel="noopener"}でご利用いただけます。また、最新の紹介書（15p）PDFは[提案書ライブラリ](/ja/proposals/)からダウンロードできます。
+> **非開発者・導入検討ガイド**: わかりやすい製品紹介は[SyncETA製品ホームページ（eta.empasy.io）](https://empasy.io/ja/solutions/sync-eta.html){target="_blank" rel="noopener"}で、デスクトップインストールおよび体験は[統合デモポータル](https://demo.empasy.io/ja/products/sync-eta#demo){target="_blank" rel="noopener"}でご利用いただけます。また、最新の紹介書（15p）PDFは[提案書ライブラリ](/ja/proposals/)からダウンロードできます。
 
 **SyncETA**は、**ブラウザ操作録画（仮想キーパッド・Cookieバナー自動通過・個人情報マスキング）、代表・標本URLを活用したExcel/一行文テスト変換、マルチアカウント同時テスト、シナリオ不要の下位リンク・画面デザイン欠陥（文字重なり・空白領域）全数検査、バグカンバンボードおよび`[今すぐ確認]`ワンクリック再検証**までを一貫自動化するプラットフォームです。Playwright MCP並列実行と画面変更時の要素自動探索（Self-Healing）も備えています。
 

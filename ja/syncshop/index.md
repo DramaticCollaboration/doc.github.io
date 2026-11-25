@@ -22,7 +22,7 @@ sort: 1
 
 # SyncShop: インテリジェントコマース運用プラットフォーム概要
 
-> **非開発者・導入検討のご案内**: 分かりやすい製品紹介は[SyncShop製品ホームページ（shop.empasy.io）](https://shop.empasy.io/ja/){target="_blank" rel="noopener"}で、インストール不要の画面体験は[統合デモポータル](https://sync.empasy.io/ja/products/sync-shop#demo){target="_blank" rel="noopener"}でご利用いただけます。また、紹介書・提案書PDFは[提案書資料室](/ja/proposals/)からダウンロードいただけます。
+> **非開発者・導入検討のご案内**: 分かりやすい製品紹介は[SyncShop製品ホームページ（shop.empasy.io）](https://empasy.io/ja/solutions/sync-shop.html){target="_blank" rel="noopener"}で、インストール不要の画面体験は[統合デモポータル](https://demo.empasy.io/ja/products/sync-shop#demo){target="_blank" rel="noopener"}でご利用いただけます。また、紹介書・提案書PDFは[提案書資料室](/ja/proposals/)からダウンロードいただけます。
 
 SyncShopは、ビジネスの柔軟性とチャネル拡張性のために、バックエンドのコマースロジックとフロントエンドの表現層を分離した**Headless eCommerce**プラットフォームです。
 

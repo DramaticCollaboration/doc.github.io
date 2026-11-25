@@ -246,8 +246,8 @@ function docHref(slug: string): string {
 
 function demoHref(productId: string): string {
   return localeKey.value === "ko"
-    ? `https://sync.empasy.io/products/${productId}`
-    : `https://sync.empasy.io/${localeKey.value}/products/${productId}`;
+    ? `https://demo.empasy.io/products/${productId}`
+    : `https://demo.empasy.io/${localeKey.value}/products/${productId}`;
 }
 
 function goDoc(slug: string): void {

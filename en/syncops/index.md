@@ -23,10 +23,10 @@ sort: 1
 
 # SyncOps: Korean SI/Solution Operations & P&L/Compliance Control Platform
 
-> **For Non-Developers & Adoption Evaluation**: For a straightforward product overview, visit the [SyncOps Product Homepage (ops.empasy.io)](https://ops.empasy.io/en/){target="_blank" rel="noopener"}. To explore the UI without installation, try the [Unified Demo Portal](https://sync.empasy.io/en/products/sync-ops#demo){target="_blank" rel="noopener"}, or download brochures and proposal PDFs from the [Proposal Library](/en/proposals/).
+> **For Non-Developers & Adoption Evaluation**: For a straightforward product overview, visit the [SyncOps Product Homepage (empasy.io)](https://empasy.io/en/solutions/sync-ops.html){target="_blank" rel="noopener"}. To explore the UI without installation, try the [Unified Demo Portal](https://demo.empasy.io/en/products/sync-ops#demo){target="_blank" rel="noopener"}, or download brochures and proposal PDFs from the [Proposal Library](/en/proposals/).
 
 > **Tier 3 Enterprise SI PMO & Profit/Compliance Agent Platform**  
-> Service Domain: `https://ops.empasy.io` · Standard API Prefix: `/api/v1/ops`
+> Service Domain: `https://empasy.io/en/solutions/sync-ops.html` · Standard API Prefix: `/api/v1/ops`
 
 **SyncOps** is an enterprise business operations (PSA/PMO) agent that autonomously manages the core performance and compliance indicators of contract-based SI (System Integration) and software solution companies on a single platform—including **dual P&L tracking (client contract billing rate vs. actual input cost)**, **KOSA software engineer grade and monthly M/M utilization matrices**, **expiration tracking for the four major surety bond insurances (bid, performance, advance payment, and defect warranty)**, **Subcontracting Act 15-day/60-day payment deadline monitoring**, and **SHA-256 timestamp-authenticated electronic research notes for R&D tax credits under the Restriction of Special Taxation Act**.
 

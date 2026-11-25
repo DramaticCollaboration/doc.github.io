@@ -23,7 +23,7 @@ sort: 1
 
 # SyncAPIM: AI自律APIセキュリティ監視および仕様ガバナンスプラットフォーム
 
-> **非開発者・導入検討ガイド**: わかりやすい製品紹介は[SyncAPIM製品ホームページ（apim.empasy.io）](https://apim.empasy.io/ja/){target="_blank" rel="noopener"}にて、インストール不要の画面体験は[統合デモポータル](https://sync.empasy.io/ja/products/sync-apim#demo){target="_blank" rel="noopener"}にてご利用いただけます。また、紹介資料・提案書PDFは[提案書ライブラリ](/ja/proposals/)からダウンロードできます。
+> **非開発者・導入検討ガイド**: わかりやすい製品紹介は[SyncAPIM製品ホームページ（apim.empasy.io）](https://empasy.io/ja/solutions/sync-apim.html){target="_blank" rel="noopener"}にて、インストール不要の画面体験は[統合デモポータル](https://demo.empasy.io/ja/products/sync-apim#demo){target="_blank" rel="noopener"}にてご利用いただけます。また、紹介資料・提案書PDFは[提案書ライブラリ](/ja/proposals/)からダウンロードできます。
 
 > [!IMPORTANT]
 > **SyncSeries 4-Tier APIセキュリティ・監視エージェント（`SYNC_APIM`）**: `SyncAPIM`は、マイクロサービスやレガシーWASの前段で流通するすべてのAPIトラフィックをリアルタイム収集し、**構文トークンフィンガープリント解析器（`SqlXssLexicalTokenizer`）**、**`SyncWatch`連携リアルタイム攻撃パターン検知・ピンポイント仮想パッチ（`ApimDefensePack` & `SandboxedDefenseEvaluator`）**、**カーネルeBPF遮断**、**未登録シャドーAPI自動カタログ化**、**OpenAPI 3.0.1仕様ドリフト診断**、および**8大個人・金融機密情報の動的マスキング**を自律的に実行します。

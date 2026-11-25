@@ -40,7 +40,7 @@ SyncCMS는 모든 콘텐츠, 레이아웃 및 폼 데이터를 표준 RESTful AP
 
 #### 요청 예시 (cURL)
 ```bash
-curl -X GET "https://cms.empasy.io/api/v1/cms/contents/2026-fall-membership" \
+curl -X GET "https://empasy.io/ko/solutions/sync-cms.htmlapi/v1/cms/contents/2026-fall-membership" \
      -H "X-Sync-Site-Key: SITE_MAIN_PORTAL" \
      -H "Accept: application/json"
 ```
@@ -59,14 +59,14 @@ curl -X GET "https://cms.empasy.io/api/v1/cms/contents/2026-fall-membership" \
     "fields": {
       "headline": "2026 하반기 멤버십 페스티벌",
       "description": "신규 가입 시 웰컴 쿠폰팩과 포인트 적립 혜택을 즉시 제공합니다.",
-      "bannerUrl": "https://cms.empasy.io/images/promo2026.webp",
+      "bannerUrl": "https://empasy.io/ko/solutions/sync-cms.htmlimages/promo2026.webp",
       "ctaText": "혜택 확인하기",
       "ctaLink": "/events/welcome-pack"
     },
     "seo": {
       "metaTitle": "2026 멤버십 혜택 | Empasy",
       "metaDescription": "신규 회원 혜택과 이벤트 정보를 확인하세요.",
-      "ogImage": "https://cms.empasy.io/images/og-fall.png"
+      "ogImage": "https://empasy.io/ko/solutions/sync-cms.htmlimages/og-fall.png"
     }
   }
 }
@@ -82,7 +82,7 @@ curl -X GET "https://cms.empasy.io/api/v1/cms/contents/2026-fall-membership" \
 
 #### 요청 예시 (cURL)
 ```bash
-curl -X POST "https://cms.empasy.io/api/v1/cms/forms/contact-us/submit" \
+curl -X POST "https://empasy.io/ko/solutions/sync-cms.htmlapi/v1/cms/forms/contact-us/submit" \
      -H "X-Sync-Site-Key: SITE_MAIN_PORTAL" \
      -H "Content-Type: application/json" \
      -d '{
@@ -115,7 +115,7 @@ curl -X POST "https://cms.empasy.io/api/v1/cms/forms/contact-us/submit" \
 
 #### 요청 예시 (cURL)
 ```bash
-curl -X POST "https://cms.empasy.io/api/v1/cms/deploy/purge-cache" \
+curl -X POST "https://empasy.io/ko/solutions/sync-cms.htmlapi/v1/cms/deploy/purge-cache" \
      -H "Authorization: Bearer ADMIN_JWT_TOKEN" \
      -H "Content-Type: application/json" \
      -d '{
@@ -132,7 +132,7 @@ curl -X POST "https://cms.empasy.io/api/v1/cms/deploy/purge-cache" \
 
 ```json
 {
-  "type": "https://cms.empasy.io/errors/content-not-found",
+  "type": "https://empasy.io/ko/solutions/sync-cms.htmlerrors/content-not-found",
   "title": "Content Not Found",
   "status": 404,
   "detail": "지정된 슬러그('invalid-slug')에 해당하는 발행된 콘텐츠가 존재하지 않습니다.",

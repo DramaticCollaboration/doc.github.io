@@ -20,7 +20,7 @@ Authorization: Bearer <API_KEY>
 
 ## 2. OpenAI 호환 추론 엔드포인트
 
-- **프로덕션 게이트웨이 URL**: `https://llm.empasy.io/api/v1/llm/chat/completions`
+- **프로덕션 게이트웨이 URL**: `https://empasy.io/ko/solutions/sync-llm.htmlapi/v1/llm/chat/completions`
 - **로컬 개발 서버 URL**: `http://localhost:18090/api/v1/llm/chat/completions`
 
 ### 2.1 POST `/api/v1/llm/chat/completions`
@@ -42,7 +42,7 @@ Authorization: Bearer <API_KEY>
 
 ```bash
 # 프로덕션 엔드포인트 ( 로컬 개발 시: http://localhost:18090/api/v1/llm/chat/completions )
-curl -X POST https://llm.empasy.io/api/v1/llm/chat/completions \
+curl -X POST https://empasy.io/ko/solutions/sync-llm.htmlapi/v1/llm/chat/completions \
   -H "Authorization: Bearer $SYNCLLM_KEY" \
   -H "Content-Type: application/json" \
   -d '{
@@ -62,7 +62,7 @@ curl -X POST https://llm.empasy.io/api/v1/llm/chat/completions \
 텍스트 임베딩 벡터를 생성합니다.
 
 ```bash
-curl -X POST https://llm.empasy.io/api/v1/llm/embeddings \
+curl -X POST https://empasy.io/ko/solutions/sync-llm.htmlapi/v1/llm/embeddings \
   -H "Authorization: Bearer $SYNCLLM_KEY" \
   -H "Content-Type: application/json" \
   -d '{

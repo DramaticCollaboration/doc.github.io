@@ -24,7 +24,7 @@ dir:
 
 # SyncInsight: データ分析および意思決定支援プラットフォーム
 
-> **非開発者・導入検討案内**: 分かりやすい製品紹介は [SyncInsight 製品ホームページ (insight.empasy.io)](https://insight.empasy.io/ja/){target="_blank" rel="noopener"} で、インストール不要の画面体験は [統合デモポータル](https://sync.empasy.io/ja/products/sync-insight#demo){target="_blank" rel="noopener"} でご利用いただけます。また、紹介書・提案書 PDF は [提案書資料室](/ja/proposals/) からダウンロードできます。
+> **非開発者・導入検討案内**: 分かりやすい製品紹介は [SyncInsight 製品ホームページ (empasy.io)](https://empasy.io/ja/solutions/sync-insight.html){target="_blank" rel="noopener"} で、インストール不要の画面体験は [統合デモポータル](https://demo.empasy.io/ja/products/sync-insight#demo){target="_blank" rel="noopener"} でご利用いただけます。また、紹介書・提案書 PDF は [提案書資料室](/ja/proposals/) からダウンロードできます。
 
 **SyncInsight** は、SyncVerse エージェントエコシステムのデータ分析および意思決定支援 (Decision Intelligence) プラットフォームです。
 

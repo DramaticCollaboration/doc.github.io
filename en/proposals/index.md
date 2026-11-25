@@ -71,5 +71,5 @@ Download the bundle tailored to your organization's current priorities and adopt
 
 ## 5. Integrated Live Demo & Desktop App Trial
 
-* **Integrated Live Demo Portal**: Experience the live admin and user interfaces of all 12 products right now at [https://sync.empasy.io/en/](https://sync.empasy.io/en/).
+* **Integrated Live Demo Portal**: Experience the live admin and user interfaces of all 12 products right now at [https://demo.empasy.io/en/](https://demo.empasy.io/en/).
 * **SyncETA Desktop App Download**: Download the Windows or macOS installer from [https://empasy.io/en/download_eta.html](https://empasy.io/en/download_eta.html) to run click recording and automated tests directly on your machine.

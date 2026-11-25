@@ -71,5 +71,5 @@ description: "SyncSeries 統合パンフレット・マスター提案書、お�
 
 ## 5. 統合ライブデモおよびデスクトップアプリ体験のご案内
 
-* **統合ライブデモポータル**：[https://sync.empasy.io/ja/](https://sync.empasy.io/ja/) にて、12大製品すべての実際の管理者・ユーザー稼働画面を今すぐご体験いただけます。
+* **統合ライブデモポータル**：[https://demo.empasy.io/ja/](https://demo.empasy.io/ja/) にて、12大製品すべての実際の管理者・ユーザー稼働画面を今すぐご体験いただけます。
 * **SyncETA デスクトップアプリダウンロード**：[https://empasy.io/ja/download_eta.html](https://empasy.io/ja/download_eta.html) から Windows / macOS 用のインストーラーをダウンロードし、お使いの PC ですぐにクリック録画と自動テストを実行いただけます。

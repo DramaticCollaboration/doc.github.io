@@ -85,7 +85,7 @@ flowchart LR
     "headMeta": {
       "title": "엔터프라이즈 API 보안: 구문 토큰 지문 분석과 실시간 가상 패치 가이드 | SyncCMS",
       "description": "미등록 섀도우 API 탐지부터 SqlXssLexicalTokenizer 구문 분석 및 무중단 가상 패치까지의 API 보안 아키텍처를 해설합니다.",
-      "canonicalUrl": "https://cms.empasy.io/insights/enterprise-api-security-virtual-patching"
+      "canonicalUrl": "https://empasy.io/ko/solutions/sync-cms.htmlinsights/enterprise-api-security-virtual-patching"
     },
     "generatedJsonLd": {
       "@context": "https://schema.org",

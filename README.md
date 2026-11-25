@@ -3,7 +3,7 @@
 엠파시(Empasy)의 **SyncSeries AI 자율 운영 생태계(Agent-to-Agent)** 공식 기술 문서 및 개발자 가이드 포털 저장소입니다.
 
 - **기술 문서 포털**: [https://doc.empasy.com](https://doc.empasy.com)
-- **통합 데모 포털**: [https://sync.empasy.io](https://sync.empasy.io)
+- **통합 데모 포털**: [https://demo.empasy.io](https://demo.empasy.io)
 - **공식 기업 홈페이지**: [https://empasy.io](https://empasy.io)
 - **GitHub Organization**: [https://github.com/DramaticCollaboration/](https://github.com/DramaticCollaboration/)
 

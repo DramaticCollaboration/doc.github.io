@@ -23,7 +23,7 @@ sort: 1
 
 # 전사 기술 용어집 (SyncSeries Technical Glossary)
 
-> **문서 성격 안내**: 본 페이지는 `doc.empasy.com`이 관리하는 **엠파시(Empasy) 및 SyncSeries 공식 기술 용어 단일 원천(SSOT)**입니다. 비개발자·도입 검토 담당자용 제품 소개는 [엠파시 공식 홈페이지(empasy.io)](https://empasy.io/) 및 [통합 데모 포털(sync.empasy.io)](https://sync.empasy.io/)을 참고하시기 바랍니다.
+> **문서 성격 안내**: 본 페이지는 `doc.empasy.com`이 관리하는 **엠파시(Empasy) 및 SyncSeries 공식 기술 용어 단일 원천(SSOT)**입니다. 비개발자·도입 검토 담당자용 제품 소개는 [엠파시 공식 홈페이지(empasy.io)](https://empasy.io/) 및 [통합 데모 포털(demo.empasy.io)](https://demo.empasy.io/)을 참고하시기 바랍니다.
 
 ---
 

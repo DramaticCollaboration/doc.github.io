@@ -40,7 +40,7 @@ SyncCMS はすべてのコンテンツ、レイアウトおよびフォームデ
 
 #### リクエスト例 (cURL)
 ```bash
-curl -X GET "https://cms.empasy.io/api/v1/cms/contents/2026-fall-membership" \
+curl -X GET "https://empasy.io/ja/solutions/sync-cms.htmlapi/v1/cms/contents/2026-fall-membership" \
      -H "X-Sync-Site-Key: SITE_MAIN_PORTAL" \
      -H "Accept: application/json"
 ```
@@ -59,14 +59,14 @@ curl -X GET "https://cms.empasy.io/api/v1/cms/contents/2026-fall-membership" \
     "fields": {
       "headline": "2026 下半期メンバーシップフェスティバル",
       "description": "新規登録時にウェルカムクーポンパックとポイント付与特典を即時提供します。",
-      "bannerUrl": "https://cms.empasy.io/images/promo2026.webp",
+      "bannerUrl": "https://empasy.io/ja/solutions/sync-cms.htmlimages/promo2026.webp",
       "ctaText": "特典を確認する",
       "ctaLink": "/events/welcome-pack"
     },
     "seo": {
       "metaTitle": "2026 メンバーシップ特典 | Empasy",
       "metaDescription": "新規会員特典とイベント情報をご確認ください。",
-      "ogImage": "https://cms.empasy.io/images/og-fall.png"
+      "ogImage": "https://empasy.io/ja/solutions/sync-cms.htmlimages/og-fall.png"
     }
   }
 }
@@ -82,7 +82,7 @@ Web/アプリフロントエンドから収集されたユーザー入力フォ�
 
 #### リクエスト例 (cURL)
 ```bash
-curl -X POST "https://cms.empasy.io/api/v1/cms/forms/contact-us/submit" \
+curl -X POST "https://empasy.io/ja/solutions/sync-cms.htmlapi/v1/cms/forms/contact-us/submit" \
      -H "X-Sync-Site-Key: SITE_MAIN_PORTAL" \
      -H "Content-Type: application/json" \
      -d '{
@@ -115,7 +115,7 @@ curl -X POST "https://cms.empasy.io/api/v1/cms/forms/contact-us/submit" \
 
 #### リクエスト例 (cURL)
 ```bash
-curl -X POST "https://cms.empasy.io/api/v1/cms/deploy/purge-cache" \
+curl -X POST "https://empasy.io/ja/solutions/sync-cms.htmlapi/v1/cms/deploy/purge-cache" \
      -H "Authorization: Bearer ADMIN_JWT_TOKEN" \
      -H "Content-Type: application/json" \
      -d '{
@@ -132,7 +132,7 @@ curl -X POST "https://cms.empasy.io/api/v1/cms/deploy/purge-cache" \
 
 ```json
 {
-  "type": "https://cms.empasy.io/errors/content-not-found",
+  "type": "https://empasy.io/ja/solutions/sync-cms.htmlerrors/content-not-found",
   "title": "Content Not Found",
   "status": 404,
   "detail": "指定されたスラッグ（'invalid-slug'）に該当する公開済みコンテンツが存在しません。",

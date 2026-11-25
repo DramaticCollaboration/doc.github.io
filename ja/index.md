@@ -17,7 +17,7 @@ hero:
         link: /ja/glossary/
         theme: alt
       - text: 統合デモポータル ↗
-        link: https://sync.empasy.io/ja/
+        link: https://demo.empasy.io/ja/
         theme: alt
 
 head:
@@ -71,7 +71,7 @@ footer: Copyright © 2026 Empasy Inc. All rights reserved.
 ## 本ドキュメントポータルの役割
 
 > 本サイト（`doc.empasy.com`）は、**開発者およびシステム運用者向けの公式技術マニュアルおよび技術用語の信頼できる唯一の情報源（SSOT）**です。
-> 非開発者向けのわかりやすい製品紹介は各製品ホームページ（`*.empasy.io`）および[株式会社エムパシー公式サイト（empasy.io）](https://empasy.io/ja/pages/index.html)で、インストール不要の画面体験は[統合デモポータル（sync.empasy.io）](https://sync.empasy.io/ja/)でご利用いただけます。また、エコシステム全体の標準技術用語は[全社技術用語集（/ja/glossary/）](/ja/glossary/)でご確認いただけます。
+> 非開発者向けのわかりやすい製品紹介は[株式会社エムパシー公式サイト（empasy.io）](https://empasy.io/ja/pages/index.html)の各製品ページで、インストール不要の画面体験は[統合デモポータル（demo.empasy.io）](https://demo.empasy.io/ja/)でご利用いただけます。また、エコシステム全体の標準技術用語は[全社技術用語集（/ja/glossary/）](/ja/glossary/)でご確認いただけます。
 
 ---
 

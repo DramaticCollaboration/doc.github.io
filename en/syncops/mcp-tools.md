@@ -25,7 +25,7 @@ sort: 3
 
 Following the enterprise single canonical URL standard, `SyncOps` exposes all REST APIs and Model Context Protocol (MCP) endpoints under the **`/api/v1/ops/...`** prefix.
 
-- **Cloud Endpoint**: `https://ops.empasy.io/api/v1/ops`
+- **Cloud Endpoint**: `https://empasy.io/en/solutions/sync-ops.htmlapi/v1/ops`
 - **Local Development Ports**: Admin UI `http://localhost:3104` / API Server `http://localhost:18084`
 
 ---
@@ -168,7 +168,7 @@ Verifies the integrity of the body content, author/witness signatures, Git commi
 
 ### 3.1 AI Optimal Talent Matching Request
 ```bash
-curl -X POST "https://ops.empasy.io/api/v1/ops/ai/match-talents" \
+curl -X POST "https://empasy.io/en/solutions/sync-ops.htmlapi/v1/ops/ai/match-talents" \
   -H "Authorization: Bearer ${SYNC_OPS_JWT}" \
   -H "Content-Type: application/json" \
   -d '{
@@ -183,7 +183,7 @@ curl -X POST "https://ops.empasy.io/api/v1/ops/ai/match-talents" \
 
 ### 3.2 Execute One-Click Contact Handover
 ```bash
-curl -X POST "https://ops.empasy.io/api/v1/ops/contacts/handover" \
+curl -X POST "https://empasy.io/en/solutions/sync-ops.htmlapi/v1/ops/contacts/handover" \
   -H "Authorization: Bearer ${SYNC_OPS_JWT}" \
   -H "Content-Type: application/json" \
   -d '{

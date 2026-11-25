@@ -22,7 +22,7 @@ sort: 10
 
 # SyncETA: Web Test Automation · Site Audit & Defect Tracking Platform
 
-> **Non-Developers & Adoption Evaluation Guide**: For an accessible product overview, visit the [SyncETA Product Homepage (eta.empasy.io)](https://eta.empasy.io/en/){target="_blank" rel="noopener"}. For desktop installation and live hands-on evaluation, visit the [Unified Demo Portal](https://sync.empasy.io/en/products/sync-eta#demo){target="_blank" rel="noopener"}. The latest 15-page brochure PDF is available in the [Proposals Library](/en/proposals/).
+> **Non-Developers & Adoption Evaluation Guide**: For an accessible product overview, visit the [SyncETA Product Homepage (empasy.io)](https://empasy.io/en/solutions/sync-eta.html){target="_blank" rel="noopener"}. For desktop installation and live hands-on evaluation, visit the [Unified Demo Portal](https://demo.empasy.io/en/products/sync-eta#demo){target="_blank" rel="noopener"}. The latest 15-page brochure PDF is available in the [Proposals Library](/en/proposals/).
 
 **SyncETA** automates the entire web quality verification lifecycle without writing brittle scripts: **browser action recording (with security keypad, cookie banner bypass, and PII masking), Excel and one-line prompt test conversion using representative/sample URLs, multi-account simultaneous testing, scenario-free link and layout-overlap audits with honest `[Needs Review]` triage, and Bug Kanban one-click `[Check Now]` re-verification**—powered by Playwright MCP parallel execution and adaptive element recovery.
 

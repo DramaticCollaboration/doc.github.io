@@ -7,7 +7,7 @@ sort: 1
 
 # SyncWatch 概要 (AI Security Threat Intelligence & Rule Compiler Agent)
 
-> **非開発者・導入検討のご案内**: 分かりやすい製品紹介は [SyncWatch 製品ホームページ (watch.empasy.io)](https://watch.empasy.io/ja/){target="_blank" rel="noopener"} で、インストール不要の画面体験は [統合デモポータル](https://sync.empasy.io/ja/products/sync-watch#demo){target="_blank" rel="noopener"} でご利用いただけます。また、紹介資料・提案書 PDF は [提案書資料室](/ja/proposals/) からダウンロードできます。
+> **非開発者・導入検討のご案内**: 分かりやすい製品紹介は [SyncWatch 製品ホームページ (empasy.io)](https://empasy.io/ja/solutions/sync-watch.html){target="_blank" rel="noopener"} で、インストール不要の画面体験は [統合デモポータル](https://demo.empasy.io/ja/products/sync-watch#demo){target="_blank" rel="noopener"} でご利用いただけます。また、紹介資料・提案書 PDF は [提案書資料室](/ja/proposals/) からダウンロードできます。
 
 **SyncWatch (`SYNC_WATCH`, `com.empasy.sync.watch`)** は、**8 大グローバル脅威フィード (OSV.dev、GitHub GHSA、NVD CVE、CISA KEV、Nuclei、OWASP CRS、MITRE ATT&CK、KISA)** と企業内部のセキュリティ診断ドキュメントを単一ハブへ収集・正規化し、**SyncVerse** にはコード・依存関係・ペネトレーションテストのセキュリティ点検パック (**`VerseAuditPack`**) を、**SyncAPIM** にはランタイム攻撃パターン防御パック (**`ApimDefensePack`**) をリアルタイムにコンパイル・配信する **全社セキュリティ観測所 (Security Threat Observatory & Dual Rule Compiler)** です。
 
@@ -21,7 +21,7 @@ sort: 1
 | **Maven 座標系** | `com.empasy.sync.watch:sync-watch-server` (Spring Boot 4.0.x, JDK 25) |
 | **標準 API Prefix** | `/api/v1/watch/*` (権限 API: `/api/v1/watch/sys/permission/getUserPermissionByToken`) |
 | **Admin 管理コンソール** | ローカル: `http://localhost:3107` / クラウド: `https://watch-admin.empasy.io` |
-| **バックエンド API & ホームページ** | ローカル: `http://localhost:18087/api/v1/watch` / クラウド: `https://watch.empasy.io` |
+| **バックエンド API & ホームページ** | ローカル: `http://localhost:18087/api/v1/watch` / クラウド: `https://empasy.io/ja/solutions/sync-watch.html` |
 | **データベース** | PostgreSQL 18.6 (`sync_watch`、6 大ドメインテーブル `watch_*`) |
 
 ---

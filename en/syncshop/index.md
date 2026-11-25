@@ -22,7 +22,7 @@ sort: 1
 
 # SyncShop: Intelligent Commerce Operations Platform Overview
 
-> **Non-Developer & Evaluation Guide**: Visit the [SyncShop Product Homepage (shop.empasy.io)](https://shop.empasy.io/en/){target="_blank" rel="noopener"} for an accessible product overview, try the live UI without installation on the [Unified Demo Portal](https://sync.empasy.io/en/products/sync-shop#demo){target="_blank" rel="noopener"}, or download brochure and proposal PDFs from the [Proposals Archive](/en/proposals/).
+> **Non-Developer & Evaluation Guide**: Visit the [SyncShop Product Homepage (empasy.io)](https://empasy.io/en/solutions/sync-shop.html){target="_blank" rel="noopener"} for an accessible product overview, try the live UI without installation on the [Unified Demo Portal](https://demo.empasy.io/en/products/sync-shop#demo){target="_blank" rel="noopener"}, or download brochure and proposal PDFs from the [Proposals Archive](/en/proposals/).
 
 SyncShop is a **Headless eCommerce** platform that decouples backend commerce logic from the frontend presentation layer for business agility and channel scalability.
 

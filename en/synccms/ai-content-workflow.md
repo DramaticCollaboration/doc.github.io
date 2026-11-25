@@ -85,7 +85,7 @@ Continuously parses the active draft in the right-hand editor panel to quantitat
     "headMeta": {
       "title": "Enterprise API Security: Lexical Token Fingerprinting & Real-Time Virtual Patching Guide | SyncCMS",
       "description": "An architectural guide to API security covering unregistered shadow API detection, SqlXssLexicalTokenizer parsing, and zero-downtime virtual patching.",
-      "canonicalUrl": "https://cms.empasy.io/insights/enterprise-api-security-virtual-patching"
+      "canonicalUrl": "https://empasy.io/en/solutions/sync-cms.htmlinsights/enterprise-api-security-virtual-patching"
     },
     "generatedJsonLd": {
       "@context": "https://schema.org",

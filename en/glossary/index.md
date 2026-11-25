@@ -23,7 +23,7 @@ sort: 1
 
 # SyncSeries Technical Glossary
 
-> **Document Scope**: This page is the **official Single Source of Truth (SSOT) for Empasy and SyncSeries technical terminology** maintained by `doc.empasy.com`. For non-technical or procurement-oriented product overviews, please refer to the [Empasy Official Website (empasy.io)](https://empasy.io/en/pages/index.html) and the [Unified Demo Portal (sync.empasy.io)](https://sync.empasy.io/en/).
+> **Document Scope**: This page is the **official Single Source of Truth (SSOT) for Empasy and SyncSeries technical terminology** maintained by `doc.empasy.com`. For non-technical or procurement-oriented product overviews, please refer to the [Empasy Official Website (empasy.io)](https://empasy.io/en/pages/index.html) and the [Unified Demo Portal (demo.empasy.io)](https://demo.empasy.io/en/).
 
 ---
 

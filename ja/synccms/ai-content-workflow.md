@@ -85,7 +85,7 @@ flowchart LR
     "headMeta": {
       "title": "エンタープライズ API セキュリティ：構文トークンフィンガープリント分析とリアルタイム仮想パッチガイド | SyncCMS",
       "description": "未登録シャドウ API の検知から SqlXssLexicalTokenizer 構文解析および無停止仮想パッチまでの API セキュリティアーキテクチャを解説します。",
-      "canonicalUrl": "https://cms.empasy.io/insights/enterprise-api-security-virtual-patching"
+      "canonicalUrl": "https://empasy.io/ja/solutions/sync-cms.htmlinsights/enterprise-api-security-virtual-patching"
     },
     "generatedJsonLd": {
       "@context": "https://schema.org",

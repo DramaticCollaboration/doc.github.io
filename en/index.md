@@ -17,7 +17,7 @@ hero:
         link: /en/glossary/
         theme: alt
       - text: Unified Demo Portal ↗
-        link: https://sync.empasy.io/en/
+        link: https://demo.empasy.io/en/
         theme: alt
 
 head:
@@ -71,7 +71,7 @@ footer: Copyright © 2026 Empasy Inc. All rights reserved.
 ## Role of This Documentation Portal
 
 > This site (`doc.empasy.com`) serves as the **official technical manual and Single Source of Truth (SSOT) for technical terminology for developers and system operators**.
-> For non-technical product overviews, visit each product homepage (`*.empasy.io`) or the [Empasy Official Website (empasy.io)](https://empasy.io/en/pages/index.html). For zero-install interactive previews, visit the [Unified Demo Portal (sync.empasy.io)](https://sync.empasy.io/en/). Standard terminology across the ecosystem is documented in the [Enterprise Technical Glossary (/en/glossary/)](/en/glossary/).
+> For non-technical product overviews, visit the product pages on the [Empasy Official Website (empasy.io)](https://empasy.io/en/pages/index.html). For zero-install interactive previews, visit the [Unified Demo Portal (demo.empasy.io)](https://demo.empasy.io/en/). Standard terminology across the ecosystem is documented in the [Enterprise Technical Glossary (/en/glossary/)](/en/glossary/).
 
 ---
 

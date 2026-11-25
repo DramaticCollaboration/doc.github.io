@@ -64,8 +64,8 @@ HTMLファイルの `<body>` タグ下部にSDKスクリプトを追加し、編
     </div>
 
     <!-- Sync-Live-SDK スクリプト埋め込み -->
-    <script src="https://cms.empasy.io/sdk/sync-live-sdk.js"
-            data-sync-cms-endpoint="https://cms.empasy.io/api/v1/cms"
+    <script src="https://empasy.io/ja/solutions/sync-cms.htmlsdk/sync-live-sdk.js"
+            data-sync-cms-endpoint="https://empasy.io/ja/solutions/sync-cms.htmlapi/v1/cms"
             data-sync-site-key="SITE_PORTAL_KO"
             async></script>
 </body>

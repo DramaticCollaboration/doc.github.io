@@ -20,7 +20,7 @@ Authorization: Bearer <API_KEY>
 
 ## 2. OpenAI 互換推論エンドポイント
 
-- **本番ゲートウェイ URL**: `https://llm.empasy.io/api/v1/llm/chat/completions`
+- **本番ゲートウェイ URL**: `https://empasy.io/ja/solutions/sync-llm.htmlapi/v1/llm/chat/completions`
 - **ローカル開発サーバー URL**: `http://localhost:18090/api/v1/llm/chat/completions`
 
 ### 2.1 POST `/api/v1/llm/chat/completions`
@@ -42,7 +42,7 @@ Authorization: Bearer <API_KEY>
 
 ```bash
 # 本番エンドポイント ( ローカル開発時: http://localhost:18090/api/v1/llm/chat/completions )
-curl -X POST https://llm.empasy.io/api/v1/llm/chat/completions \
+curl -X POST https://empasy.io/ja/solutions/sync-llm.htmlapi/v1/llm/chat/completions \
   -H "Authorization: Bearer $SYNCLLM_KEY" \
   -H "Content-Type: application/json" \
   -d '{
@@ -62,7 +62,7 @@ curl -X POST https://llm.empasy.io/api/v1/llm/chat/completions \
 テキストの埋め込みベクトルを生成します。
 
 ```bash
-curl -X POST https://llm.empasy.io/api/v1/llm/embeddings \
+curl -X POST https://empasy.io/ja/solutions/sync-llm.htmlapi/v1/llm/embeddings \
   -H "Authorization: Bearer $SYNCLLM_KEY" \
   -H "Content-Type: application/json" \
   -d '{

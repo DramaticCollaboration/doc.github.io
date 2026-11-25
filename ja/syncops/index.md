@@ -23,10 +23,10 @@ sort: 1
 
 # SyncOps: 韓国型 SI / ソリューション事業運営 & 損益・コンプライアンス管制プラットフォーム
 
-> **非開発者・導入検討向け案内**: 分かりやすい製品紹介は [SyncOps 製品ホームページ（ops.empasy.io）](https://ops.empasy.io/ja/){target="_blank" rel="noopener"} で、インストール不要の画面体験は [統合デモポータル](https://sync.empasy.io/ja/products/sync-ops#demo){target="_blank" rel="noopener"} でご利用いただけます。紹介資料・提案書 PDF は [提案書資料室](/ja/proposals/) からダウンロードできます。
+> **非開発者・導入検討向け案内**: 分かりやすい製品紹介は [SyncOps 製品ホームページ（ops.empasy.io）](https://empasy.io/ja/solutions/sync-ops.html){target="_blank" rel="noopener"} で、インストール不要の画面体験は [統合デモポータル](https://demo.empasy.io/ja/products/sync-ops#demo){target="_blank" rel="noopener"} でご利用いただけます。紹介資料・提案書 PDF は [提案書資料室](/ja/proposals/) からダウンロードできます。
 
 > **Tier 3 Enterprise SI PMO & Profit/Compliance Agent Platform**  
-> サービスドメイン: `https://ops.empasy.io` · 標準 API Prefix: `/api/v1/ops`
+> サービスドメイン: `https://empasy.io/ja/solutions/sync-ops.html` · 標準 API Prefix: `/api/v1/ops`
 
 **SyncOps** は、受注型 SI（システムインテグレーション）および SW ソリューション企業の主要経営指標である **発注元契約単価対実投入原価デュアル損益**、**KOSA ソフトウェア技術者等級および月別 M/M 稼働率マトリックス**、**入札・契約・前払金・瑕疵の 4 大履行保証保険満期追跡**、**下請法 15 日 / 60 日支給期日監視**、**租税特例制限法 R&D 税額控除用 SHA-256 タイムスタンプ認証電子研究ノート** を単一プラットフォームで自律管理するエンタープライズ事業運営（PSA / PMO）エージェントです。
 

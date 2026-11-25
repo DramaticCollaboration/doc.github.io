@@ -40,7 +40,7 @@ Retrieves the latest published content data and SEO metadata for a specific chan
 
 #### Request Example (cURL)
 ```bash
-curl -X GET "https://cms.empasy.io/api/v1/cms/contents/2026-fall-membership" \
+curl -X GET "https://empasy.io/en/solutions/sync-cms.htmlapi/v1/cms/contents/2026-fall-membership" \
      -H "X-Sync-Site-Key: SITE_MAIN_PORTAL" \
      -H "Accept: application/json"
 ```
@@ -59,14 +59,14 @@ curl -X GET "https://cms.empasy.io/api/v1/cms/contents/2026-fall-membership" \
     "fields": {
       "headline": "Fall 2026 Membership Festival",
       "description": "Receive a welcome coupon pack and instant reward points upon signing up.",
-      "bannerUrl": "https://cms.empasy.io/images/promo2026.webp",
+      "bannerUrl": "https://empasy.io/en/solutions/sync-cms.htmlimages/promo2026.webp",
       "ctaText": "View Benefits",
       "ctaLink": "/events/welcome-pack"
     },
     "seo": {
       "metaTitle": "2026 Membership Benefits | Empasy",
       "metaDescription": "Explore new member benefits and promotional event details.",
-      "ogImage": "https://cms.empasy.io/images/og-fall.png"
+      "ogImage": "https://empasy.io/en/solutions/sync-cms.htmlimages/og-fall.png"
     }
   }
 }
@@ -82,7 +82,7 @@ Validates and stores user-submitted form data collected from web and mobile fron
 
 #### Request Example (cURL)
 ```bash
-curl -X POST "https://cms.empasy.io/api/v1/cms/forms/contact-us/submit" \
+curl -X POST "https://empasy.io/en/solutions/sync-cms.htmlapi/v1/cms/forms/contact-us/submit" \
      -H "X-Sync-Site-Key: SITE_MAIN_PORTAL" \
      -H "Content-Type: application/json" \
      -d '{
@@ -115,7 +115,7 @@ Immediately invalidates the backend distributed cache (Redis) and connected edge
 
 #### Request Example (cURL)
 ```bash
-curl -X POST "https://cms.empasy.io/api/v1/cms/deploy/purge-cache" \
+curl -X POST "https://empasy.io/en/solutions/sync-cms.htmlapi/v1/cms/deploy/purge-cache" \
      -H "Authorization: Bearer ADMIN_JWT_TOKEN" \
      -H "Content-Type: application/json" \
      -d '{
@@ -132,7 +132,7 @@ When an error occurs, consistent error details are returned in the RFC 7807 stan
 
 ```json
 {
-  "type": "https://cms.empasy.io/errors/content-not-found",
+  "type": "https://empasy.io/en/solutions/sync-cms.htmlerrors/content-not-found",
   "title": "Content Not Found",
   "status": 404,
   "detail": "No published content exists for the specified slug ('invalid-slug').",

@@ -23,10 +23,10 @@ sort: 1
 
 # SyncOps: 한국형 SI/솔루션 사업운영 & 손익·컴플라이언스 관제 플랫폼
 
-> **비개발자 · 도입 검토 안내**: 쉬운 제품 소개는 [SyncOps 제품 홈페이지(ops.empasy.io)](https://ops.empasy.io/){target="_blank" rel="noopener"}에서, 설치 없는 화면 체험은 [통합 데모 포털](https://sync.empasy.io/products/sync-ops#demo){target="_blank" rel="noopener"}에서 이용하실 수 있으며, 소개서·제안서 PDF는 [제안서 자료실](/proposals/)에서 내려받으실 수 있습니다.
+> **비개발자 · 도입 검토 안내**: 쉬운 제품 소개는 [SyncOps 제품 홈페이지(empasy.io)](https://empasy.io/ko/solutions/sync-ops.html){target="_blank" rel="noopener"}에서, 설치 없는 화면 체험은 [통합 데모 포털](https://demo.empasy.io/products/sync-ops#demo){target="_blank" rel="noopener"}에서 이용하실 수 있으며, 소개서·제안서 PDF는 [제안서 자료실](/proposals/)에서 내려받으실 수 있습니다.
 
 > **Tier 3 Enterprise SI PMO & Profit/Compliance Agent Platform**  
-> 서비스 도메인: `https://ops.empasy.io` · 표준 API Prefix: `/api/v1/ops`
+> 서비스 도메인: `https://empasy.io/ko/solutions/sync-ops.html` · 표준 API Prefix: `/api/v1/ops`
 
 **SyncOps**는 수주형 SI(시스템 통합) 및 SW 솔루션 기업의 핵심 경영 지표인 **발주처 계약단가 대 실투입원가 듀얼 손익**, **KOSA 소프트웨어 기술자 등급 및 월별 M/M 가동률 매트릭스**, **입찰·계약·선급금·하자 4대 이행보증보험 만기 추적**, **하도급법 15일/60일 지급기일 감시**, **조특법 R&D 세액공제용 SHA-256 시점인증 전자연구노트**를 단일 플랫폼에서 자율 관리하는 엔터프라이즈 사업운영(PSA/PMO) 에이전트입니다.
 

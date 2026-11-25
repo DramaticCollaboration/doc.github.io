@@ -21,7 +21,7 @@ head:
 
 # SyncBoot: Digital Backend Framework Overview
 
-> **Non-Developer & Evaluation Guide**: For a plain-language product introduction, visit the [SyncBoot Product Homepage (boot.empasy.io)](https://boot.empasy.io/en/){target="_blank" rel="noopener"}. For an installation-free interactive preview, explore the [Unified Demo Portal](https://sync.empasy.io/en/products/sync-boot#demo){target="_blank" rel="noopener"}. Product brochures and proposal PDFs are available in the [Proposals Repository](/en/proposals/).
+> **Non-Developer & Evaluation Guide**: For a plain-language product introduction, visit the [SyncBoot Product Homepage (empasy.io)](https://empasy.io/en/solutions/sync-boot.html){target="_blank" rel="noopener"}. For an installation-free interactive preview, explore the [Unified Demo Portal](https://demo.empasy.io/en/products/sync-boot#demo){target="_blank" rel="noopener"}. Product brochures and proposal PDFs are available in the [Proposals Repository](/en/proposals/).
 
 SyncBoot is a Java-based enterprise backend platform that understands business domain context to streamline database operations and API development.
 

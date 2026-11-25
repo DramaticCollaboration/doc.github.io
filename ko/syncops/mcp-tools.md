@@ -25,7 +25,7 @@ sort: 3
 
 `SyncOps`는 전사 단일 Canonical URL 표준에 따라 모든 REST API와 Model Context Protocol(MCP) 엔드포인트를 **`/api/v1/ops/...`** 접두사로 제공합니다.
 
-- **클라우드 엔드포인트**: `https://ops.empasy.io/api/v1/ops`
+- **클라우드 엔드포인트**: `https://empasy.io/ko/solutions/sync-ops.htmlapi/v1/ops`
 - **로컬 개발 포트**: Admin UI `http://localhost:3104` / API Server `http://localhost:18084`
 
 ---
@@ -168,7 +168,7 @@ SyncVerse 중앙 관제탑 또는 외부 AI 에이전트는 JSON-RPC 2.0 기반 
 
 ### 3.1 AI 최적 인력 매칭 요청
 ```bash
-curl -X POST "https://ops.empasy.io/api/v1/ops/ai/match-talents" \
+curl -X POST "https://empasy.io/ko/solutions/sync-ops.htmlapi/v1/ops/ai/match-talents" \
   -H "Authorization: Bearer ${SYNC_OPS_JWT}" \
   -H "Content-Type: application/json" \
   -d '{
@@ -183,7 +183,7 @@ curl -X POST "https://ops.empasy.io/api/v1/ops/ai/match-talents" \
 
 ### 3.2 원클릭 담당자 업무 인수인계 실행
 ```bash
-curl -X POST "https://ops.empasy.io/api/v1/ops/contacts/handover" \
+curl -X POST "https://empasy.io/ko/solutions/sync-ops.htmlapi/v1/ops/contacts/handover" \
   -H "Authorization: Bearer ${SYNC_OPS_JWT}" \
   -H "Content-Type: application/json" \
   -d '{

@@ -20,7 +20,7 @@ Authorization: Bearer <API_KEY>
 
 ## 2. OpenAI-Compatible Inference Endpoints
 
-- **Production Gateway URL**: `https://llm.empasy.io/api/v1/llm/chat/completions`
+- **Production Gateway URL**: `https://empasy.io/en/solutions/sync-llm.htmlapi/v1/llm/chat/completions`
 - **Local Development Server URL**: `http://localhost:18090/api/v1/llm/chat/completions`
 
 ### 2.1 POST `/api/v1/llm/chat/completions`
@@ -42,7 +42,7 @@ Receives a client's prompt query, routes it to the optimal upstream model, and r
 
 ```bash
 # Production endpoint (For local development: http://localhost:18090/api/v1/llm/chat/completions)
-curl -X POST https://llm.empasy.io/api/v1/llm/chat/completions \
+curl -X POST https://empasy.io/en/solutions/sync-llm.htmlapi/v1/llm/chat/completions \
   -H "Authorization: Bearer $SYNCLLM_KEY" \
   -H "Content-Type: application/json" \
   -d '{
@@ -62,7 +62,7 @@ curl -X POST https://llm.empasy.io/api/v1/llm/chat/completions \
 Generates text embedding vectors.
 
 ```bash
-curl -X POST https://llm.empasy.io/api/v1/llm/embeddings \
+curl -X POST https://empasy.io/en/solutions/sync-llm.htmlapi/v1/llm/embeddings \
   -H "Authorization: Bearer $SYNCLLM_KEY" \
   -H "Content-Type: application/json" \
   -d '{
