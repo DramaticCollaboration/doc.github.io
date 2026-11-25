@@ -5,19 +5,16 @@ title: "SyncSeries 公式技術ドキュメント・開発者ガイド"
 hero:
     name: "エムパシー技術ドキュメント"
     text: "SyncSeries 導入・構成・連携ガイド"
-    tagline: "単一の共通基盤（SyncBoot）上に構築された主力ソリューション4種と目的別拡張モジュールのアーキテクチャ、API仕様、運用マニュアルを事実に基づき体系的にまとめた公式ドキュメントです。"
-    image:
-      src: /images/syncseries-arch-hero.svg
-      alt: "SyncSeries 共通基盤（SyncBoot）および主力ソリューション4種・拡張モジュール7種 REST/MCP 連携アーキテクチャ"
+    tagline: "共通基盤（SyncBoot）上に構成された中核4製品と用途別7モジュールの構成、API仕様、運用ガイドをまとめた公式技術ドキュメントです。"
     actions:
-      - text: 連携アーキテクチャを見る
-        link: /ja/ecosystem/
+      - text: 構成図から探す
+        link: "#module-map"
         theme: brand
-      - text: 全社技術用語集
-        link: /ja/glossary/
+      - text: 連携構造を見る
+        link: /ja/ecosystem/
         theme: alt
-      - text: 紹介資料・提案書 PDF
-        link: /ja/proposals/
+      - text: 技術用語集
+        link: /ja/glossary/
         theme: alt
       - text: 統合デモポータル ↗
         link: https://sync.empasy.io/ja/
@@ -82,7 +79,9 @@ footer: Copyright © 2026 Empasy Inc. All rights reserved.
 
 SyncSeries は互いに関連性のない11個の個別システムを別々に構築したものではなく、**共通のバックオフィス・認証・監査基盤（`SyncBoot` および共通モジュール）上で、実際の企業プロジェクトで繰り返し必要とされた業務機能をモジュール単位で整理したアーキテクチャ**です。
 
-必要な領域のみを単独で導入でき、後から他のモジュールを連携させる際にも権限体系と標準連携仕様（REST / MCP）をそのまま共有できます。
+必要な領域から始めて、後から他のモジュールをつなぐ際も権限体系と共通仕様（REST / MCP）をそのまま使えます。下の構成図から各製品を選ぶとAPIパスと概要を確認でき、`↗`ボタンから該当ガイドへ移動できます。
+
+<SyncArchitectureMap />
 
 ### 主力ソリューション 4種
 

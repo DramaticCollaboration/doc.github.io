@@ -1,0 +1,369 @@
+{
+  "ui": {
+    "ko": {
+      "boardTitle": "SYNCSERIES ARCHITECTURE",
+      "protocolPill": "REST · MCP",
+      "heroHint": "박스를 누르면 해당 제품 문서로 바로 이동합니다",
+      "mapHint": "박스 클릭: 요약·API 확인 · ↗ 클릭: 문서로 이동",
+      "flagshipHeading": "핵심 솔루션 (4종)",
+      "busLabel": "표준 REST API (/api/v1/*) · MCP 연동 · 권한 관리 · 감사 이력",
+      "extHeading": "업무별 확장 모듈 (7종)",
+      "groupDataAi": "데이터 · AI (3종)",
+      "groupSecurity": "보안 관리 (2종)",
+      "groupOperations": "업무 · 서비스 (2종)",
+      "foundationTitle": "SyncBoot 공통 기반 및 공유 모듈",
+      "foundationSub": "Java 25 · Spring Boot 4.0 · PostgreSQL 18.6 (pgvector) · Redis 7",
+      "connectedLabel": "함께 연결되는 모듈",
+      "hubConnectedNote": "필요에 따라 다른 10개 모듈의 작업과 승인 흐름을 한곳에서 이어 관리합니다",
+      "openDocBtn": "기술 문서 보기 →",
+      "ecosystemBtn": "연동 구조 보기",
+      "liveDemoBtn": "화면 체험 ↗",
+      "directOpenAria": "기술 문서로 이동",
+      "integratedTag": "SyncVerse 통합"
+    },
+    "en": {
+      "boardTitle": "SYNCSERIES ARCHITECTURE",
+      "protocolPill": "REST · MCP",
+      "heroHint": "Click any box to open its technical guide",
+      "mapHint": "Click box: inspect API & links · Click ↗: open guide",
+      "flagshipHeading": "Core Solutions (4)",
+      "busLabel": "Standard REST (/api/v1/*) · MCP · RBAC · Audit Log",
+      "extHeading": "Domain Modules (7)",
+      "groupDataAi": "Data & AI (3)",
+      "groupSecurity": "Security (2)",
+      "groupOperations": "Business & Ops (2)",
+      "foundationTitle": "SyncBoot Common Foundation & Shared Modules",
+      "foundationSub": "Java 25 · Spring Boot 4.0 · PostgreSQL 18.6 (pgvector) · Redis 7",
+      "connectedLabel": "Connects with",
+      "hubConnectedNote": "Can link tasks and review approvals across the other 10 modules as needed",
+      "openDocBtn": "Open Guide →",
+      "ecosystemBtn": "Integration Specs",
+      "liveDemoBtn": "Live Demo ↗",
+      "directOpenAria": "Open technical guide",
+      "integratedTag": "In SyncVerse"
+    },
+    "ja": {
+      "boardTitle": "SYNCSERIES ARCHITECTURE",
+      "protocolPill": "REST · MCP",
+      "heroHint": "各ボックスをクリックすると該当製品のドキュメントへ移動します",
+      "mapHint": "ボックス選択: 概要・API確認 · ↗クリック: ガイドを開く",
+      "flagshipHeading": "中核ソリューション（4種）",
+      "busLabel": "共通 REST API (/api/v1/*) · MCP 連携 · 権限管理 · 監査ログ",
+      "extHeading": "用途別拡張モジュール（7種）",
+      "groupDataAi": "データ・AI（3種）",
+      "groupSecurity": "セキュリティ管理（2種）",
+      "groupOperations": "業務・サービス（2種）",
+      "foundationTitle": "SyncBoot 共通基盤および共有モジュール",
+      "foundationSub": "Java 25 · Spring Boot 4.0 · PostgreSQL 18.6 (pgvector) · Redis 7",
+      "connectedLabel": "連携対象モジュール",
+      "hubConnectedNote": "必要に応じて他の10製品の作業や承認履歴を一箇所でつなげて管理できます",
+      "openDocBtn": "技術ガイドを見る →",
+      "ecosystemBtn": "連携仕様を見る",
+      "liveDemoBtn": "画面体験 ↗",
+      "directOpenAria": "技術ドキュメントを開く",
+      "integratedTag": "SyncVerse統合"
+    }
+  },
+  "nodes": [
+    {
+      "id": "sync-verse",
+      "name": "SyncVerse",
+      "zone": "flagship",
+      "isHub": true,
+      "docSlug": "syncverse",
+      "apiPrefix": "/api/v1/verse",
+      "protocol": "REST · MCP Hub",
+      "connectedTo": ["sync-eta", "sync-boot", "sync-cms", "sync-insight", "sync-llm", "sync-crawl", "sync-apim", "sync-watch", "sync-shop", "sync-ops"],
+      "ko": {
+        "role": "협업 · 승인 관리",
+        "shortTag": "협업 허브",
+        "tier": "핵심 솔루션",
+        "desc": "요구사항 정리, 작업 추적, 품질 점검 조회, 담당자 단계별 승인 흐름을 다루는 통합 워크스페이스와 관리 콘솔 문서입니다."
+      },
+      "en": {
+        "role": "Collaboration & Approvals",
+        "shortTag": "Central Hub",
+        "tier": "Core Solution",
+        "desc": "Documentation for the shared workspace, task tracking, diff reviews, and multi-stage approval flows."
+      },
+      "ja": {
+        "role": "協業・承認管理",
+        "shortTag": "連携ハブ",
+        "tier": "中核ソリューション",
+        "desc": "要件整理、タスク追跡、差分比較と段階別承認フローを扱うワークスペースおよび管理コンソールのガイドです。"
+      }
+    },
+    {
+      "id": "sync-eta",
+      "name": "SyncETA",
+      "zone": "flagship",
+      "docSlug": "synceta",
+      "apiPrefix": "/api/v1/eta",
+      "protocol": "REST · Desktop App",
+      "connectedTo": ["sync-verse", "sync-cms", "sync-shop"],
+      "ko": {
+        "role": "웹 화면 자동 점검",
+        "shortTag": "화면 테스트",
+        "tier": "핵심 솔루션",
+        "desc": "브라우저 동작 녹화, 엑셀·문장 기반 테스트 변환, 링크·글자 겹침 점검 및 버그 칸반 재검증 사용법을 안내합니다."
+      },
+      "en": {
+        "role": "Web UI Checking",
+        "shortTag": "UI Testing",
+        "tier": "Core Solution",
+        "desc": "Covers desktop browser recording, Excel and prompt test conversion, broken link checks, and Bug Kanban re-verification."
+      },
+      "ja": {
+        "role": "Web画面自動点検",
+        "shortTag": "画面テスト",
+        "tier": "中核ソリューション",
+        "desc": "操作録画、Excel・自然文からのテスト作成、リンク切れや文字重なり点検、再検証ボードの使い方をまとめています。"
+      }
+    },
+    {
+      "id": "sync-boot",
+      "name": "SyncBoot",
+      "zone": "flagship",
+      "isFoundation": true,
+      "docSlug": "syncboot",
+      "apiPrefix": "/api/v1/boot",
+      "protocol": "Shared RBAC · REST",
+      "connectedTo": ["sync-verse", "sync-ops", "sync-cms", "sync-shop", "sync-apim"],
+      "ko": {
+        "role": "사내 관리 시스템 기반",
+        "shortTag": "공통 기반",
+        "tier": "핵심 솔루션",
+        "desc": "Java 25 · Spring Boot 4.0 · PostgreSQL 18.6 기반의 로그인, 조직도 권한, 전자결재, 작업 이력 표준 구성을 설명합니다."
+      },
+      "en": {
+        "role": "Internal Admin Base",
+        "shortTag": "Shared Core",
+        "tier": "Core Solution",
+        "desc": "Reference for the shared Java 25, Spring Boot 4.0, and PostgreSQL 18.6 foundation covering auth, RBAC, e-approvals, and logs."
+      },
+      "ja": {
+        "role": "社内管理システム基盤",
+        "shortTag": "共通基盤",
+        "tier": "中核ソリューション",
+        "desc": "Java 25・Spring Boot 4.0・PostgreSQL 18.6 による認証、組織権限、電子決裁、監査ログの標準構成を解説しています。"
+      }
+    },
+    {
+      "id": "sync-cms",
+      "name": "SyncCMS",
+      "zone": "flagship",
+      "docSlug": "synccms",
+      "apiPrefix": "/api/v1/cms",
+      "protocol": "REST · MCP",
+      "connectedTo": ["sync-verse", "sync-eta", "sync-boot", "sync-llm"],
+      "ko": {
+        "role": "웹사이트 · 다국어",
+        "shortTag": "콘텐츠 관리",
+        "tier": "핵심 솔루션",
+        "desc": "멀티사이트 원고 작성, 검수·발행 승인 흐름, 검색·접근성 사전 점검, 다국어 페이지 관리 구조를 정리했습니다."
+      },
+      "en": {
+        "role": "Websites & Languages",
+        "shortTag": "Content CMS",
+        "tier": "Core Solution",
+        "desc": "Guide to multisite authoring, review-to-publish approvals, SEO and accessibility checks, and multilingual localization."
+      },
+      "ja": {
+        "role": "Web・多言語管理",
+        "shortTag": "CMS",
+        "tier": "中核ソリューション",
+        "desc": "マルチサイト記事作成、承認公開フロー、検索・アクセシビリティ事前確認、多言語管理の仕様をまとめています。"
+      }
+    },
+    {
+      "id": "sync-insight",
+      "name": "SyncInsight",
+      "zone": "data-ai",
+      "integrated": true,
+      "docSlug": "syncinsight",
+      "apiPrefix": "/api/v1/insight",
+      "protocol": "NL2SQL · MCP",
+      "connectedTo": ["sync-verse", "sync-crawl", "sync-llm", "sync-ops"],
+      "ko": {
+        "role": "말로 묻는 데이터 조회",
+        "shortTag": "NL2SQL",
+        "tier": "데이터 · AI",
+        "desc": "읽기 전용 권한으로 자연어 질문을 SQL·차트로 변환해 조회하고, 데이터 출처 흐름을 확인하는 설정과 구조를 다룹니다."
+      },
+      "en": {
+        "role": "Natural-Language Query",
+        "shortTag": "NL2SQL",
+        "tier": "Data & AI",
+        "desc": "Setup and architecture for read-only natural-language SQL queries, charts, summary reports, and lineage tracking."
+      },
+      "ja": {
+        "role": "対話型データ照会",
+        "shortTag": "NL2SQL",
+        "tier": "データ・AI",
+        "desc": "読み取り専用権限で自然言語の質問からSQL・グラフを生成し、データの出所を確認する構成と設定を解説しています。"
+      }
+    },
+    {
+      "id": "sync-llm",
+      "name": "SyncLLM",
+      "zone": "data-ai",
+      "docSlug": "syncllm",
+      "apiPrefix": "/api/v1/llm",
+      "protocol": "AI Gateway · MCP",
+      "connectedTo": ["sync-verse", "sync-insight", "sync-crawl", "sync-cms"],
+      "ko": {
+        "role": "AI 비용 · 개인정보 관리",
+        "shortTag": "AI 게이트웨이",
+        "tier": "데이터 · AI",
+        "desc": "여러 상용·사내 AI 모델 연결, 유사 질문 재사용, 부서별 예산 제한, 전송 전 개인정보 가림 처리 가이드를 제공합니다."
+      },
+      "en": {
+        "role": "AI Budget & Privacy",
+        "shortTag": "AI Gateway",
+        "tier": "Data & AI",
+        "desc": "Covers multi-model routing, semantic caching, departmental usage quotas, fallback models, and PII masking."
+      },
+      "ja": {
+        "role": "AI費用・情報保護",
+        "shortTag": "AIゲートウェイ",
+        "tier": "データ・AI",
+        "desc": "複数AIモデルの接続、類似質問キャッシュ、部門予算管理、送信前の個人情報マスキング設定をまとめています。"
+      }
+    },
+    {
+      "id": "sync-crawl",
+      "name": "SyncCrawl",
+      "zone": "data-ai",
+      "docSlug": "synccrawl",
+      "apiPrefix": "/api/v1/crawl",
+      "protocol": "REST · MCP",
+      "connectedTo": ["sync-verse", "sync-insight", "sync-llm"],
+      "ko": {
+        "role": "공개 웹 자료 수집",
+        "shortTag": "웹 수집 · RAG",
+        "tier": "데이터 · AI",
+        "desc": "사이트 구조 변경에 대응하는 공개 웹 수집 정책, 속도 제한 준수, 노이즈 제거 및 문서·벡터 적재 구조를 설명합니다."
+      },
+      "en": {
+        "role": "Public Web Collection",
+        "shortTag": "Web Crawl · RAG",
+        "tier": "Data & AI",
+        "desc": "Details adaptive public web scraping, rate-limit compliance, noise cleanup, and structured/vector storage."
+      },
+      "ja": {
+        "role": "公開Webデータ収集",
+        "shortTag": "Web収集・RAG",
+        "tier": "データ・AI",
+        "desc": "画面構成の変化に対応した公開Web収集ポリシー、アクセス速度制限、ノイズ除去、文書・ベクトル保存を解説しています。"
+      }
+    },
+    {
+      "id": "sync-apim",
+      "name": "SyncAPIM",
+      "zone": "security",
+      "docSlug": "syncapim",
+      "apiPrefix": "/api/v1/apim",
+      "protocol": "REST · Security",
+      "connectedTo": ["sync-verse", "sync-watch", "sync-boot"],
+      "ko": {
+        "role": "외부 연동 점검 · 보안",
+        "shortTag": "API 보안",
+        "tier": "보안 관리",
+        "desc": "실제 트래픽에서 미등록 API를 찾아내고, OpenAPI 규격 불일치·민감정보 노출 점검과 비정상 요청 대응 방식을 안내합니다."
+      },
+      "en": {
+        "role": "API Visibility & Safety",
+        "shortTag": "API Security",
+        "tier": "Security",
+        "desc": "Documents traffic-based shadow API discovery, OpenAPI drift checks, sensitive field detection, and blocking policies."
+      },
+      "ja": {
+        "role": "外部連携点検・保護",
+        "shortTag": "API保護",
+        "tier": "セキュリティ",
+        "desc": "実通信からの未登録API検出、OpenAPI仕様との差分確認、機密項目露出や不審アクセス対応の手順を解説しています。"
+      }
+    },
+    {
+      "id": "sync-watch",
+      "name": "SyncWatch",
+      "zone": "security",
+      "docSlug": "syncwatch",
+      "apiPrefix": "/api/v1/watch",
+      "protocol": "CVE Feed · MCP",
+      "connectedTo": ["sync-verse", "sync-apim"],
+      "ko": {
+        "role": "보안 취약점 · 규칙 관리",
+        "shortTag": "취약점 관리",
+        "tier": "보안 관리",
+        "desc": "국내외 보안 취약점 공지 수집, 영향 범위 분류, 사전 점검 규칙과 API 방어 규칙 검토·배포 이력 관리 구조를 다룹니다."
+      },
+      "en": {
+        "role": "Advisories & Rules",
+        "shortTag": "Vuln Alerts",
+        "tier": "Security",
+        "desc": "Covers security advisory ingestion, impact triage, code inspection rules, and defense rule dispatch history."
+      },
+      "ja": {
+        "role": "脆弱性情報・ルール",
+        "shortTag": "脆弱性管理",
+        "tier": "セキュリティ",
+        "desc": "国内外の脆弱性情報の収集・整理、影響判定、点検・防御ルールのレビューと配布履歴管理をまとめています。"
+      }
+    },
+    {
+      "id": "sync-shop",
+      "name": "SyncShop",
+      "zone": "operations",
+      "docSlug": "syncshop",
+      "apiPrefix": "/api/v1/shop",
+      "protocol": "MSA REST · MCP",
+      "connectedTo": ["sync-verse", "sync-eta", "sync-boot"],
+      "ko": {
+        "role": "쇼핑몰 · 가격 관리",
+        "shortTag": "커머스 MSA",
+        "tier": "업무 · 서비스",
+        "desc": "독립 마이크로서비스로 나뉜 쇼핑몰 아키텍처, 상품·주문·프로모션 구조, 최소 마진 기준 확인과 이전 가격 복원 기능을 설명합니다."
+      },
+      "en": {
+        "role": "Online Store & Pricing",
+        "shortTag": "Commerce MSA",
+        "tier": "Business & Ops",
+        "desc": "Explains the independent microservice store layout, catalog/order services, minimum-margin checks, and price rollback."
+      },
+      "ja": {
+        "role": "EC運営・価格管理",
+        "shortTag": "コマースMSA",
+        "tier": "業務・サービス",
+        "desc": "独立マイクロサービスによるEC構成、商品・注文・販促機能、最低利益基準の確認と旧価格復元を解説しています。"
+      }
+    },
+    {
+      "id": "sync-ops",
+      "name": "SyncOps",
+      "zone": "operations",
+      "docSlug": "syncops",
+      "apiPrefix": "/api/v1/ops",
+      "protocol": "REST · MCP",
+      "connectedTo": ["sync-verse", "sync-boot", "sync-insight"],
+      "ko": {
+        "role": "프로젝트 손익 · 인력",
+        "shortTag": "프로젝트 손익",
+        "tier": "업무 · 서비스",
+        "desc": "수주 계약 단가 대비 실투입 원가 집계, 인력 배정 간트, 4대 보증보험·하도급 기한 알림, 전자연구노트 구조를 정리했습니다."
+      },
+      "en": {
+        "role": "Project Cost & Staffing",
+        "shortTag": "Project P&L",
+        "tier": "Business & Ops",
+        "desc": "Reference for contract-vs-actual P&L matrices, staffing Gantt charts, guarantee and subcontract alerts, and R&D logs."
+      },
+      "ja": {
+        "role": "案件損益・要員計画",
+        "shortTag": "案件損益",
+        "tier": "業務・サービス",
+        "desc": "契約金額と実投入原価の比較、要員配置ガント、保証保険・下請期限アラート、研究ノート機能の仕様をまとめています。"
+      }
+    }
+  ]
+}

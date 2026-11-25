@@ -2,9 +2,11 @@
 import mediumZoom from "medium-zoom";
 import { EnhanceAppContext, inBrowser, Theme, useRoute } from "vitepress";
 import DefaultTheme from "vitepress/theme";
-import { nextTick, onMounted, watch } from "vue";
+import { h, nextTick, onMounted, watch } from "vue";
 import { BProgress } from "./bprogress";
 import "./bprogress.css";
+import SyncArchitectureMap from "./components/SyncArchitectureMap.vue";
+import SyncHeroArchMap from "./components/SyncHeroArchMap.vue";
 import "./style.css";
 
 type DocUiLocale = "ko" | "en" | "ja";
@@ -50,6 +52,11 @@ function detectRouteLocale(pathname: string): DocUiLocale {
 
 export default {
   extends: DefaultTheme,
+  Layout() {
+    return h(DefaultTheme.Layout, null, {
+      "home-hero-image": () => h(SyncHeroArchMap),
+    });
+  },
   setup() {
     const route = useRoute();
     let zoom: ReturnType<typeof mediumZoom> | null = null;
@@ -198,7 +205,8 @@ export default {
       () => scheduleEnhance()
     );
   },
-  enhanceApp({ router }: EnhanceAppContext) {
+  enhanceApp({ app, router }: EnhanceAppContext) {
+    app.component("SyncArchitectureMap", SyncArchitectureMap);
     if (inBrowser) {
       BProgress.configure({ showSpinner: false });
       router.onBeforeRouteChange = () => {

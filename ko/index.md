@@ -5,19 +5,16 @@ title: "SyncSeries 공식 기술 문서 및 개발자 가이드"
 hero:
     name: "엠파시 기술 문서"
     text: "SyncSeries 설치 · 구조 · 연동 가이드"
-    tagline: "하나의 공통 기반(SyncBoot) 위에 구성된 주력 솔루션 4종과 목적별 확장 모듈의 아키텍처, API 규격, 운영 매뉴얼을 사실 그대로 정리한 공식 문서입니다."
-    image:
-      src: /images/syncseries-arch-hero.svg
-      alt: "SyncSeries 공통 기반(SyncBoot) 및 주력 솔루션 4종·확장 모듈 7종 REST/MCP 연동 아키텍처"
+    tagline: "하나의 공통 기반(SyncBoot) 위에 구성된 핵심 4종과 업무별 7종 모듈의 구조, API 규격, 운영 가이드를 정리한 공식 기술 문서입니다."
     actions:
-      - text: 연동 구조부터 보기
-        link: /ecosystem/
+      - text: 구성도에서 문서 찾기
+        link: "#module-map"
         theme: brand
+      - text: 연동 구조 보기
+        link: /ecosystem/
+        theme: alt
       - text: 전사 기술 용어집
         link: /glossary/
-        theme: alt
-      - text: 소개서 · 제안서 PDF
-        link: /proposals/
         theme: alt
       - text: 통합 데모 포털 ↗
         link: https://sync.empasy.io
@@ -82,7 +79,9 @@ footer: Copyright © 2026 Empasy Inc. All rights reserved.
 
 SyncSeries는 서로 무관한 11개의 개별 시스템을 별도로 만든 것이 아니라, **공통 백오피스·인증·감사 기반(`SyncBoot` 및 공통 모듈) 위에서 실제 기업 프로젝트에 반복적으로 필요했던 업무 기능을 모듈 단위로 정리한 구조**입니다.
 
-필요한 영역 하나만 단독으로 도입할 수 있으며, 추후 다른 모듈을 연결할 때 권한 체계와 표준 연동 규격(REST / MCP)을 그대로 공유합니다.
+필요한 영역 하나만 먼저 도입해 쓰다가, 나중에 다른 모듈을 연결할 때도 같은 권한 체계와 표준 연동 규격(REST / MCP)을 그대로 사용할 수 있습니다. 아래 구성도에서 각 모듈을 눌러 API 경로와 가이드를 확인하거나 `↗` 버튼으로 문서에 바로 들어가실 수 있습니다.
+
+<SyncArchitectureMap />
 
 ### 주력 솔루션 4종
 

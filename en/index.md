@@ -5,19 +5,16 @@ title: "SyncSeries Official Technical Documentation & Developer Guide"
 hero:
     name: "Empasy Technical Docs"
     text: "SyncSeries Installation · Architecture · Integration Guide"
-    tagline: "Official documentation detailing the factual architecture, API specifications, and operations manuals for four core solutions and domain-specific extension modules built on a unified foundation (SyncBoot)."
-    image:
-      src: /images/syncseries-arch-hero.svg
-      alt: "SyncSeries shared foundation (SyncBoot), 4 core solutions, and 7 extension modules REST/MCP integration architecture"
+    tagline: "Official technical documentation covering the architecture, API specs, and operations guides for 4 core products and 7 domain modules built on SyncBoot."
     actions:
-      - text: Explore Integration Architecture
-        link: /en/ecosystem/
+      - text: Browse Product Map
+        link: "#module-map"
         theme: brand
-      - text: Enterprise Technical Glossary
-        link: /en/glossary/
+      - text: Integration Architecture
+        link: /en/ecosystem/
         theme: alt
-      - text: Brochures & Proposals PDF
-        link: /en/proposals/
+      - text: Technical Glossary
+        link: /en/glossary/
         theme: alt
       - text: Unified Demo Portal ↗
         link: https://sync.empasy.io/en/
@@ -82,7 +79,9 @@ footer: Copyright © 2026 Empasy Inc. All rights reserved.
 
 Rather than building 11 disconnected systems, SyncSeries **organizes enterprise capabilities repeatedly required across real-world projects into modular components built on a unified back-office, authentication, and audit foundation (`SyncBoot` and shared modules)**.
 
-You can adopt a single module independently and later connect additional modules while reusing the exact same permission model and standardized integration interfaces (REST / MCP).
+You can start with one module and connect others later while reusing the same permission model and REST / MCP interfaces. Select any module below to inspect its API prefix and related modules, or click `↗` to open its guide directly.
+
+<SyncArchitectureMap />
 
 ### 4 Core Solutions
 
