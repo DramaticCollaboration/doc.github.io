@@ -23,7 +23,7 @@ sort: 1
 
 # SyncAPIM: AI Autonomous API Security Control and Specification Governance Platform
 
-> **Guide for Non-Developers & Evaluation Teams**: Visit the [SyncAPIM Product Homepage (empasy.io)](https://empasy.io/en/solutions/sync-apim.html){target="_blank" rel="noopener"} for an accessible product overview, explore the zero-install interactive UI at the [Unified Demo Portal](https://demo.empasy.io/en/products/sync-apim#demo){target="_blank" rel="noopener"}, or download brochures and proposal PDFs from the [Proposals Archive](/en/proposals/).
+> **Guide for Non-Developers & Evaluation Teams**: Visit the [SyncAPIM Product Homepage (empasy.io)](https://empasy.io/en/solutions/sync-apim.html){target="_blank" rel="noopener"} for an accessible product overview, explore the zero-install interactive UI at the [Unified Demo Portal](https://demo.empasy.io/en/products/sync-apim/#demo){target="_blank" rel="noopener"}, or download brochures and proposal PDFs from the [Proposals Archive](/en/proposals/).
 
 > [!IMPORTANT]
 > **SyncSeries 4-Tier API Security & Control Agent (`SYNC_APIM`)**: `SyncAPIM` collects all API traffic flowing in front of microservices and legacy WAS servers in real time to autonomously execute **lexical token grammar fingerprinting (`SqlXssLexicalTokenizer`)**, **real-time attack pattern detection & pinpoint virtual patching integrated with `SyncWatch` (`ApimDefensePack` & `SandboxedDefenseEvaluator`)**, **kernel eBPF blocking**, **automatic cataloging of unregistered shadow APIs**, **OpenAPI 3.0.1 specification drift diagnostics**, and **dynamic masking across 8 personal/financial PII categories**.

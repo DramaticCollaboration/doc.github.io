@@ -1,5 +1,5 @@
 ---
-title: Git Flow
+title: Git Flow ブランチ運用戦略
 description: チーム協業のための Git Flow 完全ガイドです。ブランチ構成、コミットメッセージ規約、リリースおよびホットフィックスの管理方法をステップごとに分かりやすく解説します。
 head:
   - - meta

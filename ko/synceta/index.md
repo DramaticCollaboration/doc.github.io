@@ -1,16 +1,16 @@
 ---
-title: "SyncETA: 웹 화면 테스트 자동화 · 사이트 결함 검출 및 이력 관리 플랫폼"
-description: "SyncETA는 브라우저 동작 녹화, 엑셀·한 줄 문장 테스트 변환, 멀티 계정 동시 테스트, 시나리오 없는 링크·화면 디자인 결함 전수 검사 및 버그 칸반 원클릭 재검증을 제공하는 웹 테스트 자동화 플랫폼입니다."
+title: "SyncETA: AI 테스트 자동화 및 자가 치유(Self-Healing) 웹 QA 플랫폼"
+description: "SyncETA는 Vision-LLM 셀렉터 자가 치유(Self-Healing)와 Playwright 기반 AI 테스트 자동화 플랫폼으로, 브라우저 동작 녹화, 엑셀·한 줄 문장 테스트 변환, 멀티 계정 동시 테스트, 링크·화면 결함 전수 검사 및 버그 칸반 원클릭 재검증을 제공합니다."
 head:
   - - meta
     - name: keywords
-      content: 웹 화면 테스트 자동화, 사이트 결함 검출, SyncETA, 버그 칸반, QA 테스트 자동화, 자가 치유 테스트 자동화, 회귀 테스트, Playwright, MCP, Model Context Protocol, Visual Regression, Self-Healing, CI/CD, 엔터프라이즈 QA, 엠파시, Empasy
+      content: AI 테스트 자동화, 테스트 자동화, 노코드 테스트 자동화, 웹 화면 테스트 자동화, 사이트 결함 검출, SyncETA, 싱크에타, 버그 칸반, QA 테스트 자동화, 자가 치유 테스트 자동화, 회귀 테스트, Playwright, MCP, Model Context Protocol, Visual Regression, Self-Healing, CI/CD, 엔터프라이즈 QA, 엠파시, Empasy
   - - meta
     - property: og:title
-      content: "SyncETA: 웹 화면 테스트 자동화 · 사이트 결함 검출 및 이력 관리 플랫폼"
+      content: "SyncETA: AI 테스트 자동화 및 자가 치유(Self-Healing) 웹 QA 플랫폼"
   - - meta
     - property: og:description
-      content: "브라우저 동작 녹화, 엑셀·한 줄 문장 테스트 변환, 링크·화면 결함 전수 검사 및 버그 칸반 원클릭 재검증을 지원합니다."
+      content: "Vision-LLM 자가 치유와 Playwright 기반 AI 테스트 자동화. 브라우저 동작 녹화, 엑셀·한 줄 문장 변환, 링크·화면 결함 전수 검사 및 버그 칸반 원클릭 재검증을 지원합니다."
   - - meta
     - property: og:image
       content: https://doc.empasy.com/images/favicon.png
@@ -20,9 +20,9 @@ head:
 sort: 10
 ---
 
-# SyncETA: 웹 화면 테스트 자동화 · 사이트 결함 검출 및 이력 관리 플랫폼
+# SyncETA: AI 테스트 자동화 · 자가 치유(Self-Healing) 웹 QA 플랫폼
 
-> **비개발자 · 도입 검토 안내**: 쉬운 제품 소개는 [SyncETA 제품 홈페이지(empasy.io)](https://empasy.io/ko/solutions/sync-eta.html){target="_blank" rel="noopener"}에서, 데스크톱 설치 및 체험은 [통합 데모 포털](https://demo.empasy.io/products/sync-eta#demo){target="_blank" rel="noopener"}에서 이용하실 수 있으며, 최신 소개서(15p) PDF는 [제안서 자료실](/proposals/)에서 내려받으실 수 있습니다.
+> **비개발자 · 도입 검토 안내**: 쉬운 제품 소개는 [SyncETA 제품 홈페이지(empasy.io)](https://empasy.io/ko/solutions/sync-eta.html){target="_blank" rel="noopener"}에서, 데스크톱 설치 및 체험은 [통합 데모 포털](https://demo.empasy.io/products/sync-eta/#demo){target="_blank" rel="noopener"}에서 이용하실 수 있으며, 최신 소개서(15p) PDF는 [제안서 자료실](/proposals/)에서 내려받으실 수 있습니다.
 
 **SyncETA**는 **브라우저 동작 녹화, 엑셀·한 줄 문장 테스트 변환, 멀티 계정 동시 테스트, 시나리오 없는 하위 링크·화면 디자인 결함(글자 겹침·빈 영역) 전수 검사, 버그 칸반 보드 및 `[지금 확인]` 원클릭 재검증**까지 웹 화면 품질 점검의 전 과정을 자동화하는 플랫폼입니다. 또한 Playwright MCP 분산 실행, 화면 변경 시 대체 요소 자동 탐색(Self-Healing), 금융 보안 가상 키패드·글로벌 쿠키 배너 자동 처리 및 민감 개인정보 마스킹을 지원합니다.
 
@@ -38,7 +38,7 @@ Windows(x64, arm64) 및 macOS(Apple Silicon, Intel) 설치 파일은 **[엠파�
 | 구분 | 기존 스크립트 자동화 (Selenium · 단독 Playwright) | 코드 생성 보조 AI (Claude Code · GitHub Copilot) | 자율 E2E QA 에이전트 (**엠파시 SyncETA**) |
 | :--- | :--- | :--- | :--- |
 | **시나리오 작성** | 개발자가 CSS/XPath 셀렉터 코드를 수동 작성 | 프롬프트로 단위·통합 테스트 코드 초안 생성 | **브라우저 동작 노코드 녹화 및 자연어·엑셀(Excel) 시나리오 자동 생성·직접 실행** |
-| **UI 변경 시 자가 치유 (Self-Healing)** | 불가 (클래스·DOM 변경 시 즉시 테스트 실패) | 수동 재프롬프트 및 개발자 코드 재수정 필요 | **Vision-LLM 및 DOM 문맥 추론으로 깨진 셀렉터 실시간 자가 치유 (98.4%)** |
+| **UI 변경 시 자가 치유 (Self-Healing)** | 불가 (클래스·DOM 변경 시 즉시 테스트 실패) | 수동 재프롬프트 및 개발자 코드 재수정 필요 | **Vision-LLM 및 DOM 문맥 추론으로 깨진 셀렉터 실시간 자가 치유 (내부 1,200회 평가 기준 93.0%)** |
 | **시각적 화면 검증 (Visual Regression)** | 단순 픽셀 비교 (배너·폰트 미세 변경에도 오탐) | 코드 레벨 검증 위주 (렌더링 레이아웃 검증 한계) | **배포 전후 화면 레이아웃 붕괴·요소 가림 현상 Vision AI 자동 검출** |
 | **주요 활용 대상 및 비용** | 자동화 전담 개발자 필요 · 유지보수 공수 과다 | 개발자 유닛/통합 테스트 보조 · 호출마다 토큰 과금 | **기획자·QA·개발자 공용 노코드 E2E 회귀 테스트 · 반복 실행 AI 비용 0원** |
 

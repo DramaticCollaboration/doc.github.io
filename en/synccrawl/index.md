@@ -22,7 +22,7 @@ sort: 1
 
 # SyncCrawl™: Web Crawling & RAG Knowledge Platform
 
-> **For Non-Developers & Evaluators**: For a high-level product overview, visit the [SyncCrawl Product Homepage (empasy.io)](https://empasy.io/en/solutions/sync-crawl.html){target="_blank" rel="noopener"}. To explore the UI without installation, try the [Unified Demo Portal](https://demo.empasy.io/en/products/sync-crawl#demo){target="_blank" rel="noopener"}, or download product brochures and proposal PDFs from the [Proposals Repository](/en/proposals/).
+> **For Non-Developers & Evaluators**: For a high-level product overview, visit the [SyncCrawl Product Homepage (empasy.io)](https://empasy.io/en/solutions/sync-crawl.html){target="_blank" rel="noopener"}. To explore the UI without installation, try the [Unified Demo Portal](https://demo.empasy.io/en/products/sync-crawl/#demo){target="_blank" rel="noopener"}, or download product brochures and proposal PDFs from the [Proposals Repository](/en/proposals/).
 
 SyncCrawl™ is an enterprise web harvesting platform that integrates data collection, natural language processing (NLP), **Playwright MCP-based browser automation**, and a **RAG (Retrieval-Augmented Generation) knowledge pipeline**.
 

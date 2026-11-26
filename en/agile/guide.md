@@ -1,6 +1,6 @@
 ---
 title: Scrumban Operations Guide
-description: "Scrumban is a hybrid Agile methodology that combines Scrum's iterative structure with Kanban's flow management and WIP limits for flexible, efficient work management."
+description: "Hands-on operational guide for adopting Scrumban in engineering teams, configuring Kanban boards, setting WIP limits, and managing release cadences."
 head:
   - - meta
     - name: keywords

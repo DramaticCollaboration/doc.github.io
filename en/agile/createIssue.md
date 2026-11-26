@@ -1,6 +1,6 @@
 ---
 title: Issue Creation Prompt
-description: Learn the core principles for using Jira effectively. Discover how assignment rules, commenting guidelines, and status management best practices improve project transparency and team productivity.
+description: Practical LLM prompt guide for generating standardized JIRA issue tickets (Summary, Description, Acceptance Criteria) and UI test scenarios automatically.
 head:
   - - meta
     - name: keywords

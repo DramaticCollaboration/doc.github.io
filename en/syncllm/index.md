@@ -20,7 +20,7 @@ sort: 1
 
 # SyncLLM: Enterprise AI Gateway & FinOps
 
-> **Guide for Non-Developers & Decision Makers**: For an accessible product overview, visit the [SyncLLM Product Homepage (empasy.io)](https://empasy.io/en/solutions/sync-llm.html){target="_blank" rel="noopener"}. To explore the UI with zero installation, try the [Unified Demo Portal](https://demo.empasy.io/en/products/sync-llm#demo){target="_blank" rel="noopener"}, or download brochures and proposal PDFs from the [Proposal Library](/en/proposals/).
+> **Guide for Non-Developers & Decision Makers**: For an accessible product overview, visit the [SyncLLM Product Homepage (empasy.io)](https://empasy.io/en/solutions/sync-llm.html){target="_blank" rel="noopener"}. To explore the UI with zero installation, try the [Unified Demo Portal](https://demo.empasy.io/en/products/sync-llm/#demo){target="_blank" rel="noopener"}, or download brochures and proposal PDFs from the [Proposal Library](/en/proposals/).
 
 **SyncLLM** is an **Enterprise AI Gateway** that centralizes and governs all AI calls distributed across your organization.
 

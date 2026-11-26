@@ -20,7 +20,7 @@ sort: 1
 
 # SyncLLM: エンタープライズ AI ゲートウェイ & FinOps
 
-> **非開発者・導入ご検討の方へのご案内**: わかりやすい製品紹介は [SyncLLM 製品ホームページ（llm.empasy.io）](https://empasy.io/ja/solutions/sync-llm.html){target="_blank" rel="noopener"}、インストール不要の画面体験は [統合デモポータル](https://demo.empasy.io/ja/products/sync-llm#demo){target="_blank" rel="noopener"} でご利用いただけます。また、紹介資料・提案書 PDF は [提案書資料室](/ja/proposals/) からダウンロードできます。
+> **非開発者・導入ご検討の方へのご案内**: わかりやすい製品紹介は [SyncLLM 製品ホームページ（llm.empasy.io）](https://empasy.io/ja/solutions/sync-llm.html){target="_blank" rel="noopener"}、インストール不要の画面体験は [統合デモポータル](https://demo.empasy.io/ja/products/sync-llm/#demo){target="_blank" rel="noopener"} でご利用いただけます。また、紹介資料・提案書 PDF は [提案書資料室](/ja/proposals/) からダウンロードできます。
 
 **SyncLLM** は、企業内に分散するすべての AI 呼び出しを一元管理する **エンタープライズ専用 AI ゲートウェイ（Enterprise AI Gateway）** です。
 

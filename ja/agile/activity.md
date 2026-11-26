@@ -1,6 +1,6 @@
 ---
 title: スクラムバン（Scrumban）フェーズ別Activity
-description: スクラムバン（Scrumban）は、スクラムの反復的な構造とカンバンのフロー管理・WIP制限を組み合わせ、柔軟かつ効率的に作業を管理するハイブリッドアジャイル手法です。
+description: スクラムバン（Scrumban）における計画・開発・レビュー・振り返りの各フェーズ別アクティビティと役割ごとの成果物をまとめた実務ガイドです。
 head:
   - - meta
     - name: keywords

@@ -1,6 +1,6 @@
 ---
 title: 課題作成プロンプト
-description: Jiraを効率的に活用するための重要原則をご紹介します。課題の割り当てルール、必須コメントガイド、ステータス管理のノウハウを通じて、プロジェクトの透明性とチームの生産性を高める方法をご確認ください。チームコラボレーションのためのガイドです。
+description: LLMプロンプトを活用してJIRAチケットテンプレート（Summary・Description・Acceptance Criteria）とUIテストシナリオを標準化・自動生成するための実践ガイドです。
 head:
   - - meta
     - name: keywords

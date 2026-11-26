@@ -20,9 +20,9 @@ head:
 sort: 10
 ---
 
-# SyncETA: Web Test Automation · Site Audit & Defect Tracking Platform
+# SyncETA: AI Test Automation · Self-Healing Web QA Platform
 
-> **Non-Developers & Adoption Evaluation Guide**: For an accessible product overview, visit the [SyncETA Product Homepage (empasy.io)](https://empasy.io/en/solutions/sync-eta.html){target="_blank" rel="noopener"}. For desktop installation and live hands-on evaluation, visit the [Unified Demo Portal](https://demo.empasy.io/en/products/sync-eta#demo){target="_blank" rel="noopener"}. The latest 15-page brochure PDF is available in the [Proposals Library](/en/proposals/).
+> **Non-Developers & Adoption Evaluation Guide**: For an accessible product overview, visit the [SyncETA Product Homepage (empasy.io)](https://empasy.io/en/solutions/sync-eta.html){target="_blank" rel="noopener"}. For desktop installation and live hands-on evaluation, visit the [Unified Demo Portal](https://demo.empasy.io/en/products/sync-eta/#demo){target="_blank" rel="noopener"}. The latest 15-page brochure PDF is available in the [Proposals Library](/en/proposals/).
 
 **SyncETA** automates the entire web quality verification lifecycle without writing brittle scripts: **browser action recording (with security keypad, cookie banner bypass, and PII masking), Excel and one-line prompt test conversion using representative/sample URLs, multi-account simultaneous testing, scenario-free link and layout-overlap audits with honest `[Needs Review]` triage, and Bug Kanban one-click `[Check Now]` re-verification**—powered by Playwright MCP parallel execution and adaptive element recovery.
 
@@ -38,7 +38,7 @@ Download the Windows (x64, arm64) and macOS (Apple Silicon, Intel) installers fo
 | Category | Legacy Script Automation (Selenium / Standalone Playwright) | Code-Generation Assistants (Claude Code / GitHub Copilot) | Autonomous E2E QA Agent (**Empasy SyncETA**) |
 | :--- | :--- | :--- | :--- |
 | **Scenario Authoring** | Developers manually write CSS/XPath selector code | Prompts generate draft unit/integration test code | **No-code browser action recording & automatic generation/direct execution from natural language or Excel** |
-| **Self-Healing on UI Changes** | Not supported (tests fail immediately on class/DOM changes) | Requires manual re-prompting and developer code edits | **Real-time Self-Healing of broken selectors via Vision-LLM and DOM context reasoning (98.4%)** |
+| **Self-Healing on UI Changes** | Not supported (tests fail immediately on class/DOM changes) | Requires manual re-prompting and developer code edits | **Real-time Self-Healing of broken selectors via Vision-LLM and DOM context reasoning (93.0% across 1,200 internal runs)** |
 | **Visual Regression Verification** | Naive pixel comparison (false positives on minor banner/font shifts) | Code-level assertion focus (limited rendered layout verification) | **Vision AI automatically detects layout collapse and element occlusion before/after deployment** |
 | **Target Users & Cost** | Requires dedicated automation engineers; high maintenance effort | Assists developers with unit/integration tests; per-call token billing | **Shared no-code E2E regression testing for PMs, QA, and developers; zero AI cost on repeated runs** |
 

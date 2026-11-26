@@ -22,7 +22,7 @@ sort: 1
 
 # SyncCMS: Enterprise AI Hybrid Headless CMS
 
-> **Guide for Non-Developers & Adoption Evaluators**: For an accessible product overview, visit the [SyncCMS Product Homepage (empasy.io)](https://empasy.io/en/solutions/sync-cms.html){target="_blank" rel="noopener"}. For a zero-install interactive UI walkthrough, visit the [Integrated Demo Portal](https://demo.empasy.io/en/products/sync-cms#demo){target="_blank" rel="noopener"}. Product brochures and proposal PDFs are available in the [Proposals Library](/en/proposals/).
+> **Guide for Non-Developers & Adoption Evaluators**: For an accessible product overview, visit the [SyncCMS Product Homepage (empasy.io)](https://empasy.io/en/solutions/sync-cms.html){target="_blank" rel="noopener"}. For a zero-install interactive UI walkthrough, visit the [Integrated Demo Portal](https://demo.empasy.io/en/products/sync-cms/#demo){target="_blank" rel="noopener"}. Product brochures and proposal PDFs are available in the [Proposals Library](/en/proposals/).
 
 **SyncCMS** (`https://empasy.io/en/solutions/sync-cms.html`) is an **enterprise hybrid headless CMS that delivers high-speed Nuxt 3 SSR rendering, a Copywriter-SEO-Publisher multi-agent swarm (`CmsSwarmWorkflowService`), centralized dynamic management of HTML Head metadata, and next-generation AI search (AEO/GEO) optimization** across all digital touchpoints such as customer-facing web portals and mobile apps.
 

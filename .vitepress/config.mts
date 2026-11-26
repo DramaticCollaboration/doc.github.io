@@ -114,14 +114,37 @@ new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
     sitemap: {
       hostname: `${SITE_ORIGIN}/`,
       transformItems: (items) => {
-        return items
-          .filter((element) => !element.url.includes("README"))
-          .map((element) => ({
+        const filtered = items.filter((element) => !element.url.includes("README"));
+        const urlSet = new Set(filtered.map((element) => element.url));
+        return filtered.map((element) => {
+          const basePath = element.url
+            .replace(/^(?:en|ja)\//, "")
+            .replace(/^(?:en|ja)$/, "");
+          const koPath = basePath;
+          const enPath = basePath ? `en/${basePath}` : "en/";
+          const jaPath = basePath ? `ja/${basePath}` : "ja/";
+
+          const links: Array<{ lang: string; url: string }> = [];
+          if (urlSet.has(koPath)) links.push({ lang: "ko", url: `${SITE_ORIGIN}/${koPath}` });
+          if (urlSet.has(enPath)) links.push({ lang: "en", url: `${SITE_ORIGIN}/${enPath}` });
+          if (urlSet.has(jaPath)) links.push({ lang: "ja", url: `${SITE_ORIGIN}/${jaPath}` });
+          if (urlSet.has(koPath)) links.push({ lang: "x-default", url: `${SITE_ORIGIN}/${koPath}` });
+
+          const entry: {
+            url: string;
+            lastmod?: string | number | Date;
+            links?: Array<{ lang: string; url: string }>;
+          } = {
             url: element.url,
-            changefreq: "weekly",
-            priority: 0.8,
-            lastmod: new Date().toISOString(),
-          }));
+          };
+          if (element.lastmod) {
+            entry.lastmod = element.lastmod;
+          }
+          if (links.length > 0) {
+            entry.links = links;
+          }
+          return entry;
+        });
       },
     },
 
@@ -143,28 +166,54 @@ new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
       const enUrl = `${SITE_ORIGIN}/en/${basePath}`;
       const jaUrl = `${SITE_ORIGIN}/ja/${basePath}`;
 
+      const pageLocale = cleanPath.startsWith("en/") || cleanPath === "en"
+        ? "en"
+        : cleanPath.startsWith("ja/") || cleanPath === "ja"
+          ? "ja"
+          : "ko";
+      const defaultLocaleDesc: Record<"ko" | "en" | "ja", string> = {
+        ko: "엠파시(Empasy) Sync Series 공식 기술 문서 포털 - SyncVerse, SyncWatch, SyncAPIM, SyncETA, SyncBoot, SyncCMS, SyncShop, SyncOps, SyncInsight, SyncCrawl, SyncLLM 아키텍처 및 개발 가이드",
+        en: "Official Empasy SyncSeries Technical Documentation Portal — Architecture, API specifications, and developer guides for SyncVerse, SyncWatch, SyncAPIM, SyncETA, SyncBoot, SyncCMS, SyncShop, SyncOps, SyncInsight, SyncCrawl, and SyncLLM",
+        ja: "株式会社エムパシー (Empasy Inc.) SyncSeries 公式技術ドキュメントポータル — SyncVerse、SyncWatch、SyncAPIM、SyncETA、SyncBoot、SyncCMS、SyncShop、SyncOps、SyncInsight、SyncCrawl、SyncLLM のアーキテクチャ・API仕様・開発ガイド",
+      };
       const pageTitle = pageData.frontmatter.title || pageData.title || "Empasy Docs";
       const pageDesc =
         pageData.frontmatter.description ||
         pageData.description ||
-        "Empasy SyncSeries Official Technical Documentation Portal";
+        defaultLocaleDesc[pageLocale];
 
       pageData.frontmatter.head ??= [];
-      pageData.frontmatter.head.push(
-        ["link", { rel: "canonical", href: canonicalUrl }],
-        ["link", { rel: "alternate", hreflang: "ko", href: koUrl }],
-        ["link", { rel: "alternate", hreflang: "en", href: enUrl }],
-        ["link", { rel: "alternate", hreflang: "ja", href: jaUrl }],
-        ["link", { rel: "alternate", hreflang: "x-default", href: koUrl }],
-        ["meta", { property: "og:type", content: "article" }],
-        ["meta", { property: "og:site_name", content: "Empasy Docs" }],
-        ["meta", { property: "og:title", content: `${pageTitle} | Empasy Docs` }],
-        ["meta", { property: "og:description", content: pageDesc }],
-        ["meta", { property: "og:url", content: canonicalUrl }],
-        ["meta", { name: "twitter:card", content: "summary_large_image" }],
-        ["meta", { name: "twitter:title", content: `${pageTitle} | Empasy Docs` }],
-        ["meta", { name: "twitter:description", content: pageDesc }]
-      );
+      const head = pageData.frontmatter.head;
+      const upsertHead = (
+        tag: string,
+        attrs: Record<string, string>,
+        matchKey: string,
+        matchVal: string,
+        overwrite = false
+      ) => {
+        const idx = head.findIndex(
+          (item) => item[0] === tag && item[1] && item[1][matchKey] === matchVal
+        );
+        if (idx >= 0) {
+          if (overwrite) head[idx] = [tag, attrs];
+        } else {
+          head.push([tag, attrs]);
+        }
+      };
+
+      upsertHead("link", { rel: "canonical", href: canonicalUrl }, "rel", "canonical", true);
+      upsertHead("link", { rel: "alternate", hreflang: "ko", href: koUrl }, "hreflang", "ko", true);
+      upsertHead("link", { rel: "alternate", hreflang: "en", href: enUrl }, "hreflang", "en", true);
+      upsertHead("link", { rel: "alternate", hreflang: "ja", href: jaUrl }, "hreflang", "ja", true);
+      upsertHead("link", { rel: "alternate", hreflang: "x-default", href: koUrl }, "hreflang", "x-default", true);
+      upsertHead("meta", { property: "og:type", content: "article" }, "property", "og:type", false);
+      upsertHead("meta", { property: "og:site_name", content: "Empasy Docs" }, "property", "og:site_name", false);
+      upsertHead("meta", { property: "og:title", content: `${pageTitle} | Empasy Docs` }, "property", "og:title", true);
+      upsertHead("meta", { property: "og:description", content: pageDesc }, "property", "og:description", true);
+      upsertHead("meta", { property: "og:url", content: canonicalUrl }, "property", "og:url", true);
+      upsertHead("meta", { name: "twitter:card", content: "summary_large_image" }, "name", "twitter:card", false);
+      upsertHead("meta", { name: "twitter:title", content: `${pageTitle} | Empasy Docs` }, "name", "twitter:title", true);
+      upsertHead("meta", { name: "twitter:description", content: pageDesc }, "name", "twitter:description", true);
     },
 
     locales: {
@@ -181,7 +230,7 @@ new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
             {
               name: "keywords",
               content:
-                "엠파시, Empasy, Sync Series, SyncVerse, SyncWatch, SyncAPIM, SyncInsight, SyncETA, SyncCrawl, SyncBoot, SyncCMS, SyncShop, SyncOps, SyncLLM, AI 에이전트, AI 오케스트레이션, API 보안, 위협 인텔리전스, FinOps",
+                "엠파시, Empasy, AI 테스트 자동화, 테스트 자동화, 노코드 QA, 셀렉터 자가 치유, Sync Series, SyncVerse, SyncWatch, SyncAPIM, SyncInsight, SyncETA, 싱크에타, SyncCrawl, SyncBoot, SyncCMS, SyncShop, SyncOps, SyncLLM, AI 에이전트, AI 오케스트레이션, API 보안, 위협 인텔리전스, FinOps",
             },
           ],
         ],
@@ -213,7 +262,7 @@ new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
                   text: "주력 솔루션 (4종)",
                   items: [
                     { link: "/syncverse/", text: "SyncVerse — 협업·승인 통합 관리" },
-                    { link: "/synceta/", text: "SyncETA — 자동 테스트 · 데스크톱 앱" },
+                    { link: "/synceta/", text: "SyncETA — AI 테스트 자동화 · 데스크톱 앱" },
                     { link: "/syncboot/", text: "SyncBoot — 기업 업무 시스템 기반" },
                     { link: "/synccms/", text: "SyncCMS — 웹사이트 · 다국어 관리" },
                   ],
@@ -327,7 +376,7 @@ new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
             {
               name: "keywords",
               content:
-                "Empasy, SyncSeries, SyncVerse, SyncWatch, SyncAPIM, SyncInsight, SyncETA, SyncCrawl, SyncBoot, SyncCMS, SyncShop, SyncOps, SyncLLM, AI Agent, Multi-Agent Orchestration, MCP, API Security, Threat Intelligence, FinOps",
+                "Empasy, AI Test Automation, Test Automation, Self-Healing QA, No-Code E2E Testing, SyncSeries, SyncVerse, SyncWatch, SyncAPIM, SyncInsight, SyncETA, SyncCrawl, SyncBoot, SyncCMS, SyncShop, SyncOps, SyncLLM, AI Agent, Multi-Agent Orchestration, MCP, API Security, Threat Intelligence, FinOps",
             },
           ],
         ],
@@ -359,7 +408,7 @@ new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
                   text: "Flagship Solutions (4)",
                   items: [
                     { link: "/en/syncverse/", text: "SyncVerse — Orchestration & Approvals" },
-                    { link: "/en/synceta/", text: "SyncETA — Automated Testing Desktop App" },
+                    { link: "/en/synceta/", text: "SyncETA — AI Test Automation Desktop App" },
                     { link: "/en/syncboot/", text: "SyncBoot — Enterprise Back-Office Core" },
                     { link: "/en/synccms/", text: "SyncCMS — Web & Multilingual CMS" },
                   ],
@@ -473,7 +522,7 @@ new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
             {
               name: "keywords",
               content:
-                "Empasy, エムパシー, SyncSeries, SyncVerse, SyncWatch, SyncAPIM, SyncInsight, SyncETA, SyncCrawl, SyncBoot, SyncCMS, SyncShop, SyncOps, SyncLLM, AIエージェント, マルチエージェント, MCP, APIセキュリティ, 脅威インテリジェンス, FinOps",
+                "Empasy, エムパシー, AIテスト自動化, テスト自動化, 自己修復QA, ノーコードE2Eテスト, SyncSeries, SyncVerse, SyncWatch, SyncAPIM, SyncInsight, SyncETA, SyncCrawl, SyncBoot, SyncCMS, SyncShop, SyncOps, SyncLLM, AIエージェント, マルチエージェント, MCP, APIセキュリティ, 脅威インテリジェンス, FinOps",
             },
           ],
         ],
@@ -505,7 +554,7 @@ new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
                   text: "主力ソリューション (4種)",
                   items: [
                     { link: "/ja/syncverse/", text: "SyncVerse — 協業・承認統合管理" },
-                    { link: "/ja/synceta/", text: "SyncETA — 自動テスト・デスクトップアプリ" },
+                    { link: "/ja/synceta/", text: "SyncETA — AIテスト自動化・デスクトップアプリ" },
                     { link: "/ja/syncboot/", text: "SyncBoot — 企業業務システム基盤" },
                     { link: "/ja/synccms/", text: "SyncCMS — Web・多言語サイト管理" },
                   ],

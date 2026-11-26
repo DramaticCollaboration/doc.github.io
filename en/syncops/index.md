@@ -23,7 +23,7 @@ sort: 1
 
 # SyncOps: Korean SI/Solution Operations & P&L/Compliance Control Platform
 
-> **For Non-Developers & Adoption Evaluation**: For a straightforward product overview, visit the [SyncOps Product Homepage (empasy.io)](https://empasy.io/en/solutions/sync-ops.html){target="_blank" rel="noopener"}. To explore the UI without installation, try the [Unified Demo Portal](https://demo.empasy.io/en/products/sync-ops#demo){target="_blank" rel="noopener"}, or download brochures and proposal PDFs from the [Proposal Library](/en/proposals/).
+> **For Non-Developers & Adoption Evaluation**: For a straightforward product overview, visit the [SyncOps Product Homepage (empasy.io)](https://empasy.io/en/solutions/sync-ops.html){target="_blank" rel="noopener"}. To explore the UI without installation, try the [Unified Demo Portal](https://demo.empasy.io/en/products/sync-ops/#demo){target="_blank" rel="noopener"}, or download brochures and proposal PDFs from the [Proposal Library](/en/proposals/).
 
 > **Tier 3 Enterprise SI PMO & Profit/Compliance Agent Platform**  
 > Service Domain: `https://empasy.io/en/solutions/sync-ops.html` · Standard API Prefix: `/api/v1/ops`

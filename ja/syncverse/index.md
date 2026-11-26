@@ -23,7 +23,7 @@ sort: 1
 
 # SyncVerse: マルチエージェント中央管制・オーケストレーションプラットフォーム
 
-> **非開発者・導入検討のご案内**: 分かりやすい製品紹介は [SyncVerse 製品ホームページ (empasy.io)](https://empasy.io/ja/solutions/sync-verse.html){target="_blank" rel="noopener"} で、インストール不要の画面体験は [統合デモポータル](https://demo.empasy.io/ja/products/sync-verse#demo){target="_blank" rel="noopener"} でご利用いただけます。紹介資料・提案書 PDF は [提案書資料室](/ja/proposals/) からダウンロードできます。
+> **非開発者・導入検討のご案内**: 分かりやすい製品紹介は [SyncVerse 製品ホームページ (empasy.io)](https://empasy.io/ja/solutions/sync-verse.html){target="_blank" rel="noopener"} で、インストール不要の画面体験は [統合デモポータル](https://demo.empasy.io/ja/products/sync-verse/#demo){target="_blank" rel="noopener"} でご利用いただけます。紹介資料・提案書 PDF は [提案書資料室](/ja/proposals/) からダウンロードできます。
 
 **SyncVerse** は、個別に動作する分散ドメインソリューションを標準インターフェースで接続し、要件整理、タスク配分、品質検証の照会、段階別の決裁承認を統合管理する **中央オーケストレーションプラットフォーム (Control Tower)** です。
 

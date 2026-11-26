@@ -24,7 +24,7 @@ dir:
 
 # SyncInsight: Data Analytics & Decision Intelligence Platform
 
-> **For Non-Developers & Evaluation Teams**: Visit the [SyncInsight Product Homepage (empasy.io)](https://empasy.io/en/solutions/sync-insight.html){target="_blank" rel="noopener"} for an accessible product overview, try the installation-free UI experience in the [Unified Demo Portal](https://demo.empasy.io/en/products/sync-insight#demo){target="_blank" rel="noopener"}, and download brochures and proposal PDFs from the [Proposal Library](/en/proposals/).
+> **For Non-Developers & Evaluation Teams**: Visit the [SyncInsight Product Homepage (empasy.io)](https://empasy.io/en/solutions/sync-insight.html){target="_blank" rel="noopener"} for an accessible product overview, try the installation-free UI experience in the [Unified Demo Portal](https://demo.empasy.io/en/products/sync-insight/#demo){target="_blank" rel="noopener"}, and download brochures and proposal PDFs from the [Proposal Library](/en/proposals/).
 
 **SyncInsight** is the data analytics and decision intelligence platform of the SyncVerse agent ecosystem.
 

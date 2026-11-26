@@ -1,5 +1,5 @@
 ---
-title: Git Flow
+title: Git Flow 브랜치 운영 전략
 description: 팀 협업을 위한 Git Flow 완전 가이드. 브랜치 구조, 커밋 메시지 규칙, 릴리즈 및 핫픽스 관리 방법을 단계별로 쉽게 설명합니다.
 head:
   - - meta

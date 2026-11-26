@@ -23,7 +23,7 @@ sort: 1
 
 # SyncOps: 韓国型 SI / ソリューション事業運営 & 損益・コンプライアンス管制プラットフォーム
 
-> **非開発者・導入検討向け案内**: 分かりやすい製品紹介は [SyncOps 製品ホームページ（ops.empasy.io）](https://empasy.io/ja/solutions/sync-ops.html){target="_blank" rel="noopener"} で、インストール不要の画面体験は [統合デモポータル](https://demo.empasy.io/ja/products/sync-ops#demo){target="_blank" rel="noopener"} でご利用いただけます。紹介資料・提案書 PDF は [提案書資料室](/ja/proposals/) からダウンロードできます。
+> **非開発者・導入検討向け案内**: 分かりやすい製品紹介は [SyncOps 製品ホームページ（ops.empasy.io）](https://empasy.io/ja/solutions/sync-ops.html){target="_blank" rel="noopener"} で、インストール不要の画面体験は [統合デモポータル](https://demo.empasy.io/ja/products/sync-ops/#demo){target="_blank" rel="noopener"} でご利用いただけます。紹介資料・提案書 PDF は [提案書資料室](/ja/proposals/) からダウンロードできます。
 
 > **Tier 3 Enterprise SI PMO & Profit/Compliance Agent Platform**  
 > サービスドメイン: `https://empasy.io/ja/solutions/sync-ops.html` · 標準 API Prefix: `/api/v1/ops`

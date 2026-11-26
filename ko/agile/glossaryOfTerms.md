@@ -1,6 +1,6 @@
 ---
 title: 스크럼반 용어 사전
-description: 스크럼반(Scrumban)은 스크럼의 반복적 구조와 칸반의 흐름 관리·WIP 제한을 결합해 유연하고 효율적으로 작업을 관리하는 하이브리드 애자일 방법론입니다.
+description: 스크럼반(Scrumban)과 애자일 실무에서 자주 사용하는 WIP, 리드타임, 사이클타임, 백로그, 번다운 차트 등 핵심 용어를 정리한 용어 사전입니다.
 head:
   - - meta
     - name: keywords

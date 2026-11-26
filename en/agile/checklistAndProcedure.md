@@ -1,6 +1,6 @@
 ---
 title: Meeting Checklist and Procedures
-description: Scrumban is a hybrid agile methodology that combines Scrum's iterative structure with Kanban's flow management and WIP limits to manage work flexibly and efficiently.
+description: Step-by-step checklists and meeting procedures for running sprint planning, daily stand-ups, sprint reviews, and retrospectives consistently.
 head:
   - - meta
     - name: keywords

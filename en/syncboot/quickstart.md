@@ -1,5 +1,5 @@
 ---
-title: 5-Minute Quickstart Guide
+title: SyncBoot 5-Minute Quickstart Guide
 description: Launch and verify the SyncBoot backend server, Admin Console, MCP Server, and database locally using Docker Compose.
 sort: 1
 ---

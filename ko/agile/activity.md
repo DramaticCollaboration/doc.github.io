@@ -1,6 +1,6 @@
 ---
 title: 스크럼반 단계별 Activity
-description: 스크럼반(Scrumban)은 스크럼의 반복적 구조와 칸반의 흐름 관리·WIP 제한을 결합해 유연하고 효율적으로 작업을 관리하는 하이브리드 애자일 방법론입니다.
+description: 스크럼반(Scrumban) 스프린트에서 계획·개발·리뷰·회고 단계별로 팀이 수행해야 하는 핵심 액티비티와 역할별 산출물을 정리한 실무 가이드입니다.
 head:
   - - meta
     - name: keywords

@@ -23,7 +23,7 @@ sort: 1
 
 # SyncVerse: 멀티 에이전트 중앙 관제 및 오케스트레이션 플랫폼
 
-> **비개발자 · 도입 검토 안내**: 쉬운 제품 소개는 [SyncVerse 제품 홈페이지(empasy.io)](https://empasy.io/ko/solutions/sync-verse.html){target="_blank" rel="noopener"}에서, 설치 없는 화면 체험은 [통합 데모 포털](https://demo.empasy.io/products/sync-verse#demo){target="_blank" rel="noopener"}에서 이용하실 수 있으며, 소개서·제안서 PDF는 [제안서 자료실](/proposals/)에서 내려받으실 수 있습니다.
+> **비개발자 · 도입 검토 안내**: 쉬운 제품 소개는 [SyncVerse 제품 홈페이지(empasy.io)](https://empasy.io/ko/solutions/sync-verse.html){target="_blank" rel="noopener"}에서, 설치 없는 화면 체험은 [통합 데모 포털](https://demo.empasy.io/products/sync-verse/#demo){target="_blank" rel="noopener"}에서 이용하실 수 있으며, 소개서·제안서 PDF는 [제안서 자료실](/proposals/)에서 내려받으실 수 있습니다.
 
 **SyncVerse**는 개별적으로 동작하는 분산 도메인 솔루션을 표준 인터페이스로 연결해 요구사항 정리, 작업 배분, 품질 검증 조회, 단계별 결재 승인을 통합 관리하는 **중앙 오케스트레이션 플랫폼(Control Tower)**입니다.
 

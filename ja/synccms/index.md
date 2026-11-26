@@ -22,7 +22,7 @@ sort: 1
 
 # SyncCMS: エンタープライズAIハイブリッドヘッドレスCMS
 
-> **非開発者・導入検討向けのご案内**: 分かりやすい製品紹介は [SyncCMS 製品ホームページ（cms.empasy.io）](https://empasy.io/ja/solutions/sync-cms.html){target="_blank" rel="noopener"} にて、インストール不要の画面体験は [統合デモポータル](https://demo.empasy.io/ja/products/sync-cms#demo){target="_blank" rel="noopener"} にてご利用いただけます。また、紹介書・提案書のPDFは [提案書資料室](/ja/proposals/) からダウンロードいただけます。
+> **非開発者・導入検討向けのご案内**: 分かりやすい製品紹介は [SyncCMS 製品ホームページ（cms.empasy.io）](https://empasy.io/ja/solutions/sync-cms.html){target="_blank" rel="noopener"} にて、インストール不要の画面体験は [統合デモポータル](https://demo.empasy.io/ja/products/sync-cms/#demo){target="_blank" rel="noopener"} にてご利用いただけます。また、紹介書・提案書のPDFは [提案書資料室](/ja/proposals/) からダウンロードいただけます。
 
 **SyncCMS**（`https://empasy.io/ja/solutions/sync-cms.html`）は、対顧客向けWebポータル、モバイルアプリなど企業のあらゆるデジタル接点において、**Nuxt 3 SSR高速レンダリング、Copywriter-SEO-Publisherマルチエージェントスウォーム（`CmsSwarmWorkflowService`）、HTML Headメタ情報の動的中央管理、および次世代AI検索（AEO/GEO）最適化を提供するエンタープライズ・ハイブリッドヘッドレスCMS**です。
 

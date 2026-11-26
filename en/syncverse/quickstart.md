@@ -1,5 +1,5 @@
 ---
-title: "5-Minute Quickstart Guide"
+title: "SyncVerse 5-Minute Quickstart Guide"
 sidebarTitle: "Quickstart"
 description: "A hands-on guide to running the SyncVerse central control server locally via Docker Compose, connecting your first MCP agent, and executing natural language directives."
 head:

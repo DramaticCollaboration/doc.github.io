@@ -23,7 +23,7 @@ sort: 1
 
 # SyncVerse: Multi-Agent Central Control and Orchestration Platform
 
-> **For Non-Developers & Evaluation Teams**: Explore an accessible product overview on the [SyncVerse Product Website (empasy.io)](https://empasy.io/en/solutions/sync-verse.html){target="_blank" rel="noopener"}, try the no-install UI experience in the [Unified Demo Portal](https://demo.empasy.io/en/products/sync-verse#demo){target="_blank" rel="noopener"}, or download brochures and proposal PDFs from the [Proposals Library](/en/proposals/).
+> **For Non-Developers & Evaluation Teams**: Explore an accessible product overview on the [SyncVerse Product Website (empasy.io)](https://empasy.io/en/solutions/sync-verse.html){target="_blank" rel="noopener"}, try the no-install UI experience in the [Unified Demo Portal](https://demo.empasy.io/en/products/sync-verse/#demo){target="_blank" rel="noopener"}, or download brochures and proposal PDFs from the [Proposals Library](/en/proposals/).
 
 **SyncVerse** is a **central orchestration platform (Control Tower)** that connects independently operating, distributed domain solutions through standardized interfaces to unify requirements organization, task delegation, quality verification tracking, and multi-stage approval workflows.
 

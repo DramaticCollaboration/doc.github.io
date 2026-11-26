@@ -1,6 +1,6 @@
 ---
 title: Scrumban Stage-by-Stage Activities
-description: Scrumban is a hybrid agile methodology that combines Scrum's iterative structure with Kanban's flow management and WIP limits to manage work flexibly and efficiently.
+description: Practical guide to Scrumban stage-by-stage activities across sprint planning, development, review, and retrospective phases with role deliverables.
 head:
   - - meta
     - name: keywords

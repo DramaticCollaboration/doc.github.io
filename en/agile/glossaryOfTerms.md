@@ -1,6 +1,6 @@
 ---
 title: Scrumban Glossary
-description: "Scrumban is a hybrid Agile methodology that combines Scrum's iterative structure with Kanban's flow management and WIP limits for flexible, efficient work management."
+description: "Comprehensive glossary of Scrumban and Agile terms including WIP limits, lead time, cycle time, backlog refinement, and burndown metrics."
 head:
   - - meta
     - name: keywords

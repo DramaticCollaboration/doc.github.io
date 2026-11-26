@@ -1,6 +1,6 @@
 ---
 title: 스크럼반 운영 가이드
-description: 스크럼반(Scrumban)은 스크럼의 반복적 구조와 칸반의 흐름 관리·WIP 제한을 결합해 유연하고 효율적으로 작업을 관리하는 하이브리드 애자일 방법론입니다.
+description: 개발팀에 스크럼반(Scrumban)을 도입하고 칸반 보드 구성, WIP 제한, 배포 주기를 정착시키기 위한 실전 운영 가이드입니다.
 head:
   - - meta
     - name: keywords

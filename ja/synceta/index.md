@@ -20,9 +20,9 @@ head:
 sort: 10
 ---
 
-# SyncETA: Web画面テスト自動化 · サイト欠陥検出および履歴管理プラットフォーム
+# SyncETA: AIテスト自動化 · 自己修復（Self-Healing）Web QAプラットフォーム
 
-> **非開発者・導入検討ガイド**: わかりやすい製品紹介は[SyncETA製品ホームページ（eta.empasy.io）](https://empasy.io/ja/solutions/sync-eta.html){target="_blank" rel="noopener"}で、デスクトップインストールおよび体験は[統合デモポータル](https://demo.empasy.io/ja/products/sync-eta#demo){target="_blank" rel="noopener"}でご利用いただけます。また、最新の紹介書（15p）PDFは[提案書ライブラリ](/ja/proposals/)からダウンロードできます。
+> **非開発者・導入検討ガイド**: わかりやすい製品紹介は[SyncETA製品ホームページ（empasy.io）](https://empasy.io/ja/solutions/sync-eta.html){target="_blank" rel="noopener"}で、デスクトップインストールおよび体験は[統合デモポータル](https://demo.empasy.io/ja/products/sync-eta/#demo){target="_blank" rel="noopener"}でご利用いただけます。また、最新の紹介書（15p）PDFは[提案書ライブラリ](/ja/proposals/)からダウンロードできます。
 
 **SyncETA**は、**ブラウザ操作録画（仮想キーパッド・Cookieバナー自動通過・個人情報マスキング）、代表・標本URLを活用したExcel/一行文テスト変換、マルチアカウント同時テスト、シナリオ不要の下位リンク・画面デザイン欠陥（文字重なり・空白領域）全数検査、バグカンバンボードおよび`[今すぐ確認]`ワンクリック再検証**までを一貫自動化するプラットフォームです。Playwright MCP並列実行と画面変更時の要素自動探索（Self-Healing）も備えています。
 
@@ -38,7 +38,7 @@ Windows（x64、arm64）およびmacOS（Apple Silicon、Intel）用インスト
 | 区分 | 既存スクリプト自動化（Selenium・単独Playwright） | コード生成支援AI（Claude Code・GitHub Copilot） | 自律E2E QAエージェント（**株式会社エムパシー SyncETA**） |
 | :--- | :--- | :--- | :--- |
 | **シナリオ作成** | 開発者がCSS/XPathセレクターコードを手動記述 | プロンプトで単体・統合テストコードのドラフト生成 | **ブラウザ操作のノーコード録画および自然言語・Excelシナリオの自動生成・直接実行** |
-| **UI変更時の自己修復（Self-Healing）** | 不可（クラス・DOM変更時に即座にテスト失敗） | 手動再プロンプトおよび開発者によるコード再修正が必要 | **Vision-LLMおよびDOM文脈推論により壊れたセレクターをリアルタイム自己修復（98.4%）** |
+| **UI変更時の自己修復（Self-Healing）** | 不可（クラス・DOM変更時に即座にテスト失敗） | 手動再プロンプトおよび開発者によるコード再修正が必要 | **Vision-LLMおよびDOM文脈推論により壊れたセレクターをリアルタイム自己修復（社内1,200回評価基準 93.0%）** |
 | **視覚的画面検証（Visual Regression）** | 単純ピクセル比較（バナー・フォントの微細な変更でも誤検知） | コードレベル検証中心（レンダリングレイアウト検証に限界） | **デプロイ前後の画面レイアウト崩壊・要素重なり現象をVision AIで自動検出** |
 | **主な活用対象およびコスト** | 自動化専任開発者が必要・保守工数が過大 | 開発者の単体/統合テスト支援・呼び出しごとにトークン課金 | **企画者・QA・開発者共用のノーコードE2E回帰テスト・反復実行AIコスト0円** |
 

@@ -1,6 +1,6 @@
 ---
 title: 이슈 생성 프롬프트
-description: Jira를 효율적으로 사용하는 핵심 원칙을 소개합니다. 이슈 할당 법칙, 필수 코멘팅 가이드, 상태 관리 노하우를 통해 프로젝트 투명성과 팀 생산성을 높이는 방법을 확인해 보세요. 팀 협업을 위한 가이드입니다.
+description: LLM 프롬프트를 활용해 JIRA 티켓 템플릿(Summary, Description, Acceptance Criteria)과 UI 테스트 시나리오를 표준화하여 자동 생성하는 실무 프롬프트 가이드입니다.
 head:
   - - meta
     - name: keywords

@@ -22,7 +22,7 @@ sort: 1
 
 # SyncCrawl™: Web クローリングおよび RAG ナレッジ構築プラットフォーム
 
-> **非開発者・導入検討のご案内**: 分かりやすい製品紹介は [SyncCrawl 製品ホームページ (empasy.io)](https://empasy.io/ja/solutions/sync-crawl.html){target="_blank" rel="noopener"} で、インストール不要の画面体験は [統合デモポータル](https://demo.empasy.io/ja/products/sync-crawl#demo){target="_blank" rel="noopener"} でご利用いただけます。紹介資料・提案書 PDF は [提案書資料室](/ja/proposals/) からダウンロードできます。
+> **非開発者・導入検討のご案内**: 分かりやすい製品紹介は [SyncCrawl 製品ホームページ (empasy.io)](https://empasy.io/ja/solutions/sync-crawl.html){target="_blank" rel="noopener"} で、インストール不要の画面体験は [統合デモポータル](https://demo.empasy.io/ja/products/sync-crawl/#demo){target="_blank" rel="noopener"} でご利用いただけます。紹介資料・提案書 PDF は [提案書資料室](/ja/proposals/) からダウンロードできます。
 
 SyncCrawl™ は、データ収集と自然言語処理 (NLP)、**Playwright MCP ベースのブラウザ自動化**、および **RAG (検索拡張生成) ナレッジパイプライン**を連携させたエンタープライズ向け Web 収集プラットフォームです。
 

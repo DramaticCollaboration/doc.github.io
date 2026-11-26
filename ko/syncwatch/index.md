@@ -7,7 +7,7 @@ sort: 1
 
 # SyncWatch 개요 (AI Security Threat Intelligence & Rule Compiler Agent)
 
-> **비개발자 · 도입 검토 안내**: 쉬운 제품 소개는 [SyncWatch 제품 홈페이지(empasy.io)](https://empasy.io/ko/solutions/sync-watch.html){target="_blank" rel="noopener"}에서, 설치 없는 화면 체험은 [통합 데모 포털](https://demo.empasy.io/products/sync-watch#demo){target="_blank" rel="noopener"}에서 이용하실 수 있으며, 소개서·제안서 PDF는 [제안서 자료실](/proposals/)에서 내려받으실 수 있습니다.
+> **비개발자 · 도입 검토 안내**: 쉬운 제품 소개는 [SyncWatch 제품 홈페이지(empasy.io)](https://empasy.io/ko/solutions/sync-watch.html){target="_blank" rel="noopener"}에서, 설치 없는 화면 체험은 [통합 데모 포털](https://demo.empasy.io/products/sync-watch/#demo){target="_blank" rel="noopener"}에서 이용하실 수 있으며, 소개서·제안서 PDF는 [제안서 자료실](/proposals/)에서 내려받으실 수 있습니다.
 
 **SyncWatch (`SYNC_WATCH`, `com.empasy.sync.watch`)**는 **8대 글로벌 위협 피드(OSV.dev, GitHub GHSA, NVD CVE, CISA KEV, Nuclei, OWASP CRS, MITRE ATT&CK, KISA)**와 기업 내부 보안 진단 문서를 단일 허브로 수집·정규화하여, **SyncVerse**에는 코드·의존성·모의해킹 보안 점검 팩(**`VerseAuditPack`**)을, **SyncAPIM**에는 런타임 공격 패턴 방어 팩(**`ApimDefensePack`**)을 실시간 컴파일·배포하는 **전사 보안 관측소(Security Threat Observatory & Dual Rule Compiler)**입니다.
 

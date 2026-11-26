@@ -7,7 +7,7 @@ sort: 1
 
 # SyncWatch Overview (AI Security Threat Intelligence & Rule Compiler Agent)
 
-> **For Non-Developers & Evaluation Teams**: Visit the [SyncWatch Product Homepage (empasy.io)](https://empasy.io/en/solutions/sync-watch.html){target="_blank" rel="noopener"} for an accessible product overview, try the zero-install UI experience in the [Unified Demo Portal](https://demo.empasy.io/en/products/sync-watch#demo){target="_blank" rel="noopener"}, or download product brochures and proposals from the [Proposals Repository](/en/proposals/).
+> **For Non-Developers & Evaluation Teams**: Visit the [SyncWatch Product Homepage (empasy.io)](https://empasy.io/en/solutions/sync-watch.html){target="_blank" rel="noopener"} for an accessible product overview, try the zero-install UI experience in the [Unified Demo Portal](https://demo.empasy.io/en/products/sync-watch/#demo){target="_blank" rel="noopener"}, or download product brochures and proposals from the [Proposals Repository](/en/proposals/).
 
 **SyncWatch (`SYNC_WATCH`, `com.empasy.sync.watch`)** is an **Enterprise Security Threat Observatory & Dual Rule Compiler** that ingests and normalizes **8 major global threat feeds (OSV.dev, GitHub GHSA, NVD CVE, CISA KEV, Nuclei, OWASP CRS, MITRE ATT&CK, KISA)** alongside internal enterprise security diagnostic documents into a single hub, compiling and distributing code, dependency, and penetration-testing audit packs (**`VerseAuditPack`**) to **SyncVerse** and runtime attack-pattern defense packs (**`ApimDefensePack`**) to **SyncAPIM** in real time.
 
