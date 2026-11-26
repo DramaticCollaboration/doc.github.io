@@ -1,6 +1,6 @@
 <template>
-  <div class="vp-arch-wrap">
-    <div class="vp-arch-board">
+  <div :id="heroSlot ? 'module-map' : undefined" class="vp-arch-wrap" :class="{ 'is-hero-slot': heroSlot }">
+    <div class="vp-arch-board" :class="{ 'is-compact-hero': heroSlot }">
       <div class="vp-arch-head">
         <div class="vp-arch-brand">
           <span class="vp-arch-dot" aria-hidden="true" />
@@ -49,7 +49,18 @@
 
         <div class="vp-arch-bus">{{ ui.busLabel }}</div>
 
-        <div class="vp-arch-layer-label vp-arch-ext-heading">{{ ui.extHeading }}</div>
+        <div class="vp-arch-ext-wrap" :class="{ 'is-mobile-expanded': mobileExtOpen }">
+        <div class="vp-arch-ext-head">
+          <div class="vp-arch-layer-label vp-arch-ext-heading">{{ ui.extHeading }}</div>
+          <button
+            type="button"
+            class="vp-arch-mobile-toggle"
+            :aria-expanded="mobileExtOpen"
+            @click="mobileExtOpen = !mobileExtOpen"
+          >
+            {{ mobileExtOpen ? ui.toggleExtCollapse : ui.toggleExtExpand }}
+          </button>
+        </div>
         <div class="vp-arch-ext-groups">
           <div v-for="group in extensionGroups" :key="group.key" class="vp-arch-ext-group-wrap">
             <div class="vp-arch-ext-group" :class="{ 'has-active': isGroupLit(group.nodes) }">
@@ -86,6 +97,7 @@
             </div>
             <span class="vp-arch-stem" :class="{ 'is-lit': isGroupLit(group.nodes) }" aria-hidden="true" />
           </div>
+        </div>
         </div>
 
         <button
@@ -192,6 +204,15 @@ interface ArchNode {
   ja: LocalizedNodeCopy;
 }
 
+const props = withDefaults(
+  defineProps<{
+    heroSlot?: boolean;
+  }>(),
+  {
+    heroSlot: false,
+  },
+);
+
 const route = useRoute();
 const router = useRouter();
 
@@ -219,6 +240,7 @@ const hubNode = computed(() => nodes.find((n) => n.isHub) ?? nodes[0]);
 const foundationNode = computed(() => nodes.find((n) => n.isFoundation));
 
 const selectedId = ref<string>(hubNode.value?.id ?? "");
+const mobileExtOpen = ref<boolean>(false);
 
 const selectedNode = computed<ArchNode | undefined>(
   () => nodes.find((n) => n.id === selectedId.value) ?? hubNode.value,
@@ -260,6 +282,10 @@ function goPath(path: string): void {
 
 function selectNode(id: string): void {
   selectedId.value = id;
+  const matched = nodes.find((n) => n.id === id);
+  if (matched && matched.zone !== "flagship") {
+    mobileExtOpen.value = true;
+  }
 }
 
 function isNodeLit(id: string): boolean {

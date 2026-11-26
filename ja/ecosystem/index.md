@@ -10,6 +10,10 @@ description: SyncSeriesの11種類のドメインモジュール、SyncSDK、お
 
 > **読者ガイド**: 本ドキュメントは、開発者およびシステムアーキテクト向けの技術概要です。非開発者向けのサービス紹介は[株式会社エムパシー公式サイト (empasy.io)](https://empasy.io/ja/pages/index.html)、インストール不要の体験は[統合デモポータル (demo.empasy.io)](https://demo.empasy.io/ja/)、導入提案書PDFは[提案書資料室 (/ja/proposals/)](/ja/proposals/)、コア技術用語の定義は[全社技術用語集 (/ja/glossary/)](/ja/glossary/)でご確認いただけます。
 
+## 全体モジュール構成図
+
+<SyncArchitectureMap />
+
 ## 1. アーキテクチャ概要および設計原則
 
 **SyncSeries**は、個別ソフトウェアがサイロ状に分離して運用されていた従来のIT構造を整備し、共通のバックオフィス・認証・監査基盤の上で各ドメインモジュールが標準プロトコルを通じて相互通信・協調する**モジュール型 A2A (Agent-to-Agent) 運用アーキテクチャ**です。

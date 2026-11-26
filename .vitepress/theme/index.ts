@@ -6,7 +6,6 @@ import { h, nextTick, onMounted, watch } from "vue";
 import { BProgress } from "./bprogress";
 import "./bprogress.css";
 import SyncArchitectureMap from "./components/SyncArchitectureMap.vue";
-import SyncHeroArchMap from "./components/SyncHeroArchMap.vue";
 import "./style.css";
 
 type DocUiLocale = "ko" | "en" | "ja";
@@ -54,7 +53,7 @@ export default {
   extends: DefaultTheme,
   Layout() {
     return h(DefaultTheme.Layout, null, {
-      "home-hero-image": () => h(SyncHeroArchMap),
+      "home-hero-after": () => h(SyncArchitectureMap, { heroSlot: true }),
     });
   },
   setup() {

@@ -10,6 +10,10 @@ description: Enterprise architecture overview detailing how the 11 SyncSeries do
 
 > **Reader's Guide**: This document is a technical overview for developers and system architects. For a non-technical service introduction, visit the [Empasy Official Website (empasy.io)](https://empasy.io/en/pages/index.html). For installation-free hands-on demos, visit the [Unified Demo Portal (demo.empasy.io)](https://demo.empasy.io/en/). For adoption proposal PDFs, see the [Proposal Repository (/en/proposals/)](/en/proposals/), and for core technical term definitions, refer to the [Enterprise Technical Glossary (/en/glossary/)](/en/glossary/).
 
+## Interactive Architecture Map
+
+<SyncArchitectureMap />
+
 ## 1. Architecture Overview and Design Principles
 
 **SyncSeries** reorganizes traditional IT landscapes—where individual software applications operated as isolated silos—into a **modular A2A (Agent-to-Agent) operating architecture** in which domain modules communicate and collaborate through standard protocols on top of a shared back-office, authentication, and auditing foundation.

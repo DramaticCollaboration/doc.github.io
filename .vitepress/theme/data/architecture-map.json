@@ -19,7 +19,9 @@
       "ecosystemBtn": "연동 구조 보기",
       "liveDemoBtn": "화면 체험 ↗",
       "directOpenAria": "기술 문서로 이동",
-      "integratedTag": "SyncVerse 통합"
+      "integratedTag": "SyncVerse 통합",
+      "toggleExtExpand": "확장 모듈 7종 펼치기",
+      "toggleExtCollapse": "확장 모듈 접기"
     },
     "en": {
       "boardTitle": "SYNCSERIES ARCHITECTURE",
@@ -40,7 +42,9 @@
       "ecosystemBtn": "Integration Specs",
       "liveDemoBtn": "Live Demo ↗",
       "directOpenAria": "Open technical guide",
-      "integratedTag": "In SyncVerse"
+      "integratedTag": "In SyncVerse",
+      "toggleExtExpand": "Show 7 domain modules",
+      "toggleExtCollapse": "Hide domain modules"
     },
     "ja": {
       "boardTitle": "SYNCSERIES ARCHITECTURE",
@@ -61,7 +65,9 @@
       "ecosystemBtn": "連携仕様を見る",
       "liveDemoBtn": "画面体験 ↗",
       "directOpenAria": "技術ドキュメントを開く",
-      "integratedTag": "SyncVerse統合"
+      "integratedTag": "SyncVerse統合",
+      "toggleExtExpand": "拡張モジュール 7種を表示",
+      "toggleExtCollapse": "拡張モジュールを閉じる"
     }
   },
   "nodes": [

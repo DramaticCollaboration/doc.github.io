@@ -5,14 +5,11 @@ title: "SyncSeries 公式技術ドキュメント・開発者ガイド"
 hero:
     name: "エムパシー技術ドキュメント"
     text: "SyncSeries 導入・構成・連携ガイド"
-    tagline: "共通基盤（SyncBoot）上に構成された中核4製品と用途別7モジュールの構成、API仕様、運用ガイドをまとめた公式技術ドキュメントです。"
+    tagline: "共通基盤（SyncBoot）上の中核4製品と用途別7モジュールの構成、API仕様、運用ガイドの公式ドキュメントです。"
     actions:
-      - text: 構成図から探す
-        link: "#module-map"
-        theme: brand
       - text: 連携構造を見る
         link: /ja/ecosystem/
-        theme: alt
+        theme: brand
       - text: 技術用語集
         link: /ja/glossary/
         theme: alt
@@ -37,32 +34,6 @@ head:
     - property: og:url
       content: https://doc.empasy.com/ja/
 
-features:
-  - title: SyncVerse（主力・コラボレーション・承認管理）
-    details: 要件整理、タスク追跡、品質チェック結果の参照、および担当者による段階的な承認フローを一元管理します。
-    link: /ja/syncverse/
-    linkText: ガイドを見る
-  - title: SyncETA（主力・自動テスト）
-    details: ノーコードでのデスクトップシナリオ記録、UI変更への自動補正対応、デプロイ前後の画面比較チェックを提供します。
-    link: /ja/synceta/
-    linkText: ガイドを見る
-  - title: SyncBoot（主力・業務システム基盤）
-    details: Spring Boot 4.0 と Java 25 ベースの標準バックオフィス構成、組織・権限管理、電子決裁、および監査ログを提供します。
-    link: /ja/syncboot/
-    linkText: ガイドを見る
-  - title: SyncCMS（主力・Webサイト管理）
-    details: マルチサイトページの作成、レビュー・承認ワークフロー、検索・アクセシビリティ事前チェック、および多言語ローカライズを支援します。
-    link: /ja/synccms/
-    linkText: ガイドを見る
-  - title: 共通基盤および連携仕様 (Ecosystem)
-    details: 各モジュールが単一の共通基盤上で標準 MCP・REST インターフェースにより接続される構成を解説します。
-    link: /ja/ecosystem/
-    linkText: 構成を見る
-  - title: データ・セキュリティ・業務拡張モジュール
-    details: SyncInsight、SyncLLM、SyncCrawl、SyncAPIM、SyncWatch、SyncShop、SyncOps の個別ガイドは下記の表からご確認ください。
-    link: "#module-map"
-    linkText: 全一覧を見る
-
 footer: Copyright © 2026 Empasy Inc. All rights reserved.
 ---
 
@@ -75,13 +46,11 @@ footer: Copyright © 2026 Empasy Inc. All rights reserved.
 
 ---
 
-## 単一の共通基盤とモジュール構成 {#module-map}
+## 単一の共通基盤とモジュール一覧
 
 SyncSeries は互いに関連性のない11個の個別システムを別々に構築したものではなく、**共通のバックオフィス・認証・監査基盤（`SyncBoot` および共通モジュール）上で、実際の企業プロジェクトで繰り返し必要とされた業務機能をモジュール単位で整理したアーキテクチャ**です。
 
-必要な領域から始めて、後から他のモジュールをつなぐ際も権限体系と共通仕様（REST / MCP）をそのまま使えます。下の構成図から各製品を選ぶとAPIパスと概要を確認でき、`↗`ボタンから該当ガイドへ移動できます。
-
-<SyncArchitectureMap />
+必要な領域から始めて、後から他のモジュールをつなぐ際も権限体系と共通仕様（REST / MCP）をそのまま使えます。上部の構成図からAPIパスと連携関係を確認するか、下記の一覧から各ガイドへ移動できます。
 
 ### 主力ソリューション 4種
 

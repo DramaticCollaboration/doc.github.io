@@ -5,14 +5,11 @@ title: "SyncSeries Official Technical Documentation & Developer Guide"
 hero:
     name: "Empasy Technical Docs"
     text: "SyncSeries Installation · Architecture · Integration Guide"
-    tagline: "Official technical documentation covering the architecture, API specs, and operations guides for 4 core products and 7 domain modules built on SyncBoot."
+    tagline: "Official architecture, API specifications, and operations guides for 4 core products and 7 domain modules built on SyncBoot."
     actions:
-      - text: Browse Product Map
-        link: "#module-map"
-        theme: brand
       - text: Integration Architecture
         link: /en/ecosystem/
-        theme: alt
+        theme: brand
       - text: Technical Glossary
         link: /en/glossary/
         theme: alt
@@ -37,32 +34,6 @@ head:
     - property: og:url
       content: https://doc.empasy.com/en/
 
-features:
-  - title: "SyncVerse (Core · Collaboration & Approval)"
-    details: "Unified management of requirements structuring, task tracking, quality inspection results, and multi-stage stakeholder approval workflows."
-    link: /en/syncverse/
-    linkText: View Guide
-  - title: "SyncETA (Core · Automated Testing)"
-    details: "Codeless desktop scenario recording, adaptive correction for UI changes, and pre/post-deployment visual comparison checks."
-    link: /en/synceta/
-    linkText: View Guide
-  - title: "SyncBoot (Core · Enterprise System Foundation)"
-    details: "Standard back-office architecture powered by Spring Boot 4.0 and Java 25, with organization and permission management, electronic approvals, and audit logging."
-    link: /en/syncboot/
-    linkText: View Guide
-  - title: "SyncCMS (Core · Website Management)"
-    details: "Supports multi-site page authoring, review and approval workflows, SEO and accessibility pre-checks, and multilingual localization."
-    link: /en/synccms/
-    linkText: View Guide
-  - title: "Shared Foundation & Integration Specs (Ecosystem)"
-    details: "Explains how individual modules connect over a single shared foundation using standardized MCP and REST interfaces."
-    link: /en/ecosystem/
-    linkText: View Architecture
-  - title: "Data, Security & Business Extension Modules"
-    details: "Explore individual guides for SyncInsight, SyncLLM, SyncCrawl, SyncAPIM, SyncWatch, SyncShop, and SyncOps in the table below."
-    link: "#module-map"
-    linkText: View Full List
-
 footer: Copyright © 2026 Empasy Inc. All rights reserved.
 ---
 
@@ -75,13 +46,11 @@ footer: Copyright © 2026 Empasy Inc. All rights reserved.
 
 ---
 
-## Single Shared Foundation and Module Architecture {#module-map}
+## Single Shared Foundation and Module Directory
 
 Rather than building 11 disconnected systems, SyncSeries **organizes enterprise capabilities repeatedly required across real-world projects into modular components built on a unified back-office, authentication, and audit foundation (`SyncBoot` and shared modules)**.
 
-You can start with one module and connect others later while reusing the same permission model and REST / MCP interfaces. Select any module below to inspect its API prefix and related modules, or click `↗` to open its guide directly.
-
-<SyncArchitectureMap />
+You can start with one module and connect others later while reusing the same permission model and REST / MCP interfaces. Use the interactive architecture map above to inspect API prefixes and related modules, or jump directly to each guide below.
 
 ### 4 Core Solutions
 

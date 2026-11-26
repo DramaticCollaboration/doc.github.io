@@ -5,14 +5,11 @@ title: "SyncSeries 공식 기술 문서 및 개발자 가이드"
 hero:
     name: "엠파시 기술 문서"
     text: "SyncSeries 설치 · 구조 · 연동 가이드"
-    tagline: "하나의 공통 기반(SyncBoot) 위에 구성된 핵심 4종과 업무별 7종 모듈의 구조, API 규격, 운영 가이드를 정리한 공식 기술 문서입니다."
+    tagline: "공통 기반(SyncBoot) 위 핵심 4종과 확장 7종 모듈의 아키텍처, API 규격, 운영 가이드 공식 문서입니다."
     actions:
-      - text: 구성도에서 문서 찾기
-        link: "#module-map"
-        theme: brand
       - text: 연동 구조 보기
         link: /ecosystem/
-        theme: alt
+        theme: brand
       - text: 전사 기술 용어집
         link: /glossary/
         theme: alt
@@ -37,32 +34,6 @@ head:
     - property: og:url
       content: https://doc.empasy.com/
 
-features:
-  - title: SyncVerse (주력 · 협업·승인 관리)
-    details: 요구사항 정리, 작업 추적, 품질 점검 결과 조회 및 담당자 단계별 승인 흐름을 통합 관리합니다.
-    link: /syncverse/
-    linkText: 가이드 보기
-  - title: SyncETA (주력 · 자동 테스트)
-    details: 코딩 없는 데스크톱 시나리오 기록과 UI 변경 대응 보정, 배포 전후 화면 비교 점검을 제공합니다.
-    link: /synceta/
-    linkText: 가이드 보기
-  - title: SyncBoot (주력 · 업무 시스템 기반)
-    details: Spring Boot 4.0과 Java 25 기반의 표준 백오피스 구조, 조직·권한 관리, 전자결재 및 감사 로그를 제공합니다.
-    link: /syncboot/
-    linkText: 가이드 보기
-  - title: SyncCMS (주력 · 웹사이트 관리)
-    details: 멀티사이트 페이지 작성, 검수·승인 흐름, 검색·접근성 사전 점검 및 다국어 현지화를 지원합니다.
-    link: /synccms/
-    linkText: 가이드 보기
-  - title: 공통 기반 및 연동 규격 (Ecosystem)
-    details: 개별 모듈이 하나의 공통 기반 위에서 표준 MCP·REST 인터페이스로 연결되는 구조를 안내합니다.
-    link: /ecosystem/
-    linkText: 구조 보기
-  - title: 데이터 · 보안 · 업무 확장 모듈
-    details: SyncInsight, SyncLLM, SyncCrawl, SyncAPIM, SyncWatch, SyncShop, SyncOps 개별 가이드를 아래 표에서 확인하세요.
-    link: "#module-map"
-    linkText: 전체 목록 보기
-
 footer: Copyright © 2026 Empasy Inc. All rights reserved.
 ---
 
@@ -75,13 +46,11 @@ footer: Copyright © 2026 Empasy Inc. All rights reserved.
 
 ---
 
-## 하나의 공통 기반과 모듈 구성 {#module-map}
+## 하나의 공통 기반과 모듈 목록
 
 SyncSeries는 서로 무관한 11개의 개별 시스템을 별도로 만든 것이 아니라, **공통 백오피스·인증·감사 기반(`SyncBoot` 및 공통 모듈) 위에서 실제 기업 프로젝트에 반복적으로 필요했던 업무 기능을 모듈 단위로 정리한 구조**입니다.
 
-필요한 영역 하나만 먼저 도입해 쓰다가, 나중에 다른 모듈을 연결할 때도 같은 권한 체계와 표준 연동 규격(REST / MCP)을 그대로 사용할 수 있습니다. 아래 구성도에서 각 모듈을 눌러 API 경로와 가이드를 확인하거나 `↗` 버튼으로 문서에 바로 들어가실 수 있습니다.
-
-<SyncArchitectureMap />
+필요한 영역 하나만 먼저 도입해 쓰다가, 나중에 다른 모듈을 연결할 때도 같은 권한 체계와 표준 연동 규격(REST / MCP)을 그대로 사용할 수 있습니다. 상단 구성도에서 각 모듈을 눌러 API 경로와 연동 관계를 바로 확인하거나 아래 목록에서 문서로 이동할 수 있습니다.
 
 ### 주력 솔루션 4종
 

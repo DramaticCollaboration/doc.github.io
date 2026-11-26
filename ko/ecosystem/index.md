@@ -10,6 +10,10 @@ description: SyncSeries 11종 도메인 모듈, SyncSDK 및 6종 공통 기반 �
 
 > **독자 안내**: 본 문서는 개발자 및 시스템 아키텍트용 기술 개요입니다. 비개발자용 서비스 소개는 [엠파시 공식 홈페이지(empasy.io)](https://empasy.io/), 설치 없는 체험은 [통합 데모 포털(demo.empasy.io)](https://demo.empasy.io/), 도입 제안서 PDF는 [제안서 자료실(/proposals/)](/proposals/), 핵심 기술 용어 정의는 [전사 기술 용어집(/glossary/)](/glossary/)에서 확인하실 수 있습니다.
 
+## 전체 모듈 구성도
+
+<SyncArchitectureMap />
+
 ## 1. 아키텍처 개요 및 설계 원칙
 
 **SyncSeries**는 개별 소프트웨어가 사일로 형태로 분리되어 운영되던 전통적인 IT 구조를 정비하여, 공통 백오피스·인증·감사 기반 위에서 각 도메인 모듈이 표준 프로토콜을 통해 상호 통신하고 협업하는 **모듈형 A2A(Agent-to-Agent) 운영 아키텍처**입니다.
