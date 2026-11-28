@@ -274,7 +274,7 @@ new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
           graph.push({
             "@type": "SoftwareApplication",
             name: "SyncETA",
-            alternateName: pageLocale === "ko" ? ["싱크에타", "SyncETA Desktop"] : ["SyncETA Desktop"],
+            alternateName: pageLocale === "ko" ? ["씽크이티에이", "SyncETA Desktop"] : ["SyncETA Desktop"],
             softwareVersion: "0.0.66",
             applicationCategory: "DeveloperApplication, BusinessApplication",
             operatingSystem: "Windows 10, Windows 11, macOS 12+, Linux, Web",
@@ -318,7 +318,7 @@ new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
             {
               name: "keywords",
               content:
-                "엠파시, Empasy, AI 테스트 자동화, 테스트 자동화, 노코드 QA, 셀렉터 자가 치유, Sync Series, SyncVerse, SyncWatch, SyncAPIM, SyncInsight, SyncETA, 싱크에타, SyncCrawl, SyncBoot, SyncCMS, SyncShop, SyncOps, SyncLLM, AI 에이전트, AI 오케스트레이션, API 보안, 위협 인텔리전스, FinOps",
+                "엠파시, Empasy, AI 테스트 자동화, 테스트 자동화, 노코드 QA, 셀렉터 자가 치유, Sync Series, SyncVerse, SyncWatch, SyncAPIM, SyncInsight, SyncETA, 씽크이티에이, SyncCrawl, SyncBoot, SyncCMS, SyncShop, SyncOps, SyncLLM, AI 에이전트, AI 오케스트레이션, API 보안, 위협 인텔리전스, FinOps",
             },
           ],
         ],

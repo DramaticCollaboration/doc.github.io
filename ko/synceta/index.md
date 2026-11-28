@@ -4,7 +4,7 @@ description: "SyncETA는 Vision-LLM 셀렉터 자가 치유(Self-Healing)와 Pla
 head:
   - - meta
     - name: keywords
-      content: AI 테스트 자동화, 테스트 자동화, 노코드 테스트 자동화, 웹 화면 테스트 자동화, 사이트 결함 검출, SyncETA, 싱크에타, 버그 칸반, QA 테스트 자동화, 자가 치유 테스트 자동화, 회귀 테스트, Playwright, MCP, Model Context Protocol, Visual Regression, Self-Healing, CI/CD, 엔터프라이즈 QA, 엠파시, Empasy
+      content: AI 테스트 자동화, 테스트 자동화, 노코드 테스트 자동화, 웹 화면 테스트 자동화, 사이트 결함 검출, SyncETA, 씽크이티에이, 버그 칸반, QA 테스트 자동화, 자가 치유 테스트 자동화, 회귀 테스트, Playwright, MCP, Model Context Protocol, Visual Regression, Self-Healing, CI/CD, 엔터프라이즈 QA, 엠파시, Empasy
   - - meta
     - property: og:title
       content: "SyncETA: AI 테스트 자동화 및 자가 치유(Self-Healing) 웹 QA 플랫폼"

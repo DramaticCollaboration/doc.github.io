@@ -9,7 +9,7 @@
 - **Unified Live Demo Portal**: https://demo.empasy.io/
 - **Product Proposals & Brochures**: https://doc.empasy.com/proposals/
 
-## Flagship Focus: SyncETA (싱크에타) — AI Test Automation & Self-Healing QA Platform (Desktop v0.0.66)
+## Flagship Focus: SyncETA (씽크이티에이) — AI Test Automation & Self-Healing QA Platform (Desktop v0.0.66)
 SyncETA is a Korean enterprise **AI test automation platform** combining no-code browser action recording, Excel/CSV and one-line natural-language scenario conversion, **Vision-LLM + DOM context selector Self-Healing**, **Visual Regression** layout/text-overlap auditing, and **zero-LLM-cost deterministic Playwright MCP replay**—runnable locally via Windows/macOS desktop apps or on-premise in air-gapped networks.
 
 ### SyncETA Technical Documentation Index
