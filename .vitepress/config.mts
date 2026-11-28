@@ -201,6 +201,7 @@ new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
         }
       };
 
+      upsertHead("meta", { name: "robots", content: "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" }, "name", "robots", false);
       upsertHead("link", { rel: "canonical", href: canonicalUrl }, "rel", "canonical", true);
       upsertHead("link", { rel: "alternate", hreflang: "ko", href: koUrl }, "hreflang", "ko", true);
       upsertHead("link", { rel: "alternate", hreflang: "en", href: enUrl }, "hreflang", "en", true);
@@ -214,6 +215,93 @@ new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
       upsertHead("meta", { name: "twitter:card", content: "summary_large_image" }, "name", "twitter:card", false);
       upsertHead("meta", { name: "twitter:title", content: `${pageTitle} | Empasy Docs` }, "name", "twitter:title", true);
       upsertHead("meta", { name: "twitter:description", content: pageDesc }, "name", "twitter:description", true);
+
+      const hasPageJsonLd = head.some(
+        (item) => item[0] === "script" && item[1] && item[1]["data-empasy-page-jsonld"] === "true"
+      );
+      if (!hasPageJsonLd) {
+        const docsHomeUrl = pageLocale === "ko" ? `${SITE_ORIGIN}/` : `${SITE_ORIGIN}/${pageLocale}/`;
+        const docsHomeName =
+          pageLocale === "ko" ? "Empasy Docs" : pageLocale === "ja" ? "Empasy Docs (JA)" : "Empasy Docs (EN)";
+        const langTag = pageLocale === "ko" ? "ko-KR" : pageLocale === "ja" ? "ja-JP" : "en-US";
+        const graph: Array<Record<string, unknown>> = [
+          {
+            "@type": "TechArticle",
+            headline: pageTitle,
+            description: pageDesc,
+            url: canonicalUrl,
+            inLanguage: langTag,
+            mainEntityOfPage: {
+              "@type": "WebPage",
+              "@id": canonicalUrl,
+            },
+            author: {
+              "@type": "Organization",
+              name: "Empasy Inc.",
+              url: "https://empasy.io/",
+            },
+            publisher: {
+              "@type": "Organization",
+              name: "Empasy Inc.",
+              url: "https://empasy.io/",
+              logo: {
+                "@type": "ImageObject",
+                url: `${SITE_ORIGIN}/images/favicon.png`,
+              },
+            },
+          },
+          {
+            "@type": "BreadcrumbList",
+            itemListElement: [
+              { "@type": "ListItem", position: 1, name: docsHomeName, item: docsHomeUrl },
+              ...(basePath
+                ? [{ "@type": "ListItem", position: 2, name: pageTitle, item: canonicalUrl }]
+                : []),
+            ],
+          },
+        ];
+
+        if (basePath === "synceta/" || basePath === "synceta") {
+          const etaHomepageUrl =
+            pageLocale === "ko" ? "https://eta.empasy.io/" : `https://eta.empasy.io/${pageLocale}/`;
+          const empasySolutionUrl = `https://empasy.io/${pageLocale}/solutions/sync-eta.html`;
+          const empasyDownloadUrl = `https://empasy.io/${pageLocale}/download_eta.html`;
+          const demoPortalUrl =
+            pageLocale === "ko"
+              ? "https://demo.empasy.io/products/sync-eta/"
+              : `https://demo.empasy.io/${pageLocale}/products/sync-eta/`;
+
+          graph.push({
+            "@type": "SoftwareApplication",
+            name: "SyncETA",
+            alternateName: pageLocale === "ko" ? ["싱크에타", "SyncETA Desktop"] : ["SyncETA Desktop"],
+            softwareVersion: "0.0.66",
+            applicationCategory: "DeveloperApplication, BusinessApplication",
+            operatingSystem: "Windows 10, Windows 11, macOS 12+, Linux, Web",
+            url: canonicalUrl,
+            downloadUrl: empasyDownloadUrl,
+            inLanguage: langTag,
+            description: pageDesc,
+            sameAs: [empasySolutionUrl, etaHomepageUrl, demoPortalUrl],
+            offers: {
+              "@type": "Offer",
+              price: "0",
+              priceCurrency: pageLocale === "ko" ? "KRW" : pageLocale === "ja" ? "JPY" : "USD",
+            },
+            provider: {
+              "@type": "Organization",
+              name: "Empasy Inc.",
+              url: "https://empasy.io/",
+            },
+          });
+        }
+
+        head.push([
+          "script",
+          { type: "application/ld+json", "data-empasy-page-jsonld": "true" },
+          JSON.stringify({ "@context": "https://schema.org", "@graph": graph }),
+        ]);
+      }
     },
 
     locales: {

@@ -22,12 +22,12 @@ sort: 10
 
 # SyncETA: AIテスト自動化 · 自己修復（Self-Healing）Web QAプラットフォーム
 
-> **非開発者・導入検討ガイド**: わかりやすい製品紹介は[SyncETA製品ホームページ（empasy.io）](https://empasy.io/ja/solutions/sync-eta.html){target="_blank" rel="noopener"}で、デスクトップインストールおよび体験は[統合デモポータル](https://demo.empasy.io/ja/products/sync-eta/#demo){target="_blank" rel="noopener"}でご利用いただけます。また、最新の紹介書（15p）PDFは[提案書ライブラリ](/ja/proposals/)からダウンロードできます。
+> **非開発者・導入検討ガイド**: わかりやすい製品紹介は[SyncETA公式製品ページ（empasy.io）](https://empasy.io/ja/solutions/sync-eta.html){target="_blank" rel="noopener"}および[SyncETA製品サイト（eta.empasy.io）](https://eta.empasy.io/ja/){target="_blank" rel="noopener"}で、デスクトップインストールおよび体験は[統合デモポータル](https://demo.empasy.io/ja/products/sync-eta/#demo){target="_blank" rel="noopener"}でご利用いただけます。また、[2026年AIテスト自動化ツール比較ガイド](https://empasy.io/ja/blog/ai-test-automation-tools-comparison-2026.html){target="_blank" rel="noopener"}や最新の紹介書（15p）PDFは[提案書ライブラリ](/ja/proposals/)からご確認いただけます。
 
 **SyncETA**は、**ブラウザ操作録画（仮想キーパッド・Cookieバナー自動通過・個人情報マスキング）、代表・標本URLを活用したExcel/一行文テスト変換、マルチアカウント同時テスト、シナリオ不要の下位リンク・画面デザイン欠陥（文字重なり・空白領域）全数検査、バグカンバンボードおよび`[今すぐ確認]`ワンクリック再検証**までを一貫自動化するプラットフォームです。Playwright MCP並列実行と画面変更時の要素自動探索（Self-Healing）も備えています。
 
 ::: tip デスクトップアプリケーション即時実行ガイド
-SyncETAは、別途サーバーインフラを構築することなく、ローカルおよびステージングWebサイトを即座にテストできるデスクトップアプリケーション（v0.0.58）を提供しています。  
+SyncETAは、別途サーバーインフラを構築することなく、ローカルおよびステージングWebサイトを即座にテストできるデスクトップアプリケーション（v0.0.66）を提供しています。  
 Windows（x64、arm64）およびmacOS（Apple Silicon、Intel）用インストーラーは、**[株式会社エムパシー公式ダウンロードページ（empasy.io）](https://empasy.io/ja/download_eta.html)**から無料でダウンロードして、1分で最初のテストを実行できます。
 :::
 

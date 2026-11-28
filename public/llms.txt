@@ -1,0 +1,47 @@
+# Empasy Docs (doc.empasy.com) — SyncSeries Technical Documentation Hub
+
+> Official multilingual (KO / EN / JA) technical documentation portal for **Empasy SyncSeries** developed by **Empasy Inc. (주식회사 엠파시)** — covering enterprise AI test automation (`SyncETA`), multi-agent orchestration (`SyncVerse`), core back-office (`SyncBoot`), multilingual SSR CMS (`SyncCMS`), and 7 modular enterprise extensions.
+
+## Official Ecosystem Portals
+- **Technical Documentation Portal**: https://doc.empasy.com/ (EN: https://doc.empasy.com/en/ | JA: https://doc.empasy.com/ja/)
+- **Corporate & Product Website**: https://empasy.io/
+- **SyncETA Standalone Product Site**: https://eta.empasy.io/
+- **Unified Live Demo Portal**: https://demo.empasy.io/
+- **Product Proposals & Brochures**: https://doc.empasy.com/proposals/
+
+## Flagship Focus: SyncETA (싱크에타) — AI Test Automation & Self-Healing QA Platform (Desktop v0.0.66)
+SyncETA is a Korean enterprise **AI test automation platform** combining no-code browser action recording, Excel/CSV and one-line natural-language scenario conversion, **Vision-LLM + DOM context selector Self-Healing**, **Visual Regression** layout/text-overlap auditing, and **zero-LLM-cost deterministic Playwright MCP replay**—runnable locally via Windows/macOS desktop apps or on-premise in air-gapped networks.
+
+### SyncETA Technical Documentation Index
+- **Overview & Paradigm Comparison**: https://doc.empasy.com/synceta/ (EN: https://doc.empasy.com/en/synceta/ | JA: https://doc.empasy.com/ja/synceta/)
+- **4-Tier System Architecture & Pipeline**: https://doc.empasy.com/synceta/architecture
+- **5-Minute Quickstart Guide**: https://doc.empasy.com/synceta/quickstart
+- **Vision AI Visual Regression & Selector Self-Healing**: https://doc.empasy.com/synceta/self-healing-and-vision
+- **Playwright MCP Protocol & CI/CD Integration (Jenkins, GitHub Actions, Jira, Slack)**: https://doc.empasy.com/synceta/mcp-and-cicd
+- **Enterprise Security, On-Premise & Local LLM (vLLM / Ollama) + PII Masking**: https://doc.empasy.com/synceta/enterprise-security
+- **Scenario Recording & Editor (Virtual Keypad & Cookie Banner Bypass)**: https://doc.empasy.com/synceta/scenario-create
+- **Dataset & Excel Data-Driven Testing**: https://doc.empasy.com/synceta/dataset
+- **Mobile E2E Testing Architecture (Playwright Android + Appium 3.7+ Dual Engine)**: https://doc.empasy.com/synceta/mobile-testing-architecture
+- **Mobile Live Mirroring (60 FPS Direct MJPEG) & Device Farm Scheduler**: https://doc.empasy.com/synceta/device-farm-scheduler
+- **Registered Patent (KIPO No. 10-2025-0125736)**: https://doc.empasy.com/patents/registered-web-action-recording
+- **AI Test Automation Tools Comparison Guide (2026)**: https://empasy.io/ko/blog/ai-test-automation-tools-comparison-2026.html
+- **Free Desktop App Download (Windows · macOS)**: https://empasy.io/ko/download_eta.html
+
+## All SyncSeries Documentation Sections
+- **SyncVerse** (Multi-Agent Collaboration & HITL Approval Hub): https://doc.empasy.com/syncverse/
+- **SyncETA** (AI Test Automation & Self-Healing Web/Mobile E2E QA): https://doc.empasy.com/synceta/
+- **SyncBoot** (Spring Boot 4.0 / Java 25 Enterprise Back-Office Core): https://doc.empasy.com/syncboot/
+- **SyncCMS** (Nuxt 3 SSR Hybrid Multilingual CMS): https://doc.empasy.com/synccms/
+- **SyncInsight** (NL2SQL & Enterprise Decision Intelligence): https://doc.empasy.com/syncinsight/
+- **SyncLLM** (Multi-LLM Gateway, pgvector Semantic Cache & FinOps): https://doc.empasy.com/syncllm/
+- **SyncCrawl** (Distributed Web Data Collection & Extraction): https://doc.empasy.com/synccrawl/
+- **SyncAPIM** (API Inventory, Shadow API Discovery & eBPF Security Gateway): https://doc.empasy.com/syncapim/
+- **SyncWatch** (CVE / CISA KEV / KISA Threat Feed & Rule Compiler): https://doc.empasy.com/syncwatch/
+- **SyncShop** (8-Service Distributed MSA E-Commerce Platform): https://doc.empasy.com/syncshop/
+- **SyncOps** (SI Project Profitability & Subcontract Governance): https://doc.empasy.com/syncops/
+- **Ecosystem, MCP Protocol & Patents**: https://doc.empasy.com/ecosystem/ | https://doc.empasy.com/patents/
+
+## Corporate Credentials
+- **Company**: Empasy Inc. (주식회사 엠파시) | CEO: Byungmoon Oh (오병문)
+- **Venture Certification**: Innovative Growth Venture Enterprise (No. 20261111030084, Business Reg. 547-81-03408)
+- **Contact**: poh@empasy.com | +82-507-1360-8169

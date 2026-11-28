@@ -22,12 +22,12 @@ sort: 10
 
 # SyncETA: AI Test Automation · Self-Healing Web QA Platform
 
-> **Non-Developers & Adoption Evaluation Guide**: For an accessible product overview, visit the [SyncETA Product Homepage (empasy.io)](https://empasy.io/en/solutions/sync-eta.html){target="_blank" rel="noopener"}. For desktop installation and live hands-on evaluation, visit the [Unified Demo Portal](https://demo.empasy.io/en/products/sync-eta/#demo){target="_blank" rel="noopener"}. The latest 15-page brochure PDF is available in the [Proposals Library](/en/proposals/).
+> **Non-Developers & Adoption Evaluation Guide**: For an accessible product overview, visit the [SyncETA Official Product Page (empasy.io)](https://empasy.io/en/solutions/sync-eta.html){target="_blank" rel="noopener"} or [SyncETA Standalone Site (eta.empasy.io)](https://eta.empasy.io/en/){target="_blank" rel="noopener"}. For desktop installation and live hands-on evaluation, visit the [Unified Demo Portal](https://demo.empasy.io/en/products/sync-eta/#demo){target="_blank" rel="noopener"}. You can also read the [2026 AI Test Automation Tools Comparison Guide](https://empasy.io/en/blog/ai-test-automation-tools-comparison-2026.html){target="_blank" rel="noopener"} and download the 15-page brochure PDF in the [Proposals Library](/en/proposals/).
 
 **SyncETA** automates the entire web quality verification lifecycle without writing brittle scripts: **browser action recording (with security keypad, cookie banner bypass, and PII masking), Excel and one-line prompt test conversion using representative/sample URLs, multi-account simultaneous testing, scenario-free link and layout-overlap audits with honest `[Needs Review]` triage, and Bug Kanban one-click `[Check Now]` re-verification**—powered by Playwright MCP parallel execution and adaptive element recovery.
 
 ::: tip Instant Desktop Application Launch Guide
-SyncETA provides a desktop application (v0.0.58) that lets you immediately test local and staging websites without setting up separate server infrastructure.  
+SyncETA provides a desktop application (v0.0.66) that lets you immediately test local and staging websites without setting up separate server infrastructure.  
 Download the Windows (x64, arm64) and macOS (Apple Silicon, Intel) installers for free from the **[Empasy Official Download Page (empasy.io)](https://empasy.io/en/download_eta.html)** and run your first test in under a minute.
 :::
 
